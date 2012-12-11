@@ -7,7 +7,7 @@ CamelCase is the original wiki convention for creating hyperlinks, with the addi
 h2. Customizing the Wiki behavior
 
 Some people dislike linking by CamelCase.  While Trac remains faithful to the original Wiki style, it provides a number of ways to accomodate users with different preferences:
- * There's an option (`ignore_missing_pages` in the "Not found: text("[wiki) link(TracIni#wiki-section)":wiki/TracIni#wiki-section"] section of TracIni) to simply ignore links to missing pages when the link is written using the CamelCase style, instead of that word being replaced by a gray link followed by a question mark.[[BR]]
+ * There's an option (`ignore_missing_pages` in the "Not found: text("[wiki) link(TracIni#wiki-section)":wiki/TracIni#wiki-section"] section of TracIni) to simply ignore links to missing pages when the link is written using the CamelCase style, instead of that word being replaced by a gray link followed by a question mark.<br />
    That can be useful when CamelCase style is used to name code artifacts like class names and there's no corresponding page for them.
  * There's an option (`split_page_names` in the  "Not found: text("[wiki) link(TracIni#wiki-section)":wiki/TracIni#wiki-section"] section of TracIni) to automatically insert space characters between the words of a CamelCase link when rendering the link.
  * Creation of explicit Wiki links is also easy, see WikiPageNames for details.

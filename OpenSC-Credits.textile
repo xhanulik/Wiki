@@ -57,7 +57,7 @@ and
  * "OpenTrust":http://www.opentrust.com/ (ancient Idealx)
  * Dominik Fischer
 
- h1. License 
+h1. License 
 <pre><code> * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either

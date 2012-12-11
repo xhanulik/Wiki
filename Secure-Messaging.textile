@@ -142,8 +142,8 @@ Initialize SM context:
    * <i> unload SM module </i>
  * return from sc_disconnect_card()
 
-[[BR]]
-Encode and transmit APDU in 'APDU' mode:[[BR]]
+<br />
+Encode and transmit APDU in 'APDU' mode:<br />
  * do_single_transmit() (libopensc/apdu.c)
   * '' if valid SM context and 'APDU' mode ''
    * '' card specific 'wrap_apdu' '' 
@@ -160,7 +160,7 @@ Encode and transmit APDU in 'APDU' mode:[[BR]]
    * <i> replace APDU->resp with the decoded response </i>
   * return
 
-In 'ACL' mode:[[BR]]
+In 'ACL' mode:<br />
 initialize SM session, encode/transmit/decode APDU, implemented in the card driver:
  * in card specific procedure (ex. '_write_binary')
  * check ACL (ex. ACLs of the 'current_file' from cache)

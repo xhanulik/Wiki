@@ -4,9 +4,9 @@ Larry is an Open Source enthusiast, holding a BS in Interdisciplinary Engineerin
 
 Founded in 2004, yaSSL, or "yet another SSL", provides embedded security software for devices. yaSSL's main products are the CyaSSL Embedded SSL Library and the yaSSL Embedded Web Server. yaSSL's products are dual licensed under both the GPLv2 as well as standard commercial licensing.
 
-Larry Stefonic: "LinkedIn Profile":http://www.linkedin.com/pub/larry-stefonic/0/23/173[[BR]]
+Larry Stefonic: "LinkedIn Profile":http://www.linkedin.com/pub/larry-stefonic/0/23/173<br />
 
-Twitter: "CyaSSL":http://twitter.com/CyaSSL[[BR]]
+Twitter: "CyaSSL":http://twitter.com/CyaSSL<br />
 About yaSSL: "http://yassl.com/yaSSL/About.html":http://yassl.com/yaSSL/About.html
 
 

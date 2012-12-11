@@ -263,7 +263,7 @@ Relaunch lighttpd, and browse to `http://yourhost.example.org/trac` to access Tr
 
 Note about running lighttpd with reduced permissions:
 
-  If nothing else helps and trac.fcgi doesn't start with lighttpd settings `server.username h1. "www-data"`, `server.groupname "www-data"`, then in the `bin-environment` section set `PYTHON_EGG_CACHE` to the home directory of `www-data` or some other directory accessible to this account for writing.
+  If nothing else helps and trac.fcgi doesn't start with lighttpd settings `server.username = "www-data"`, `server.groupname = "www-data"`, then in the `bin-environment` section set `PYTHON_EGG_CACHE` to the home directory of `www-data` or some other directory accessible to this account for writing.
 
 
 h2. Simple LiteSpeed Configuration

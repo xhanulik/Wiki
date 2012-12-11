@@ -47,7 +47,7 @@ this extra indentation will be ignored when processing the content.
 
 h2. Examples
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td colspan=2 align=center style="border: none"
                 __Example 1__: Inserting raw HTML
 </code></pre>

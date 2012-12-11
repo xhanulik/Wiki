@@ -35,7 +35,7 @@ h2. Syntax Coloring Support
 
 This list is only indicative.
 
-|                 |h1. SilverCity   =|= Enscript      =|= Pygments|
+|                 |= SilverCity   =|= Enscript      =|= Pygments =|
 | Ada             |                 |  ✓              |     |
 | Asm             |                 |  ✓              |     |
 | Apache Conf     |                 |                 |  ✓  |

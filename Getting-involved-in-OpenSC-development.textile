@@ -105,7 +105,7 @@ Developers/maintainers with established SVN write access are, in alphabetical or
  [[ListTagged(maintained wolfgang)]]
  
 
-The Emeritus of the OpenSC developer team as well as project chronology is listed on ProjectHistory.[[BR]]
+The Emeritus of the OpenSC developer team as well as project chronology is listed on ProjectHistory.<br />
 List of all people who have sent patches to OpenSC is available under <b>AuthorsAndCredits</b>.
 
 h2. All links

@@ -66,7 +66,7 @@ See also the mod_wsgi "installation instructions":http://code.google.com/p/modws
 
 For troubleshooting tips, see the [TracModPython#Troubleshooting mod_python troubleshooting] section, as most Apache-related issues are quite similar, plus discussion of potential "application issues":http://code.google.com/p/modwsgi/wiki/ApplicationIssues when using mod_wsgi.
 
-<i>Note: using mod_wsgi 2.5 and Python 2.6.1 gave an Internal Server Error on my system (Apache 2.2.11 and Trac 0.11.2.1). Upgrading to Python 2.6.2 (as suggested "here":http://www.mail-archive.com/modwsgi@googlegroups.com/msg01917.html) solved this for me[[BR]]-- Graham Shanks</i>
+<i>Note: using mod_wsgi 2.5 and Python 2.6.1 gave an Internal Server Error on my system (Apache 2.2.11 and Trac 0.11.2.1). Upgrading to Python 2.6.2 (as suggested "here":http://www.mail-archive.com/modwsgi@googlegroups.com/msg01917.html) solved this for me<br />-- Graham Shanks</i>
 
 h2. Apache Basic Authentication for Trac thru mod_wsgi
 

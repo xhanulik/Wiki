@@ -112,7 +112,7 @@ Possible variables are :
  * <b>owner</b> — The person responsible for the ticket
  * <b>cc</b> — The list of emails for notifying about the ticket change
 
-<b>Example:</b> <i>/trac/newticket?summary=Compile%20Error&version=1.0&component=gui</i>[[BR]]
+<b>Example:</b> <i>/trac/newticket?summary=Compile%20Error&version=1.0&component=gui</i><br />
 
 ----
 See also:  TracGuide, TracWiki, TracTicketsCustomFields, TracNotification, TracReports, TracQuery

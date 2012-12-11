@@ -20,7 +20,7 @@ and any other text fields explicitly marked as supporting WikiFormatting.
 
 h2. Overview
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td Wiki pages :: `CamelCase` or `wiki:CamelCase`
  Parent page :: `[..]`
  Tickets :: `#1` or `ticket:1`
@@ -83,7 +83,7 @@ to links to Wiki page names.
 [[SandBox|the sandbox]]
 </code></pre>
 |--------------------------------------------------------------------------------------
-|| The short form <i>realm:target</i> can also be wrapped within a <...> pair, [[br]] which allow for arbitrary characters (i.e. anything but >)  |
+|| The short form <i>realm:target</i> can also be wrapped within a <...> pair, <br /> which allow for arbitrary characters (i.e. anything but >)  |
 <pre><code>#!td{{{
 <wiki:Strange(page@!)>
 </code></pre>

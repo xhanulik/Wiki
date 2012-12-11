@@ -1,6 +1,6 @@
 <b> Decryption with RSA key 1024 bits </b>
 
-Its seems that decryption with the imported RSA key of 1024 bits length is not working.[[BR]]
+Its seems that decryption with the imported RSA key of 1024 bits length is not working.<br />
 This is using the OpenSC middleware, as well as the IAS/ECC Middleware v2.0.13 from ANTS (supplied by Gemalto) .
 
 The test consisted in:

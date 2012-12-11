@@ -21,7 +21,7 @@ A few other wiki pages present the advanced features of the Trac wiki markup in 
 
 h2. Cheat sheet
 
-|h1. <b>Category</b> =|= <b>Wiki Markup</b> =|= <b>Display</b>|
+|= <b>Category</b> =|= <b>Wiki Markup</b> =|= <b>Display</b> =|
 |-----------------------------------------------------------
 <pre><code>#!th rowspan=3[#FontStyles Font Styles]
 </code></pre>
@@ -32,7 +32,7 @@ h2. Cheat sheet
 || `**bold**`, `//italic//`, `**//!WikiCreole style//**` || \
 | **bold**, //italic//, **//!WikiCreole style//** |
 |-----------------------------------------------------------
-||h1. [#Headings Headings]||\
+||= [#Headings Headings] =||\
 <pre><code>#!td  {{{
  == Level 2 ==
  === Level 3 ^([#hn note])^
@@ -42,7 +42,7 @@ h2. Cheat sheet
 === Level 3 ^([#hn note])^
 </code></pre>
 |-----------------------------------------------------------
-||h1. [#Paragraphs Paragraphs] ||\
+||= [#Paragraphs Paragraphs]  =||\
 <pre><code>#!td {{{
  First paragraph
  on multiple lines.
@@ -56,7 +56,7 @@ on multiple lines.
 Second paragraph.
 </code></pre>
 |-----------------------------------------------------------
-||h1. [#Lists Lists]||\
+||= [#Lists Lists] =||\
 <pre><code>#!td {{{
  * bullets list
    on multiple paragraphs
@@ -83,7 +83,7 @@ Second paragraph.
         multiple paragraphs
 </code></pre>
 |-----------------------------------------------------------
-||h1. [#PreformattedText Preformatted Text]||\
+||= [#PreformattedText Preformatted Text] =||\
 <pre><code>#!td {{{
  {{{
  multiple lines, ''no wiki''
@@ -97,7 +97,7 @@ Second paragraph.
  </code></pre>
 }}}
 |-----------------------------------------------------------
-||h1. [#Blockquotes Blockquotes]||\
+||= [#Blockquotes Blockquotes] =||\
 <pre><code>#!td {{{
    if there's some leading
    space the text is quoted
@@ -107,7 +107,7 @@ Second paragraph.
  space the text is quoted
 </code></pre>
 |-----------------------------------------------------------
-||h1. [#DiscussionCitations Discussion Citations]||\
+||= [#DiscussionCitations Discussion Citations] =||\
 <pre><code>#!td {{{
  >> ... (I said)
  > (he replied)
@@ -117,7 +117,7 @@ Second paragraph.
 > (he replied)
 </code></pre>
 |-----------------------------------------------------------
-||h1. [#Tables Tables]||\
+||= [#Tables Tables] =||\
 <pre><code>#!td {{{
  ||= Table Header =|| Cell ||
  ||||  (details below)  ||
@@ -161,14 +161,14 @@ Second paragraph.
 || `!wiki:WikiFormatting`, `!WikiFormatting` ||\
 | wiki:WikiFormatting, WikiFormatting |
 |-----------------------------------------------------------
-|h1. [#Images Images]| `!attachments/wiki/WikiFormatting/`<i>link</i>`(WikiFormatting)!` | [[Image(htdocs:../common/trac_logo_mini.png)]] |
+|= [#Images Images] =| `!attachments/wiki/WikiFormatting/`<i>link</i>`(WikiFormatting)!` | [[Image(htdocs:../common/trac_logo_mini.png)]] |
 |-----------------------------------------------------------
 <pre><code>#!th rowspan=2[#Macros Macros]
 </code></pre>
 | `[[MacroList(*)]]` |  <i>(short list of all available macros)</i>  |
 | `[[Image?]]` |  <i>(help for the Image macro)</i>  |
 |-----------------------------------------------------------
-||h1. [#Processors Processors]||\
+||= [#Processors Processors] =||\
 <pre><code>#!td {{{
  {{{
  #!div style="font-size: 80%"
@@ -188,7 +188,7 @@ Second paragraph.
  }}}
 }}}
 |-----------------------------------------------------------
-||h1. [#Comments Comments]||\
+||= [#Comments Comments] =||\
 <pre><code>#!td {{{
  {{{#!comment
  Note to Editors: ...
@@ -200,7 +200,7 @@ Second paragraph.
  </code></pre>
 }}}
 |-----------------------------------------------------------
-||h1. [#Miscellaneous Miscellaneous]||\
+||= [#Miscellaneous Miscellaneous] =||\
 <pre><code>#!td {{{
  Line [[br]] break 
  Line \\ break
@@ -216,7 +216,7 @@ Line \\ break
 h2. Font Styles
 
 The Trac wiki supports the following font styles:
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
    * '''bold''', 
      ''' triple quotes !''' 
@@ -266,7 +266,7 @@ The headline text can be followed by the same number of "=" characters, but this
 
 Finally, the heading might optionally be followed by an explicit id. If not, an implicit but nevertheless readable id will be generated.
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
   = Heading =
   == Subheading
@@ -289,7 +289,7 @@ h2. Paragraphs
 A new text paragraph is created whenever two blocks of text are separated by one or more empty lines.
 
 A forced line break can also be inserted, using:
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
   Line 1[[BR]]Line 2
   </code></pre>
@@ -314,7 +314,7 @@ h2. Lists
 The wiki supports both ordered/numbered and unordered lists.
 
 Example:
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
    * Item 1
      * Item 1.1
@@ -368,7 +368,7 @@ h2. Definition Lists
 
 The wiki also supports definition lists.
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
    llama::
      some kind of mammal, with hair
@@ -391,7 +391,7 @@ h2. Preformatted Text
 
 Block containing preformatted text are suitable for source code snippets, notes and examples. Use three <i>curly braces</i> wrapped around the text to define a block quote. The curly braces need to be on a separate line.
   
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
   {{{
   def HelloWorld():
@@ -411,7 +411,7 @@ h2. Blockquotes
 
 In order to mark a paragraph as blockquote, indent that paragraph with two spaces.
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td{{{
 Paragraph
   This text is a quote from someone else.
@@ -425,7 +425,7 @@ h2. Discussion Citations
 
 To delineate a citation in an ongoing discussion thread, such as the ticket comment area, e-mail-like citation marks (">", ">>", etc.) may be used.  
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
   >> Someone's original text
   > Someone else's reply text
@@ -446,7 +446,7 @@ h2. Tables
 h3. Simple Tables
 
 Simple tables can be created like this:
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
   ||Cell 1||Cell 2||Cell 3||
   ||Cell 4||Cell 5||Cell 6||
@@ -458,7 +458,7 @@ Simple tables can be created like this:
 
 Cell headings can be specified by wrapping the content in a pair of '=' characters.
 Note that the '=' characters have to stick to the cell separators, like this:
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
   ||        ||= stable =||= latest =||
   ||= 0.10 =||  0.10.5  || 0.10.6dev||
@@ -471,7 +471,7 @@ Note that the '=' characters have to stick to the cell separators, like this:
 </code></pre>
 
 Finally, specifying an empty cell means that the next non empty cell will span the empty cells. For example:
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
   || 1 || 2 || 3 ||
   |||| 1-2 || 3 ||
@@ -486,7 +486,7 @@ Finally, specifying an empty cell means that the next non empty cell will span t
 </code></pre>
 
 Note that if the content of a cell "sticks" to one side of the cell and only one, then the text will be aligned on that side. Example:
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
   ||=Text =||= Numbers =||
   ||left align    ||        1.0||
@@ -510,7 +510,7 @@ Note that if the content of a cell "sticks" to one side of the cell and only one
 
 If contrary to the example above, the cells in your table contain more text, it might be convenient to spread a table row over multiple lines of markup. The `\` character placed at the end of a line after a cell separator tells Trac to not start a new row for the cells on the next line.
 
-|h1. Wiki Markup|
+|= Wiki Markup =|
 <pre><code>#!td  {{{
   || this is column 1 [http://trac.edgewall.org/newticket new ticket] || \
   || this is column 2 [http://trac.edgewall.org/roadmap the road ahead] || \
@@ -518,7 +518,7 @@ If contrary to the example above, the cells in your table contain more text, it 
   </code></pre>
 }}}
 |-------------
-|h1. Display|
+|= Display =|
 <pre><code>#!td style="padding: 2em;"|| this is column 1 [http://trac.edgewall.org/newticket new ticket] || \
 || this is column 2 [http://trac.edgewall.org/roadmap the road ahead] || \
 || that's column 3 and last one ||
@@ -533,7 +533,7 @@ h2. Links
 
 Hyperlinks are automatically created for WikiPageNames and URLs. WikiPageLinks can be disabled by prepending an exclamation mark "!" character, such as _!WikiPageLink_.
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
   TitleIndex, http://www.edgewall.com/, !NotAlink
   </code></pre>
@@ -544,7 +544,7 @@ Hyperlinks are automatically created for WikiPageNames and URLs. WikiPageLinks c
 Links can be given a more descriptive title by writing the link followed by a space and a title and all this inside square brackets. 
 If the descriptive title is omitted, then the explicit prefix is discarded, unless the link is an external link. This can be useful for wiki pages not adhering to the WikiPageNames convention.
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
    * [http://www.edgewall.com Edgewall Software]
    * [wiki:TitleIndex Title Index] 
@@ -589,7 +589,7 @@ h2. Trac Links
 
 Wiki pages can link directly to other parts of the Trac system. Pages can refer to tickets, reports, changesets, milestones, source files and other Wiki pages using the following notations:
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
    * Tickets: #1 or ticket:1
    * Reports: {1} or report:1
@@ -633,7 +633,7 @@ Optionally, a label can be given to the anchor:
 <pre><code>[[=#point1 '''Point 1''']]
 </code></pre>
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 |----------------------------------
 <pre><code>#!td  {{{
   [#point2 jump to the second point]
@@ -657,7 +657,7 @@ h2. Escaping Links and WikiPageNames
 
 You may avoid making hyperlinks out of TracLinks by preceding an expression with a single "!" (exclamation mark).
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
    !NoHyperLink
    !#42 is not a link
@@ -679,7 +679,7 @@ In addition to the current page, it is possible to refer to other resources:
  * `!attachments/wiki/WikiFormatting/htdocs:picture.gif(WikiFormatting)!` (referring to a file inside the [TracEnvironment environment] `htdocs` directory)
  * `!attachments/wiki/WikiFormatting/source:/trunk/trac/htdocs/trac_logo_mini.png(WikiFormatting)!` (a file in repository)
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
   [[Image(htdocs:../common/trac_logo_mini.png)]]
   </code></pre>
@@ -694,7 +694,7 @@ h2. Macros
 
 Macros are <i>custom functions</i> to insert dynamic content in a page.
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
   [[RecentChanges(Trac,3)]]
   </code></pre>
@@ -706,7 +706,7 @@ See WikiMacros for more information, and a list of installed macros.
 
 The detailed help for a specific macro can also be obtained more directly by appending a "?" to the macro name.
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
   [[MacroList?]]
   </code></pre>
@@ -720,7 +720,7 @@ h2. Processors
 Trac supports alternative markup formats using WikiProcessors. For example, processors are used to write pages in 
 "reStructuredText":wiki/reStructuredText-Support-in-Trac or [wiki:WikiHtml HTML]. 
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 |--------------------------------------------------------
 <pre><code>#!td align="center" colspan=2 style="border: 0px; font-size: 90%"
    [=#Processors-example-html Example 1:] HTML
@@ -840,7 +840,7 @@ h2. Comments
 
 Comments can be added to the plain text. These will not be rendered and will not display in any other format than plain text.
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
   Nothing to
   {{{
@@ -862,7 +862,7 @@ h2. Miscellaneous
 
 An horizontal line can be used to separated different parts of your page:
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
   Four or more dashes will be replaced 
   by an horizontal line (<HR>)

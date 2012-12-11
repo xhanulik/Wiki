@@ -19,7 +19,7 @@ if you have more than one pin, you will see several card / slot, each with the n
 holder, and with the certificates/keys that pin can access. This feature is called virtual_slots
 and can be configured in the config file.
 
-Example: Take a card with 2 PINs. Each PIN protects a private key and each private key has a corresponding cert chain. And then there are 3 other roots certs that have nothing to do with the other data. Now if num_slots h1. 4, hide_empty_tokens false; and if you put the card your second card reader, you'll get the following:
+Example: Take a card with 2 PINs. Each PIN protects a private key and each private key has a corresponding cert chain. And then there are 3 other roots certs that have nothing to do with the other data. Now if num_slots = 4, hide_empty_tokens = false; and if you put the card your second card reader, you'll get the following:
 
  * token in slot 4: PIN 1, key 1, cert chain 1
  * token in slot 5: PIN 2, key 2, cert chain 2

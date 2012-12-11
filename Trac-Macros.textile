@@ -24,7 +24,7 @@ h3. Example
 
 A list of 3 most recently changed wiki pages starting with 'Trac':
 
-|h1. Wiki Markup =|= Display|
+|= Wiki Markup =|= Display =|
 <pre><code>#!td  {{{
   [[RecentChanges(Trac,3)]]
   </code></pre>

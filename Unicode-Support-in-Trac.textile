@@ -12,7 +12,7 @@ in trac.ini.
 
 You also must make sure that your [trac:DatabaseBackend database backend] stores its data in UTF-8; otherwise strange things will happen.
 
-To convert your database to UTF-8, the easiest way is to dump the database, convert the dump into UTF-8 and then import the converted dump back into the database.[[BR]]
+To convert your database to UTF-8, the easiest way is to dump the database, convert the dump into UTF-8 and then import the converted dump back into the database.<br />
 You can use "iconv":http://www.gnu.org/software/libiconv/documentation/libiconv/iconv.1.html to convert the dump.
 
 

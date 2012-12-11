@@ -2,7 +2,7 @@ h1. German ePass, ePA
 
 <b>TODO: Merge/generalize to a generic "ICAO MRTD":http://www2.icao.int/en/mrtd/Pages/default.aspx page</b>
 
-Germany already uses a passport with builtin contactless smart card (ePass h1. elektronischer Reisepass). Germany plans to introduce an identification card with similar functionality (ePA elektronischer Personalausweis) in 2010.
+Germany already uses a passport with builtin contactless smart card (ePass = elektronischer Reisepass). Germany plans to introduce an identification card with similar functionality (ePA = elektronischer Personalausweis) in 2010.
 
 If you have informations about ePass or ePA, please let us know or add a link to the list below:
 

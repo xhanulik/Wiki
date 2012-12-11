@@ -108,7 +108,7 @@ Alternatively you configure Trac to run in any of the following environments.
 h4. Other Python Packages
 
  * "Babel":http://babel.edgewall.org, version >= 0.9.5, 
-   needed for localization support[[BR]]
+   needed for localization support<br />
    <i>Note: </i> If you want to be able to use the Trac interface in other languages, then make sure you first have installed the optional package Babel. Lacking Babel, you will only get the default english version, as usual. If you install Babel later on, you will need to re-install Trac. 
  * "docutils":http://docutils.sourceforge.net/, version >= 0.3.9 
    for WikiRestructuredText.

@@ -170,7 +170,7 @@ smtp_password = password
 
 where <i>user</i> and <i>password</i> match an existing GMail account, <i>i.e.</i> the ones you use to log in on "http://gmail.com":http://gmail.com
 
-Alternatively, you can use `smtp_port = 25`.[[br]]
+Alternatively, you can use `smtp_port = 25`.<br />
 You should not use `smtp_port = 465`. It will not work and your ticket submission may deadlock. Port 465 is reserved for the SMTPS protocol, which is not supported by Trac. See [comment:ticket:7107:2 #7107] for details.
  
 

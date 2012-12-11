@@ -79,7 +79,7 @@ X.509 Certificate [/C=BE/ST=...]
 
 Some things to note:
  * The Auth ID (01) of the private key is the same as the one of the PIN which means that you first have to do a login with this PIN before you can use this key.
- * The key is in an EF with ID h1. 0012 in the DF with ID = 3045, which on its turn is a DF with ID 5015, which on its turn is a DF of the MF (3F00).
+ * The key is in an EF with ID = 0012 in the DF with ID = 3045, which on its turn is a DF with ID = 5015, which on its turn is a DF of the MF (3F00).
  * The private key and certificate share the same ID (45), which means that they belong together.
  * The cert is in the EF with as path: 3F00\5015\4545 and is no CA cert.
 
