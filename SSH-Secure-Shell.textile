@@ -1,0 +1,17 @@
+h1. SSH Secure Shell 
+
+
+h2. Windows (Putty)
+
+"putty.exe":http://www.risacher.org/putty-cac/putty-cac-experimental/windows/putty.exe from "Putty-CAC":http://risacher.yi.org/putty-cac/, an improved version of "Putty-SC":http://www.joebar.ch/puttysc/ adds PKCS#11 support to putty, which the upstream version does not have. It works flawlessly with OpenSC PKCS#11 module. A fork of Putty, named " KiTTY":http://www.9bis.net/kitty/ also exists.
+Using the "pageant.exe":http://www.risacher.org/putty-cac/putty-cac-experimental/windows/pageant.exe from Putty-CAC allows to use "WinSCP":http://winscp.net/eng/index.php with smart cards as well.
+
+h2. Linux / Mac OS X (OpenSSH)
+
+See wiki:OpenSSH for more information.
+
+h2. PuttyCard (deprecated)
+
+"PuTTYcard":wiki/PuTTYcard is another, independent implementation to add smart card support to putty.
+Read more about it "here":wiki/PuTTYcard, and download the files from "opensc-project.org contrib":http://www.opensc-project.org/files/contrib/ directory.
+

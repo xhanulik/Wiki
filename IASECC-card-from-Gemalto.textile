@@ -1,0 +1,16 @@
+h1. IAS/ECC card from Gemalto
+
+Link to the manufacturer's Web site page for the card: "MultiApp ID IAS ECC":http://www.gemalto.com/products/multiapp_id_ias_ecc/
+
+The latest specification for the card, "IAS/ECC v1.0.1":http://www.gixel.fr/includes/cms/_contenus/bibliotheque/file/CAP%20/IAS%20ECC%20v1_0_1UK.pdf, restricts the use of SDOs. The specification does not mention the option to create a new SDO.
+
+The card strictly follows the specification and comes with two on-card applications: <i>generic PKI</i> and <i>eID</i>. [[BR]]
+The xDF files of the PKCS#15 file system cannot be re-created and the size of these files cannot be changed.[[BR]]
+
+The card comes with a certain number of pre-allocated key slots and it is not possible to create a new key slots.[[BR]]
+The essential key slot attributes, such as ACLs, size, and required algorithm, cannot be changed after creation.
+
+
+
+
+

@@ -1,0 +1,98 @@
+h1. JavaCards
+
+OpenSC (including initialization) works with JavaCards if you have a supported applet on the card. OpenSC 0.11.2 and later support the open source MuscleApplet which can be loaded to virtually any blank JavaCard.
+
+!JavaCards can come in different flavors: empty (preferred), pre-loaded with an applet in EEPROM, with an applet in ROM, with a pre-loaded applet in a finalized state (applets can't be deleted or added). Some cards, for example older IBM JCOP  or older Cyberflex, come pre-loaded with a filesystem (PKCS#15) applet, which are of no interest in the broader context of JavaCards.
+
+The <i>core</i> of OpenSC is a bunch of card drivers, both read-only drivers as well as PKCS#15 initialization drivers. It is important to realize, that all of the initialization drivers target a single card  (usually proprietary)  which is closely tied to the card vendor. Open source is all about providing options and being tied to a card vendor (even if the card comes with good documentation) has the same advantages and disadvantages as some popular binary-only display drivers provided by the vendor: it is not possible to change the way the card behaves. Therefore it is admirable to have open source code both inside the card and on the host computer and use JavaCards.
+
+The main difference between "native" cards and JavaCards is the requirement to install the proper application to the card before continuing with OpenSC, which has historically been a somewhat complicated procedure and what this page tried to demystify.
+
+
+List of applets OpenSC supports (can be read-only and locked cards):
+[[ListTagged(supported javacard applet)]]
+
+h2.  Supported cards
+
+Things to consider when buying JavaCards
+ * EEPROM size. 32K, 64K, 72K and 128K sizes are common. Bigger is better.
+ * JavaCard version: 2.1.1, 2.2.1, 2.2.2. Older API versions don't support fancier features. Bigger is better.
+ * GlobalPlatform version: 2.0.1 and 2.1.1. GP deals with loading applets onto cards, choose 2.1.1 whenever possible.
+
+| <b>Card</b> | <b>JavaCard</b> | <b>!GlobalPlatform</b> | <b>Notes</b> | <b>Where to buy</b> |
+| OberthurCosmo v7 | 2.2.2 | 2.1.1 | "FIPS doc":http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140sp/140sp1236.pdf | "Smartcard Focus":http://www.smartcardfocus.com/shop/ilp/id~407/p/index.shtml|
+| "Not found: text([wiki:e-gate) link(Cyberflex])":wiki/Cyberflex] 32K | 2.1.1 | 2.0.1 | Requires captransf.jar | ? |
+| Cyberflex Access v2 64K | 2.2.1 | 2.0.1 | Requires captransf.jar | ? |
+
+h2. Obtaining an applet
+
+For now, only MuscleApplet open source applet is supported with OpenSC
+
+h2. Loading the applet
+
+After you have fetched a suitable applet for your card (pay attention to JavaCard version and card peculiarities like Cyberflex cards), you need to load the software to the card. Here's how to do it.
+
+h3. Required software
+
+A GlobalPlatform compliant software is needed for loading the applet to the card. Card vendors also provide tools for loading applets but also open source alternatives exist, what is covered here.
+
+ * "GPJ":http://sourceforge.net/projects/gpj/ which is in Java (cross-platform) and easier to use than gpshell. A version of gpj.jar is also attached to this page. NB! You need Java 1.6+ to use this software!
+ * "GlobalPlatform C library + GPShell":http://sourceforge.net/projects/globalplatform/ is a library and shell written in C (requires compilation) and has a more powerful but also harder to use interface.
+ * "http://code.google.com/p/gpcomm/":http://code.google.com/p/gpcomm/ (maybe useful for developers)
+If unsure, GPJ should work for most recent cards and is easier to use, thus the following examples use GPJ.
+
+h3. List the current contents of the smart card
+<pre><code>$ java -jar gpj.jar -list
+Found terminals: [PC/SC terminal OmniKey CardMan 3821 00 00]
+Found card in terminal: OmniKey CardMan 3821 00 00
+ATR: 3B DB 18 00 80 B1 FE 45 1F 83 00 31 C0 64 C7 FC 10 00 01 90 00 FA 
+AID: A0 00 00 01 51 00 00                          |....Q..|         ISD LC: 1 PR: 0x9E
+
+AID: A0 00 00 00 03 53 50                          |.....SP|         ExM LC: 1 PR: 0x00
+     A0 00 00 01 51 00 00                          |....Q..|
+     A0 00 00 00 03 53 50 41                       |.....SPA|
+     A0 00 00 00 03 00 00                          |.......|
+</code></pre>
+
+Load and install as the default applet MuscleApplet CAP file and list the contents of the card:
+<pre><code>$ java -jar gpj.jar -load CardEdge.cap -install -priv 4 -list
+Found terminals: [PC/SC terminal OmniKey CardMan 3821 00 00]
+Found card in terminal: OmniKey CardMan 3821 00 00
+ATR: 3B DB 18 00 80 B1 FE 45 1F 83 00 31 C0 64 C7 FC 10 00 01 90 00 FA 
+AID: A0 00 00 01 51 00 00                          |....Q..|         ISD LC: 1 PR: 0x9A
+
+AID: A0 00 00 00 01 01                             |......|          App LC: 7 PR: 0x04
+
+AID: A0 00 00 00 03 53 50                          |.....SP|         ExM LC: 1 PR: 0x00
+     A0 00 00 01 51 00 00                          |....Q..|
+     A0 00 00 00 03 53 50 41                       |.....SPA|
+     A0 00 00 00 03 00 00                          |.......|
+
+AID: A0 00 00 00 01                                |.....|           ExM LC: 1 PR: 0x00
+     A0 00 00 00 01 01                             |......|
+</code></pre>
+
+As you can see, a new AID is available on the card (A0 00 00 00 01 01) which is also the <i>default selected</i> applet.
+
+
+h2. Interesting JavaCard applets
+
+Open source applets possibly usable (with some work) with OpenSC:
+ * CoolKey Applet (MuscleApplet fork): "http://directory.fedoraproject.org/wiki/CoolKey#CoolKey_Java_Applet":http://directory.fedoraproject.org/wiki/CoolKey#CoolKey_Java_Applet
+ * JavaCardSign PKCS#15 applet: "http://sourceforge.net/projects/javacardsign/":http://sourceforge.net/projects/javacardsign/
+ * "OpenPGP":wiki/OpenPGP-card applet: "http://sourceforge.net/projects/jopenpgpcard/":http://sourceforge.net/projects/jopenpgpcard/ (and a somewhat matching javax.smartcardio GUI "http://sourceforge.net/projects/javaopenpgpcard/)":http://sourceforge.net/projects/javaopenpgpcard/)
+Other interesting applets:
+ * MRTD (biometric passport) applet, from JMRTD: "http://sourceforge.net/projects/jmrtd/":http://sourceforge.net/projects/jmrtd/
+ * "Trusted Execution Module prototype":http://github.com/costan/tem_fw ("related paper":http://people.csail.mit.edu/devadas/pubs/cardis08tem.pdf)
+ * "PLAID":http://www.govdex.gov.au/confluence/display/PLAID/Home ("explanation":http://www.centrelink.gov.au/internet/internet.nsf/filestores/press_kits_5_a/$file/PLAID_backgrounder_0409en.pdf)
+ * "ISO18013 driving license applet":http://sourceforge.net/projects/isodl/
+ * "Wiki in JavaCard":http://github.com/joelhockey/javacard
+ * ".be eID emulation":http://code.google.com/p/eid-quick-key-toolset/source/browse/trunk/eid-quick-key-toolset/eid-applet/src/main/java/be/cosic/eidapplet/
+ * "Web server in Java Card":http://www.citi.umich.edu/techreports/reports/citi-tr-99-3.pdf
+
+h2. Resources
+
+ * "State of JavaCards in 2006":http://www.cs.ru.nl/~erikpoll/papers/evaluationBasis.pdf
+ * "JavaCard programming tutorial":https://www.msec.be/jan/JavaCardTutorial.pdf
+
+

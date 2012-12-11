@@ -1,0 +1,35 @@
+h1. Athena ASEPCOS / ASEKey
+
+"Athena":http://www.athena-scs.com "ASEPCOS smartcards":http://www.athena-scs.com/product.asp?pid=22 and tokens are supported from OpenSC-0.11.6.
+ * ATR: "3B D6 18 00 81 B1 80 7D 1F 03 80 51 00 61 10 30 8F":http://smartcard-atr.appspot.com/parse?ATR=3BD6180081B1807D1F038051006110308F
+
+Full PKCS#15 emulation is supported.
+
+Athena cooperates with the OpenSC project and provides any required information.
+
+If you are interested in Athena's tokens (ASEKey), make sure you order the CCID compliant version.
+
+Another issue you may encouter is failure to initialize the PKCS#15 structure. This may be due to pre-formated smartcard using Athena proprietary provider. If you have this issue, ask for help in OpenSC MailingList.
+
+Athena also makes "JavaCards":wiki/JavaCards, which require a supported applet.
+
+h2. Speed
+
+ * RSA 1024 key generation: BROKEN!
+<pre><code>Program received signal SIGSEGV, Segmentation fault.
+sc_pkcs15_remove_unusedspace (p15card=0x629720, unusedspace=0x1) at pkcs15.c:1650
+1650		if (unusedspace->prev == NULL)
+(gdb) bt
+#0  sc_pkcs15_remove_unusedspace (p15card=0x629720, unusedspace=0x1) at pkcs15.c:1650
+#1  0x00007ffff777b448 in sc_pkcs15_card_free (p15card=0x629720) at pkcs15.c:490
+#2  0x00007ffff777b82e in sc_pkcs15_unbind (p15card=0x629720) at pkcs15.c:888
+#3  0x0000000000406afd in main (argc=<value optimised out>, argv=<value optimised out>) at pkcs15-init.c:543
+</code></pre>
+
+h2. Notes
+
+ * Card requires SO-PIN before erasing the card with pkcs15-init --erase-card
+
+h2. TODO
+
+[[ListTagged(athena or aspecos)]]

@@ -1,0 +1,116 @@
+h1. Getting involved in OpenSC development
+
+Contributions to OpenSC are welcome! This page explains how to contribute to OpenSC.
+
+h2. Development process
+
+ * OpenSC development is coordinated via [mailto:opensc-devel@opensc-project.org] <b>"mailing list":wiki/Mailing-lists</b>. You may also use [irc://irc.freenode.net/opensc #opensc on irc.freenode.net] IRC channel for short questions. Start helping the community and reviewing [report:10 support tickets]. Patches fixing [/newticket new] or [report:1 existing bugs] may be attached to the ticket or sent to the [wiki:MailingLists opensc-devel mailing list].
+ * Contribution should comply with coding guidelines. A minimal <b>DevelopmentPolicy</b> exists.
+ * To develop OpenSC, you may use github and/or gerrit, with a preference to github.
+ * "DRAFT Howto add/support a new card":wiki/Adding-a-new-card-driver
+
+
+h2. github process
+
+"https://github.com":https://github.com is a web-based hosting service for software development projects using the Git revision control system.
+
+NOTICE:  github staging directory is the most active branch. So please use github over gerrit.
+
+ * OpenSC source code is hosted on "https://github.com":https://github.com with two branches: 
+  * "master":https://github.com/OpenSC/OpenSC branch which is the OpenSC stable release.
+  * "staging":https://github.com/OpenSC/OpenSC/tree/staging branch which the development branch. 
+ * OpenSC master branch is available using:
+<pre><code>git clone git://github.com/OpenSC/OpenSC.git
+cd OpenSC
+./bootstrap 
+</code></pre>
+ * OpenSC staging branch is availabe using:
+<pre><code>git clone git://github.com/OpenSC/OpenSC.git
+cd OpenSC
+git checkout --track origin/staging
+./bootstrap 
+</code></pre>
+ * Read "commits":https://github.com/OpenSC/OpenSC/commits/staging for latest commits.
+ * To start coding, create a "Github":https://github.com account. Creating an account with one project is free. Upload your public ssh keys.
+ * Visit "OpenSC Github project":https://github.com/OpenSC/OpenSC and click on Fork to create your own OpenSC repository. Majors features should have their own branch. Bug fixes should go to the Staging branch. 
+ * To propose a commit, make a pull request to the main OpenSC "staging":https://github.com/OpenSC/OpenSC/tree/staging repository. 
+ * Advertise your pull request. Pull requests are discussed and applied by github core developers.
+
+h2. gerrit process
+
+Gerrit is a free, web-based collaborative review tool which integrates with Git.
+
+WARNING: Gerrit is currently not synchronised and should not be used until it is reset with a fresh copy from github.
+
+ * Register gerrit on "https://www.opensc-project.org/codereview/.":https://www.opensc-project.org/codereview/.
+ * It is highly recommended to subscribe to Email notifications. Go to Settings -> Watched Projects and check all notifications boxes for the OpenSC project.
+ * [CodeReview Review] patches and add comments.
+ * Fetch git commit log:
+<pre><code>scp -p -P 8882 www.opensc-project.org:hooks/commit-msg .git/hooks/ s
+</code></pre>
+ The hook creates the Change-Id for gerrit, allowing a logical change
+ to be tracked across multiple iterations of the actual commit e.g. in
+ response to review.
+ * Patches get into gerrit (see SourceCode ), people review them, and they eventually checked in to the mainstream code.
+ * gerrit includes a voting system. To be applied, a patch needs two votes.
+
+h2. Helper tools
+
+ * To test/debug special hardware (smartcard/token), please open an account on OpenSC development server (information coming soon). The development server offers nearly all supported hardware, so you don't have to buy it. [DeveloperHardware Donation of free hardware] is also possible.
+ * The OpenSC staging branch is also available to beta testers as binary packages (information coming soon). Releasing beta software to a large audience is part of the quality process.
+ * The OpenSC staging branch is installed daily on test servers and go through a series of automatic regressions tests (information coming soon). Some vendors also offer free hardware for testin purpose.
+
+h2. The Team
+
+Current developers/maintainers with activity in Github, in alphabetical order:
+ * Emanuele Pucciarelli (svn: ep) ("Github":https://github.com/puccia/OpenSC)
+ [[ListTagged(maintained ep)]]
+ * Feitian team ("https://github.com/entersafe":https://github.com/entersafe)
+ * Jean-Pierre Szikora (svn: jps) ("Github":https://github.com/szikora/OpenSC)
+ [[ListTagged(maintained jps)]]
+ * Juan Antonio Martinez ("Github":https://github.com/jonsito/OpenSC)
+ [[ListTagged(maintained jonsito)]]
+ * Ludovic Rousseau (svn: ludovic.rousseau) ("Github":https://github.com/LudovicRousseau/OpenSC)
+<pre><code>#!html <a href="http://flattr.com/thing/51920/My-web-site" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
+</code></pre>
+ [[ListTagged(maintained ludovic)]] 
+ * Martin Paljak (svn: martin / martin@martinpaljak.net / skype:martinpaljak) ("Github":https://github.com/martinpaljak/OpenSC)
+ [[ListTagged(maintained martin)]]
+ * Pace Willisson ("Github":https://github.com/pacew/OpenSC)
+ [[ListTagged(maintained pace)]]
+ * Peter Marschall ("Github":https://github.com/marschap/OpenSC)
+ [[ListTagged(maintained peter)]]
+ * Viktor Tarasov (svn: viktor.tarasov) ("Github":https://github.com/viktorTarasov/OpenSC)
+ [[ListTagged(maintained viktor)]]
+
+Developers/maintainers with established SVN write access are, in alphabetical order:
+ * Aleksey Samsonov (svn: s)
+ [[ListTagged(maintained aleksey)]]
+ * Alon Bar-Lev (svn: alonbl)
+ [[ListTagged(maintained alon)]]
+ * Andre Zepezauer (svn: andre)
+ [[ListTagged(maintained andre)]]
+ * Andreas Jellinghaus (svn: aj)
+ [[ListTagged(maintained andreas)]]
+ * Douglas E. Engert (svn: dengert)
+ [[ListTagged(maintained douglas)]]
+ * François Leblanc (svn: flc)
+ [[ListTagged(maintained francois)]]
+ * João Poupino (svn: joao)
+ [[ListTagged(maintained joao)]]
+ * Peter Koch (svn: pk)
+ [[ListTagged(maintained pk)]] 
+ * Wolfgang Glas (svn: wolfgang.glas)
+ [[ListTagged(maintained wolfgang)]]
+ 
+
+The Emeritus of the OpenSC developer team as well as project chronology is listed on ProjectHistory.[[BR]]
+List of all people who have sent patches to OpenSC is available under <b>AuthorsAndCredits</b>.
+
+h2. All links
+
+ * DeveloperHardware is always welcome. Thanks for your donation!
+ * ReleaseHowto documents our release process. 
+ * ResourcesLinks -- Standards, Documents, etc.
+ * GermanApi -- Information about new eCardAPI published by German goverment

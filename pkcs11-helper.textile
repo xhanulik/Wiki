@@ -1,0 +1,70 @@
+h1. pkcs11-helper
+
+"PKCS#11":http://www.rsasecurity.com/rsalabs/pkcs/pkcs-11 is a published standard. PKCS#11 is the de-facto standard to access cryptographic devices.
+
+pkcs11-helper is a library that simplifies the interaction with PKCS#11
+providers for end-user applications using a simple API and optional OpenSSL engine.
+
+h2. Sources
+
+"Here":https://github.com/alonbl/pkcs11-helper
+
+h2. Download
+
+"Files":https://github.com/alonbl/pkcs11-helper/downloads
+
+h3. Gentoo
+
+"dev-libs/pkcs11-helper":http://packages.gentoo.org/package/dev-libs/pkcs11-helper
+
+h3. Debian
+
+Contributed by S. Wefel.
+"libpkcs11-helper1":http://packages.debian.org/lenny/libpkcs11-helper1
+
+h2. License
+
+"COPYING":https://github.com/alonbl/pkcs11-helper/blob/master/COPYING
+
+h2. Features
+
+pkcs11-helper allows using multiple PKCS#11 providers at the same time, enumerating
+available token certificates, or selecting a certificate directly by serialized id,
+handling card removal and card insert events, handling card re-insert to a different
+slot, supporting session expiration and much more all using a simple API.
+
+pkcs11-helper is not designed to manage card content, since object attributes
+are usually vendor specific, and 99% of application need to access
+existing objects in order to perform signature and decryption.
+
+h2. Compatibility
+
+ * The pkcs11-helper library is available in POSIX and WIN32 compliant systems.
+
+ * The pkcs11-helper library should work with almost any PKCS#11 provider, since it
+   uses the minimum required features of the PKCS#11 standard, a list of WorkingProviders
+   is available.
+
+h2. API Documentation
+
+"Here":http://www.opensc-project.org/files/pkcs11-helper/doc/api/.
+
+h2. Projects
+
+ * "OpenVPN":http://www.openvpn.net
+ * "OpenSSH PKCS#11 patch":http://alon.barlev.googlepages.com/openssh-pkcs11
+ * "GnuPG PKCS#11 smartcard daemon":http://gnupg-pkcs11.sourceforge.net
+ * "Qt Cryptographic Architecture PKCS#11 plugin":http://delta.affinix.com/qca
+ * "Linux Disk Encryption Integration":http://en.gentoo-wiki.com/wiki/Linux_Disk_Encryption_Using_LoopAES_And_SmartCards
+ * "GnuTLS PKCS#11":http://alon.barlev.googlepages.com/gnutls-pkcs11
+ * "PKCS#11 Key Module for eCryptfs":http://ecryptfs.sourceforge.net
+ * "PolarSSL":http://polarssl.org
+
+h2. Authors
+
+Alon Bar-Lev <[mailto:alon.barlev@gmail.com alon.barlev@gmail.com]>
+
+h2. Thanks
+
+"THANKS":https://github.com/alonbl/pkcs11-helper/blob/master/THANKS
+

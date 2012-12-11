@@ -1,0 +1,37 @@
+h1. WestCOS
+
+WestCOS card Multi-Application, contact, contact less dual product from "ALIOS":http://www.alios-card.com/index.php?option=com_content&task=view&id=7&Itemid=8&lang=en.
+
+This card is mainly promoted by CEV (CEV and ALIOS are in the same group).
+
+<b>ATR :</b> 
+
+<pre><code>byte 1 = 3b
+byte 2 = 69
+byte 3 = 00
+byte 4 = 00
+byte 5 = 00
+byte 6 = 64
+byte 7 = Version
+byte 8 = Subversion
+byte 9 = Reserved
+byte 10 = Component
+byte 11 = Life phase
+byte 12-13 = Status byte of card initialisation.
+</code></pre>
+
+
+Actually only WestCOS 2Ko is available. The card does not have native RSA support.
+
+Future release for 8Ko cards, WestCOS applet for JavaCards and WestCOS with cryptographcs component .
+
+
+h2. More information
+
+ * "WestCOS page of ALIOS ":http://www.alios-card.com/index.php?option=com_content&task=view&id=7&Itemid=8&lang=en
+ * "http://www.cev-sa.com":http://www.cev-sa.com
+
+
+
+
+

@@ -1,0 +1,21 @@
+h1. Getting started with OpenSC
+
+First you need to "obtain and install":wiki/Compiling-and-Installing-OpenSC-on-Unix-flavors OpenSC software. If the card you want to use is listed as a read-only card in the "SupportedHardware":wiki/Supported-hardware-(smart-cards-and-USB-tokens) list then you can skip the [wiki:CardPersonalization CardPersonalization] with pkcs15-init.
+
+Eventually you will want to use your smart card with various applications. See <b>ApplicationSupport</b> for an incomplete list of supported applications.
+
+<b>SecurityConsiderations</b> must be taken into account when using OpenSC.
+
+If you get stuck with OpenSC and don't find the answer from "FrequentlyAskedQuestions":wiki/Frequently-Asked-Questions, ask for help on "opensc-user mailing list":wiki/Mailing-lists. If you think you have found a bug then please [/newticket report it] but remember - bug tracker is not a support forum. Use the mailing list if you are not sure.
+
+h2. Starting Points
+
+ * OverView - A short introduction what OpenSC is and how it fits into the big picture.
+ * "Download":http://www.opensc-project.org/files/opensc the latest stable release of OpenSC.
+ * QuickStart - installation and basic steps to initialize a blank smart card.
+ * UsingOpensc - options when using OpenSC.
+ * "PKCS#15 Initialization":wiki/Card-personalization Guide with many small details
+ * PinpadReaders - are special because there was no standard for pinpads for a long time.
+ * ReplacingCertificates - does not work for all cards and is a bit tricky.
+ * TroubleShooting explains the most common problems and how to solve them.
+

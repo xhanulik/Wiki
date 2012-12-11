@@ -1,0 +1,8 @@
+h1. Known issues in OpenSC releases
+
+Problems in (latest) OpenSC releases with possible interim solutions.
+
+h2. OpenSC 0.12.0
+
+ * P: Certain cards (FIXME: list them) "may not work properly":http://www.opensc-project.org/pipermail/opensc-devel/2010-December/015497.html with OpenSC 0.12.0, fixed in [4983]
+  * S: Update to a newer release

@@ -1,0 +1,9 @@
+h1. Swedish ePosten card
+
+The swedish eposten card is probably supported by OpenSC. 
+
+It can only be used, not altered.
+
+h1. Links
+
+"http://digitalid.postnet.se/":http://digitalid.postnet.se/ used to have informtion on it, currently unreachable.

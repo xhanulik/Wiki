@@ -1,0 +1,60 @@
+h1. Installing OpenSC PKCS#11 Module in Firefox, Step by Step
+
+This is how you enable smart cards in Mozilla Firefox
+(for the old Mozilla and Thunderbird it is mostly the same):
+
+----
+1.) Start Mozilla or Firefox or Thunderbird. 
+
+!attachments/wiki/MozillaSteps/wiki:MozillaSteps:firefox1.jpg(MozillaSteps)!
+
+----
+2.) Select "Tools" on the menu bar, select "Option...".
+
+!attachments/wiki/MozillaSteps/wiki:MozillaSteps:firefox2.jpg(MozillaSteps)!
+
+----
+3.) Select "Advanced" Options. Unfold the "Certificates" section. Click on "Manage Security Devices".
+
+!attachments/wiki/MozillaSteps/wiki:MozillaSteps:firefox3.jpg(MozillaSteps)!
+
+----
+4.) Click on "Load"
+
+!attachments/wiki/MozillaSteps/wiki:MozillaSteps:firefox4.jpg(MozillaSteps)!
+
+----
+5.) Change the name to "OpenSC PKCS#11 Module". Click on "Browse."
+
+!attachments/wiki/MozillaSteps/wiki:MozillaSteps:firefox5.jpg(MozillaSteps)!
+
+----
+6.) Select the installation directory. On windows this is usualy "C:\Program Files\Smart card bundle". On Linux and Mac OS X choose "/usr/lib/".
+Click on "opensc-pkcs11.dll" (windows) or "opensc-pkcs11.so" (Linux, Mac OS X). Click "Open".
+
+!attachments/wiki/MozillaSteps/wiki:MozillaSteps:firefox6.jpg(MozillaSteps)!
+
+----
+7.) Click "Ok".
+
+!attachments/wiki/MozillaSteps/wiki:MozillaSteps:firefox7.jpg(MozillaSteps)!
+
+----
+8.) Click "Ok".
+
+!attachments/wiki/MozillaSteps/wiki:MozillaSteps:firefox8.jpg(MozillaSteps)!
+
+----
+9.) Click "Ok".
+
+!attachments/wiki/MozillaSteps/wiki:MozillaSteps:firefox9.jpg(MozillaSteps)!
+
+----
+10.) Click "Ok".
+
+!attachments/wiki/MozillaSteps/wiki:MozillaSteps:firefox10.jpg(MozillaSteps)!
+
+----
+11.) Click "Ok".
+
+!attachments/wiki/MozillaSteps/wiki:MozillaSteps:firefox11.jpg(MozillaSteps)!

@@ -1,0 +1,21 @@
+h1. IBM JCOP with BlueZ applet 
+
+Supported cards: jcop31bio cards that include the "bluez" applet in their rom mask.
+
+This includes the sample cards that you can sometimes (but not presently) buy from IBM. 
+We do not know if any of the manufacturers/resellers of non-application-specific 'jcop30' 
+cards provide this rom (or even if any of the providers will provide cards 
+that are still in the OP_READY state).
+
+jcop21id cards could work, they are fips compliant and thus require
+secure messaging, and the opensc code has secure messaging, but
+noone gave us feedback this far whether or not it works, so we have
+assume that it does not :(
+
+Note that pkcs15-init cannot initialize or erase jcop cards. There are no
+free tools to do that in OpenSC.
+
+A small tool to get some information about the cards can be found here:
+"http://www.contrib.andrew.cmu.edu/~cg2v/jcop-opensc-0.2.tar.gz":http://www.contrib.andrew.cmu.edu/~cg2v/jcop-opensc-0.2.tar.gz
+
+

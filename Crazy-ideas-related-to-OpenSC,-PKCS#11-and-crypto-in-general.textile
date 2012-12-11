@@ -1,0 +1,5 @@
+h1. Crazy ideas related to OpenSC, PKCS#11 and crypto in general
+
+The usefulness of the following ideas might be questionable, but implementing something from this list would probably earn instant kudos.
+ * A scriptable PKCS#11 module with Python, maybe based on "elmer":http://elmer.sourceforge.net/
+ * A JavaCard applet implementing a shared secret based RSA key, requiring M out of N cards to be present for operations, together with a PKCS#11 or JCE provider to integrate into existing apps like EJBCA.

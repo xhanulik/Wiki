@@ -1,0 +1,64 @@
+h1. Compiling and Installing OpenSC on Unix flavors
+
+ <i>(For building on Windows or Mac OS X, see WindowsInstaller and MacInstaller for instructions on how to re-build the installers for those platforms yourself)</i>
+
+The preferred method for using OpenSC on Unix is to use the pre-packaged versions from operating system vendor or distribution. If the version is older than the current version, first try to convince the vendor to upgrade the packaged version, if that's not a possibility, OpenSC can be easily built from source on any modern Unix.
+
+To compile OpenSC releases you need to have installed:
+pkg-config, openssl (runtime and development), pcsc-lite (runtime and development). libltdl and libreadline will be used if found and it is possible to use OpenCT instead of PC/SC if needed.
+
+OpenSC tries to auto-detect all libraries using the pkg-config system.
+
+If you don't have pkg-config installed, and don't want to install it, you can use environment variables to tell configure, how to link with some library:
+ * PCSC_CFLAGS and PCSC_LIBS for PC/SC-Lite
+ * OPENSSL_CFLAGS and OPENSSL_LIBS for OpenSSL
+ * OPENCT_CFLAGS and OPENCT_LIBS for OpenCT
+
+_./configure --help_ will list other useful environment variables.
+
+If some libraries are not installed in typical locations, you need to tell pkg-config where to find the
+*.pc files. You can do this with the PKG_CONFIG_PATH environment
+variable, for example:
+<pre><code>export PKG_CONFIG_PATH=/usr/lib/pkgconfig:/usr/local/lib/pkgconfig:/opt/mystuff/liv/pkgconfig
+</code></pre>
+
+h2. Typical Installation
+
+We suggest to install OpenSC into /usr and to put the configfile into /etc/opensc. The default
+however would be /usr/local and /usr/local/etc, so you might want to change those. We suggest to configure and compile OpenSC like this:
+
+<pre><code>tar xfvz opensc-a.b.c.tar.gz
+cd opensc-a.b.c
+./bootstrap
+./configure --prefix=/usr --sysconfdir=/etc/opensc
+make
+sudo make install
+</code></pre>
+
+h2. Detailed instructions
+
+
+h3. Ubuntu
+
+Install generic build tools:
+<pre><code>sudo apt-get install pcscd libccid libpcsclite-dev libssl-dev libreadline-dev autoconf automake build-essential docbook-xsl xsltproc libtool
+./bootstrap
+./configure --prefix=/usr --sysconfdir=/etc/opensc
+make
+sudo make install
+</code></pre>
+
+h3. Debian
+
+Use Ubuntu instructions
+
+h3. Fedora
+
+OpenSC is included in Fedora package collection and installable with 'yum install opensc'. The following instructions apply for building the opensc development version.
+<pre><code>su -c 'yum install readline-devel openssl-devel libxslt docbook-style-xsl pcsc-lite-devel automake autoconf libtool gcc'
+./bootstrap
+./configure --prefix=/usr --sysconfdir=/etc/opensc
+make
+sudo make install
+</code></pre>
+[[BackLinks()]]

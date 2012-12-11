@@ -1,0 +1,101 @@
+h1. OpenSC Installer for Mac OS X
+
+!attachments/wiki/MacInstaller/OpenSC_Installer_screenshot.png(MacInstaller)!
+
+h2. Scope
+
+The goal of OpenSC installer is to integrate with the platform as closely as possible and to provide support for PKCS#11 and native CDSA/Keychain applications on Mac OS X 10.5 and newer. OpenSC installs itself to the default _/Library/OpenSC_ folder, symlinks to command line utilities are created into _/usr/local/bin_. There are no GUI applications but compatible personalized smart cards (see CardPersonalization) show up in _/Applications/Utilities/Keychain Access.app_ (because of _OpenSC.tokend_, installed to _/System/Library/Security/tokend/OpenSC.tokend_).
+
+h3. Mac OS X 10.7 (Lion)
+
+ * The package for 10.6 works on 10.7 as well. You will have to edit the .pkg file on Lion (see FAQ)
+ * The future of "native" smart cards (other than PKCS#11 implementations/applications) on 10.7 and onwards is unclear ("1":http://lists.apple.com/archives/fed-talk/2011/Jul/msg00099.html, "2":http://stackoverflow.com/questions/6840864/cdsa-deprecated-in-os-x-lion-what-replaces-it)
+
+h3. Mac OS X 10.6 (Snow Leopard)
+
+The package is built for i386 and x86_64 and contains:
+ * OpenSC 0.12.X tree
+ * OpenSC.tokend 0.12.X tree
+System OpenSSL (0.9.8l) is used.
+
+h3. Mac OS X 10.5 (Leopard)
+
+The package is built for i386 and ppc7400 and contains:
+ * OpenSC 0.12.X tree
+ * OpenSC.tokend 0.12.X tree
+System OpenSSL (0.9.7l) is used. NB! This version of OpenSSL does not support dynamic loading (DSO_DLFCN), so it is not possible to use it with engine_pkcs11!
+
+h2. Download
+
+<b>NB! </b> Only install smart card reader drivers provided by the reader vendor if the one bundled with Mac OS X does not work for you (i.e. your reader is not CCID compliant or some features like PinPad do not work properly)
+ * See WikiStart for stable releases or try one of the PreReleases
+
+h2. FAQ
+
+
+h3. How to uninstall ?
+
+Run in Terminal.app:
+ <pre><code>sudo /usr/local/bin/opensc-uninstall
+ </code></pre>
+
+h3. The package requires 10.X.Y but I have 10.X.Z
+
+The latest operating system release has the latest security fixes, so keeping your software up to date is preferred. Developers usually have the latest version as well, so this is the only tested platform that can be debugged and supported if necessary. Disabling of the version check is possible, just copy the _.pkg_ to your hard disk and change _OpenSC-10.X.pkg/Contents/Resources/InstallationCheck_ file from:
+<pre><code>    if(CheckVersion("$SYSTEM_VERS", "10.X.Y", "ProductVersion", "<")) {
+</code></pre>
+to:
+<pre><code>    if(CheckVersion("$SYSTEM_VERS", "10.X.Z", "ProductVersion", "<")) {
+</code></pre>
+
+h3. Known issues
+
+ * No good documentation
+ * Websites with re-negotiation are known to cause troubles in Safari
+ * On 10.5 engine_pkcs11 can not be used because of the old OpenSSL
+ * opensc.conf handling during installation needs improvement
+
+h3. Building the installer
+
+Building requires up to date OS X 10.6 with Developer Tools installed (tested with OS X 10.6.8 and Xcode 3.2.6 / OS X 10.7.3 and Xcode 4.3.1, works with both GCC and LLVM/clang). Requires "git":http://git-scm.com/ and fink or macports with docbook-xsl, xsltproc, autoconf, automake, pkgconfig and libtool2:
+<pre><code>sudo port install autoconf automake pkgconfig # minimal, works on 10.7
+sudo port install autoconf automake pkgconfig docbook-xsl xsltproc libtool git-core
+fink install docbook-xsl libxslt-bin autoconf2.6 automake1.11 libtool2
+</code></pre>
+Fetch your favourite Git SourceCode tree:
+<pre><code>git clone git://github.com/martinpaljak/OpenSC.git
+cd OpenSC
+./MacOSX/build # Builds 10.6 installer
+./MacOSX/build 10.5 # Builds 10.5 installer
+</code></pre>
+Example:
+<pre><code>$ time ./MacOSX/build 10.5
+# build output removed
+created: /Users/martin/buildtest/OpenSC/OpenSC-10.5.dmg
+
+real	4m31.994s
+user	1m51.501s
+sys	0m38.020s
+$ time ./MacOSX/build
+# build output removed
+.....................................
+created: /Users/martin/buildtest/OpenSC/OpenSC-10.6.dmg
+
+real	2m21.883s
+user	2m18.951s
+sys	0m41.993s
+</code></pre>
+
+h3. Binary dependencies
+
+The build process uses binary OS X internal components that are fetched and combined from "http://src.macosforge.org/Roots/":http://src.macosforge.org/Roots/ ("script used for this":https://github.com/martinpaljak/OpenSC.tokend/blob/10.6-0.12.2/fetch-binary-build.py).
+10.7 discontinued Tokend (and also made clang the default compiler). To build OpenSC.tokend on 10.7 (which still works with the 10.6 Tokend) the 10.6-only components need to be patched a little to allow building without errors with clang. A patch is attached to this page and the pre-built image for 10.6 (download link for "10.5":http://martinpaljak.net/download/build-10.5.tar.gz, "10.6":http://martinpaljak.net/download/build-10.6.tar.gz) already includes the patch.
+
+
+h2. Old versions
+
+The previous (now deprecated) Mac OS X distribution SCA is also "still available":http://www.opensc-project.org/sca/wiki.
+
+h2. 10.6 and smart cards with Java
+
+64bit JVM has problems with detecting smart card reader events and states via _javax.smartcardio_. To access smart cards, java needs to be started in 32bit mode with _-d32_

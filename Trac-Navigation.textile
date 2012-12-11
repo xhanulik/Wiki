@@ -1,0 +1,39 @@
+h1. Trac Navigation
+
+Starting with Trac 0.11, it is now possible to customize the main and meta navigation entries in some basic ways.
+
+The new `[mainnav]` and `[metanav]` configuration sections can now be used to customize the text and link used for the navigation items, or even to disable them.
+
+`[mainnav]` corresponds to the <b>main navigation bar</b>, the one containing entries such as <i>Wiki</i>, <i>Timeline</i>, <i>Roadmap</i>, <i>Browse Source</i> and so on. This navigation bar is meant to access the default page of the main modules enabled in Trac and accessible for the current user.
+
+`[metanav]` corresponds to the <b>meta navigation bar</b>, by default positioned above the main navigation bar and below the <i>Search</i> box. It contains the <i>Log in</i>, <i>Logout</i>, <i>!Help/Guide</i> etc. entries. This navigation bar is meant to access some global information about the Trac project and the current user.
+
+There is one special entry in the  `[metanav]` section: `logout.redirect` is the page the user sees after hitting the logout button. 
+
+Possible URL formats:
+| <b>config</b> | <b>redirect to</b> |
+| `wiki/Logout` | `/projects/env/wiki/Logout` |
+| `http://hostname/` | `http://hostname/` |
+| `/projects` | `/projects` |
+[[comment(see also #Trac3808)]]
+
+Note that it is still not possible to customize the <b>contextual navigation bar</b>, i.e. the one usually placed below the main navigation bar.
+
+h3. Example
+
+In the following example, we rename the link to the Wiki start "Home", and hide the "!Help/Guide" link. 
+We also make the "View Tickets" entry link to a specific report.
+
+Relevant excerpt from the TracIni:
+<pre><code>[mainnav]
+wiki.label = Home
+tickets.href = /report/24
+
+[metanav]
+help = disabled
+logout.redirect = wiki/Logout
+</code></pre>
+
+----
+See also: TracInterfaceCustomization, and the "TracHacks:NavAddPlugin":http://trac-hacks.org/wiki/NavAddPlugin or "TracHacks:MenusPlugin":http://trac-hacks.org/wiki/MenusPlugin (still needed for adding entries)
+

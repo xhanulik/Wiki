@@ -1,0 +1,41 @@
+h1. Environment variables
+
+You can set different environment variables to change the behavior of OpenSC.
+
+h2. HOME
+
+The cache directory is set to _$HOME/.eid/cache/_ on Unix.
+
+h2. OPENSC_CONF
+
+Specify an alternative _opensc.conf_ file.
+
+h2. OPENSC_DEBUG
+
+See UsingOpensc
+
+h2. PIV_9A06_KEY
+
+See PivTool Points at file with public key used when generating a certificate request. 
+
+h2. PIV_EXT_AUTH_KEY
+
+See PivTool Used with PIV cards during initialization.  
+
+h2. PKCS11SPY
+
+See UsingOpensc
+
+h2. PKCS11SPY_OUTPUT
+
+See UsingOpensc
+
+h2. POSIXLY_CORRECT
+
+h2. TERM
+
+Is used to know if the terminal supports color or not. Supported color terminals are: "linux", "xterm", "Eterm", "rxvt", "rxvt-unicode"
+
+h2. USERPROFILE
+
+The cache directory is set to _$USERPROFILE/eid-cache/_ on Windows.

@@ -1,0 +1,19 @@
+h1. OpenSSL engine for PKCS#11 modules
+
+_engine_pkcs11_ is an implementation of "OpenSSL":http://www.openssl.org/ "engine interface":http://www.openssl.org/docs/crypto/engine.html. It can be loaded
+using code, config file or command line and will pass some OpenSSL functions to a PKCS#11 module.
+_engine_pkcs11_ is meant to be used with PKCS#11 hardware drivers, such as OpenSC. Currently only RSA with PKCS#1 padding (CKM_RSA_PKCS) is supported (GetInvolved and improve it!).
+
+OpenSC is written by an international team and is licensed as Open Source software under the new BSD license. For a list of all authors and contributors as well as detailed license information see "Authors-and-License":wiki/Authors-and-License.
+
+Engine_pkcs11 is based on the "libp11 library":wiki/libp11-PKCS%2311-wrapper-library.
+
+ * "Download":http://www.opensc-project.org/files/engine_pkcs11 the latest stable release of engine_pkcs11.
+ * "Not found: link(engine_pkcs11/QuickStart)":wiki/engine_pkcs11/QuickStart - installation and basic steps to generate and sign a certificate.
+
+ * MailingLists - How to contact us.
+
+ * Please file bug reports via our "online bug tracker":http://www.opensc-project.org/opensc/newticket.
+ * SubversionRepository has our latest source code, if you want to test it or improve it. 
+ * All changes are listed in the [file:ChangeLog ChangeLog] in the source code or "online":http://www.opensc-project.org/doc/engine_pkcs11/ChangeLog. 
+

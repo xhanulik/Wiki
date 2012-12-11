@@ -1,0 +1,75 @@
+ h1. IAS-ECC
+
+The French trade association for electronic components, systems, and smart card industries, "GIXEL":http://www.gixel.fr/contenu.php?page=english, created a common smart card specification IAS-ECC (<i>Identification Authentication Signature – European Citizen Card</i>) that will be used to develop the next French National Identity Card.
+
+IAS-ECC cards comply with the <i>Advanced Electronic Signature</i> EU Directive 1999/93/EC and the "European Citizen Card":http://www.cen.eu/CEN/Sectors/TechnicalCommitteesWorkshops/CENTechnicalCommittees/Pages/TCStruc.aspx?param=6205&title=CEN%2FTC+224 specification created by CEN in June 2007 to ensure interoperability of e-Services cards throughout Europe. The interoperability of the cards means that every card is compatible with all IAS-ECC middleware, including middleware developed for the French government.
+
+The base of the IAS-ECC technical specification contains multiple ISO-7816 series, including ISO-7816-15. The specification anticipates the coexistence of multiple cryptographic card (PKCS#15) applications. (see Note 01).
+
+
+<b>Support of IAS-ECC cards in OpenSC includes</b>:
+ IAS/ECC card manufacturer independence[[BR]]
+ compatibility with existing IAS/ECC card middleware[[BR]]
+ independence from personalization profile in card usage and easy configuration for the particular personalization profile in card administration [[BR]]
+ <i>Secure Messaging</i> for the administration of "protected" applications, "<i>Qualified Signature,</i>" and PIN operations[[BR]]
+ PIN-pad support[[BR]]
+ support for <i>External Authentication</i>[[BR]]
+
+<b>Currently, cards from the following manufacturers are supported</b>:
+ Gemalto "MultiApp ID IAS ECC":http://www.gemalto.com/products/multiapp_id_ias_ecc/[[BR]]
+ Oberthur "ID-ONE IAS-ECC":http://www.oberthur.com/get_downloadsection_file.aspx?id=119[[BR]]
+ Sagem "ypsID S3 IAS/ECC - PKCS#15"[[BR]]
+ Oberthur "COSMO v7" with PKI applet "AuthentIC v3"[[BR]]
+ Amos "IOP-V6 IAS/ECC"[[BR]]
+ IAS/ECC cards with three ""Adele"":http://www.references.modernisation.gouv.fr/sites/default/files/MDWIAS_Profils%20de%20%20personnalisation%20des%20cartes%20IAS%20%20V2_7.pdf profiles (from Gemalto)
+
+The IAS/ECC card from Gemalto "thoroughly implements":wiki/IASECC-card-from-Gemalto specification "IAS/ECC v1.0.1":http://www.gixel.fr/includes/cms/_contenus/bibliotheque/file/CAP%20/IAS%20ECC%20v1_0_1UK.pdf. The card is formatted with <i>generic PKI</i> application and SM protected application <i>eID</i>.[[BR]]
+(Some "notes":wiki/IASECC_Gemalto_eID_Notes, that concerns the usage of this card.)
+
+IAS/ECC card from Oberthur is formatted with one <i>generic PKI</i> application.[[BR]]
+
+The "ypsID S3 IAS/ECC - PKCS#15" is the multi-application card from Sagem and contains two profiles, <i>Generic</i> and protected <i>ECC-eID</i>. The second one contains one slot for the <i>Qualified Signature</i>.
+
+Oberthur's Java-card "COSMO v7" with PKI applet "AuthentIC v3" is not an IAS/ECC card, but native format of this card, "based on PKCS#15 specification":wiki/Oberthur_AuthentIC_v3, is not far from the IAS/ECC.
+<i>Global Platform</i> Secure Messaging can be used to protect the access to the on-card objects. 
+One of the motivations to support this card here is an attempt to generalize implementation of <i>SM</i> and <i>External Authentication</i> - both differ from the definitions in the IAS/ECC specification.[[BR]]
+
+IAS/ECC cards with "Adele" profiles are not general purpose cards. They were produced for the interoperability tests of the IAS/ECC cards and middleware from the different producers.[[BR]]
+
+Tested compatibility with the PKCS#11 and CSP from the other middlewares :
+ <i>IAS ECC Middleware v2.0.20</i> from "ANTS":http://www.ants.interieur.gouv.fr/ants/Technologie-IAS-ECC.html?p=af2 [[BR]]
+ <i>Classic Client 6.2 005</i> from Gemalto[[BR]]
+ <i>AWP 4.4</i> from Oberthur[[BR]]
+ <i>Smart Security Interface 4.9.1</i> from Charismathics[[BR]]
+
+
+<b>To get the source code:</b>
+<pre><code>git clone git@github.com:viktorTarasov/OpenSC-SM.git
+# use 'secure-messaging' branch
+</code></pre>
+
+
+<b>The latest installation packages for Windows 32/64, MacOS 10.5/6</b>[[BR]]
+can be found on the dedicated CI Jenkins server, "OpenSC-SM projects":https://opensc.fr/jenkins/view/OpenSC-SM/.[[BR]]
+Coming soon the packages for different Linux distributions.[[BR]]
+
+
+h2. References
+
+ * "IAS/ECC v1.0.1 specification (French version)":http://www.ants.interieur.gouv.fr/IMG/pdf/IAS/Guide_integration_Middleware_IAS_ECC_v1.0.pdf
+ * "IAS/ECC v1.0.1 specification (English version)":http://www.gixel.fr/includes/cms/_contenus/bibliotheque/file/CAP%20/IAS%20ECC%20v1_0_1UK.pdf
+ * "Adele personalization profiles":http://www.references.modernisation.gouv.fr/sites/default/files/MDWIAS_Profils%20de%20%20personnalisation%20des%20cartes%20IAS%20%20V2_7.pdf
+
+
+h2. Card Manufacturer Links
+
+ * "Gemalto MultiApp ID IAS ECC":http://www.gemalto.com/products/multiapp_id_ias_ecc/
+ * "Oberthur ID-ONE IAS-ECC":http://www.oberthur.com/get_downloadsection_file.aspx?id=119
+ * "Sagem ypsID IAS":http://www.sagem-orga.com/file.php?file=/Download/sagemorga_iam_2s_ypsID_ias_gb.pdf&type=down
+
+h2. Notes
+
+
+h3. Note 01
+
+For the interoperability tests, the three IAS/ECC card producers have used "'Adele personalization profiles'":http://www.references.modernisation.gouv.fr/sites/default/files/MDWIAS_Profils%20de%20%20personnalisation%20des%20cartes%20IAS%20%20V2_7.pdf where three profiles are defined. For the first <i>Generic</i> profile, the administration and usage of the cryptographic objects is protected by User PIN. For the next two profiles, <i>Administration-2</i> and <i>Administration-1</i>, all operations that change the card content are protected by <i>Secure Messaging</i>. The <i>Administration-1</i> application holds the non-repudiation sign key for which the 'COMPUTE SIGNATURE' operation is protected by <i>Sign PIN</i> and <i>Secure Messaging</i>.

@@ -1,0 +1,259 @@
+h1. SmartCardHSM
+
+The "SmartCard-HSM":http://www.cardcontact.de/products/SmartCard-HSM_V1.1.pdf is a lightweight hardware security module in a smart card form factor. It provides a remote-manageable secure key store for RSA and ECC keys.
+
+The stable OpenSC driver has read/write support for RSA and ECC keys, certificates, public and private data objects. Development continues, adding support tools in our repository at "github ":https://github.com/CardContact/OpenSC. A recent version of the installer for Windows can be found "here":http://www.cardcontact.de/download/OpenSC_0.13_preCC.msi.
+
+The driver is included in the master and staging branch of OpenSC@github. Nightly builds can be download from "https://www.opensc-project.org/downloads/projects/opensc/.":https://www.opensc-project.org/downloads/projects/opensc/.
+
+!CardContact provides free development samples for open source developers. For commercial use we offer a SmartCard-HSM SDK with certified drivers and extended support for Java.
+
+Unless stated otherwise, a SmartCard-HSM is usually shipped uninitialized, meaning that no SO-PIN is set. You will first need to perform an initialization to set the SO-PIN and initial user PIN. See section [#init Initialize the Device] below.
+
+h2. Reader support
+
+For RSA 2048 operations and write support, the SmartCard-HSM requires a card reader supporting extended length APDUs. In our tests, card reader from "Identive (formerly SCM)":http://www.identive-infrastructure.com performed best. Omnikey readers generally seemed to have problems with extended length APDUs.
+
+h2. Using the PKCS#11 module in Firefox and Thunderbird
+
+After installation of OpenSC you must register the PKCS11 module in Firefox:
+
+1. Open the Firefox preferences dialog. Choose "Advanced" > "Encryption" > "Security Devices"
+2. Choose "Load"
+3. Enter a name for the security module, such as "OpenSC". NOTE: there is currently a bug in Firefox where international characters may cause problems (TODO: link to bugzilla?)
+4. Choose "Browse..." to find the location of the PKCS11 module on your local computer (Usually c:\WINDOWS\System32\opensc-pkcs11.dll or /usr/local/lib/opensc-pkcs11.so)
+
+h2. Using the SmartCard-HSM with the CSP Minidriver
+
+After installing OpenSC on Windows, you can register the SmartCard-HSM for use with Microsoft applications like Internet Explorer or Outlook.
+
+Save the following to a file sc-hs.reg and double-click to import it into the registy.
+<pre><code>Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Calais\SmartCards\SmartCard-HSM]
+"80000001"="opensc-minidriver.dll"
+"Crypto Provider"="Microsoft Base Smart Card Crypto Provider"
+"ATR"=hex:3b,fe,18,00,00,81,31,fe,45,80,31,81,54,48,53,4d,31,73,80,21,40,81,07,fa
+"ATRMask"=hex:ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Calais\SmartCards\SmartCard-HSM-CL]
+"80000001"="opensc-minidriver.dll"
+"Crypto Provider"="Microsoft Base Smart Card Crypto Provider"
+"ATR"=hex:3B,8E,80,01,80,31,81,54,48,53,4D,31,73,80,21,40,81,07,18
+"ATRMask"=hex:ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff
+</code></pre>
+
+h2. Using opensc-explorer
+
+The SmartCard-HSM is an applet installed on a JavaCard. With opensc-explorer you will first need to select the applet before you can issue further commands.
+
+<pre><code>OpenSC Explorer version 0.13.0-pre1
+Using reader with a card: SCM SCR 3310 00 00
+OpenSC [3F00]> cd aid:E82B0601040181C31F0201
+OpenSC [E82B/0601/0401/81C3/1F02/01]> ls
+FileID  Type  Size
+ 2F02    wEF   436
+ C401    wEF    44
+ CE01    wEF  1023
+ C402    wEF    49
+ CE02    wEF   781
+ C403    wEF    49
+ CE03    wEF   765
+ C404    wEF    49
+ CE04    wEF   770
+ C405    wEF    47
+ CE05    wEF   796
+ CC00 unable to select file, File not found
+ CC01 unable to select file, File not found
+ CC02 unable to select file, File not found
+ CC03 unable to select file, File not found
+ CC04 unable to select file, File not found
+ CC05 unable to select file, File not found
+OpenSC [E82B/0601/0401/81C3/1F02/01]>
+</code></pre>
+Don't be worried about the CCxx files not being found. These file identifiers are reserved as references for key objects.
+
+The card PIN is referenced using the PIN id 0x81. In opensc-explorer you will need to enter
+
+<pre><code>OpenSC [E82B/0601/0401/81C3/1F02/01]> verify chv129
+Please enter PIN:
+Code correct.
+OpenSC [E82B/0601/0401/81C3/1F02/01]>                
+</code></pre>
+
+For changing the PIN you need to enter the old and new PIN as ASCII string:
+<pre><code>OpenSC [E82B/0601/0401/81C3/1F02/01]> change chv129 "648219" "123456"
+PIN changed.
+OpenSC [E82B/0601/0401/81C3/1F02/01]> 
+</code></pre>
+
+h2. Using pkcs15-tool
+
+A SmartCard-HSM equipped with test certificates from the support package contains one RSA and four ECC keys:
+<pre><code>$ pkcs15-tool -D
+Using reader with a card: SCM SCR 3310 00 00
+PKCS#15 Card [SmartCard-HSM]:
+        Version        : 0
+        Serial number  : UTTM0000131
+        Manufacturer ID: CardContact
+        Flags          :
+
+PIN [UserPIN]
+        Object Flags   : [0x3], private, modifiable
+        ID             : 01
+        Flags          : [0x81A], local, unblock-disabled, initialized, exchangeRefData
+        Length         : min_len:4, max_len:16, stored_len:0
+        Pad char       : 0x00
+        Reference      : 129 (0x81)
+        Type           : ascii-numeric
+        Tries left     : 3
+
+Private RSA Key [Joe Doe (RSA2048)]
+        Object Flags   : [0x1], private
+        Usage          : [0x2E], decrypt, sign, signRecover, unwrap
+        Access Flags   : [0x1D], sensitive, alwaysSensitive, neverExtract, local
+        ModLength      : 2048
+        Key ref        : 1 (0x1)
+        Native         : yes
+        Auth ID        : 01
+        ID             : 01
+        GUID           : {4c44fb76-75da-57cd-666d-73afa9d8e6f1}
+
+Private EC Key [Joe Doe (ECC-SECP256)]
+        Object Flags   : [0x1], private
+        Usage          : [0x104], sign, derive
+        Access Flags   : [0x1D], sensitive, alwaysSensitive, neverExtract, local
+        FieldLength    : 256
+        Key ref        : 2 (0x2)
+        Native         : yes
+        Auth ID        : 01
+        ID             : 02
+        GUID           : {88fa7fa5-a4bd-3e5e-2fc6-467a22b09264}
+
+Private EC Key [Joe Doe (ECC-SECP192)]
+        Object Flags   : [0x1], private
+        Usage          : [0x104], sign, derive
+        Access Flags   : [0x1D], sensitive, alwaysSensitive, neverExtract, local
+        FieldLength    : 192
+        Key ref        : 3 (0x3)
+        Native         : yes
+        Auth ID        : 01
+        ID             : 03
+        GUID           : {be437aee-5682-b730-7269-a2cb8b8f1196}
+
+Private EC Key [Joe Doe (ECC-SECP224)]
+        Object Flags   : [0x1], private
+        Usage          : [0x104], sign, derive
+        Access Flags   : [0x1D], sensitive, alwaysSensitive, neverExtract, local
+        FieldLength    : 224
+        Key ref        : 4 (0x4)
+        Native         : yes
+        Auth ID        : 01
+        ID             : 04
+        GUID           : {86bbe6eb-098c-d140-1d64-398aaaabf45e}
+
+Private EC Key [Joe Doe (ECC-BP320)]
+        Object Flags   : [0x1], private
+        Usage          : [0x104], sign, derive
+        Access Flags   : [0x1D], sensitive, alwaysSensitive, neverExtract, local
+        FieldLength    : 320
+        Key ref        : 5 (0x5)
+        Native         : yes
+        Auth ID        : 01
+        ID             : 05
+        GUID           : {2d52c0c3-8151-65a7-f99f-3fb3207186aa}
+
+X.509 Certificate [Joe Doe (RSA2048)]
+        Object Flags   : [0x0]
+        Authority      : no
+        Path           : ce01
+        ID             : 01
+        GUID           : {4c44fb76-75da-57cd-666d-73afa9d8e6f1}
+        Encoded serial : 02 08 021DC154514CC6F9
+
+X.509 Certificate [Joe Doe (ECC-SECP256)]
+        Object Flags   : [0x0]
+        Authority      : no
+        Path           : ce02
+        ID             : 02
+        GUID           : {88fa7fa5-a4bd-3e5e-2fc6-467a22b09264}
+        Encoded serial : 02 08 0219E055EBDC63F1
+
+X.509 Certificate [Joe Doe (ECC-SECP192)]
+        Object Flags   : [0x0]
+        Authority      : no
+        Path           : ce03
+        ID             : 03
+        GUID           : {be437aee-5682-b730-7269-a2cb8b8f1196}
+        Encoded serial : 02 08 0208AA5A8AE04CA8
+
+X.509 Certificate [Joe Doe (ECC-SECP224)]
+        Object Flags   : [0x0]
+        Authority      : no
+        Path           : ce04
+        ID             : 04
+        GUID           : {86bbe6eb-098c-d140-1d64-398aaaabf45e}
+        Encoded serial : 02 08 02426AFAE24D65B4
+
+X.509 Certificate [Joe Doe (ECC-BP320)]
+        Object Flags   : [0x0]
+        Authority      : no
+        Path           : ce05
+        ID             : 05
+        GUID           : {2d52c0c3-8151-65a7-f99f-3fb3207186aa}
+        Encoded serial : 02 08 021C4CD6A9CF3EC8
+</code></pre>
+
+h3. [=#init]Initialize the device
+
+Initializing - and thereby erasing all keys, certificates and data elements - requires the following command
+
+<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --init-token --label "test" --so-pin 3537363231383830
+$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --login --login-type so --so-pin 3537363231383830 --init-pin --new-pin 648219
+
+</code></pre>
+
+If the SmartCard-HSM was never initialized before, the presented SO-PIN is stored as future SO-PIN for this device. Any later initialization requires the presentation of the same SO-PIN.
+
+The parameter --label is required as per PKCS#11, however it's silently ignored by the SmartCard-HSM code.
+
+The --init-pin option can only be used immediately after the --init-token command. To reset a lost PIN you will need to reinitialize the device.
+
+h3. Generate key pair
+
+Use the following command to generate a key pair:
+<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --keypairgen --key-type rsa:1024 --id 10
+Using slot 1 with a present token (0x1)
+Key pair generated:
+Private Key Object; RSA
+  label:      Private Key
+  ID:         10
+  Usage:      decrypt, sign, unwrap
+Public Key Object; RSA 1024 bits
+  label:      Private Key
+  ID:         10
+  Usage:      encrypt, verify, wrap
+
+or for ECC keys:
+$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --login --pin 648219 --keypairgen --key-type EC:prime256v1 --label mykey
+</code></pre>
+The SmartCard-HSM does not permanently store public keys, but generates the required PKCS#11 public key object from certificates stored on the device. As newly generated key pairs don't have a certificate initially, the public key is extracted from the card generated certificate signing request instead and made available for the duration of the session. To save the generated public key in Subject Public Key Information format as per RF3280 use the following command
+<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --keypairgen --key-type rsa:1024 --id 10 --read-object --type pubkey --output-file pubkey.spki
+</code></pre>
+
+h3. Store certificates and data
+
+Use the following commands to store certificates and data:
+<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --write-object testcert.der --type cert --id 10
+</code></pre>
+and
+<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --write-object testcert.der --type data --label testdata
+</code></pre>
+
+h3. Delete objects
+
+For deleting objects use one of the following commands
+<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --delete-object --type cert --id 10
+$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --delete-object --type privkey --id 10
+$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --delete-object --type data --label testdata
+</code></pre>

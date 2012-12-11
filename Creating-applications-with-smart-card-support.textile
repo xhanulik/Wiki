@@ -1,0 +1,91 @@
+h1. Creating applications with smart card support
+
+If you, as a developer, want to write software that can work with cryptographic smart cards, you need to orientate in the maze of different APIs.
+
+h2. Platform crypto interfaces
+
+
+h3. PKCS#11
+
+PKCS#11 is the only universal, cross-platform cryptography interface, defined by RSA Laboratories. OpenSC and almost all hardware cryptography device vendors (smart cards, HSM-s) provide one with their hardware. PKCS#11 is the most universal and flexible API, but it also has a major drawback: applications need to be manually configured to use a specific PKCS#11 module. Choose PKCS#11 as your primary interface if you are writing a specialized crypto application or universality and portability are very important to you. PKCS#11 only provides cryptographic primitives, it does not provide X509 and trust management features. OpenSC provides a PKCS#11 module which should be usable by any software claiming PKCS#11 support.
+
+h4. Tools and libraries
+
+These tools and libraries help in talking to PKCS#11 modules or integrate PKCS#11 with other frameworks.
+ * C
+  * "libp11":wiki/libp11-PKCS%2311-wrapper-library is a simple wrapper around PKCS#11, written in C. It support only RSA keys and PKCS#1 padding.
+  * "pkcs11-helper":wiki/pkcs11-helper is a wrapper around PKCS#11 modules written in C. It also includes an OpenSSL engine.
+  * "engine_pkcs11":wiki/OpenSSL-engine-for-PKCS%2311-modules is a stand-alone OpenSSL engine that bridges OpenSSL and PKCS#11. SSL connections can be terminated with keys from a PKCS#11 module. As it is based on libp11, it only supports what libp11 supports (RSA-PKCS#1)
+  * "gp11":http://live.gnome.org/GnomeKeyring/Architecture#gp11 is a GObject based wrapper for PKCS#11, distributed with gnome-keyring.
+  * "PaKChoiS":http://www.manyfish.co.uk/pakchois/ aims to provide a thin wrapper over the PKCS#11 interface.
+  * "p11-kit":http://p11-glue.freedesktop.org/p11-kit.html eases working with multiple PKCS#11 modules and includes support for "PKCS#11 URI scheme":http://tools.ietf.org/html/draft-pechanec-pkcs11uri-04.
+ * Python
+  * "PyKCS11":http://www.bit4id.org/trac/pykcs11 is a python wrapper (SWIG) for PKCS#11 modules.
+ * Java 
+  * "Using-smart-cards-with-Java-SE":wiki/Using-smart-cards-with-Java-SE wiki page has more resources on Java and smart cards, including a list of PKCS#11 wrappers
+
+h4. Additional resources
+
+ * "Gnome Keyring":http://live.gnome.org/GnomeKeyring/Architecture has PKCS#11 related ideas in their architecture
+
+h3. CrytpoAPI (Windows)
+
+Windows applications use CryptoAPI to do native SSL connections and to use the Windows certificate store. All applications using CryptoAPI (or CryptoAPI-NG) can transparently use all smart cards that provide a full CSP or a smart card BaseCSP module. Most card vendors provide one such driver. OpenSC has a rudimentary BaseCSP module (a MiniDriver), but it is still work in progress. Use CryptoAPI if you are writing a Windows-only application or if you want a well functioning and integrated experience for your users. CryptoAPI provides trust management (user has a centralized location to set the trust bits for various X509 certificates) in addition to basic cryptographic operations and windows API provides higher level functions that are CAPI enabled (TODO: OpenURL example/link)
+
+h3. CDSA/Keychain (Mac OS X)
+
+Mac OS X implements CDSA as the cryptography API for the Mac platform (in theory it is a universal specification but in practice only implemented by Apple). OS X 10.4 and above implement Tokend, what is similar in nature to BaseCSP on Windows - it provides a plugin architecture to add support for smart cards into the system. Applications using CDSA can then transparently make use of smart cards. Applications usually use higher level API-s (like Keychain or SSL socket API-s) that internally make use of CDSA. Trust management is exposed centrally via Keychain.app. Use Keychain API-s if writing a native application for Mac OS X or if you want to have a smooth "Mac style" user experience.
+ * "Mac Dev Center: Security Overview: Security Architecture":http://developer.apple.com/mac/library/documentation/Security/Conceptual/Security_Overview/Architecture/Architecture.html
+
+h3. Java Cryptography Architecture (JCA)
+
+* Sample "applet":http://emergya.github.com/opensc-testing/ with a "JCA provider":http://docs.oracle.com/javase/1.5.0/docs/api/java/security/Provider.html using OpenSC. ("source":http://github.com/emergya/opensc-testing "javadoc":http://emergya.github.com/opensc-testing/apidocs/index.html)
+* TODO, but "Using-smart-cards-with-Java-SE":wiki/Using-smart-cards-with-Java-SE has some pointers
+
+h2. SSL/TLS toolkit integration
+
+
+h3. OpenSSL
+
+"OpenSSL":http://www.openssl.org/ has an easy way to integrate smart card support. "libp11":http://www.opensc-project.org/libp11/ has code to make using OpenSC PKCS#11 module with OpenSSL quite easy and includes example code for using SSL with client certificate authentication using a smart card too (FIXME: link). "engine_pkcs11":http://www.opensc-project.org/engine_pkcs11 project has an OpenSSL engine implementation so you can change any code using OpenSSL to move the crypto operation from your CPU to your smart card with only a few small changes. Wpa_supplicant is an example of an application using OpenSSL and this engine for smart card support.
+
+h3. NSS
+
+"NSS":http://www.mozilla.org/projects/security/pki/nss/ (Network Security Services) is used by Mozilla products (Firefox, Thunderbird) and many applications in Fedora, like "mod_nss":http://directory.fedoraproject.org/wiki/Mod_nss. NSS supports PKCS#11 for SSL.
+
+h3. QCA
+
+"QCA":http://api.kde.org/kdesupport-api/kdesupport-apidocs/qca/html/ (Qt Cryptographic Architecture) adds cryptography support into Qt applications. QCA has PKCS#11 support since v2.0. See "http://sites.google.com/site/alonbarlev/qca-pkcs11":http://sites.google.com/site/alonbarlev/qca-pkcs11 for more information.
+
+h3. GnuTLS
+
+"GnuTLS":http://www.gnu.org/software/gnutls/ includes native PKCS#11 smart card support.
+See "http://www.gnu.org/software/gnutls/manual":http://www.gnu.org/software/gnutls/manual for more information. 
+
+
+h3. cryptlib
+
+"cryptlib":http://www.cs.auckland.ac.nz/~pgut001/cryptlib/ is a library by Peter Gutmann and claims support for SSL and PKCS#11 modules. 
+
+h2. Low level smart card access
+
+OpenSC is for cryptographic smart cards and the preferred method for accessing such cards is via one of the high level cryptographic API-s listed above, which hides the details of actual card reader access via one of the interfaces described below. As a general rule, don't use the low level smart card API-s if the necessary functionality is implemented via a cryptographic API.
+
+h3. PC/SC
+
+PC/SC is a standard from "PC/SC Workgroup":http://www.pcscworkgroup.com/ but the "reference implementation" is still "Windows winscard.dll":http://msdn.microsoft.com/en-us/library/aa374731(VS.85).aspx#smart_card_functions. Linux uses the open source "pcsc-lite":http://pcsclite.alioth.debian.org/ package. And Mac OS X uses a fork of pcsc-lite included in the "SmartCardServices":http://smartcardservices.macosforge.org/ project.
+
+h4. Tools and libraries
+
+ * Python
+  * "pyscard":http://pyscard.sourceforge.net/
+ * Java
+  * See "dedicated Java page":wiki/Using-smart-cards-with-Java-SE about javax.smartcardio in Java 1.6+
+
+h3. CT-API
+
+CT-API is an API for accessing smart card readers that is mostly used in Germany. It is not suited for modern multi-user environments, is not portable and not always available. New projects should avoid using CT-API and use PC/SC instead.
+
+h3. OpenCT
+
+OpenCT, like CT-API, is a Linux only API for accessing USB tokens (and smart card readers). Very few applications beside OpenSC can make use of OpenCT readers. New projects should try to avoid building against OpenCT and use PC/SC instead.

@@ -1,0 +1,17 @@
+h1. Siemens CardOS M4
+
+Siemens CardOS M4 smart card should work fine with OpenSC.
+
+Supported smart cards are the "Aladdin eToken PRO":wiki/Aladdin-eToken-PRO and the [wiki:CryptoIdentityItsec Eutron ITSEC-I] USB tokens.
+
+Currently only the "Aladdin eToken PRO":wiki/Aladdin-eToken-PRO is tested often (a usb crypto dongle that contains a card with this operating system). It works fine, so all other smart cards with the same card operating system should work fine, too.
+
+Siemens CardOS M4 does not allow a key to be used for signing and decryption. OpenSC has a workaround for this restriction, you can generate or store a private key with the "--split-key" flag which will store the key twice, with different usage options, but hide this detail.
+
+Some documentation is available from Aladdin for their eToken PRO, but for an in-depth documentation you need the Siemens card manual, which requires signing an NDA.
+
+The versions of CardOS M4 are: M4.0, M4.01, M4.2, M4.3, M4.3b, M4.2b and M4.2c in this order. Yes, M4.2c is the latest and greatest and later than M4.3 and M4.3B. 
+
+Also note that M4.0 needs special "packages" (i.e. signed firmware addons by siemens) installed to work properly. Best not to use that ancient version
+if you can.
+

@@ -1,0 +1,8 @@
+h1. OBSOLETE PAGE
+
+This URL was present in the NEWS and README files of OpenSC releases 0.10.0 up to 0.11.13, but has not been updated.
+
+For actual information check either [/timeline timeline] or the [source:trunk/NEWS] file itself.
+
+This page will be deleted 6 months after a release without the link.
+

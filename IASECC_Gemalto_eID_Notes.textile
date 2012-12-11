@@ -1,0 +1,14 @@
+<b> Decryption with RSA key 1024 bits </b>
+
+Its seems that decryption with the imported RSA key of 1024 bits length is not working.[[BR]]
+This is using the OpenSC middleware, as well as the IAS/ECC Middleware v2.0.13 from ANTS (supplied by Gemalto) .
+
+The test consisted in:
+ - add PKCS#11 module from the ANTS middleware to the list of security modules in Firefox;
+ - import some encryption PKCS#12 into the 'ECC eID' token;
+ - in Thunderbird send encrypted mail;
+ - try to decrypt.
+
+'PSO_DECRYPT' apdu returns error <i>condition of use not satisfied</i>.
+
+

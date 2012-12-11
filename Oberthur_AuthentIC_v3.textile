@@ -1,0 +1,44 @@
+h2. Oberthur's card 'COSMO v7' with PKI applet 'AuthentIC v3.1' 
+
+The native Oberthur's support of this card&applet is based on the PKCS#15 specification. 
+
+h2. Deviations from PKCS#15 standard
+
+h3. Sign PIN flags
+
+For 'Sign PIN' the <i>!PinAttributes.pinFlags</i> include the 'integrity-protected' flag .[[BR]]
+In reality, for the actually available cards, the ACLs of this PIN do not need SM .[[BR]]
+The OpenSC support of this card uses 'integrity-protected' flag to differentiate 'User PIN' and 'Sign PIN'.
+
+For 'Sign PIN' and 'Sign PUK' the <i>!PinAttributes.pinFlags</i> include the 'local' flag .[[BR]]
+In fact, for the 'AuthentIC v3' applet all credentials (including PINs) are globals.[[BR]]
+In the OpenSC ASN.1 parser this flag is explicitly suppressed for the 'AuthentIC v3' card.
+
+
+h3. 'NONE' security condition
+
+It seems that Oberthur middleware do not accept 'NONE' as security condition in the access rules of the private RSA keys.[[BR]]
+Actually in the OpenSC card profile all ACLs of the private keys are set to 'CHV1'.
+
+
+h3. EF(DIR) content
+
+EF(DIR) contains the 'Discretionary ASN.1 data object' (RSA PKCS#15 v1.1 pp 10) with tag '73'.[[BR]]
+The mandatory OID is absent. Also the 'odfPath' and 'tokenInfoPath' are incomplete -- the value of the both is the parent DF and not full path.
+
+h3. 'GET CHALLENGE'
+
+For the APDU command 'GET CHALLENGE' number of returned bytes do not depends on Le, it's always 24 bytes.
+
+h3. 'Supported algorithms' for public keys
+
+For Oberthur's middleware the 'Supported algorithms' are mandatory in PKCS#15 encoding of the public keys.[[BR]]
+Oberthur's middleware do not returns the CKA_MODULUS of the private keys.[[BR]]
+(By the way, it provokes the seg.fault in NSS library -- there is an attempt to dereferenciate NULL pointer in the PK11_GetPrivateModulusLen() function).
+
+h3. 'External Authentication'
+
+For a moment it's not working.[[BR]]
+In any APDU commands context the 'EXTERNAL AUTHENTICATION' command returns '6985' -- "GET CHALLENGE is not the previous command".[[BR]]
+Waiting for answer from Oberthur.
+

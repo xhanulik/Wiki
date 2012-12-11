@@ -1,0 +1,5 @@
+Seccos is not supported by OpenSC at the moment. Seccos cards are recognized as "Unidentified card".
+
+SECCOS is a product of Giesecke & Devrient, a company whose core business is printing paper money. Opening up specifications is not something they believe in. About the only public information about the OS is that the name stands for 'Secure Chip Card Operating System'. 
+
+

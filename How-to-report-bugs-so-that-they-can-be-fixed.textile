@@ -1,0 +1,47 @@
+h1. How to report bugs so that they can be fixed
+
+ * <b>Trac is not a support forum.</b> Trac is used for tracking bugs and actionable feature requests, not support issues. If you need help with OpenSC, use the MailingLists.
+  * The 'support' ticket category exists purely for administrative purposes (to mark the tickets that should have been asked on the mailing list instead).
+  * <b>DO NOT</b> create new tickets marked as support.
+ * <b>Use a valid e-mail address or check back often</b>
+  * Tickets that require further information but get no feedback from the original reporter are considered as abandoned and deleted after a grace period of 3 months.
+  * Tickets that get classified as support requests are deleted after a grace period of one month. 
+ * Try to ask smart questions. There's a "HOWTO":http://www.catb.org/esr/faqs/smart-questions.html for that.
+ * If your issue has been discussed on one of the MailingLists as well, include a link to the thread in the list archive for future reference.
+ * If possible, try again with the latest snapshot version (PreReleases, NightlyBuilds) to see if your problem has already been fixed.
+ * If you think you have found a regression, include information (command output, logs) about the failing version as well as the last known good version.
+ * Give as much input information as possible, including hardware and software information. This means:
+  * Details of your smart card reader. Include USB identifier if it is something exotic or is not known in one of the lists found from CardReaders page.
+    <pre><code>$ opensc-tool -l
+$ lsusb
+</code></pre>
+   * On Unix, don't use binary only vendor drivers unless you have verified that the "open source CCID driver":http://pcsclite.alioth.debian.org/ccid.html does not work for you. Otherwise the first thing you'll be asked to do is to try again with the open source CCID driver.
+  * Details of your smart card
+   * A human readable description, like ""Elbonian":http://en.wikipedia.org/wiki/Elbonia National Identity Card" or "Bankrupt Bank Card" 
+   * ATR of your card (which you can check via the "online ATR parser":http://smartcard-atr.appspot.com/ as well)
+    <pre><code>$ opensc-tool -a
+</code></pre>
+   * What OpenSC thinks about the card, does some driver recognize it
+    <pre><code>$ opensc-tool -n
+</code></pre>
+  * Software version numbers
+   * Operating system and platform ("OSX 10.6.4 on x86_64" or "Ubuntu 9.10 on i386" or "Windows XP SP3 x86")
+   * If you have source-compiled some smart card related software yourself (either OpenSC, pcsc-lite, CCID driver), give the used _./configure_ parameters. Be prepared to also send the build logs, if requested.
+   * OpenSC version, pcsc-lite version, libccid version.
+    <pre><code>$ opensc-tool --info
+$ pcscd --version
+</code></pre>
+   * Application version ("Firefox 3.6.2", "OpenSSH 5.4") which fails, if applicable.
+ * Verify that the PKCS#15 structure of your card is seen by OpenSC. If you see errors, include them in your report.
+  <pre><code>$ pkcs15-tool -D
+</code></pre>
+ * If you're sure that everything else works (your reader is OK, your card is supported but something still fails) and you think it is a bug in OpenSC:
+  * Give the exact commands you entered or tasks you did, together with the output of commands, so that your problem could be reproduced if needed.
+  * If you encounter a crash, sending a GDB backtrace (or equivalent) also helps. See Debian Wiki for a "tutorial on GDB backtraces":http://wiki.debian.org/HowToGetABacktrace
+  * Enable debug logging in OpenSC and send the log
+   * Set _debug = 9;_ in _opensc.conf_ and set _debug_file_ to a path, where the file will be written.
+   * NB! Debug log may contain sensitive information like PIN codes (if you don't use a pinpad) or private keys (if you import plaintext keys)! Use a test card with a test PIN of 1234/0000 or similar if possible, or clean the debug log from sensitive information before sending it.
+   * Only one command per debug file please. Delete the debug file, repeat your actions until the error occurs and send that debug file for investigation. The total file size should normally be less than 100K, which you should compress before sending to the list or attaching to a ticket.
+  * If command line tools seem to work but PKCS#11 module behaves strangely, send the output of _pkcs11-tool -L_ and/or _pkcs11-tool -O --slot <slot>_ as well.
+ * If you know for sure that the platform you are using or the reader you are using or some other useless fact does not matter, you can omit it. But only stating that "X does not work with Z" does not help to locate and fix the problem.
+ * We are all humans who make mistakes, that's why bugs in software exist. Don't worry if you forget something from this list! Go create that [/newticket new ticket] now and help us improve the software!

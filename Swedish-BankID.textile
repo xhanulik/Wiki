@@ -1,0 +1,11 @@
+h1. Swedish BankID
+
+BankID is an electronic certificate that's issued by several Swedish banks.
+
+Soft tokens and smart cards are available. At least some smart cards have been reported to work with OpenSC and FriBID (browser plugin).
+
+h1. Links
+
+* "http://bankid.com/en/What-is-BankID/":http://bankid.com/en/What-is-BankID/ - official web site
+* "http://fribid.se/index.en.html":http://fribid.se/index.en.html - alternative, free, software client (unofficial)
+

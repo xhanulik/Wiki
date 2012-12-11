@@ -1,0 +1,25 @@
+h1. Portuguese eID
+
+Portugal also has an eID card. More info at "http://www.cartaodocidadao.pt.":http://www.cartaodocidadao.pt.
+
+h2. Card Versions
+
+It appears that two versions of the card exist. One is based on the Gemsafe applet and the other on the IAS specification.
+
+h2. Official Middleware
+
+The "software download page":http://www.cartaodocidadao.pt/index.php?option=com_content&task=view&id=102&Itemid=44&lang=pt lists software for Windows, Mac OS X and Linux. Parts of the software are based on OpenSC (custom libopensc provided with the software).
+
+At this time, the official OS X version does not provide a Tokend, so the card is not supported by applications which use the CDSA/CSSM API. Also, no source code is provided.
+
+h3. New, open source version
+
+ * "http://svn.gov.pt/projects/ccidadao":http://svn.gov.pt/projects/ccidadao
+
+h2. OpenSC support
+
+Starting with version 0.12.0, OpenSC supports the Portuguese eID card - both Authentication and Digital Signature keys.
+
+Full Mac OS X support is available through OpenSC.Tokend.
+
+

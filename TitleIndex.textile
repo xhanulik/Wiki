@@ -1,0 +1,3 @@
+<b> Index by Title </b> | <b> [RecentChanges Index by Date] </b>
+
+[[TitleIndex(format=group,min=4)]]

@@ -1,0 +1,6 @@
+h1. Gemplus GPK 16k
+
+Gemplus GPK 16k cards are supported by OpenSC
+
+Gemplus obsoleted GPK 16k in 2005.
+

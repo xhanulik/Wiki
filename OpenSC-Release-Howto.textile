@@ -1,0 +1,53 @@
+h1. OpenSC Release Howto
+
+Releasing OpenSC should be simple and streamlined, yet a predictable and easily repeatable process. This page describes releasing OpenSC from Git.
+
+h2. Generic principles
+
+Releases of OpenSC are done by a release manager (defined by having write access to Git blessed master and release manager account on opensc-project.org). Releases are regular and constructed by merging proposed and code-reviewed branches from developers into the staging branch. Additional review of the merged changes by release manager is highly encouraged. Testing of those branches should be done earlier by the means of NightlyBuilds. At least one (or more, if needed) PreReleases (release candidates) MUST be done before the actual release. A RC is thus the merging of proposed branches + necessary build environment (NightlyBuilds) changes + NEWS file construction. After a RC has been published, no more merges to the staging branch SHOULD NOT happen, only release-critical single commits can be cherry-picked and a new RC created.
+
+h2. Release preparations in version control
+
+Release (or RC) version must be changed in the following files:
+ * configure.ac
+ * NEWS
+Remove any -pre/-rc tags from version and commit the files to staging branch, from where the official binaries are built.
+
+h2. Build binaries
+
+ * Wait around 10 minutes to allow "all builders":https://www.opensc-project.org/autobuild/view/Staging/ in NightlyBuilds machinery to start (polled every 5 minutes) and complete after commiting changes to staging. All builds MUST succeed and MUST NOT generate more warnings than the previous build.
+ * Do a separate smoke test for all installers and the tarball.
+ * Copy files, calculate checksums and update Wiki with the release script:
+<pre><code>ssh rm@opensc-project.org
+./make-release.py <commit-id> <release version> # for example ./make-release.py 4294f3ca98effd7a986e816c8972377700aa0393 0.12.2-rc1
+</code></pre>
+ * Verify the integrity of the published files (checksums, contents etc) on a trusted computer.
+ * Merging staging to master MUST be a <i>fast forward only</i> merge:
+ <pre><code>  git checkout blessed
+  git merge --ff-only staging
+ </code></pre>
+ * If all goes well, tag the release and publish to blessed master
+<pre><code>  git tag -a -m "Release X.X.X"
+  git push blessed blessed:master
+  git push blessed --tags
+ </code></pre>
+
+h2. Write announcement
+
+ * Write announcement. Write short human readable version (600 bytes) for "freshmeat.net":http://freshmeat.net/projects/opensc/. Suggestions for announcement:
+  * Short overview of OpenSC
+  * Important and visible changes in this release (not a copy of NEWS file)
+  * URL-s for downloads
+  * MD5 and SHA1 checksums of released files
+  * Pointers to full verbose information (list of commits, full changelog, closed bugs)
+  * Plans for next release
+ * Find someone to proofread the announcement.
+
+h2. Publish announcement
+
+ * Via mail to opensc-announce and opensc-devel lists
+ * Update freshmeat entry
+ * Update Trac:
+  * Close milestone, assigning open tickets to next milestone
+  * Update WikiStart (news), DownloadRelease, PreReleases, ProjectHistory
+

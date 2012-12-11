@@ -1,0 +1,40 @@
+h1. STARCOS  cards 
+
+STARCOS is a card operating system family from "Giesecke & Devrient":http://www.gi-de.com/en/products_and_solutions/products/strong_authentication/product_details_5824.jsp
+
+h2. Version 2.3
+
+Version 2.3 is supported by OpenSC.to be precise: iKey 3000 which contains Starcos).
+The StarKey 100 (USB) token from G&D  doesn't seem to work. It features Starcos SPK 2.3, but adding
+usb:096e/0005 to the ikey3k driver ids in openct.conf still won't access the card.
+
+Currently only Starcos SPK 2.3 is tested. If you have a newer version, please report back.
+
+h2. Version 3.0
+
+Version 3.0 is not supported by the OpenSC Starcos driver yet. Support is required to make "German eGK/eHBA":wiki/German-eHBA,-eGK work.
+An experimental driver was posted on opensc-devel:  
+"http://www.opensc-project.org/pipermail/opensc-devel/2010-March/013759.html":http://www.opensc-project.org/pipermail/opensc-devel/2010-March/013759.html
+but is not available in the current release and needs porting.
+
+h2. Version 3.1
+
+There also seems to be Version 3.1 which only does ECC signatures instead of RSA. This is not yet supported by OpenSC as well.
+
+G&D is a very nice company, their APDU manuals are public available, all you need to do
+is send an email asking for them, and they send you the latest version. This is great!
+Thanks G&D!
+
+h2. Version 3.2
+
+This OS version is used in the current (2010) signature cards (Card 3.2, MCard 3.2, MCard100 3.2) offered by SignTrust. It appears to support RSA up to 2048b key length. See "the BSI certification":https://www.bsi-fuer-buerger.de/cae/servlet/contentblob/485364/publicationFile/29254/02114_pdf.pdf of these cards.
+
+h1. Erasing cards
+
+Only test cards with StarCOS are erasable. If the last byte of the return
+value of "opensc-tool -s 80:f6:00:01" is 0x00 the card is afaik not
+erasable, if it's 0xc0 it should be erasble. 
+
+Eutron CryptoIdendity ITSEC-P tokens contain normal cards and thus are not eraseable.
+[[BackLinks]]
+

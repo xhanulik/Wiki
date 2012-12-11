@@ -1,0 +1,8 @@
+h1. OpenSC security advisories
+
+Software often contains bugs, so does OpenSC. Be aware of the following security issues (in addition to overall SecurityConsiderations) and upgrade to latest released version if needed.
+ * "17-Dec-2010":http://www.opensc-project.org/pipermail/opensc-devel/2010-December/015467.html A rogue smart card, specially crafted for this purpose, can be used to potentially execute arbitrary code if inserted to a local machine. Source: "MWR InfoSecurity Advisory":http://labs.mwrinfosecurity.com/files/Advisories/mwri_opensc-get-serial-buffer-overflow_2010-12-13.pdf, fix: [4913]. Coded as "CVE-2010-4523":http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-4523
+ * "07-May-2009 security advisory":http://www.opensc-project.org/pipermail/opensc-announce/2009-May/000025.html coded as "CVE-2009-1603":http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-1603
+ * "26-Feb-2009 security advisory":http://www.opensc-project.org/pipermail/opensc-announce/2009-February/000023.html coded as "CVE-2009-0368":http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-0368
+ * "27-Aug-2008 security advisory":http://www.opensc-project.org/pipermail/opensc-announce/2008-August/000021.html coded as "CVE-2008-3972":http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-3972
+ * "31-Jul-2008 security advisory":http://www.opensc-project.org/pipermail/opensc-announce/2008-July/000020.html coded as "CVE-2008-2235":http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-2235

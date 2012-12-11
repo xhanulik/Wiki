@@ -1,0 +1,18 @@
+h1. Spanish Ceres / DNIe
+
+ <b>NB</b>! OpenSC software which you can download from this website does <b>NOT</b> support the Spanish DNI and Ceres cards. Please contact dnielectronico.es and/or fnmt.es with a request for the source code so that it could be included in OpenSC. See #205 for more details on the possible licensing issue.
+
+The Spanish Ceres and DNI are using a binary module of OpenSC in their official software. No source code is distributed with the binary modules. OpenSC project can not support software without open source code.
+
+ * The binary download link for DNI is "http://www.dnielectronico.es/descargas/PKCS11_para_Sistemas_Unix/index.html":http://www.dnielectronico.es/descargas/PKCS11_para_Sistemas_Unix/index.html
+ * The binary download link for Ceres is "http://www.cert.fnmt.es/index.php?cha=cit&sec=9&page=80&lang=es":http://www.cert.fnmt.es/index.php?cha=cit&sec=9&page=80&lang=es
+
+h3. Update (2011-04-23)
+
+ * Source code is now available for DNIe and Ceres cards
+  * "http://www.dnielectronico.es/descargas/codigo_fuente.html":http://www.dnielectronico.es/descargas/codigo_fuente.html ( GPLv3 License )
+  * "http://www.cert.fnmt.es/content/pages_std/docs/OpenSC-Ceres_Fuentes_Compilacion.zip":http://www.cert.fnmt.es/content/pages_std/docs/OpenSC-Ceres_Fuentes_Compilacion.zip ( No license specified )
+
+ * There is a new open-source "DNIe":wiki/DNIe-(OpenDNIe) implementation (OpenDNIe) under LGPL license. Work is "in progress":https://www.opensc-project.org/opensc/roadmap to get it included into OpenSC mainstream
+  * "https://www.opensc-project.org/opensc/wiki/DNIe":https://www.opensc-project.org/opensc/wiki/DNIe
+  * "http://opendnie.cenatic.es":http://opendnie.cenatic.es

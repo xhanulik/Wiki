@@ -1,0 +1,6 @@
+h1. Schlumberger / Axalto / Gemalto e-gate
+
+"Schlumberger/Axalto":http://www.scmegastore.com/ offers the "e-gate adapter":wiki/Using-Schlumberger-e-gate-on-Linux, an USB adapter for Schlumberger / Axalto
+wiki:Cryptoflex and wiki:Cyberflex cards. See the wiki page of "e-gate":wiki/Using-Schlumberger-e-gate-on-Linux for USB driver information and card pages for card related information.
+
+As of 2009 the e-gate adapter and both Cryptofles and Cyberflex are discontinued products.

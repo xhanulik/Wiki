@@ -1,0 +1,28 @@
+h1. Malaysian MyKAD
+
+MyKAD, or Government Multipurpose Card, (GMPC) is the official compulsory identity card of Malaysia. It is regarded as the world's first smart identity card. Part of the Multimedia Super Corridor flagship applications, it was officially launched on September 5, 2001 and incorporates a microchip, which contains several items of data including biometrics. As of 2006, MyKAD has eight current and several planned applications which are mostly related to proof of identity or electronic money. From March 2003, a variant issuable to newborn babies was introduced, known as MyKID.
+
+OpenSC auto-detects this as a EMV compatible card.
+
+APDU information can be found "here":http://forum.lowyat.net/topic/355950/+20. "Example":http://tech.sybreon.com/index.php/2010/08/opensc-and-mykad/ of a shell script to dump the NRIC information:
+
+<pre><code>#!/bin/sh
+AP_JPN="00:A4:04:00:0A:A0:00:00:00:74:4A:50:4E:00:10"
+
+DF_PAGE1="C8:32:00:00:05:08:00:00:A0:00"
+PR_PAGE1="CC:00:00:00:08:01:00:01:00:E9:00:A0:00"
+SZ_PAGE1="CC:06:00:00:A0"
+
+DF_PAGE4="C8:32:00:00:05:08:00:00:90:00"
+PR_PAGE4="CC:00:00:00:08:04:00:01:00:03:00:90:00"
+SZ_PAGE4="CC:06:00:00:90"
+
+opensc-tool -v -s $AP_JPN \
+        -s $DF_PAGE1 -s $PR_PAGE1 -s $SZ_PAGE1 \
+        -s $DF_PAGE4 -s $PR_PAGE4 -s $SZ_PAGE4 2>/dev/null
+</code></pre>
+
+
+Known ATR-s of the card are:
+ * "3B 67 00 00 73 20 00 6B 68 90 00":http://smartcard-atr.appspot.com/parse?ATR=3B%2067%2000%2000%2073%2020%2000%206B%2068%2090%2000
+

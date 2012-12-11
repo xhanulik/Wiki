@@ -1,0 +1,8 @@
+h1. Mac OS X CSP
+
+Mac OS X has CDSA/Keychain for cryptographic operations and a Tokend subsystem for accessing smart cards (much like BaseCSP and minidrivers on recent Windows)
+Links
+ * "The Apple Developer Library":http://developer.apple.com/referencelibrary/Security/idxCryptography-date.html
+ * Apple has a "mailing list":http://lists.apple.com/mailman/listinfo/apple-cdsa about the topic ("Archive":http://lists.apple.com/archives/apple-cdsa)
+ * Out implementation  "http://www.opensc-project.org/opensc/wiki/MacOsXTokend":http://www.opensc-project.org/opensc/wiki/MacOsXTokend
+

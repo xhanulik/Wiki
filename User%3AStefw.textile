@@ -1,0 +1,5 @@
+h2. Stef Walter
+
+I like hacking on usability and security related stuff. I've been the maintainer of gnome-keyring and have been involved in other Desktop security related efforts. Currently I'm working on glib's new TLS support integrating PKCS#11 storage for keys and certificates.
+
+I'm employed by "Collabora Ltd.":http://www.collabora.co.uk/, a company full of awesome. My wife and I are moving to Germany in February 2011.

@@ -1,0 +1,13 @@
+<b>Larry Stefonic</b>
+
+Larry is an Open Source enthusiast, holding a BS in Interdisciplinary Engineering / Propulsion Systems from Purdue University. He is currently a co-founder of yaSSL as well as an advisor to both Marketcetera and OrangeHRM. Larry previously held executive positions at MySQL AB, and was vital to the growth and success of the world's leading open source database which ultimately sold to Sun Microsystems in 2008.
+
+Founded in 2004, yaSSL, or "yet another SSL", provides embedded security software for devices. yaSSL's main products are the CyaSSL Embedded SSL Library and the yaSSL Embedded Web Server. yaSSL's products are dual licensed under both the GPLv2 as well as standard commercial licensing.
+
+Larry Stefonic: "LinkedIn Profile":http://www.linkedin.com/pub/larry-stefonic/0/23/173[[BR]]
+
+Twitter: "CyaSSL":http://twitter.com/CyaSSL[[BR]]
+About yaSSL: "http://yassl.com/yaSSL/About.html":http://yassl.com/yaSSL/About.html
+
+
+

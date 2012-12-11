@@ -1,0 +1,27 @@
+h1. libp11 - PKCS#11 wrapper library
+
+Libp11 is a library implementing a small layer on top of PKCS#11 API to make using PKCS#11 implementations easier. 
+
+The official name for PKCS#11 is
+"RSA Security Inc. PKCS #11 Cryptographic Token Interface (Cryptoki)".
+
+The official header files for PKCS #11 Standard are under a non-free license. 
+Libp11 does not include these header files, but instead uses a rewritten pkcs11.h
+header file from scute project, which is licensed as open source software.
+
+Libp11 was written by an international team and is licensed as "Open Source":http://www.opensource.org software.
+For a list of all authors and contributers as well as detailed license information see "Not found: text(libp11/AuthorsAndCredits) link(libp11/AuthorsAndCredits)":wiki/libp11/AuthorsAndCredits
+
+h2. Starting Points
+
+ * "Download":http://www.opensc-project.org/files/libp11/ the lastest version of libp11.
+ * "Not found: text(libp11/QuickStart) link(libp11/QuickStart)":wiki/libp11/QuickStart -- How to install libp11 and how to use it in your applications.
+ * Online "API documentation":http://www.opensc-project.org/doc/libp11/api.out/html/
+
+ * MailingLists -- How to contact us.
+
+ * ResourcesLinks -- Standards, Documents, etc.
+ * SubversionRepository -- source code ("browse":http://www.opensc-project.org/libp11/browser, "view history":http://www.opensc-project.org/libp11/log)
+ <pre><code>svn co http://www.opensc-project.org/svn/libp11/trunk libp11
+</code></pre>
+

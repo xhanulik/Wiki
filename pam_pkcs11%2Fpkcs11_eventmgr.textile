@@ -1,0 +1,76 @@
+<pre><code>pkcs11_eventmgr(1)             PAM-pkcs11 tools             pkcs11_eventmgr(1)
+
+
+
+NAME
+       SmartCard PKCS#11 Event Manager
+
+SYNTAX
+       pkcs11_eventmgr   [[no]debug]   [[no]daemon]   [polling_time=<secs>   ]
+       [expire_time=<secs>] [pkcs11_module=<module> ]  [config_file=<filename>]
+
+DESCRIPTION
+       card_eventmgr  is  a  SmartCard Monitoring that listen to the status of
+       the card reader and dispatch actions on several  events.  card_eventmgr
+       can be used to several actions, like lock screen on card removal
+       Three  events  are  supported: card insert, card removal and timeout on
+       removed card. Actions to take are specified in the configuration file
+
+OPTIONS
+       [no]debug
+              Enable debugging output. Default is no debug
+
+       [no]daemon
+              Runs in background. If debug is unset, dettach  also  from  tty.
+              Default: no daemon
+
+       polling_time=<secs>
+              Set polling timeout in secs. Defaults to 1 sec
+
+       expire_time=<secs>
+              Set timeout on card removed. Defaults to 0 (never)
+
+       config_file=<configuration file>
+              Sets      de      configuration      file.      Defaults      to
+              /etc/pam_pkcs11/card_eventmgr.conf
+
+       pkcs11_module=<pkcs11.so library>
+              Sets  the  pkcs#11  library   module   to   use.   Defaults   to
+              /usr/lib/pkcs11/opensc-pkcs11.so
+
+FILES
+       /etc/pam_pkcs11/card_eventmgr.conf
+
+       /usr/lib/pkcs11/opensc-pkcs11.so
+
+EXAMPLES
+       To run this program the standard way type:
+
+       pkcs11_eventmgr
+
+       Alternativly you can specify options:
+
+       pkcs11_eventmgr      nodebug      nodaemon      polling_time=5     con‐
+       fig_file=${HOME}/.pkcs11_eventmgr.conf
+
+BUGS
+       Some PKCS#11 Libraries fails on card removal and re-insert.   to  avoid
+       this,  pkcs11_eventmgr  try  to re-initialize stuff by calling C_Final‐
+       ize() and C_Initialize() on card removal
+       Some apps like [xscreensaver-command] may fail due to external events (
+       eg:  try to unlock an unlocked session ).  In this case, command incor‐
+       rectly returns error code.
+       User shoult take care on this circumstance
+
+AUTHORS
+       Juan Antonio Martinez <jonsito@teleline.es>
+
+SEE ALSO
+       pam_pkcs11(8), card_eventmgr(5)
+       README.eventmgr
+       PAM-PKCS11 User Manual
+
+
+
+Juan Antonio Martinez                0.4.4                  pkcs11_eventmgr(1)
+</code></pre>

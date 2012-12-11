@@ -1,0 +1,79 @@
+h1. Source code
+
+
+h2. Version control with Git
+
+OpenSC source code is managed with "Git":http://book.git-scm.com/. The history of OpenSC source code versioning is from None -> CVS -> SVN -> Git. As the transitions have been done with automatic tools (cvs2svn, git-svn) some "corners" might be incorrect but the overall linear history of source code should be recognized and "git blame" should work as expected. 
+
+
+ <b>NB! There is a an error at the moment and trees at Github and on opensc-project.org and Gerrit have gone out of sync! Please use the Gerrit repository until this has been fixed! </b>
+
+Master repository is hosted on "Github":http://github.com: "https://github.com/OpenSC/OpenSC/":https://github.com/OpenSC/OpenSC/
+
+h3. Getting the source code
+ <pre><code>git clone git://github.com/OpenSC/OpenSC.git
+cd OpenSC
+scp -p -P 8882 www.opensc-project.org:hooks/commit-msg .git/hooks/
+ </code></pre>
+
+Individual developers also have their own Github trees, NightlyBuilds lists ones that you can get binaries from and GetInvolved lists all known active developers.
+
+h2. Source code style and recommendations
+
+Head to DevelopmentPolicy for now.
+
+h2. Sending patches
+
+First, please read DevelopmentPolicy for tips on how to prepare your patch and the commit message. Be prepared to re-work your patch based on feedback. All patches go through review and you can alos help doing <b>CodeReview</b>.
+
+h3. Directly from Git to Gerrit 
+
+Read the Gerrit "tutorial":http://gerrit-documentation.googlecode.com/svn/Documentation/2.2.0/user-upload.html for background information.
+  * Go and create your user (with OpenID) on OpenSC Gerrit site, "https://www.opensc-project.org/codereview/":https://www.opensc-project.org/codereview/
+   * Be sure to set a username, which is needed for SSH access
+  * Configure your SSH public key
+  * Configure OpenSSH (recommended) through _~/.ssh/config_:
+   <pre><code>Host opensc-gerrit
+    Port 8882
+    HostName www.opensc-project.org
+    # your username in Gerrit
+    User martin
+    # if different from the default key.
+    IdentityFile ~/.ssh/opensc-gerrit.key
+</code></pre>
+  * Add gerrit as a Git remote:
+<pre><code>git remote add gerrit opensc-gerrit:OpenSC.git
+</code></pre>
+   * Or if you did not configure SSH: _git remote add gerrit ssh://martin@www.opensc-project.org:8882/OpenSC.git_
+  * Fetch the state of Gerrit:
+<pre><code>git fetch gerrit
+</code></pre>
+  * Make sure your tree is up to date:
+<pre><code>git rebase gerrit/staging
+</code></pre>
+  * Push your changes to be included in the "staging" branch
+<pre><code>git push gerrit HEAD:refs/for/staging
+</code></pre>
+
+h3. If you have forked on Github
+
+  * Pull requests are automagically forwarded to Gerrit
+  * Please open pull requests against staging branch
+  * Do NOT send pulls requests containing merge commits (at the moment at least, needs discussion)
+  * If possible, use Gerrit directly
+
+h3. Via mailing list or Trac
+
+  * Prepare your patches (assuming, that you forked/cloned the repository and started your feature branch with _git checkout -b mychanges master_. NB! Always include the link to the ticket in commit message!
+   * _git format-patch master..HEAD_
+   * Send the generated _00XX-patch-description.patch_} files to opensc-devel mailing list
+   * If you have a patch that fixes a ticket, you could also attach it to the relevant ticket
+   * If possible, use Gerrit (your patch will end up in Gerrit anyway)
+
+h2. Blessed master syncing
+
+opensc-project.org hosts gerrit and gitolite. The way code is supposed to be synced between different repositories, is:
+ * ssh://username@www.opensc-project.org:8882/OpenSC.git - accepts new commits as described in this page from anyone. Also accessible anonymously through "https://www.opensc-project.org/codereview/p/OpenSC":https://www.opensc-project.org/codereview/p/OpenSC
+ * git://www.opensc-project.org/OpenSC.git - is a mirror of Gerrit repository, provides anounymous Git protocol access, does not provide write access. This is the repository that Trac uses to fetch timeline items and which can be fed to opensc-commits list.
+ * "https://github.com/OpenSC/OpenSC.git":https://github.com/OpenSC/OpenSC.git - is an "independent" copy of Gerrit repository, where changes done in Gerrit are pushed to github and pull requests done on Github are fed into Gerrit by the synchronization script. Commits should not be done on Github, at the moment synchronization is one-way.
+

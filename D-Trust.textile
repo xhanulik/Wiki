@@ -1,0 +1,35 @@
+h1. D-Trust
+
+ * subsidiary of Bundesdruckerei
+
+h3. 2010-08
+
+ * current cards issued "SLE66CX322P (or SLE66CX642P), CardOS V4.3B Re_Cert" (D-Trust support) 
+ * registration number at bundesnetzagentur: T-Systems.02182.TE.11.2006
+
+h1. Signtrust
+
+ * subsidiary of Deutsche Post AG
+
+h3. 2010-08
+
+ * current cards issued: Infineon SLE66CX680PE, Starcos 3.2
+ * registration number at bundesnetzagentur: BSI.02114.TE.12.2008
+ * ATR: 3b:9f:96:81:b1:fe:45:1f:07:00:64:05:1e:b2:00:31:b0:73:96:21:db:05:90:00:5c
+
+h1. S-Trust
+
+ * subsidiary of Sparkassenverband
+
+h1. Telesec
+
+ * subsidiary of Deutsche Telekom AG
+
+h3. 2010-08
+
+ * current cards: TCOS 3.0
+
+h1. Bundesnotarkammer
+
+ * issuance of certificates and cards only for notaries and related professions
+

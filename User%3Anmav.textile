@@ -1,0 +1,1 @@
+Nikos Mavrogiannopoulos is the original author of the "GnuTLS cryptographic library":http://www.gnutls.org. Has worked on several security related projects and products, the latest being on "a cryptographic framework for the Linux kernel":http://home.gna.org/cryptodev-linux/. Currently works as a researcher in K.U.Leuven.

@@ -1,0 +1,6 @@
+h1. Italian Postecert
+
+OpenSC [source:trunk/src/libopensc/pkcs15-postecert.c includes code] for Italian Postecert cards.
+
+There is no recent information about the functioning of the code with actual cards.
+

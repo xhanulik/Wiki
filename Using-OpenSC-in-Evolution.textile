@@ -1,0 +1,23 @@
+h1. Using OpenSC in Evolution
+
+This page will explain the steps required to use OpenSC crypto devices in "Evolution":http://projects.gnome.org/evolution/.
+
+h2. Preparations
+
+Make sure the NSS _modutil_ tool is installed. If it is not available install it!
+
+For example on Ubuntu 9.10 this can be done with the command:
+<pre><code>sudo apt-get install libnss3-tools
+</code></pre>
+
+h2. Insert OpenSC into the certificate database
+
+Now you have to insert a link to the PKCS lib into Evolutions certificate database with _modutil_.
+
+The syntax of the command is:
+<pre><code>modutil -add <name> -libfile <path_to_lib> -dbdir <evolution_directory>
+</code></pre>
+
+For example:
+<pre><code>modutil -add "OpenSC" -libfile /usr/lib/opensc-pkcs11.so -dbdir ~/.evolution
+</code></pre>  
