@@ -1,0 +1,181 @@
+diff --git a/security_utilities.framework/Versions/A/Headers/cfutilities.h b/security_utilities.framework/Versions/A/Headers/cfutilities.h
+index e6c5a40..15b0cbc 100644
+--- a/security_utilities.framework/Versions/A/Headers/cfutilities.h
++++ b/security_utilities.framework/Versions/A/Headers/cfutilities.h
+@@ -211,7 +211,7 @@ string cfString(CFTypeRef url, OSStatus err);			// dynamic form; throws on bad t
+ // way of working around this. So the handling of unsigned numbers is "almost correct."
+ //
+ template <class Number>
+-class CFNumberTraits;
++struct CFNumberTraits;
+ 
+ template <> struct CFNumberTraits<char> {
+ 	static const CFNumberType cfnType = kCFNumberCharType;
+@@ -293,6 +293,36 @@ CFNumberRef makeCFNumber(Number value)
+ // legacy form
+ inline uint32_t cfNumber(CFNumberRef number) { return cfNumber<uint32_t>(number); }
+ 
++//
++// Translate strings into CFStrings
++//
++inline CFStringRef makeCFString(const char *s, CFStringEncoding encoding = kCFStringEncodingUTF8)
++{
++	return s ? CFStringCreateWithCString(NULL, s, encoding) : NULL;
++}
++
++inline CFStringRef makeCFString(const string &s, CFStringEncoding encoding = kCFStringEncodingUTF8)
++{
++	return CFStringCreateWithCString(NULL, s.c_str(), encoding);
++}
++
++inline CFStringRef makeCFString(CFDataRef data, CFStringEncoding encoding = kCFStringEncodingUTF8)
++{
++	return CFStringCreateFromExternalRepresentation(NULL, data, encoding);
++}
++
++
++//
++// Create CFURL objects from various sources
++//
++CFURLRef makeCFURL(const char *s, bool isDirectory = false, CFURLRef base = NULL);
++CFURLRef makeCFURL(CFStringRef s, bool isDirectory = false, CFURLRef base = NULL);
++
++inline CFURLRef makeCFURL(const string &s, bool isDirectory = false, CFURLRef base = NULL)
++{
++	return makeCFURL(s.c_str(), isDirectory, base);
++}
++
+ 
+ //
+ // Make temporary CF objects.
+@@ -366,35 +396,6 @@ inline CFDataRef makeCFDataMalloc(const Data &source)
+ }
+ 
+ 
+-//
+-// Translate strings into CFStrings
+-//
+-inline CFStringRef makeCFString(const char *s, CFStringEncoding encoding = kCFStringEncodingUTF8)
+-{
+-	return s ? CFStringCreateWithCString(NULL, s, encoding) : NULL;
+-}
+-
+-inline CFStringRef makeCFString(const string &s, CFStringEncoding encoding = kCFStringEncodingUTF8)
+-{
+-	return CFStringCreateWithCString(NULL, s.c_str(), encoding);
+-}
+-
+-inline CFStringRef makeCFString(CFDataRef data, CFStringEncoding encoding = kCFStringEncodingUTF8)
+-{
+-	return CFStringCreateFromExternalRepresentation(NULL, data, encoding);
+-}
+-
+-
+-//
+-// Create CFURL objects from various sources
+-//
+-CFURLRef makeCFURL(const char *s, bool isDirectory = false, CFURLRef base = NULL);
+-CFURLRef makeCFURL(CFStringRef s, bool isDirectory = false, CFURLRef base = NULL);
+-
+-inline CFURLRef makeCFURL(const string &s, bool isDirectory = false, CFURLRef base = NULL)
+-{
+-	return makeCFURL(s.c_str(), isDirectory, base);
+-}
+ 
+ 
+ //
+diff --git a/security_utilities.framework/Versions/A/Headers/endian.h b/security_utilities.framework/Versions/A/Headers/endian.h
+index b6e2079..d606d88 100644
+--- a/security_utilities.framework/Versions/A/Headers/endian.h
++++ b/security_utilities.framework/Versions/A/Headers/endian.h
+@@ -37,32 +37,6 @@
+ namespace Security {
+ 
+ 
+-//
+-// Endian<SomeType> keeps NBO values in memory and converts
+-// during loads and stores. This presumes that you are using
+-// memory blocks thare are read/written/mapped as amorphous byte
+-// streams, but want to be byte-order clean using them.
+-//
+-// The generic definition uses h2n/n2h to flip bytes. Feel free
+-// to declare specializations of Endian<T> as appropriate.
+-//
+-// Note well that the address of an Endian<T> is not an address-of-T,
+-// and there is no conversion available.
+-//
+-template <class Type>
+-class Endian {
+-public:
+-    typedef Type Value;
+-    Endian() : mValue(Type(0)) { }
+-    Endian(Value v) : mValue(h2n(v)) { }
+-    
+-    operator Value () const		{ return n2h(mValue); }
+-    Endian &operator = (Value v)	{ mValue = h2n(v); return *this; }
+-    
+-private:
+-    Value mValue;
+-};
+-
+ 
+ //
+ // Encode/decode operations by type, overloaded.
+@@ -133,6 +107,33 @@ static inline void h2ni(Type &v)	{ v = h2n(v); }
+ template <class Type>
+ static inline void n2hi(Type &v)	{ v = n2h(v); }
+ 
++//
++// Endian<SomeType> keeps NBO values in memory and converts
++// during loads and stores. This presumes that you are using
++// memory blocks thare are read/written/mapped as amorphous byte
++// streams, but want to be byte-order clean using them.
++//
++// The generic definition uses h2n/n2h to flip bytes. Feel free
++// to declare specializations of Endian<T> as appropriate.
++//
++// Note well that the address of an Endian<T> is not an address-of-T,
++// and there is no conversion available.
++//
++template <class Type>
++class Endian {
++public:
++    typedef Type Value;
++    Endian() : mValue(Type(0)) { }
++    Endian(Value v) : mValue(h2n(v)) { }
++    
++    operator Value () const		{ return n2h(mValue); }
++    Endian &operator = (Value v)	{ mValue = h2n(v); return *this; }
++    
++private:
++    Value mValue;
++};
++
++
+ }	// end namespace Security
+ 
+ 
+diff --git a/security_utilities.framework/Versions/A/Headers/errors.h b/security_utilities.framework/Versions/A/Headers/errors.h
+index c99d5c3..01620cf 100644
+--- a/security_utilities.framework/Versions/A/Headers/errors.h
++++ b/security_utilities.framework/Versions/A/Headers/errors.h
+@@ -28,6 +28,7 @@
+ #ifndef _H_UTILITIES_ERROR
+ #define _H_UTILITIES_ERROR
+ 
++#include <errno.h>
+ #include <security_utilities/utilities.h>
+ #include <exception>
+ #include <CoreServices/../Frameworks/CarbonCore.framework/Headers/MacTypes.h>
+diff --git a/security_utilities.framework/Versions/A/Headers/utilities.h b/security_utilities.framework/Versions/A/Headers/utilities.h
+index a6fddab..c74058a 100644
+--- a/security_utilities.framework/Versions/A/Headers/utilities.h
++++ b/security_utilities.framework/Versions/A/Headers/utilities.h
+@@ -29,6 +29,7 @@
+ #define _H_UTILITIES
+ 
+ #include <security_utilities/utility_config.h>
++#include <security_cdsa_utilities/cssmbridge.h>
+ #include <exception>
+ #include <new>
+ #include <string>
