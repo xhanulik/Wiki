@@ -1,6 +1,6 @@
 h1. Using HTML in Wiki Text
 
-Trac supports inserting HTML into any wiki context, accomplished using the `#!html` "WikiProcessor":wiki/Wiki-Processors. 
+Trac supports inserting HTML into any wiki context, accomplished using the `#!html` [[WikiProcessor|Wiki-Processors]]. 
 
 However a constraint is that this HTML has to be well-formed.
 In particular you can't insert a start tag in an `#!html` block,

@@ -14,7 +14,7 @@ Resources:
 
 h2. Card capabilities
 
-Estonian eID card is based on "MICARDO":wiki/MICARDO-2.1 card driver or a MULTOS application ("Digi-ID") or JavaCard applet ("year 2011 new ID card") mimicking Micardo. There is a ""card tutorial":http://www.id.ee/public/EstEID_kaardi_kasutusjuhend.pdf" (in Estonian) available with APDU excerpts from the original MICARDO manual, which covers v1.0 cards. Version 1.1 and 3.0 cards don't have such manuals.
+Estonian eID card is based on [[MICARDO|MICARDO-2.1]] card driver or a MULTOS application ("Digi-ID") or JavaCard applet ("year 2011 new ID card") mimicking Micardo. There is a ""card tutorial":http://www.id.ee/public/EstEID_kaardi_kasutusjuhend.pdf" (in Estonian) available with APDU excerpts from the original MICARDO manual, which covers v1.0 cards. Version 1.1 and 3.0 cards don't have such manuals.
 
 
 This is what is present on the version 1.0 card (Isikutuvastus = authentication, Allkirjastamine = non-repudiation digital signature):

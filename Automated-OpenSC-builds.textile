@@ -6,7 +6,7 @@ h2. Purpose and warnings
 
  * <b>Attention! </b> Nightly builds are based on bleeding edge software straight from the personal Git SourceCode repository of a developer, they might mess up your operating system, brick your smart card or kill your pet - not for the faint of heart. They might not install or uninstall, break support for your card or be otherwise broken. Stabilized and more tested nightly builds are verified and promoted to PreReleases.
  * <b>Attention! </b> The branches fed to autobuilds <b>SHOULD NOT</b> be used for pulling in history - they can be rebased or force-pushed or rolled back or deleted or whatsoever at any time. The primary purpose of a nightly build branch is for a developer to feed his code to the build machinery for testing purposes and to be able to distribute fixes for testing, before inclusion in the mainline staging tree.
-<b>!!! Please read about ReportingBugs and give feedback</b> on any issues with binary installation packages to opensc-devel "MailingList":wiki/Mailing-lists !!!
+<b>!!! Please read about ReportingBugs and give feedback</b> on any issues with binary installation packages to opensc-devel [[MailingList|Mailing-lists]] !!!
 
  * <b>Attention! </b> Always download the file with the biggest build number!
   * Unless if asked to test a specific build (with a build number or a Git commit hash) please download the <b>exact</b> file, not a later or earlier version.
@@ -16,11 +16,11 @@ DEB and RPM packages for latest released Debian, Ubuntu and Fedora distros are p
 h3. Git builders & Downloads
 
 OpenSC developers have their own Git trees, which are built in similar ways as the official releases, to ease testing in between two releases. In alphabetical order:
- * "Juan Antonio Martinez":https://github.com/jonsito, ""master":https://github.com/jonsito/OpenSC/tree/master" branch, published to "http://www.opensc-project.org/downloads/nightly/jonsito/":http://www.opensc-project.org/downloads/nightly/jonsito/ ("status":https://www.opensc-project.org/autobuild/view/Jonsito/) (topics: "DNIe-(OpenDNIe)":wiki/DNIe-(OpenDNIe), SecureMessaging)
+ * "Juan Antonio Martinez":https://github.com/jonsito, ""master":https://github.com/jonsito/OpenSC/tree/master" branch, published to "http://www.opensc-project.org/downloads/nightly/jonsito/":http://www.opensc-project.org/downloads/nightly/jonsito/ ("status":https://www.opensc-project.org/autobuild/view/Jonsito/) (topics: [[DNIe-(OpenDNIe)|DNIe-(OpenDNIe)]], SecureMessaging)
  * "Ludovic Rousseau":https://github.com/LudovicRousseau, ""master":https://github.com/LudovicRousseau/OpenSC/tree/master" branch, published to "http://www.opensc-project.org/downloads/nightly/ludovic/":http://www.opensc-project.org/downloads/nightly/ludovic/ ("status":https://www.opensc-project.org/autobuild/view/Ludovic/) (topics: misc)
  * "Martin Paljak":https://github.com/martinpaljak, ""proposed":https://github.com/martinpaljak/OpenSC/tree/proposed" branch, published to "http://www.opensc-project.org/downloads/nightly/martin/":http://www.opensc-project.org/downloads/nightly/martin/ ("status":https://www.opensc-project.org/autobuild/view/Martin/) (topics: building, packaging, misc, EstonianEid)
- * "Peter Marschall":https://github.com/marschap, ""testing":https://github.com/marschap/OpenSC/tree/testing" branch, published to "http://www.opensc-project.org/downloads/nightly/peter/":http://www.opensc-project.org/downloads/nightly/peter/ ("status":https://www.opensc-project.org/autobuild/view/Peter/) (topics: "OpenPGP-card":wiki/OpenPGP-card, tools)
- * "Viktor Tarasov":https://github.com/viktorTarasov, ""secure-messaging":https://github.com/viktorTarasov/OpenSC/tree/secure-messaging" branch, published to "http://www.opensc-project.org/downloads/nightly/viktor/":http://www.opensc-project.org/downloads/nightly/viktor/ ("status":https://www.opensc-project.org/autobuild/view/Viktor/) (topics: SecureMessaging, misc, "IAS-ECC":wiki/IAS-ECC)
+ * "Peter Marschall":https://github.com/marschap, ""testing":https://github.com/marschap/OpenSC/tree/testing" branch, published to "http://www.opensc-project.org/downloads/nightly/peter/":http://www.opensc-project.org/downloads/nightly/peter/ ("status":https://www.opensc-project.org/autobuild/view/Peter/) (topics: [[OpenPGP-card|OpenPGP-card]], tools)
+ * "Viktor Tarasov":https://github.com/viktorTarasov, ""secure-messaging":https://github.com/viktorTarasov/OpenSC/tree/secure-messaging" branch, published to "http://www.opensc-project.org/downloads/nightly/viktor/":http://www.opensc-project.org/downloads/nightly/viktor/ ("status":https://www.opensc-project.org/autobuild/view/Viktor/) (topics: SecureMessaging, misc, [[IAS-ECC|IAS-ECC]])
 
 
 

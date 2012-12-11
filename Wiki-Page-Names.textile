@@ -23,10 +23,10 @@ If you want to create a wiki page that doesn't follow CamelCase rules you can us
 </code></pre>
 
 This will be rendered as:
- * "Not found: text([wiki:ISO9000) link(Wiki_page],)":wiki/Wiki_page],,
-   and with a label: "Not found: text(ISO 9000 standard) link(ISO9000)":wiki/ISO9000
- * "Not found: text(Matters") link("Space)":wiki/"Space <i>(that page name embeds space characters)</i>
-   and with a label: "Not found: text(Matters" all about white space) link("Space)":wiki/"Space
+ * [[[[ISO9000|Wiki_page],]|ISO9000|Wiki_page],]]],
+   and with a label: [[ISO 9000 standard|ISO9000]]
+ * [[Matters"|"Space]] <i>(that page name embeds space characters)</i>
+   and with a label: [[Matters" all about white space|"Space]]
  * or simply: ["WikiPageName"]s ''(old MoinMoin's internal free links style)''
  * even better, the new [[WikiCreole link style]]
    and with a label: [[WikiCreole link style|WikiCreole style links]]

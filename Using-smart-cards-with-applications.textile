@@ -1,6 +1,6 @@
 h1. Using smart cards with applications
 
-This is an incomplete list of (mostly open source) <b>end-user applications</b> that are capable of working with smart cards initialized and/or supported by OpenSC, grouped by function. Software development libraries and helpers are listed on "DeveloperInformation":wiki/Creating-applications-with-smart-card-support page. 
+This is an incomplete list of (mostly open source) <b>end-user applications</b> that are capable of working with smart cards initialized and/or supported by OpenSC, grouped by function. Software development libraries and helpers are listed on [[DeveloperInformation|Creating-applications-with-smart-card-support]] page. 
 
 h2. Connection authentication + encryption
 
@@ -23,7 +23,7 @@ h3. VPN
 
 h3. Misc
 
- * "WiFi WPA authentication":wiki/Wireless-authentication
+ * [[WiFi WPA authentication|Wireless-authentication]]
 
 h2. Data signing + encryption
 
@@ -56,7 +56,7 @@ h2. Local authentication / login
  * Linux/"PAM":http://www.kernel.org/pub/linux/libs/pam/
   * "pam_pkcs11":http://www.opensc-project.org/pam_pkcs11  - feature-ritch PAM module, supporting LDAP, OCSP, X509 checks.  
    * "Tutorial on pam_pkcs11 and pam_krb5":http://ryandlane.com/wprdl/2008/10/21/seamless-smartcard-login-with-pam_pkcs11-and-pam_krb5-against-an-active-directory-domain-using-red-hat-enterprise-linux-5-part-1/
-  * "pam_p11":wiki/pam_p11-simple-RSA-authentication-with-PKCS%2311-modules - a simple PAM module for RSA public key authentication.
+  * [[pam_p11|pam_p11-simple-RSA-authentication-with-PKCS#11-modules]] - a simple PAM module for RSA public key authentication.
  * Mac OS X
   * Possible, but complicated and fragile. Documentation available for "10.4":http://www.opensc-project.org/sca/wiki/LogonAuthenticate and [10.5+]
 
@@ -68,7 +68,7 @@ h2. Disk encryption
 h2. Miscellaneous applications
 
  * "GnuPG":http://www.gnupg.org/ can be configured to work with whatever smart card that provides a PKCS#11 library. See "gnupg-pkcs11":http://sites.google.com/site/alonbarlev/gnupg-pkcs11 for more information. Be aware - configuring and using this solution is not trivial.
- * "HBCI Home banking":wiki/HBCI-homebanking
+ * [[HBCI Home banking|HBCI-homebanking]]
 
 h2. PKI/CA
 

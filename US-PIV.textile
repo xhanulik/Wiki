@@ -14,7 +14,7 @@ should inter operate with any vendor's client software. The
 "pkcs11-tool":http://www.opensc-project.org/doc/opensc/html/tools.html#pkcs11-tool can be used
 to read the objects on the card and to change the user PIN.   
 
-The "piv-tool":wiki/PivTool is provided to allow for some card administration in testing, such as generating
+The [[piv-tool|PivTool]] is provided to allow for some card administration in testing, such as generating
 a key pair, and loading a certificate or other object on the card. You may need more information
 from your card vendor.       
 

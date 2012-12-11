@@ -11,7 +11,7 @@ If you are interested in Athena's tokens (ASEKey), make sure you order the CCID 
 
 Another issue you may encouter is failure to initialize the PKCS#15 structure. This may be due to pre-formated smartcard using Athena proprietary provider. If you have this issue, ask for help in OpenSC MailingList.
 
-Athena also makes "JavaCards":wiki/JavaCards, which require a supported applet.
+Athena also makes [[JavaCards|JavaCards]], which require a supported applet.
 
 h2. Speed
 

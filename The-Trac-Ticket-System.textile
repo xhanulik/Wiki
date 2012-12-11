@@ -32,9 +32,9 @@ A  ticket contains the following information attributes:
  * <b>Summary</b> — A brief description summarizing the problem or issue.
  * <b>Description</b> — The body of the ticket. A good description should be specific, descriptive and to the point.
 
-<b>Note:</b> Versions of Trac prior to 0.9 did not have the <i>type</i> field, but instead provided a <i>severity</i> field and different default values for the <i>priority</i> field. This change was done to simplify the ticket model by removing the somewhat blurry distinction between <i>priority</i> and <i>severity</i>. However, the old model is still available if you prefer it: just add/modify the default values of the <i>priority</i> and <i>severity</i>, and optionally hide the <i>type</i> field by removing all the possible values through "trac-admin":wiki/TracAdmin.
+<b>Note:</b> Versions of Trac prior to 0.9 did not have the <i>type</i> field, but instead provided a <i>severity</i> field and different default values for the <i>priority</i> field. This change was done to simplify the ticket model by removing the somewhat blurry distinction between <i>priority</i> and <i>severity</i>. However, the old model is still available if you prefer it: just add/modify the default values of the <i>priority</i> and <i>severity</i>, and optionally hide the <i>type</i> field by removing all the possible values through [[trac-admin|TracAdmin]].
 
-<b>Note:</b> the [trac:TicketTypes type], [trac:TicketComponent component], version, priority and severity fields can be managed with "trac-admin":wiki/TracAdmin or with the [trac:WebAdmin WebAdmin] plugin.
+<b>Note:</b> the [trac:TicketTypes type], [trac:TicketComponent component], version, priority and severity fields can be managed with [[trac-admin|TracAdmin]] or with the [trac:WebAdmin WebAdmin] plugin.
 
 <b>Note:</b> Description of the builtin <i>priority</i> values is available at [trac:TicketTypes#Whyistheseverityfieldgone TicketTypes]
 
@@ -61,7 +61,7 @@ to understand.
 
 h2. Default Values for Drop-Down Fields
 
-The option selected by default for the various drop-down fields can be set in "trac.ini":wiki/The-Trac-Configuration-File, in the `[ticket]` section:
+The option selected by default for the various drop-down fields can be set in [[trac.ini|The-Trac-Configuration-File]], in the `[ticket]` section:
 
  * `default_component`: Name of the component selected by default
  * `default_milestone`: Name of the default milestone
@@ -76,14 +76,14 @@ If any of these options are omitted, the default value will either be the first 
 
 h2. Hiding Fields and Adding Custom Fields
 
-Many of the default ticket fields can be hidden from the ticket web interface simply by removing all the possible values through "trac-admin":wiki/TracAdmin. This of course only applies to drop-down fields, such as <i>type</i>, <i>priority</i>, <i>severity</i>, <i>component</i>, <i>version</i> and <i>milestone</i>.
+Many of the default ticket fields can be hidden from the ticket web interface simply by removing all the possible values through [[trac-admin|TracAdmin]]. This of course only applies to drop-down fields, such as <i>type</i>, <i>priority</i>, <i>severity</i>, <i>component</i>, <i>version</i> and <i>milestone</i>.
 
 Trac also lets you add your own custom ticket fields. See TracTicketsCustomFields for more information.
 
 
 h2. Assign-to as Drop-Down List
 
-If the list of possible ticket owners is finite, you can change the <i>assign-to</i> ticket field from a text input to a drop-down list. This is done by setting the `restrict_owner` option of the `[ticket]` section in "trac.ini":wiki/The-Trac-Configuration-File to “true”. In that case, Trac will use the list of all users who have accessed the project to populate the drop-down field.
+If the list of possible ticket owners is finite, you can change the <i>assign-to</i> ticket field from a text input to a drop-down list. This is done by setting the `restrict_owner` option of the `[ticket]` section in [[trac.ini|The-Trac-Configuration-File]] to “true”. In that case, Trac will use the list of all users who have accessed the project to populate the drop-down field.
 
 To appear in the dropdown list, a user needs be registered with the project, <i>i.e.</i> a user session should exist in the database. Such an entry is automatically created in the database the first time the user submits a change in the project, for example when editing the user's details in the <i>Settings</i> page, or simply by authenticating if the user has a login. Also, the user must have `TICKET_MODIFY` [TracPermissions permissions].
 

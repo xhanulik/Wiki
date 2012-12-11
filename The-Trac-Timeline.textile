@@ -26,7 +26,7 @@ It is possible to filter the displayed events with the various filters in the op
  * <i>Opened and closed tickets</i> — display or hide ticket open or close events.
  * <i>Wiki changes</i> — display or hide Wiki change events.
 
-See TracIni's "Not found: text("[timeline) link(TracIni#timeline-section)":wiki/TracIni#timeline-section section"] for timeline configuration options.
+See TracIni's [["[timeline|TracIni#timeline-section]] section"] for timeline configuration options.
 
 h2. RSS Support
 

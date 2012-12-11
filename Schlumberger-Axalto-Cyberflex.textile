@@ -12,7 +12,7 @@ Current Test Status: Only for the brave! This might kill your card! No warranty 
 
 h2. Reader configuration
 
-If you have an e-gate token, you need to "configure it for PC/SC":wiki/Using-Schlumberger-e-gate-on-Linux properly, as the tools used for loading the applet into the card only speak PC/SC. 
+If you have an e-gate token, you need to [[configure it for PC/SC|Using-Schlumberger-e-gate-on-Linux]] properly, as the tools used for loading the applet into the card only speak PC/SC. 
 
 h2. Installing GlobalPlatform tools
 

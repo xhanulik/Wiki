@@ -1,6 +1,6 @@
 h1. Overview
 
-<b>Attention! Information on this page might be outdated or misleading. If in doubt, ask on [MailingLists opensc-devel mailing list]. Update to the wiki is work in progress. See "FrequentlyAskedQuestions":wiki/Frequently-Asked-Questions and "DeveloperInformation":wiki/Creating-applications-with-smart-card-support for now.</b>
+<b>Attention! Information on this page might be outdated or misleading. If in doubt, ask on [MailingLists opensc-devel mailing list]. Update to the wiki is work in progress. See [[FrequentlyAskedQuestions|Frequently-Asked-Questions]] and [[DeveloperInformation|Creating-applications-with-smart-card-support]] for now.</b>
 
 So you want to use a smart card with some application? Here is a small introductions on the parts you need.
  * Application
@@ -20,11 +20,11 @@ OpenSC on all platforms.
 
 Native Windows applications often use the Crypto API interface. OpenSC does not implement
 the matching interface - CSP - but with the help of an additional software it does. See
-"WindowsCSP":wiki/Windows-CSP-(CryptoAPI) for details. The advantage of Crypto API/CSP is that applications
+[[WindowsCSP|Windows-CSP-(CryptoAPI)]] for details. The advantage of Crypto API/CSP is that applications
 do not need special code to use smart cards, all applications gain that feature automaticaly.
 
 Native Mac OS X applications also have a special interface called CDSA or CSP. See
-"AppleCSP":wiki/Mac-OS-X-CSP for details. At this moment OpenSC does not support that interface
+[[AppleCSP|Mac-OS-X-CSP]] for details. At this moment OpenSC does not support that interface
 and also there is no bridge to do so. But you can still use applications on Mac OS X
 that implement the PKCS#11 interface like Mozilla, Firefox or Thunderbird.
 

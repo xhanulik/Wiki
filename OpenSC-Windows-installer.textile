@@ -31,7 +31,7 @@ h3. Open questions
 h2. Download
 
  * See the WikiStart page for release downloads.
- * PreReleases and "NightlyBuilds":wiki/Automated-OpenSC-builds are usually available as well.
+ * PreReleases and [[NightlyBuilds|Automated-OpenSC-builds]] are usually available as well.
 
 h2. Build instructions (Windows)
 
@@ -51,7 +51,7 @@ h2. Build instructions (Windows)
   * "pkg.m4":https://gnunet.org/svn/Extractor/m4/pkg.m4 from pkg-config to be placed into _c:\mingw\share\aclocal_. If still encountering problems on ./configure time, also put pkg.m4 to _c:\mingw\share\aclocal-1.11_
  * If building from Github, Git for Windows
   * "http://msysgit.googlecode.com/files/Git-1.7.4-preview20110204.exe":http://msysgit.googlecode.com/files/Git-1.7.4-preview20110204.exe (add Git (only git) to PATH)
- * Check out the build snippets on "NightlyBuilds":wiki/Automated-OpenSC-builds
+ * Check out the build snippets on [[NightlyBuilds|Automated-OpenSC-builds]]
 
 h2. Build instructions (Linux)
 

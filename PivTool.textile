@@ -1,6 +1,6 @@
 h2. Name
 
-piv-tool perform some very primitive card administration operation on "PIV cards":wiki/US-PIV. 
+piv-tool perform some very primitive card administration operation on [[PIV cards|US-PIV]]. 
  
 
 h2. Description

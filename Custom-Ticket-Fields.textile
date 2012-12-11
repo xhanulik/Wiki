@@ -4,7 +4,7 @@ Trac supports adding custom, user-defined fields to the ticket module. Using cus
 
 h2. Configuration
 
-Configuring custom ticket fields is done in the "trac.ini":wiki/The-Trac-Configuration-File file. All field definitions should be under a section named `[ticket-custom]`.
+Configuring custom ticket fields is done in the [[trac.ini|The-Trac-Configuration-File]] file. All field definitions should be under a section named `[ticket-custom]`.
 
 The syntax of each field definition is:
 <pre><code> FIELD_NAME = TYPE

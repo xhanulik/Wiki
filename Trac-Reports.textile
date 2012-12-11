@@ -8,9 +8,9 @@ to present information about tickets in the Trac database.
 Rather than have its own report definition format, TracReports relies on standard SQL
 `SELECT` statements for custom report definition. 
 
-  <b>Note:</b> <i>The report module is being phased out in its current form because it seriously limits the ability of the Trac team to make adjustments to the underlying database schema. We believe that the "query module":wiki/Trac-Ticket-Queries is a good replacement that provides more flexibility and better usability. While there are certain reports that cannot yet be handled by the query module, we intend to further enhance it so that at some point the reports module can be completely removed. This also means that there will be no major enhancements to the report module anymore.</i>
+  <b>Note:</b> <i>The report module is being phased out in its current form because it seriously limits the ability of the Trac team to make adjustments to the underlying database schema. We believe that the [[query module|Trac-Ticket-Queries]] is a good replacement that provides more flexibility and better usability. While there are certain reports that cannot yet be handled by the query module, we intend to further enhance it so that at some point the reports module can be completely removed. This also means that there will be no major enhancements to the report module anymore.</i>
 
-  <i>You can already completely replace the reports module by the query module simply by disabling the former in "trac.ini":wiki/The-Trac-Configuration-File:</i>
+  <i>You can already completely replace the reports module by the query module simply by disabling the former in [[trac.ini|The-Trac-Configuration-File]]:</i>
   <pre><code>  [components]
   trac.ticket.report.* = disabled
   </code></pre>

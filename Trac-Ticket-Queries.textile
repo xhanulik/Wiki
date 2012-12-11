@@ -2,7 +2,7 @@ h1. Trac Ticket Queries
 
 [[TracGuideToc]]
 
-In addition to "reports":wiki/Trac-Reports, Trac provides support for <i>custom ticket queries</i>, used to display lists of tickets meeting a specified set of criteria. 
+In addition to [[reports|Trac-Reports]], Trac provides support for <i>custom ticket queries</i>, used to display lists of tickets meeting a specified set of criteria. 
 
 To configure and execute a custom query, switch to the <i>View Tickets</i> module from the navigation bar, and select the <i>Custom Query</i> link.
 
@@ -43,7 +43,7 @@ You may want to save some queries so that you can come back to them later.  You 
 Which is displayed as:
   [query:status=new|assigned|reopened&version=1.0 Active tickets against 1.0]
 
-This uses a very simple query language to specify the criteria (see "Not found: text(Query Language) link(TracQuery#QueryLanguage)":wiki/TracQuery#QueryLanguage).
+This uses a very simple query language to specify the criteria (see [[Query Language|TracQuery#QueryLanguage]]).
 
 Alternatively, you can copy the query string of a query and paste that into the Wiki link, including the leading `?` character:
 <pre><code>[query:?status=new&status=assigned&status=reopened&group=owner Assigned tickets by owner]
@@ -63,7 +63,7 @@ Example:
 This is displayed as:
   [[TicketQuery(version=0.6|0.7&resolution=duplicate)]]
 
-Just like the "Not found: text(query: wiki links) link(TracQuery#UsingTracLinks)":wiki/TracQuery#UsingTracLinks, the parameter of this macro expects a query string formatted according to the rules of the simple [wiki:TracQuery#QueryLanguage ticket query language].
+Just like the [[query: wiki links|TracQuery#UsingTracLinks]], the parameter of this macro expects a query string formatted according to the rules of the simple [wiki:TracQuery#QueryLanguage ticket query language].
 
 A more compact representation without the ticket summaries is also available:
 <pre><code>[[TicketQuery(version=0.6|0.7&resolution=duplicate, compact)]]

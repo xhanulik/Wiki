@@ -8,7 +8,7 @@ CT-API drivers are most used and available on Windows.
 
 Pinpads tend to be buggy and not all combinations of cards and readers and PIN formats or pinpad reader features (such as displays) have been tested so far, so make sure you report issues to the MailingLists (opensc-devel)
 
-h2. Known and tested pinpad readers with  "CT-API":wiki/Using-pinpad-readers-with-CT-API drivers on Windows
+h2. Known and tested pinpad readers with  [[CT-API|Using-pinpad-readers-with-CT-API]] drivers on Windows
 
 Please feel free to add your hardware and experiences here.
 

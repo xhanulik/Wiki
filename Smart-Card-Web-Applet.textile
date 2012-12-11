@@ -2,7 +2,7 @@ h1. Smart Card Web Applet
 
  * Java Applet for working with JavaCard-s (MuscleApplet) (priority 1) and generic ISO PKCS#15 cards (priority 2).
  * Run online: "http://martinpaljak.net/SmartCardWebApplet.html":http://martinpaljak.net/SmartCardWebApplet.html
- * For workinprogress notes see "Using-smart-cards-with-Java-SE":wiki/Using-smart-cards-with-Java-SE
+ * For workinprogress notes see [[Using-smart-cards-with-Java-SE|Using-smart-cards-with-Java-SE]]
 
 Next steps:
  * stable method for embedding the plugin

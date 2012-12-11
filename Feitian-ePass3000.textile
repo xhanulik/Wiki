@@ -13,7 +13,7 @@ The APDU level manual and further documentation to implement OpenSC are availabl
 The USB Interface of the ePass3000 is not public but there is
 a binary only driver package available for download for free for both Linux and Mac OS X at "http://www.entersafe.com/ePass3000.html.":http://www.entersafe.com/ePass3000.html. Recent OpenCT also "has support":http://www.opensc-project.org/openct/wiki/epass3000 for this token.
 
-The ePass3000 is now superceeded by the "ePass2003":wiki/Feitian-ePass2003, which offers a CCID interface and therefore requires no proprietary software, altogether on one single chip with a weight of only 6 gramms.
+The ePass3000 is now superceeded by the [[ePass2003|Feitian-ePass2003]], which offers a CCID interface and therefore requires no proprietary software, altogether on one single chip with a weight of only 6 gramms.
 
 h1. Thanks
 

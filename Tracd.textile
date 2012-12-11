@@ -6,7 +6,7 @@ It can be used in a variety of situations, from a test or development server to 
 h2. Pros
 
  * Fewer dependencies: You don't need to install apache or any other web-server.
- * Fast: Should be almost as fast as the "mod_python":wiki/Trac-and-mod_python version (and much faster than the [wiki:TracCgi CGI]), even more so since version 0.12 where the HTTP/1.1 version of the protocol is enabled by default
+ * Fast: Should be almost as fast as the [[mod_python|Trac-and-mod_python]] version (and much faster than the [wiki:TracCgi CGI]), even more so since version 0.12 where the HTTP/1.1 version of the protocol is enabled by default
  * Automatic reloading: For development, Tracd can be used in <i>auto_reload</i> mode, which will automatically restart the server whenever you make a change to the code (in Trac itself or in a plugin).
 
 h2. Cons

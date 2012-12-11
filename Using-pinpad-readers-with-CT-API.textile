@@ -26,7 +26,7 @@ Use this as an example:
 
 <b>Notes</b>
 
- * For some readers you can look up the module name in "pinpad reader overview":wiki/Pinpad-Readers.
+ * For some readers you can look up the module name in [[pinpad reader overview|Pinpad-Readers]].
  * Some drivers use port number 0 for the first reader, others start counting with 1.
  * You can use multiple readers. Just add more "module"-sections if they use other drivers or add port numbers with a comma for the same driver.
 

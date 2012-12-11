@@ -8,7 +8,7 @@ h1. How to report bugs so that they can be fixed
   * Tickets that get classified as support requests are deleted after a grace period of one month. 
  * Try to ask smart questions. There's a "HOWTO":http://www.catb.org/esr/faqs/smart-questions.html for that.
  * If your issue has been discussed on one of the MailingLists as well, include a link to the thread in the list archive for future reference.
- * If possible, try again with the latest snapshot version (PreReleases, "NightlyBuilds":wiki/Automated-OpenSC-builds) to see if your problem has already been fixed.
+ * If possible, try again with the latest snapshot version (PreReleases, [[NightlyBuilds|Automated-OpenSC-builds]]) to see if your problem has already been fixed.
  * If you think you have found a regression, include information (command output, logs) about the failing version as well as the last known good version.
  * Give as much input information as possible, including hardware and software information. This means:
   * Details of your smart card reader. Include USB identifier if it is something exotic or is not known in one of the lists found from CardReaders page.

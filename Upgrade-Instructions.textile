@@ -119,7 +119,7 @@ If you had the webadmin plugin installed, you can uninstall it as it is part of 
 
 h3. 7. Restart the Web Server #RestarttheWebServer
 
-If you are not running "CGI":wiki/Installing-Trac-as-CGI, reload the new Trac code by restarting your web server.
+If you are not running [[CGI|Installing-Trac-as-CGI]], reload the new Trac code by restarting your web server.
 
 h2. Known Issues
 

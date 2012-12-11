@@ -10,11 +10,11 @@ Trac supports accessibility keys for the most common operations. On Windows and 
 h2. Global Access Keys
 
  * `1` - WikiStart
- * `2` - "Timeline":wiki/The-Trac-Timeline
- * `3` - "Roadmap":wiki/The-Trac-Roadmap
- * `4` - "Search":wiki/Using-Search
- * `6` - "Trac Guide / Documentation":wiki/The-Trac-User-and-Administration-Guide
- * `7` - "New Ticket":wiki/The-Trac-Ticket-System
+ * `2` - [[Timeline|The-Trac-Timeline]]
+ * `3` - [[Roadmap|The-Trac-Roadmap]]
+ * `4` - [[Search|Using-Search]]
+ * `6` - [[Trac Guide / Documentation|The-Trac-User-and-Administration-Guide]]
+ * `7` - [[New Ticket|The-Trac-Ticket-System]]
  * `9` - [/about About Trac]
  * `0` - This page
  * `e` - Edit this page

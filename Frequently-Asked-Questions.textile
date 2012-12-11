@@ -63,7 +63,7 @@ A: It is a very technical way of saying "Your card is unsupported".
 
 h3. Q: How can I verify that my card is supported by OpenSC?
 
-A: Check the "SupportedHardware":wiki/Supported-hardware-(smart-cards-and-USB-tokens) list. Verify it with _opensc-tool --name_ to see if some driver knows how to handle your card. The expected result of the command is a line with a card driver name.
+A: Check the [[SupportedHardware|Supported-hardware-(smart-cards-and-USB-tokens)]] list. Verify it with _opensc-tool --name_ to see if some driver knows how to handle your card. The expected result of the command is a line with a card driver name.
 
 h3. Q: What does "read only support" mean?
 
@@ -75,7 +75,7 @@ A: Somebody needs to write a driver for it. You can start by sending as much inf
 
 h3. Q: Can I use Aladdin eToken with OpenSC?
 
-A: Yes (if your card is reported as "Siemens-CardOS-M4":wiki/Siemens-CardOS-M4 card). But you can not use an initialized token (where objects on the card have been created by the Aladdin middleware) with OpenSC but if there is free space on the token, a parallel structure can be created on the card with pkcs15-init. New keys must be generated and keys created by Aladdin middleware can not be used through OpenSC. Please note that Java versions (72K) are NOT supported by OpenSC. More information from dedicated AladdinEtokenPro wiki page.
+A: Yes (if your card is reported as [[Siemens-CardOS-M4|Siemens-CardOS-M4]] card). But you can not use an initialized token (where objects on the card have been created by the Aladdin middleware) with OpenSC but if there is free space on the token, a parallel structure can be created on the card with pkcs15-init. New keys must be generated and keys created by Aladdin middleware can not be used through OpenSC. Please note that Java versions (72K) are NOT supported by OpenSC. More information from dedicated AladdinEtokenPro wiki page.
 
 h2. Application support questions
 
@@ -108,10 +108,10 @@ h2. Miscellaneous questions
 
 h3. Q: Where can I buy smart cards ?
 
- * "http://www.aventra.fi":http://www.aventra.fi - ships from Finland, "Aventra-MyEID-PKI-card":wiki/Aventra-MyEID-PKI-card card
+ * "http://www.aventra.fi":http://www.aventra.fi - ships from Finland, [[Aventra-MyEID-PKI-card|Aventra-MyEID-PKI-card]] card
  * "http://www.cryptoshop.com":http://www.cryptoshop.com - ships from Austria
- * "http://www.gooze.eu":http://www.gooze.eu - ships from France, Feitian "card":wiki/Feitian-PKI-card and [wiki:feitian-pki-token token]
- * "http://shop.kernelconcepts.de/":http://shop.kernelconcepts.de/ - ships from Germany, "OpenPGP v2 card":wiki/OpenPGP-card and CryptoStick token
+ * "http://www.gooze.eu":http://www.gooze.eu - ships from France, Feitian [[card|Feitian-PKI-card]] and [wiki:feitian-pki-token token]
+ * "http://shop.kernelconcepts.de/":http://shop.kernelconcepts.de/ - ships from Germany, [[OpenPGP v2 card|OpenPGP-card]] and CryptoStick token
  * "http://www.logidata-int.fr":http://www.logidata-int.fr - ships from France
  * "http://www.smartcardfocus.com":http://www.smartcardfocus.com - ships from UK
  

@@ -49,9 +49,9 @@ h2. The Revision Log Information
 For each revision log entry, there are 7 columns:
  1. The first column contains a pair of radio buttons and should be used 
     for selecting the <i>old</i> and the <i>new</i> revisions that will be 
-    used for "Not found: text(viewing the actual changes) link(TracRevisionLog#viewingtheactualchanges)":wiki/TracRevisionLog#viewingtheactualchanges.
+    used for [[viewing the actual changes|TracRevisionLog#viewingtheactualchanges]].
  1. A color code (similar to the one used for the
-    "Not found: text(changesets) link(TracChangeset#ChangesetHeader)":wiki/TracChangeset#ChangesetHeader) indicating kind of change.
+    [[changesets|TracChangeset#ChangesetHeader]]) indicating kind of change.
     Clicking on this column refreshes the revision log so that it restarts
     with this change.
  1. The <b>Revision</b> number, displayed as `@xyz`.

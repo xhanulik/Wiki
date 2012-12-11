@@ -2,7 +2,7 @@ h1. Feitian ePass2003
 
 "Feitian":http://www.ftsafe.com/ offers the ePass2003, a USB crypto token with 32-bit high performance smart card chip and CCID interface.
 
-The ePass2003 is the successor of the "ePass PKI":wiki/Feitian-ePass-PKI-token and the [wiki:ePass3000 ePass3000], and was released to the public in December 2011.
+The ePass2003 is the successor of the [[ePass PKI|Feitian-ePass-PKI-token]] and the [wiki:ePass3000 ePass3000], and was released to the public in December 2011.
 The ePass2003 relies on one single ST Microelectronics chip, designed in Europe with Common Criteria EAL 5+ certification. 
 It weights only 6 gr and fits very well into a key ring with only 51 mm lenght, thus being one of the smallest tokens available to date.
 

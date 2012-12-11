@@ -139,5 +139,5 @@ def application(environ, start_response):
     return trac.web.main.dispatch_request(environ, start_response)
 </code></pre>
 ----
-See also:  TracGuide, TracInstall, "FastCGI":wiki/Trac-with-FastCGI, [wiki:TracModPython ModPython], [trac:TracNginxRecipe TracNginxRecipe]
+See also:  TracGuide, TracInstall, [[FastCGI|Trac-with-FastCGI]], [wiki:TracModPython ModPython], [trac:TracNginxRecipe TracNginxRecipe]
 

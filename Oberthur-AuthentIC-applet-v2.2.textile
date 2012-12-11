@@ -12,7 +12,7 @@ The driver implements pkcs15 and pkcs15init emulation. It means that the OpenSC 
 
 h2. Oberthur applet AuthentIC v3.1
 
-Oberthur's card on the _"CosmopolIC v7"_ platform with applet _"AuthentIC v3.1"_ is supported in the "IAS/ECC branch":wiki/IAS-ECC of OpenSC. 
+Oberthur's card on the _"CosmopolIC v7"_ platform with applet _"AuthentIC v3.1"_ is supported in the [[IAS/ECC branch|IAS-ECC]] of OpenSC. 
 For this card IAS/ECC branch implements the GlobalPlatform secure messaging (SPC01).
 
 

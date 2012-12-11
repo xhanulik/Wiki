@@ -21,19 +21,19 @@ or from "github.com":http://github.com/martinpaljak/OpenSC:
 h2. Sub-project repositories
 
 OpenSC contains several sub-project, each with their own subversion repository.
- * "Not found: text(([engine:browser browse online) link(engine_pkcs11])":wiki/engine_pkcs11], [engine:log view revision history], "github.com":http://github.com/martinpaljak/engine_pkcs11)
+ * [[([engine:browser browse online|engine_pkcs11]]], [engine:log view revision history], "github.com":http://github.com/martinpaljak/engine_pkcs11)
 <pre><code>svn co http://www.opensc-project.org/svn/engine_pkcs11
 </code></pre>
- * "Not found: text(([libp11:browser browse online) link(libp11])":wiki/libp11], [libp11:log view revision history], "github.com":http://github.com/martinpaljak/libp11)
+ * [[([libp11:browser browse online|libp11]]], [libp11:log view revision history], "github.com":http://github.com/martinpaljak/libp11)
 <pre><code>svn co http://www.opensc-project.org/svn/libp11
 </code></pre>
- * "Not found: text(([helper:browser browse online) link(pkcs11-helper])":wiki/pkcs11-helper], [helper:log view revision history])
+ * [[([helper:browser browse online|pkcs11-helper]]], [helper:log view revision history])
 <pre><code>svn co http://www.opensc-project.org/svn/pkcs11-helper
 </code></pre>
- * opensc-java ("Not found: text(([java:browser browse online) link(Java]))":wiki/Java]), [java:log view revision history])
+ * opensc-java ([[([java:browser browse online|Java])]], [java:log view revision history])
 <pre><code>svn co http://www.opensc-project.org/svn/opensc-java
 </code></pre>
- * "Not found: text(([pam_pkcs11:browser browse online) link(pam_pkcs11])":wiki/pam_pkcs11], [pam_pkcs11:log view revision history])
+ * [[([pam_pkcs11:browser browse online|pam_pkcs11]]], [pam_pkcs11:log view revision history])
 <pre><code>svn co http://www.opensc-project.org/svn/pam_pkcs11
 </code></pre>
 

@@ -35,18 +35,18 @@ Otherwise, individual privileges can be assigned to users for the various differ
 
 h3. Repository Browser
 
-| `BROWSER_VIEW` | View directory listings in the "repository browser":wiki/The-Trac-Repository-Browser |
-| `LOG_VIEW` | View revision logs of files and directories in the "repository browser":wiki/The-Trac-Repository-Browser |
-| `FILE_VIEW` | View files in the "repository browser":wiki/The-Trac-Repository-Browser |
-| `CHANGESET_VIEW` | View "repository check-ins":wiki/Trac-Changeset-Module |
+| `BROWSER_VIEW` | View directory listings in the [[repository browser|The-Trac-Repository-Browser]] |
+| `LOG_VIEW` | View revision logs of files and directories in the [[repository browser|The-Trac-Repository-Browser]] |
+| `FILE_VIEW` | View files in the [[repository browser|The-Trac-Repository-Browser]] |
+| `CHANGESET_VIEW` | View [[repository check-ins|Trac-Changeset-Module]] |
 
 h3. Ticket System
 
-| `TICKET_VIEW` | View existing "tickets":wiki/The-Trac-Ticket-System and perform [wiki:TracQuery ticket queries] |
-| `TICKET_CREATE` | Create new "tickets":wiki/The-Trac-Ticket-System |
-| `TICKET_APPEND` | Add comments or attachments to "tickets":wiki/The-Trac-Ticket-System |
-| `TICKET_CHGPROP` | Modify "ticket":wiki/The-Trac-Ticket-System properties (priority, assignment, keywords, etc.) with the following exceptions: edit description field, add/remove other users from cc field when logged in, and set email to pref |
-| `TICKET_MODIFY` | Includes both `TICKET_APPEND` and `TICKET_CHGPROP`, and in addition allows resolving "tickets":wiki/The-Trac-Ticket-System. Tickets can be assigned to users through a [TracTickets#Assign-toasDrop-DownList drop-down list] when the list of possible owners has been restricted. |
+| `TICKET_VIEW` | View existing [[tickets|The-Trac-Ticket-System]] and perform [wiki:TracQuery ticket queries] |
+| `TICKET_CREATE` | Create new [[tickets|The-Trac-Ticket-System]] |
+| `TICKET_APPEND` | Add comments or attachments to [[tickets|The-Trac-Ticket-System]] |
+| `TICKET_CHGPROP` | Modify [[ticket|The-Trac-Ticket-System]] properties (priority, assignment, keywords, etc.) with the following exceptions: edit description field, add/remove other users from cc field when logged in, and set email to pref |
+| `TICKET_MODIFY` | Includes both `TICKET_APPEND` and `TICKET_CHGPROP`, and in addition allows resolving [[tickets|The-Trac-Ticket-System]]. Tickets can be assigned to users through a [TracTickets#Assign-toasDrop-DownList drop-down list] when the list of possible owners has been restricted. |
 | `TICKET_EDIT_CC` | Full modify cc field |
 | `TICKET_EDIT_DESCRIPTION` | Modify description field |
 | `TICKET_EDIT_COMMENT` | Modify comments |
@@ -61,25 +61,25 @@ h3. Roadmap
 | `MILESTONE_MODIFY` | Modify existing milestones |
 | `MILESTONE_DELETE` | Delete milestones |
 | `MILESTONE_ADMIN` | All `MILESTONE_*` permissions |
-| `ROADMAP_VIEW` | View the "roadmap":wiki/The-Trac-Roadmap page, is not (yet) the same as MILESTONE_VIEW, see [trac:#4292 #4292] |
+| `ROADMAP_VIEW` | View the [[roadmap|The-Trac-Roadmap]] page, is not (yet) the same as MILESTONE_VIEW, see [trac:#4292 #4292] |
 | `ROADMAP_ADMIN` | to be removed with [trac:#3022 #3022], replaced by MILESTONE_ADMIN |
 
 h3. Reports
 
-| `REPORT_VIEW` | View "reports":wiki/Trac-Reports, i.e. the "view tickets" link. |
-| `REPORT_SQL_VIEW` | View the underlying SQL query of a "report":wiki/Trac-Reports |
-| `REPORT_CREATE` | Create new "reports":wiki/Trac-Reports |
-| `REPORT_MODIFY` | Modify existing "reports":wiki/Trac-Reports |
-| `REPORT_DELETE` | Delete "reports":wiki/Trac-Reports |
+| `REPORT_VIEW` | View [[reports|Trac-Reports]], i.e. the "view tickets" link. |
+| `REPORT_SQL_VIEW` | View the underlying SQL query of a [[report|Trac-Reports]] |
+| `REPORT_CREATE` | Create new [[reports|Trac-Reports]] |
+| `REPORT_MODIFY` | Modify existing [[reports|Trac-Reports]] |
+| `REPORT_DELETE` | Delete [[reports|Trac-Reports]] |
 | `REPORT_ADMIN` | All `REPORT_*` permissions |
 
 h3. Wiki System
 
-| `WIKI_VIEW` | View existing "wiki":wiki/The-Trac-Wiki-Engine pages |
-| `WIKI_CREATE` | Create new "wiki":wiki/The-Trac-Wiki-Engine pages |
-| `WIKI_MODIFY` | Change "wiki":wiki/The-Trac-Wiki-Engine pages |
-| `WIKI_RENAME` | Rename "wiki":wiki/The-Trac-Wiki-Engine pages |
-| `WIKI_DELETE` | Delete "wiki":wiki/The-Trac-Wiki-Engine pages and attachments |
+| `WIKI_VIEW` | View existing [[wiki|The-Trac-Wiki-Engine]] pages |
+| `WIKI_CREATE` | Create new [[wiki|The-Trac-Wiki-Engine]] pages |
+| `WIKI_MODIFY` | Change [[wiki|The-Trac-Wiki-Engine]] pages |
+| `WIKI_RENAME` | Rename [[wiki|The-Trac-Wiki-Engine]] pages |
+| `WIKI_DELETE` | Delete [[wiki|The-Trac-Wiki-Engine]] pages and attachments |
 | `WIKI_ADMIN` | All `WIKI_*` permissions, plus the management of <i>readonly</i> pages. |
 
 h3. Permissions
@@ -91,14 +91,14 @@ h3. Permissions
 
 h3. Others
 
-| `TIMELINE_VIEW` | View the "timeline":wiki/The-Trac-Timeline page |
-| `SEARCH_VIEW` | View and execute "search":wiki/Using-Search queries |
+| `TIMELINE_VIEW` | View the [[timeline|The-Trac-Timeline]] page |
+| `SEARCH_VIEW` | View and execute [[search|Using-Search]] queries |
 | `CONFIG_VIEW` | Enables additional pages on <i>About Trac</i> that show the current configuration or the list of installed plugins |
 | `EMAIL_VIEW` | Shows email addresses even if [trac:wiki:0.11/TracIni trac show_email_addresses configuration option is false] |
 
 h2. Granting Privileges
 
-You grant privileges to users using "trac-admin":wiki/TracAdmin. The current set of privileges can be listed with the following command:
+You grant privileges to users using [[trac-admin|TracAdmin]]. The current set of privileges can be listed with the following command:
 <pre><code>  $ trac-admin /path/to/projenv permission list
 </code></pre>
 

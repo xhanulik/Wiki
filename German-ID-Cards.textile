@@ -1,6 +1,6 @@
 h1. German ID Cards
 
-Germany has several laws for smart cards. Until 2006 most ID cards conforming to those laws were using the "TCOS-based-preformatted-cards":wiki/TCOS-based-preformatted-cards 2.0X card operating
+Germany has several laws for smart cards. Until 2006 most ID cards conforming to those laws were using the [[TCOS-based-preformatted-cards|TCOS-based-preformatted-cards]] 2.0X card operating
 system. One exception was the 1024bit D-Trust card which was Micardo based.
 
 Until the end of 2007 the German government (i.e. the Bundesnetzagentur) required a minimal keylength of 1024 bit. Since the beginning of 2008/2009 this requirement was raised to 1280/1536 bit. Therefore all German trust centers now offer 2048 bit cards. As of May 2011 2048 bit fulfills Bundesnetzagentur-requirements at least until 2017.
@@ -22,27 +22,27 @@ As of May 2011 you may get signature cards from the following Trust centers in G
  * medisign GmbH (akkreditiert seit 28.8.2008)
  * Deutscher Sparkassen Verlag GmbH (akkreditiert seit 12.11.2008).
 
-Since November 2010 the German government issues new eID cards to citizens ("source":http://www.e-forum.eu/article.php3?id_article=1025). More information can be found on a separate "wiki page":wiki/German-ePass,-ePA. 
+Since November 2010 the German government issues new eID cards to citizens ("source":http://www.e-forum.eu/article.php3?id_article=1025). More information can be found on a separate [[wiki page|German-ePass,-ePA]]. 
 
 h2. TeleSec, NetKey cards
 
-!TeleSec GmbH is the manufacturer of "Not found: text(cards and they offer [wiki:TCOS) link(TCOS])":wiki/TCOS] based signature cards, i.e. NetKey E4 cards. Until the end of 2007 theses card were TCOS2 based with a maximal keylength of 1024 bit. Since October 2007 TeleSec offers 2048 bit signature cards which are TCOS3 based.
+!TeleSec GmbH is the manufacturer of [[cards and they offer [[TCOS|TCOS]]|TCOS|TCOS]]]] based signature cards, i.e. NetKey E4 cards. Until the end of 2007 theses card were TCOS2 based with a maximal keylength of 1024 bit. Since October 2007 TeleSec offers 2048 bit signature cards which are TCOS3 based.
 
 TCOS2 cards work well with OpenSC 0.10.0 or later. There was a problem in 0.12.0 and 0.12.1 which as fixed in 0.12.2 (ticket #256). TCOS3 support was added in December 2007 and is included in OpenSC 0.11.5. Unfortunately the 2048 bit NetKey card contains one key (the one that conforms to the German signature law) that can be used only over a secure channel. So if you want to use this particular key with OpenSC you must wait until OpenSC supports Secure Messaging.
 
-You will find more information about NetKey cards on a "separate Wikipage on TCOS based cards":wiki/TCOS-based-preformatted-cards.
+You will find more information about NetKey cards on a [[separate Wikipage on TCOS based cards|TCOS-based-preformatted-cards]].
 
 h2. Deutsche Post, SignTrust card
 
-1024 bit SignTrust cards are "TCOS-based-preformatted-cards":wiki/TCOS-based-preformatted-cards 2.0 based. They work well with OpenSC.
+1024 bit SignTrust cards are [[TCOS-based-preformatted-cards|TCOS-based-preformatted-cards]] 2.0 based. They work well with OpenSC.
 
-When Deutsche Post replaced their 1024bit cards with 2048bit cards they changed the card operating system from TCOS 2.0 to "STARCOS-cards":wiki/STARCOS-cards 3.0. This card operating system is not supported by OpenSC yet. Also early 2048bit SignTrust cards only supported SHA-1 and RIPEMD160 so in order to create signatures that conform to the German signature law one had to use RIPEMD160 with these cards. Since 2010 SignTrust cards use SHA-256. 
+When Deutsche Post replaced their 1024bit cards with 2048bit cards they changed the card operating system from TCOS 2.0 to [[STARCOS-cards|STARCOS-cards]] 3.0. This card operating system is not supported by OpenSC yet. Also early 2048bit SignTrust cards only supported SHA-1 and RIPEMD160 so in order to create signatures that conform to the German signature law one had to use RIPEMD160 with these cards. Since 2010 SignTrust cards use SHA-256. 
 
 The qualified signature certificate on a 2048bit SignTrust is signed by a CA-certificate from Deutsche Post which itself was signed by a 2048 bit German root certificate (12R-CA 1:PN). All other certificates on a SignTrust card are signed by a CA-certificate that Deutsche Post signed with a self generated root certificate.
 
 h2. D-Trust
 
-1024 bit signature cards from D-Trust are Micardo based and were successfully tested with OpenSC 0.11.1. 2048 bit D-Trust cards are "Siemens-CardOS-M4":wiki/Siemens-CardOS-M4 4.3 based. D-TRUST cards 2.0 2cc conform to the PKCS#15 standard and work well with OpenSC 0.11.4. D-Trust uses strange IDs though. Here's some demo output:
+1024 bit signature cards from D-Trust are Micardo based and were successfully tested with OpenSC 0.11.1. 2048 bit D-Trust cards are [[Siemens-CardOS-M4|Siemens-CardOS-M4]] 4.3 based. D-TRUST cards 2.0 2cc conform to the PKCS#15 standard and work well with OpenSC 0.11.4. D-Trust uses strange IDs though. Here's some demo output:
 
 <pre><code>$ pkcs15-tool -r 000102030405060708090a0b0c0d0e0f | openssl x509 -noout -text -certopt no_pubkey,no_sigdump
 Certificate:
@@ -95,7 +95,7 @@ h2. Sparkassenverlag, S-Trust card
 
 Sparkassenverlag is another trust center in Germany.
 
-OpenSC does not support the S-Trust card of Sparkassenverlag. There cards are "SECCOS":wiki/Seccos based, and can also contain 'Geldkarte' and 'HBCI' Applications. They are comparably inexpensive, my card was €9, plus 'qualified certificate' at about €20 per year. 
+OpenSC does not support the S-Trust card of Sparkassenverlag. There cards are [[SECCOS|Seccos]] based, and can also contain 'Geldkarte' and 'HBCI' Applications. They are comparably inexpensive, my card was €9, plus 'qualified certificate' at about €20 per year. 
 
 h2. TC Trust Center
 
@@ -108,4 +108,4 @@ DGN is also specialized in healthcare market and produces health professional ca
 
 h2. Datev
 
-Datev had a trust center in Germany that was closed in 2007. Their 1024 bit cards were "TCOS-based-preformatted-cards":wiki/TCOS-based-preformatted-cards 2.0 based.
+Datev had a trust center in Germany that was closed in 2007. Their 1024 bit cards were [[TCOS-based-preformatted-cards|TCOS-based-preformatted-cards]] 2.0 based.

@@ -8,13 +8,13 @@ This page is meant to give users suggestions on how they can customize the look 
 
 h2. Project Logo and Icon
 
-The easiest parts of the Trac interface to customize are the logo and the site icon.  Both of these can be configured with settings in "trac.ini":wiki/The-Trac-Configuration-File.
+The easiest parts of the Trac interface to customize are the logo and the site icon.  Both of these can be configured with settings in [[trac.ini|The-Trac-Configuration-File]].
 
 The logo or icon image should be put in a folder named "htdocs" in your project's environment folder.  (<i>Note: in projects created with a Trac version prior to 0.9 you will need to create this folder</i>)
 
  ''Note: you can actually put the logo and icon anywhere on your server (as long as it's accessible through the web server), and use their absolute or server-relative URLs in the configuration.''
 
-Now configure the appropriate section of your "trac.ini":wiki/The-Trac-Configuration-File:
+Now configure the appropriate section of your [[trac.ini|The-Trac-Configuration-File]]:
 
 h3. Logo
 
@@ -168,25 +168,25 @@ The following is the basic template used by Trac to display a list of links to t
 
 Once you've created your custom template you will need to configure the webserver to tell Trac where the template is located (pls verify ... not yet changed to 0.11):
 
-For "mod_wsgi":wiki/Trac-and-mod_wsgi:
+For [[mod_wsgi|Trac-and-mod_wsgi]]:
 <pre><code>os.environ['TRAC_ENV_INDEX_TEMPLATE'] = '/path/to/template'
 </code></pre>
 
-For "FastCGI":wiki/Trac-with-FastCGI:
+For [[FastCGI|Trac-with-FastCGI]]:
 <pre><code>FastCgiConfig -initial-env TRAC_ENV_PARENT_DIR=/parent/dir/of/projects \
               -initial-env TRAC_ENV_INDEX_TEMPLATE=/path/to/template
 </code></pre>
 
-For "mod_python":wiki/Trac-and-mod_python:
+For [[mod_python|Trac-and-mod_python]]:
 <pre><code>PythonOption TracEnvParentDir /parent/dir/of/projects
 PythonOption TracEnvIndexTemplate /path/to/template
 </code></pre>
 
-For "CGI":wiki/Installing-Trac-as-CGI:
+For [[CGI|Installing-Trac-as-CGI]]:
 <pre><code>SetEnv TRAC_ENV_INDEX_TEMPLATE /path/to/template
 </code></pre>
 
-For "Tracd":wiki/Tracd, you'll need to set up the `TRAC_ENV_INDEX_TEMPLATE` environment variable in the shell used to launch tracd:
+For [[Tracd|Tracd]], you'll need to set up the `TRAC_ENV_INDEX_TEMPLATE` environment variable in the shell used to launch tracd:
  - Unix
    <pre><code>#!sh
 $ export TRAC_ENV_INDEX_TEMPLATE=/path/to/template

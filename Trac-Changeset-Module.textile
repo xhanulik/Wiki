@@ -56,8 +56,8 @@ h2. The Different Ways to Get a Diff
 h3. Examining a Changeset
 
 When viewing a repository check-in, such as when following a
-changeset "link":wiki/Trac-Links or a changeset event in the 
-"timeline":wiki/The-Trac-Timeline, Trac will display the exact changes
+changeset [[link|Trac-Links]] or a changeset event in the 
+[[timeline|The-Trac-Timeline]], Trac will display the exact changes
 made by the check-in.
 
 There will be also navigation links to the <i>Previous Changeset</i>

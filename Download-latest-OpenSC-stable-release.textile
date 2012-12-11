@@ -47,7 +47,7 @@ PreReleases of upcoming [milestone:0.12.3 0.12.3] version might be available.
 
 h2. Developer builds
 
-Check "NightlyBuilds":wiki/Automated-OpenSC-builds for latest binaries.
+Check [[NightlyBuilds|Automated-OpenSC-builds]] for latest binaries.
 
 h2. Old releases
 

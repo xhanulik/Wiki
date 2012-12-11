@@ -5,7 +5,7 @@ h1. OpenSC @ FOSDEM 2011
  * <b>Why?</b>
   * To raise the awareness of OpenSC and smart cards in general; to meet with other developers and promote integration; to meet with a wide audience and hear their thoughts and needs; to have fun and enjoy Belgian beer. ("thread on opensc-devel":http://www.opensc-project.org/pipermail/opensc-devel/2010-September/014847.html). 
  * "security-devroom@lists.fosdem.org":http://lists.fosdem.org/mailman/listinfo/security-devroom mailing list.
- * "Call for participation (CLOSED)":wiki/FOSDEM2011/CFP in the security devroom.
+ * [[Call for participation (CLOSED)|FOSDEM2011/CFP]] in the security devroom.
 
 h2. Activities
 
@@ -44,14 +44,14 @@ h2. Proposals / submissions
  * C (30m, Jean-Michel Pouré) Smarcard jungle. Presentation of the various frameworks. This presentation is intended to explain how difficult it is to use the various frameworks and that we should work together to make crypto and security easier. 
  * D (30m, Aris Adamantiadis) SSH libraries : what they can do for you, and how different SSH is from TLS/SSL. Specific case of libssh : its API in two words, features and roadmap. ("mailing list post":http://lists.fosdem.org/pipermail/security-devroom/2010-December/000005.html)
  * E (30m, Daniel Pocock) dynalogin: two-factor authentication with HOTP, integrating with other products ("mailing list post":http://lists.fosdem.org/pipermail/security-devroom/2010-December/000001.html)
- * F (30m, "Tomas Gustavsson":wiki/User:shredder) EJBCA and OpenSC ("mailing list post":http://lists.fosdem.org/pipermail/security-devroom/2010-December/000002.html), [attachment:ejbca-opensc-1.odp presentation]
- * G (30m, "Stef Walter":wiki/User:Stefw) How to Store Trust: Trust Assertions in PKCS#11 ("mailing list post":http://lists.fosdem.org/pipermail/security-devroom/2010-December/000003.html)
- * H (30m, "Nikos Mavrogiannopoulos":wiki/User:nmav) Unifying access to PKCS#11 tokens ("mailing list post":http://lists.fosdem.org/pipermail/security-devroom/2010-December/000004.html)
- * I (30m, "Samuel Lidén Borell":wiki/User:samuellb) Fribid and browser security software ("mailing list post":http://lists.fosdem.org/pipermail/security-devroom/2010-December/000006.html)
+ * F (30m, [[Tomas Gustavsson|User:shredder]]) EJBCA and OpenSC ("mailing list post":http://lists.fosdem.org/pipermail/security-devroom/2010-December/000002.html), [attachment:ejbca-opensc-1.odp presentation]
+ * G (30m, [[Stef Walter|User:Stefw]]) How to Store Trust: Trust Assertions in PKCS#11 ("mailing list post":http://lists.fosdem.org/pipermail/security-devroom/2010-December/000003.html)
+ * H (30m, [[Nikos Mavrogiannopoulos|User:nmav]]) Unifying access to PKCS#11 tokens ("mailing list post":http://lists.fosdem.org/pipermail/security-devroom/2010-December/000004.html)
+ * I (30m, [[Samuel Lidén Borell|User:samuellb]]) Fribid and browser security software ("mailing list post":http://lists.fosdem.org/pipermail/security-devroom/2010-December/000006.html)
  * J (30m, Daniel Stenberg) "Supporting seven SSL libraries and one SSH library" - how libcurl does to support them all and something about their differences ("mailing list post":http://lists.fosdem.org/pipermail/security-devroom/2010-December/000010.html)
- * K (30m, "Adrien Kunysz":wiki/User:Krunch) BOFH meets SystemTap: rootkits made trivial ("mailing list post":http://lists.fosdem.org/pipermail/security-devroom/2010-December/000011.html)
+ * K (30m, [[Adrien Kunysz|User:Krunch]]) BOFH meets SystemTap: rootkits made trivial ("mailing list post":http://lists.fosdem.org/pipermail/security-devroom/2010-December/000011.html)
  * M (15m, Martin Paljak) OpenSC in 2015 - a future vision.
- * N (15m, "Larry Stefonic":wiki/User:lstefonic) CyaSSL "mailing list post":http://lists.fosdem.org/pipermail/security-devroom/2011-January/000015.html)
+ * N (15m, [[Larry Stefonic|User:lstefonic]]) CyaSSL "mailing list post":http://lists.fosdem.org/pipermail/security-devroom/2011-January/000015.html)
 
 h2. Participants (not necessarily presenters)
 
@@ -62,14 +62,14 @@ h2. Participants (not necessarily presenters)
  * Daniel Stenberg (libssh2, libcurl)
  * Jean-Michel Pouré (Gooze)
  * Kai Engert (NSS)
- * "Larry Stefonic":wiki/User:lstefonic (yaSSL)
+ * [[Larry Stefonic|User:lstefonic]] (yaSSL)
  * Martin Paljak (OpenSC)
  * Nikos Mavrogiannopoulos (GnuTLS)
  * Peter Koch (OpenSC)
  * Peter Stuge (OpenSC, libssh2, OpenSSH-portable)
  * Simon Josefsson (GNU SASL, GNU Shishi, GNU GSS, HOTP Toolkit, GnuTLS, libssh2)
- * "Stef Walter":wiki/User:Stefw (!GnomeKeyring)
- * "Tomas Gustavsson":wiki/User:shredder (EJBCA)
+ * [[Stef Walter|User:Stefw]] (!GnomeKeyring)
+ * [[Tomas Gustavsson|User:shredder]] (EJBCA)
  * Emanuele Pucciarelli (OpenSC)
 
 h2. Devroom
@@ -86,10 +86,10 @@ This was proposed to the FOSDEM people, fields in bold went into the "applicatio
    * To have seamless support in applications for cards supported by OpenSC, either pre-personalized with created with pkcs15-init or some other mechanism.
   * "NSS":http://www.mozilla.org/projects/security/pki/nss/ (confirmed, Kai Engert)
    * resonates with "NSS Shared DB":https://wiki.mozilla.org/NSS_Shared_DB and "Fedora crypto consolidation":http://fedoraproject.org/wiki/FedoraCryptoConsolidation efforts
-  * "EJBCA":http://ejbca.org (confirmed, "Tomas Gustavsson":wiki/User:shredder)
+  * "EJBCA":http://ejbca.org (confirmed, [[Tomas Gustavsson|User:shredder]])
    * signing certificates via OpenSC PKCS#11, assuring that a relatively straightforward personalization/enrollment would be possible with OpenSC. Full cycle from generation to certification and destruction.
   * "libssh":http://www.libssh.org (confirmed, Aris Adamantiadis, Andreas Schneider)
-  * "GnomeKeyring":http://live.gnome.org/GnomeKeyring/Seahorse (confirmed, "Stef Walter":wiki/User:Stefw)
+  * "GnomeKeyring":http://live.gnome.org/GnomeKeyring/Seahorse (confirmed, [[Stef Walter|User:Stefw]])
   * "GnuTLS":http://www.gnu.org/software/gnutls/ (confirmed, Nikos Mavrogiannopoulos and Simon Josefsson)
   * "yaSSL":http://www.yassl.com/yaSSL/Home.html (confirmed, Larry Stefonic)
   * "libssh2":http://www.libssh2.org/ (confirmed, Peter Stuge, Daniel Stenberg & Simon Josefsson)

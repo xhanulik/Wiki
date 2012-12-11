@@ -49,10 +49,10 @@ Martin Paljak:
  * GemSafe Xpresso32
  * Cyberflex Access v2 64K
  * Epass3000
- * "Feitian PKI card":wiki/Feitian-PKI-card
- * "Siemens-CardOS-M4":wiki/Siemens-CardOS-M4 4.3
- * "Aktiv-Co.-Rutoken-ECP":wiki/Aktiv-Co.-Rutoken-ECP - standard and DS version
- * "OpenPGP-card":wiki/OpenPGP-card 1.1/2.0 (CryptoStick)
+ * [[Feitian PKI card|Feitian-PKI-card]]
+ * [[Siemens-CardOS-M4|Siemens-CardOS-M4]] 4.3
+ * [[Aktiv-Co.-Rutoken-ECP|Aktiv-Co.-Rutoken-ECP]] - standard and DS version
+ * [[OpenPGP-card|OpenPGP-card]] 1.1/2.0 (CryptoStick)
  * Windows XP SP3 32bit/7 64bit, OS X 10.6.5, GNU/Linux (Ubuntu 10.10) 64bit
 
 Peter Koch:

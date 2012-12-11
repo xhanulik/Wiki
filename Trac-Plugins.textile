@@ -35,7 +35,7 @@ If you have downloaded a source distribution of a plugin, and want to build the 
 
 Then you will have a *.egg file. Examine the output of running python to find where this was created.
 
-Once you have the plugin archive, you need to copy it into the `plugins` directory of the "project environment":wiki/The-Trac-Environment. Also, make sure that the web server has sufficient permissions to read the plugin egg. Then, restart the web server (this requirement was not previously mentioned in this document, but in my tests it began working only after I did so).
+Once you have the plugin archive, you need to copy it into the `plugins` directory of the [[project environment|The-Trac-Environment]]. Also, make sure that the web server has sufficient permissions to read the plugin egg. Then, restart the web server (this requirement was not previously mentioned in this document, but in my tests it began working only after I did so).
 
 To uninstall a plugin installed this way, remove the egg from `plugins` directory and restart web server.
 
@@ -72,7 +72,7 @@ h4. From source
 
 h4. Enabling the plugin
 
-Unlike plugins installed per-environment, you'll have to explicitly enable globally installed plugins via "trac.ini":wiki/The-Trac-Configuration-File. This also applies to plugins installed in shared plugins directory, i.e. the path specified in the `[inherit] plugins_dir` configuration option. 
+Unlike plugins installed per-environment, you'll have to explicitly enable globally installed plugins via [[trac.ini|The-Trac-Configuration-File]]. This also applies to plugins installed in shared plugins directory, i.e. the path specified in the `[inherit] plugins_dir` configuration option. 
 
 This is done in the `[components]` section of the configuration file, for example:
 <pre><code>[components]
@@ -105,7 +105,7 @@ To do this from the Apache configuration, use the `SetEnv` directive as follows:
 <pre><code>SetEnv PYTHON_EGG_CACHE /path/to/dir
 </code></pre>
 
-This works whether you are using the "CGI":wiki/Installing-Trac-as-CGI or the [wiki:TracModPython mod_python] front-end. Put this directive next to where you set the path to the [wiki:TracEnvironment Trac environment], i.e. in the same `<Location>` block.
+This works whether you are using the [[CGI|Installing-Trac-as-CGI]] or the [wiki:TracModPython mod_python] front-end. Put this directive next to where you set the path to the [wiki:TracEnvironment Trac environment], i.e. in the same `<Location>` block.
 
 For example (for CGI):
 <pre><code> <Location /trac>
@@ -124,7 +124,7 @@ or (for mod_python):
 
  <i>Note: SetEnv requires the `mod_env` module which needs to be activated for Apache. In this case the SetEnv directive can also be used in the `mod_python` Location block.</i>
 
-For "FastCGI":wiki/Trac-with-FastCGI, you'll need to `-initial-env` option, or whatever is provided by your web server for setting environment variables. 
+For [[FastCGI|Trac-with-FastCGI]], you'll need to `-initial-env` option, or whatever is provided by your web server for setting environment variables. 
 
  ''Note: that if you already use -initial-env to set the project directory for either a single project or parent you will need to add an additional -initial-env directive to the FastCgiConfig directive. I.e.
 
@@ -165,7 +165,7 @@ Trac must be able to read the file.
 
 h3. Check the log files
 
-Enable "logging":wiki/Trac-Logging and set the log level to `DEBUG`, then watch the log file for messages about loading plugins.
+Enable [[logging|Trac-Logging]] and set the log level to `DEBUG`, then watch the log file for messages about loading plugins.
 
 h3. Verify you have proper permissions
 

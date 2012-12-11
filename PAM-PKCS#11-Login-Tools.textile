@@ -62,7 +62,7 @@ h2. Download
   * "pam_pkcs11-0.6.8.tar.gz ":https://www.opensc-project.org/svnp/files/trunk/pam_pkcs11/pam_pkcs11-0.6.8.tar.gz (1059 Kbyte, "md5sum -b" hash: 5ca42826b60ffcb574cc16b965f56b00)
   * Older versions, and beta releases are available "http://www.opensc-project.org/files/pam_pkcs11":http://www.opensc-project.org/files/pam_pkcs11
 
-"Not found: text(RPM packages) link(pam_pkcs11/packages)":wiki/pam_pkcs11/packages are available for RedHat/Fedora Distributions, and may not properly install in other distributions.
+[[RPM packages|pam_pkcs11/packages]] are available for RedHat/Fedora Distributions, and may not properly install in other distributions.
 
  * Browse subversion repository: "https://www.opensc-project.org/pam_pkcs11/browser/trunk":https://www.opensc-project.org/pam_pkcs11/browser/trunk
 
@@ -111,15 +111,15 @@ h2. Documentation
     * "TODO":http://www.opensc-project.org/pam_pkcs11/browser/trunk/TODO file (outdated)
     * "change history":http://www.opensc-project.org/pam_pkcs11/log
   * Man pages   
-    * "pam_pkcs11(8)":wiki/pam_pkcs11/pam_pkcs11
-    * "card_eventmgr(1)":wiki/pam_pkcs11/card_eventmgr
-    * "pkcs11_eventmgr(1)":wiki/pam_pkcs11/pkcs11_eventmgr
-    * "pklogin_finder(1)":wiki/pam_pkcs11/pklogin_finder
-    * "pkcs11_inspect(1)":wiki/pam_pkcs11/pkcs11_inspect 
+    * [[pam_pkcs11(8)|pam_pkcs11/pam_pkcs11]]
+    * [[card_eventmgr(1)|pam_pkcs11/card_eventmgr]]
+    * [[pkcs11_eventmgr(1)|pam_pkcs11/pkcs11_eventmgr]]
+    * [[pklogin_finder(1)|pam_pkcs11/pklogin_finder]]
+    * [[pkcs11_inspect(1)|pam_pkcs11/pkcs11_inspect]] 
 
 h2. Contact
 
-"GetInvolved":wiki/Getting-involved-in-OpenSC-development in development! All comments, suggestions and bug reports are welcome. 
+[[GetInvolved|Getting-involved-in-OpenSC-development]] in development! All comments, suggestions and bug reports are welcome. 
 
   * [mailto:opensc-devel@lists.opensc-project.org OpenSC developer list opensc-devel@lists.opensc-project.org]
 

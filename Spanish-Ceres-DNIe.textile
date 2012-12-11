@@ -13,6 +13,6 @@ h3. Update (2011-04-23)
   * "http://www.dnielectronico.es/descargas/codigo_fuente.html":http://www.dnielectronico.es/descargas/codigo_fuente.html ( GPLv3 License )
   * "http://www.cert.fnmt.es/content/pages_std/docs/OpenSC-Ceres_Fuentes_Compilacion.zip":http://www.cert.fnmt.es/content/pages_std/docs/OpenSC-Ceres_Fuentes_Compilacion.zip ( No license specified )
 
- * There is a new open-source "DNIe":wiki/DNIe-(OpenDNIe) implementation (OpenDNIe) under LGPL license. Work is "in progress":https://www.opensc-project.org/opensc/roadmap to get it included into OpenSC mainstream
+ * There is a new open-source [[DNIe|DNIe-(OpenDNIe)]] implementation (OpenDNIe) under LGPL license. Work is "in progress":https://www.opensc-project.org/opensc/roadmap to get it included into OpenSC mainstream
   * "https://www.opensc-project.org/opensc/wiki/DNIe":https://www.opensc-project.org/opensc/wiki/DNIe
   * "http://opendnie.cenatic.es":http://opendnie.cenatic.es

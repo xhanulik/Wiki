@@ -7,8 +7,8 @@ for various different purposes, like:
  - [#CodeHighlightingSupport syntax highlighting] or for rendering text verbatim,
  - rendering [#HTMLrelated Wiki markup inside a context], 
    like inside <div> blocks or <span> or within <td> or <th> table cells,
- - using an alternative markup syntax, like "raw HTML":wiki/Using-HTML-in-Wiki-Text and
-   "Restructured Text":wiki/reStructuredText-Support-in-Trac,
+ - using an alternative markup syntax, like [[raw HTML|Using-HTML-in-Wiki-Text]] and
+   [[Restructured Text|reStructuredText-Support-in-Trac]],
    or "textile":http://www.textism.com/tools/textile/
 
 

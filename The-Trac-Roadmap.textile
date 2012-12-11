@@ -2,7 +2,7 @@ h1. The Trac Roadmap
 
 [[TracGuideToc]]
 
-The roadmap provides a view on the "ticket system":wiki/The-Trac-Ticket-System that helps planning and managing the future development of a project.
+The roadmap provides a view on the [[ticket system|The-Trac-Ticket-System]] that helps planning and managing the future development of a project.
 
 h2. The Roadmap View
 
@@ -14,7 +14,7 @@ h2. The Milestone View
 
 You can add a description for each milestone (using WikiFormatting) describing main objectives, for example. In addition, tickets targeted for a milestone are aggregated, and the ratio between active and resolved tickets is displayed as a milestone progress bar.  It is possible to further [trac:TracRoadmapCustomGroups customise the ticket grouping] and have multiple ticket statuses shown on the progress bar.
 
-It is possible to drill down into this simple statistic by viewing the individual milestone pages. By default, the active/resolved ratio will be grouped and displayed by component. You can also regroup the status by other criteria, such as ticket owner or severity. Ticket numbers are linked to "custom queries":wiki/Trac-Ticket-Queries listing corresponding tickets.
+It is possible to drill down into this simple statistic by viewing the individual milestone pages. By default, the active/resolved ratio will be grouped and displayed by component. You can also regroup the status by other criteria, such as ticket owner or severity. Ticket numbers are linked to [[custom queries|Trac-Ticket-Queries]] listing corresponding tickets.
 
 h2. Roadmap Administration
 

@@ -86,7 +86,7 @@ Similarly, if you have static resources in a project's htdocs directory (which i
 </Directory>
 </code></pre>
 
-Alternatively to hacking `/trac/chrome/site`, you can directly specify path to static resources using `htdocs_location` configuration option in "trac.ini":wiki/The-Trac-Configuration-File:
+Alternatively to hacking `/trac/chrome/site`, you can directly specify path to static resources using `htdocs_location` configuration option in [[trac.ini|The-Trac-Configuration-File]]:
 <pre><code>[trac]
 htdocs_location = http://yourhost.example.org/trac-htdocs
 </code></pre>
@@ -153,4 +153,4 @@ and you'll have to create your .htpasswd file with htdigest instead of htpasswd 
 where the "trac" parameter above is the same as AuthName above  ("Realm" in apache-docs). 
 
 ----
-See also:  TracGuide, TracInstall, "Trac-and-mod_wsgi":wiki/Trac-and-mod_wsgi, TracFastCgi, TracModPython
+See also:  TracGuide, TracInstall, [[Trac-and-mod_wsgi|Trac-and-mod_wsgi]], TracFastCgi, TracModPython

@@ -8,7 +8,7 @@ Note that Eutron also offers two other crypto tokens in the CryptoIdentity line,
 are not supported at all (no documentation available); ""combo"":http://www.cryptocombo.eutron.com/eng/home.asp models are also available
 offering USB flash memory mass-storage functionality in addiction to smart card features.
 
-The smart card inside is an Infineon Chip with the "Siemens CardOS M4":wiki/Siemens-CardOS-M4 smart card operating system ("ITSEC-I":http://www.cryptoidentity.eutron.com/ENG/modelli_cryptoitsec.asp model) or Philips Chip with the [wiki:STARCOS StarCOS SPK 2.3/2.4] operating system ("ITSEC-P":http://www.cryptoidentity.eutron.com/ENG/modelli_cryptoitsecp.asp, model).
+The smart card inside is an Infineon Chip with the [[Siemens CardOS M4|Siemens-CardOS-M4]] smart card operating system ("ITSEC-I":http://www.cryptoidentity.eutron.com/ENG/modelli_cryptoitsec.asp model) or Philips Chip with the [wiki:STARCOS StarCOS SPK 2.3/2.4] operating system ("ITSEC-P":http://www.cryptoidentity.eutron.com/ENG/modelli_cryptoitsecp.asp, model).
 The driver is called "etoken" because this was the first device with that smart card that was tested with OpenSC. Only the usb
 interface differs, the rest seems to be the same.
 

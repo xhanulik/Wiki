@@ -12,7 +12,7 @@ If OpenSC would fully support TCOS, one could erase the preformatted card and in
 
 The good news are: With the help of an emulation layer OpenSC can use cards that are almost PKCS#15 compatible. For the above mentioned cards such an emulation layer exists. The emulation cannot store certificates, keys or pins on the card, but you can use whatever is visible through the emulation layer.
 
-All other trust center that were using TCOS2 cards until the end of 2007 do not offer TCOS based cards anymore. SignTrust now uses "Not found: link(STARTCOS)":wiki/STARTCOS based card and Datev cards are available to members of Datev only (I doubt they are TCOS based).
+All other trust center that were using TCOS2 cards until the end of 2007 do not offer TCOS based cards anymore. SignTrust now uses [[STARTCOS|STARTCOS]] based card and Datev cards are available to members of Datev only (I doubt they are TCOS based).
 
 h2. NetKey E4 filesystem layout
 
@@ -96,7 +96,7 @@ _netkey-tool_ does not support the SigG application. If you want to change your 
 
 h2. SignTrust layout
 
-The following information applies to 1024 bit SignTrust cards only. 2048 bit SignTrust cards do not contain a TCOS chip but are "Not found: text(3.0 based. Their layout is very similar, but this information won't help OpenSC-users as OpenSC does not support [wiki:STARCOS) link(STARCOS])":wiki/STARCOS]3.0 as of may 2011.
+The following information applies to 1024 bit SignTrust cards only. 2048 bit SignTrust cards do not contain a TCOS chip but are [[3.0 based. Their layout is very similar, but this information won't help OpenSC-users as OpenSC does not support [[STARCOS|STARCOS]]|STARCOS|STARCOS]]]]3.0 as of may 2011.
 
 !SignTrust cards contain three applications (i.e. directories). Each of them contain one certificate, one private key and one pin.
 
@@ -192,7 +192,7 @@ X.509 Certificate [Zertifikat 1]
         ID       : 45
 </code></pre>
 
-Since TCOS2-cards are not produced anymore both universities must use different cards now. As of may 2011 the university of Giessen is using "Siemens-CardOS-M4":wiki/Siemens-CardOS-M4 based cards and the university of Darmstadt has replaced all of their TCOS2 cards by a different card.
+Since TCOS2-cards are not produced anymore both universities must use different cards now. As of may 2011 the university of Giessen is using [[Siemens-CardOS-M4|Siemens-CardOS-M4]] based cards and the university of Darmstadt has replaced all of their TCOS2 cards by a different card.
 
 
 h2. DATEV cards

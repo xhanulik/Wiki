@@ -1,6 +1,6 @@
 h1. Debugging OpenSC and reporting bugs
 
-If "<b>FrequentlyAskedQuestions</b>":wiki/Frequently-Asked-Questions did not solve your problem, you need to either dig into it yourself or send a useful request to the "mailing list":wiki/Mailing-lists. Here are some steps that can help you locate the problem or at least give a lot of detailed information to developers.
+If [[<b>FrequentlyAskedQuestions</b>|Frequently-Asked-Questions]] did not solve your problem, you need to either dig into it yourself or send a useful request to the [[mailing list|Mailing-lists]]. Here are some steps that can help you locate the problem or at least give a lot of detailed information to developers.
 
 h2. Debugging reader issues
 <pre><code>opensc-tool -l

@@ -1,6 +1,6 @@
 h1. OpenSC @ FOSDEM 2012
 
-A reminder to start planning early and to have a booth. "FOSDEM 2011":wiki/OpenSC-@-FOSDEM-2011 was a huge success.
+A reminder to start planning early and to have a booth. [[FOSDEM 2011|OpenSC-@-FOSDEM-2011]] was a huge success.
 
  * <b>What, Where, When?</b>
   * "FOSDEM 2012":http://www.fosdem.org/2012/, February 04-05 2012, Brussels, Belgium. The security/crypto devroom will be in room H.2214 on both days, for 8 hours. There will be room for up to 100 people.
@@ -8,7 +8,7 @@ A reminder to start planning early and to have a booth. "FOSDEM 2011":wiki/OpenS
  * <b>Why?</b>
   * To raise the awareness of OpenSC and smart cards in general; to meet with other developers and promote integration; to meet with a wide audience and hear their thoughts and needs; to have fun and enjoy Belgian beer. ("thread on opensc-devel":http://www.opensc-project.org/pipermail/opensc-devel/2010-September/014847.html). 
  * <b>Subscribe to "security-devroom@lists.fosdem.org":http://lists.fosdem.org/mailman/listinfo/security-devroom mailing list! </b>
- * "Call for presentations ":wiki/FOSDEM2012/CFP in the security devroom (a slight modification of 2011 CFP for now, may be updated a bit, but the procedure will remain).
+ * [[Call for presentations |FOSDEM2012/CFP]] in the security devroom (a slight modification of 2011 CFP for now, may be updated a bit, but the procedure will remain).
 
 h2. Activities
 
@@ -23,8 +23,8 @@ h2. Tasks
 == Proposals / submissions for Day 1==
  * <b>Talks, presentations, demos etc. DEADLINE: 20.01.2012</b>
  * A (15m) Set up of tech, introduction of talkers and some words for participants.
- * B (30m, "Tomas Gustavsson":wiki/User:shredder) "CESecore and common criteria certification of open source sw":http://cesecore.eu ("mailing list post":https://lists.fosdem.org/pipermail/security-devroom/2011-November/000082.html).
- * C (45m, "Branko Majic":wiki/User:azaghal) "Deployment and Use of X.509 in Free Software Components":http://majic.rs/book/free-software-x509-cookbook (with devroom demo environment if I get some hands on hardware able to run lots of VM's) ("mailing list post":https://lists.fosdem.org/pipermail/security-devroom/2011-November/000083.html)
+ * B (30m, [[Tomas Gustavsson|User:shredder]]) "CESecore and common criteria certification of open source sw":http://cesecore.eu ("mailing list post":https://lists.fosdem.org/pipermail/security-devroom/2011-November/000082.html).
+ * C (45m, [[Branko Majic|User:azaghal]]) "Deployment and Use of X.509 in Free Software Components":http://majic.rs/book/free-software-x509-cookbook (with devroom demo environment if I get some hands on hardware able to run lots of VM's) ("mailing list post":https://lists.fosdem.org/pipermail/security-devroom/2011-November/000083.html)
  * D (45m Kashyap Chamarthy Overview and a demo of "Dogtag Certificate system":http://pki.fedoraproject.org/ -- An open source and open standards based PKI project. I'll also show a quick demo where Certificate System and its subsystems(CA, OCSP, KRA[key-recovery-archival] ) would be configured on a virtual machine. ("mailing list post":https://lists.fosdem.org/pipermail/security-devroom/2011-November/000084.html)
  * E (45m) Benedikt Heintel, CACert .org "Trust - the root of evil?!"
   * Abstract: "In a highly connected world like ours is trust one of the most important assets. But what if the root to trust is not trustworthy?

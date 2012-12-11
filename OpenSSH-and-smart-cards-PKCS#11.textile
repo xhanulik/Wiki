@@ -5,7 +5,7 @@ h1. OpenSSH and smart cards / PKCS#11
 
 h2. Best solution since v54p1
 
-Portable OpenSSH v5.4p1 added direct support for "PKCS#11":wiki/PKCS11-Module modules.
+Portable OpenSSH v5.4p1 added direct support for [[PKCS#11|PKCS11-Module]] modules.
 
 Basic usage looks like this:
 <pre><code>$ ssh -I /usr/lib/opensc-pkcs11.so martin@remotehost

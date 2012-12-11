@@ -718,7 +718,7 @@ The detailed help for a specific macro can also be obtained more directly by app
 h2. Processors
 
 Trac supports alternative markup formats using WikiProcessors. For example, processors are used to write pages in 
-"reStructuredText":wiki/reStructuredText-Support-in-Trac or [wiki:WikiHtml HTML]. 
+[[reStructuredText|reStructuredText-Support-in-Trac]] or [wiki:WikiHtml HTML]. 
 
 |= Wiki Markup =|= Display =|
 |--------------------------------------------------------

@@ -43,9 +43,9 @@ trac.ticket.report.ReportModule = disabled
 webadmin.* = enabled
 </code></pre>
 
-The first option tells Trac to disable the "report module":wiki/Trac-Reports. The second option instructs Trac to enable all components in the `webadmin` package. Note that the trailing wildcard is required for module/package matching.
+The first option tells Trac to disable the [[report module|Trac-Reports]]. The second option instructs Trac to enable all components in the `webadmin` package. Note that the trailing wildcard is required for module/package matching.
 
-See the <i>Plugins</i> page on <i>About Trac</i> to get the list of active components (requires `CONFIG_VIEW` "permissions":wiki/Trac-Permissions.)
+See the <i>Plugins</i> page on <i>About Trac</i> to get the list of active components (requires `CONFIG_VIEW` [[permissions|Trac-Permissions]].)
 
 See also: TracPlugins
 

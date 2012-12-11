@@ -2,7 +2,7 @@ h1. The Trac Wiki Engine
 
 [[TracGuideToc]]
 
-Trac has a built-in wiki engine, used for text and documentation throughout the system. WikiFormatting is used in "wiki pages":wiki/TitleIndex, [wiki:TracTickets tickets], [wiki:TracChangeset check-in log messages], [wiki:TracRoadmap milestone] and [wiki:TracReports report] descriptions.  It allows for formatted text and hyperlinks in and between all Trac modules.
+Trac has a built-in wiki engine, used for text and documentation throughout the system. WikiFormatting is used in [[wiki pages|TitleIndex]], [wiki:TracTickets tickets], [wiki:TracChangeset check-in log messages], [wiki:TracRoadmap milestone] and [wiki:TracReports report] descriptions.  It allows for formatted text and hyperlinks in and between all Trac modules.
 
 Editing wiki text is easy, using any web browser and a simple [WikiFormatting formatting system], rather than more complex markup languages like HTML.  The reasoning behind its design is that HTML, with its large collection of nestable tags, is too complicated to allow fast-paced editing, and distracts from the actual content of the pages. Note though that Trac also supports [WikiHtml HTML], [WikiRestructuredText reStructuredText] and "Textile":http://www.textism.com/tools/textile/ as alternative markup formats.
 
@@ -23,7 +23,7 @@ Learn more about:
 If you want to practice editing, please use the SandBox.
 
 Before saving your changes, you can <i>Preview</i> the page or <i>Review the Changes</i> you've made.
-You can get an automatic preview of the formatting as you type when you activate the <i>Edit Side-by-side</i> mode. <i> There is a "Not found: text(configurable delay) link(/TracIni#trac-section)":wiki//TracIni#trac-section between when you make your edit and when the automatic preview will update.</i>
+You can get an automatic preview of the formatting as you type when you activate the <i>Edit Side-by-side</i> mode. <i> There is a [[configurable delay|/TracIni#trac-section]] between when you make your edit and when the automatic preview will update.</i>
 
 Some more information about wikis on the web:
  * A definition of "Wiki":http://wikipedia.org/wiki/Wiki, in a famous  wiki encyclopedia

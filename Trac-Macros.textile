@@ -48,7 +48,7 @@ A list of 3 most recently changed wiki pages starting with 'Trac':
 
 h2. Available Macros
 
-''Note that the following list will only contain the macro documentation if you've not enabled `-OO` optimizations, or not set the `PythonOptimize` option for "mod_python":wiki/Trac-and-mod_python.''
+''Note that the following list will only contain the macro documentation if you've not enabled `-OO` optimizations, or not set the `PythonOptimize` option for [[mod_python|Trac-and-mod_python]].''
 
 [[MacroList]]
 

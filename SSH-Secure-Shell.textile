@@ -12,6 +12,6 @@ See wiki:OpenSSH for more information.
 
 h2. PuttyCard (deprecated)
 
-"PuTTYcard":wiki/PuTTYcard is another, independent implementation to add smart card support to putty.
-Read more about it "here":wiki/PuTTYcard, and download the files from "opensc-project.org contrib":http://www.opensc-project.org/files/contrib/ directory.
+[[PuTTYcard|PuTTYcard]] is another, independent implementation to add smart card support to putty.
+Read more about it [[here|PuTTYcard]], and download the files from "opensc-project.org contrib":http://www.opensc-project.org/files/contrib/ directory.
 

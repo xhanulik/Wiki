@@ -1,8 +1,8 @@
 h1. OpenSC 0.12.3-pre1
 
-Download "<b>NightlyBuilds</b>":wiki/Automated-OpenSC-builds for testing most recent changes, what will eventually be the next release candidate. When a release candidate is created (from "https://www.opensc-project.org/autobuild/view/Staging/),":https://www.opensc-project.org/autobuild/view/Staging/), direct download links are available on this page.
+Download [[<b>NightlyBuilds</b>|Automated-OpenSC-builds]] for testing most recent changes, what will eventually be the next release candidate. When a release candidate is created (from "https://www.opensc-project.org/autobuild/view/Staging/),":https://www.opensc-project.org/autobuild/view/Staging/), direct download links are available on this page.
 
 PreReleases are built from the [source:@staging staging branch] ("Github":https://github.com/OpenSC/OpenSC/tree/staging, "gitweb":https://www.opensc-project.org/codereview/gitweb?p=OpenSC.git;a=tree;h=refs/heads/staging;hb=refs/heads/staging) of the SourceCode repository. Builds are available for download from "http://www.opensc-project.org/downloads/nightly/staging/":http://www.opensc-project.org/downloads/nightly/staging/
 
-Please test and post your feedback to "opensc-devel mailing list":wiki/Mailing-lists.
+Please test and post your feedback to [[opensc-devel mailing list|Mailing-lists]].
 

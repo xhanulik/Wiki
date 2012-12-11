@@ -12,7 +12,7 @@ Currently only Starcos SPK 2.3 is tested. If you have a newer version, please re
 
 h2. Version 3.0
 
-Version 3.0 is not supported by the OpenSC Starcos driver yet. Support is required to make "German eGK/eHBA":wiki/German-eHBA,-eGK work.
+Version 3.0 is not supported by the OpenSC Starcos driver yet. Support is required to make [[German eGK/eHBA|German-eHBA,-eGK]] work.
 An experimental driver was posted on opensc-devel:  
 "http://www.opensc-project.org/pipermail/opensc-devel/2010-March/013759.html":http://www.opensc-project.org/pipermail/opensc-devel/2010-March/013759.html
 but is not available in the current release and needs porting.

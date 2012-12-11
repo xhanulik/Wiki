@@ -4,10 +4,10 @@ Contributions to OpenSC are welcome! This page explains how to contribute to Ope
 
 h2. Development process
 
- * OpenSC development is coordinated via [mailto:opensc-devel@opensc-project.org] <b>"mailing list":wiki/Mailing-lists</b>. You may also use [irc://irc.freenode.net/opensc #opensc on irc.freenode.net] IRC channel for short questions. Start helping the community and reviewing [report:10 support tickets]. Patches fixing [/newticket new] or [report:1 existing bugs] may be attached to the ticket or sent to the [wiki:MailingLists opensc-devel mailing list].
+ * OpenSC development is coordinated via [mailto:opensc-devel@opensc-project.org] <b>[[mailing list|Mailing-lists]]</b>. You may also use [irc://irc.freenode.net/opensc #opensc on irc.freenode.net] IRC channel for short questions. Start helping the community and reviewing [report:10 support tickets]. Patches fixing [/newticket new] or [report:1 existing bugs] may be attached to the ticket or sent to the [wiki:MailingLists opensc-devel mailing list].
  * Contribution should comply with coding guidelines. A minimal <b>DevelopmentPolicy</b> exists.
  * To develop OpenSC, you may use github and/or gerrit, with a preference to github.
- * "DRAFT Howto add/support a new card":wiki/Adding-a-new-card-driver
+ * [[DRAFT Howto add/support a new card|Adding-a-new-card-driver]]
 
 
 h2. github process

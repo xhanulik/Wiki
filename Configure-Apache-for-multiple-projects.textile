@@ -34,7 +34,7 @@ _LoadModule rewrite_module modules/mod_rewrite.so_
 
 Now, when you add another project, you don't need to edit any apache config. The only file you may want to edit is index.html to make it list the new project. If you think this is too much work, replace it with a python cgi script that does it for you.
 
-"tracd":wiki/Tracd and TracModPython can also serve multiple projects.
+[[tracd|Tracd]] and TracModPython can also serve multiple projects.
 
 
 ----

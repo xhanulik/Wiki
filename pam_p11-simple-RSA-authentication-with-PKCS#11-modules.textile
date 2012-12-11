@@ -2,7 +2,7 @@ h1. pam_p11 - simple RSA authentication with PKCS#11 modules
 
 Pam_p11 is a plugable authentication module ("PAM":http://www.kernel.org/pub/linux/libs/pam/) package for using crpytographic PKCS#11 tokens such as smart cards and usb crypto tokens for local authentication.
 
-Pam_p11 uses "libp11":wiki/libp11-PKCS%2311-wrapper-library to access any PKCS#11 module but it is primarily developed for and tested with OpenSC PKCS#11.
+Pam_p11 uses [[libp11|libp11-PKCS#11-wrapper-library]] to access any PKCS#11 module but it is primarily developed for and tested with OpenSC PKCS#11.
 
 Pam_p11 implements two authentication modules:
  * pam_p11_openssh authenticates the user against public keys found in OpenSSH _~/.ssh/authorized_keys_ file.

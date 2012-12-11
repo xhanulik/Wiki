@@ -6,7 +6,7 @@ Sometime in the future all german physicians and apothecaries will be equipped w
 
 I wrote the above sentence in 2006 and now already have 2012 - so be carefull when interpreting the word "soon".
 
-We got eHBA and eGK test cards in 2008 and they were "STARCOS 3.0":wiki/STARCOS-cards based. So in order to support these kind of eHBA OpenSC needs a [wiki:STARCOS STARCOS 3.0] driver first. If you have informations about eHBAs or eGKs, please let us know or add a link to the list below:
+We got eHBA and eGK test cards in 2008 and they were [[STARCOS 3.0|STARCOS-cards]] based. So in order to support these kind of eHBA OpenSC needs a [wiki:STARCOS STARCOS 3.0] driver first. If you have informations about eHBAs or eGKs, please let us know or add a link to the list below:
 
 Information about the german eHBA / eGK:
 

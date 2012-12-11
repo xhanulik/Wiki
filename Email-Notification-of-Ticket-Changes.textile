@@ -6,7 +6,7 @@ Trac supports notification of ticket changes via email.
 
 Email notification is useful to keep users up-to-date on tickets/issues of interest, and also provides a convenient way to post all ticket changes to a dedicated mailing list. For example, this is how the "Trac-tickets":http://lists.edgewall.com/archive/trac-tickets/ mailing list is set up.
 
-Disabled by default, notification can be activated and configured in "trac.ini":wiki/The-Trac-Configuration-File.
+Disabled by default, notification can be activated and configured in [[trac.ini|The-Trac-Configuration-File]].
 
 h2. Receiving Notification Mails
 
@@ -22,7 +22,7 @@ Alternatively, a default domain name (<b>`smtp_default_domain`</b>) can be set i
 
 h2. Configuring SMTP Notification
 
-<b>Important:</b> For TracNotification to work correctly, the `[trac] base_url` option must be set in "trac.ini":wiki/The-Trac-Configuration-File. 
+<b>Important:</b> For TracNotification to work correctly, the `[trac] base_url` option must be set in [[trac.ini|The-Trac-Configuration-File]]. 
 
 h3. Configuration Options
 

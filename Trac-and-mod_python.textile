@@ -2,7 +2,7 @@ h1. Trac and mod_python
 
 [[TracGuideToc]]
 
-Trac supports "mod_python":http://www.modpython.org/, which speeds up Trac's response times considerably, especially compared to [TracCgi CGI], and permits use of many Apache features not possible with "tracd":wiki/Tracd/mod_proxy.
+Trac supports "mod_python":http://www.modpython.org/, which speeds up Trac's response times considerably, especially compared to [TracCgi CGI], and permits use of many Apache features not possible with [[tracd|Tracd]]/mod_proxy.
 
 These instructions are for Apache 2; if you are still using Apache 1.3, you may have some luck with [trac:wiki:TracModPython2.7 TracModPython2.7].
 
@@ -74,7 +74,7 @@ or you can uncompress the Genshi egg to resolve problems extracting from it.
 
 h3. Configuring Authentication
 
-Creating password files and configuring authentication works similar to the process for "Not found: text(CGI) link(TracCgi#AddingAuthentication)":wiki/TracCgi#AddingAuthentication:
+Creating password files and configuring authentication works similar to the process for [[CGI|TracCgi#AddingAuthentication]]:
 <pre><code>#!xml
 <Location /projects/myproject/login>
   AuthType Basic
@@ -383,5 +383,5 @@ You may encounter segfaults (reported on debian etch) if php5-mhash module is in
 Some people also have troubles when using php5 compiled with its own 3rd party libraries instead of system libraries. Check here "http://www.djangoproject.com/documentation/modpython/#if-you-get-a-segmentation-fault":http://www.djangoproject.com/documentation/modpython/#if-you-get-a-segmentation-fault
 
 ----
-See also:  TracGuide, TracInstall, "ModWSGI":wiki/Trac-and-mod_wsgi, [wiki:TracFastCgi FastCGI],  [trac:TracNginxRecipe TracNginxRecipe]
+See also:  TracGuide, TracInstall, [[ModWSGI|Trac-and-mod_wsgi]], [wiki:TracFastCgi FastCGI],  [trac:TracNginxRecipe TracNginxRecipe]
 

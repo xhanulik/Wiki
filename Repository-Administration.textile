@@ -4,14 +4,14 @@ h1. Repository Administration
 
 h2. Quick start #QuickStart
 
- * Manage repositories in the "Repository" admin panel, with `trac-admin` or in the `[repositories]` section of "Not found: text(trac.ini) link(TracIni#repositories-section)":wiki/TracIni#repositories-section.
+ * Manage repositories in the "Repository" admin panel, with `trac-admin` or in the `[repositories]` section of [[trac.ini|TracIni#repositories-section]].
  * Set up a call to `trac-admin $ENV changeset added $REPO $REV` in the post-commit hook of each repository. Additionally, add a call to `trac-admin $ENV changeset modified $REPO $REV` in the post-revprop-change hook of repositories allowing revision property changes.
  * Set the `[trac] repository_sync_per_request` option to an empty value to disable per-request syncing.
 
 
 h2. Specifying repositories #Repositories
 
-Starting with 0.12, Trac can handle more than one repository per environment. The pre-0.12 way of specifying the repository with the `repository_dir` and `repository_type` options in the `[trac]` section of "trac.ini":wiki/The-Trac-Configuration-File is still supported, but two new mechanisms allow including additional repositories into an environment.
+Starting with 0.12, Trac can handle more than one repository per environment. The pre-0.12 way of specifying the repository with the `repository_dir` and `repository_type` options in the `[trac]` section of [[trac.ini|The-Trac-Configuration-File]] is still supported, but two new mechanisms allow including additional repositories into an environment.
 
 It is also possible to define aliases of repositories, that act as "pointers" to real repositories. This can be useful when renaming a repository, to avoid breaking all the links to the old name.
 
@@ -39,9 +39,9 @@ After adding a repository, the cache for that repository must be re-synchronized
 
 h3. In `trac.ini` #ReposTracIni
 
-Repositories and repository attributes can be specified in the `[repositories]` section of "Not found: text(trac.ini) link(TracIni#repositories-section)":wiki/TracIni#repositories-section. Every attribute consists of a key structured as `{name}.{attribute}` and the corresponding value separated with an equal sign (`=`). The name of the default repository is empty.
+Repositories and repository attributes can be specified in the `[repositories]` section of [[trac.ini|TracIni#repositories-section]]. Every attribute consists of a key structured as `{name}.{attribute}` and the corresponding value separated with an equal sign (`=`). The name of the default repository is empty.
 
-The main advantage of specifying repositories in `trac.ini` is that they can be inherited from a global configuration (see the "Not found: text(global configuration) link(TracIni#GlobalConfiguration)":wiki/TracIni#GlobalConfiguration section of TracIni). One drawback is that, due to limitations in the `ConfigParser` class used to parse `trac.ini`, the repository name is always all-lowercase.
+The main advantage of specifying repositories in `trac.ini` is that they can be inherited from a global configuration (see the [[global configuration|TracIni#GlobalConfiguration]] section of TracIni). One drawback is that, due to limitations in the `ConfigParser` class used to parse `trac.ini`, the repository name is always all-lowercase.
 
 The following example defines two Subversion repositories named `project` and `lib`, and a hidden alias to `project` as the default repository. This is a typical use case where a Trac environment previously had a single repository (the `project` repository), and was converted to multiple repositories. The alias ensures that links predating the change continue to resolve to the `project` repository.
 <pre><code>#!ini
@@ -65,7 +65,7 @@ Repositories can also be specified in the database, using either the "Repositori
 
 The admin panel shows the list of all repositories defined in the Trac environment. It allows adding repositories and aliases, editing repository attributes and removing repositories. Note that repositories defined in `trac.ini` are displayed but cannot be edited.
 
-The following "trac-admin":wiki/TracAdmin commands can be used to perform repository operations from the command line.
+The following [[trac-admin|TracAdmin]] commands can be used to perform repository operations from the command line.
 
  `repository add <repos> <dir> [type]`::
    Add a repository `<repos>` located at `<dir>`, and optionally specify its type.
@@ -94,7 +94,7 @@ Please note that at the time of writing, no initial resynchronization or any hoo
 
 h3. Explicit synchronization #ExplicitSync
 
-This is the preferred method of repository synchronization. It requires setting the `[trac]  repository_sync_per_request` option in "Not found: text(trac.ini) link(TracIni#trac-section)":wiki/TracIni#trac-section to an empty value, and adding a call to `trac-admin` in the post-commit hook of each repository. Additionally, if a repository allows changing revision metadata, a call to `trac-admin` must be added to the post-revprop-change hook as well.
+This is the preferred method of repository synchronization. It requires setting the `[trac]  repository_sync_per_request` option in [[trac.ini|TracIni#trac-section]] to an empty value, and adding a call to `trac-admin` in the post-commit hook of each repository. Additionally, if a repository allows changing revision metadata, a call to `trac-admin` must be added to the post-revprop-change hook as well.
 
  `changeset added <repos> <rev> [...]`::
    Notify Trac that one or more changesets have been added to a repository.
@@ -104,7 +104,7 @@ This is the preferred method of repository synchronization. It requires setting 
 
 The `<repos>` argument can be either a repository name (use "`(default)`" for the default repository) or the path to the repository.
 
-Note that you may have to set the environment variable PYTHON_EGG_CACHE to the same value as was used for the web server configuration before calling trac-admin, if you changed it from its default location. See "Trac Plugins":wiki/Trac-Plugins for more information.
+Note that you may have to set the environment variable PYTHON_EGG_CACHE to the same value as was used for the web server configuration before calling trac-admin, if you changed it from its default location. See [[Trac Plugins|Trac-Plugins]] for more information.
 
 The following examples are complete post-commit and post-revprop-change scripts for Subversion. They should be edited for the specific environment, marked executable (where applicable) and placed in the `hooks` directory of each repository. On Unix (`post-commit`):
 <pre><code>#!sh#!/bin/sh
@@ -132,7 +132,7 @@ See the "section about hooks":http://svnbook.red-bean.com/en/1.5/svn.reposadmin.
 
 h3. Per-request synchronization #PerRequestSync
 
-If the post-commit hooks are not available, the environment can be set up for per-request synchronization. In that case, the `[trac] repository_sync_per_request` option in "Not found: text(trac.ini) link(TracIni#trac-section)":wiki/TracIni#trac-section must be set to a comma-separated list of repository names to be synchronized.
+If the post-commit hooks are not available, the environment can be set up for per-request synchronization. In that case, the `[trac] repository_sync_per_request` option in [[trac.ini|TracIni#trac-section]] must be set to a comma-separated list of repository names to be synchronized.
 
 Note that in this case, the changeset listener extension point is not called, and therefore plugins using it will not work correctly.
 

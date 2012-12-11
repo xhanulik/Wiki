@@ -4,7 +4,7 @@ Releasing OpenSC should be simple and streamlined, yet a predictable and easily 
 
 h2. Generic principles
 
-Releases of OpenSC are done by a release manager (defined by having write access to Git blessed master and release manager account on opensc-project.org). Releases are regular and constructed by merging proposed and code-reviewed branches from developers into the staging branch. Additional review of the merged changes by release manager is highly encouraged. Testing of those branches should be done earlier by the means of "NightlyBuilds":wiki/Automated-OpenSC-builds. At least one (or more, if needed) PreReleases (release candidates) MUST be done before the actual release. A RC is thus the merging of proposed branches + necessary build environment (NightlyBuilds) changes + NEWS file construction. After a RC has been published, no more merges to the staging branch SHOULD NOT happen, only release-critical single commits can be cherry-picked and a new RC created.
+Releases of OpenSC are done by a release manager (defined by having write access to Git blessed master and release manager account on opensc-project.org). Releases are regular and constructed by merging proposed and code-reviewed branches from developers into the staging branch. Additional review of the merged changes by release manager is highly encouraged. Testing of those branches should be done earlier by the means of [[NightlyBuilds|Automated-OpenSC-builds]]. At least one (or more, if needed) PreReleases (release candidates) MUST be done before the actual release. A RC is thus the merging of proposed branches + necessary build environment (NightlyBuilds) changes + NEWS file construction. After a RC has been published, no more merges to the staging branch SHOULD NOT happen, only release-critical single commits can be cherry-picked and a new RC created.
 
 h2. Release preparations in version control
 
@@ -15,7 +15,7 @@ Remove any -pre/-rc tags from version and commit the files to staging branch, fr
 
 h2. Build binaries
 
- * Wait around 10 minutes to allow "all builders":https://www.opensc-project.org/autobuild/view/Staging/ in "NightlyBuilds":wiki/Automated-OpenSC-builds machinery to start (polled every 5 minutes) and complete after commiting changes to staging. All builds MUST succeed and MUST NOT generate more warnings than the previous build.
+ * Wait around 10 minutes to allow "all builders":https://www.opensc-project.org/autobuild/view/Staging/ in [[NightlyBuilds|Automated-OpenSC-builds]] machinery to start (polled every 5 minutes) and complete after commiting changes to staging. All builds MUST succeed and MUST NOT generate more warnings than the previous build.
  * Do a separate smoke test for all installers and the tarball.
  * Copy files, calculate checksums and update Wiki with the release script:
 <pre><code>ssh rm@opensc-project.org
@@ -49,5 +49,5 @@ h2. Publish announcement
  * Update freshmeat entry
  * Update Trac:
   * Close milestone, assigning open tickets to next milestone
-  * Update WikiStart (news), "DownloadRelease":wiki/Download-latest-OpenSC-stable-release, PreReleases, ProjectHistory
+  * Update WikiStart (news), [[DownloadRelease|Download-latest-OpenSC-stable-release]], PreReleases, ProjectHistory
 

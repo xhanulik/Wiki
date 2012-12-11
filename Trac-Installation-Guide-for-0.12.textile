@@ -95,7 +95,7 @@ A web server is optional because Trac is shipped with a server included, see the
 
 Alternatively you configure Trac to run in any of the following environments.
  * "Apache":http://httpd.apache.org/ with 
-   - "mod_wsgi":http://code.google.com/p/modwsgi/, see "Trac-and-mod_wsgi":wiki/Trac-and-mod_wsgi and 
+   - "mod_wsgi":http://code.google.com/p/modwsgi/, see [[Trac-and-mod_wsgi|Trac-and-mod_wsgi]] and 
      "http://code.google.com/p/modwsgi/wiki/IntegrationWithTrac":http://code.google.com/p/modwsgi/wiki/IntegrationWithTrac
    - "mod_python 3.3.1":http://modpython.org/, deprecated: see TracModPython)
  * a "FastCGI":http://www.fastcgi.com/-capable web server (see TracFastCgi)
@@ -113,7 +113,7 @@ h4. Other Python Packages
  * "docutils":http://docutils.sourceforge.net/, version >= 0.3.9 
    for WikiRestructuredText.
  * "Pygments":http://pygments.pocoo.org for 
-   "syntax highlighting":wiki/Syntax-Coloring-of-Source-Code.
+   [[syntax highlighting|Syntax-Coloring-of-Source-Code]].
    "SilverCity":http://silvercity.sourceforge.net/ and/or 
    "Enscript":http://gnu.org/software/enscript/enscript.html may still be used
    but are deprecated and you really should be using Pygments.
@@ -182,7 +182,7 @@ You can obtain the source for a .tar.gz or .zip file corresponding to a release 
 This will byte-compile the python source code and install it as an .egg file or folder in the `site-packages` directory
 of your Python installation. The .egg will also contain all other resources needed by standard Trac, such as htdocs and templates.
 
-The script will also install the "trac-admin":wiki/TracAdmin command-line tool, used to create and maintain [wiki:TracEnvironment project environments], as well as the [wiki:TracStandalone tracd] standalone server.
+The script will also install the [[trac-admin|TracAdmin]] command-line tool, used to create and maintain [wiki:TracEnvironment project environments], as well as the [wiki:TracStandalone tracd] standalone server.
 
 If you install from source and want to make Trac available in other languages, make sure  Babel is installed. Only then, perform the `install` (or simply redo the `install` once again afterwards if you realize Babel was not yet installed):
 <pre><code>$ python ./setup.py install
@@ -212,7 +212,7 @@ h2. Creating a Project Environment
 
 A [TracEnvironment Trac environment] is the backend storage where Trac stores information like wiki pages, tickets, reports, settings, etc. An environment is basically a directory that contains a human-readable [TracIni configuration file], and various other files and directories.
 
-A new environment is created using "trac-admin":wiki/TracAdmin:
+A new environment is created using [[trac-admin|TracAdmin]]:
 <pre><code>$ trac-admin /path/to/myproject initenv
 </code></pre>
 
@@ -231,7 +231,7 @@ Finally, make sure the user account under which the web front-end runs will have
 
 h2. Running the Standalone Server
 
-After having created a Trac environment, you can easily try the web interface by running the standalone server "tracd":wiki/Tracd:
+After having created a Trac environment, you can easily try the web interface by running the standalone server [[tracd|Tracd]]:
 <pre><code>$ tracd --port 8000 /path/to/myproject
 </code></pre>
 
@@ -241,15 +241,15 @@ Then, fire up a browser and visit `http://localhost:8000/`. You should get a sim
 
 h2. Running Trac on a Web Server
 
-Trac provides various options for connecting to a "real" web server: "CGI":wiki/Installing-Trac-as-CGI, [wiki:TracFastCgi FastCGI], [wiki:TracModWSGI mod_wsgi] and [wiki:TracModPython mod_python]. For decent performance, it is recommended that you use either FastCGI or mod_wsgi.
+Trac provides various options for connecting to a "real" web server: [[CGI|Installing-Trac-as-CGI]], [wiki:TracFastCgi FastCGI], [wiki:TracModWSGI mod_wsgi] and [wiki:TracModPython mod_python]. For decent performance, it is recommended that you use either FastCGI or mod_wsgi.
 
 Trac also supports [trac:TracOnWindowsIisAjp AJP] which may be your choice if you want to connect to IIS.
 
 h4. Generating the Trac cgi-bin directory
 
-In order for Trac to function properly with FastCGI you need to have a `trac.fcgi` file and for mod_wsgi a `trac.wsgi` file. These are Python scripts which load the appropriate Python code. They can be generated using the `deploy` option of "trac-admin":wiki/TracAdmin.
+In order for Trac to function properly with FastCGI you need to have a `trac.fcgi` file and for mod_wsgi a `trac.wsgi` file. These are Python scripts which load the appropriate Python code. They can be generated using the `deploy` option of [[trac-admin|TracAdmin]].
 
-There is, however, a bit of a chicken-and-egg problem. The "trac-admin":wiki/TracAdmin command requires an existing environment to function, but complains if the deploy directory already exists. This is a problem, because environments are often stored in a subdirectory of the deploy. The solution is to do something like this:
+There is, however, a bit of a chicken-and-egg problem. The [[trac-admin|TracAdmin]] command requires an existing environment to function, but complains if the deploy directory already exists. This is a problem, because environments are often stored in a subdirectory of the deploy. The solution is to do something like this:
 <pre><code>mkdir -p /usr/share/trac/projects/my-project
 trac-admin /usr/share/trac/projects/my-project initenv
 trac-admin /usr/share/trac/projects/my-project deploy /tmp/deploy
@@ -262,11 +262,11 @@ Some Python plugins need to be extracted to a cache directory. By default the ca
 
 h2. Configuring Authentication
 
-The process of adding, removing, and configuring user accounts for authentication depends on the specific way you run Trac. The basic procedure is described in the "Not found: text("Adding Authentication") link(TracCgi#AddingAuthentication)":wiki/TracCgi#AddingAuthentication section on the TracCgi page. To learn how to setup authentication for the frontend you're using, please refer to one of the following pages:
+The process of adding, removing, and configuring user accounts for authentication depends on the specific way you run Trac. The basic procedure is described in the [["Adding Authentication"|TracCgi#AddingAuthentication]] section on the TracCgi page. To learn how to setup authentication for the frontend you're using, please refer to one of the following pages:
 
  * TracStandalone if you use the standalone server, `tracd`.
  * TracCgi if you use the CGI or FastCGI web front ends.
- * "Trac-and-mod_wsgi":wiki/Trac-and-mod_wsgi if you use the Apache mod_wsgi web front end.
+ * [[Trac-and-mod_wsgi|Trac-and-mod_wsgi]] if you use the Apache mod_wsgi web front end.
  * TracModPython if you use the Apache mod_python web front end.
 
 
@@ -276,7 +276,7 @@ You can configure SVN to automatically add a reference to the changeset into the
  * <b>`Refs #123`</b> - to reference this changeset in `#123` ticket
  * <b>`Fixes #123`</b> - to reference this changeset and close `#123` ticket with the default status <i>fixed</i>
 
-This functionality requires a post-commit hook to be installed as described in "Not found: text(TracRepositoryAdmin) link(TracRepositoryAdmin#ExplicitSync)":wiki/TracRepositoryAdmin#ExplicitSync, and enabling the optional commit updater components by adding the following line to the `[components]` section of your [wiki:TracIni#components-section trac.ini], or enabling the components in the "Plugins" admin panel.
+This functionality requires a post-commit hook to be installed as described in [[TracRepositoryAdmin|TracRepositoryAdmin#ExplicitSync]], and enabling the optional commit updater components by adding the following line to the `[components]` section of your [wiki:TracIni#components-section trac.ini], or enabling the components in the "Plugins" admin panel.
 <pre><code>tracopt.ticket.commit_updater.* = enabled
 </code></pre>
 For more information, see the documentation of the `CommitTicketUpdater` component in the "Plugins" admin panel.
@@ -285,12 +285,12 @@ h2. Using Trac
 
 Once you have your Trac site up and running, you should be able to create tickets, view the timeline, browse your version control repository if configured, etc.
 
-Keep in mind that anonymous (not logged in) users can by default access most but not all of the features. You will need to configure authentication and grant additional "permissions":wiki/Trac-Permissions to authenticated users to see the full set of features.
+Keep in mind that anonymous (not logged in) users can by default access most but not all of the features. You will need to configure authentication and grant additional [[permissions|Trac-Permissions]] to authenticated users to see the full set of features.
 
 <i> Enjoy! </i>
 
 [trac:TracTeam The Trac Team]
 
 ----
-See also: [trac:TracInstallPlatforms TracInstallPlatforms], TracGuide, TracCgi, TracFastCgi, TracModPython, "Trac-and-mod_wsgi":wiki/Trac-and-mod_wsgi, TracUpgrade, TracPermissions
+See also: [trac:TracInstallPlatforms TracInstallPlatforms], TracGuide, TracCgi, TracFastCgi, TracModPython, [[Trac-and-mod_wsgi|Trac-and-mod_wsgi]], TracUpgrade, TracPermissions
 

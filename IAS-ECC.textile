@@ -23,14 +23,14 @@ The base of the IAS-ECC technical specification contains multiple ISO-7816 serie
  Amos "IOP-V6 IAS/ECC"<br />
  IAS/ECC cards with three ""Adele"":http://www.references.modernisation.gouv.fr/sites/default/files/MDWIAS_Profils%20de%20%20personnalisation%20des%20cartes%20IAS%20%20V2_7.pdf profiles (from Gemalto)
 
-The IAS/ECC card from Gemalto "thoroughly implements":wiki/IASECC-card-from-Gemalto specification "IAS/ECC v1.0.1":http://www.gixel.fr/includes/cms/_contenus/bibliotheque/file/CAP%20/IAS%20ECC%20v1_0_1UK.pdf. The card is formatted with <i>generic PKI</i> application and SM protected application <i>eID</i>.<br />
-(Some "notes":wiki/IASECC_Gemalto_eID_Notes, that concerns the usage of this card.)
+The IAS/ECC card from Gemalto [[thoroughly implements|IASECC-card-from-Gemalto]] specification "IAS/ECC v1.0.1":http://www.gixel.fr/includes/cms/_contenus/bibliotheque/file/CAP%20/IAS%20ECC%20v1_0_1UK.pdf. The card is formatted with <i>generic PKI</i> application and SM protected application <i>eID</i>.<br />
+(Some [[notes|IASECC_Gemalto_eID_Notes]], that concerns the usage of this card.)
 
 IAS/ECC card from Oberthur is formatted with one <i>generic PKI</i> application.<br />
 
 The "ypsID S3 IAS/ECC - PKCS#15" is the multi-application card from Sagem and contains two profiles, <i>Generic</i> and protected <i>ECC-eID</i>. The second one contains one slot for the <i>Qualified Signature</i>.
 
-Oberthur's Java-card "COSMO v7" with PKI applet "AuthentIC v3" is not an IAS/ECC card, but native format of this card, "based on PKCS#15 specification":wiki/Oberthur_AuthentIC_v3, is not far from the IAS/ECC.
+Oberthur's Java-card "COSMO v7" with PKI applet "AuthentIC v3" is not an IAS/ECC card, but native format of this card, [[based on PKCS#15 specification|Oberthur_AuthentIC_v3]], is not far from the IAS/ECC.
 <i>Global Platform</i> Secure Messaging can be used to protect the access to the on-card objects. 
 One of the motivations to support this card here is an attempt to generalize implementation of <i>SM</i> and <i>External Authentication</i> - both differ from the definitions in the IAS/ECC specification.<br />
 
