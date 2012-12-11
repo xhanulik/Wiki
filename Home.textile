@@ -4,45 +4,45 @@ OpenSC provides a set of libraries and utilities to work with smart cards. Its m
 
 OpenSC is written by an international team of volunteers and is licensed as "Open Source":http://www.opensource.org/ software under the  "LGPL license":http://www.opensource.org/licenses/lgpl-license.php version 2.1 of the License, or (at your option) any later version. For a list of all authors and contributors as well as detailed license information see AuthorsAndCredits.
 
-If you are new to smart cards, see OverView and "<b>FrequentlyAskedQuestions</b>":wiki/Frequently-Asked-Questions pages. Always check "<b>SecurityAdvisories</b>":wiki/OpenSC-security-advisories.
+If you are new to smart cards, see OverView and [[<b>FrequentlyAskedQuestions</b>|Frequently-Asked-Questions]] pages. Always check [[<b>SecurityAdvisories</b>|OpenSC-security-advisories]].
 
 The latest stable version of OpenSC is <b>0.13.0</b> ("released on 04.12.2012":http://www.opensc-project.org/pipermail/opensc-devel/2012-December/018686.html)
  * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/
 
-The stable version of OpenSC is <b>0.12.2</b> ("released on 17.07.2011":http://www.opensc-project.org/pipermail/opensc-announce/2011-May/000034.html) [milestone:0.12.2 milestone]). See "<b>DownloadRelease</b>":wiki/Download-latest-OpenSC-stable-release for detailed information.
+The stable version of OpenSC is <b>0.12.2</b> ("released on 17.07.2011":http://www.opensc-project.org/pipermail/opensc-announce/2011-May/000034.html) [milestone:0.12.2 milestone]). See [[<b>DownloadRelease</b>|Download-latest-OpenSC-stable-release]] for detailed information.
  * "Source targzip":http://www.opensc-project.org/files/opensc/opensc-0.12.2.tar.gz
  * "Windows (x86) installer":http://www.opensc-project.org/files/opensc/OpenSC-0.12.2-win32.msi (see WindowsInstaller for more information)
  * "Windows (x64) installer":http://www.opensc-project.org/files/opensc/OpenSC-0.12.2-win64.msi
  * "Mac OS X 10.6 and 10.7 installer":http://www.opensc-project.org/files/opensc/OpenSC-0.12.2-10.6.dmg (see MacInstaller for more information)
  * "Mac OS X 10.5 installer":http://www.opensc-project.org/files/opensc/OpenSC-0.12.2-10.5.dmg
 
-Before you  "<b>GetStarted</b>":wiki/Getting-started-with-OpenSC with using OpenSC be sure to check the "<b>SupportedHardware</b>":wiki/Supported-hardware-(smart-cards-and-USB-tokens) list as typical smart cards are incompatible with all other smart cards and come with no public documentation.
+Before you  [[<b>GetStarted</b>|Getting-started-with-OpenSC]] with using OpenSC be sure to check the [[<b>SupportedHardware</b>|Supported-hardware-(smart-cards-and-USB-tokens)]] list as typical smart cards are incompatible with all other smart cards and come with no public documentation.
 
-"<b>DeveloperInformation</b>":wiki/Creating-applications-with-smart-card-support is available for those who want to build smart card capable applications. Developers who want to "<b>GetInvolved</b>":wiki/Getting-involved-in-OpenSC-development with OpenSC are needed as well.
+[[<b>DeveloperInformation</b>|Creating-applications-with-smart-card-support]] is available for those who want to build smart card capable applications. Developers who want to [[<b>GetInvolved</b>|Getting-involved-in-OpenSC-development]] with OpenSC are needed as well.
 
 h2. News
 
- <b>CALL FOR PARTICIPATION: OpenSC will be at "FOSDEM 2012":wiki/OpenSC-@-FOSDEM-2012! </b>
+ <b>CALL FOR PARTICIPATION: OpenSC will be at [[FOSDEM 2012|OpenSC-@-FOSDEM-2012]]! </b>
 ----
- * 04.12.2012: <b>OpenSC 0.13.0</b> is available. "DownloadRelease":wiki/Download-latest-OpenSC-stable-release
- * 14.07.2011: <b>OpenSC 0.12.2</b> is available. "DownloadRelease":wiki/Download-latest-OpenSC-stable-release
+ * 04.12.2012: <b>OpenSC 0.13.0</b> is available. [[DownloadRelease|Download-latest-OpenSC-stable-release]]
+ * 14.07.2011: <b>OpenSC 0.12.2</b> is available. [[DownloadRelease|Download-latest-OpenSC-stable-release]]
  * 09.06.2011: "a talk":http://www.slideshare.net/martinpaljak/opensc-eid-interoperability-through-open-source-software-8255721 covering OpenSC, open source and eID in Europe on EEMA "eID Management Conference":http://www.revolution1.plus.com/eema/index.htm
- * 18.04.2011: OpenSC 0.12.1 is available. "DownloadRelease":wiki/Download-latest-OpenSC-stable-release
- * 14.04.2011: "<b>NightlyBuilds</b>":wiki/Automated-OpenSC-builds are available for Windows and Mac OS X users.
- * 05.02.2011: OpenSC was at "FOSDEM 2011":wiki/OpenSC-@-FOSDEM-2011.
- * 17.12.2010 <b>SECURITY</b>: ("CVE-2010-4523":http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-4523) A rogue smart card, specially crafted for this purpose, can be used to potentially execute arbitrary code if inserted to a local machine. See "SecurityAdvisories":wiki/OpenSC-security-advisories.
+ * 18.04.2011: OpenSC 0.12.1 is available. [[DownloadRelease|Download-latest-OpenSC-stable-release]]
+ * 14.04.2011: [[<b>NightlyBuilds</b>|Automated-OpenSC-builds]] are available for Windows and Mac OS X users.
+ * 05.02.2011: OpenSC was at [[FOSDEM 2011|OpenSC-@-FOSDEM-2011]].
+ * 17.12.2010 <b>SECURITY</b>: ("CVE-2010-4523":http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-4523) A rogue smart card, specially crafted for this purpose, can be used to potentially execute arbitrary code if inserted to a local machine. See [[SecurityAdvisories|OpenSC-security-advisories]].
  * A section with <b>CommercialOffers</b> has been added to the wiki. Companies offering products and services that work with OpenSC can now be found from one place.
 
 h2. Sub-projects
 
 OpenSC effort consists of various sub-projects that can be used independently as well, without OpenSC:
- * "engine_pkcs11":wiki/OpenSSL-engine-for-PKCS%2311-modules is an OpenSSL engine to use PKCS#11 providers, either from command line or from applications
- * "libp11":wiki/libp11-PKCS%2311-wrapper-library is a small C wrapper library for working with PKCS#11 modules.
- * "pkcs11-helper":wiki/pkcs11-helper eases working with PKCS#11 modules, by implementing common tasks.
- * "PAM-PKCS#11":wiki/PAM-PKCS%2311-Login-Tools implements various authentication methods
- * "pam_p11":wiki/pam_p11-simple-RSA-authentication-with-PKCS%2311-modules is a small and simple PAM module for local authentication
+ * [[engine_pkcs11|OpenSSL-engine-for-PKCS#11-modules]] is an OpenSSL engine to use PKCS#11 providers, either from command line or from applications
+ * [[libp11|libp11-PKCS#11-wrapper-library]] is a small C wrapper library for working with PKCS#11 modules.
+ * [[pkcs11-helper|pkcs11-helper]] eases working with PKCS#11 modules, by implementing common tasks.
+ * [[PAM-PKCS#11|PAM-PKCS#11-Login-Tools]] implements various authentication methods
+ * [[pam_p11|pam_p11-simple-RSA-authentication-with-PKCS#11-modules]] is a small and simple PAM module for local authentication
  * "OpenCT":http://www.opensc-project.org/openct implements a reader driver interface for various non-standard readers on Linux, meant to be used with OpenSC.
- * "OpenSC-Java":wiki/Using-smart-cards-with-Java-SE is a Java<->OpenSC bridge?
+ * [[OpenSC-Java|Using-smart-cards-with-Java-SE]] is a Java<->OpenSC bridge?
 
 h2. Quick links
 
@@ -51,4 +51,4 @@ h2. Quick links
 
 h2. Misc
 
- * "build":wiki/OpenSC-Components-Build OpenSC build using cross compiler
+ * [[build|OpenSC-Components-Build]] OpenSC build using cross compiler
