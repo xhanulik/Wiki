@@ -1,6 +1,6 @@
 h1. Development Policy
 
-These small rules for those who "GetInvolved":wiki/Getting-involved-in-OpenSC-development in OpenSC help the project produce consistent and predictable output, if followed. It is not a law set in stone but highly recommended.
+These small rules for those who "<b>GetInvolved</b>":wiki/Getting-involved-in-OpenSC-development in OpenSC help the project produce consistent and predictable output, if followed. It is not a law set in stone but highly recommended.
 
 h2. The credo of OpenSC
 
@@ -43,7 +43,7 @@ h3. Source code quality
 
 h3. Git workflow and versioning
 
- * Git write access is granted to those who GetInvolved with OpenSC development and
+ * Git write access is granted to those who "GetInvolved":wiki/Getting-involved-in-OpenSC-development with OpenSC development and
   * ask for SVN write access, if they feel they have fulfilled the criteria
   * are card driver authors/maintainers
   * have contributed at least 3 meaningful patches that get integrated
@@ -63,7 +63,7 @@ h3. Git workflow and versioning
  * Git rules (see also ReleaseHowto)
   * Have "topic branches":http://progit.org/book/ch3-4.html. If a meaningful change does not fit into a single commit, have a separate branch.
   * Use git rebase --interactive to re-arrange and squash commits as needed.
-  * Do not mix the branch fed to NightlyBuilds machinery with topic branches. NightlyBuilds branches (except for master builds) are <b>supposed</b> to be rebased or deleted as one sees necessary.
+  * Do not mix the branch fed to "NightlyBuilds":wiki/Automated-OpenSC-builds machinery with topic branches. NightlyBuilds branches (except for master builds) are <b>supposed</b> to be rebased or deleted as one sees necessary.
   * Have topic branches.
   * Do not be afraid of (ab)using git rebase -i to re-write commit messages and re-arrange commits into coherent and granular units.
 

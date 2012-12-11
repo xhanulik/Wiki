@@ -1,6 +1,6 @@
 h1. Using smart cards with applications
 
-This is an incomplete list of (mostly open source) <b>end-user applications</b> that are capable of working with smart cards initialized and/or supported by OpenSC, grouped by function. Software development libraries and helpers are listed on DeveloperInformation page. 
+This is an incomplete list of (mostly open source) <b>end-user applications</b> that are capable of working with smart cards initialized and/or supported by OpenSC, grouped by function. Software development libraries and helpers are listed on "DeveloperInformation":wiki/Creating-applications-with-smart-card-support page. 
 
 h2. Connection authentication + encryption
 

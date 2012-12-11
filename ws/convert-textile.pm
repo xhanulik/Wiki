@@ -130,11 +130,19 @@ while(<MYINPUTFILE>)   {
             my $basename = get_outfile_basename($1);
             if (defined $basename)   {
                 $basename =~ s|#|%23|g;
-                $line =~ s|<b>($expand_name)</b>|\"$1\":wiki/$basename|;
+                $line =~ s|<b>($expand_name)</b>|\"<b>$1</b>\":wiki/$basename|;
+            }
+        }
+        elsif ($line =~ m|($expand_name)|)   {
+            my $basename = get_outfile_basename($1);
+            if (defined $basename)   {
+                $basename =~ s|#|%23|g;
+                $line =~ s|($expand_name)|\"$1\":wiki/$basename|;
             }
         }
     } ("GetStarted", "SupportedHardware", "GetInvolved", "DeveloperInformation",
-            "FrequentlyAskedQuestions", "SecurityAdvisories", "DownloadRelease");
+            "FrequentlyAskedQuestions", "SecurityAdvisories", "DownloadRelease", 
+            "CommercialOffer", "NightlyBuilds", "OpenSC 0.12.2", "OpenSC 0.13.0");
 
     if ($line =~ m|\[wiki:(\S+)\s*\]\w|)   {
         my $basename = get_outfile_basename($1);

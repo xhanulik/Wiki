@@ -119,7 +119,7 @@ h2. Documentation
 
 h2. Contact
 
-GetInvolved in development! All comments, suggestions and bug reports are welcome. 
+"GetInvolved":wiki/Getting-involved-in-OpenSC-development in development! All comments, suggestions and bug reports are welcome. 
 
   * [mailto:opensc-devel@lists.opensc-project.org OpenSC developer list opensc-devel@lists.opensc-project.org]
 

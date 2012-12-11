@@ -16,7 +16,7 @@ cd OpenSC
 scp -p -P 8882 www.opensc-project.org:hooks/commit-msg .git/hooks/
  </code></pre>
 
-Individual developers also have their own Github trees, NightlyBuilds lists ones that you can get binaries from and GetInvolved lists all known active developers.
+Individual developers also have their own Github trees, "NightlyBuilds":wiki/Automated-OpenSC-builds lists ones that you can get binaries from and "GetInvolved":wiki/Getting-involved-in-OpenSC-development lists all known active developers.
 
 h2. Source code style and recommendations
 

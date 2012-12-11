@@ -9,4 +9,4 @@ h1. Commercial offers
 
 h2. Where to buy smart cards
 
- * See "Not found: text(FrequentlyAskedQuestions) link(FrequentlyAskedQuestions#Q:WherecanIbuysmartcards)":wiki/FrequentlyAskedQuestions#Q:WherecanIbuysmartcards
+ * See "Not found: text("FrequentlyAskedQuestions":wiki/Frequently-Asked-Questions) link(FrequentlyAskedQuestions#Q:WherecanIbuysmartcards)":wiki/FrequentlyAskedQuestions#Q:WherecanIbuysmartcards

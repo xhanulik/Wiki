@@ -1,6 +1,6 @@
 h1. Overview
 
-<b>Attention! Information on this page might be outdated or misleading. If in doubt, ask on [MailingLists opensc-devel mailing list]. Update to the wiki is work in progress. See FrequentlyAskedQuestions and DeveloperInformation for now.</b>
+<b>Attention! Information on this page might be outdated or misleading. If in doubt, ask on [MailingLists opensc-devel mailing list]. Update to the wiki is work in progress. See "FrequentlyAskedQuestions":wiki/Frequently-Asked-Questions and "DeveloperInformation":wiki/Creating-applications-with-smart-card-support for now.</b>
 
 So you want to use a smart card with some application? Here is a small introductions on the parts you need.
  * Application

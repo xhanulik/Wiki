@@ -27,7 +27,7 @@ Each entry on this list possibly represents a whole family of tokens. See each p
 
 [[ListTagged(usbtoken supported)]]
 
-<b>Did not find your card from the supported card list?</b> See FrequentlyAskedQuestions for next steps.
+<b>Did not find your card from the supported card list?</b> See "FrequentlyAskedQuestions":wiki/Frequently-Asked-Questions for next steps.
 
 h2. Unsupported hardware
 

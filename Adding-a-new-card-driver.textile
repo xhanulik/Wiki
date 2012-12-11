@@ -18,4 +18,4 @@ PKCS#15 driver hookup
 
 h1. Examples
 
-* "entersafe":https://www.opensc-project.org/opensc/wiki/DeveloperInformation/NewCardDriver/EnterSafeExample
+* "entersafe":https://www.opensc-project.org/opensc/wiki/"DeveloperInformation":wiki/Creating-applications-with-smart-card-support/NewCardDriver/EnterSafeExample

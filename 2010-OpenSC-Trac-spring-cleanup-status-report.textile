@@ -30,9 +30,9 @@ h2. Main page -> wiki status
 
 Current web:
  * About - Needs to be merged as a foreword to the project list. IMPROVE
- * FAQ - obsolete, new skeleton available in wiki: FrequentlyAskedQuestions DONE
+ * FAQ - obsolete, new skeleton available in wiki: "FrequentlyAskedQuestions":wiki/Frequently-Asked-Questions DONE
  * History - must be moved to wik DONE: ProjectHistory
- * Contacts - not needed, available on wiki GetInvolved DONE
+ * Contacts - not needed, available on wiki "GetInvolved":wiki/Getting-involved-in-OpenSC-development DONE
  * Projects - must be transferred to the wiki DONE
- * Security - must be transferred to the wiki DONE: SecurityAdvisories
+ * Security - must be transferred to the wiki DONE: "SecurityAdvisories":wiki/OpenSC-security-advisories
 

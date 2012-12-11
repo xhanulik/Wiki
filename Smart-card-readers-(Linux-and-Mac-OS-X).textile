@@ -2,7 +2,7 @@ h1. Smart card readers (Linux and Mac OS X)
 
 OpenSC targets smart cards, not smart card readers. So to use your smart card, you need a working smart card reader first. 
 
-OpenSC is supposed to work with any supported smart card (see SupportedHardware for a list) if you have a driver for your card reader or USB token. If you're unsure, you need a PC/SC driver, which 99.9% of vendors provide for at least Windows platform. CT-API drivers are also supported (only if required and a driver is available from reader vendor, CT-API is a deprecated interface) and OpenCT (on Linux/BSD, if the reader or token does not work with pcsc-lite).
+OpenSC is supposed to work with any supported smart card (see "SupportedHardware":wiki/Supported-hardware-(smart-cards-and-USB-tokens) for a list) if you have a driver for your card reader or USB token. If you're unsure, you need a PC/SC driver, which 99.9% of vendors provide for at least Windows platform. CT-API drivers are also supported (only if required and a driver is available from reader vendor, CT-API is a deprecated interface) and OpenCT (on Linux/BSD, if the reader or token does not work with pcsc-lite).
 
 h2. USB
 
