@@ -10,7 +10,11 @@ The main difference between "native" cards and JavaCards is the requirement to i
 
 
 List of applets OpenSC supports (can be read-only and locked cards):
-[[ListTagged(supported javacard applet)]]
+ * [[<b>SmartCardHsm</b>|SmartCardHSM]]
+ * [[<b>MyEID</b>|Aventra-MyEID-PKI-card]]
+ * [[<b>Oberthur</b>|Oberthur-AuthentIC-applet-v2.2]]
+ * [[<b>MuscleApplet</b>|Muscle-applet]]
+
 
 h2.  Supported cards
 

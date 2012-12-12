@@ -5,6 +5,7 @@ use strict;
 use warnings;
 
 use File::Basename;
+use Data::Dumper;
 
 die "Needs input and output file names"
 	unless $#ARGV ge 0;
@@ -63,13 +64,89 @@ while(<MYINPUTFILE>)   {
     $line =~ s|==== (.*) ====|h4. $1|g;
     $line =~ s|=== (.*) ===|h3. $1|g;
     $line =~ s|== (.*) ==|h2. $1|g;
-    $line =~ s|= (.*) =|h1. $1|g;
+    $line =~ s|^\s*= (.*) =|h1. $1|g;
     $line =~ s|!#|#|g;
+    $line =~ s|\[\[BR\]\]|<br />|ig;
 
     print MYOUTPUTFILE "\n"
 	    if (($prev_line =~ m|^h[1-9].\s+\S|) and ($line =~ m|\w|));
 
     $line =~ s|\s!(\w+)| $1|g;
+
+    # [[ListTagged(card supported -readonly)]]
+    if ($line =~ m|^\[\[ListTagged\(([^\)]+)\)\]\]|)   {
+        my @rules = split(' ',$1);
+        my $tags_file = "opensc-trac-tags-by-tag.txt";
+        my %pages = ();
+        if (open(TAGSFILE, "<$tags_file"))   {
+            my @tags = <TAGSFILE>;
+            close (TAGSFILE);
+            if ($rules[0] =~ m/^[^-][a-zA-Z0-9]+$/)   {
+                map {
+                    if (m/^\s+([a-zA-Z0-9\-]+)\s+\|\s+([a-zA-Z0-9\-\/]+)\s*$/)   {
+                        $pages{$2} = 1
+                            if ($rules[0] eq $1)
+                    }
+                } (@tags);
+            }
+            shift(@rules);
+
+            map {
+                my $rule = $_;
+                if ($rule =~ m/^[^-][a-zA-Z0-9]+$/)   {
+                    my %pgs = ();
+                    map {
+                        if (m/^\s+([a-zA-Z0-9\-]+)\s+\|\s+([a-zA-Z0-9\-\/]+)\s*$/)   {
+                            $pgs{$2} = 1
+                                if ($rule eq $1)
+                        }
+                    } (@tags);
+
+                    my %new_pages = ();
+                    map   {
+                        my $key = $_;
+                        $new_pages{$key} = 1
+                            if ($pgs{$key});
+                    } (keys %pages);
+
+                   %pages = %new_pages;
+                }
+                elsif ($rule =~ m/^[-]([a-zA-Z0-9]+)$/)   {
+                    my $rule = $1;
+                    my %pgs = ();
+                    map {
+                        if (m/^\s+([a-zA-Z0-9\-]+)\s+\|\s+([a-zA-Z0-9\-\/]+)\s*$/)   {
+                            delete $pages{$2}
+                                if ($rule eq $1);
+                        }
+                    } (@tags);
+                }
+            } (@rules);
+
+            map   {
+                my $key = $_;
+                my $basename = get_outfile_basename($key);
+                my $ln;
+                if (defined $basename)   {
+                    $ln = " * [[<b>$key</b>|$basename]]\n";
+                }
+                else   {
+                    $ln = " * [[<b>$key</b>|$key]]\n";
+                }
+                print MYOUTPUTFILE $ln;
+            } (keys %pages);
+
+            if ((scalar keys %pages) == 0)   {
+                $line =~ s/\r//g;
+                print MYOUTPUTFILE $line
+            }
+            else   {
+                print MYOUTPUTFILE "\n";
+            }
+        }
+
+        next;
+    }
 
     # [http://www.ietf.org/rfc/rfc2119.txt RFC2119]
     # [RFC2119](http://www.ietf.org/rfc/rfc2119.txt)
@@ -116,11 +193,11 @@ while(<MYINPUTFILE>)   {
     if ($line =~ m|\[wiki:(\S+)\s+([^\]]*)\]|)   {
         my $basename = get_outfile_basename($1);
         if (defined $basename)   {
-            $basename =~ s|#|%23|g;
-            $line =~ s|\[wiki:(\S+)\s+([^\]]*)\]|\"$2\":wiki/$basename|;
+            #$basename =~ s|#|%23|g;
+            $line =~ s|\[wiki:(\S+)\s+([^\]]*)\]|\[\[$2\|$basename\]\]|;
         }
         else   {
-            $line =~ s|\[wiki:(\S+)\s+([^\]]*)\]|"Not found: text($2) link($1)":wiki/$1|;
+            $line =~ s|\[wiki:(\S+)\s+([^\]]*)\]|\[\[$2\|$1\]\]|;
         }
     }
 
@@ -129,40 +206,29 @@ while(<MYINPUTFILE>)   {
         if ($line =~ m|<b>($expand_name)</b>|)   {
             my $basename = get_outfile_basename($1);
             if (defined $basename)   {
-                $basename =~ s|#|%23|g;
-                $line =~ s|<b>($expand_name)</b>|\"<b>$1</b>\":wiki/$basename|;
+                #$basename =~ s|#|%23|g;
+                $line =~ s|<b>($expand_name)</b>|\[\[<b>$1</b>\|$basename\]\]|;
             }
         }
         elsif ($line =~ m|($expand_name)|)   {
             my $basename = get_outfile_basename($1);
             if (defined $basename)   {
-                $basename =~ s|#|%23|g;
-                $line =~ s|($expand_name)|\"$1\":wiki/$basename|;
+                #$basename =~ s|#|%23|g;
+                $line =~ s|($expand_name)|\[\[$1\|$basename\]\]|;
             }
         }
     } ("GetStarted", "SupportedHardware", "GetInvolved", "DeveloperInformation",
-            "FrequentlyAskedQuestions", "SecurityAdvisories", "DownloadRelease", 
+            "FrequentlyAskedQuestions", "SecurityAdvisories", "DownloadRelease",
             "CommercialOffer", "NightlyBuilds", "OpenSC 0.12.2", "OpenSC 0.13.0");
-
-    if ($line =~ m|\[wiki:(\S+)\s*\]\w|)   {
-        my $basename = get_outfile_basename($1);
-        if (defined $basename)   {
-            $basename =~ s|#|%23|g;
-            $line =~ s|\[wiki:(\S+)\s*\](\w*)|\"$basename\":wiki/$basename\n$2|;
-        }
-        else   {
-            $line =~ s|\[wiki:(\S+)\s*\]|"Not found: link($1)":wiki/$1|;
-        }
-    }
 
     if ($line =~ m|\[wiki:(\S+)\s*\]|)   {
         my $basename = get_outfile_basename($1);
         if (defined $basename)   {
-            $basename =~ s|#|%23|g;
-            $line =~ s|\[wiki:(\S+)\s*\]|\"$basename\":wiki/$basename|;
+            #$basename =~ s|#|%23|g;
+            $line =~ s|\[wiki:(\S+)\s*\]|\[\[$basename\|$basename\]\]|;
         }
         else   {
-            $line =~ s|\[wiki:(\S+)\s*\]|"Not found: link($1)":wiki/$1|;
+            $line =~ s|\[wiki:(\S+)\s*\]|\[\[$1\|$1\]\]|;
         }
     }
 
