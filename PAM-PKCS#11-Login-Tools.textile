@@ -2,11 +2,6 @@ h1. PAM-PKCS#11 Login Tools
 
 !attachments/wiki/pam_pkcs11/pam-pkcs11.png(pam_pkcs11)!
 
-<pre><code>#!html
-<a href="http://flattr.com/thing/77314/PAM-PKCS11" target="_blank">
-<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
-</code></pre>
-
 h2. Description
 
 This Linux-PAM login module allows a X.509 certificate based user login. The certificate and its dedicated private key are thereby accessed by means of an appropriate PKCS #11 module. For the verification of the users' certificates, locally stored CA certificates as well as either online or locally accessible CRLs are used.
