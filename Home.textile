@@ -2,7 +2,7 @@ h2. OpenSC - tools and libraries for smart cards
 
 OpenSC provides a set of libraries and utilities to work with smart cards. Its main focus is on cards that support cryptographic operations, and facilitate their use in security applications such as authentication, mail encryption and digital signatures. OpenSC implements the <b>"PKCS#11 API":http://www.rsa.com/rsalabs/node.asp?id=2133</b> so applications supporting this API (such as Mozilla Firefox and Thunderbird) can use it. On the card OpenSC implements the "PKCS#15":http://www.rsa.com/rsalabs/node.asp?id=2141 standard and aims to be compatible with every software/card that does so, too. 
 
-OpenSC is written by an international team of volunteers and is licensed as "Open Source":http://www.opensource.org/ software under the  "LGPL license":http://www.opensource.org/licenses/lgpl-license.php version 2.1 of the License, or (at your option) any later version. For a list of all authors and contributors as well as detailed license information see AuthorsAndCredits.
+OpenSC is written by an international team of volunteers and is licensed as "Open Source":http://www.opensource.org/ software under the  "LGPL license":http://www.opensource.org/licenses/lgpl-license.php version 2.1 of the License, or (at your option) any later version. For a list of all authors and contributors as well as detailed license information see [[OpenSC-Credits|OpenSC-Credits]].
 
 If you are new to smart cards, see OverView and [[<b>FrequentlyAskedQuestions</b>|Frequently-Asked-Questions]] pages. Always check [[<b>SecurityAdvisories</b>|OpenSC-security-advisories]].
 
