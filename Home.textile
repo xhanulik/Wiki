@@ -48,6 +48,7 @@ h2. Quick links
 
  * "Download":http://www.opensc-project.org/files
  * ApplicationSupport - list of applications with smart card support
+ * "OpenSC Services":OpenSC-Services
 
 h2. Misc
 
