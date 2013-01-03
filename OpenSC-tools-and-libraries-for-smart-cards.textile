@@ -39,7 +39,7 @@ OpenSC effort consists of various sub-projects that can be used independently as
  * [[engine_pkcs11|OpenSSL-engine-for-PKCS#11-modules]] is an OpenSSL engine to use PKCS#11 providers, either from command line or from applications
  * [[libp11|libp11-PKCS#11-wrapper-library]] is a small C wrapper library for working with PKCS#11 modules.
  * [[pkcs11-helper|pkcs11-helper]] eases working with PKCS#11 modules, by implementing common tasks.
- * [[PAM-PKCS#11|PAM-PKCS#11-Login-Tools]] implements various authentication methods
+ * "PAM-PKCS#11":https://github.com/OpenSC/pam_pkcs11/wiki implements various authentication methods
  * [[pam_p11|pam_p11-simple-RSA-authentication-with-PKCS#11-modules]] is a small and simple PAM module for local authentication
  * "OpenCT":http://www.opensc-project.org/openct implements a reader driver interface for various non-standard readers on Linux, meant to be used with OpenSC.
  * [[OpenSC-Java|Using-smart-cards-with-Java-SE]] is a Java<->OpenSC bridge?
