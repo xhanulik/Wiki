@@ -1,6 +1,6 @@
 h1. Pam Modules
 
-<b>Moved to ApplicationSupport</b>
+<b>Moved to [[ApplicationSupport|Using-smart-cards-with-applications]]</b>
 
 OpenSC up to 0.9.6 included its own pam module pam_opensc.
 This module was removed in OpenSC 0.10.0.
