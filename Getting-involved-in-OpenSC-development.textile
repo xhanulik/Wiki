@@ -40,9 +40,6 @@ Current developers/maintainers with activity in Github, in alphabetical order:
  * Jean-Pierre Szikora ("Github":https://github.com/szikora/OpenSC)
  * Juan Antonio Martinez ("Github":https://github.com/jonsito/OpenSC)
  * Ludovic Rousseau ("Github":https://github.com/LudovicRousseau/OpenSC)
-<pre><code>#!html <a href="http://flattr.com/thing/51920/My-web-site" target="_blank">
-<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
-</code></pre>
  * Martin Paljak ("Github":https://github.com/martinpaljak/OpenSC)
  * Pace Willisson ("Github":https://github.com/pacew/OpenSC)
  * Peter Marschall ("Github":https://github.com/marschap/OpenSC)
