@@ -1,16 +1,11 @@
 h1. Quick Start with OpenSC
 
-If you haven't already, please first take a look at our OverView page, the
-OperatingSystems page and the CompilingInstalling page. 
+If you haven't already, please first take a look at our [[Overview|Overview]] page, the [[Operating Systems|Recent-test-results-for-various-smart-cards]] page and the [[Compiling and Installing on Unix flavors|Compiling-and-Installing-OpenSC-on-Unix-flavors]] page. 
 
 
 h2. Before we start...
 
-A word of warning: these experiments can destroy your card (e.g. if we
-have a bug. there is <b>_NO WARRANTY_</b> on opensc of any kind).  Also
-be sure to make notes of everything you do, <i>especially</i> the pin and
-puk and so-pin and so-puk you set, as it is not possible to erase some
-cards without these!
+A word of warning: these experiments can destroy your card (e.g. if we have a bug. there is <b>_NO WARRANTY_</b> on opensc of any kind).  Also be sure to make notes of everything you do, <i>especially</i> the pin and puk and so-pin and so-puk you set, as it is not possible to erase some cards without these!
 
 h2. Install the required middleware
 
@@ -37,53 +32,33 @@ Nr.    Driver     Name
 4      openct     OpenCT reader (detached)
 </code></pre>
 
-You can see, openct claims five slots, but only two are used.
-This is done to support hotplugging, those slots can be filled
-later by additional readers you plugin via usb.
+You can see, openct claims five slots, but only two are used. This is done to support hotplugging, those slots can be filled later by additional readers you plugin via usb.
 
-Next test is to see if your card is found. Every card has a so
-called ATR ("Answer to reset"), a hex string used for identifying
-the card type.
+Next test is to see if your card is found. Every card has a so called ATR ("Answer to reset"), a hex string used for identifying the card type.
 <pre><code>$ opensc-tool --reader 0 --atr
 3b:e2:00:ff:c1:10:31:fe:55:c8:02:9c
 </code></pre>
 
-Lets see if that card is supported by OpenSC. If so, we should
-know the name of the card:
+Lets see if that card is supported by OpenSC. If so, we should know the name of the card:
 <pre><code>$ opensc-tool --reader 0 --name
 Cryptoflex 32K e-gate
 </code></pre>
 
-OpenSC has a small low level tool for exploring your smart card.
-This is useful if you have a new card and want to look at it,
-or check some details.
+OpenSC has a small low level tool for exploring your smart card. This is useful if you have a new card and want to look at it, or check some details.
 <pre><code>$ opensc-explorer
 </code></pre>
 
-However opensc-explorer only works with known cards and 
-even then: some cards don't have then required functionality,
-for example no "ls" command.
+However opensc-explorer only works with known cards and even then: some cards don't have then required functionality, for example no "ls" command.
 
 h1. Quick start guide to initializing a blank card
 
-The best way to use all features of OpenSC is to start
-with a blank card and initialize it with OpenSC. Make sure
-your vendor sold you a real blank card, many vendors
-also have pre-initialized cards, and those only work
-with the vendors software, but not or only limited with
-OpenSC.
+The best way to use all features of OpenSC is to start with a blank card and initialize it with OpenSC. Make sure your vendor sold you a real blank card, many vendors also have pre-initialized cards, and those only work with the vendors software, but not or only limited with OpenSC.
 
-<b></b>Warning: <b></b>before writing any data on the token please
-read the smartcard os specific wiki pages as some smartcards cannot be
-deleted once initialized.
+<b></b>Warning: <b></b>before writing any data on the token please read the smartcard os specific wiki pages as some smartcards cannot be deleted once initialized.
 
-You can add "-v" to all of these commands, to get a more verbose
-output. Adding "-v" more than once will enable debugging or increase
-the debugging level.
+You can add "-v" to all of these commands, to get a more verbose output. Adding "-v" more than once will enable debugging or increase the debugging level.
 
-First you need to create the basic structure. At this step you are
-asked to enter a "security office" pin. Only with this pin you can
-alter the card, but that pin is not needed to use the keys.
+First you need to create the basic structure. At this step you are asked to enter a "security office" pin. Only with this pin you can alter the card, but that pin is not needed to use the keys.
 <pre><code>$ pkcs15-init --create-pkcs15
 New Security Officer PIN (Optional - press return for no PIN).
 Please enter Security Officer PIN: 
@@ -93,8 +68,7 @@ Please enter User unblocking PIN (PUK):
 Please type again to verify: 
 </code></pre>
 
-Next step is to create a user and a pin. That pin is needed for
-using the keys we will create later.
+Next step is to create a user and a pin. That pin is needed for using the keys we will create later.
 <pre><code>$ pkcs15-init --store-pin --auth-id 01 --label "Andreas Jellinghaus"
 New User PIN.
 Please enter User PIN: 
@@ -191,13 +165,9 @@ This creates a signed certificate as file `cert.pem` (again, without divulging t
 cert.pem: OK
 </code></pre>
 
-If instead you remove the "-x509" flag in the `req` OpenSSL command, you get a certificate signing request.  Send it to the CA, wait till you get it back, signed, and
-proceed.
+If instead you remove the "-x509" flag in the `req` OpenSSL command, you get a certificate signing request. Send it to the CA, wait till you get it back, signed, and proceed.
 
-Now we can store the certificate side by side with the key on the
-token, as a piece of public (but read-only) data. It is important to
-save the certificate under the same ID as the key, so that applications wanting to use that certificate on your behalf can find the private key as well. You can get a list
-of all keys and their details (including the ID) with:
+Now we can store the certificate side by side with the key on the token, as a piece of public (but read-only) data. It is important to save the certificate under the same ID as the key, so that applications wanting to use that certificate on your behalf can find the private key as well. You can get a list of all keys and their details (including the ID) with:
 <pre><code>$ pkcs15-tool --list-keys
 Private RSA Key [Private Key]
         Com. Flags  : 3
@@ -217,26 +187,16 @@ Security officer PIN required.
 Please enter Security officer PIN: 
 </code></pre>
 
-Now we are ready to go. If you want to add more certificates (e.g. the root
-certificate of the CA that signed your key, or some intermediate certificates
-in the chain to the root CA) simply put those into pem files, and add them
-to id 46, 47 and so on.  You don't need the private key for these obviously.
+Now we are ready to go. If you want to add more certificates (e.g. the root certificate of the CA that signed your key, or some intermediate certificates in the chain to the root CA) simply put those into pem files, and add them to id 46, 47 and so on.  You don't need the private key for these obviously.
 
 h1. Now what?
 
-You probably want to make your token work with other applications than
-`pkcs15-init` and OpenSSL: see [WikiStart#ApplicationSupport Application Support] on the main page.
+You probably want to make your token work with other applications than `pkcs15-init` and OpenSSL: see [[Application Support|Using-smart-cards-with-applications]].
 
-If you want to login to your computer with your smart card or crypto
-token, please note that OpenSC 0.10 does not include the pam module
-and the openssl engine any more. We suggest you install
-"libp11":http://www.opensc-project.org/libp11/,
-"engine_pkcs11":http://www.opensc-project.org/engine_pkcs11/ and one
-of "pam_p11":http://www.opensc-project.org/pam_p11/ (a simple
-authentication module) or "pam_pkcs11":http://www.opensc-project.org/pam_pkcs11/ (a full featured authentication module).
+If you want to login to your computer with your smart card or crypto token, please note that OpenSC 0.10 does not include the pam module and the openssl engine any more. We suggest you install
+"libp11":http://www.opensc-project.org/libp11/, "engine_pkcs11":http://www.opensc-project.org/engine_pkcs11/ and one of "pam_p11":http://www.opensc-project.org/pam_p11/ (a simple authentication module) or pam_pkcs11":http://www.opensc-project.org/pam_pkcs11/ (a full featured authentication module).
 
 h1. Links
 
   * "Gooze Quickstarter Guide, smartcard initialization":http://www.gooze.eu/howto/smartcard-quickstarter-guide/smart-card-initialization
   * "eToken PRO initial setup tutorial":http://daniel.benoy.name/?p=76
-
