@@ -44,10 +44,8 @@ h3. Source code quality
 h3. Git workflow and versioning
 
  * Git write access is granted to those who [[GetInvolved|Getting-involved-in-OpenSC-development]] with OpenSC development and
-  * ask for SVN write access, if they feel they have fulfilled the criteria
   * are card driver authors/maintainers
   * have contributed at least 3 meaningful patches that get integrated
-  * Gerrit submit access is revoked after 12 months (1 year) of inactivity
   * <i>"CVS is not a substitute for developer communication"</i> applies to Git as well.
   * People with write access have the moral responsibility to follow (and double-check) the opensc-commits list and make the best effort to follow the rest of this small policy.
   * Food for thought: "http://alexgaynor.net/2010/feb/25/committer-models-unladen-swallow-pypy-and-django/":http://alexgaynor.net/2010/feb/25/committer-models-unladen-swallow-pypy-and-django/
