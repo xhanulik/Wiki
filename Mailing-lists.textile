@@ -1,17 +1,17 @@
 h1. Mailing lists
 
- * <b>"opensc-devel":http://www.opensc-project.org/mailman/listinfo/opensc-devel</b> ("archive":http://www.opensc-project.org/pipermail/opensc-devel/) ("Gmane":http://dir.gmane.org/gmane.comp.encryption.opensc.devel)- discussion of developement of OpenSC and related projects.
- * "opensc-annouce":http://www.opensc-project.org/mailman/listinfo/opensc-announce ("archive":http://www.opensc-project.org/pipermail/opensc-announce/) ("Gmane":http://dir.gmane.org/gmane.comp.encryption.opensc.announce) - announcements of new releases, bugfixes and security warnings. Low volume.
- * "opensc-commits":http://www.opensc-project.org/mailman/listinfo/opensc-commits ("archive":http://www.opensc-project.org/pipermail/opensc-commits/) - commit notifications for all projects hosted at opensc-project.org. For developers.
+ * <b>"opensc-devel":https://lists.sourceforge.net/lists/listinfo/opensc-devel</b> ("Gmane archive":http://dir.gmane.org/gmane.comp.encryption.opensc.devel)- discussion of developement of OpenSC and related projects.
+ * "opensc-annouce":https://lists.sourceforge.net/lists/listinfo/opensc-announce ("Gmane archive":http://dir.gmane.org/gmane.comp.encryption.opensc.announce) - announcements of new releases, bugfixes and security warnings. Low volume.
+ * "opensc-commits":https://lists.sourceforge.net/lists/listinfo/opensc-commits - commit notifications for all projects hosted at "https://github.com/OpenSC":https://github.com/OpenSC. For developers.
 
-To subscribe, unsubscribe or browse the archives, please visit our "mailing list manager":http://www.opensc-project.org/cgi-bin/mailman/listinfo.
+To subscribe, unsubscribe or browse the archives, please visit our "mailing list manager":http://sourceforge.net/p/opensc/mailman/.
 
 <b>NB! You need to be subscribed before posting to any of the above lists! </b>
 
 Please:
  * Do not send carbon copies to the developers. We read all postings on the mailing list.
  * Do not mail developers directly, we read all the mailing lists and the bugs address.
- * Read about <b>ReportingBugs</b> before sending your e-mail.
+ * Read about <b>"ReportingBugs":How-to-report-bugs-so-that-they-can-be-fixed</b> before sending your e-mail.
 
 Read why "privately asking developers":http://www.eyrie.org/~eagle/faqs/questions.html is no good.
 
@@ -21,17 +21,8 @@ reviewed it. This is an emergency procedure only, subscription is assumed.
 
 h2. Bug reports
 
-Please file bug reports using the [/newticket new ticket] link (after reading about ReportingBugs)
-
-Alternatively you can send (sensitive or security related) bug reports to [mailto:bugs@opensc-project.org bugs@opensc-project.org] via email.
-
-h2. Greylisting
-
-The opensc-project.org and lists.opensc-project.org mail servers are protected from spam by using a mechanism
-called greylisting. Usualy this only causes a short delay for the first mail we receive from
-you, and no trouble at all. Still if for whatever reason you cannot send mail to opensc-project.org,
-please contact Andreas Jellinghaus at aj@dungeon.inka.de. Thanks.
+Please file bug reports using the "Issues":https://github.com/OpenSC/OpenSC/issues link (after reading about "ReportingBugs":How-to-report-bugs-so-that-they-can-be-fixed)
 
 h2. Old lists
 
- *  (<b>deprecated</b>) opensc-user ("archive":http://www.opensc-project.org/pipermail/opensc-user/) ("Gmane":http://dir.gmane.org/gmane.comp.encryption.opensc.user) - discussion of end-user questions for OpenSC and related projects. 
+ *  (<b>deprecated</b>) opensc-user ("Gmane":http://dir.gmane.org/gmane.comp.encryption.opensc.user) - discussion of end-user questions for OpenSC and related projects. 
