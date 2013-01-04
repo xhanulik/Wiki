@@ -10,6 +10,7 @@ h1. Authors and License
 wrote engine_pkcs11, contributed or their code from other projects was reused.
 
 _engine_pkcs11_ has the following license:
+
 <pre><code> * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
  * are met:
@@ -34,6 +35,7 @@ _engine_pkcs11_ has the following license:
 The "Open Source Initiative":http://www.opensource.org/ has accepted this license as Open Source (it is a variant of the "New BSD license":http://www.opensource.org/licenses/bsd-license.php).
 
 _engine_pkcs11_ includes svn2cl:
+
 <pre><code>   Copyright (C) 2004, 2005 Arthur de Jong.
 
    Redistribution and use in source and binary forms, with or without
