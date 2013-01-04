@@ -23,7 +23,7 @@ cd OpenSC
  * Read "latest commits":https://github.com/OpenSC/OpenSC/commits/master.
  * To start coding, create a "Github":https://github.com account. Creating an account with one project is free. Upload your public ssh keys.
  * Visit "OpenSC Github project":https://github.com/OpenSC/OpenSC and click on Fork to create your own OpenSC repository. Majors features should have their own branch. Bug fixes should go to the Staging branch. 
- * To propose a commit, make a pull request to the main OpenSC "staging":https://github.com/OpenSC/OpenSC/tree/staging repository. 
+ * To propose a commit, make a pull request to the main OpenSC "master":https://github.com/OpenSC/OpenSC/tree/master repository. 
  * Advertise your pull request. Pull requests are discussed and applied by github core developers.
 
 h2. Helper tools
