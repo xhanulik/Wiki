@@ -36,7 +36,7 @@ h2. The Team
 
 Current developers/maintainers with activity in Github, in alphabetical order:
  * Emanuele Pucciarelli ("Github":https://github.com/puccia/OpenSC)
- * Feitian team ("https://github.com/entersafe":https://github.com/entersafe)
+ * Feitian team ("Github":https://github.com/entersafe)
  * Jean-Pierre Szikora ("Github":https://github.com/szikora/OpenSC)
  * Juan Antonio Martinez ("Github":https://github.com/jonsito/OpenSC)
  * Ludovic Rousseau ("Github":https://github.com/LudovicRousseau/OpenSC)
