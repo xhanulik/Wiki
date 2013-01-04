@@ -58,7 +58,7 @@ Developers/maintainers with established SVN write access are, in alphabetical or
  
 
 The Emeritus of the OpenSC developer team as well as project chronology is listed on ProjectHistory.<br />
-List of all people who have sent patches to OpenSC is available under <b>AuthorsAndCredits</b>.
+List of all people who have sent patches to OpenSC is available under <b>"AuthorsAndCredits":OpenSC-Credits</b>.
 
 h2. All links
 
