@@ -26,6 +26,29 @@ cd OpenSC
  * To propose a commit, make a pull request to the main OpenSC "master":https://github.com/OpenSC/OpenSC/tree/master repository. 
  * Advertise your pull request. Pull requests are discussed and applied by github core developers.
 
+h2. Pull Requests
+
+The github pull requests (PR) to "OpenSC/OpenSC":https://github.com/OpenSC/OpenSC/pulls are/can-be checked automatically for building on Ubuntu and Vista. At the moment this feature is installed to help the contributors to reveal the compilation errors on the platforms that they do not used to manage (mostly Windows).
+
+Some restrictions in permissions to run the build on the PR's merged repository are due to the implementation of jenkins plugin "Github pull request builder":https://wiki.jenkins-ci.org/display/JENKINS/Github+pull+request+builder+plugin:
+* PRs from the github OpenSC organization members are built automatically, these members are 'admins';
+* PRs from the users present in the CI internal 'whitelist' are built automatically;
+* for the PRs from the other contributors jenkins CI adds the PR comment "Can one of the admins verify this patch?" to attract the attention of 'admins';
+* using the codified comments to PR, 'admins' can add user to the 'whitelist' or (re)run the test;
+
+Codified messages:
+* "*ok to test*" -- authorization to run the test on merged repository;
+* "*add to whitelist*" -- add user to whitelist;
+
+h3. Examples
+
+"PR-#97":https://github.com/OpenSC/OpenSC/pull/97:
+* pull request fails the build of merged repository on windows-32;
+* user 'mtausig' is added by 'admin' to internal CI 'whitelist', so that, the next PRs or updates of existing PRs from 'mtausig' will be built automatically.
+
+"PR-#102":https://github.com/OpenSC/OpenSC/pull/102:
+* successful built of the merged repository.
+
 h2. Helper tools
 
  * To test/debug special hardware (smartcard/token), please open an account on OpenSC development server (information coming soon). The development server offers nearly all supported hardware, so you don't have to buy it. "Donation of free hardware":Donation-of-free-Hardware is also possible.
