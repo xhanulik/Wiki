@@ -6,6 +6,8 @@ The card material is PVC as standard, making it suitable for visual personalisat
 
 The cards can be personalised both visually and electrically by Aventra according to customer specifications, or the customers can personalise the cards themselves using ActivePerso Manager developed by Aventra, or software from other parties. 
 
+*NEW:* MyEID is certified by Microsoft and supports Smart Card Plug and Play.
+
 h2. Aventra MyEID PKI applet
 
 The MyEID applet implements all the basic functionality of a Public Key Infrastructure (PKI) token specified in the most common international PKI standards, such as PKCS#15. Users optionally have a choice between different authentication methods to the token. Besides the standard PIN number, there are currently two other authentication mechanisms available. The GrIDsure® one time PIN is based on a pop-up challenge grid that is used to form a onetime PIN that cannot be used by outsiders watching the authentication. MyEID tokens are also compatible with PalmSecure™ biometric technology, which is based on the unique blood vein patterns in the palm of the user’s hand replacing the PIN.
@@ -29,6 +31,7 @@ h3. Technical details
 
 <b>Compatible software</b>
  * OpenSC
+ * Aventra MyEID Minidriver for Windows
  * Aventra ActiveSecurity™ MyClient
  * Fujitsu mPollux DigiSign™ middleware
  * Large number of third party software products that support CSP for Microsoft™ CryptoAPI or PKCS#11 Token Interface
@@ -46,11 +49,9 @@ Cards can be initialized with OpenSC. The myeid.profile file defines the cards s
 The initialization does not create the User PIN (PIN 1). This is done separately. During initialization OpenSC will ask for the Security Officer PIN and PUK and will also create it (can also be specified  as parameters with the options "--so-pin" and "--so-puk").
 <b>TIP</b>: When initializing cards, specify the PIN and PUK (with "--pin" and "--puk" parameters) to prevent OpenSC from unnecessarily asking for it several times. You can use any values, because the PIN is not created here.
 <pre><code>pkcs15-init -C --pin 1111 --puk 1111
-</code></pre> 
-PINs are created in the following way (add at least PIN nbr 1 (User PIN), the SO-PIN was created in the previous step). OpenSC will ask for PIN and related PUK if not specified as parameters. The card supports up to 14 PINs.
+</code></pre> PINs are created in the following way (add at least PIN nbr 1 (User PIN), the SO-PIN was created in the previous step). OpenSC will ask for PIN and related PUK if not specified as parameters. The card supports up to 14 PINs.
 <pre><code>pkcs15-init -P -a 1 -l "Basic PIN"
-</code></pre> 
-and
+</code></pre> and
 <pre><code>pkcs15-init -P -a 2 -l "Sign PIN"
 </code></pre> 
 <b>NOTE</b>: When done creating PIN codes, finalize (activate) the card. After this all access conditions (PINs) are in effect. This is not mandatory, but before this is done card elements can be accessed without satisfying specified access conditions (without entering PIN codes). 
@@ -103,15 +104,12 @@ Aventra is a high tech company specialising in information security products and
 
 Aventra offers a complete portfolio of card products ranging from simple plastic cards to high security smart cards and tokens. Our most recent product line features security solutions for mobile applications.  We also provide complete services and systems for issuing and managing cards and secure tokens, including card printers and materials.
 
-!attachments/wiki/MyEID/aventra_logo_white.PNG, nolink(MyEID)!
+!http://www.aventra.fi/Pictures/aventra_logo_white.PNG(Aventra logo)!
 
 h2. Speed
-
  * RSA 1024 key generation: 0m8.280s
  * RSA 2048 key generation: 0m41.037s
 
 h2. Notes
-
  * Card requires a PUK code when creating a PIN code (fails to create a PIN without a PUK)
-
-
+ * *Aventra's MyEID minidriver has passed Microsoft Windows Hardware Certification* and it will be available soon from Windows Update (Smart Card Plug and Play). You can also download it "here.":http://aventra.fi/English/downloads_Minidriver_E.html <small>(2013-01-11)</small>
