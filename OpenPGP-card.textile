@@ -40,23 +40,18 @@ h2. Where/How to get one?
 OpenPGP cards / CryptoSticks can be obtained from vendors like e.g.
 * "Kernel concepts":http://shop.kernelconcepts.de
 * "German Privacy Foundation":https://shop.crypto-stick.com
-or by becoming a fellow in the "Free Software Foundation Europe":http://fsfe.org 
-which uses the OpenPGP card specification on the
-"Fellowship Smart Cards":http://wiki.fsfe.org/FellowshipSmartCard
-it hands out to its fellows.
+* or by becoming a fellow in the "Free Software Foundation Europe":http://fsfe.org which uses the OpenPGP card specification on the "Fellowship Smart Cards":http://wiki.fsfe.org/FellowshipSmartCard it hands out to its fellows.
 
 
 h2. State of OpenSC support
 
-OpenPGP card "v1.0":http://www.g10code.de/docs/openpgp-card-1.0.pdf/"1.1":http://www.g10code.de/docs/openpgp-card-1.1.pdf should work since OpenSC 0.9.1.
-Starting with OpenSC 0.12.2, OpenSC supports OpenPGP card "v2.0":http://www.g10code.de/docs/openpgp-card-2.0.pdf too. However the cards can only be modified with GnuPG. So you need to use GnuPG to create/store keys etc. A "patch":https://github.com/hongquan/OpenSC-main/tree/openpgp for OpenSC exists which enables full write support for OpenPGP Card 2.
+OpenPGP card "v1.0":http://www.g10code.de/docs/openpgp-card-1.0.pdf/"1.1":http://www.g10code.de/docs/openpgp-card-1.1.pdf is deprecated but should work since OpenSC 0.9.1. Starting with OpenSC 0.12.2, OpenSC supports reading the OpenPGP card "v2.0":http://www.g10code.de/docs/openpgp-card-2.0.pdf too. Since OpenSC 0.13 full write support for OpenPGP Card 2 is supported.
 
 
-h2. Usage with additional patch
+h2. Usage
 
-<b>The instructions in this chapter are only applicable with the latest staging branch of OpenSC.</b>
+h3. Display user info
 
-=== Display user info===
 Use openpgpg-tool
 
 h3. Read and write data object (DO)
@@ -322,7 +317,7 @@ scdaemon[11033]: enabled debug flags: command cardio
 gpg: selecting openpgp failed: Card error
 gpg: OpenPGP card not available: Card error
 </code></pre>
-This is jut FYI
+This is just fort your information.
 
 h2. Links
 
