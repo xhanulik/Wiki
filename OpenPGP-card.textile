@@ -317,7 +317,7 @@ scdaemon[11033]: enabled debug flags: command cardio
 gpg: selecting openpgp failed: Card error
 gpg: OpenPGP card not available: Card error
 </code></pre>
-This is just fort your information.
+This is just for your information.
 
 h2. Links
 
