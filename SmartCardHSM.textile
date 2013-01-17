@@ -2,13 +2,13 @@ h1. SmartCardHSM
 
 The "SmartCard-HSM":http://www.cardcontact.de/products/SmartCard-HSM_V1.1.pdf is a lightweight hardware security module in a smart card form factor. It provides a remote-manageable secure key store for RSA and ECC keys.
 
-The stable OpenSC driver has read/write support for RSA and ECC keys, certificates, public and private data objects. Development continues, adding support tools in our repository at "github ":https://github.com/CardContact/OpenSC. A recent version of the installer for Windows can be found "here":http://www.cardcontact.de/download/OpenSC_0.13_preCC.msi.
+The SmartCard-HSM is available as USB stick, ID-1 card with contact/contactless interface and as ID-000 plug-in. It can be purchased at "cardomatic":http://www.cardomatic.de.
 
-The driver is included in the master and staging branch of OpenSC@github. Nightly builds can be download from "https://www.opensc-project.org/downloads/projects/opensc/.":https://www.opensc-project.org/downloads/projects/opensc/.
+Starting with version 0.13, the OpenSC driver has read/write support for RSA and ECC keys, certificates, public and private data objects. New features are made available in our repository at "github":https://github.com/CardContact/OpenSC.
 
-!CardContact provides free development samples for open source developers. For commercial use we offer a SmartCard-HSM SDK with certified drivers and extended support for Java.
+CardContact provides free development samples for open source developers. For commercial use we offer a SmartCard-HSM SDK with certified drivers and extended support for Java.
 
-Unless stated otherwise, a SmartCard-HSM is usually shipped uninitialized, meaning that no SO-PIN is set. You will first need to perform an initialization to set the SO-PIN and initial user PIN. See section [#init Initialize the Device] below.
+Unless stated otherwise, a SmartCard-HSM is usually shipped uninitialized, meaning that no SO-PIN is set. You will first need to perform an initialization to set the SO-PIN and initial user PIN. See section "Initialize the Device":#init below.
 
 h2. Reader support
 
@@ -204,7 +204,7 @@ X.509 Certificate [Joe Doe (ECC-BP320)]
         Encoded serial : 02 08 021C4CD6A9CF3EC8
 </code></pre>
 
-h3. [=#init]Initialize the device
+h3(#init). Initialize the device
 
 Initializing - and thereby erasing all keys, certificates and data elements - requires the following command
 
