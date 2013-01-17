@@ -71,7 +71,7 @@ FileID  Type  Size
  CC05 unable to select file, File not found
 OpenSC [E82B/0601/0401/81C3/1F02/01]>
 </code></pre>
-Don't be worried about the CCxx files not being found. These file identifiers are reserved as references for key objects.
+Don't be worry about the CCxx files not being found. These file identifiers are reserved as references for key objects and can not be found by the opensc-explorer.
 
 The card PIN is referenced using the PIN id 0x81. In opensc-explorer you will need to enter
 
@@ -91,12 +91,12 @@ h2. Using pkcs15-tool
 
 A SmartCard-HSM equipped with test certificates from the support package contains one RSA and four ECC keys:
 <pre><code>$ pkcs15-tool -D
-Using reader with a card: SCM SCR 3310 00 00
+Using reader with a card: SCM SCR 3310 [CCID Interface] (21120843305113) 00 00
 PKCS#15 Card [SmartCard-HSM]:
         Version        : 0
-        Serial number  : UTTM0000131
-        Manufacturer ID: CardContact
-        Flags          :
+        Serial number  : UTCC0200062
+        Manufacturer ID: www.CardContact.de
+        Flags          : 
 
 PIN [UserPIN]
         Object Flags   : [0x3], private, modifiable
@@ -108,6 +108,16 @@ PIN [UserPIN]
         Type           : ascii-numeric
         Tries left     : 3
 
+PIN [SOPIN]
+        Object Flags   : [0x1], private
+        ID             : 02
+        Flags          : [0x9E], local, change-disabled, unblock-disabled, initialized, soPin
+        Length         : min_len:16, max_len:16, stored_len:0
+        Pad char       : 0x00
+        Reference      : 136 (0x88)
+        Type           : bcd
+        Tries left     : 3
+
 Private RSA Key [Joe Doe (RSA2048)]
         Object Flags   : [0x1], private
         Usage          : [0x2E], decrypt, sign, signRecover, unwrap
@@ -115,9 +125,10 @@ Private RSA Key [Joe Doe (RSA2048)]
         ModLength      : 2048
         Key ref        : 1 (0x1)
         Native         : yes
+        Path           : e82b0601040181c31f0201::
         Auth ID        : 01
         ID             : 01
-        GUID           : {4c44fb76-75da-57cd-666d-73afa9d8e6f1}
+        GUID           : {770ef182-4ff5-c00f-0a60-8a9b261ae0a8}
 
 Private EC Key [Joe Doe (ECC-SECP256)]
         Object Flags   : [0x1], private
@@ -126,9 +137,10 @@ Private EC Key [Joe Doe (ECC-SECP256)]
         FieldLength    : 256
         Key ref        : 2 (0x2)
         Native         : yes
+        Path           : e82b0601040181c31f0201::
         Auth ID        : 01
         ID             : 02
-        GUID           : {88fa7fa5-a4bd-3e5e-2fc6-467a22b09264}
+        GUID           : {d6fec6cb-2c43-1ab0-8742-a8bdb4fd4eab}
 
 Private EC Key [Joe Doe (ECC-SECP192)]
         Object Flags   : [0x1], private
@@ -137,20 +149,22 @@ Private EC Key [Joe Doe (ECC-SECP192)]
         FieldLength    : 192
         Key ref        : 3 (0x3)
         Native         : yes
+        Path           : e82b0601040181c31f0201::
         Auth ID        : 01
         ID             : 03
-        GUID           : {be437aee-5682-b730-7269-a2cb8b8f1196}
+        GUID           : {2db6a307-0241-cf86-5b48-33c5f9636804}
 
-Private EC Key [Joe Doe (ECC-SECP224)]
+Private EC Key [Joe Doe (ECC-BP224)]
         Object Flags   : [0x1], private
         Usage          : [0x104], sign, derive
         Access Flags   : [0x1D], sensitive, alwaysSensitive, neverExtract, local
         FieldLength    : 224
         Key ref        : 4 (0x4)
         Native         : yes
+        Path           : e82b0601040181c31f0201::
         Auth ID        : 01
         ID             : 04
-        GUID           : {86bbe6eb-098c-d140-1d64-398aaaabf45e}
+        GUID           : {d8a5d028-f382-7643-82b0-438766926582}
 
 Private EC Key [Joe Doe (ECC-BP320)]
         Object Flags   : [0x1], private
@@ -159,55 +173,93 @@ Private EC Key [Joe Doe (ECC-BP320)]
         FieldLength    : 320
         Key ref        : 5 (0x5)
         Native         : yes
+        Path           : e82b0601040181c31f0201::
         Auth ID        : 01
         ID             : 05
-        GUID           : {2d52c0c3-8151-65a7-f99f-3fb3207186aa}
+        GUID           : {64bb4c16-63c2-3216-f4e5-e10ff1d47506}
+
+Private RSA Key [Joe Doe (RSA1536)]
+        Object Flags   : [0x1], private
+        Usage          : [0x2E], decrypt, sign, signRecover, unwrap
+        Access Flags   : [0x1D], sensitive, alwaysSensitive, neverExtract, local
+        ModLength      : 1536
+        Key ref        : 6 (0x6)
+        Native         : yes
+        Path           : e82b0601040181c31f0201::
+        Auth ID        : 01
+        ID             : 06
+        GUID           : {14027c5b-0971-ed85-9716-1bb8083a1496}
+
+Private RSA Key [Joe Doe (RSA1024)]
+        Object Flags   : [0x1], private
+        Usage          : [0x2E], decrypt, sign, signRecover, unwrap
+        Access Flags   : [0x1D], sensitive, alwaysSensitive, neverExtract, local
+        ModLength      : 1024
+        Key ref        : 7 (0x7)
+        Native         : yes
+        Path           : e82b0601040181c31f0201::
+        Auth ID        : 01
+        ID             : 07
+        GUID           : {f40c87ed-3026-a3a3-2f16-4e339fce6ff9}
 
 X.509 Certificate [Joe Doe (RSA2048)]
         Object Flags   : [0x0]
         Authority      : no
         Path           : ce01
         ID             : 01
-        GUID           : {4c44fb76-75da-57cd-666d-73afa9d8e6f1}
-        Encoded serial : 02 08 021DC154514CC6F9
-
+        GUID           : {770ef182-4ff5-c00f-0a60-8a9b261ae0a8}
+        Encoded serial : 02 08 02B00F6CEC251CE5
 X.509 Certificate [Joe Doe (ECC-SECP256)]
         Object Flags   : [0x0]
         Authority      : no
         Path           : ce02
         ID             : 02
-        GUID           : {88fa7fa5-a4bd-3e5e-2fc6-467a22b09264}
-        Encoded serial : 02 08 0219E055EBDC63F1
-
+        GUID           : {d6fec6cb-2c43-1ab0-8742-a8bdb4fd4eab}
+        Encoded serial : 02 08 02F9D76BFF7291B1
 X.509 Certificate [Joe Doe (ECC-SECP192)]
         Object Flags   : [0x0]
         Authority      : no
         Path           : ce03
         ID             : 03
-        GUID           : {be437aee-5682-b730-7269-a2cb8b8f1196}
-        Encoded serial : 02 08 0208AA5A8AE04CA8
-
-X.509 Certificate [Joe Doe (ECC-SECP224)]
+        GUID           : {2db6a307-0241-cf86-5b48-33c5f9636804}
+        Encoded serial : 02 08 02E83DD1B2C2C857
+X.509 Certificate [Joe Doe (ECC-BP224)]
         Object Flags   : [0x0]
         Authority      : no
         Path           : ce04
         ID             : 04
-        GUID           : {86bbe6eb-098c-d140-1d64-398aaaabf45e}
-        Encoded serial : 02 08 02426AFAE24D65B4
-
+        GUID           : {d8a5d028-f382-7643-82b0-438766926582}
+        Encoded serial : 02 08 02E3A790DD0D1761
 X.509 Certificate [Joe Doe (ECC-BP320)]
         Object Flags   : [0x0]
         Authority      : no
         Path           : ce05
         ID             : 05
-        GUID           : {2d52c0c3-8151-65a7-f99f-3fb3207186aa}
-        Encoded serial : 02 08 021C4CD6A9CF3EC8
+        GUID           : {64bb4c16-63c2-3216-f4e5-e10ff1d47506}
+        Encoded serial : 02 08 026B07E37DBFA205
+X.509 Certificate [Joe Doe (RSA1536)]
+        Object Flags   : [0x0]
+        Authority      : no
+        Path           : ce06
+        ID             : 06
+        GUID           : {14027c5b-0971-ed85-9716-1bb8083a1496}
+        Encoded serial : 02 08 02A7EEFA99415EBF
+X.509 Certificate [Joe Doe (RSA1024)]
+        Object Flags   : [0x0]
+        Authority      : no
+        Path           : ce07
+        ID             : 07
+        GUID           : {f40c87ed-3026-a3a3-2f16-4e339fce6ff9}
+        Encoded serial : 02 08 02C05C90657208BC
 </code></pre>
 
 h3(#init). Initialize the device
 
 Initializing - and thereby erasing all keys, certificates and data elements - requires the following command
 
+<pre><code>$ sc-hsm-tool --initialize --so-pin 3537363231383830 --pin 648219
+</code></pre>
+or
 <pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --init-token --label "test" --so-pin 3537363231383830
 $ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --login --login-type so --so-pin 3537363231383830 --init-pin --new-pin 648219
 
