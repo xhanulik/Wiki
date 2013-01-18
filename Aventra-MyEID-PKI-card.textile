@@ -58,6 +58,28 @@ The initialization does not create the User PIN (PIN 1). This is done separately
 <pre><code>pkcs15-init -F
 </code></pre> 
 
+h3. 0.13.0 myeid.profile error
+
+If you get the following "error":https://github.com/OpenSC/OpenSC/issues/120 when using MyEID cards with OpenSC 0.13.0 you unfortunately need to make a small fix to the file myeid.profile.
+
+<pre><code>Couldn't bind to the card: Syntax error
+</code></pre> 
+
+The file-id for "data" should be changed to something else, e.g. 4601:
+<pre><code>...
+                EF privdata {
+                    file-id   = 4501;
+                    structure = transparent;
+                    acl       = READ=$PIN, UPDATE=$PIN, DELETE=$PIN;
+                }
+                EF data {
+                    file-id   = 4601;
+                    structure = transparent;
+                    acl       = READ=NONE, UPDATE=$PIN, DELETE=$PIN;
+                }
+...
+</code></pre>
+
 h3. Smart card reader configuration
 
 MyEID card uses T=1 protocol. This basically means that the response data is sent with the answer to the command/request. With T=0 protocol the smart card will first answer to the command and tell how much data it will send. Data is then requested separately. 
@@ -112,4 +134,4 @@ h2. Speed
 
 h2. Notes
  * Card requires a PUK code when creating a PIN code (fails to create a PIN without a PUK)
- * *Aventra's MyEID minidriver has passed Microsoft Windows Hardware Certification* and it will be available soon from Windows Update (Smart Card Plug and Play). You can also download it "here.":http://aventra.fi/English/downloads_Minidriver_E.html <small>(2013-01-11)</small>
+ * *Aventra's MyEID minidriver has passed Microsoft Windows Hardware Certification* and it will soon be available from Windows Update (Smart Card Plug and Play). You can also download it "here.":http://aventra.fi/English/downloads_Minidriver_E.html <small>(2013-01-11)</small>
