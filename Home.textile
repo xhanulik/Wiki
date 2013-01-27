@@ -22,8 +22,6 @@ Before you  [[<b>GetStarted</b>|Getting-started-with-OpenSC]] with using OpenSC 
 
 h2. News
 
- <b>CALL FOR PARTICIPATION: OpenSC will be at [[FOSDEM 2012|OpenSC-@-FOSDEM-2012]]! </b>
-----
  * 04.12.2012: <b>OpenSC 0.13.0</b> is available. [[DownloadRelease|Download-latest-OpenSC-stable-release]]
  * 14.07.2011: <b>OpenSC 0.12.2</b> is available. [[DownloadRelease|Download-latest-OpenSC-stable-release]]
  * 09.06.2011: "a talk":http://www.slideshare.net/martinpaljak/opensc-eid-interoperability-through-open-source-software-8255721 covering OpenSC, open source and eID in Europe on EEMA "eID Management Conference":http://www.revolution1.plus.com/eema/index.htm
