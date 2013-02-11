@@ -25,8 +25,9 @@ Things to consider when buying JavaCards
 
 | <b>Card</b> | <b>JavaCard</b> | <b>!GlobalPlatform</b> | <b>Notes</b> | <b>Where to buy</b> |
 | OberthurCosmo v7 | 2.2.2 | 2.1.1 | "FIPS doc":http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140sp/140sp1236.pdf | "Smartcard Focus":http://www.smartcardfocus.com/shop/ilp/id~407/p/index.shtml|
-| [[[[e-gate|Cyberflex]]|e-gate|Cyberflex]]]] 32K | 2.1.1 | 2.0.1 | Requires captransf.jar | ? |
+| Cyberflex Access 32k e-gate | 2.1.1 | 2.0.1 | Requires captransf.jar | ? |
 | Cyberflex Access v2 64K | 2.2.1 | 2.0.1 | Requires captransf.jar | ? |
+| RSA SID800 TOTP USB hw authenticator 64k | 2.1.1 | 2.0.1 | PKCS#11 and MSCAPI, ANSI X9.31 PRNG, DES/3DES and RSA 1024 bit, SHA-1 | ? |
 
 h2. Obtaining an applet
 
