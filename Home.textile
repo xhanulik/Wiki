@@ -8,6 +8,7 @@ If you are new to smart cards, see OverView and [[<b>FrequentlyAskedQuestions</b
 
 The latest stable version of OpenSC is <b>0.13.0</b> ("released on 04.12.2012":http://www.opensc-project.org/pipermail/opensc-devel/2012-December/018686.html)
  * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/
+ * OpenSC "nightly builds":https://sourceforge.net/projects/opensc/files/OpenSC/nightly/
 
 The stable version of OpenSC is <b>0.12.2</b> ("released on 17.07.2011":http://www.opensc-project.org/pipermail/opensc-announce/2011-May/000034.html) [milestone:0.12.2 milestone]). See [[<b>DownloadRelease</b>|Download-latest-OpenSC-stable-release]] for detailed information.
  * "Source targzip":http://www.opensc-project.org/files/opensc/opensc-0.12.2.tar.gz
