@@ -37,15 +37,17 @@ OpenPGP cards / CryptoSticks can be obtained from vendors like e.g.
 h2. State of OpenSC support
 
 OpenPGP card "v1.0":http://www.g10code.de/docs/openpgp-card-1.0.pdf/"1.1":http://www.g10code.de/docs/openpgp-card-1.1.pdf is deprecated but should work since OpenSC 0.9.1. Starting with OpenSC 0.12.2, OpenSC supports reading the OpenPGP card "v2.0":http://www.g10code.de/docs/openpgp-card-2.0.pdf too. Since OpenSC 0.13 full write support for OpenPGP Card 2 is supported.
-
+There is a "patch":https://github.com/hongquan/OpenSC-main/tree/gnuk being made to support "Gnuk":http://www.fsij.org/gnuk/, a variant of OpenPGP v.2. The patch is waiting for being merged to OpenSC upstream.
 
 h2. Usage
 
-h3. Display user info
+To apply this usage to Gnuk, the patch above is needed. Basically, usage between general OpenPGP card (CryptoStick as example) and Gnuk are the same, except some differences will be noted below.
+
+h3. 1. Display user info
 
 Use @openpgpg-tool@
 
-h3. Read and write data object (DO)
+h3. 2. Read and write data object (DO)
 
 Use @opensc-explorer@.
 For example, you want to change card holder name:
@@ -66,7 +68,7 @@ OpenSC [3F00/0065]> cat 005B
 00000000: 51 75 61 6E Quan
 </code></pre>
 
-h3. Generating keys
+h3. 3. Generating keys
 
 h5. Key generation via @openpgp-tool@:
 
@@ -78,47 +80,76 @@ In which, @--genkey 3@ means that we're generating key with ID=3. The three keys
 
 @--key-length 1024@ means that the key is 1024-bit. We can specify bit length: 1024, 2048, 3072, 4096.
 If this option is absent, default key length 2048-bit is used.
++Gnuk:+ Gnuk only supports 2048-bit key, so don’t specify @--key-length@ option, you also have to delete old key before generating or import new one.
+<pre><code>openpgp-tool --verify CHV3 --pin 12345678 --del-key 3</code></pre>
 
 h5. Key generation via @pkcs15-init@:
 
 <pre><code>pkcs15-init --delete-objects privkey,pubkey --id 3 --generate-key rsa/2048 --auth-id 3 --verify
 </code></pre>
 
-There is limitation: @pkcs15-init@ requires new key length to be the same
-as existing key. To generate key with different key length, @openpgp-tool@ is recommended.
+There is limitation: @pkcs15-init@ requires new key length to be the same as existing key. To generate key with different key length, @openpgp-tool@ is recommended.
 
-@pkcs15-nit@ also requires to explicitly remove existing key/object. That's why we have @--delete-objects privkey,pubkey --id 3@ in the command.
+@pkcs15-nit@ also requires to explicitly remove existing key/object. That's why we have @--delete-objects privkey,pubkey --id 3@ in the command (though it has no effect to CryptoStick, which does not support deleting key, but support overwriting key).
 
-h3. Import key resp. certificate
+h3. 4. Delete key (Gnuk)
 
-h5. Import certificate only
+Deleting key is supported by Gnuk only. CryptoStick does not.
+Example to delete 3rd (authentication) key:
 
-<pre><code>pkcs15-init --store-certificate user@example.com.pem --id 3
-</code></pre>
+bc. openpgp-tool --verify CHV3 --pin 12345678 --del-key 3
+
+or
+
+bc. pkcs15-init --delete-objects privkey,pubkey --id 3
+
+If you want to delete key from CryptoStick, the only option is to erase card (all things will be deleted).
+
+h3. 5. Erase card (CryptoStick)
+
+Erasing card is supported by CryptoStick (or general OpenPGP card v2) only. Gnuk does not support.
+
+bc. openpgp-tool --erase
+
+or
+
+bc. pkcs15-init --erase-card
+
+h3. 6. Import key resp. certificate
+
+h5. Only certificate
+
+bc. pkcs15-init --store-certificate mycert.pem --id 3
+
 In which the PEM file is extracted from p12 using OpenSSL (key is stripped out):
-<pre><code>openssl pkcs12 -in secret-gpg-key.p12 -nokeys -out gpg-certs.pem
-</code></pre>
+
+bc. openssl pkcs12 -in myprivate.p12 -nokeys -out mycert.pem
+
 Note that the OpenPGP Card v2 contains only 1 certificate, so the ID to store is always 3.
 
-h5. Key import via pkcs15-init tool:
+h5. Only key:
 
-<pre><code>pkcs15-init --delete-objects privkey,pubkey --id 3 --store-private-key keyfile.pem --auth-id 3 --verify-pin --id 3
-</code></pre>
+bc. pkcs15-init --delete-objects privkey,pubkey --id 3 --store-private-key mykey.pem --auth-id 3 --verify-pin --id 3
 
 In which the PEM file is extracted from a p12 file using OpenSSL
 (certificate is stripped out):
-<pre><code>openssl pkcs12 -in secret-gpg-key.p12 -nocerts -out gpg-key.pem
-</code></pre>
 
-h5. Import pairs of key & certificate from P12 file:
+bc. openssl pkcs12 -in myprivate.p12 -nocerts -out mykey.pem
 
-<pre><code>pkcs15-init --delete-objects privkey,pubkey --id 3 --store-private-key certificatefile.p12 --format pkcs12 --auth-id 3 –-verify-pin
-</code></pre>
+h5. Pairs of key & certificate from P12 file:
+
+bc. pkcs15-init --delete-objects privkey,pubkey --id 3 --store-private-key myprivate.p12 --format pkcs12 --auth-id 3 –-verify-pin
 
 *Notes:*
  * In current version, @pkcs15-init@ tool is pretty silent, so you may not recognize if the operation is successful or not. You should run @pkcs15-init@ in debug mode (set environment variable @OPENSC_DEBUG=3@).
  * In p12 file, the @pkcs15-init@ detect X.509 certificates in hierarchy, in which only the first found certificate need to be imported. But @pkcs15-init@ then try to do with all, so the later imports will fail. You can see some error messages due to this failure, but it is OK because the main certificate has been imported successfully.
  * The certificate can be used to encrypt email. But to make decryption work, the corresponding private key need to be import to “Decryption Key” (ID=2) as well (normally, it is imported to “Authentication Key”, which has the same ID=3 as certificate).
+
+bc. pkcs15-init --delete-objects privkey,pubkey --id 2 --store-private-key mykey.pem --auth-id 3 --verify-pin --id 2
+
+h3. 7. Delete certificate
+
+bc. pkcs15-init --delete-objects cert --id 3
 
 h2. OpenSC driver details
 
