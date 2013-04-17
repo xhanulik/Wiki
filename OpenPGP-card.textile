@@ -294,6 +294,7 @@ And then uncheck _GPG Password Agent_, log out and log back in.
 h4. @gpg2@ and multiple readers
 
 @gpg2@ only works if the OpenPGP compatible card is in the first listed reader:
+
 <pre><code>$ opensc-tool -l
 # Detected readers (pcsc)
 Nr.  Card  Features  Name
