@@ -117,6 +117,9 @@ bc. pkcs15-init --erase-card
 
 h3. 6. Import key resp. certificate
 
+You can register and get certificate for free from "StartSSL":https://www.startssl.com/, using Firefox browser.
+The certificate will be generated and stored in Firefox. You should backup it to a p12 file.
+
 h5. Only certificate
 
 bc. pkcs15-init --store-certificate mycert.pem --id 3
