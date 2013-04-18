@@ -287,9 +287,14 @@ Manufacturer .....: ZeitControl
 ...
 </code></pre>
 Or permanently disable the @gnome-keyring@ agent:
-<pre><code>$ gnome-session-properties
-</code></pre>
+
+bc. $ gnome-session-properties
+
 And then uncheck _GPG Password Agent_, log out and log back in.
+
+If there is no _GPG Password Agent_ entry in @gnome-session-properties@, you can put this line to _~/.bashrc_ file:
+
+bc. unset GPG_AGENT_INFO
 
 h4. @gpg2@ and multiple readers
 
