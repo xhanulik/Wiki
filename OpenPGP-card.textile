@@ -172,8 +172,8 @@ This file-system is currently read-only, hence any operation writing to the card
 h2. Examples
 
 Here's an example of a card as seen via GnuPG:
-<pre><code>$ gpg --card-edit
 
+<pre><code>$ gpg --card-edit
 Application ID ...: D2760001240101010001000004D50000
 Version ..........: 1.1
 Manufacturer .....: PPC Card Systems
