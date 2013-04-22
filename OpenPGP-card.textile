@@ -36,7 +36,7 @@ OpenPGP cards / CryptoSticks can be obtained from vendors like e.g.
 
 h2. State of OpenSC support
 
-OpenPGP card "v1.0":http://www.g10code.de/docs/openpgp-card-1.0.pdf/"1.1":http://www.g10code.de/docs/openpgp-card-1.1.pdf is deprecated but should work since OpenSC 0.9.1. Starting with OpenSC 0.12.2, OpenSC supports reading the OpenPGP card "v2.0":http://www.g10code.de/docs/openpgp-card-2.0.pdf too. Since OpenSC 0.13 full write support for OpenPGP Card 2 is supported.
+OpenPGP card "v1.0":http://www.g10code.de/docs/openpgp-card-1.0.pdf /"1.1":http://www.g10code.de/docs/openpgp-card-1.1.pdf is deprecated but should work since OpenSC 0.9.1. Starting with OpenSC 0.12.2, OpenSC supports reading the OpenPGP card "v2.0":http://www.g10code.de/docs/openpgp-card-2.0.pdf too. Since OpenSC 0.13 full write support for OpenPGP Card 2 is supported.
 There is a "patch":https://github.com/hongquan/OpenSC-main/tree/gnuk being made to support "Gnuk":http://www.fsij.org/gnuk/, a variant of OpenPGP v.2. The patch is waiting for being merged to OpenSC upstream.
 
 h2. Usage
