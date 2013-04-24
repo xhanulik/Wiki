@@ -241,7 +241,6 @@ OpenSC [3F00/0065]>
 
 h2. Tips
 
-
 h3. General
 
  * Minimum PIN length is 6 (you get a generic "Bad PIN" error if trying to use a shorter one) and Admin PIN must be at least 8 digits.
@@ -268,7 +267,6 @@ gpg: OpenPGP card not available: Card error
 </code></pre>
 
 h3. Linux (and Gnome)
-
 
 h4. GnomeKeyring @gpg-agent@ confusion
 
@@ -298,6 +296,17 @@ And then uncheck _GPG Password Agent_, log out and log back in.
 If there is no _GPG Password Agent_ entry in @gnome-session-properties@, you can put this line to _~/.bashrc_ file:
 
 bc. unset GPG_AGENT_INFO
+
+h4. SSH agent failure
+
+When using OpenSSH with support of a pkcs11 module, you may fail:
+
+bc. $ ssh-add -s /usr/lib/opensc-pkcs11.so
+Enter passphrase for PKCS#11: 
+SSH_AGENT_FAILURE
+Could not add card: /usr/lib/opensc-pkcs11.so
+
+"Solution":https://bugs.launchpad.net/ubuntu/+source/openssh/+bug/791747
 
 h4. @gpg2@ and multiple readers
 
