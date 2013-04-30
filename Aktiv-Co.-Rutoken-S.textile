@@ -23,7 +23,7 @@ h2. File system features
 
 h2. Initialize
 <pre><code>$ pkcs15-init --erase-card
-$ pkcs15-init --create-pkcs15 --so-pin "87654321" --so-puk ""
+$ pkcs15-init --create-pkcs15 --so-pin "87654321" --so-puk "" --pin "12345678"
 $ pkcs15-init --store-pin --label "User PIN" --auth-id 02 --pin "12345678" --puk ""
 </code></pre>
 
