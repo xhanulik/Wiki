@@ -87,6 +87,12 @@ PIN changed.
 OpenSC [E82B/0601/0401/81C3/1F02/01]> 
 </code></pre>
 
+For changing the SO-PIN you need to enter the old and new PIN as ASCII string:
+<pre><code>OpenSC [E82B/0601/0401/81C3/1F02/01]> change chv136 "3537363231383830" "3537363231383830"
+PIN changed.
+OpenSC [E82B/0601/0401/81C3/1F02/01]> 
+</code></pre>
+
 h2. Using pkcs15-tool
 
 A SmartCard-HSM equipped with test certificates from the support package contains one RSA and four ECC keys:
@@ -290,7 +296,9 @@ Public Key Object; RSA 1024 bits
 or for ECC keys:
 $ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --login --pin 648219 --keypairgen --key-type EC:prime256v1 --label mykey
 </code></pre>
-The SmartCard-HSM does not permanently store public keys, but generates the required PKCS#11 public key object from certificates stored on the device. As newly generated key pairs don't have a certificate initially, the public key is extracted from the card generated certificate signing request that is saved instead of the certificate. To save the generated public key in Subject Public Key Information format as per RF3280 use the following command
+The SmartCard-HSM does not permanently store public keys, but generates the required PKCS#11 public key object from certificates stored on the device. For newly generated key pairs without a certificate the certificate signing request is stored instead, however only RSA public key can be retrieved this way.
+
+To save the generated public key in Subject Public Key Information format as per RF3280 use the following command
 <pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --keypairgen --key-type rsa:1024 --id 10 --read-object --type pubkey --output-file pubkey.spki
 </code></pre>
 
