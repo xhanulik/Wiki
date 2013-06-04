@@ -88,7 +88,7 @@ OpenSC [E82B/0601/0401/81C3/1F02/01]>
 </code></pre>
 
 For changing the SO-PIN you need to enter the old and new PIN as ASCII string:
-<pre><code>OpenSC [E82B/0601/0401/81C3/1F02/01]> change chv136 "3537363231383830" "3537363231383830"
+<pre><code>OpenSC [E82B/0601/0401/81C3/1F02/01]> change chv136 3537363231383830 3537363231383830
 PIN changed.
 OpenSC [E82B/0601/0401/81C3/1F02/01]> 
 </code></pre>
