@@ -260,6 +260,7 @@ X.509 Certificate [Joe Doe (RSA1024)]
 </code></pre>
 
 h2. Using pkcs11-tool
+
 h3(#init). Initialize the device
 
 Initializing - and thereby erasing all keys, certificates and data elements - requires the following command
@@ -321,7 +322,9 @@ $ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --delete-
 </code></pre>
 
 h2. Using OpenSSL with engine-pkcs11
+
 h3. Generate a key pair and a self-signed certificate
+
 Use the following command to generate a key pair:
 <pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --keypairgen --key-type rsa:2048 --id 10
 </code></pre>
