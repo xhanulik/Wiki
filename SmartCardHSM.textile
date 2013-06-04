@@ -20,7 +20,7 @@ After installation of OpenSC you must register the PKCS11 module in Firefox:
 
 1. Open the Firefox preferences dialog. Choose "Advanced" > "Encryption" > "Security Devices"
 2. Choose "Load"
-3. Enter a name for the security module, such as "OpenSC". NOTE: there is currently a bug in Firefox where international characters may cause problems (TODO: link to bugzilla?)
+3. Enter a name for the security module, such as "OpenSC"
 4. Choose "Browse..." to find the location of the PKCS11 module on your local computer (Usually c:\WINDOWS\System32\opensc-pkcs11.dll or /usr/local/lib/opensc-pkcs11.so)
 
 h2. Using the SmartCard-HSM with the CSP Minidriver
