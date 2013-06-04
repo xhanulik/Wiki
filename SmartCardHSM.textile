@@ -329,8 +329,8 @@ Use the following command to generate a key pair:
 <pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --keypairgen --key-type rsa:2048 --id 10
 </code></pre>
 Start openssl to get the openssl prompt and enter
-<pre><code>OpenSSL>engine -t dynamic -pre SO_PATH:/usr/local/lib/engines/engine_pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre MODULE_PATH:/usr/local/lib/pkcs11/opensc-pkcs11.so
-OpenSSL>req -engine pkcs11 -new -key id_10 -keyform engine -out cert.pem -text -x509 -days 3640
+<pre><code>OpenSSL> engine -t dynamic -pre SO_PATH:/usr/local/lib/engines/engine_pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre MODULE_PATH:/usr/local/lib/pkcs11/opensc-pkcs11.so
+OpenSSL> req -engine pkcs11 -new -key id_10 -keyform engine -out cert.pem -text -x509 -days 3640
 </code></pre>
 This results in a file cert.pem that contains the self-signed certificate.
 Use the following line to convert to DER format and load the certificate into the SmartCard-HSM:
