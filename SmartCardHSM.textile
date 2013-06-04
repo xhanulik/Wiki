@@ -334,7 +334,6 @@ OpenSSL>req -engine pkcs11 -new -key id_10 -keyform engine -out cert.pem -text -
 </code></pre>
 This results in a file cert.pem that contains the self-signed certificate.
 Use the following line to convert to DER format and load the certificate into the SmartCard-HSM:
-<pre><code>$ 
-openssl x509 -in cert.pem -out cert.der -outform der
-pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --write-object cert.der --type cert --id 10
+<pre><code>$ openssl x509 -in cert.pem -out cert.der -outform der
+$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --write-object cert.der --type cert --id 10
 </code></pre>
