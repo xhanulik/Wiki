@@ -141,10 +141,6 @@ is the certificate reference generated in the previous step (9A,9C,9D or 9E).
 
 (Note back slashes added for readability.)
 
-When using the engine the environment variable PIV_9A06_KEY points at the
-public key being used in the request, even if the <ref> and <alg> are not 9A 
-and 06. The pkcs#11 ID is defined in _-key slot_0-id_<N>_  where
-<N> = 1,3,4,5. 
 
 h3. Signing the request
 
