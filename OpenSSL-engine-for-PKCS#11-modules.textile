@@ -9,11 +9,10 @@ OpenSC is written by an international team and is licensed as Open Source softwa
 Engine_pkcs11 is based on the [[libp11 library|libp11-PKCS#11-wrapper-library]].
 
  * 404 error - use git instead. "Download":http://www.opensc-project.org/files/engine_pkcs11 the latest stable release of engine_pkcs11.
- * [[engine_pkcs11/QuickStart|engine_pkcs11/QuickStart]] - installation and basic steps to generate and sign a certificate.
+ * [[Engine-pkcs11-quickstart|Engine-pkcs11-quickstart]] - installation and basic steps to generate and sign a certificate.
 
  * MailingLists - How to contact us.
 
  * Please file bug reports via our "online bug tracker":http://www.opensc-project.org/opensc/newticket.
  * SubversionRepository has our latest source code, if you want to test it or improve it. 
  * All changes are listed in the [file:ChangeLog ChangeLog] in the source code or "online":http://www.opensc-project.org/doc/engine_pkcs11/ChangeLog. 
-
