@@ -6,6 +6,8 @@ The SmartCard-HSM is available as USB stick, ID-1 card with contact/contactless 
 
 Starting with version 0.13, the OpenSC driver has read/write support for RSA and ECC keys, certificates, public and private data objects. New features are made available in our repository at "github":https://github.com/CardContact/OpenSC.
 
+A alternative and light-weight PKCS#11 module for read-only access is available with the "SmartCard-HSM for Embedded Devices":https://github.com/CardContact/sc-hsm-embedded/wiki/PKCS11 project.
+
 CardContact provides free development samples for open source developers. For commercial use we offer a SmartCard-HSM SDK with certified drivers and extended support for Java.
 
 Unless stated otherwise, a SmartCard-HSM is usually shipped uninitialized, meaning that no SO-PIN is set. You will first need to perform an initialization to set the SO-PIN and initial user PIN. See section "Initialize the Device":#init below.
