@@ -340,7 +340,7 @@ Use the following line to convert to DER format and load the certificate into th
 $ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --write-object cert.der --type cert --id 10
 </code></pre>
 
-.h2 Using key backup and restore
+h2. Using key backup and restore
 
 The SmartCard-HSM provides for a secure key backup and restore functionality. This mechanism allows to encrypt and export a key generated on a SmartCard-HSM and to later import that key into the same or a different SmartCard-HSM. The scheme can be used to
 
@@ -376,3 +376,95 @@ Please retype password to confirm :
 Enciphering DKEK share, please wait...
 DKEK share created and saved to dkek-share-1.pbe
 </code></pre>
+
+The DKEK will be generated using the random number generator in the SmartCard-HSM and is then encrypted using Password-based-Encryption with the password supplied by the key custodian. The procedure is repeated for each key custodian. The resulting key share file and the password must be kept secure by the respective key custodian.
+
+When all key custodian have generated their key share, a SmartCard-HSM can be initialized and the DKEK can be created from these key shares (two in this example):
+
+<pre><code>
+sc@calzone:~/tmp$ sc-hsm-tool --initialize --so-pin 3537363231383830 --pin 648219 --dkek-shares 2
+Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
+asc@calzone:~/tmp$ sc-hsm-tool
+Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
+Version              : 1.2
+User PIN tries left  : 3
+DKEK shares          : 2
+DKEK import pending, 2 share(s) still missing
+</code></pre>
+
+The sc-hsm-tool called without arguments reports that the import of DKEK shares is not completed as 2 shares are still missing.
+
+The first key custodian imports his key share using:
+
+<pre><code>
+asc@calzone:~/tmp$ sc-hsm-tool --import-dkek-share dkek-share-1.pbe
+Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
+Enter password to decrypt DKEK share : 
+
+Deciphering DKEK share, please wait...
+DKEK share imported
+DKEK shares          : 2
+DKEK import pending, 1 share(s) still missing
+</code></pre>
+
+The second key custodian imports his key share the same way:
+
+<pre><code>
+asc@calzone:~/tmp$ sc-hsm-tool --import-dkek-share dkek-share-2.pbe
+Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
+Enter password to decrypt DKEK share : 
+
+Deciphering DKEK share, please wait...
+DKEK share imported
+DKEK shares          : 2
+DKEK key check value : 7A5D817FE55E8F74
+</code></pre>
+
+As all keys share have been imported, the resulting DKEK is assembled internally and a key check value is calculated. The key check value represents the DKEK without disclosing it's value. Two SmartCard-HSMs with the same DKEK key check value contain the same DKEK. The DKEK key check value can be obtained at any time using the sc-hsm-tool command without arguments.
+
+With the initialized SmartCard-HSM new keys can be generated using the commands shown above:
+
+<pre><code>
+asc@calzone:~/tmp$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --keypairgen --key-type rsa:2048 --id 10
+Using slot 0 with a present token (0x0)
+Key pair generated:
+Private Key Object; RSA 
+  label:      Private Key
+  ID:         10
+  Usage:      decrypt, sign, unwrap
+Public Key Object; RSA 2048 bits
+  label:      Private Key
+  ID:         10
+  Usage:      encrypt, verify, wrap
+</code></pre>
+
+The resulting key can now be exported from the SmartCard-HSM. In order to do so, you will need the internal key id of the key, which can be obtained using pkcs15-tool:
+
+<pre><code>
+asc@calzone:~/tmp$ pkcs15-tool -D
+Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
+PKCS#15 Card [SmartCard-HSM]:
+        Version        : 0
+        Serial number  : UTTMRN08223
+        Manufacturer ID: www.CardContact.de
+        Flags          : 
+
+PIN [UserPIN]
+---8<------8<------8<------8<------8<---
+Private RSA Key [Private Key]
+        Object Flags   : [0x3], private, modifiable
+        Usage          : [0x2E], decrypt, sign, signRecover, unwrap
+        Access Flags   : [0x1D], sensitive, alwaysSensitive, neverExtract, local
+        ModLength      : 2048
+        Key ref        : 1 (0x1)
+        Native         : yes
+        Path           : e82b0601040181c31f0201::
+        Auth ID        : 01
+        ID             : 10
+        GUID           : {ed416326-6607-d52c-d194-72f7f51915a9}
+---8<------8<------8<------8<------8<---
+</code></pre>
+
+
+
+
