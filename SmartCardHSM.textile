@@ -353,7 +353,7 @@ In order to export or import keys, the SmartCard-HSM must be initialized with a 
 
 The DKEK must be set during initialization and before any other keys are generated. For a device initialized without a DKEK, keys can never be exported.
 
-A DKEK is imported into a SmartCard-HSM using a preselected number of key shares. Each key share is given to a key custodian and only all key shares together assemble the DKEK. Key shares are individually imported and are assembled within SmartCard-HSM. Key shares can be imported independent of time and location, allowing to pass a half-initialized device between key custodians until all shares have been imported.
+A DKEK is imported into a SmartCard-HSM using a preselected number of key shares. Each key share is given to a key custodian and only all key shares together assemble the DKEK. Key shares are individually imported and are assembled within the SmartCard-HSM. Key shares can be imported independently of time and location, allowing to pass a half-initialized device between key custodians until all shares have been imported.
 
 The key management procedure starts with the creation of a key share. This can be achieved using the sc-hsm-tool:
 
@@ -379,7 +379,7 @@ DKEK share created and saved to dkek-share-1.pbe
 
 The DKEK will be generated using the random number generator in the SmartCard-HSM and is then encrypted using Password-based-Encryption with the password supplied by the key custodian. The procedure is repeated for each key custodian. The resulting key share file and the password must be kept secure by the respective key custodian.
 
-When all key custodian have generated their key share, a SmartCard-HSM can be initialized and the DKEK can be created from these key shares (two in this example):
+When all key custodians have generated their key share, a SmartCard-HSM can be initialized and the DKEK can be created from these key shares (two in this example):
 
 <pre><code>
 sc@calzone:~/tmp$ sc-hsm-tool --initialize --so-pin 3537363231383830 --pin 648219 --dkek-shares 2
@@ -422,7 +422,7 @@ DKEK key check value : 7A5D817FE55E8F74
 
 As all key shares have been imported, the resulting DKEK is assembled internally and a key check value is calculated. The key check value represents the DKEK without disclosing it's value. Two SmartCard-HSMs with the same DKEK key check value contain the same DKEK. The DKEK key check value can be obtained at any time using the sc-hsm-tool command without arguments.
 
-With the initialized SmartCard-HSM new keys can be generated using the commands shown above:
+With the initialized SmartCard-HSM new keys can be generated using the commands shown above.
 
 <pre><code>
 asc@calzone:~/tmp$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --keypairgen --key-type rsa:2048 --id 10
@@ -474,7 +474,7 @@ asc@calzone:~/tmp$ ls -la wrap-key.bin
 -rw-rw-r-- 1 asc asc 1696 Jul 17 19:15 wrap-key.bin
 </code></pre>
 
-The resulting file contains a key description, the optional certificate and the key value encrypted under the DKEK. The key value and it's meta data is protected by a cryptogram checksum against modifications.
+The resulting file contains a key description, the optional certificate and the key value encrypted under the DKEK. The key value and it's meta data is protected by a cryptographic checksum against modifications.
 
 Importing the key into the same or a different SmartCard-HSM with the same DKEK can be done using:
 
@@ -520,7 +520,7 @@ Private RSA Key [Private Key]
 ---8<------8<------8<------8<------8<---
 </code></pre>
 
-The SmartCard-HSM now contains two identical keys, one with key ref 1 (the original key) and key ref 10 (the copy created during import).
+The SmartCard-HSM now contains two identical keys, one with key ref 1 (the original key) and one with key ref 10 (the copy created during import).
 
 The DKEK (and all stored keys) are erased in a subsequent initialization.
 
@@ -577,7 +577,7 @@ Please remember to present the share id as well as the share value.
 Please enter prime: f3:4a:18:9d:e5:19:7c:fb
 </code></pre>
 
-Only the first key custodian must enter the prime number and then the number of password shares defined by --pwd-shares-total are requested:
+Only the first key custodian must enter the prime number and then the number of key custodians defined by --pwd-shares-total are requested to enter their share value:
 
 <pre><code>
 Share 1 of 3
@@ -586,6 +586,6 @@ Please enter share ID: 1
 Please enter share value: 8e:67:74:ba:38:05:d3:bc
 </code></pre>
 
-This is repeated until 3 key custodians entered their password share. The DKEK share password is then calculated from the provided shares, the DKEK share is decrypted and imported into the SmartCard-HSM.
+This is repeated until all key custodians entered their password share. The DKEK share password is then calculated from the provided shares, the DKEK share is decrypted and imported into the SmartCard-HSM.
 
 In the scheme you can mix DKEK shares encrypted with a plain password and DKEK shares whose password is split with the threshold mechanism.
