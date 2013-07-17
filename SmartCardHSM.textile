@@ -522,4 +522,11 @@ Private RSA Key [Private Key]
 
 The SmartCard-HSM now contains two identical keys, one with key ref 1 (the original key) and key ref 10 (the copy created during import).
 
+The DKEK (and all stored keys) is erased in a subsequent initialization.
 
+h3. Using a n-of-m threshold scheme
+Control over a DKEK share can also be further split using a n-of-m threshold scheme for the DKEK share's password. In such a scheme m key custodians are given a share of the password and n key custodians must come together to decrypt the DKEK share for import.
+
+The threshold scheme can be used to prevent a single point of failure. A lost DKEK share password will render key backups useless as the DKEK can't be re-established. If the DKEK share password is split amongst more key custodians than are necessary to reconstruct the share, then some may be lost without consequences.
+
+Generating a DKEK share using the threshold scheme requires the arguments --pwd-shares-threshold and --pwd-shares-total. The later defines the number of password shares the former the number of shares required to calculate the password.
