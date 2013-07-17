@@ -465,6 +465,61 @@ Private RSA Key [Private Key]
 ---8<------8<------8<------8<------8<---
 </code></pre>
 
+The important information is in the "Key ref" field. This identifier must be provided in the --key-reference argument of the --wrap-key command:
 
+<pre><code>
+asc@calzone:~/tmp$ sc-hsm-tool --wrap-key wrap-key.bin --key-reference 1 --pin 648219
+Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
+asc@calzone:~/tmp$ ls -la wrap-key.bin 
+-rw-rw-r-- 1 asc asc 1696 Jul 17 19:15 wrap-key.bin
+</code></pre>
+
+The resulting file contains a key description, the optional certificate and the key value encrypted under the DKEK. The file is protected by a cryptogram checksum against modifications.
+
+Importing the key into the same or a different SmartCard-HSM with the same DKEK can be done using:
+
+<pre><code>
+asc@calzone:~/tmp$ sc-hsm-tool --unwrap-key wrap-key.bin --key-reference 10 --pin 648219
+Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
+Wrapped key contains:
+  Key blob
+  Private Key Description (PRKD)
+  Certificate
+Key successfully imported
+asc@calzone:~/tmp$ pkcs15-tool -D
+Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
+PKCS#15 Card [SmartCard-HSM]:
+        Version        : 0
+        Serial number  : UTTMRN08223
+        Manufacturer ID: www.CardContact.de
+        Flags          : 
+---8<------8<------8<------8<------8<---
+Private RSA Key [Private Key]
+        Object Flags   : [0x3], private, modifiable
+        Usage          : [0x2E], decrypt, sign, signRecover, unwrap
+        Access Flags   : [0x1D], sensitive, alwaysSensitive, neverExtract, local
+        ModLength      : 2048
+        Key ref        : 1 (0x1)
+        Native         : yes
+        Path           : e82b0601040181c31f0201::
+        Auth ID        : 01
+        ID             : 10
+        GUID           : {ed416326-6607-d52c-d194-72f7f51915a9}
+
+Private RSA Key [Private Key]
+        Object Flags   : [0x3], private, modifiable
+        Usage          : [0x2E], decrypt, sign, signRecover, unwrap
+        Access Flags   : [0x1D], sensitive, alwaysSensitive, neverExtract, local
+        ModLength      : 2048
+        Key ref        : 10 (0xA)
+        Native         : yes
+        Path           : e82b0601040181c31f0201::
+        Auth ID        : 01
+        ID             : 10
+        GUID           : {ed416326-6607-d52c-d194-72f7f51915a9}
+---8<------8<------8<------8<------8<---
+</code></pre>
+
+The SmartCard-HSM now contains two identical keys, one with key ref 1 (the original key) and key ref 10 (the copy created during import).
 
 
