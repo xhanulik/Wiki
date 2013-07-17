@@ -525,6 +525,7 @@ The SmartCard-HSM now contains two identical keys, one with key ref 1 (the origi
 The DKEK (and all stored keys) are erased in a subsequent initialization.
 
 h3. Using a n-of-m threshold scheme
+
 Control over a DKEK share can be split even further using a n-of-m threshold scheme for the DKEK share's password. In such a scheme m key custodians are given a share of the password and n key custodians must come together to decrypt the DKEK share for import.
 
 The threshold scheme can be used to prevent a single point of failure. A lost DKEK share password will render key backups useless as the DKEK can't be re-established. If the DKEK share password is split amongst more key custodians than are necessary to reconstruct the share, then some parts may be lost or unavailable without consequences.
