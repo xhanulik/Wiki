@@ -2,7 +2,7 @@ h1. SmartCardHSM
 
 The "SmartCard-HSM":http://www.cardcontact.de/products/SmartCard-HSM_V1.1.pdf is a lightweight hardware security module in a smart card form factor. It provides a remote-manageable secure key store for RSA and ECC keys.
 
-The SmartCard-HSM is available as USB stick, ID-1 card with contact/contactless interface and as ID-000 plug-in. It can be purchased at "cardomatic":http://www.cardomatic.biz/smartcards.php.
+The SmartCard-HSM is available as USB stick, ID-1 card with contact/contactless interface as ID-000 plug-in and MicroSD card. It can be purchased at "cardomatic":http://www.cardomatic.biz/smartcards.php.
 
 Starting with version 0.13, the OpenSC driver has read/write support for RSA and ECC keys, certificates, public and private data objects. New features are made available in our repository at "github":https://github.com/CardContact/OpenSC.
 
@@ -346,14 +346,14 @@ The SmartCard-HSM provides for a secure key backup and restore functionality. Th
 
 * Backup a key for disaster recovery (e.g. in a Root-CA)
 * Extend the number of keys by offloading unused keys to an external database
-* Operate multiple SmartCard-HSMs in cluster to improve performance and allow fail-over 
+* Operate multiple SmartCard-HSMs in a cluster to improve performance and allow fail-over 
 * Implement a key escrow scheme
 
 In order to export or import keys, the SmartCard-HSM must be initialized with a Device Key Encryption Key (DKEK). The DKEK is a 256-Bit AES key.
 
 The DKEK must be set during initialization and before any other keys are generated. For a device initialized without a DKEK, keys can never be exported.
 
-A DKEK is imported into a SmartCard-HSM using a preselected number of key shares. Each key share is given to a key custodian and only all key shares together assemble the DKEK. Key shares are individually imported and are assembled within SmartCard-HSM. Key shares can be imported independent of time and location, allowing to pass a half-initialized between key custodians until all share have been assembled.
+A DKEK is imported into a SmartCard-HSM using a preselected number of key shares. Each key share is given to a key custodian and only all key shares together assemble the DKEK. Key shares are individually imported and are assembled within SmartCard-HSM. Key shares can be imported independent of time and location, allowing to pass a half-initialized device between key custodians until all shares have been imported.
 
 The key management procedure starts with the creation of a key share. This can be achieved using the sc-hsm-tool:
 
@@ -392,7 +392,7 @@ DKEK shares          : 2
 DKEK import pending, 2 share(s) still missing
 </code></pre>
 
-The sc-hsm-tool called without arguments reports that the import of DKEK shares is not completed as 2 shares are still missing.
+The sc-hsm-tool called without arguments reports that the import of DKEK shares is not yet completed as 2 shares are still missing.
 
 The first key custodian imports his key share using:
 
@@ -420,7 +420,7 @@ DKEK shares          : 2
 DKEK key check value : 7A5D817FE55E8F74
 </code></pre>
 
-As all keys share have been imported, the resulting DKEK is assembled internally and a key check value is calculated. The key check value represents the DKEK without disclosing it's value. Two SmartCard-HSMs with the same DKEK key check value contain the same DKEK. The DKEK key check value can be obtained at any time using the sc-hsm-tool command without arguments.
+As all key shares have been imported, the resulting DKEK is assembled internally and a key check value is calculated. The key check value represents the DKEK without disclosing it's value. Two SmartCard-HSMs with the same DKEK key check value contain the same DKEK. The DKEK key check value can be obtained at any time using the sc-hsm-tool command without arguments.
 
 With the initialized SmartCard-HSM new keys can be generated using the commands shown above:
 
@@ -474,7 +474,7 @@ asc@calzone:~/tmp$ ls -la wrap-key.bin
 -rw-rw-r-- 1 asc asc 1696 Jul 17 19:15 wrap-key.bin
 </code></pre>
 
-The resulting file contains a key description, the optional certificate and the key value encrypted under the DKEK. The file is protected by a cryptogram checksum against modifications.
+The resulting file contains a key description, the optional certificate and the key value encrypted under the DKEK. The key value and it's meta data is protected by a cryptogram checksum against modifications.
 
 Importing the key into the same or a different SmartCard-HSM with the same DKEK can be done using:
 
@@ -522,11 +522,70 @@ Private RSA Key [Private Key]
 
 The SmartCard-HSM now contains two identical keys, one with key ref 1 (the original key) and key ref 10 (the copy created during import).
 
-The DKEK (and all stored keys) is erased in a subsequent initialization.
+The DKEK (and all stored keys) are erased in a subsequent initialization.
 
 h3. Using a n-of-m threshold scheme
-Control over a DKEK share can also be further split using a n-of-m threshold scheme for the DKEK share's password. In such a scheme m key custodians are given a share of the password and n key custodians must come together to decrypt the DKEK share for import.
+Control over a DKEK share can be split even further using a n-of-m threshold scheme for the DKEK share's password. In such a scheme m key custodians are given a share of the password and n key custodians must come together to decrypt the DKEK share for import.
 
-The threshold scheme can be used to prevent a single point of failure. A lost DKEK share password will render key backups useless as the DKEK can't be re-established. If the DKEK share password is split amongst more key custodians than are necessary to reconstruct the share, then some may be lost without consequences.
+The threshold scheme can be used to prevent a single point of failure. A lost DKEK share password will render key backups useless as the DKEK can't be re-established. If the DKEK share password is split amongst more key custodians than are necessary to reconstruct the share, then some parts may be lost or unavailable without consequences.
 
-Generating a DKEK share using the threshold scheme requires the arguments --pwd-shares-threshold and --pwd-shares-total. The later defines the number of password shares the former the number of shares required to calculate the password.
+Generating a DKEK share using the threshold scheme requires the arguments --pwd-shares-threshold and --pwd-shares-total. The later defines the number of password shares while the former defines the number of shares required to calculate the password.
+
+<pre><code>
+asc@calzone:~/tmp$ sc-hsm-tool --create-dkek-share dkek-share-1.pbe --pwd-shares-threshold 3 --pwd-shares-total 5
+Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
+
+The DKEK will be enciphered using a randomly generated 64 bit password.
+This password is split using a (3-of-5) threshold scheme.
+
+Please keep the generated and encrypted DKEK file in a safe location. We also recommend 
+to keep a paper printout, in case the electronic version becomes unavailable. A printable version
+of the file can be generated using "openssl base64 -in <filename>".
+
+
+Press <enter> to continue
+</code></pre>
+
+At this stage, the first key custodian is requested to note the password share:
+
+<pre><code>
+Share 1 of 5
+
+
+Prime       : f3:4a:18:9d:e5:19:7c:fb
+Share ID    : 1
+Share value : 8e:67:74:ba:38:05:d3:bc
+
+
+Please note ALL values above and press <enter> when finished
+</code></pre>
+
+The code should be written onto a prepared form which the key custodian keeps securely in his custody.
+
+After all key custodians received their share (5 in this case), the encrypted DKEK share can be kept as backup.
+
+When importing a DKEK share that has a threshold password, the following command must be used:
+
+<pre><code>
+asc@calzone:~/tmp$ sc-hsm-tool --import-dkek-share dkek-share-1.pbe --pwd-shares-total 3
+Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
+
+Deciphering the DKEK for import into the SmartCard-HSM requires 3 key custodians
+to present their share. Only the first key custodian needs to enter the public prime.
+Please remember to present the share id as well as the share value.
+
+Please enter prime: f3:4a:18:9d:e5:19:7c:fb
+</code></pre>
+
+Only the first key custodian must enter the prime number and then the number of password shares defined by --pwd-shares-total are requested:
+
+<pre><code>
+Share 1 of 3
+
+Please enter share ID: 1
+Please enter share value: 8e:67:74:ba:38:05:d3:bc
+</code></pre>
+
+This is repeated until 3 key custodians entered their password share. The DKEK share password is then calculated from the provided shares, the DKEK share is decrypted and imported into the SmartCard-HSM.
+
+In the scheme you can mix DKEK shares encrypted with a plain password and DKEK shares whose password is split with the threshold mechanism.
