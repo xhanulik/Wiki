@@ -339,3 +339,16 @@ Use the following line to convert to DER format and load the certificate into th
 <pre><code>$ openssl x509 -in cert.pem -out cert.der -outform der
 $ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --write-object cert.der --type cert --id 10
 </code></pre>
+
+.h2 Using key backup and restore
+The SmartCard-HSM provides for a secure key backup and restore functionality. This mechanism allows to encrypt and export a key generated on a SmartCard-HSM and to later import that key into the same or a different SmartCard-HSM. The scheme can be used to
+
+* Backup a key for disaster recovery (e.g. in a Root-CA)
+* Extend the number of keys by offloading unused keys to an external database
+* Operate multiple SmartCard-HSMs in cluster to improve performance and allow fail-over 
+* Implement a key escrow scheme
+
+In order to export or import keys, the SmartCard-HSM must be initialized with a Device Key Encryption Key (DKEK). The DKEK is a 256-Bit AES key.
+
+The DKEK must be set during initialization and before any other keys are generated. For a device initialized without a DKEK, keys can never be exported.
+
