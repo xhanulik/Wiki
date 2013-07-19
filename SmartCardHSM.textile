@@ -12,6 +12,8 @@ CardContact provides free development samples for open source developers. For co
 
 Unless stated otherwise, a SmartCard-HSM is usually shipped uninitialized, meaning that no SO-PIN is set. You will first need to perform an initialization to set the SO-PIN and initial user PIN. See section "Initialize the Device":#init below.
 
+Further test scripts can be found in the "Smart Card Shell Script Collection":http://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html.
+
 h2. Reader support
 
 For RSA 2048 operations and write support, the SmartCard-HSM requires a card reader supporting extended length APDUs. In our tests, card reader from "Identive (formerly SCM)":http://www.identive-infrastructure.com performed best. Omnikey readers generally seemed to have problems with extended length APDUs.
