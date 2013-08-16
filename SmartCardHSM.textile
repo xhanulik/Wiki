@@ -21,7 +21,6 @@ For RSA 2048 operations and write support, the SmartCard-HSM requires a card rea
 Omnikey readers require a registry setting to enable TPDU mode and support for extended length APDU. If you encounter problems with Omnikey readers, try setting the following registry key:
 
 <pre><code>Windows Registry Editor Version 5.00
-Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CardMan]
 "TPDU_T1Mode"=dword:00000001
