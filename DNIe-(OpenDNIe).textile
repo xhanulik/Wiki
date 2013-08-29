@@ -1,5 +1,13 @@
 h1. DNIe (OpenDNIe)
 
+h3. Update (2013-08-27)
+
+DNIe support got merged by code from the OpenDNIe fork. The code is now in Master. OpenSC software which you can download from this website still does <b>NOT</b> support the Spanish Ceres cards.
+
+
+h3. Old (please change)
+
+
 DNIe is one of the SpanishEid-s. There exists a patch for OpenSC which adds support for DNIe in OpenSC. "http://opendnie.cenatic.es/":http://opendnie.cenatic.es/
 
 
