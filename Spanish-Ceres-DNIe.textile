@@ -1,5 +1,12 @@
 h1. Spanish Ceres / DNIe
 
+h3. Update (2013-08-27)
+
+DNIe support got merged by code from the OpenDNIe fork. The code is now in Master. OpenSC software which you can download from this website still does <b>NOT</b> support the Spanish Ceres cards.
+
+
+h3. Old (please change)
+
  <b>NB</b>! OpenSC software which you can download from this website does <b>NOT</b> support the Spanish DNI and Ceres cards. Please contact dnielectronico.es and/or fnmt.es with a request for the source code so that it could be included in OpenSC. See #205 for more details on the possible licensing issue.
 
 The Spanish Ceres and DNI are using a binary module of OpenSC in their official software. No source code is distributed with the binary modules. OpenSC project can not support software without open source code.
