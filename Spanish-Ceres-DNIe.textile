@@ -2,7 +2,7 @@ h1. Spanish Ceres / DNIe
 
 h3. Update (2013-08-27)
 
-DNIe support got merged by code from the OpenDNIe project evolution, by pull request #168. The code is now in Master. OpenSC software which you can download from this website still does <b>NOT</b> support the Spanish Ceres cards.
+DNIe support got merged by code from the OpenDNIe project evolution, by pull request #168. The code is now in Master. OpenSC software which you can download from this website still does <b>NOT</b> support the Spanish Ceres cards...
 
 
 h3. Old (please change)
