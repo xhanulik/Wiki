@@ -39,7 +39,7 @@ h2. Using the SmartCard-HSM with the CSP Minidriver
 
 After installing OpenSC on Windows, you can register the SmartCard-HSM for use with Microsoft applications like Internet Explorer or Outlook.
 
-Save the following to a file sc-hs.reg and double-click to import it into the registy.
+Save the following to a file sc-hsm.reg and double-click to import it into the registy.
 <pre><code>Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Calais\SmartCards\SmartCard-HSM]
