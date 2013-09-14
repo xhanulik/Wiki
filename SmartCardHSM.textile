@@ -1,8 +1,8 @@
 h1. SmartCardHSM
 
-The "SmartCard-HSM":http://www.cardcontact.de/products/SmartCard-HSM_V1.1.pdf is a lightweight hardware security module in a smart card form factor. It provides a remote-manageable secure key store for RSA and ECC keys.
+The "SmartCard-HSM":http://www.cardcontact.de/products/sc-hsm.html is a lightweight hardware security module in a smart card form factor. It provides a remote-manageable secure key store for RSA and ECC keys.
 
-The SmartCard-HSM is available as USB stick, ID-1 card with contact/contactless interface as ID-000 plug-in and MicroSD card. It can be purchased at "cardomatic":http://www.cardomatic.biz/smartcards.php.
+The SmartCard-HSM is available as USB stick, ID-1 card with contact/contactless interface, as ID-000 plug-in and MicroSD card. It can be purchased at "cardomatic":http://www.cardomatic.biz/smartcards.php.
 
 Starting with version 0.13, the OpenSC driver has read/write support for RSA and ECC keys, certificates, public and private data objects. New features are made available in our repository at "github":https://github.com/CardContact/OpenSC.
 
