@@ -107,7 +107,7 @@ OpenSC [E82B/0601/0401/81C3/1F02/01]>
 
 h2. Using pkcs15-tool
 
-A SmartCard-HSM equipped with test certificates from the support package contains one RSA and four ECC keys:
+A SmartCard-HSM equipped with test certificates from the "support package":http://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html contains one RSA and four ECC keys:
 <pre><code>$ pkcs15-tool -D
 Using reader with a card: SCM SCR 3310 [CCID Interface] (21120843305113) 00 00
 PKCS#15 Card [SmartCard-HSM]:
