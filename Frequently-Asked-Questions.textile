@@ -110,7 +110,6 @@ h3. Q: Where can I buy smart cards ?
 
  * "http://www.aventra.fi":http://www.aventra.fi - ships from Finland, [[Aventra-MyEID-PKI-card|Aventra-MyEID-PKI-card]] card
  * "http://www.cryptoshop.com":http://www.cryptoshop.com - ships from Austria
- * "http://www.gooze.eu":http://www.gooze.eu - ships from France, Feitian [[card|Feitian-PKI-card]] and [wiki:feitian-pki-token token]
  * "http://shop.kernelconcepts.de/":http://shop.kernelconcepts.de/ - ships from Germany, [[OpenPGP v2 card|OpenPGP-card]] and CryptoStick token
  * "http://www.logidata-int.fr":http://www.logidata-int.fr - ships from France
  * "http://www.smartcardfocus.com":http://www.smartcardfocus.com - ships from UK
