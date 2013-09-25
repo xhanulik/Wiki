@@ -22,6 +22,7 @@ h2. Generic smart cards
 
 Each entry on this list possibly represents a whole family of cards. See each page to find out which models are supported.
 Personalizable cards:
+ * [[<b>OpenPGP Card</b>|OpenPGP-card]]
  * [[<b>MyEID</b>|Aventra-MyEID-PKI-card]]
  * [[<b>WestCOS</b>|WestCOS]]
  * [[<b>SetCOS</b>|Setcos-driver]]
@@ -50,6 +51,7 @@ h2. USB Tokens
 
 Each entry on this list possibly represents a whole family of tokens. See each page to find out which models are supported. These devices are also known as cryto-sticks.
 
+ * [[<b>Crypto Stick</b>|OpenPGP-card]]
  * [[<b>feitian-pki-token</b>|Feitian-ePass-PKI-token]]
  * [[<b>RainbowIkeyThree</b>|iKey-3000]]
  * [[<b>ePass2003</b>|Feitian-ePass2003]]
@@ -91,7 +93,6 @@ Unsupported smart cards:
  * [[<b>Seccos</b>|Seccos]]
  * [[<b>Actalis</b>|Italian-signature-card-Actalis]]
  * [[<b>ACOS5</b>|ACOS5]]
- * [[<b>OpenPGP</b>|OpenPGP-card]]
  * [[<b>GemplusGpk</b>|Gemplus-GPK-16k]]
 
 
