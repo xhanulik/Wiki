@@ -7,7 +7,7 @@ h2. Debugging reader issues
 </code></pre>
 
 will give you a list of readers opensc has found. If your reader isn't listed, you have
-a problem with that reader. For OpenCT see "https://www.opensc-project.org/opensc/wiki/TroubleShooting":https://www.opensc-project.org/opensc/wiki/TroubleShooting for details.
+a problem with that reader. For OpenCT see "https://www.opensc-project.org/openst/wiki/TroubleShooting":http://webapp5.rrz.uni-hamburg.de/SuSe-Dokumentation/packages/openct/wiki/TroubleShooting.html for details.
 For PCSC/Lite see it's documentation (FIXME: a link would be nice). For CT-API readers, edit the
 opensc.conf and make sure the reader is properly configured. If it still doesn't help, increase
 debugging to level 5 or higher in opensc.conf, run "opensc-tool -l" again and send a debug log
