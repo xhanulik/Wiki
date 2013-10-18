@@ -1,5 +1,3 @@
-h1. SmartCardHSM
-
 The "SmartCard-HSM":http://www.cardcontact.de/products/sc-hsm.html is a lightweight hardware security module in a smart card form factor. It provides a remote-manageable secure key store for RSA and ECC keys.
 
 The SmartCard-HSM is available as USB stick, ID-1 card with contact/contactless interface, as ID-000 plug-in and MicroSD card. It can be purchased at "cardomatic":http://www.cardomatic.biz/smartcards.php.
