@@ -45,6 +45,7 @@ OpenSC effort consists of various sub-projects that can be used independently as
 
 h2. Quick links
 
+ * "Mailing lists":https://github.com/OpenSC/OpenSC/wiki/OpenSC-Services#mailing-lists
  * "Download":https://sourceforge.net/projects/opensc/files/OpenSC/
  * [[Application Support|Using-smart-cards-with-applications]] - list of applications with smart card support
  * [[OpenSC Services|OpenSC-Services]]
