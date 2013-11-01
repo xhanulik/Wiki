@@ -4,7 +4,7 @@ h1. OpenSC Installer for Mac OS X
 
 h2. Scope
 
-The goal of OpenSC installer is to integrate with the platform as closely as possible and to provide support for PKCS#11 and native CDSA/Keychain applications on Mac OS X 10.5 and newer. OpenSC installs itself to the default _/Library/OpenSC_ folder, symlinks to command line utilities are created into _/usr/local/bin_. There are no GUI applications but compatible personalized smart cards (see CardPersonalization) show up in _/Applications/Utilities/Keychain Access.app_ (because of _OpenSC.tokend_, installed to _/System/Library/Security/tokend/OpenSC.tokend_).
+The goal of OpenSC installer is to integrate with the platform as closely as possible and to provide support for PKCS#11 and native CDSA/Keychain applications on Mac OS X 10.5 and newer. OpenSC installs itself to the default @/Library/OpenSC@ folder, symlinks to command line utilities are created into @/usr/local/bin@. There are no GUI applications but compatible personalized smart cards (see CardPersonalization) show up in @/Applications/Utilities/Keychain Access.app@ (because of @OpenSC.tokend@, installed to @/System/Library/Security/tokend/OpenSC.tokend@).
 
 h3. Mac OS X 10.7 (Lion)
 
@@ -32,21 +32,17 @@ h2. Download
 
 h2. FAQ
 
-
 h3. How to uninstall ?
 
 Run in Terminal.app:
- <pre><code>sudo /usr/local/bin/opensc-uninstall
- </code></pre>
+ <pre><code>sudo /usr/local/bin/opensc-uninstall</code></pre>
 
 h3. The package requires 10.X.Y but I have 10.X.Z
 
-The latest operating system release has the latest security fixes, so keeping your software up to date is preferred. Developers usually have the latest version as well, so this is the only tested platform that can be debugged and supported if necessary. Disabling of the version check is possible, just copy the _.pkg_ to your hard disk and change _OpenSC-10.X.pkg/Contents/Resources/InstallationCheck_ file from:
-<pre><code>    if(CheckVersion("$SYSTEM_VERS", "10.X.Y", "ProductVersion", "<")) {
-</code></pre>
+The latest operating system release has the latest security fixes, so keeping your software up to date is preferred. Developers usually have the latest version as well, so this is the only tested platform that can be debugged and supported if necessary. Disabling of the version check is possible, just copy the @.pkg@ to your hard disk and change @OpenSC-10.X.pkg/Contents/Resources/InstallationCheck@ file from:
+<pre><code>    if(CheckVersion("$SYSTEM_VERS", "10.X.Y", "ProductVersion", "<")) {</code></pre>
 to:
-<pre><code>    if(CheckVersion("$SYSTEM_VERS", "10.X.Z", "ProductVersion", "<")) {
-</code></pre>
+<pre><code>    if(CheckVersion("$SYSTEM_VERS", "10.X.Z", "ProductVersion", "<")) {</code></pre>
 
 h3. Known issues
 
@@ -69,6 +65,7 @@ cd OpenSC
 ./MacOSX/build 10.5 # Builds 10.5 installer
 </code></pre>
 Example:
+
 <pre><code>$ time ./MacOSX/build 10.5
 # build output removed
 created: /Users/martin/buildtest/OpenSC/OpenSC-10.5.dmg
@@ -98,4 +95,4 @@ The previous (now deprecated) Mac OS X distribution SCA is also "still available
 
 h2. 10.6 and smart cards with Java
 
-64bit JVM has problems with detecting smart card reader events and states via _javax.smartcardio_. To access smart cards, java needs to be started in 32bit mode with _-d32_
+64bit JVM has problems with detecting smart card reader events and states via @javax.smartcardio@. To access smart cards, java needs to be started in 32bit mode with @-d32@
