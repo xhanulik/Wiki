@@ -90,7 +90,7 @@ h5. Key generation via @pkcs15-init@:
 
 There is limitation: @pkcs15-init@ requires new key length to be the same as existing key. To generate key with different key length, @openpgp-tool@ is recommended.
 
-@pkcs15-nit@ also requires to explicitly remove existing key/object. That's why we have @--delete-objects privkey,pubkey --id 3@ in the command (though it has no effect to CryptoStick, which does not support deleting key, but support overwriting key).
+@pkcs15-init@ also requires to explicitly remove existing key/object. That's why we have @--delete-objects privkey,pubkey --id 3@ in the command (though it has no effect to CryptoStick, which does not support deleting key, but support overwriting key).
 
 h3. 4. Delete key (Gnuk)
 
