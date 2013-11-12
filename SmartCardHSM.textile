@@ -288,7 +288,7 @@ The parameter --label is required as per PKCS#11, however it's silently ignored 
 
 The --init-pin option can only be used immediately after the --init-token command. To reset a lost PIN you will need to reinitialize the device.
 
-To use the key backup and restore mechanism please refer to the sc-hsm-tool man page.
+Security Considerations: The SO-PIN allows to reset the retry counter for the PIN and also allows to set the PIN to a new value. Please make sure, that the SO-PIN is kept secure at any time.
 
 h3. Generate key pair
 
