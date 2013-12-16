@@ -12,7 +12,7 @@ If OpenSC would fully support TCOS, one could erase the preformatted card and in
 
 The good news are: With the help of an emulation layer OpenSC can use cards that are almost PKCS#15 compatible. For the above mentioned cards such an emulation layer exists. The emulation cannot store certificates, keys or pins on the card, but you can use whatever is visible through the emulation layer.
 
-All other trust center that were using TCOS2 cards until the end of 2007 do not offer TCOS based cards anymore. SignTrust now uses [[STARTCOS|STARTCOS]] based card and Datev cards are available to members of Datev only (I doubt they are TCOS based).
+All other trust center that were using TCOS2 cards until the end of 2007 do not offer TCOS based cards anymore. SignTrust now uses [[STARCOS|STARCOS]] based card and Datev cards are available to members of Datev only (they also use STARCOS now).
 
 h2. NetKey E4 filesystem layout
 
