@@ -57,12 +57,12 @@ Choosing free software means that whether you are an individual, a middle range 
 
 h2. Writting documentation
 
-GOOZE also writes unofficial HOWTOs explaining how to use the Feitian PKI card:
+GOOZE also had unofficial HOWTOs explaining how to use the Feitian PKI card:
 "http://www.gooze.eu/tutorials":http://www.gooze.eu/tutorials
 
 h2. Avaibility
 
-Available from Gooze: "Feitian PKI card":http://www.gooze.eu/feitian-pki-card-ftcos-pk-01c
+Available from: "Feitian PKI card":http://ftsafe.com/
 
 h1. Thanks
 
