@@ -70,7 +70,7 @@ OpenSC [3F00/0065]> cat 005B
 
 h3. 3. Generating keys
 
-h5. Key generation via @openpgp-tool@:
+h5. Key generation via @opensc-tool@:
 
 <pre><code>openpgp-tool --verify CHV3 --pin 12345678 --gen-key 3
 openpgp-tool --verify CHV3 --pin 12345678 --gen-key 1 --key-len 1024
