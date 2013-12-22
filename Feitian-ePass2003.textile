@@ -2,7 +2,7 @@ h1. Feitian ePass2003
 
 "Feitian":http://www.ftsafe.com/ offers the ePass2003, a USB crypto token with 32-bit high performance smart card chip and CCID interface.
 
-The ePass2003 is the successor of the [[ePass PKI|Feitian-ePass-PKI-token]] and the [wiki:ePass3000 ePass3000], and was released to the public in December 2011.
+The ePass2003 is the successor of the [[ePass PKI|Feitian-ePass-PKI-token]] and the [[ePass3000|Feitian-ePass3000]], and was released to the public in December 2011.
 The ePass2003 relies on one single ST Microelectronics chip, designed in Europe with Common Criteria EAL 5+ certification. 
 It weights only 6 gr and fits very well into a key ring with only 51 mm lenght, thus being one of the smallest tokens available to date.
 
@@ -10,7 +10,7 @@ The ePass2003 was designed for Free Software communities, especially the OpenSC 
 
 Feitian offers Windows CSP drivers and will soon release Mac OS X drivers. 
 
-On the other hand, Feitian takes an active part in the development of OpenSC, offering a free sofware driver to the OpenSC community. The driver of ePass2003 in OpenSC is called "epass2003". It is currently available from GIT and being reviewed for inclusion in OpenSC. GOOZE and Feitian take active part in the OpenSC project, offering "free tokens":http://www.gooze.eu/feitian-epass-2003-free-software-developer-kit to each contributor.
+On the other hand, Feitian takes an active part in the development of OpenSC, offering a free sofware driver to the OpenSC community. The driver of ePass2003 in OpenSC is called "epass2003". It is currently available from GIT and being reviewed for inclusion in OpenSC. GOOZE and Feitian take active part in the OpenSC project.
 
 This gives users the ability to use either proprietary or open-source software, which is the best to answer all needs. For example, under Windows7, drivers are distributed using Windows update, requiring no actions from users.
 
@@ -18,26 +18,11 @@ Compilation instructions:
 "http://www.gooze.eu/howto/smartcard-quickstarter-guide/opensc-installation-under-gnu-linux":http://www.gooze.eu/howto/smartcard-quickstarter-guide/opensc-installation-under-gnu-linux
 
 Product page:
-"http://www.gooze.eu/epass-2003":http://www.gooze.eu/epass-2003
-
-Due to high integration, pricing is fair and well-adapter for free software communities and middle/large projects:
-* 1 unit = 14,90 EUR
-* 10 units = 12,90 EUR per unit
-* 50 units = 9,90 EUR per unit
-
-Shipment:
-* 3 days to most European countries
-* 5/7 days worldwide
-
-Pricing orginates from GOOZE and may differ with distributors.
-
-Warranty:
-* One year.
-* 30 days satisfied or cash back (upon product return).
+"http://ftsafe.com/product/epass/epass2003":http://ftsafe.com/product/epass/epass2003
 
 h1. Thanks
 
 Big thanks to "GOOZE":http://www.gooze.eu/ and "Feitian":http://www.ftsafe.com/, for their technical help and donating hardware tokens.
 
-OpenSC free software developers may request a "free ePass2003":http://www.gooze.eu/feitian-epass-2003-free-software-developer-kit for free software development.
+
 
