@@ -28,7 +28,7 @@ h4. Additional resources
 
  * "Gnome Keyring":http://live.gnome.org/GnomeKeyring/Architecture has PKCS#11 related ideas in their architecture
 
-h3. CrytpoAPI (Windows)
+h3. CryptoAPI (Windows)
 
 Windows applications use CryptoAPI to do native SSL connections and to use the Windows certificate store. All applications using CryptoAPI (or CryptoAPI-NG) can transparently use all smart cards that provide a full CSP or a smart card BaseCSP module. Most card vendors provide one such driver. OpenSC has a rudimentary BaseCSP module (a MiniDriver), but it is still work in progress. Use CryptoAPI if you are writing a Windows-only application or if you want a well functioning and integrated experience for your users. CryptoAPI provides trust management (user has a centralized location to set the trust bits for various X509 certificates) in addition to basic cryptographic operations and windows API provides higher level functions that are CAPI enabled (TODO: OpenURL example/link)
 
