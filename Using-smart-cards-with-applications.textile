@@ -54,7 +54,7 @@ h3. Legally binding (non-repudiation) signature software
 h2. Local authentication / login
 
  * Linux/"PAM":http://www.kernel.org/pub/linux/libs/pam/
-  * "pam_pkcs11":https://github.com/OpenSC/pam_pkcs11 - feature-ritch PAM module, supporting LDAP, OCSP, X509 checks.  
+  * "pam_pkcs11":https://github.com/OpenSC/pam_pkcs11/wiki - feature-ritch PAM module, supporting LDAP, OCSP, X509 checks.  
    * "Tutorial on pam_pkcs11 and pam_krb5":http://ryandlane.com/wprdl/2008/10/21/seamless-smartcard-login-with-pam_pkcs11-and-pam_krb5-against-an-active-directory-domain-using-red-hat-enterprise-linux-5-part-1/
   * [[pam_p11|pam_p11-simple-RSA-authentication-with-PKCS#11-modules]] - a simple PAM module for RSA public key authentication.
  * Mac OS X
