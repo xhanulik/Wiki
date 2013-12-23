@@ -59,8 +59,8 @@ h3. QCA
 
 h3. GnuTLS
 
-"GnuTLS":http://www.gnu.org/software/gnutls/ includes native PKCS#11 smart card support.
-See "http://www.gnu.org/software/gnutls/manual":http://www.gnu.org/software/gnutls/manual for more information. 
+"GnuTLS":http://www.gnutls.org includes native PKCS#11 smart card support.
+See "http://www.gnutls.org/manual":http://www.gnutls.org/manual for more information. 
 
 
 h3. cryptlib
