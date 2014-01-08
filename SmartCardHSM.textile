@@ -284,9 +284,15 @@ $ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --login --login-type so -
 
 If the SmartCard-HSM was never initialized before, the presented SO-PIN is stored as future SO-PIN for this device. Any later initialization requires the presentation of the same SO-PIN. Please make sure to select your own values for SO-PIN and user PIN if used in a production environment.
 
-The parameter --label is required as per PKCS#11, however it's silently ignored by the SmartCard-HSM code.
+The SO-PIN must be composed of 16 hexadecimal characters. The value is internally converted into an 8 byte key value.
+
+The parameter --label required, but has not effect on version 0.13. OpenSC versions from the CardContact branch support storing the label.
 
 The --init-pin option can only be used immediately after the --init-token command. To reset a lost PIN you will need to reinitialize the device.
+
+To change the SO-PIN (Version 1.0 or higher) you can use
+<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --login --login-type so --so-pin 3537363231383830 --change-pin --new-pin 0123456789012345
+</code></pre>
 
 Security Considerations: The SO-PIN allows to reset the retry counter for the PIN and also allows to set the PIN to a new value. Please make sure, that the SO-PIN is kept secure at any time.
 
