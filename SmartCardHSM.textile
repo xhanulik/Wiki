@@ -286,7 +286,7 @@ If the SmartCard-HSM was never initialized before, the presented SO-PIN is store
 
 The SO-PIN must be composed of 16 hexadecimal characters. The value is internally converted into an 8 byte key value.
 
-The parameter --label required, but has not effect on version 0.13. OpenSC versions from the CardContact branch support storing the label.
+The parameter --label is required by PKCS#11, but has not effect on version 0.13. OpenSC versions from the CardContact branch support storing the label.
 
 The --init-pin option can only be used immediately after the --init-token command. To reset a lost PIN you will need to reinitialize the device.
 
