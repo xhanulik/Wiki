@@ -8,7 +8,7 @@ Using the "pageant.exe":http://www.risacher.org/putty-cac/putty-cac-experimental
 
 h2. Linux / Mac OS X (OpenSSH)
 
-See wiki:OpenSSH for more information.
+See [OpenSSH] for more information.
 
 h2. PuttyCard (deprecated)
 
