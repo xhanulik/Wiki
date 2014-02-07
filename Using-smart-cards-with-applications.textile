@@ -12,7 +12,7 @@ h3. Web browsers / HTTPS
 
 h3. SSH
 
- * See SecureShell for instructions on how to use OpenSSH or Putty
+ * See [[SSH Secure Shell]] for instructions on how to use OpenSSH or Putty
 
 h3. VPN
 
