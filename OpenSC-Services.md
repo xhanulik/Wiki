@@ -16,11 +16,11 @@ The wiki pages are also hosted at github: https://github.com/OpenSC/OpenSC/wiki
 
 # Mailing lists
 
-The mailing lists are hosted at the OpenSC project at SourceForge: http://sourceforge.net/projects/opensc/
+The mailing lists are hosted at the OpenSC project at SourceForge: [http://sourceforge.net/projects/opensc/](http://sourceforge.net/projects/opensc/), and are [searchable via gmane](http://dir.gmane.org/gmane.comp.encryption.opensc.devel).
 
 * opensc-announce: announcements of new releases, bugfixes and security warnings. Low volume. https://lists.sourceforge.net/lists/listinfo/opensc-announce
 * opensc-commits: commit notifications https://lists.sourceforge.net/lists/listinfo/opensc-commits
-* opensc-devel: discussion of developement of OpenSC and related projects https://lists.sourceforge.net/lists/listinfo/opensc-devel
+* opensc-devel: discussion of developement of OpenSC and related projects [https://lists.sourceforge.net/lists/listinfo/opensc-devel](https://lists.sourceforge.net/lists/listinfo/opensc-devel)
 
 __You have to subscribe to the new lists yourself.__
 
