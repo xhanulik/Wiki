@@ -84,9 +84,9 @@ h3. Smart card reader configuration
 
 MyEID card uses T=1 protocol. This basically means that the response data is sent with the answer to the command/request. With T=0 protocol the smart card will first answer to the command and tell how much data it will send. Data is then requested separately. 
 
-In some environments there has been issues when reading files that exceed some threshold. If you encounter problems when reading larger files from the card (e.g. certificates) with no apparent reason, try to set the readers max_receive_size to e.g. 192, to be on the safe side. You can then try to iterate to find the maximum for your environment. 
+In some environments there has been issues when reading files that exceed some threshold. If you encounter problems when reading larger files from the card (e.g. certificates) with no apparent reason, try to set the readers `max_recv_size` (max receive size) to e.g. 192, to be on the safe side. You can then try to iterate to find the maximum for your environment. 
 
-The setting in the opensc.conf (usually in /etc) config file is the following:
+The setting in the `opensc.conf` (usually in `/etc` or `/etc/opensc`) config file is the following:
 
 <pre><code>...
 	reader_driver pcsc {
