@@ -53,3 +53,4 @@ h2. Quick links
 h2. Misc
 
  * [[build|OpenSC-Components-Build]] OpenSC build using cross compiler
+ * [[<b>OpenSC Windows Installer</b>|OpenSC-Windows-installer]]
