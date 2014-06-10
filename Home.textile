@@ -13,7 +13,7 @@ The latest stable version of OpenSC is <b>0.13.0</b> ("released on 04.12.2012":h
 
 The stable version of OpenSC is <b>0.12.2</b> ("released on 17.07.2011":http://www.opensc-project.org/pipermail/opensc-announce/2011-May/000034.html) [milestone:0.12.2 milestone]). See [[<b>DownloadRelease</b>|Download-latest-OpenSC-stable-release]] for detailed information.
  * "Source targzip":http://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/opensc-0.12.2.tar.gz/download
- * "Windows (x86) installer":http://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/OpenSC-0.12.2-win32.msi/download (see WindowsInstaller for more information)
+ * "Windows (x86) installer":http://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/OpenSC-0.12.2-win32.msi/download (see [[<b>OpenSC Windows Installer</b>|OpenSC-Windows-installer]] for more information)
  * "Windows (x64) installer":http://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/OpenSC-0.12.2-win64.msi/download
  * "Mac OS X 10.6 and 10.7 installer":http://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/OpenSC-0.12.2-10.6.dmg/download (see MacInstaller for more information)
  * "Mac OS X 10.5 installer":http://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/OpenSC-0.12.2-10.5.dmg/download
