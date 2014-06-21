@@ -97,7 +97,7 @@ h3. Generate a key pair
 
 The card can have 4 different keys and matching certificates.
 These correspond to <ref> 9A, 9C, 9D and 9E. With pkcs#11
-these correspond with ID: 1, 3, 4, 5.   
+these correspond with ID: 01, 02, 03, 04.   
 We will create the key for the "X.509 Certificate for PIV Authentication" 
 which matchs the key reference of 9A using a RSA 1024 bit key, and pkcs#11 ID 1.
   
