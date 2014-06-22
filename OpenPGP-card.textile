@@ -58,7 +58,9 @@ For example, you want to change card holder name:
 in which @CHV3@ means Admin PIN is to be verified (User PIN will be CHV1 or CHV2) and @3132333435363738@ is ASCII-decoded hex string of PIN code "12345678".
 3. Put data to 005B DO, the DO containing card holder name:
 <pre><code>do_put 005B "Quan"</code></pre>
-4. Or change user PIN to "654321":
+4. Remove it afterwards:
+<pre><code>do_put 005B ""</code></pre>
+5. Or change user PIN to "654321":
 <pre><code>change CHV1 31:32:33:34:35:36 "654321"</code></pre>
 Where @31:32:33:34:35:36@ is hex string of ASCII-decoded old PIN “123456”.
 
