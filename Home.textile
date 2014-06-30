@@ -6,7 +6,12 @@ OpenSC is written by an international team of volunteers and is licensed as "Ope
 
 If you are new to smart cards, see OverView and [[<b>FrequentlyAskedQuestions</b>|Frequently-Asked-Questions]] pages. Always check [[<b>SecurityAdvisories</b>|OpenSC-security-advisories]].
 
-The latest stable version of OpenSC is <b>0.13.0</b> ("released on 04.12.2012":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/)
+The latest stable version of OpenSC is <b>0.14.0</b> ("released on 30.06.2014":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.14.0/)
+ * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.14.0/
+ * "OsX":https://www.opensc-project.org/files/macosx/
+ * OpenSC "nightly builds":https://sourceforge.net/projects/opensc/files/OpenSC/nightly/
+
+The stable version of OpenSC is <b>0.13.0</b> ("released on 04.12.2012":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/)
  * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/
  * "OsX":https://www.opensc-project.org/files/macosx/
  * OpenSC "nightly builds":https://sourceforge.net/projects/opensc/files/OpenSC/nightly/
