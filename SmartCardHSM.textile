@@ -31,6 +31,8 @@ or on Linux set in /etc/omnikey.ini
 TPDU_T1Mode=1
 </code></pre>
 
+However, setting T1Mode breaks PIN verification using the PIN pad on the Omnikey 3821 reader.
+
 h2. Using the PKCS#11 module in Firefox and Thunderbird
 
 After installation of OpenSC you must register the PKCS11 module in Firefox:
