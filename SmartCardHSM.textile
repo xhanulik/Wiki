@@ -24,6 +24,13 @@ Omnikey readers require a registry setting to enable TPDU mode and support for e
 "TPDU_T1Mode"=dword:00000001
 </code></pre>
 
+or on Linux set in /etc/omnikey.ini
+
+<pre><code>
+[Reader]
+TPDU_T1Mode=1
+</code></pre>
+
 h2. Using the PKCS#11 module in Firefox and Thunderbird
 
 After installation of OpenSC you must register the PKCS11 module in Firefox:
