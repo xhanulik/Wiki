@@ -51,15 +51,20 @@ h3. 2. Read and write data object (DO)
 
 Use @opensc-explorer@.
 For example, you want to change card holder name:
+
 1. Run @opensc-explorer@
+
 2. Verify Admin PIN by this command
 <pre><code>verify CHV3 3132333435363738</code></pre>
 
 in which @CHV3@ means Admin PIN is to be verified (User PIN will be CHV1 or CHV2) and @3132333435363738@ is ASCII-decoded hex string of PIN code "12345678".
+
 3. Put data to 005B DO, the DO containing card holder name:
 <pre><code>do_put 005B "Quan"</code></pre>
+
 4. Remove it afterwards:
 <pre><code>do_put 005B ""</code></pre>
+
 5. Or change user PIN to "654321":
 <pre><code>change CHV1 31:32:33:34:35:36 "654321"</code></pre>
 Where @31:32:33:34:35:36@ is hex string of ASCII-decoded old PIN “123456”.
@@ -69,6 +74,8 @@ Reading DO content is not as straightforward as writing, because the DOs are nes
 OpenSC [3F00/0065]> cat 005B
 00000000: 51 75 61 6E Quan
 </code></pre>
+
+**Note**: We cannot delete DO content with <code>delete/rm</code> command. Technical reason: The OpenSC framework doesn't pass the full path of file to OpenPGP driver, so the driver cannot identify the DO to be deleted.
 
 h3. 3. Generating keys
 
