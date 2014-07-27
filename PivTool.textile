@@ -110,10 +110,19 @@ which matchs the key reference of 9A using a RSA 1024 bit key, and pkcs#11 ID 1.
 h3. Clear a certificate on the card
 
 There is no delete object command. Therefore write an object with a tag
-of zero, using External Authenticate to the card using authentication:
+and length zero, using External Authenticate to the card using authentication:
 
 <pre><code> piv-tool -A A:9B:03 -s 00:DB:3F:FF:07:5C:03:5F:C1:05:53:00
 </code></pre>
+
+Note:
+00:DB:3F:FF is the PUT DATA command (NIST 800-73-3 part 2 Section 3.3.1
+and tables 7 and 8)  It takes two data fields, 5C (tag of the object to be written)
+and 53 the data of the object. To clear the object the length for the data is 00.
+ 
+In the example above 5F:C1:05 is BER-TLV Tag for "X.509 Certificate for PIV Authentication"
+(NIST 800-73-3 part 1 table 2)
+
 
 (This needs to done if there is already a certificate on the card, otherwise
 a generate cert request may use the public key from the old certificate,
