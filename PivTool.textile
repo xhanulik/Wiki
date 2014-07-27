@@ -112,7 +112,7 @@ h3. Clear a certificate on the card
 There is no delete object command. Therefore write an object with a tag
 of zero, using External Authenticate to the card using authentication:
 
-<pre><code> piv-tool -A A:9B:03 -s 00:DB:3F:FF:09:5C:03:5F:C1:05:53:00:00:00
+<pre><code> piv-tool -A A:9B:03 -s 00:DB:3F:FF:07:5C:03:5F:C1:05:53:00
 </code></pre>
 
 (This needs to done if there is already a certificate on the card, otherwise
