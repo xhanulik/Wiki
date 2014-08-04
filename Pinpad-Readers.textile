@@ -24,7 +24,7 @@ Class 3 readers have pinpad and a display.
 | SCM SPR 332, 532 "Chipdrive Pinpad" | Win32 & Linux | Class 2 USB | CTPCSC32.dll | A widely used CCID compliant reader. I also got it working on Linux following Martin's CardReaders/SPR532 suggestions |
 | Xiring XiPass | Win32 | Class 3 PS/2 | PC/SC only | Works well with Win32, pinpad entry works with EstEID CSP, no official Unix support, still there is an openct driver for it. |
 | Reiner SCT cyberjack pinpad| Mac OS X|Class 2 USB|with pcscd|If you start the pcscd per hand it works well with the Drivers provided by Reiner SCT. I haven't managed to entry the pin with the Reader's keyboard|
-|| "Reiner SCT cyberJack pinpad":http://www.reiner-sct.com/content/view/4/16/|| Linux||Class 2 USB|| Reiner SCT CT-API driver||Class 2 Smartcard reader with "official LGPL drivers":http://www.reiner-sct.com/content/view/32/43/#linux (packages for most linux distributions). Pinpad fully supported (tested on SuSE 10.2). Good Linux support!
+| "Reiner SCT cyberJack pinpad":http://www.reiner-sct.com/content/view/4/16/| Linux|Class 2 USB| Reiner SCT CT-API driver|Class 2 Smartcard reader with "official LGPL drivers":http://www.reiner-sct.com/content/view/32/43/#linux (packages for most linux distributions). Pinpad fully supported (tested on SuSE 10.2). Good Linux support! |
 | Gemalto PC PinPad Reader | Win32 & Linux | Class 3 USB | PC/SC, ?? | CCID compliant. No special actions was needed to get it working on Linux and Win32. (Don't know if it's important -- on Windows 'Gemalto Access' middleware was installed. --VTA) |
 
 Kobil and OmniKey also offer pinpad readers, if someone could test one of those with OpenSC feedback would be appreceated. 
