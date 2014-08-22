@@ -38,19 +38,15 @@ sudo make install
 h2. Detailed instructions
 
 
-h3. Ubuntu
+h3. Ubuntu / Debian
 
 Install generic build tools:
-<pre><code>sudo apt-get install pcscd libccid libpcsclite-dev libssl-dev libreadline-dev autoconf automake build-essential docbook-xsl xsltproc libtool
+<pre><code>sudo apt-get install pcscd libccid libpcsclite-dev libssl-dev libreadline-dev autoconf automake build-essential docbook-xsl xsltproc libtool pkg-config
 ./bootstrap
 ./configure --prefix=/usr --sysconfdir=/etc/opensc
 make
 sudo make install
 </code></pre>
-
-h3. Debian
-
-Use Ubuntu instructions
 
 h3. Fedora
 
