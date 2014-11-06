@@ -604,7 +604,7 @@ Please remember to present the share id as well as the share value.
 Please enter prime: f3:4a:18:9d:e5:19:7c:fb
 </code></pre>
 
-Only the first key custodian must enter the prime number and then the number of key custodians defined by --pwd-shares-total are requested to enter their share value:
+Only the first key custodian must enter the prime number and then the number of key custodians defined by --pwd-shares-threshold are requested to enter their share value:
 
 <pre><code>
 Share 1 of 3
