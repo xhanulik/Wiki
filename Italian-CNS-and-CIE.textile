@@ -14,11 +14,11 @@ All CNS/CIE cards carry one X.509 certificate with its public and private keys, 
 
 h2. References
 
-"CNS tech specs":http://www.cnipa.gov.it/site/it-IT/Attività/Certificatori_accreditati/Carta_Nazionale_dei_Servizi/Specifiche_tecniche/:
- * "Functional Specification v. 1.1.5":http://www.cnipa.gov.it/html/docs/CNS%20Functional%20Specification%201.1.5_11012010.pdf (in English)
- * "Filesystem layout":http://www.cnipa.gov.it/site/_files/FileSystemCNS_21112005.pdf (in Italian)
- * "X.509 certificate structure":http://www.cnipa.gov.it/site/_files/StrutturaCertificatoAutenticazioneCNS_v1.1_.pdf (in Italian)
- * General "guidelines":http://www.cnipa.gov.it/site/_files/LineeguidaCNS(v3.0).pdf for the issue and usage of the CNS (in Italian)
+"CNS tech specs": http://www.agid.gov.it/identita-digitali/carta-nazionale-servizi/specifiche-tecniche:
+ * "Functional Specification v. 1.1.6": http://www.agid.gov.it/sites/default/files/documentazione_trasparenza/cns_functional_specification_1.1.6_02042011.pdf (in English)
+ * "Filesystem layout": http://www.agid.gov.it/sites/default/files/documentazione_trasparenza/filesystemcns_20131216.pdf (in Italian)
+ * "X.509 certificate structure": http://www.agid.gov.it/sites/default/files/documentazione_trasparenza/strutturacertificatoautenticazionecns_v1.1_.pdf (in Italian)
+ * General "guidelines": http://www.agid.gov.it/sites/default/files/documentazione_trasparenza/lineeguidacnsv3.0.pdf (in Italian)
 
 "CIE specs":http://www.servizidemografici.interno.it/sitoCNSD/documentazioneRicerca.do?metodo=homePage&servizio=documentazione&codiceFunzione=DO: (leave the search box empty and hit "Inizia la ricerca" to get a full listing of the documents)]:
  * "Physical features":http://www.servizidemografici.interno.it/sitoCNSD/ricercaAllegatiFunzione.do?servizio=allegati&metodo=contenutoAllegato&ALLEGATO_ID_ALLEGATO=345&ALL_NO_FI_AL=CIE_inglese.pdf (in English)
