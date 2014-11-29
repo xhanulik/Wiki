@@ -71,7 +71,7 @@ A: Read-only mode means that OpenSC can be used to use the keys and certificates
 
 h3. Q: What to do if my card is not supported by OpenSC?
 
-A: Somebody needs to write a driver for it. You can start by sending as much information as you can about the card to [MailingLists opensc-devel mailing list]. Be sure to send the card ATR by sending the output of _opensc-tool --atr_
+A: Somebody needs to write a driver for it. You can start by sending as much information as you can about the card to [[opensc-devel mailing list|Mailing-lists]]. Be sure to send the card ATR by sending the output of _opensc-tool --atr_
 
 h3. Q: Can I use Aladdin eToken with OpenSC?
 
