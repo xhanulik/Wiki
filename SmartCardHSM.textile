@@ -297,6 +297,8 @@ If the SmartCard-HSM was never initialized before, the presented SO-PIN is store
 
 The SO-PIN must be composed of 16 hexadecimal characters. The value is internally converted into an 8 byte key value. The SO-PIN has a retry counter of 15 and can not be unblocked. Blocking the SO-PIN will prevent any further token initialization or PIN unblock.
 
+Please note that while changing the PIN later is possible, changing its _size_ (length) is not. Current card version 1.2 does not allow this without reinitializing the card.
+
 The parameter --label is required by PKCS#11, but has not effect on version 0.13. OpenSC versions from the current master support storing the label.
 
 For SmartCard-HSMs in a version before 1.0, the --init-pin option can only be used immediately after the --init-token command. To reset a lost PIN you will need to reinitialize the device. For SmartCard-HSMs with version 1.0 or above the --init-pin command can be used at any time, allowing to unblock and reset the PIN using the SO-PIN.
