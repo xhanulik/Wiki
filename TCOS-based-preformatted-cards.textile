@@ -16,7 +16,7 @@ All other trust center that were using TCOS2 cards until the end of 2007 do not 
 
 h2. NetKey E4 filesystem layout
 
-!NetKey E4 cards contain different applications. Two of them, namely application NKS and application SIGG, are made visible through the NetKey emulation layer. The NKS application contains 3 keypairs (4 on TCOS3-cards), 3 read only certificates, 6 empty certificate files, 2 PINs and one signature-counter. The SigG application contains one keypair that can be used according to german signature law, 1 certificate and 1 PIN. The NetKey emulation layer will show you all these keys and certificates. With TCOS2-cards you can use all of them, with TCOS3-cards you can only use the keys within the NKS application. To use the signature key on TCOS3-cards a secure channel MUST be created and this is something OpenSC does not support yet. I was thinking about a workaround, which will temporarily create a secure channel before the signature key is used and closes this channel immediately after. Let [mailto:pk@opensc-project.org me] know if you want to use the signature key of TCOS3 based cards with OpenSC. If nobody is interested I will work on other things.
+!NetKey E4 cards contain different applications. Two of them, namely application NKS and application SIGG, are made visible through the NetKey emulation layer. The NKS application contains 3 keypairs (4 on TCOS3-cards), 3 read only certificates, 6 empty certificate files, 2 PINs and one signature-counter. The SigG application contains one keypair that can be used according to german signature law, 1 certificate and 1 PIN. The NetKey emulation layer will show you all these keys and certificates. With TCOS2-cards you can use all of them, with TCOS3-cards you can only use the keys within the NKS application. To use the signature key on TCOS3-cards a secure channel MUST be created and this is something OpenSC does not support yet.
 
 <pre><code>  pkcs15-tool -c
 </code></pre>
@@ -63,7 +63,7 @@ h3. How do I store additional certificates into the above mentioned empty certif
 
 You (and OpenSC) don't see the empty certificate files through the emulation layer. One consequence is that you cannot store your own certificates into these files with pkcs11-tool or pkcs15-init.
 
-You must use opensc-explorer and store the certificate directly into the right position or use netkey-tool, a small program, that I wrote exactly for that purpose. Since version 0.7 of SCB netkey-tool is contained in the Windows version too. As of march 2009 netkey-tool does support NetKey E4 cards only. Let [mailto:pk@opensc-project.org me] know if you want to use netkey-tool with NetKey E4 V3 cards.
+You must use opensc-explorer and store the certificate directly into the right position or use netkey-tool, a small program, that I wrote exactly for that purpose. Since version 0.7 of SCB netkey-tool is contained in the Windows version too. As of march 2009 netkey-tool does support NetKey E4 cards only.
 
 In general (and in particular with TCOS-cards) it's a lot more complicated to create a new file on a smartcard than updating an existing one. That's the reason why there are empty certificate files on a NetKey E4 card. They contain 1536 0xFF-bytes and you can overwrite them with your own certificate (if your certificate has at most 1536 bytes).
 
