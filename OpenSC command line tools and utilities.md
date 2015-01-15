@@ -1,4 +1,5 @@
-h1. OpenSC command line tools and utilities
+OpenSC command line tools and utilities
+=======================================
 
 The following executables are included with OpenSC:
 
@@ -34,9 +35,10 @@ The following executables are included with OpenSC:
     * `eidenv`
       * has no manpage
 
-h2. Tasks
+Tasks
+-----
 
  * Functionality doable via common interfaces ("libopensc abstraction" which currently means PKCS#15) must not be replicated
  * Uniform look and feel for commands, utility functions that are supposed to be used, must be used.
-  * PIN entry via command line/stdin/env/pinpad and cancellation must behave the same way with all tools
+   * PIN entry via command line/stdin/env/pinpad and cancellation must behave the same way with all tools
 
