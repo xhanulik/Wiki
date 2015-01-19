@@ -29,6 +29,10 @@ h2. Version 3.2
 
 This OS version is used in the current (2010) signature cards (Card 3.2, MCard 3.2, MCard100 3.2) offered by SignTrust. It appears to support RSA up to 2048b key length. See "the BSI certification":https://www.bsi-fuer-buerger.de/cae/servlet/contentblob/485364/publicationFile/29254/02114_pdf.pdf of these cards.
 
+h2. Version 3.4
+
+Initial support for German D-Trust cards is available from the patch in "pull request #357":https://github.com/OpenSC/OpenSC/pull/357.
+
 h1. Erasing cards
 
 Only test cards with StarCOS are erasable. If the last byte of the return
