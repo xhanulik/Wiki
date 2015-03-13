@@ -120,7 +120,7 @@ it means that the middleware is corectly installed, but `etokenframework.pkg` is
 
 h3. Linux
 
-The middleware for Linux is available here:  ftp://ftp.ealaddin.com/pub/etoken/Linux ; and a third party provides the the "key-management tool for Linux":http://www.etokenonlinux.org (you don't need the latter if you just want your token to work with OpenSC).
+The middleware for Linux is available here:  ftp://ftp.ealaddin.com/pub/etoken/Linux ; and a third party provides the the "key-management tool for Linux" (you don't need the latter if you just want your token to work with OpenSC).
 
 h2. Thanks
 
