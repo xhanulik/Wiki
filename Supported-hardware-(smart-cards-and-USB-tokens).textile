@@ -9,7 +9,7 @@ h2. National ID Cards
 
 These are usually pre-initialized read-only cards.
 Supported eID cards:
- * "USB Key Token, USB Token, Key Token, Digital Signature Certificate":http://digitalsignaturestore.com/guestblog/digital-certificates-part-iv-setting-up-a-pki/
+ * "USB Key Token, USB Token, Key Token, Digital Signature Certificate":http://digitalsignaturestore.com/index.php?id_category=14&controller=category
  * [[<b>IAS-ECC</b>|IAS-ECC]]
  * [[<b>UnitedStatesPIV</b>|US-PIV]]
  * [[<b>GermanEid</b>|German-ID-Cards]]
