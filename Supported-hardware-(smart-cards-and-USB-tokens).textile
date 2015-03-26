@@ -62,6 +62,7 @@ Each entry on this list possibly represents a whole family of tokens. See each p
  * [[<b>Feitian PKI token</b>|Feitian-ePass-PKI-token]]
  * [[<b>Rainbow iKey 3000</b>|iKey-3000]]
  * [[<b>Schlumberger / Axalto e-gate</b>|Schlumberger-Axalto-Gemalto-e-gate]]
+ * "USB Key Token, USB Token, Key Token, Digital Signature Certificate":http://digitalsignaturestore.com/index.php?id_category=14&controller=category
 
 
 <b>Did not find your card from the supported card list?</b> See [[FrequentlyAskedQuestions|Frequently-Asked-Questions]] for next steps.
@@ -86,7 +87,7 @@ Unclear/unsupported eID cards:
 Unsupported USB tokens:
  * [[<b>RainbowIkeyFour</b>|iKey-4000]]
  * [[<b>CryptoIdentityItsec</b>|Eutron-CryptoIdentity-ITSEC-I-ITSEC-P]]
- * "USB Key Token, USB Token, Key Token, Digital Signature Certificate":http://digitalsignaturestore.com/index.php?id_category=14&controller=category
+
 
 Unsupported smart cards:
  * [[<b>IbmJcop</b>|IbmJcop]]
