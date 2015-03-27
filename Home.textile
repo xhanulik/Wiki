@@ -4,7 +4,7 @@ OpenSC provides a set of libraries and utilities to work with smart cards. Its m
 
 OpenSC is written by an international team of volunteers and is licensed as "Open Source":http://www.opensource.org/ software under the  "LGPL license":http://www.opensource.org/licenses/lgpl-license.php version 2.1 of the License, or (at your option) any later version. For a list of all authors and contributors as well as detailed license information see [[OpenSC-Credits|OpenSC-Credits]].
 
-If you are new to smart cards, see OverView and [[<b>FrequentlyAskedQuestions</b>|Frequently-Asked-Questions]] pages. Always check [[<b>SecurityAdvisories</b>|OpenSC-security-advisories]].
+If you are new to smart cards, see [[<b>OverView</b>|Overview]] and [[<b>FrequentlyAskedQuestions</b>|Frequently-Asked-Questions]] pages. Always check [[<b>SecurityAdvisories</b>|OpenSC-security-advisories]].
 
 The latest stable version of OpenSC is <b>0.14.0</b> ("released on 30.06.2014":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.14.0/)
  * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.14.0/
