@@ -94,7 +94,7 @@ One minor misfeature of the Siemens CardOS M4 is that an RSA key cannot be used 
 
 h2. Installation Notes
 
-Aladdin provides their own software, which comprises both the middleware (necessary for all CardOS-based tokens) and the key-management tool ("also for Linux":http://www.etokenonlinux.org) which is not compatible with PKCS#15.  (However, as long as enough memory is available on the chip, it is possible to initialize the token with both OpenSC and this proprietary key manager, and thus install files and keys side by side - each software can then only handle their own structures.)
+Aladdin provides their own software, which comprises both the middleware (necessary for all CardOS-based tokens) and the key-management tool ("also for Linux":http://www.etokenonlinux.org (link outdated)) which is not compatible with PKCS#15.  (However, as long as enough memory is available on the chip, it is possible to initialize the token with both OpenSC and this proprietary key manager, and thus install files and keys side by side - each software can then only handle their own structures.)
 
 h3. Mac OS X
 
