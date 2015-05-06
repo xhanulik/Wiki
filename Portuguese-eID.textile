@@ -8,7 +8,7 @@ It appears that two versions of the card exist. One is based on the Gemsafe appl
 
 h2. Official Middleware
 
-The "software download page":http://www.cartaodocidadao.pt/index.php?option=com_content&task=view&id=102&Itemid=44&lang=pt lists software for Windows, Mac OS X and Linux. Parts of the software are based on OpenSC (custom libopensc provided with the software).
+The "software download page":https://www.cartaodocidadao.pt/index.php_option=com_content&task=view&id=102&Itemid=44&lang=pt.html lists software for Windows, Mac OS X and Linux. Parts of the software are based on OpenSC (custom libopensc provided with the software).
 
 At this time, the official OS X version does not provide a Tokend, so the card is not supported by applications which use the CDSA/CSSM API. Also, no source code is provided.
 
