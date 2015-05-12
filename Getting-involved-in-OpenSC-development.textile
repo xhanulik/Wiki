@@ -8,6 +8,8 @@ h2. Development process
  * Contribution should comply with coding guidelines. A minimal <b>[[Development Policy|Development-Policy]]</b> exists.
  * To develop OpenSC, you may use github.
  * [[DRAFT Howto add/support a new card|Adding-a-new-card-driver]]
+ * Test Tools
+  * "Minidriver":https://github.com/OpenSC/OpenSC/issues/426#issuecomment-100978020 
 
 
 h2. github process
