@@ -7,10 +7,7 @@ h2. Description
 
 piv-tool can be used to do some very primitive card administration operations on PIV cards. Card administration operations may vary from vendor to vendor. This tool is meant for testing during development and is by no means complete. 
 
-Before an administrative card operation can be preformed, authentication of the piv-tool to the 
-card may be needed. After the card is personalized, additional commands may be needed to complete the 
-personalization. See your vendor's instructions for more details, including the difference between 
-Mutual authentication and External authentication. 
+Before an administrative card operation can be preformed, authentication of the piv-tool to the card may be needed. After the card is personalized, additional commands may be needed to complete the personalization. See your vendor's instructions for more details, including the difference between Mutual authentication and External authentication. 
  
 piv-tool is similar to opensc-tool but takes some additional parameters for use with the PIV cards.
     
@@ -44,8 +41,7 @@ h2. Options
 
 --genkey, -G <ref>:<alg> 
 
- Generate a key pair for <ref> with algorithm <alg> 
- and write public key to --out <file>.
+ Generate a key pair for <ref> with algorithm <alg> and write public key to --out <file>.
 
 --cert, -C <ref>  
 
@@ -65,8 +61,7 @@ h2. Options
 
 --send-apdu, -s <arg> 
 
- send an APDU after doing any -A operation. APDU is 
- in the form AA:BB:CC:DD...
+ send an APDU after doing any -A operation. APDU is in the form AA:BB:CC:DD...
 
 --reader, -r <arg> 
 
@@ -86,16 +81,13 @@ h2. Options
 
 h2. Examples
 
-In the following examples $CARD is used by your scripts to
-identify the specific card.   
+In the following examples $CARD is used by your scripts to identify the specific card.   
 
 h3. Generate a key pair 
 
 The card can have 4 different keys and matching certificates.
-These correspond to <ref> 9A, 9C, 9D and 9E. With pkcs#11
-these correspond with ID: 1, 2, 3, 4.   
-We will create the key for the "X.509 Certificate for PIV Authentication" 
-which matchs the key reference of 9A using a RSA 1024 bit key, and pkcs#11 ID 1.
+These correspond to <ref> 9A, 9C, 9D and 9E. With pkcs#11 these correspond with ID: 1, 2, 3, 4.   
+We will create the key for the "X.509 Certificate for PIV Authentication" which matchs the key reference of 9A using a RSA 1024 bit key, and pkcs#11 ID 1.
   
 
 <pre><code> PIV_EXT_AUTH_KEY=card/external.3des.key.$CARD
