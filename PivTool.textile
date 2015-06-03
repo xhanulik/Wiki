@@ -10,7 +10,7 @@ Card administration operations may vary from vendor to vendor. This tool is mean
 during development and is by no means complete. 
 
 Before an administrative card operation can be preformed, authentication of the piv-tool to the 
-card may be needed. After the card is personalized, addition command my be needed to complete the 
+card may be needed. After the card is personalized, additional commands may be needed to complete the 
 personalization. See your vendor's instructions for more details, including the difference between 
 Mutual authentication and External authentication. 
  
