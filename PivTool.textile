@@ -5,9 +5,7 @@ piv-tool perform some very primitive card administration operation on [[PIV card
 
 h2. Description
 
-piv-tool can be used to do some very primitive card administration operations on PIV cards. 
-Card administration operations may vary from vendor to vendor. This tool is meant for testing 
-during development and is by no means complete. 
+piv-tool can be used to do some very primitive card administration operations on PIV cards. Card administration operations may vary from vendor to vendor. This tool is meant for testing during development and is by no means complete. 
 
 Before an administrative card operation can be preformed, authentication of the piv-tool to the 
 card may be needed. After the card is personalized, additional commands may be needed to complete the 
@@ -16,9 +14,7 @@ Mutual authentication and External authentication.
  
 piv-tool is similar to opensc-tool but takes some additional parameters for use with the PIV cards.
     
-See "NIST 800-73-1":http://csrc.nist.gov/publications/nistpubs/800-73-1/sp800-73-1v7-April20-2006.pdf  
-Table 12 for definitions of <ref> and <alg> and section 7.2.4 for the difference between 
-Mutual and External Authentication.
+See "NIST 800-73-1":http://csrc.nist.gov/publications/nistpubs/800-73-1/sp800-73-1v7-April20-2006.pdf Table 12 for definitions of <ref> and <alg> and section 7.2.4 for the difference between Mutual and External Authentication.
 
 h2. Synopsis
 
