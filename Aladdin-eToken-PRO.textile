@@ -8,7 +8,7 @@ h1. Aladdin eToken PRO
 
 The eToken PRO is fully supported by OpenSC and is well tested.
 
-Note: some 72k Java cards "do not work":#461.
+Note: some 72k Java cards "do not work":#https://github.com/OpenSC/OpenSC/issues/461.
 
 
 
@@ -137,4 +137,3 @@ those Tokens (not yet released, will be included in the next release).
 Big thanks to Josef Gillhuber from "Aladdin":http://www.aladdin.com. He donated two eToken PRO (32k and 64k) on "LinuxTag 2006":http://www.opensc-project.org/history.html#LinuxTag2006.
 
 Thanks to Roman Stahl, he donated two Aladdin eToken PRO 32k (4.2B), so we could verify: they work fine too.
-
