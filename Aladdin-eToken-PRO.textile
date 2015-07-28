@@ -8,6 +8,8 @@ h1. Aladdin eToken PRO
 
 The eToken PRO is fully supported by OpenSC and is well tested.
 
+Note: some 72k Java cards [do not work](#461).
+
 
 
 h2. Models
