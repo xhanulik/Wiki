@@ -102,7 +102,7 @@ Private RSA Key [My Private Key]
 	ID             : 04830838b7c9752bd0e90c96a88b989a80f45181
 	GUID           : {04830838-b7c9-752b-d0e9-0c96a88b989a}
 $ openssl
-OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/openssl/engines/engine_pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre MODULE_PATH:opensc-pkcs11.so
+OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/engines/engine_pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre MODULE_PATH:opensc-pkcs11.so
 (dynamic) Dynamic engine loading support
 [Success]: SO_PATH:/usr/lib/openssl/engines/engine_pkcs11.so
 [Success]: ID:pkcs11
