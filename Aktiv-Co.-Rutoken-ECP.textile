@@ -346,11 +346,11 @@ bgmRWPNLbzbjiPxIVJWnvli4l4ZcV37LxAry1qzDkBErAA==
 
 h2. Speed
 
-(With OpenSC 0.12.0 pkcs15-init tool on Mac OS X 10.6)
- * Erasing: real 0m16.517s
+(With OpenSC 0.14.0 pkcs15-init tool on Ubuntu 15.04)
+ * Erasing: ~0m15s
  * GOST key generation: 0m3.883s
- * RSA 1024 key generation: 1m21.419s
- * RSA 2048 key generation: "forever" (11m15.332s)
+ * RSA 1024 key generation: ~0m30s
+ * RSA 2048 key generation: ~6m00s
 
 h2. Notes
 
