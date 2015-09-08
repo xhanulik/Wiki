@@ -141,7 +141,7 @@ Note that the OpenPGP Card v2 contains only 1 certificate, so the ID to store is
 
 h5. Only key:
 
-bc. pkcs15-init --delete-objects privkey,pubkey --id 3 --store-private-key mykey.pem --auth-id 3 --id 3
+bc. pkcs15-init --delete-objects privkey,pubkey --id 3 --store-private-key mykey.pem --auth-id 3 --verify-pin --id 3
 
 In which the PEM file is extracted from a p12 file using OpenSSL
 (certificate is stripped out):
@@ -150,14 +150,14 @@ bc. openssl pkcs12 -in myprivate.p12 -nocerts -out mykey.pem
 
 h5. Pairs of key & certificate from P12 file:
 
-bc. pkcs15-init --delete-objects privkey,pubkey --id 3 --store-private-key myprivate.p12 --format pkcs12 --auth-id 3
+bc. pkcs15-init --delete-objects privkey,pubkey --id 3 --store-private-key myprivate.p12 --format pkcs12 --auth-id 3 --verify-pin
 
 *Notes:*
  * In current version, @pkcs15-init@ tool is pretty silent, so you may not recognize if the operation is successful or not. You should run @pkcs15-init@ in debug mode (set environment variable @OPENSC_DEBUG=3@).
  * In p12 file, the @pkcs15-init@ detect X.509 certificates in hierarchy, in which only the first found certificate need to be imported. But @pkcs15-init@ then try to do with all, so the later imports will fail. You can see some error messages due to this failure, but it is OK because the main certificate has been imported successfully.
  * The certificate can be used to encrypt email. But to make decryption work, the corresponding private key need to be import to “Decryption Key” (ID=2) as well (normally, it is imported to “Authentication Key”, which has the same ID=3 as certificate).
 
-bc. pkcs15-init --delete-objects privkey,pubkey --id 2 --store-private-key mykey.pem --auth-id 3 --id 2
+bc. pkcs15-init --delete-objects privkey,pubkey --id 2 --store-private-key mykey.pem --auth-id 3 --verify-pin --id 2
 
 h3. 7. Delete certificate
 
