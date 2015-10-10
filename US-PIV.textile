@@ -1,32 +1,16 @@
 h1. US PIV
 
-The "National Institute of Standards and Technology":http://www.nist.gov/, U.S. Department of Commerce has defined a 
-smart card application. Although not a "national ID card", it is expected to be used widely in the 
-U.S.federal government and its contractors. Cards with this application are commonly referred to as PIV cards. 
+The "National Institute of Standards and Technology":<http://www.nist.gov/>, U.S. Department of Commerce has defined a  smart card application. Although not a "national ID card", it is expected to be used widely in the U.S. federal government and its contractors. Cards with this application are commonly referred to as PIV cards. 
 
-NIST Spical Publication 800-73-3 (See below) and related 
-documents define PIV. Part 2 of 800-73-3 defines the ADPU commands accepted 
-by the PIV application on the card. The standard does not define all the commands needed to
-administer a card, leaving this up to the card vendors and card administration software vendors.
+NIST Spical Publication 800-73-3 (See below) and related documents define PIV. Part 2 of 800-73-3 defines the ADPU commands accepted by the PIV application on the card. The standard does not define all the commands needed to administer a card, leaving this up to the card vendors and card administration software vendors.
 
-The non-administrative commands are standardized, and so any vendor's card with the PIV application
-should inter operate with any vendor's client software. The 
-"pkcs11-tool":http://www.opensc-project.org/doc/opensc/html/tools.html#pkcs11-tool can be used
-to read the objects on the card and to change the user PIN.   
+The non-administrative commands are standardized, and so any vendor's card with the PIV application should inter operate with any vendor's client software. The "pkcs11-tool": <http://www.opensc-project.org/doc/opensc/html/tools.html#pkcs11-tool> can be used to read the objects on the card and to change the user PIN.   
 
-The [[piv-tool|PivTool]] is provided to allow for some card administration in testing, such as generating
-a key pair, and loading a certificate or other object on the card. You may need more information
-from your card vendor.       
+The [[piv-tool|PivTool]] is provided to allow for some card administration in testing, such as generating a key pair, and loading a certificate or other object on the card. You may need more information from your card vendor.       
 
-The PIV is not a PKCS#15 type card, but rather an object based application. OpenSC provides 
-a PKCS#15 emulator to access the certificates and keys, along with the data objects. 
-Thus for example the "X.509 Certificate for PIV Authentication" can be used with PKCS#11 for
-login or web access.
+The PIV is not a PKCS#15 type card, but rather an object based application. OpenSC provides a PKCS#15 emulator to access the certificates and keys, along with the data objects. Thus for example the "X.509 Certificate for PIV Authentication" can be used with PKCS#11 for login or web access.
 
-
-OpenSC 0.11.1 did not search arbitrary cards for the PIV application, and set the max_send_size and max_recv_size
-to low for PIV cards. With 0.11.1 you needed to add the ATR of specific vendor's cards to the opensc.conf.
-The ATR of your card can be read using the "opensc-tool":http://www.opensc-project.org/doc/opensc/html/tools.html#opensc-tool.
+OpenSC 0.11.1 did not search arbitrary cards for the PIV application, and set the max_send_size and max_recv_size to low for PIV cards. With 0.11.1 you needed to add the ATR of specific vendor's cards to the opensc.conf. The ATR of your card can be read using `opensc-tool`: <http://www.opensc-project.org/doc/opensc/html/tools.html#opensc-tool>
 
 OpenSC 0.11.2 added support for certificates that are gzip'ed. But only 1024 bit RSA keys are supported.
 
@@ -60,60 +44,59 @@ OpenSC 0.12.1 bug fixes:
 * (Although not PIV specific) a bug was introduced during the release cycle for 0.12.1 where the pam_krb5 login or Kerberos kinit may fail. The circumvention is to set in the opensc.conf file plug_and_play = false; C_GetSlotList with tokenpresent=1 would return the hotplug slot even if emply as the first slot. 
    
 OpenSC 0.13.0:
-* ECDH with key derivation is now supported via PKCS#11 C_Derive using CKM_ECDH1_COFACTOR_DERIVE or CKM_ECDH1_DERIVE. The KDF must be CKD_NULL. See the pkcs11-tool.c for an example.
+* ECDH with key derivation is now supported via PKCS#11 C_Derive using `CKM_ECDH1_COFACTOR_DERIVE` or `CKM_ECDH1_DERIVE`. The KDF must be `CKD_NULL`. See the pkcs11-tool.c for an example.
 
-* CK_ALWAYS_AUTHENTICATE is supported for the signing key. This requires the PIN to be entered before cypto opertation when using the signing certificate. 
+* `CK_ALWAYS_AUTHENTICATE` is supported for the signing key. This requires the PIN to be entered before cypto operation when using the signing certificate. 
 
 * Some applications may not yet support the use of CKA_ALWAYS_AUTHENTICATE also know as user_consent in PKCS#15. A new paramater "pin_cache_ignore_user_consent = true;" has been added to the opensc.conf. Uncomment this line to use with these older applications, for example as of 10/2012, versions of Firefox and Thunderbird. 
 
 
 No changes are needed to the opensc.conf file when using 0.11.4 and above, but here are sample changes needed for 0.11.1 in the opensc.conf file to use some GemAalto and Oberthur PIV cards. If other vendors produce PIV cards, you may have to add their ATRs:
 
-<pre><code>...
-    reader_driver xxxxx {
-...
-        max_send_size = 255;
-        max_recv_size = 256;
-...
-    }
-...
-    card_atr 3B:7D:96:00:00:80:31:80:65:B0:83:11:11:AC:83:00:90:00 {
-            # GemAlto
-            name = "PIV-II";
-            driver = "piv";
+    ...
+        reader_driver xxxxx {
+    ...
+            max_send_size = 255;
+            max_recv_size = 256;
+    ...
         }
-    card_atr 3b:db:96:00:81:b1:fe:45:1f:03:80:f9:a0:00:00:03:08:00:00:10:00:18 {
-            #    Oberthur 
-            name = "PIV-II";
-            driver = "piv";
+    ...
+        card_atr 3B:7D:96:00:00:80:31:80:65:B0:83:11:11:AC:83:00:90:00 {
+                # GemAlto
+                name = "PIV-II";
+                driver = "piv";
+            }
+        card_atr 3b:db:96:00:81:b1:fe:45:1f:03:80:f9:a0:00:00:03:08:00:00:10:00:18 {
+                #    Oberthur 
+                name = "PIV-II";
+                driver = "piv";
+            }
+    ...
+        framework pkcs15 {
+    ...
+            emulate PIV-II {
+            }
+    ...
         }
-...
-    framework pkcs15 {
-...
-        emulate PIV-II {
-        }
-...
-    }
-...
-</code></pre>
+    ...
 
 h1. Links
 
 h2. PIV Overview
 
- "http://csrc.ncsl.nist.gov/piv-program/":http://csrc.ncsl.nist.gov/piv-program/  
+<http://csrc.ncsl.nist.gov/piv-program/>
 
 h2. PIV, PIV Interoperable and PIV Compatible
 
- "http://www.idmanagement.gov/documents/PIV_IO_NonFed_Issuers_May2009.pdf":http://www.idmanagement.gov/documents/PIV_IO_NonFed_Issuers_May2009.pdf
+<http://www.idmanagement.gov/documents/PIV_IO_NonFed_Issuers_May2009.pdf>
+
 Recomendations on how PIV cards can used outside of the U.S. Goverenment. 
   
 
 h2. NIST Special Publications - 800-73-3
 
- "http://csrc.nist.gov/publications/PubsSPs.html":http://csrc.nist.gov/publications/PubsSPs.html
-Look for 800-73-3. Part 2 has the ADPU commands. 
+<http://csrc.nist.gov/publications/PubsSPs.html>: Look for 800-73-3. Part 2 has the ADPU commands. 
 
 h2. PIV Approved Cards, Readers, Middleware etc
 
-  "http://fips201ep.cio.gov/apl.php":http://fips201ep.cio.gov/apl.php
+<http://fips201ep.cio.gov/apl.php>
