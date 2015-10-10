@@ -1,7 +1,6 @@
 h1. US PIV
 
-The "National Institute of Standards and Technology":http://www.nist.gov/, U.S. Department of Commerce has defined a 
-smart card application. Although not a "national ID card", it is expected to be used widely in the U.S.federal government and its contractors. Cards with this application are commonly referred to as PIV cards. 
+The "National Institute of Standards and Technology":http://www.nist.gov/, U.S. Department of Commerce has defined a  smart card application. Although not a "national ID card", it is expected to be used widely in the U.S.federal government and its contractors. Cards with this application are commonly referred to as PIV cards. 
 
 NIST Spical Publication 800-73-3 (See below) and related documents define PIV. Part 2 of 800-73-3 defines the ADPU commands accepted by the PIV application on the card. The standard does not define all the commands needed to administer a card, leaving this up to the card vendors and card administration software vendors.
 
