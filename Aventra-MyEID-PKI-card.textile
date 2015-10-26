@@ -135,3 +135,4 @@ h2. Speed
 h2. Notes
  * Card requires a PUK code when creating a PIN code (fails to create a PIN without a PUK)
  * *Aventra's MyEID minidriver has passed Microsoft Windows Hardware Certification* and it will soon be available from Windows Update (Smart Card Plug and Play). You can also download it "here.":http://aventra.fi/English/downloads_Minidriver_E.html <small>(2013-01-11)</small>
+ * You can <b>not</b> upload custom Java-Applets like the openpgpcard-applet to the Aventra MyEID-card because the card is locked and Aventra refuses to hand out the required PIN.
