@@ -8,19 +8,18 @@ If you are new to smart cards, see [[<b>OverView</b>|Overview]] and [[<b>Frequen
 
 The latest stable version of OpenSC is <b>0.15.0</b> ("released on 16.05.2015":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.15.0/)
  * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.15.0/
- * OpenSC "nightly builds":https://sourceforge.net/projects/opensc/files/OpenSC/nightly/
  * "Mac OS X 10.9 and 10.10 installer":https://github.com/OpenSC/OpenSC/releases/download/0.15.0/OpenSC-0.15.0.dmg
 
 The previous stable version of OpenSC was <b>0.14.0</b> ("released on 30.06.2014":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.14.0/)
  * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.14.0/
- * OpenSC "nightly builds":https://sourceforge.net/projects/opensc/files/OpenSC/nightly/
  * "Mac OS X 10.9 and 10.10 installer":https://github.com/OpenSC/OpenSC/releases/download/0.14.0/OpenSC-0.14.0.dmg
 
-The stable version of OpenSC is <b>0.13.0</b> ("released on 04.12.2012":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/)
- * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/
- * OpenSC "nightly builds":https://sourceforge.net/projects/opensc/files/OpenSC/nightly/
+Nightly builds for Windows are available at (AppVeyor:https://ci.appveyor.com/project/LudovicRousseau/opensc)
 
-The stable version of OpenSC is <b>0.12.2</b> [milestone:0.12.2 milestone]). See [[<b>DownloadRelease</b>|Download-latest-OpenSC-stable-release]] for detailed information.
+The oldstable version of OpenSC <b>0.13.0</b> ("released on 04.12.2012":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/)
+ * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/
+
+The oldstable version of OpenSC <b>0.12.2</b> [milestone:0.12.2 milestone]). See [[<b>DownloadRelease</b>|Download-latest-OpenSC-stable-release]] for detailed information.
  * "Source targzip":http://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/opensc-0.12.2.tar.gz/download
  * "Windows (x86) installer":http://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/OpenSC-0.12.2-win32.msi/download (see [[<b>OpenSC Windows Installer</b>|OpenSC-Windows-installer]] for more information)
  * "Windows (x64) installer":http://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/OpenSC-0.12.2-win64.msi/download
