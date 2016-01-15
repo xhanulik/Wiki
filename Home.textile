@@ -14,8 +14,7 @@ The previous stable version of OpenSC was <b>0.14.0</b> ("released on 30.06.2014
  * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.14.0/
  * "Mac OS X 10.9 and 10.10 installer":https://github.com/OpenSC/OpenSC/releases/download/0.14.0/OpenSC-0.14.0.dmg
 
-Nightly and CI builds for Windows are available at "AppVeyor":https://ci.appveyor.com/project/LudovicRousseau/opensc
-See the history to pick the build that matches the latest commit in master.
+Nightly and CI builds for Windows are available at "AppVeyor":https://ci.appveyor.com/project/LudovicRousseau/opensc/branch/master See the history to pick the build that matches the latest commit in master.
 
 The oldstable version of OpenSC <b>0.13.0</b> ("released on 04.12.2012":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/)
  * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/
