@@ -35,7 +35,7 @@ to your readl PKCS#11 Module such as opensc-pkcs11.so (but use an absolute
 path) to use PKCS#11 Module.
 
 On windows the read PKCS#11 Module is found using _HKLM\Software\OpenSC Project\PKCS11-Spy\Module_
-and the output is written to the file specified in _HKLM\Software\OpenSC Project\PKCS11-Spy\Output_.
+and the output is written to the file specified in _HKLM\Software\OpenSC Project\PKCS11-Spy\Output_ (Default: _%TEMP%\pkcs11-spy.log_).
 Again users can override these system wide settings using HKLU, and again user
 can use environment variables to override the registry settings.
 
