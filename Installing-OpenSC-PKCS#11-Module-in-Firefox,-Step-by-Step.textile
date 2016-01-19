@@ -29,7 +29,7 @@ This is how you enable smart cards in Mozilla Firefox
 !attachments/wiki/MozillaSteps/firefox5.jpg(MozillaSteps)!
 
 ----
-6.) Select the installation directory. On windows this is usualy "C:\Program Files\Smart card bundle". On Linux and Mac OS X choose "/usr/lib/".
+6.) Select the installation directory. On windows this is usualy "C:\Windows\System32". On Linux and Mac OS X choose "/usr/lib/".
 Click on "opensc-pkcs11.dll" (windows) or "opensc-pkcs11.so" (Linux, Mac OS X). Click "Open".
 
 !attachments/wiki/MozillaSteps/firefox6.jpg(MozillaSteps)!
