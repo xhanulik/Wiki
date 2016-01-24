@@ -4,7 +4,7 @@ h1. OpenSC Installer for Mac OS X
 
 h2. Scope
 
-The goal of OpenSC installer is to integrate with the platform as closely as possible and to provide support for PKCS#11 and native CDSA/Keychain applications on Mac OS X 10.5 and newer. OpenSC installs itself to the default @/Library/OpenSC@ folder, symlinks to command line utilities are created into @/usr/local/bin@. There are no GUI applications but compatible personalized smart cards (see [[CardPersonalization]]) show up in @/Applications/Utilities/Keychain Access.app@ (because of @OpenSC.tokend@, installed to @/System/Library/Security/tokend/OpenSC.tokend@).
+The goal of OpenSC installer is to integrate with the platform as closely as possible and to provide support for PKCS#11 and native CDSA/Keychain applications on Mac OS X 10.5 and newer. OpenSC installs itself to the default @/Library/OpenSC@ folder, symlinks to command line utilities are created into @/usr/local/bin@. There are no GUI applications but compatible personalized smart cards (see [[Card-personalization]]) show up in @/Applications/Utilities/Keychain Access.app@ (because of @OpenSC.tokend@, installed to @/System/Library/Security/tokend/OpenSC.tokend@).
 
 h3. Mac OS X 10.7 (Lion)
 
