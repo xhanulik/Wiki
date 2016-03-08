@@ -48,21 +48,28 @@ h2. Using the SmartCard-HSM with the CSP Minidriver
 
 After installing OpenSC on Windows, you can register the SmartCard-HSM for use with Microsoft applications like Internet Explorer or Outlook.
 
-Save the following to a file sc-hsm.reg and double-click to import it into the registy.
+Save the following to a file sc-hsm.reg and double-click to import it into the registy. Please make sure you replace the quotes by straight quotes.
+
 <pre><code>Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Calais\SmartCards\SmartCard-HSM]
-"80000001"="opensc-minidriver.dll"
-"Crypto Provider"="Microsoft Base Smart Card Crypto Provider"
 "ATR"=hex:3b,fe,18,00,00,81,31,fe,45,80,31,81,54,48,53,4d,31,73,80,21,40,81,07,fa
 "ATRMask"=hex:ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff
+"Crypto Provider"="Microsoft Base Smart Card Crypto Provider"
+"Smart Card Key Storage Provider"="Microsoft Smart Card Key Storage Provider"
+"80000001"="opensc-minidriver.dll"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Calais\SmartCards\SmartCard-HSM-CL]
-"80000001"="opensc-minidriver.dll"
-"Crypto Provider"="Microsoft Base Smart Card Crypto Provider"
 "ATR"=hex:3B,8E,80,01,80,31,81,54,48,53,4D,31,73,80,21,40,81,07,18
 "ATRMask"=hex:ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff
+"Crypto Provider"="Microsoft Base Smart Card Crypto Provider"
+"Smart Card Key Storage Provider"="Microsoft Smart Card Key Storage Provider"
+"80000001"="opensc-minidriver.dll"
 </code></pre>
+
+If you plan to use 32-bit applications on Windows with 64-bit, then you need to install both versions
+of OpenSC, the 64-bit and the 32-bit version. The same registry setting as above must be applied to
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Wow6432Node\Cryptography\Calais\SmartCards.
 
 h2. Using opensc-explorer
 
