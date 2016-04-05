@@ -4,7 +4,6 @@ For GNU/Linux users the best solution is, if the distribution already includes r
 of OpenSC. Here is a survey of recent distributions. If you have additional infomation,
 please add it.
 
-|| 
 | Debian woody (old stable) | "does not":http://packages.debian.org/opensc contain OpenSC packages |
 | Debian sarge (stable) | "OpenSC 0.9.6 included":http://packages.debian.org/stable/utils/opensc |
 | Debian sid (development) | "OpenSC 0.9.6 included":http://packages.debian.org/unstable/utils/opensc |
