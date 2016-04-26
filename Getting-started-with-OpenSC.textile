@@ -11,7 +11,7 @@ If you get stuck with OpenSC and don't find the answer from [[<b>FrequentlyAsked
 h2. Starting Points
 
  * OverView - A short introduction what OpenSC is and how it fits into the big picture.
- * "Download":http://www.opensc-project.org/files/opensc the latest stable release of OpenSC.
+ * "Download":https://github.com/OpenSC/OpenSC/releases the latest stable release of OpenSC.
  * [[QuickStart|Quick-Start-with-OpenSC]] - installation and basic steps to initialize a blank smart card.
  * [[Using OpenSC|Using-OpenSC]] - options when using OpenSC.
  * [[PKCS#15 Initialization|Card-personalization]] Guide with many small details
