@@ -19,7 +19,8 @@ Compilation instructions:
 
 Product page:
 "http://ftsafe.com/product/epass/epass2003":http://ftsafe.com/product/epass/epass2003
-
+Buy samples:
+"epass_shop":http://ftsafe.com/product/epass_shop
 h1. Thanks
 
 Big thanks to "GOOZE":http://www.gooze.eu/ and "Feitian":http://www.ftsafe.com/, for their technical help and donating hardware tokens.
