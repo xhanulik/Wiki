@@ -8,7 +8,7 @@ An alternative and light-weight PKCS#11 module for read-only access is available
 
 CardContact provides free development samples for open source developers. For commercial use we offer a SmartCard-HSM SDK with certified drivers and extended support for Java.
 
-Unless stated otherwise, a SmartCard-HSM is usually shipped uninitialized, meaning that no SO-PIN is set. You will first need to perform an initialization to set the SO-PIN and initial user PIN. See section "Initialize the Device":#init below. 
+Unless stated otherwise, a SmartCard-HSM is usually shipped uninitialized, meaning that no SO-PIN is set. You will first need to perform an initialization to set the SO-PIN and initial user PIN. See section "Initialize the Device":#initialize-the-device below. 
 
 Please note, that the SmartCard-HSM is *not* compatible with the pkcs15-init command. In particular it does *not* support a key import from PKCS#12 files. Doing so will just create certificate objects and the private key metadata, but no key. Private keys can only be imported from key containers previously exported from the same or a different SmartCard-HSM with the same DKEK.
 
