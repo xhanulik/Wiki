@@ -61,6 +61,7 @@ Each entry on this list possibly represents a whole family of tokens. See each p
  * [[<b>Feitian ePass2003</b>|Feitian-ePass2003]]
  * [[<b>Feitian ePass3000</b>|Feitian-ePass3000]]
  * [[<b>Feitian PKI token</b>|Feitian-ePass-PKI-token]]
+ * <b>[[Nitrokey Pro, Start, Storage|OpenPGP-card]], [[HSM|SmartCardHSM]]</b>
  * [[<b>Rainbow iKey 3000</b>|iKey-3000]]
  * [[<b>Schlumberger / Axalto e-gate</b>|Schlumberger-Axalto-Gemalto-e-gate]]
  * "USB Key Token, USB Token, Key Token, Digital Signature Certificate":http://digitalsignaturestore.com/index.php?id_category=14&controller=category
