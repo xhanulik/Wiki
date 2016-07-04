@@ -23,7 +23,7 @@ Buy samples: "http://ftsafe.com/product/epass_shop":http://ftsafe.com/product/ep
 
 h1. FAQ
 
-For issue was feedback which is "Failed to erase card: Security status not satisfied", Please download fix tool from below：
+For issue was feedback which is "Failed to erase card: Security status not satisfied", Please download fix tool from below, after running fix-tool, please do re-plug token/card：
 "Fix_tool":http://download.ftsafe.com/files/ePass/Fix_Tool.tar.gz
 
 
