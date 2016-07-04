@@ -21,10 +21,13 @@ Product page:
 "http://ftsafe.com/product/epass/epass2003":http://ftsafe.com/product/epass/epass2003
 Buy samples: "http://ftsafe.com/product/epass_shop":http://ftsafe.com/product/epass_shop
 
-h1 FAQ:
-For issue was feedback which is "Failed to erase card: Security status not satisfied", please contact leon@ftsafe.com to get init tool
+h1. FAQ
 
-h1. Thanks
+For issue was feedback which is "Failed to erase card: Security status not satisfied", Please download fix tool from below：
+"Fix_tool":http://download.ftsafe.com/files/ePass/Fix_Tool.tar.gz
+
+
+Thanks
 
 Big thanks to "GOOZE":http://www.gooze.eu/ and "Feitian":http://www.ftsafe.com/, for their technical help and donating hardware tokens.
 
