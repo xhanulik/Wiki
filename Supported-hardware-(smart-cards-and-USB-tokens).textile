@@ -2,7 +2,7 @@ h1. Supported hardware (smart cards and USB tokens)
 
 NB! Unless noted otherwise, OpenSC works only with <b>contact interface! </b>
 
- * OpenSC targets only smart cards, so to know if your reader device is support, check the list of <b>CardReaders</b>.
+ * OpenSC targets only smart cards, so to know if your reader device is support, check the list of [[CardReaders|Smart-card-readers-(Linux-and-Mac-OS-X)]].
   * Proprietary USB tokens will require a (possibly proprietary) USB level driver: PC/SC (preferred) or OpenCT (deprecated)
 
 h2. National ID Cards
