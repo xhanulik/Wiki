@@ -1,18 +1,18 @@
 h1. Feitian ePass2003
 
-"Feitian":http://www.ftsafe.com/ offers the ePass2003, a USB crypto token with 32-bit high performance smart card chip and CCID interface.
+"Feitian":http://www.ftsafe.com/ offers the ePass2003, a USB crypto token with high performance smart card chip and CCID interface.
 
-The ePass2003 is the successor of the [[ePass PKI|Feitian-ePass-PKI-token]] and the [[ePass3000|Feitian-ePass3000]], and was released to the public in December 2011.
+The ePass2003 is the successor of the ePass PKI and the ePass3000, and was released to the public in December 2011.
 The ePass2003 relies on one single ST Microelectronics chip, designed in Europe with Common Criteria EAL 5+ certification. 
-It weights only 6 gr and fits very well into a key ring with only 51 mm lenght, thus being one of the smallest tokens available to date.
+It weights only 6 gr and fits very well into a key ring with only 53 mm lenght, thus being one of the smallest tokens available to date.
 
-The ePass2003 was designed for Free Software communities, especially the OpenSC community to provide a "universal" cryptographic token.
+The ePass2003 was designed for Free Software communities, especially the OpenSC community to provide a “universal” cryptographic token.
 
-Feitian offers Windows CSP drivers and will soon release Mac OS X drivers. 
+Feitian offers Windows CSP drivers and also provides Linux and Mac OS X drivers.
 
-On the other hand, Feitian takes an active part in the development of OpenSC, offering a free sofware driver to the OpenSC community. The driver of ePass2003 in OpenSC is called "epass2003". It is currently available from GIT and being reviewed for inclusion in OpenSC. GOOZE and Feitian take active part in the OpenSC project.
+On the other hand, Feitian takes an active part in the development of OpenSC, offering a free sofware driver to the OpenSC community. The driver of ePass2003 in OpenSC is called “epass2003”. It is currently available from GIT and being reviewed for inclusion in OpenSC. GOOZE and Feitian take active part in the OpenSC project.
 
-This gives users the ability to use either proprietary or open-source software, which is the best to answer all needs. For example, under Windows7, drivers are distributed using Windows update, requiring no actions from users.
+This gives users the ability to use either proprietary or open-source software, which is the best to answer all needs. For example, under Windows7, drivers(Microsoft Minidriver) are distributed using Windows update, requiring no actions from users.
 
 Compilation instructions:
 Please check openSC official website.
