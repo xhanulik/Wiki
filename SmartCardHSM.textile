@@ -316,6 +316,9 @@ To change the SO-PIN (Version 1.0 or higher) you can use
 
 Security Considerations: The SO-PIN allows to reset the retry counter for the PIN and also allows to set the PIN to a new value. Please make sure, that the SO-PIN is kept secure at any time. If you don't ever want to reset the card, we suggest to set the SO-PIN to an 8 byte random value.
 
+To change the PIN you can use
+<pre><code>$ pkcs11-tool --login --pin 648219 --change-pin --new-pin 123456</code></pre>
+
 h3. Generate key pair
 
 Use the following command to generate a key pair:
