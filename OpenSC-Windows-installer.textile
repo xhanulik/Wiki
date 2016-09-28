@@ -57,7 +57,7 @@ h2. Build instructions (Linux)
 
 The following has been done on Ubuntu 10.10, x86_64
  * Building the .exe installer requires Mingw32 (mingw32-runtime >= 3.15.2) and Wine (for running Inno Setup)
- <pre><code>$ sudo apt-get install wine mingw32 docbook-xsl autoconf automake subversion libtool libpcsclite-dev patch nsis
+ <pre><code>$ sudo apt-get install wine mingw32 pkg-config docbook-xsl autoconf automake subversion libtool libpcsclite-dev patch nsis
 </code></pre>
  * You'll need Inno Setup, so fetch and install it (with defaults)
 <pre><code>$ wget http://www.jrsoftware.org/download.php/is.exe
