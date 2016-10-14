@@ -6,7 +6,9 @@ The card material is PVC as standard, making it suitable for visual personalisat
 
 The cards can be personalised both visually and electrically by Aventra according to customer specifications, or the customers can personalise the cards themselves using ActivePerso Manager developed by Aventra, or software from other parties. 
 
-*NEW:* MyEID is certified by Microsoft and supports Smart Card Plug and Play.
+MyEID is certified by Microsoft and supports Smart Card Plug and Play.
+
+*NEW:* MyEID version 4 has been released, adding support for Elliptic Curve Cryptography and many other new features.
 
 h2. Aventra MyEID PKI applet
 
@@ -28,6 +30,7 @@ h3. Technical details
  * Secure random number generator (FIPS 140-2)
  * DES, 3DES, AES128, AES256 symmetric encryption algorithms
  * 80K EEPROM memory
+ * Since MyEID 4: ECDSA and ECDH operations. 
 
 <b>Compatible software</b>
  * OpenSC
