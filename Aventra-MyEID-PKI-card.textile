@@ -1,4 +1,4 @@
-h1. Aventra MyEID PKI card
+<pre><code></code></pre>h1. Aventra MyEID PKI card
 
 Aventra MyEID PKI Card is a cryptographic smart card conforming to common Public Key Infrastructure standards like ISO7816 and PKCS#15. It can be used for various tasks requiring strong cryptography, e. g. logging securely to Windows, encrypting e-mail, authentication, and electronic signatures. The card is also available as a Dual Interface version, compatible with T=CL protocol and also emulating Mifare™. The card is a JavaCard with Aventra MyEID applet that implements the functionality.
 
@@ -116,9 +116,8 @@ h2. Links & other information
 
 Cards can be bought from Aventra as blank cards or according to customer specifications regarding appearance etc. Small quantities of cards and readers can be easily bought from the web shop. For larger quantities contact Aventra sales for a quote.  
 
-"Aventra Ltd.":http://www.aventra.fi/English/index_E.php
-"Web shop":https://services.aventra.fi/webshop/WebShop.aspx
-
+"Aventra Ltd.":https://www.aventra.fi/front-page/
+"Web shop":https://www.aventra.fi/webshop/
 
 h3. About Aventra
 
@@ -126,7 +125,7 @@ Aventra is a high tech company specialising in information security products and
 
 Aventra offers a complete portfolio of card products ranging from simple plastic cards to high security smart cards and tokens. Our most recent product line features security solutions for mobile applications.  We also provide complete services and systems for issuing and managing cards and secure tokens, including card printers and materials.
 
-!http://www.aventra.fi/Pictures/aventra_logo_white.PNG(Aventra logo)!
+!https://webservices.aventra.fi/wordpress/wp-content/images/aventra-logo-small.png(Aventra logo)!
 
 h2. Speed
  * RSA 1024 key generation: 0m8.280s
