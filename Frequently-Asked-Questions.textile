@@ -108,7 +108,7 @@ h2. Miscellaneous questions
 
 h3. Q: Where can I buy smart cards ?
 
- * "https://javacardos.com":https://javacardos.com/store/ -  JavaCardOS is dedicated to building a comprehensive Java Card platform in order to construct a complete ecosystem for smart card applications.
+ * "https://www.javacardos.com":https://www.javacardos.com/store/ -  JavaCardOS is dedicated to building a comprehensive Java Card platform in order to construct a complete ecosystem for smart card applications.
  * "http://www.aventra.fi":http://www.aventra.fi - ships from Finland, [[Aventra-MyEID-PKI-card|Aventra-MyEID-PKI-card]] card
  * "http://www.cryptoshop.com":http://www.cryptoshop.com - ships from Austria
  * "http://shop.kernelconcepts.de/":http://shop.kernelconcepts.de/ - ships from Germany, [[OpenPGP v2 card|OpenPGP-card]] and CryptoStick token
