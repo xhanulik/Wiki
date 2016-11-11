@@ -115,7 +115,7 @@ The setting in the <code>opensc.conf</code> (usually in <code>/etc</code> or <co
 
 h2. Links & other information
 
-<b>Card details:</b> "Reference manual":http://aventra.fi/pdf/MyEID%20PKI%20JavaCard%20Applet%20Reference%20Manual%201-7-7.pdf
+<b>Card details:</b> "Reference manual":https://webservices.aventra.fi/wordpress/wp-content/downloads/MyEID_PKI_JavaCard_Applet_Reference_Manual_2-1-4.pdf
 
 Cards can be bought from Aventra as blank cards or according to customer specifications regarding appearance etc. Small quantities of cards and readers can be easily bought from the web shop. For larger quantities contact Aventra sales for a quote.  
 
