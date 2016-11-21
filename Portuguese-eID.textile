@@ -1,16 +1,54 @@
 h1. Portuguese eID
 
-Portugal also has an eID card. More info at "http://www.cartaodocidadao.pt.":http://www.cartaodocidadao.pt.
+Official website "http://www.cartaodocidadao.pt":http://www.cartaodocidadao.pt.
 
-h2. Card Versions
+h2. Card History
 
-It appears that two versions of the card exist. One is based on the Gemsafe applet and the other on the IAS specification.
+* 2007-02-14 First card version with a IAS 0.7 V1, EMV-CAP and Precise Bio MOC applets and 1024b keys.
+* 2015-06-05 Owner keys size increased to 2048b.
+* 2016-01-16 EMV-CAP applet is no longer present.
+
+h3. Applets used
+
+* 2007-02-14 Gemalto GemXpresso R4 E36/E72 PK	IAS 0.7 V1
+* 2008-08    Gemalto ICitizen Open v2		IAS 1.01 V2
+* 2010-06-15 Gemalto MultiApp ID Citizen 72K CC	IAS Classic V3 (IAS 0.7 )
+* 2014-04-07 Gemalto MultiApp ID 2.1 MPH117	IAS Classic V3 (IAS 0.7)
+
+h3. ATRs
+
+h4. Document version no longer in circulation:
+
+* 3B 65 00 00 D0 00 54 01 31
+* 3B 65 00 00 D0 00 54 01 32
+* 3B 95 95 40 FF D0 00 54 01 31
+* 3B 95 95 40 FF D0 00 54 01 32
+
+h4. Document version confirmed:
+
+* 3B 7D 95 00 00 80 31 80 65 B0 83 11 00 C8 83 00 90 00 (Version 004.004.21)
+
+h4. Document version unconfirmed:
+
+* 3B 6B 00 00 80 65 B0 83 01 01 74 83 00 90 00
+* 3B 6B 00 00 80 65 B0 83 01 03 74 83 00 90 00
+* 3B 7A 94 00 00 80 65 A2 01 01 01 3D 72 D6 43
+* 3B 7B 94 00 00 80 65 B0 83 01 01 74 83 00 90 00
+* 3B 7D 94 00 00 80 31 80 65 B0 83 01 01 90 83 00 90 00
+* 3B 7D 95 00 00 80 31 80 65 B0 83 11 00 C8 83 00
+* 3B 7D 95 00 00 80 31 80 65 B0 83 11 C0 A9 83 00
+* 3B 7D 95 00 00 80 31 80 65 B0 83 11 C0 A9 83 00 90 00
+
+h2. Biometrics
+
+All cards include a Precise Biometric Match-On-Card applet and the correspondent owner fingerprint template.
+
+Documentation or sample code contribution is appreciated.
 
 h2. Official Middleware
 
-The "software download page":https://www.cartaodocidadao.pt/index.php_option=com_content&task=view&id=102&Itemid=44&lang=pt.html lists software for Windows, Mac OS X and Linux. Parts of the software are based on OpenSC (custom libopensc provided with the software).
+The "software download page":https://www.cartaodecidadao.pt/index.php_option=com_content&task=view&id=102&Itemid=44&lang=pt.html lists software for Windows, Mac OS X and several Linux distributions. Parts of the software are based on OpenSC (custom libopensc provided with the software). Originally the Portuguese Government was violating the OpenSC GPL by refusing to provide the modified source files.
 
-At this time, the official OS X version does not provide a Tokend, so the card is not supported by applications which use the CDSA/CSSM API. Also, no source code is provided.
 
 h3. New, open source version
 
@@ -21,5 +59,3 @@ h2. OpenSC support
 Starting with version 0.12.0, OpenSC supports the Portuguese eID card - both Authentication and Digital Signature keys.
 
 Full Mac OS X support is available through OpenSC.Tokend.
-
-
