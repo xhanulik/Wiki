@@ -10,7 +10,7 @@ The latest stable version of OpenSC is <b>0.16.0</b> ("released on 03.06.2016":h
  * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.16.0/
  * "Mac OS X 10.9 and 10.10 installer":https://github.com/OpenSC/OpenSC/releases/download/0.16.0/OpenSC-0.16.0.dmg
 
-The previous stable version of OpenSC was <b>0.15.0</b> ("released on 16.05.2015":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.15.0/)
+The previous stable version of OpenSC was <b>0.15.0</b> ("released on 16.05.2016":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.15.0/)
  * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.15.0/
  * "Mac OS X 10.9 and 10.10 installer":https://github.com/OpenSC/OpenSC/releases/download/0.15.0/OpenSC-0.15.0.dmg
 
@@ -35,7 +35,7 @@ Before you  [[<b>GetStarted</b>|Getting-started-with-OpenSC]] with using OpenSC 
 
 h2. News
 
- * 03.06.2015: <b>OpenSC 0.16.0</b> is available.
+ * 03.06.2016: <b>OpenSC 0.16.0</b> is available.
  * 16.05.2015: <b>OpenSC 0.15.0</b> is available.
  * 30.06.2014: <b>OpenSC 0.14.0</b> is available.
  * 04.12.2012: <b>OpenSC 0.13.0</b> is available. [[DownloadRelease|Download-latest-OpenSC-stable-release]]
