@@ -2,7 +2,7 @@ h1. Swedish BankID
 
 BankID is an electronic certificate that's issued by several Swedish banks.
 
-There have been a succession three different proprietary protocols called "BankID":
+There has been a succession of three different proprietary protocols called "BankID":
 * The first BankID used a Java applet, and could therefore work in multiple operating systems.
 * The second BankID used a proprietary browser plug-in. FriBID is a free implementation of this protocol.
 * The third BankID uses proprietary plug-ins or apps for Microsoft's, Apple's and Google's operating systems. No free implementation is available.
