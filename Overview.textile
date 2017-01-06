@@ -56,7 +56,7 @@ standard. Most of the time you will be fine, but in some cases it is necessary t
 an updated version of pcsc-lite, for example if you have a smart card reader with a pinpad
 and would like to use that capability.
 
-On Linux you might want to use the open source project "OpenCT":http://www.opensc-project.org/openct/
+On Linux you might want to use the open source project "OpenCT":https://github.com/OpenSC/openct/wiki
 for smart card drivers. It implements support for many drivers at the same time, is still
 small and lean, and OpenSC can use it directly without the need for any middleware.
 Many OpenSC developers also work on OpenCT so this combination is best tested. Most Linux
@@ -67,7 +67,7 @@ include pcsc-lite and some open source drivers, and some vendors also offer bina
 for Linux in ifdhandler format.
 
 Solaris situation is like Linux, except Sun has some special stuff for their Sunray
-terminals that contain smart card readers. You can use "OpenCT":http://www.opensc-project.org/openct/
+terminals that contain smart card readers. You can use "OpenCT":https://github.com/OpenSC/openct/wiki
 with those terminals; source contains a solaris/ subdirectory with a README files and
 additional files to make using OpenCT on solaris easy. OpenCT hides the differences,
 so OpenSC works on Solaris well, just like on other plattforms.
