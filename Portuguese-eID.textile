@@ -2,6 +2,37 @@ h1. Portuguese eID
 
 Official website "http://www.cartaodocidadao.pt":http://www.cartaodocidadao.pt.
 
+h2. Card structure (pkcs15-tool --dump --short)
+
+Serial number replaced with '*'.
+<pre><code>PKCS#15 Card [CARTAO DE CIDADAO]:
+	Version        : 1
+	Serial number  : 00000***********
+	Manufacturer ID: GEMALTO
+	Flags          : Read-only, PRN generation, EID compliant
+Card has 3 Authentication object(s).
+	PIN  ID:01  Ref:0x81  Tries:3  Auth PIN
+	PIN  ID:02  Ref:0x82  Tries:3  Sign PIN
+	PIN  ID:03  Ref:0x83  Tries:3  Address PIN
+Card has 2 Private key(s).
+	RSA[1024]  ID:45  Ref:0x02  AuthID:01
+	     CITIZEN AUTHENTI [0x4, sign]
+	RSA[1024]  ID:46  Ref:0x01  AuthID:02
+	     CITIZEN SIGNATUR [0x200, nonRepudiation]
+Card has 0 Public key(s).
+Card has 5 Certificate(s).
+	Path:3f005f00ef09  ID:45
+	Path:3f005f00ef08  ID:46
+	Path:3f005f00ef0f  ID:51
+	Path:3f005f00ef10  ID:52
+	Path:3f005f00ef11  ID:50
+Card has 5 Data object(s).
+	Path:3f005f00ef02  Size:15500  Citizen Data        
+	Path:3f005f00ef05  AuthID:03   Citizen Address Data
+	Path:3f005f00ef07  Size: 1000  Citizen Notepad     
+	Path:3f005f00ef06  Size: 4000  SOD                 
+	Path:3f000003      Size:    6  TRACE</code></pre>
+
 h2. Card History
 
 * 2007-02-14 First card version with a IAS 0.7 V1, EMV-CAP and Precise Bio MOC applets and 1024b keys.
