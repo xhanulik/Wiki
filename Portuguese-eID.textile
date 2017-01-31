@@ -27,10 +27,10 @@ Card has 5 Certificate(s).
 	Path:3f005f00ef10  ID:52
 	Path:3f005f00ef11  ID:50
 Card has 5 Data object(s).
-	Path:3f000003      Size:    6  TRACE               
+	Path:3f000003      Size:    6  Trace
 	Path:3f005f00ef02  Size:15500  Citizen Data        
 	Path:3f005f00ef05  AuthID:03   Citizen Address Data
-	Path:3f005f00ef06  Size: 4000  SOD                 
+	Path:3f005f00ef06  Size: 4000  SOd               
 	Path:3f005f00ef07  Size: 1000  Citizen Notepad</code></pre>
 
 h2. Card History
