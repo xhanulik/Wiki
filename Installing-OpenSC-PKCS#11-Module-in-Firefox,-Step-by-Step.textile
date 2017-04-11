@@ -1,60 +1,41 @@
 h1. Installing OpenSC PKCS#11 Module in Firefox, Step by Step
 
-This is how you enable smart cards in Mozilla Firefox
-(for the old Mozilla and Thunderbird it is mostly the same):
+----
+1.) Start Mozilla Firefox.
+
+!https://github.com/n8felton/OpenSC/wiki/attachments/wiki/MozillaSteps/firefox_64.png!
 
 ----
-1.) Start Mozilla or Firefox or Thunderbird. 
+2.) Click the *Menu Button* and choose *Options*.
 
-!attachments/wiki/MozillaSteps/firefox1.jpg(MozillaSteps)!
-
-----
-2.) Select "Tools" on the menu bar, select "Option...".
-
-!attachments/wiki/MozillaSteps/firefox2.jpg(MozillaSteps)!
+!https://github.com/n8felton/OpenSC/wiki/attachments/wiki/MozillaSteps/FirefoxESR52_1.png!
 
 ----
-3.) Select "Advanced" Options. Unfold the "Certificates" section. Click on "Manage Security Devices".
+3.) Click *Advanced* and switch to the *Certificates* tab. Click *Security Devices*.
 
-!attachments/wiki/MozillaSteps/firefox3.jpg(MozillaSteps)!
-
-----
-4.) Click on "Load"
-
-!attachments/wiki/MozillaSteps/firefox4.jpg(MozillaSteps)!
+!https://github.com/n8felton/OpenSC/wiki/attachments/wiki/MozillaSteps/FirefoxESR52_2.png!
 
 ----
-5.) Change the name to "OpenSC PKCS#11 Module". Click on "Browse."
+4.) Click on *Load*.
 
-!attachments/wiki/MozillaSteps/firefox5.jpg(MozillaSteps)!
-
-----
-6.) Select the installation directory. On Windows this is usualy "C:\Windows\System32". On macOS, choose "/Library/OpenSC/lib/". On Linux choose "/usr/lib/".
-Click on "opensc-pkcs11.dll" (windows) or "opensc-pkcs11.so" (Linux, Mac OS X). Click "Open".
-
-!attachments/wiki/MozillaSteps/firefox6.jpg(MozillaSteps)!
+!https://github.com/n8felton/OpenSC/wiki/attachments/wiki/MozillaSteps/FirefoxESR52_3.png!
 
 ----
-7.) Click "Ok".
+5.) Change the *Module Name* to _OpenSC PKCS#11 Module_. Click on *Browse...*.
 
-!attachments/wiki/MozillaSteps/firefox7.jpg(MozillaSteps)!
-
-----
-8.) Click "Ok".
-
-!attachments/wiki/MozillaSteps/firefox8.jpg(MozillaSteps)!
+!https://github.com/n8felton/OpenSC/wiki/attachments/wiki/MozillaSteps/FirefoxESR52_5.png!
 
 ----
-9.) Click "Ok".
+6.) Select the installation directory.
+Windows: _C:\Windows\System32_
+macOS: _/Library/OpenSC/lib/_
+Linux: _/usr/lib/_
 
-!attachments/wiki/MozillaSteps/firefox9.jpg(MozillaSteps)!
+Click on _opensc‑pkcs11.dll_ (Windows) or _opensc‑pkcs11.so_ (Linux, macOS). Click *Open*.
+
+!https://github.com/n8felton/OpenSC/wiki/attachments/wiki/MozillaSteps/FirefoxESR52_4.png!
 
 ----
-10.) Click "Ok".
+7.) Verify the new module is loaded. Click *OK* to close the Device Manager.
 
-!attachments/wiki/MozillaSteps/firefox10.jpg(MozillaSteps)!
-
-----
-11.) Click "Ok".
-
-!attachments/wiki/MozillaSteps/firefox11.jpg(MozillaSteps)!
+!https://github.com/n8felton/OpenSC/wiki/attachments/wiki/MozillaSteps/FirefoxESR52_6.png!
