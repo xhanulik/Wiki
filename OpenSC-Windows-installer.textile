@@ -55,9 +55,9 @@ h2. Build instructions (Windows)
 
 h2. Build instructions (Linux)
 
-The following has been done on Ubuntu 10.10, x86_64
+The following has been done on Ubuntu 16.04, x86_64
  * Building the .exe installer requires Mingw32 (mingw32-runtime >= 3.15.2) and Wine (for running Inno Setup)
- <pre><code>$ sudo apt-get install wine mingw32 pkg-config docbook-xsl autoconf automake subversion libtool libpcsclite-dev patch nsis
+ <pre><code>$ sudo apt-get install binutils-mingw-w64-i686 binutils-mingw-w64-x86-64 docbook-xsl gcc-mingw-w64-i686 gcc-mingw-w64-x86-64 libpcsclite-dev mingw-w64 wine xsltproc gengetopt
 </code></pre>
  * You'll need Inno Setup, so fetch and install it (with defaults)
 <pre><code>$ wget http://www.jrsoftware.org/download.php/is.exe
@@ -67,18 +67,18 @@ $ wine is.exe
 <pre><code>$ git clone git://www.opensc-project.org/OpenSC.git
 $ cd OpenSC
 </code></pre>
- * Prepare the repository checkout:
-<pre><code>$ ./bootstrap && ./configure --disable-doc
+ * Build the windows libraries:
+<pre><code>$ export HOST=x86_64-w64-mingw32
+$ ./bootstrap 
+$ unset CC; unset CXX; ./configure --host=x86_64-w64-mingw32 --disable-openssl --disable-readline --disable-zlib --prefix=${PWD}/win32/opensc
+$ make && make install
 </code></pre>
- * Build the installer, first building OpenSC:
-<pre><code>$ ./win32/installer_from_build.sh
+ * Build the installer:
+<pre><code>$  wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Inno\ Setup\ 5/ISCC.exe ./win32/OpenSC.iss
  # build log removed
 Successful compile (2.170 sec). Resulting Setup program filename is:
-Z:\home\martin\OpenSC\win32\Output\OpenSC-0.12.0.exe
-
-real	5m53.208s
-user	5m4.780s
-sys	1m21.990s
+Z:\home\.....\OpenSC\win32\Output\OpenSC-0.16.0.exe
 
 </code></pre>
- * Use the installer .exe from win32/Output/OpenSC-0.12.0.exe
+ * Use the installer .exe from win32/Output/OpenSC-0.16.0.exe
+ * Copy the dll files from the win32/bin folder to the location of the installation in windows
