@@ -36,8 +36,9 @@ OpenPGP cards / Nitrokeys can be obtained from vendors like e.g.
 
 h2. State of OpenSC support
 
-OpenPGP card "v1.0":http://www.g10code.de/docs/openpgp-card-1.0.pdf /"1.1":http://www.g10code.de/docs/openpgp-card-1.1.pdf is deprecated but should work since OpenSC 0.9.1. Starting with OpenSC 0.12.2, OpenSC supports reading the OpenPGP card "v2.0":http://www.g10code.de/docs/openpgp-card-2.0.pdf too. Since OpenSC 0.13 full write support for OpenPGP Card 2 is supported.
-There is a "patch":https://github.com/hongquan/OpenSC-main/tree/gnuk being made to support "Gnuk":http://www.fsij.org/gnuk/, a variant of OpenPGP v.2. The patch is waiting for being merged to OpenSC upstream.
+OpenPGP card "v1.0":http://www.g10code.de/docs/openpgp-card-1.0.pdf /"1.1":http://www.g10code.de/docs/openpgp-card-1.1.pdf is deprecated but should work since OpenSC 0.9.1. Starting with OpenSC 0.12.2, OpenSC supports reading the OpenPGP card "v2.0":http://www.g10code.de/docs/openpgp-card-2.0.pdf too. Since OpenSC, 0.13 full write support for OpenPGP card 2 is supported.
+
+"Gnuk":http://www.fsij.org/gnuk/, a variant of OpenPGP v.2 is supported since OpenSC 0.15.
 
 h2. Usage
 
@@ -92,6 +93,8 @@ If this option is absent, default key length 2048-bit is used.
 +Gnuk:+ Gnuk only supports 2048-bit key, so don’t specify @--key-length@ option, you also have to delete old key before generating or import new one.
 <pre><code>openpgp-tool --verify CHV3 --pin 12345678 --del-key 3</code></pre>
 
+**Note**: The 4096-bit key is supported in development version of OpenSC, after v0.16.
+
 h5. Key generation via @pkcs15-init@:
 
 <pre><code>pkcs15-init --delete-objects privkey,pubkey --id 3 --generate-key rsa/2048 --auth-id 3 --verify
@@ -100,6 +103,8 @@ h5. Key generation via @pkcs15-init@:
 There is limitation: @pkcs15-init@ requires new key length to be the same as existing key. To generate key with different key length, @openpgp-tool@ is recommended.
 
 @pkcs15-init@ also requires to explicitly remove existing key/object. That's why we have @--delete-objects privkey,pubkey --id 3@ in the command (though it has no effect to Nitrokey, which does not support deleting key, but support overwriting key).
+
+**Note**: Generating key via PKCS#11 is not supported yet. Technical reason: The operation needs Admin PIN, but we find no way in OpenSC to popup a prompt dialog for PIN entry.
 
 h3. 4. Delete key (Gnuk)
 
