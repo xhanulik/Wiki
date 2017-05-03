@@ -296,8 +296,7 @@ Initializing - and thereby erasing all keys, certificates and data elements - re
 <pre><code>$ sc-hsm-tool --initialize --so-pin 3537363231383830 --pin 648219
 </code></pre>
 or
-<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --init-token --label "test" --so-pin 3537363231383830
-$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --login --login-type so --so-pin 3537363231383830 --init-pin --new-pin 648219
+<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --init-token --init-pin --so-pin=3537363231383830 --new-pin=648219 --label="test" --pin=648219
 </code></pre>
 
 If the SmartCard-HSM was never initialized before, the presented SO-PIN is stored as future SO-PIN for this device. Any later initialization requires the presentation of the same SO-PIN. Please make sure to select your own values for SO-PIN and user PIN if used in a production environment.
