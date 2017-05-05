@@ -270,6 +270,7 @@ h3. General
 -s 00:e6:00:00 \
 -s 00:44:00:00
  </code></pre>
+ * In order to import 4096 bit RSA keys, the Nitrokey may need to be initialized with a 4096 bit RSA key beforehand (e.g. via GnuPG). Otherwise, you may experience an "Invalid key size" error.
 
 h3. Mac OS X
 
