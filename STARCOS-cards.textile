@@ -33,6 +33,10 @@ h2. Version 3.4
 
 Initial support for German D-Trust cards is available from the patch in "pull request #357":https://github.com/OpenSC/OpenSC/pull/357.
 
+h2. Version 3.5
+
+Version 3.5, used as of 2017, e.g. by DGN, is not supported at this time.
+
 h1. Erasing cards
 
 Only test cards with StarCOS are erasable. If the last byte of the return
