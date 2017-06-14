@@ -64,7 +64,6 @@ Each entry on this list possibly represents a whole family of tokens. See each p
  * <b>[[Nitrokey Pro, Start, Storage|OpenPGP-card]], [[HSM|SmartCardHSM]]</b>
  * [[<b>Rainbow iKey 3000</b>|iKey-3000]]
  * [[<b>Schlumberger / Axalto e-gate</b>|Schlumberger-Axalto-Gemalto-e-gate]]
- * "USB Key Token, USB Token, Key Token, Digital Signature Certificate":http://digitalsignaturestore.com/index.php?id_category=14&controller=category
 
 
 <b>Did not find your card from the supported card list?</b> See [[FrequentlyAskedQuestions|Frequently-Asked-Questions]] for next steps.
