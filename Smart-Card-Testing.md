@@ -54,6 +54,14 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | npa               | :accept:           | :white_circle:     | :accept:           |
 | default           | :white_circle:     | :white_circle:     | :white_circle:     |
 
+The table below shows a list of all tested smart cards that were used:
+
+| Smart Card Driver | Tested Smart Cards |
+| ----------------- | ------------------ |
+| cardos            | CardOS 4.3B        |
+| sc-hsm            | GoID               |
+| npa               | German ID card     |
+
 # Test Cases
 
 ## Installer
