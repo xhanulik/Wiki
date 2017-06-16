@@ -43,7 +43,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | setcos            | :white_circle:     | :white_circle:     | :white_circle:     |
 | muscle            | :white_circle:     | :white_circle:     | :white_circle:     |
 | atrust-acos       | :white_circle:     | :white_circle:     | :white_circle:     |
-| PIV-II            | :white_circle:     | :white_circle:     | :white_circle:     |
+| PIV-II            | :white_check_mark: | :white_circle:     | :white_circle:     |
 | cac               | :white_circle:     | :white_circle:     | :white_circle:     |
 | itacns            | :white_circle:     | :white_circle:     | :white_circle:     |
 | isoApplet         | :white_circle:     | :white_circle:     | :white_circle:     |
@@ -56,11 +56,12 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 
 The table below shows a list of all tested smart cards that were used:
 
-| Smart Card Driver | Tested Smart Cards |
-| ----------------- | ------------------ |
-| cardos            | CardOS 4.3B        |
-| sc-hsm            | GoID               |
-| npa               | German ID card     |
+| Smart Card Driver | Tested Smart Cards   |
+| ----------------- | -------------------- |
+| cardos            | CardOS 4.3B          |
+| sc-hsm            | GoID                 |
+| npa               | German ID card       |
+| PIV-II            | NIST demo PIV card 1 |   
 
 # Test Cases
 
