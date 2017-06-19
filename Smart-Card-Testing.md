@@ -46,7 +46,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | PIV-II            | :white_check_mark: | :white_circle:     | :white_circle:     |
 | cac               | :white_circle:     | :white_circle:     | :white_circle:     |
 | itacns            | :white_circle:     | :white_circle:     | :white_circle:     |
-| isoApplet         | :white_circle:     | :white_circle:     | :white_circle:     |
+| isoApplet         | :accept:           | :white_circle:     | :white_circle:     |
 | gids              | :white_circle:     | :white_circle:     | :white_circle:     |
 | openpgp           | :white_circle:     | :white_circle:     | :white_circle:     |
 | jpki              | :white_circle:     | :white_circle:     | :white_circle:     |
