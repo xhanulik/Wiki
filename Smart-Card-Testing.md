@@ -50,7 +50,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | gids              | :white_circle:     | :white_circle:     | :white_circle:     |
 | openpgp           | :white_circle:     | :white_circle:     | :white_circle:     |
 | jpki              | :white_check_mark: | :accept:           | :white_circle:     |
-| coolkey           | :white_check_mark: | :white_circle:     | :white_circle:     |
+| coolkey           | :white_circle:     | :white_circle:     | :white_circle:     |
 | npa               | :accept:           | :white_circle:     | :accept:           |
 | default           | :white_circle:     | :white_circle:     | :white_circle:     |
 
