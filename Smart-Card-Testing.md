@@ -43,7 +43,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | setcos            | :white_circle:     | :white_circle:     | :white_circle:     |
 | muscle            | :white_circle:     | :white_circle:     | :white_circle:     |
 | atrust-acos       | :white_circle:     | :white_circle:     | :white_circle:     |
-| PIV-II            | :white_check_mark: | :white_circle:     | :white_circle:     |
+| PIV-II            | :white_check_mark: | :accept:           | :white_circle:     |
 | cac               | :white_circle:     | :white_circle:     | :white_circle:     |
 | itacns            | :white_circle:     | :white_circle:     | :white_circle:     |
 | isoApplet         | :accept:           | :white_circle:     | :white_circle:     |
