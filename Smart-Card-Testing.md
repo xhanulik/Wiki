@@ -44,13 +44,13 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | muscle            | :white_circle:     | :white_circle:     | :white_circle:     |
 | atrust-acos       | :white_circle:     | :white_circle:     | :white_circle:     |
 | PIV-II            | :white_check_mark: | :white_circle:     | :white_circle:     |
-| cac               | :white_circle:     | :white_circle:     | :white_circle:     |
+| cac               | :accept:           | :white_circle:     | :white_circle:     |
 | itacns            | :white_circle:     | :white_circle:     | :white_circle:     |
 | isoApplet         | :accept:           | :white_circle:     | :white_circle:     |
 | gids              | :white_circle:     | :white_circle:     | :white_circle:     |
 | openpgp           | :white_circle:     | :white_circle:     | :white_circle:     |
 | jpki              | :white_check_mark: | :accept:           | :white_circle:     |
-| coolkey           | :white_circle:     | :white_circle:     | :white_circle:     |
+| coolkey           | :white_check_mark: | :white_circle:     | :white_circle:     |
 | npa               | :accept:           | :white_circle:     | :accept:           |
 | default           | :white_circle:     | :white_circle:     | :white_circle:     |
 
@@ -62,6 +62,7 @@ The table below shows a list of all tested smart cards that were used:
 | sc-hsm            | GoID 0.9             |
 | npa               | German ID card       |
 | PIV-II            | NIST demo PIV card 1 |   
+| cac               | Expired test CAC card|   
 
 # Test Cases
 
