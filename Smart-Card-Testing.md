@@ -26,7 +26,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | oberthur          | :white_circle:     | :white_circle:     | :white_circle:     |
 | authentic         | :white_circle:     | :white_circle:     | :white_circle:     |
 | iasecc            | :white_circle:     | :white_circle:     | :white_circle:     |
-| belpic            | :white_circle:     | :white_circle:     | :white_circle:     |
+| belpic            | ✅ :     | :white_circle:     | :white_circle:     |
 | incrypto34        | :white_circle:     | :white_circle:     | :white_circle:     |
 | acos5             | :white_circle:     | :white_circle:     | :white_circle:     |
 | akis              | :white_circle:     | :white_circle:     | :white_circle:     |
