@@ -59,7 +59,7 @@ The table below shows a list of all tested smart cards that were used:
 | Smart Card Driver | Tested Smart Cards   |
 | ----------------- | -------------------- |
 | cardos            | CardOS 4.3B          |
-| sc-hsm            | GoID                 |
+| sc-hsm            | GoID 0.9             |
 | npa               | German ID card       |
 | PIV-II            | NIST demo PIV card 1 |   
 
@@ -121,7 +121,7 @@ Test random number generation, digest calculation, signature, verification and d
 ##### Other Operating Systems
 ###### Test Steps
 1. Open a command line terminal.
-2. Run `pkcs11-tool.exe --login --test`
+2. Run `pkcs11-tool --login --test`
 ###### Expected Result
 `No errors`
 
