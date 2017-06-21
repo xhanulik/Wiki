@@ -25,8 +25,8 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | jcop              | :white_circle:     | :white_circle:     | :white_circle:     |
 | oberthur          | :white_circle:     | :white_circle:     | :white_circle:     |
 | authentic         | :white_circle:     | :white_circle:     | :white_circle:     |
-| iasecc            | :white_circle:     | :white_circle:     | :white_circle:     |
-| belpic            | ✅ :     | :white_circle:     | :white_circle:     |
+| iasecc            | :accept:           | :white_circle:     | :accept:           |
+| belpic            | :white_check_mark: | :white_circle:     | :white_circle:     |
 | incrypto34        | :white_circle:     | :white_circle:     | :white_circle:     |
 | acos5             | :white_circle:     | :white_circle:     | :white_circle:     |
 | akis              | :white_circle:     | :white_circle:     | :white_circle:     |
@@ -56,13 +56,14 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 
 The table below shows a list of all tested smart cards that were used:
 
-| Smart Card Driver | Tested Smart Cards   |
-| ----------------- | -------------------- |
-| cardos            | CardOS 4.3B          |
-| sc-hsm            | GoID 0.9             |
-| npa               | German ID card       |
-| PIV-II            | NIST demo PIV card 1 |   
-| cac               | Expired test CAC card|   
+| Smart Card Driver | Tested Smart Cards       |
+| ----------------- | ------------------------ |
+| cardos            | CardOS 4.3B              |
+| sc-hsm            | GoID 0.9                 |
+| npa               | German ID card           |
+| PIV-II            | NIST demo PIV card 1     |
+| cac               | Expired test CAC card    |
+| iasecc            | IAS/ECC Gemalto test card|
 
 # Test Cases
 
