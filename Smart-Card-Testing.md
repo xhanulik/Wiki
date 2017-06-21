@@ -56,14 +56,14 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 
 The table below shows a list of all tested smart cards that were used:
 
-| Smart Card Driver | Tested Smart Cards       |
-| ----------------- | ------------------------ |
-| cardos            | CardOS 4.3B              |
-| sc-hsm            | GoID 0.9                 |
-| npa               | German ID card           |
-| PIV-II            | NIST demo PIV card 1     |
-| cac               | Expired test CAC card    |
-| iasecc            | IAS/ECC Gemalto test card|
+| Smart Card Driver | Tested Smart Cards                               |
+| ----------------- | ------------------------------------------------ |
+| cardos            | CardOS 4.3B                                      |
+| sc-hsm            | GoID 0.9                                         |
+| npa               | German ID card                                   |
+| PIV-II            | NIST demo PIV card 1                             |
+| cac               | Expired test CAC card                            |
+| iasecc            | IAS/ECC Gemalto, Gemalto MultiApp IAS/ECC v1.0.1 |
 
 # Test Cases
 
