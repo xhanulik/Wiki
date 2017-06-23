@@ -55,14 +55,14 @@ Save the following to a file sc-hsm.reg and double-click to import it into the r
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Calais\SmartCards\SmartCard-HSM]
 "ATR"=hex:3b,fe,18,00,00,81,31,fe,45,80,31,81,54,48,53,4d,31,73,80,21,40,81,07,fa
 "ATRMask"=hex:ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff
-"Crypto Provider"="Microsoft Base Smart Card Crypto Provider"
+"Crypto Provider"="OpenSC CSP"
 "Smart Card Key Storage Provider"="Microsoft Smart Card Key Storage Provider"
 "80000001"="opensc-minidriver.dll"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Calais\SmartCards\SmartCard-HSM-CL]
 "ATR"=hex:3B,8E,80,01,80,31,81,54,48,53,4D,31,73,80,21,40,81,07,18
 "ATRMask"=hex:ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff
-"Crypto Provider"="Microsoft Base Smart Card Crypto Provider"
+"Crypto Provider"="OpenSC CSP"
 "Smart Card Key Storage Provider"="Microsoft Smart Card Key Storage Provider"
 "80000001"="opensc-minidriver.dll"
 </code></pre>
