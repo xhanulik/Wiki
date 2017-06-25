@@ -48,7 +48,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | itacns            | :white_circle:     | :white_circle:     | :white_circle:     |
 | isoApplet         | :accept:           | :white_circle:     | :white_circle:     |
 | gids              | :white_circle:     | :white_circle:     | :white_circle:     |
-| openpgp           | :white_circle:     | :white_circle:     | :white_circle:     |
+| openpgp           | :white_check_mark: | :white_circle:     | :white_circle:     |
 | jpki              | :white_check_mark: | :accept:           | :accept:           |
 | coolkey           | :white_circle:     | :white_circle:     | :white_circle:     |
 | npa               | :accept:           | :white_circle:     | :accept:           |
@@ -64,6 +64,7 @@ The table below shows a list of all tested smart cards that were used:
 | PIV-II            | NIST demo PIV card 1                             |
 | cac               | Expired test CAC card                            |
 | iasecc            | IAS/ECC Gemalto, Gemalto MultiApp IAS/ECC v1.0.1 |
+| openpgp           | OpenPGP v2.0 card (ZeitControl)                  |
 
 # Test Cases
 
