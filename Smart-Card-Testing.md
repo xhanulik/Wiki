@@ -65,6 +65,7 @@ The table below shows a list of all tested smart cards that were used:
 | cac               | Expired test CAC card                            |
 | iasecc            | IAS/ECC Gemalto, Gemalto MultiApp IAS/ECC v1.0.1 |
 | openpgp           | OpenPGP v2.0 card (ZeitControl)                  |
+| openpgp           | Yubikey NEO                                      |
 
 # Test Cases
 
