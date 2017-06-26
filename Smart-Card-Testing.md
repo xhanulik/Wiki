@@ -50,7 +50,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | gids              | :white_circle:     | :white_circle:     | :white_circle:     |
 | openpgp           | :accept:           | :white_circle:     | :white_circle:     |
 | jpki              | :white_check_mark: | :accept:           | :accept:           |
-| coolkey           | :white_circle:     | :white_circle:     | :white_circle:     |
+| coolkey           | :white_check_mark: | :white_circle:     | :white_circle:     |
 | npa               | :accept:           | :white_circle:     | :accept:           |
 | default           | :white_circle:     | :white_circle:     | :white_circle:     |
 
@@ -61,11 +61,14 @@ The table below shows a list of all tested smart cards that were used:
 | cardos            | CardOS 4.3B                                      |
 | sc-hsm            | GoID 0.9                                         |
 | npa               | German ID card                                   |
-| PIV-II            | NIST demo PIV card 1                             |
+| PIV-II            | NIST demo PIV card 1, 10                         |
 | cac               | Expired test CAC card                            |
 | iasecc            | IAS/ECC Gemalto, Gemalto MultiApp IAS/ECC v1.0.1 |
 | openpgp           | OpenPGP v2.0 card (ZeitControl)                  |
 | openpgp           | Yubikey NEO                                      |
+| coolkey           | coolkey applet on SafeNet Java card              |
+| sc-hsm            | Nitrokey Nitrokey HSM                            |
+| cardos            | CardOS 5.3                                       |
 
 # Test Cases
 
