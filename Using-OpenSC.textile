@@ -51,8 +51,8 @@ evolution
 </code></pre>
 Inside evolution, select pkcs11-spy.so instead of opensc-pkcs11.so .
 
-Example, with ssh agent:
+To debug `ssh-agent`, these environment variables needs to be set for the `ssh-agent` process:
 <pre><code>export PKCS11SPY=/usr/lib/pkcs11/opensc-pkcs11.so \
-export PKCS11SPY_OUTPUT=logfile \
+export PKCS11SPY_OUTPUT=logfile `eval ssh-agent`;
 ssh-add -s /usr/lib/pkcs11-spy.so
 </code></pre>
