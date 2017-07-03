@@ -30,8 +30,8 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | incrypto34        | :white_circle:     | :white_circle:     | :white_circle:     |
 | acos5             | :white_circle:     | :white_circle:     | :white_circle:     |
 | akis              | :white_circle:     | :white_circle:     | :white_circle:     |
-| entersafe         | :white_circle:     | :white_circle:     | :white_circle:     |
-| epass2003         | :white_circle:     | :white_circle:     | :white_circle:     |
+| entersafe         | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| epass2003         | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | rutoken           | :white_circle:     | :white_circle:     | :white_circle:     |
 | rutoken_ecp       | :white_circle:     | :white_circle:     | :white_circle:     |
 | westcos           | :white_circle:     | :white_circle:     | :white_circle:     |
