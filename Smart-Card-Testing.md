@@ -35,7 +35,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | rutoken           | :white_circle:     | :white_circle:     | :white_circle:     |
 | rutoken_ecp       | :white_circle:     | :white_circle:     | :white_circle:     |
 | westcos           | :white_circle:     | :white_circle:     | :white_circle:     |
-| myeid             | :white_circle:     | :white_circle:     | :white_circle:     |
+| myeid             | :accept:           | :white_circle:     | :white_circle:     |
 | sc-hsm            | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | dnie              | :white_circle:     | :white_circle:     | :white_circle:     |
 | MaskTech          | :white_circle:     | :white_circle:     | :white_circle:     |
