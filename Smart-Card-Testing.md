@@ -37,7 +37,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | westcos           | :white_circle:     | :white_circle:     | :white_circle:     |
 | myeid             | :accept:           | :white_circle:     | :white_circle:     |
 | sc-hsm            | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| dnie              | :white_circle:     | :white_circle:     | :white_circle:     |
+| dnie              | white_check_mark:  | :white_circle:     | :white_circle:     |
 | MaskTech          | :white_circle:     | :white_circle:     | :white_circle:     |
 | mcrd              | :white_circle:     | :white_circle:     | :white_circle:     |
 | setcos            | :white_circle:     | :white_circle:     | :white_circle:     |
