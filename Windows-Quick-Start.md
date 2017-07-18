@@ -38,7 +38,7 @@ You may test the PKCS#11 support of your card with
 
 ## 4. Customize your configuration
 
-Change the default configuration files `C:\Program Files\OpenSC Project\OpenSC\opensc.conf` to your needs. The configuration options are explained within files. For 32 bit applications on an 64 bit OS you need to also edit `C:\Program Files (x86)\OpenSC Project\OpenSC\tools\opensc.conf`.
+Change the default configuration file `C:\Program Files\OpenSC Project\OpenSC\opensc.conf` to your needs. The configuration options are explained within this file. For 32 bit applications on an 64 bit OS you need to also edit `C:\Program Files (x86)\OpenSC Project\OpenSC\tools\opensc.conf`.
 
 ## 5. Uninstall OpenSC
 
