@@ -23,7 +23,7 @@ You may test the PKCS#11 support of your card with
 
 ## 4. Customize your configuration
 
-Change the default configuration file `/Library/OpenSC/etc/opensc.conf` to your needs. The configuration options are explained within files.
+Change the default configuration file `/Library/OpenSC/etc/opensc.conf` to your needs. The configuration options are explained within this file.
 
 ## 5. Uninstall OpenSC
 
