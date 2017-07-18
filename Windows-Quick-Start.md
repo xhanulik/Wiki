@@ -39,3 +39,9 @@ You may test the PKCS#11 support of your card with
 ## 4. Customize your configuration
 
 Change the default configuration files `C:\Program Files\OpenSC Project\OpenSC\opensc.conf` to your needs. The configuration options are explained within files. For 32 bit applications on an 64 bit OS you need to also edit `C:\Program Files (x86)\OpenSC Project\OpenSC\tools\opensc.conf`.
+
+## 5. Uninstall OpenSC
+
+Open the *Control Panel* and click on the *Uninstall a program* option under the *Programs* category. If you are using the Classic View of the *Control Panel*, then double-click on the *Programs and Features* icon instead. From the list of installed programs, choose *OpenSC smartcard framework* and click *Uninstall*. Do the same for *OpenSC smartcard framework (64bit)*.
+
+It is possible that a background process locks the minidriver library though uninstalling is successful. Remove `C:\Windows\System32\opensc-minidriver.dll` and `C:\Windows\SysWOW64\opensc-minidriver.dll` manually if required.
