@@ -12,7 +12,7 @@ Since we aren't currently signing the installation package, double clicking cann
 
 Upon successful installation, OpenSC is installed in `/Library/OpenSC`, the tokend module was registered and links to the OpenSC tools have been created in `/usr/local/bin`.
 
-The PKCS#11 modules have been installed as `/Library/OpenSC/lib/opensc-pkcs11.so` and `/Library/OpenSC/lib/onepin-opensc-pkcs11.dll` (copies of the libraries are available in `/usr/local/lib`).
+The PKCS#11 modules have been installed as `/Library/OpenSC/lib/opensc-pkcs11.so` and `/Library/OpenSC/lib/onepin-opensc-pkcs11.so` (copies of the libraries are available in `/usr/local/lib`).
 
 You may test tokend support of you card with *Keychain Access*. The app should list your smart card in the *Keychains* pane on the upper left side. Click the lock to verify the smart card PIN and to allow access to the card's keys.
 
