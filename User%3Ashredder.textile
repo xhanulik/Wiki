@@ -1,3 +1,0 @@
-Long time computer nerd, I have worked and lived with PKI since 1994, developing several certificate authorities and some PKI toolkits. Love development and security, currently focused on Java and JEE development. Founded the "EJBCA":http://ejbca.org/ project in 2001 and contributes to other open source project as well, such as "BouncyCastle":http://bouncycastle.org. Employed by open source company "PrimeKey":http://primekey.se in Sweden where we develop and support the "EJBCA":http://ejbca.org/ and "SignServer":http://signserver.org/ projects. Participated with stands for our projects on FOSDEM in 2008 and 2010.
-
-!attachments/wiki/User%3Ashredder/tomas.jpg(User%3Ashredder)!
