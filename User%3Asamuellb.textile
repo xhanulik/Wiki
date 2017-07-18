@@ -1,6 +1,0 @@
-I'm a computer science student at KTH in Stockholm, Sweden. 
-
-In my free time I work on some crazy open source projects, with the hope that they eventually become useful. The most polished/successful one is the "FriBID":http://fribid.se/index.en.html project, which is an eID client for use with BankID in Sweden. This is a reverse-engineered open source alternative to the official propriatary client.
-
-
-
