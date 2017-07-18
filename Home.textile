@@ -1,37 +1,34 @@
-h2. OpenSC - tools and libraries for smart cards
+h1. OpenSC - tools and libraries for smart cards
 
-OpenSC provides a set of libraries and utilities to work with smart cards. Its main focus is on cards that support cryptographic operations, and facilitate their use in security applications such as authentication, mail encryption and digital signatures. OpenSC implements the <b>"PKCS#11 API":http://www.emc.com/emc-plus/rsa-labs/standards-initiatives/pkcs-11-cryptographic-token-interface-standard.htm</b> so applications supporting this API (such as Mozilla Firefox and Thunderbird) can use it. On the card OpenSC implements the "PKCS#15":http://www.emc.com/emc-plus/rsa-labs/standards-initiatives/pkcs-15-cryptographic-token-information-format.htm standard and aims to be compatible with every software/card that does so, too. 
-
-OpenSC is written by an international team of volunteers and is licensed as "Open Source":http://www.opensource.org/ software under the  "LGPL license":http://www.opensource.org/licenses/lgpl-license.php version 2.1 of the License, or (at your option) any later version. For a list of all authors and contributors as well as detailed license information see [[OpenSC-Credits|OpenSC-Credits]].
+OpenSC provides a set of libraries and utilities to work with smart cards. Its main focus is on cards that support cryptographic operations, and facilitate their use in security applications such as authentication, mail encryption and digital signatures. OpenSC implements the standard APIs to smart cards, e.g. "PKCS#11 API":https://www.oasis-open.org/committees/pkcs11/, "Windows' Smart Card Minidriver":https://msdn.microsoft.com/en-us/library/windows/hardware/dn631754%28v=vs.85%29.aspx and macOS Tokend.
 
 If you are new to smart cards, see [[<b>OverView</b>|Overview]] and [[<b>FrequentlyAskedQuestions</b>|Frequently-Asked-Questions]] pages. Always check [[<b>SecurityAdvisories</b>|OpenSC-security-advisories]].
-
-The latest stable version of OpenSC is <b>0.16.0</b> ("released on 03.06.2016":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.16.0/)
- * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.16.0/
- * "Mac OS X 10.9 and 10.10 installer":https://github.com/OpenSC/OpenSC/releases/download/0.16.0/OpenSC-0.16.0.dmg
-
-The previous stable version of OpenSC was <b>0.15.0</b> ("released on 16.05.2015":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.15.0/)
- * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.15.0/
- * "Mac OS X 10.9 and 10.10 installer":https://github.com/OpenSC/OpenSC/releases/download/0.15.0/OpenSC-0.15.0.dmg
-
-Nightly and CI builds for Windows are available at "AppVeyor":https://ci.appveyor.com/project/LudovicRousseau/opensc/branch/master See the history to pick the build that matches the latest commit in master.
-
-The oldstable version of OpenSC <b>0.14.0</b> ("released on 26.06.2014":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.14.0/)
- * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.14.0/
-
-The oldstable version of OpenSC <b>0.13.0</b> ("released on 04.12.2012":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/)
- * "Source targzip and MSIs":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/
-
-The oldstable version of OpenSC <b>0.12.2</b> [milestone:0.12.2 milestone]). See [[<b>DownloadRelease</b>|Download-latest-OpenSC-stable-release]] for detailed information.
- * "Source targzip":http://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/opensc-0.12.2.tar.gz/download
- * "Windows (x86) installer":http://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/OpenSC-0.12.2-win32.msi/download (see [[<b>OpenSC Windows Installer</b>|OpenSC-Windows-installer]] for more information)
- * "Windows (x64) installer":http://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/OpenSC-0.12.2-win64.msi/download
- * "Mac OS X 10.6 and 10.7 installer":http://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/OpenSC-0.12.2-10.6.dmg/download (see MacInstaller for more information)
- * "Mac OS X 10.5 installer":http://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/OpenSC-0.12.2-10.5.dmg/download
 
 Before you  [[<b>GetStarted</b>|Getting-started-with-OpenSC]] with using OpenSC be sure to check the [[<b>SupportedHardware</b>|Supported-hardware-(smart-cards-and-USB-tokens)]] list as typical smart cards are incompatible with all other smart cards and come with no public documentation.
 
 [[<b>DeveloperInformation</b>|Creating-applications-with-smart-card-support]] is available for those who want to build smart card capable applications. Developers who want to [[<b>GetInvolved</b>|Getting-involved-in-OpenSC-development]] with OpenSC are needed as well.
+
+h4. Quick Start
+ * [[Windows Quick Start]]
+ * [[macOS Quick Start]]
+
+h2. Download
+
+The latest stable version is "OpenSC 0.16.0":https://github.com/OpenSC/OpenSC/releases/tag/0.16.0 released on 04.06.2016. It is available as
+ * "Source code distribution":https://github.com/OpenSC/OpenSC/releases/download/0.16.0/opensc-0.16.0.tar.gz
+ * Windows Installer for "64 bit":https://github.com/OpenSC/OpenSC/releases/download/0.16.0/OpenSC-0.16.0-win32_vs12-Release.msi and "32 bit":https://github.com/OpenSC/OpenSC/releases/download/0.16.0/OpenSC-0.16.0-win64_vs12-Release.msi operating system
+ * "macOS installer":https://github.com/OpenSC/OpenSC/releases/download/0.16.0/OpenSC-0.16.0.dmg
+
+h4. Old Releases
+
+ * "OpenSC 0.15.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.15.0/ released on 16.04.2015
+ * "OpenSC 0.14.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.14.0/ released on 26.06.2014
+ * "OpenSC 0.13.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/ released on 04.12.2012
+ * "OpenSC 0.12.2":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/ released on 12.06.2013
+
+h4. Nightly build
+
+The latest source code is available through "GitHub":https://github.com/OpenSC/OpenSC/archive/master.zip. Nightly builds for Windows are available as build artifact on "AppVeyor":https://ci.appveyor.com/project/LudovicRousseau/opensc/branch/master. Pick one of the builds and select _Artifacts_ to download the MSI.
 
 h2. News
 
@@ -57,14 +54,13 @@ OpenSC effort consists of various sub-projects that can be used independently as
  * [[OpenCT|https://github.com/OpenSC/openct/wiki]] implements a reader driver interface for various non-standard readers on Linux, meant to be used with OpenSC.
  * [[OpenSC-Java|Using-smart-cards-with-Java-SE]] is a Java<-->OpenSC bridge?
 
-h2. Quick links
+h2. License
+
+OpenSC is written by an international team of volunteers and is licensed as "Open Source":http://www.opensource.org/ software under the  "LGPL license":http://www.opensource.org/licenses/lgpl-license.php version 2.1 of the License, or (at your option) any later version. For a list of all authors and contributors as well as detailed license information see [[OpenSC-Credits|OpenSC-Credits]].
+
+h2. Quick Links
 
  * "Mailing lists":https://github.com/OpenSC/OpenSC/wiki/OpenSC-Services#mailing-lists
  * "Download":https://sourceforge.net/projects/opensc/files/OpenSC/
  * [[Application Support|Using-smart-cards-with-applications]] - list of applications with smart card support
  * [[OpenSC Services|OpenSC-Services]]
-
-h2. Misc
-
- * [[build|OpenSC-Components-Build]] OpenSC build using cross compiler
- * [[<b>OpenSC Windows Installer</b>|OpenSC-Windows-installer]]
