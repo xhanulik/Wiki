@@ -14,13 +14,14 @@ h4. Quick Start
 
 h2. Download
 
-The latest stable version is "OpenSC 0.16.0":https://github.com/OpenSC/OpenSC/releases/tag/0.16.0 released on 04.06.2016. It is available as
- * "Source code distribution":https://github.com/OpenSC/OpenSC/releases/download/0.16.0/opensc-0.16.0.tar.gz
- * Windows Installer for "64 bit":https://github.com/OpenSC/OpenSC/releases/download/0.16.0/OpenSC-0.16.0-win32_vs12-Release.msi and "32 bit":https://github.com/OpenSC/OpenSC/releases/download/0.16.0/OpenSC-0.16.0-win64_vs12-Release.msi operating system
- * "macOS installer":https://github.com/OpenSC/OpenSC/releases/download/0.16.0/OpenSC-0.16.0.dmg
+The latest stable version is "OpenSC 0.17.0":https://github.com/OpenSC/OpenSC/releases/tag/0.17.0 released on 04.06.2016. It is available as
+ * "Source code distribution":https://github.com/OpenSC/OpenSC/releases/download/0.17.0/opensc-0.17.0.tar.gz
+ * Windows Installer for "64 bit":https://github.com/OpenSC/OpenSC/releases/download/0.17.0/OpenSC-0.17.0-win32_vs12-Release.msi and "32 bit":https://github.com/OpenSC/OpenSC/releases/download/0.17.0/OpenSC-0.17.0-win64_vs12-Release.msi operating system
+ * "macOS installer":https://github.com/OpenSC/OpenSC/releases/download/0.17.0/OpenSC-0.17.0.dmg
 
 h4. Old Releases
 
+ * "OpenSC 0.16.0":https://github.com/OpenSC/OpenSC/releases/tag/0.16.0 released on 04.06.2016
  * "OpenSC 0.15.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.15.0/ released on 16.04.2015
  * "OpenSC 0.14.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.14.0/ released on 26.06.2014
  * "OpenSC 0.13.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/ released on 04.12.2012
@@ -32,6 +33,7 @@ The latest source code is available through "GitHub":https://github.com/OpenSC/O
 
 h2. News
 
+ * 18.07.2017: <b>OpenSC 0.17.0</b> is available.
  * 03.06.2016: <b>OpenSC 0.16.0</b> is available.
  * 16.05.2015: <b>OpenSC 0.15.0</b> is available.
  * 30.06.2014: <b>OpenSC 0.14.0</b> is available.
