@@ -60,6 +60,4 @@ h3. PIN_CMD in "card-entersafe.c":https://github.com/OpenSC/OpenSC/blob/master/s
 
 h3. References
 
-* [[NewCardDriver]]
-* [[FTCOSPK01C]]
 * Example step by step: "https://github.com/alediator/OpenSC/wiki/OpenSC-driver-Example":https://github.com/alediator/OpenSC/wiki/OpenSC-driver-Example
