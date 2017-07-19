@@ -69,7 +69,7 @@ The table below shows a list of all tested smart cards that were used:
 | coolkey           | coolkey applet on SafeNet Java card                              |
 | sc-hsm            | Nitrokey Nitrokey HSM                                            |
 | cardos            | CardOS 5.3                                                       |
-| isoApplet 	    | IsoApplet in TrustedLogic JTOP OS (Swissbit secure microSD card) |
+| isoApplet 	    | IsoApplet in Swissbit secure microSD card                        |
 
 # Test Cases
 
