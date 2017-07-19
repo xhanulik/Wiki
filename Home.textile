@@ -2,16 +2,10 @@ h1. OpenSC - tools and libraries for smart cards
 
 OpenSC provides a set of libraries and utilities to work with smart cards. Its main focus is on cards that support cryptographic operations, and facilitate their use in security applications such as authentication, mail encryption and digital signatures. OpenSC implements the standard APIs to smart cards, e.g. "PKCS#11 API":https://www.oasis-open.org/committees/pkcs11/, "Windows' Smart Card Minidriver":https://msdn.microsoft.com/en-us/library/windows/hardware/dn631754%28v=vs.85%29.aspx and macOS Tokend.
 
-If you are new to smart cards, see [[<b>OverView</b>|Overview]] and [[<b>FrequentlyAskedQuestions</b>|Frequently-Asked-Questions]] pages. Always check [[<b>SecurityAdvisories</b>|OpenSC-security-advisories]].
-
-Before you  [[<b>GetStarted</b>|Getting-started-with-OpenSC]] with using OpenSC be sure to check the [[<b>SupportedHardware</b>|Supported-hardware-(smart-cards-and-USB-tokens)]] list as typical smart cards are incompatible with all other smart cards and come with no public documentation.
-
-[[<b>DeveloperInformation</b>|Creating-applications-with-smart-card-support]] is available for those who want to build smart card capable applications. Developers who want to [[<b>GetInvolved</b>|Getting-involved-in-OpenSC-development]] with OpenSC are needed as well.
-
 h4. Quick Start
  * [[Windows Quick Start]]
  * [[macOS Quick Start]]
- * [[Compiling and Installing OpenSC on Unix flavors]]
+ * [[Compiling and Installing on Unix flavors]]
 
 h2. Download
 
