@@ -56,19 +56,20 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 
 The table below shows a list of all tested smart cards that were used:
 
-| Smart Card Driver | Tested Smart Cards                               |
-| ----------------- | ------------------------------------------------ |
-| cardos            | CardOS 4.3B                                      |
-| sc-hsm            | GoID 0.9                                         |
-| npa               | German ID card                                   |
-| PIV-II            | NIST demo PIV card 1, 10                         |
-| cac               | Expired test CAC card                            |
-| iasecc            | IAS/ECC Gemalto, Gemalto MultiApp IAS/ECC v1.0.1 |
-| openpgp           | OpenPGP v2.0 card (ZeitControl)                  |
-| openpgp           | Yubikey NEO                                      |
-| coolkey           | coolkey applet on SafeNet Java card              |
-| sc-hsm            | Nitrokey Nitrokey HSM                            |
-| cardos            | CardOS 5.3                                       |
+| Smart Card Driver | Tested Smart Cards                                               |
+| ----------------- | ---------------------------------------------------------------- |
+| cardos            | CardOS 4.3B                                                      |
+| sc-hsm            | GoID 0.9                                                         |
+| npa               | German ID card                                                   |
+| PIV-II            | NIST demo PIV card 1, 10                                         |
+| cac               | Expired test CAC card                                            |
+| iasecc            | IAS/ECC Gemalto, Gemalto MultiApp IAS/ECC v1.0.1                 |
+| openpgp           | OpenPGP v2.0 card (ZeitControl)                                  |
+| openpgp           | Yubikey NEO                                                      |
+| coolkey           | coolkey applet on SafeNet Java card                              |
+| sc-hsm            | Nitrokey Nitrokey HSM                                            |
+| cardos            | CardOS 5.3                                                       |
+| isoApplet 	    | IsoApplet in TrustedLogic JTOP OS (Swissbit secure microSD card) |
 
 # Test Cases
 
