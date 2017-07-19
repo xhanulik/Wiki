@@ -28,7 +28,7 @@ h4. Installing Requirements on Fedora
 
 <pre><code>su -c 'yum install readline-devel openssl-devel libxslt docbook-style-xsl pcsc-lite-devel automake autoconf libtool gcc</code></pre>
 
-h2. Configuring the Build
+h2. Build Configuration
 
 OpenSC tries to auto-detect all libraries using the "pkg-config":https://www.freedesktop.org/wiki/Software/pkg-config/ system.
 
