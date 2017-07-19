@@ -26,15 +26,15 @@ The latest source code is available through "GitHub":https://github.com/OpenSC/O
 
 h2. News
 
- * 18.07.2017: <b>OpenSC 0.17.0</b> is available.
- * 03.06.2016: <b>OpenSC 0.16.0</b> is available.
- * 16.05.2015: <b>OpenSC 0.15.0</b> is available.
- * 30.06.2014: <b>OpenSC 0.14.0</b> is available.
- * 04.12.2012: <b>OpenSC 0.13.0</b> is available. [[DownloadRelease|Download-latest-OpenSC-stable-release]]
- * 14.07.2011: <b>OpenSC 0.12.2</b> is available. [[DownloadRelease|Download-latest-OpenSC-stable-release]]
+ * 18.07.2017: OpenSC 0.17.0 is available.
+ * 03.06.2016: OpenSC 0.16.0 is available.
+ * 16.05.2015: OpenSC 0.15.0 is available.
+ * 30.06.2014: OpenSC 0.14.0 is available.
+ * 04.12.2012: OpenSC 0.13.0 is available.
+ * 14.07.2011: OpenSC 0.12.2 is available.
  * 09.06.2011: "a talk":http://www.slideshare.net/martinpaljak/opensc-eid-interoperability-through-open-source-software-8255721 covering OpenSC, open source and eID in Europe on EEMA "eID Management Conference":http://www.revolution1.plus.com/eema/index.htm
- * 18.04.2011: OpenSC 0.12.1 is available. [[DownloadRelease|Download-latest-OpenSC-stable-release]]
- * 14.04.2011: [[<b>NightlyBuilds</b>|Automated-OpenSC-builds]] are available for Windows and Mac OS X users.
+ * 18.04.2011: OpenSC 0.12.1 is available.
+ * 14.04.2011: Nightly builds are available for Windows and Mac OS X users.
  * 05.02.2011: OpenSC was at [[FOSDEM 2011|OpenSC-@-FOSDEM-2011]].
  * 17.12.2010 <b>SECURITY</b>: ("CVE-2010-4523":http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-4523) A rogue smart card, specially crafted for this purpose, can be used to potentially execute arbitrary code if inserted to a local machine. See [[SecurityAdvisories|OpenSC-security-advisories]].
 
