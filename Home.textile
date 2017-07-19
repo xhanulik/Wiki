@@ -11,6 +11,7 @@ Before you  [[<b>GetStarted</b>|Getting-started-with-OpenSC]] with using OpenSC 
 h4. Quick Start
  * [[Windows Quick Start]]
  * [[macOS Quick Start]]
+ * [[Compiling and Installing OpenSC on Unix flavors]]
 
 h2. Download
 
@@ -55,6 +56,14 @@ OpenSC effort consists of various sub-projects that can be used independently as
  * [[pam_p11|pam_p11-simple-RSA-authentication-with-PKCS#11-modules]] is a small and simple PAM module for local authentication
  * [[OpenCT|https://github.com/OpenSC/openct/wiki]] implements a reader driver interface for various non-standard readers on Linux, meant to be used with OpenSC.
  * [[OpenSC-Java|Using-smart-cards-with-Java-SE]] is a Java<-->OpenSC bridge?
+
+h2. Developer Information
+
+ * [[Overview]]
+ * [[Getting involved in OpenSC development]]
+ * [[Adding a new card driver]]
+ * [[Creating applications with smart card support]]
+ * [[Environment variables]]
 
 h2. License
 
