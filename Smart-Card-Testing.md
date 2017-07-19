@@ -11,48 +11,48 @@
 
 The table below shows a list of all supported card drivers (`opensc-tool --list-drivers`) that have been tested in this release:
 
-| Smart Card Driver | PKCS#11            | Windows Minidriver | macOS Tokend       |
-| ----------------- | :----------------: | :----------------: | :----------------: |
-| cardos            | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| flex              | :white_circle:     | :white_circle:     | :white_circle:     |
-| cyberflex         | :white_circle:     | :white_circle:     | :white_circle:     |
-| gpk               | :white_circle:     | :white_circle:     | :white_circle:     |
-| gemsafeV1         | :white_circle:     | :white_circle:     | :white_circle:     |
-| miocos            | :white_circle:     | :white_circle:     | :white_circle:     |
-| asepcos           | :white_circle:     | :white_circle:     | :white_circle:     |
-| starcos           | :white_circle:     | :white_circle:     | :white_circle:     |
-| tcos              | :white_circle:     | :white_circle:     | :white_circle:     |
-| jcop              | :white_circle:     | :white_circle:     | :white_circle:     |
-| oberthur          | :white_circle:     | :white_circle:     | :white_circle:     |
-| authentic         | :white_circle:     | :white_circle:     | :white_circle:     |
-| iasecc            | :accept:           | :white_circle:     | :accept:           |
-| belpic            | :white_check_mark: | :white_circle:     | :white_circle:     |
-| incrypto34        | :white_circle:     | :white_circle:     | :white_circle:     |
-| acos5             | :white_circle:     | :white_circle:     | :white_circle:     |
-| akis              | :white_circle:     | :white_circle:     | :white_circle:     |
-| entersafe         | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| epass2003         | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| rutoken           | :white_circle:     | :white_circle:     | :white_circle:     |
-| rutoken_ecp       | :white_circle:     | :white_circle:     | :white_circle:     |
-| westcos           | :white_circle:     | :white_circle:     | :white_circle:     |
-| myeid             | :accept:           | :white_circle:     | :white_circle:     |
-| sc-hsm            | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| dnie              | :white_check_mark: | :white_circle:     | :white_circle:     |
-| MaskTech          | :white_circle:     | :white_circle:     | :white_circle:     |
-| mcrd              | :white_circle:     | :white_circle:     | :white_circle:     |
-| setcos            | :white_circle:     | :white_circle:     | :white_circle:     |
-| muscle            | :white_circle:     | :white_circle:     | :white_circle:     |
-| atrust-acos       | :white_circle:     | :white_circle:     | :white_circle:     |
-| PIV-II            | :white_check_mark: | :white_circle:     | :white_circle:     |
-| cac               | :white_check_mark: | :white_circle:     | :white_circle:     |
-| itacns            | :white_circle:     | :white_circle:     | :white_circle:     |
-| isoApplet         | :accept:           | :white_circle:     | :white_circle:     |
-| gids              | :white_circle:     | :white_circle:     | :white_circle:     |
-| openpgp           | :accept:           | :white_circle:     | :white_circle:     |
-| jpki              | :white_check_mark: | :accept:           | :accept:           |
-| coolkey           | :white_check_mark: | :white_circle:     | :white_circle:     |
-| npa               | :accept:           | :white_circle:     | :accept:           |
-| default           | :white_circle:     | :white_circle:     | :white_circle:     |
+| Smart Card Driver    | PKCS#11            | Windows Minidriver | macOS Tokend       |
+| -------------------- | :----------------: | :----------------: | :----------------: |
+| cardos               | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| flex                 | :white_circle:     | :white_circle:     | :white_circle:     |
+| cyberflex            | :white_circle:     | :white_circle:     | :white_circle:     |
+| gpk                  | :white_circle:     | :white_circle:     | :white_circle:     |
+| gemsafeV1            | :white_circle:     | :white_circle:     | :white_circle:     |
+| miocos               | :white_circle:     | :white_circle:     | :white_circle:     |
+| asepcos              | :white_circle:     | :white_circle:     | :white_circle:     |
+| starcos              | :white_circle:     | :white_circle:     | :white_circle:     |
+| tcos                 | :white_circle:     | :white_circle:     | :white_circle:     |
+| jcop                 | :white_circle:     | :white_circle:     | :white_circle:     |
+| oberthur             | :white_circle:     | :white_circle:     | :white_circle:     |
+| authentic            | :white_circle:     | :white_circle:     | :white_circle:     |
+| iasecc               | :accept:           | :white_circle:     | :accept:           |
+| belpic               | :white_check_mark: | :white_circle:     | :white_circle:     |
+| incrypto34           | :white_circle:     | :white_circle:     | :white_circle:     |
+| acos5                | :white_circle:     | :white_circle:     | :white_circle:     |
+| akis                 | :white_circle:     | :white_circle:     | :white_circle:     |
+| entersafe            | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| epass2003            | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| rutoken              | :white_circle:     | :white_circle:     | :white_circle:     |
+| rutoken_ecp          | :white_circle:     | :white_circle:     | :white_circle:     |
+| westcos              | :white_circle:     | :white_circle:     | :white_circle:     |
+| myeid                | :accept:           | :white_circle:     | :white_circle:     |
+| sc-hsm               | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| dnie                 | :white_check_mark: | :white_circle:     | :white_circle:     |
+| MaskTech             | :white_circle:     | :white_circle:     | :white_circle:     |
+| mcrd                 | :white_circle:     | :white_circle:     | :white_circle:     |
+| setcos               | :white_circle:     | :white_circle:     | :white_circle:     |
+| muscle               | :white_circle:     | :white_circle:     | :white_circle:     |
+| atrust-acos          | :white_circle:     | :white_circle:     | :white_circle:     |
+| PIV-II               | :white_check_mark: | :white_circle:     | :white_circle:     |
+| cac                  | :white_check_mark: | :white_circle:     | :white_circle:     |
+| itacns               | :white_circle:     | :white_circle:     | :white_circle:     |
+| isoApplet (RSA only) | :accept:           | :white_circle:     | :white_circle:     |
+| gids                 | :white_circle:     | :white_circle:     | :white_circle:     |
+| openpgp              | :accept:           | :white_circle:     | :white_circle:     |
+| jpki                 | :white_check_mark: | :accept:           | :accept:           |
+| coolkey              | :white_check_mark: | :white_circle:     | :white_circle:     |
+| npa                  | :accept:           | :white_circle:     | :accept:           |
+| default              | :white_circle:     | :white_circle:     | :white_circle:     |
 
 The table below shows a list of all tested smart cards that were used:
 
