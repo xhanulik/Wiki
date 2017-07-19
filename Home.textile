@@ -53,6 +53,7 @@ h2. Developer Information
 
  * [[Overview]]
  * [[Getting involved in OpenSC development]]
+ * [[Compiling on Windows]]
  * [[Adding a new card driver]]
  * [[Creating applications with smart card support]]
  * [[Environment variables]]
