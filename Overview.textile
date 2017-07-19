@@ -1,6 +1,4 @@
-h1. Overview
-
-<b>Attention! Information on this page might be outdated or misleading. If in doubt, ask on [MailingLists opensc-devel mailing list]. Update to the wiki is work in progress. See [[FrequentlyAskedQuestions|Frequently-Asked-Questions]] and [[DeveloperInformation|Creating-applications-with-smart-card-support]] for now.</b>
+<b>Attention! Information on this page might be outdated or misleading. If in doubt, ask on [[Mailing lists]]. Update to the wiki is work in progress. See [[Frequently Asked Questions]] and [[Creating applications with smart card support]] for now.</b>
 
 So you want to use a smart card with some application? Here is a small introductions on the parts you need.
  * Application
@@ -159,12 +157,3 @@ CT-API was developed in the 1980ies for DOS. It defines a very simple API, so ve
 CT-BCS is a sister standard to CT-API. With it application authors can send commands similar to the commands send to smart cards also to the smart card reader. Either the reader or the driver will interpret the command and send an answer. Typical commands would be "is a card in the reader?" or "please reset the card". Drivers in CT-API format implement both CT-API and CT-BCS at the same time, so don't worry if you see only CT-API.
 
 The CT-API is very limited and meant for machines with one user only and one application only and thus doesn't fit well into todays world with many applications running at the same time and maybe even several users running software on the same computer at the same time.
-
-
-h2. Technical overview
-
-The following picture describes the overall architecture of OpenSC and external interfaces:
-
-!attachments/wiki/OverView/OpenSC.png(OverView)!
-
-
