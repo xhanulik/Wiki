@@ -18,7 +18,7 @@ You may test tokend support of you card with *Keychain Access*. The app should l
 
 You may test the PKCS#11 support of your card with
 ```
-/Library/OpenSC/lib/pkcs11-tool --login --test
+/Library/OpenSC/bin/pkcs11-tool --login --test
 ```
 
 ## 4. Customize your configuration
