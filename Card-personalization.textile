@@ -10,11 +10,11 @@ This guide is about initializing and personalizing (no distinction made) cards w
 Some knowlegde about smart cards is assumed. Below is a short overview of some
 key words and concepts. 
 
- * Filesystem - MF - DF - EF - FID
+h3. Filesystem - MF - DF - EF - FID
 
   A smart cards has a non-volatile memory (EEPROM) in which usually a PC-like file system is implemented. The directories are called Dedicated Files (DF) and the files are called Elementary Files (EF). They are identified by a a File ID (FID) of 2 bytes. For example, the root of the file system (called Master File or MF) has FID = 3F 00 (hex).
 
- * Commands - APDUs
+h3. Commands - APDUs
 
   It is possible to send commands (APDUs) to the card to select, read, write, create, list, delete, ... EFs and DFs (not all cards support or allow all commands).
 
@@ -22,19 +22,19 @@ key words and concepts.
  
  The file system usually implements some sort of access control on EFs and DFs. This is usually done by PINs or keys: you have to provide a PIN or show knowledge of a key before you can perform some command on some EF/DF. A PIN is often accompanied by a PUK (Pin Unblock Key), which can be used to reset (or unblock) that PIN.
 
- * Security Officer - SO
+h3. Security Officer - SO
 
   Security officer is a person (or a role) who manages the smart card issuing process. A SO PIN can be asked for if modifications are done to the card (keys generated or certificates written), but the existence of a SO is not mandatory. 
 
- * Cryptographic keys
+h3. Cryptographic keys
 
   On cryptographic cards, it is possible to sign, decrypt and generate key pairs (what can be done exactly depends on the card). On some cards, key and/or PINs are files in the filesystem, on other cards, they don't exist in the filesystem but are referenced through an ID.
 
- * Reader - PC/SC or OpenCT, CT-API
+h3. Reader - PC/SC or OpenCT, CT-API
 
   Smart card readers come with a library that can be used on a PC to send APDUs to the card. The common API is PC/SC, but also OpenCT and CT-API are used with som readers.
 
- * PKCS#15
+h3. PKCS#15
 
   There are standards (e.g. ISO7816, parts 4-...) that specify how to select, read, write EFs and DFs, and how to sign, decrypt, verify PIN etc. However, there is also a need to know which files contain what, or where the keys and PINs can be found.
 
