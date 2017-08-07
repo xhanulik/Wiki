@@ -3,7 +3,7 @@
 
 ## Introduction
 
- ''"Nothing is impossible for the man who doesn't have to do it himself."'' -- A.H. Weiler
+> Nothing is impossible for the man who doesn't have to do it himself. -- A.H. Weiler
 
 This guide is about initializing and personalizing (no distinction made) cards with the OpenSC library and tools (mostly pkcs15-init).
 
