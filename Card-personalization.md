@@ -12,7 +12,7 @@ key words and concepts.
 
 ### Filesystem - MF - DF - EF - FID
 
-  A smart cards has a non-volatile memory (EEPROM) in which usually a PC-like file system is implemented. The directories are called Dedicated Files (DF) and the files are called Elementary Files (EF). They are identified by a a File ID (FID) of 2 bytes. For example, the root of the file system (called Master File or MF) has FID = 3F 00 (hex).
+  A smart cards has a non-volatile memory (EEPROM) in which usually a PC-like file system is implemented. The directories are called Dedicated Files (DF) and the files are called Elementary Files (EF). They are identified by a a File ID (FID) of 2 bytes. For example, the root of the file system (called Master File or MF) has FID = ``3F 00`` (hex).
 
 ### Commands - APDUs
 
@@ -32,7 +32,7 @@ key words and concepts.
 
 ### Reader - PC/SC or OpenCT, CT-API
 
-  Smart card readers come with a library that can be used on a PC to send APDUs to the card. The common API is PC/SC, but also OpenCT and CT-API are used with som readers.
+  Smart card readers come with a library that can be used on a PC to send APDUs to the card. The common API is PC/SC, but also OpenCT and CT-API are used with some readers.
 
 ### PKCS#15
 
