@@ -44,10 +44,9 @@ h3. PKCS#15
 
 h2. A little PKCS#15 example
 
-Here's the textual contents of 3 PKCS#15 files: the AODF (Authentication
-Object Directory File), PrKDF (Private Key Directory File) and CDF
-(Certificate Directory File) that contain info on resp. the PINs, private
-keys and certificates. Each of them contains 1 entry.
+Here's the textual contents of 3 PKCS#15 files: the AODF (Authentication Object Directory File), PrKDF (Private Key Directory File) and CDF (Certificate Directory File) that contain info on resp. the PINs, private keys and  certificates. 
+
+Each of these example files contains 1 entry.
 
 <pre><code>AODF:
     Com. Flags  : private, modifiable
