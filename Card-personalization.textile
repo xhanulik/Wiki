@@ -92,7 +92,7 @@ h2. The OpenSC pkcs15-init tool and profiles
 Reading and writing files, PIN verification, signing and decryption happen in much the same way on all cards. Therefore, the "normal life" commands have been implemented in OpenSC for all supported cards.
 
 However, creating and deleting files, PINs and keys is very card specific and has not yet been implemented for all cards. The following cards support personalization:
- * [[ListTagged(card -readonly (supported or semisupported))]]
+ * [[ListTagged(card -readonly (supported or semisupported))]] -- TODO?
 
 h4. Profile
 
