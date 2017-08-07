@@ -18,7 +18,7 @@ h3. Commands - APDUs
 
   It is possible to send commands (APDUs) to the card to select, read, write, create, list, delete, ... EFs and DFs (not all cards support or allow all commands).
 
- * Access control - PIN, PUK
+h3. Access control - PIN, PUK
  
  The file system usually implements some sort of access control on EFs and DFs. This is usually done by PINs or keys: you have to provide a PIN or show knowledge of a key before you can perform some command on some EF/DF. A PIN is often accompanied by a PUK (Pin Unblock Key), which can be used to reset (or unblock) that PIN.
 
