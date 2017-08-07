@@ -24,7 +24,7 @@ h3. Access control - PIN, PUK
 
 h3. Security Officer - SO
 
-  Security officer is a person (or a role) who manages the smart card issuing process. A SO PIN can be asked for if modifications are done to the card (keys generated or certificates written), but the existence of a SO is not mandatory. 
+  Security officer is a person (or a role) who manages the smart card issuing process. A SO PIN can be asked if modifications can be made to the card (keys generated or certificates written), but the existence of a SO is not mandatory. 
 
 h3. Cryptographic keys
 
