@@ -124,10 +124,10 @@ Disclaimer: The things in this section are fairly general but not guaranteed to 
 The ``--reader`` or ``-r`` can be given with any command. By default the first reader with a card is used. Do ``opensc-tool -l`` to see the list of available readers.
 
 The typical order of the commands is:
- * erase (-E) the card if needed
- * create (-C) the PKCS15 files
- * add a user PIN (unless you did a '-C' with the 'onepin' profile option)
- * add a key + cert (-S) or generate a key (-G) + a add a cert (-W)
+ * erase ``-E`` the card if needed
+ * create ``-C`` the PKCS15 files
+ * add a user PIN (unless you did a ``-C`` with the ``onepin`` profile option)
+ * add a key + cert ``-S`` or generate a key ``-G`` + a add a cert ``-W``
 
 To see the results of what you did, you can do one of the following:
 
@@ -157,16 +157,16 @@ pkcs15-init -E {-T}
 ```
 
 This will delete all keys, PINs, certificates, data that were listed in PKCS15 files, along with the PKCS15 files themselves.
- * This operation may require a 'transport' key. ``pkcs15-init`` will ask you for this key and propose the default one for that card. With -T, the default key will be used without asking. NOTE: if you get a "Failed to erase card: PIN code or key incorrect", the transport key is wrong. Find this key and then try again, <b>DO NOT</b> try the default key again or you may permanently lock your card!
+ * This operation may require a 'transport' key. ``pkcs15-init`` will ask you for this key and propose the default one for that card. With ``-T``, the default key will be used without asking. NOTE: if you get a "Failed to erase card: PIN code or key incorrect", the transport key is wrong. Find this key and then try again, <b>DO NOT</b> try the default key again or you may permanently lock your card!
 
 ### Add a PIN (not possible with the onepin profile option)
 ```
 pkcs15-init -P {-a <AuthID>} {--pin <PIN>} {--puk <PUK>} {-l <label>}
 ```
 
- * You can specify the AuthID with -a, if you don't do so, a value that didn't exist yet on the card will be used.
- * Specify the PIN and PUK with --pin and --puk, if you don't do so, the tool will prompt you for one.
- * Specify the label (name) of the PIN with -l, or accept the default label.
+ * You can specify the AuthID with ``-a``, if you don't do so, a value that didn't exist yet on the card will be used.
+ * Specify the PIN and PUK with ``--pin`` and ``--puk``, if you don't do so, the tool will prompt you for one.
+ * Specify the label (name) of the PIN with ``-l``, or accept the default label.
 
 ### Generate a key pair
 ```
@@ -217,8 +217,8 @@ This adds the private key and certificate chain to the card. If a certificate al
  * Specify the ID of the key and the corresponding certificate with ``-i``, otherwise the tool with choose one; only the 'user cert' will get the same ID as the key, the other certificates will get 'authority' status and another ID.
  * You can specify the key-usage, but it is advised not to do this so the key usage is fetched from the certificate.
  * Specify the password of the pkcs12 key file if you don't want to be prompted for one.
- * Specify the label (name) of the private key with -l, or accept the default label if you don't do so.
- * Specify the label (name) of the user certificate with --cert-label, or accept the default label if you don't do so.
+ * Specify the label (name) of the private key with ``-l``, or accept the default label if you don't do so.
+ * Specify the label (name) of the user certificate with ``--cert-label``, or accept the default label if you don't do so.
  * Depending on your card and profile option, you will be prompted to provide your SO PIN and/or PIN; if you don't want to be prompted, add them to the command line with ``--so-pin <SOPIN>`` and/or ``--pin <PIN>``.
 
 ### Add a certificate
@@ -227,9 +227,9 @@ pkcs15-init -X <certfile> {-f <certformat>} {-i <ID>} {--authority}
 ```
 
  * The certfile should be in {{DER}} (binary) or {{PEM}} format. PEM is assumed as the format unless specified via certformat.
- * Specify the ID of the certificate with -i, otherwise the tool with choose one; if the certificate corresponds to a private and/or public key, you should specify the same ID as that key.
- * Specify --authority if it is a CA certificate.
- * Depending on your card and profile option, you will be prompted to provide your SO PIN and/or PIN; if you don't want to be prompted, add them to the command line with --so-pin <SOPIN> and/or --pin <PIN>.
+ * Specify the ID of the certificate with ``-i``, otherwise the tool with choose one; if the certificate corresponds to a private and/or public key, you should specify the same ID as that key.
+ * Specify ``--authority`` if it is a CA certificate.
+ * Depending on your card and profile option, you will be prompted to provide your SO PIN and/or PIN; if you don't want to be prompted, add them to the command line with ``--so-pin <SOPIN>`` and/or ``--pin <PIN>``.
 
 ### Add a public key
 ```
@@ -239,7 +239,7 @@ pkcs15-init --store-public-key <keyfile> {-f <keyformat>} {-i <ID>}
 
  * The keyfile should be in DER (binary) or PEM format
  * The keyformat should be PEM (default) or DER
- * Specify the ID of the key with -i, otherwise the tool with choose one; if the key corresponds to a private key and/or certificate, you should specify the same ID as that private key and/or certificate.
+ * Specify the ID of the key with ``-i``, otherwise the tool with choose one; if the key corresponds to a private key and/or certificate, you should specify the same ID as that private key and/or certificate.
  * Specify the label (name) of the  with ``-l``, or accept the default label if you don't do so.
  * Depending on your card and profile option, you will be prompted to provide your SO PIN and/or PIN; if you don't want to be prompted, add them to the command line with ``--so-pin <SOPIN>`` and/or ``--pin <PIN>``.
 
@@ -249,8 +249,8 @@ pkcs15-init -W <datafile> {-i <ID>} {-l <label>}
 ```
 
  * The datafile is stored "as is" onto the card.
- * Specify the ID of the data with -i, or accept the default ID.
- * Specify the label (name) of the data with -l, or accept the default label.
+ * Specify the ID of the data with ``-i``, or accept the default ID.
+ * Specify the label (name) of the data with ``-l``, or accept the default label.
  * Depending on your card and profile option, you will be prompted to provide your SO PIN and/or PIN; if you don't want to be prompted, add them to the command line with ``--so-pin <SOPIN>`` and/or ``--pin <PIN>``.
 
 ### Update a certificate
@@ -262,7 +262,7 @@ pkcs15-init -U <certfile> -f <format> -i <ID> {-a <pinid>}
  * Specify the cert format (DER or PEM) with ``-f``
  * Specify the ID of the cert with ``-i``.
  * Specify the ID of the PIN needed to update the cert file (and if needed to delete it and create and write a new one) with ``-a``.
- * Depending on your card and profile option, you will be prompted to provide your SO PIN and/or PIN; if you don't want to be prompted, add them to the command line with --so-pin <SOPIN> and/or --pin <PIN>.
+ * Depending on your card and profile option, you will be prompted to provide your SO PIN and/or PIN; if you don't want to be prompted, add them to the command line with ``--so-pin <SOPIN>`` and/or ``--pin <PIN>``.
  * <b>NOTE</b>: if the new cert is bigger then the old one, the tool will try to delete the old cert file and create a new one. This won't work for most card (probably SetCOS 4.4.1 is the only one where it works..)
 
 ### Change attributes (currently only the label)
