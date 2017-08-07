@@ -307,7 +307,7 @@ NOTE: This can only be done with the onepin profile option (because the browser 
 
 ## Card-specific issues
 
- <i>"Experience is that marvellous thing that enables you to recognize a mistake when you make it again."</i> -- Franklin P. Jones
+> Experience is that marvellous thing that enables you to recognize a mistake when you make it again. -- Franklin P. Jones
 
 Cryptoflex:
  * DFs and EFs in a DF have to be deleted in reverse order of creation.
