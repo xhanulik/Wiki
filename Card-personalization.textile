@@ -48,7 +48,8 @@ Here's the textual contents of 3 PKCS#15 files: the AODF (Authentication Object 
 
 Each of these example files contains 1 entry.
 
-<pre><code>AODF:
+```
+AODF:
     Com. Flags  : private, modifiable
     Auth ID     : 01
     Flags       : [0x32], local, initialized, needs-padding
@@ -74,7 +75,7 @@ X.509 Certificate [/C=BE/ST=...]
     Authority   : no
     Path        : 3f0050154545
     ID          : 45
-</code></pre>
+```
 
 Some things to note:
  * The Auth ID (01) of the private key is the same as the one of the PIN which means that you first have to do a login with this PIN before you can use this key.
