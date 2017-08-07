@@ -1,7 +1,7 @@
-h1. Card personalization
+# Card personalization
 
 
-h2. Introduction
+## Introduction
 
  ''"Nothing is impossible for the man who doesn't have to do it himself."'' -- A.H. Weiler
 
@@ -10,31 +10,31 @@ This guide is about initializing and personalizing (no distinction made) cards w
 Some knowlegde about smart cards is assumed. Below is a short overview of some
 key words and concepts. 
 
-h3. Filesystem - MF - DF - EF - FID
+### Filesystem - MF - DF - EF - FID
 
   A smart cards has a non-volatile memory (EEPROM) in which usually a PC-like file system is implemented. The directories are called Dedicated Files (DF) and the files are called Elementary Files (EF). They are identified by a a File ID (FID) of 2 bytes. For example, the root of the file system (called Master File or MF) has FID = 3F 00 (hex).
 
-h3. Commands - APDUs
+### Commands - APDUs
 
   It is possible to send commands (APDUs) to the card to select, read, write, create, list, delete, ... EFs and DFs (not all cards support or allow all commands).
 
-h3. Access control - PIN, PUK
+### Access control - PIN, PUK
  
  The file system usually implements some sort of access control on EFs and DFs. This is usually done by PINs or keys: you have to provide a PIN or show knowledge of a key before you can perform some command on some EF/DF. A PIN is often accompanied by a PUK (Pin Unblock Key), which can be used to reset (or unblock) that PIN.
 
-h3. Security Officer - SO
+### Security Officer - SO
 
   Security officer is a person (or a role) who manages the smart card issuing process. A SO PIN can be asked if modifications can be made to the card (keys generated or certificates written), but the existence of a SO is not mandatory. 
 
-h3. Cryptographic keys
+### Cryptographic keys
 
   On cryptographic cards, it is possible to sign, decrypt and generate key pairs (what can be done exactly depends on the card). On some cards, key and/or PINs are files in the filesystem, on other cards, they don't exist in the filesystem but are referenced through an ID.
 
-h3. Reader - PC/SC or OpenCT, CT-API
+### Reader - PC/SC or OpenCT, CT-API
 
   Smart card readers come with a library that can be used on a PC to send APDUs to the card. The common API is PC/SC, but also OpenCT and CT-API are used with som readers.
 
-h3. PKCS#15
+### PKCS#15
 
   There are standards (e.g. ISO7816, parts 4-...) that specify how to select, read, write EFs and DFs, and how to sign, decrypt, verify PIN etc. However, there is also a need to know which files contain what, or where the keys and PINs can be found.
 
@@ -42,7 +42,7 @@ h3. PKCS#15
 
   So a "PCKS#15 card" is nothing but any other card on which the right set of files has been added. In short: PKCS#15 allows you to describe where to find PINs, keys, certificates and data on a card, plus all the info that is needed to use them.
 
-h2. A little PKCS#15 example
+## A little PKCS#15 example
 
 Here's the textual contents of 3 PKCS#15 files: the AODF (Authentication Object Directory File), PrKDF (Private Key Directory File) and CDF (Certificate Directory File) that contain info on resp. the PINs, private keys and  certificates. 
 
@@ -88,28 +88,28 @@ Use the _pkcs15-tool --dump_ tool to see yourself what pkcs15 data is on your ca
 Have the PKCS#15 files a fixed place so everyone can find them? No, there's only one: the EF(DIR) in the MF and with ID 2F00. That's the starting place.
 
 
-h2. The OpenSC pkcs15-init tool and profiles
+## The OpenSC pkcs15-init tool and profiles
 
 Reading and writing files, PIN verification, signing and decryption happen in much the same way on all cards. Therefore, the "normal life" commands have been implemented in OpenSC for all supported cards.
 
 However, creating and deleting files, PINs and keys is very card specific and has not yet been implemented for all cards. The following cards support personalization:
  * [[ListTagged(card -readonly (supported or semisupported))]] -- TODO?
 
-h4. Profile
+#### Profile
 
 Because the initialisation/personalisation is so card-specific, it would be very hard to make a tool or API that accepts all parameters for all current and future cards. Therefore, a profile file has been made in OpenSC that
 contains all the card-specific parameters. This card-specific profile is read by card-specific code in the pkcs15-init library each time this library is used on that card.
 
 See the *.profile files in ``src/pkcs15init/``. There is one general file (``pkcs15.profile``) and one card-specific profile for each card.
 
-h4. Profile options
+#### Profile options
 
 There are currently 3 options you can specify to modify a profile:
  * default: creation/deletion/generation is controlled by the SO PIN (*Note that this different from the regular user of the card)
  * onepin: creation/deletion/generation is controlled by the user PIN and thus by the user. As a result, only 1 user PIN is possible
  * small: like default, but suitable for card with little memory
 
-h2. pkcs15-init tool
+## pkcs15-init tool
 
 This is the main personalization tool that allows you to do the __all the initialization things__, e.g. add/delete keys, certificates, PINs and data, generate keys, while specifying key usage, which PIN protects which key etc..
 
@@ -137,7 +137,7 @@ pkcs15-tool --dump
 ```
 To see/dump the content of any file, use the ``opensc-explorer`` tool.
 
-h3. Create the PKCS15 files
+### Create the PKCS15 files
 ```
 pkcs15-init -C {-T} {-p <profile>} --so-pin <PIN> --so-puk <PUK> | --no-so-pin | --pin <PIN> --puk <PUK>
 ```
@@ -151,7 +151,7 @@ This will create the PKCS15 DF (5015) and all the PKCS15 files (some of which wi
   * ``pkcs15+onepin``  : for the onepin profile option
   * ``pkcs15+small``   : for the small profile option
 
-h3. Erase the card's content
+### Erase the card's content
 ```
 pkcs15-init -E {-T}
 ```
@@ -159,7 +159,7 @@ pkcs15-init -E {-T}
 This will delete all keys, PINs, certificates, data that were listed in PKCS15 files, along with the PKCS15 files themselves.
  * This operation may require a 'transport' key. ``pkcs15-init`` will ask you for this key and propose the default one for that card. With -T, the default key will be used without asking. NOTE: if you get a "Failed to erase card: PIN code or key incorrect", the transport key is wrong. Find this key and then try again, <b>DO NOT</b> try the default key again or you may permanently lock your card!
 
-h3. Add a PIN (not possible with the onepin profile option)
+### Add a PIN (not possible with the onepin profile option)
 ```
 pkcs15-init -P {-a <AuthID>} {--pin <PIN>} {--puk <PUK>} {-l <label>}
 ```
@@ -168,7 +168,7 @@ pkcs15-init -P {-a <AuthID>} {--pin <PIN>} {--puk <PUK>} {-l <label>}
  * Specify the PIN and PUK with --pin and --puk, if you don't do so, the tool will prompt you for one.
  * Specify the label (name) of the PIN with -l, or accept the default label.
 
-h3. Generate a key pair
+### Generate a key pair
 ```
 pkcs15-init -G <keyspec> -a <AuthID> --insecure {-i <ID>}
    {-u <keyusage>}
@@ -189,7 +189,7 @@ This will generate a public and private key pair.
 
 NOTE: see the SSL engines (below) on how to make a certificate request with the key you generated.
 
-h3. Add a private key
+### Add a private key
 ```
 pkcs15-init -S <keyfile> {-f <keyformat>} -a <AuthID> --insecure
    {-i <ID>} {-u <keyusage>} {--passphrase <password>}
@@ -221,7 +221,7 @@ This adds the private key and certificate chain to the card. If a certificate al
  * Specify the label (name) of the user certificate with --cert-label, or accept the default label if you don't do so.
  * Depending on your card and profile option, you will be prompted to provide your SO PIN and/or PIN; if you don't want to be prompted, add them to the command line with ``--so-pin <SOPIN>`` and/or ``--pin <PIN>``.
 
-h3. Add a certificate
+### Add a certificate
 ```
 pkcs15-init -X <certfile> {-f <certformat>} {-i <ID>} {--authority}
 ```
@@ -231,7 +231,7 @@ pkcs15-init -X <certfile> {-f <certformat>} {-i <ID>} {--authority}
  * Specify --authority if it is a CA certificate.
  * Depending on your card and profile option, you will be prompted to provide your SO PIN and/or PIN; if you don't want to be prompted, add them to the command line with --so-pin <SOPIN> and/or --pin <PIN>.
 
-h3. Add a public key
+### Add a public key
 ```
 pkcs15-init --store-public-key <keyfile> {-f <keyformat>} {-i <ID>}
                   {-l <label>}
@@ -243,7 +243,7 @@ pkcs15-init --store-public-key <keyfile> {-f <keyformat>} {-i <ID>}
  * Specify the label (name) of the  with ``-l``, or accept the default label if you don't do so.
  * Depending on your card and profile option, you will be prompted to provide your SO PIN and/or PIN; if you don't want to be prompted, add them to the command line with ``--so-pin <SOPIN>`` and/or ``--pin <PIN>``.
 
-h3. Add data
+### Add data
 ```
 pkcs15-init -W <datafile> {-i <ID>} {-l <label>}
 ```
@@ -253,7 +253,7 @@ pkcs15-init -W <datafile> {-i <ID>} {-l <label>}
  * Specify the label (name) of the data with -l, or accept the default label.
  * Depending on your card and profile option, you will be prompted to provide your SO PIN and/or PIN; if you don't want to be prompted, add them to the command line with ``--so-pin <SOPIN>`` and/or ``--pin <PIN>``.
 
-h3. Update a certificate
+### Update a certificate
 ```
 pkcs15-init -U <certfile> -f <format> -i <ID> {-a <pinid>}
 ```
@@ -265,7 +265,7 @@ pkcs15-init -U <certfile> -f <format> -i <ID> {-a <pinid>}
  * Depending on your card and profile option, you will be prompted to provide your SO PIN and/or PIN; if you don't want to be prompted, add them to the command line with --so-pin <SOPIN> and/or --pin <PIN>.
  * <b>NOTE</b>: if the new cert is bigger then the old one, the tool will try to delete the old cert file and create a new one. This won't work for most card (probably SetCOS 4.4.1 is the only one where it works..)
 
-h3. Change attributes (currently only the label)
+### Change attributes (currently only the label)
 ```
 pkcs15-init -A <type> -i <ID> -l <label> {-a <pinid>}
 ```
@@ -277,9 +277,9 @@ This allows you to modify the label of a certain PKCS15 object.
  * Specify the ID of the PIN needed to update the corresponding PKCS15 file with ``-a``.
  * Depending on your card and profile option, you will be prompted to provide your SO PIN and/or PIN; if you don't want to be prompted, add them to the command line with ``--so-pin <SOPIN>`` and/or ``--pin <PIN>``.
 
-h2. Other tools
+## Other tools
 
-h3. SSL-engines
+### SSL-engines
 
 These libraries can be loaded in OpenSSL so you can do a certificate request with the openssl tool; the signature of the certificate request will then be made using the smart card. The result can then be sent to a CA for certification or the resulting certificate can be put on the card with pkcs15-init or pkcs11-tool.
 
@@ -296,7 +296,7 @@ req -engine pkcs11 -new -key <ID> -keyform engine -out <cert_req>
    in which ID is the slot+ID in the following format:
    [slot_<slotID>][-][id_<ID>], e.g. id_45 or slot_0-id_45
 
-h3. ``pkcs11-tool`` and Mozilla/Netscape
+### ``pkcs11-tool`` and Mozilla/Netscape
 
 You can use the OpenSC pkcs11 library to generate a key pair in Mozilla or Netscape, and let the browser generate a certificate request that is sent to an on-line CA to issue and send your a certificate that is then added to the card.
 
@@ -305,7 +305,7 @@ Just go to an online CA (Globalsign, Thawte, ...) and follow their guidelines.  
 NOTE: This can only be done with the onepin profile option (because the browser won't ask for an SO PIN, only for the user PIN).
 
 
-h2. Card-specific issues
+## Card-specific issues
 
  <i>"Experience is that marvellous thing that enables you to recognize a mistake when you make it again."</i> -- Franklin P. Jones
 
