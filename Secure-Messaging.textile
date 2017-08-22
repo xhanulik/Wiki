@@ -40,11 +40,11 @@ h3. Introduction
 
 The proposal revolves around the idea of APDU transformations. An APDU transformation (xform for short) is a function that, very simply, 
 
-1. takes a chain of APDUs as input
-1. processes their header and data field
-1. calls another transformation providing the processed APDU
-1. processes the response field
-1. returns.
+# takes a chain of APDUs as input
+# processes their header and data field
+# calls another transformation providing the processed APDU
+# processes the response field
+# returns.
 
 The following new types are defined:
 <pre><code>struct sc_xform_invocation;
@@ -75,9 +75,9 @@ typedef struct sc_card {
 (We will see later where the stack comes into play.)
 
 A xform chain is an array of sc_xform_invocation_stack_t structures, meaning that each "func" in a member should call the next _func_ and pass the following arguments:
-1. a pointer to the current working _sc_card_t_ structure
-1. a pointer to the processed APDU
-1. a pointer to the remainder of the xform chain.
+# a pointer to the current working _sc_card_t_ structure
+# a pointer to the processed APDU
+# a pointer to the remainder of the xform chain.
 
 Note that the next _func_ is called in the middle of the procedure, not at the end. When the next _func_ returns successfully, the xform can expect to find meaningful values in the processed APDU, process them, modify the original APDU – the one it was passed as an argument – accordingly, and return.
 
@@ -90,8 +90,8 @@ Note that sending an APDU to a smart card can be seen as just another kind of tr
 At any time, the card drivers can set card->xforms to an empty chain (the default), or to whatever they see fit.
 
 When _sc_transmit_apdu()_ is invoked, after performing the consistency checks, it appends to the provided xform chain (or creates a new chain, if none is provided) two more xforms:
-1. the command chaining xform (a very simple refactoring of the current command chaining code snippet in _sc_transmit_apdu()_)
-1. the APDU transmit xform, that performs _do_single_transmit()_ on each APDU of the chain.
+# the command chaining xform (a very simple refactoring of the current command chaining code snippet in _sc_transmit_apdu()_)
+# the APDU transmit xform, that performs _do_single_transmit()_ on each APDU of the chain.
 
 h3. Errors: signalling and debugging them
 
@@ -103,8 +103,8 @@ Sometimes it will be necessary to "pause" the xform chain and carry out a whole 
 
 There are two ways to do this:
 
-1. the xform function can create a new temporary xform chain, making sure to invoke the APDU transmit xform (which is always final! regardless of whether it is followed by a NULL func in the chain array or not) at the end
-1. the xform function can invoke the card driver's own functions to do this.
+# the xform function can create a new temporary xform chain, making sure to invoke the APDU transmit xform (which is always final! regardless of whether it is followed by a NULL func in the chain array or not) at the end
+# the xform function can invoke the card driver's own functions to do this.
 
 In the second case, we must remember that a second _sc_transmit_apdu()_ invocation would result from this, and it would be using the same xform chain. If the xform functions are not intelligent enough to handle the command properly, we must remember to store the chain somewhere and reset the card structure's current chain.
 
