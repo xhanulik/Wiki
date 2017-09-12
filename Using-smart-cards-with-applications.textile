@@ -7,7 +7,7 @@ h2. Connection authentication + encryption
 
 h3. Web browsers / HTTPS
 
- * "Mozilla Firefox":http://www.mozilla.com/en-US/firefox/firefox.html - See MozillaSteps for instructions
+ * "Mozilla Firefox":http://www.mozilla.com/en-US/firefox/firefox.html - See [[MozillaSteps|Installing-OpenSC-PKCS%2311-Module-in-Firefox,-Step-by-Step]] for instructions
  * "Safari":http://www.apple.com/safari/ (on Mac OS X) - requires [OpenSC Mac OS X installer] and works transparently
 
 h3. SSH
@@ -30,8 +30,8 @@ h2. Data signing + encryption
 
 h3. E-mail / S/MIME
 
- * "Mozilla Thunderbird":http://www.mozillamessaging.com/en-US/thunderbird/ and derivates (like "Trustedbird":http://www.trustedbird.org/tb/Main_Page) - see MozillaSteps for instructions
- * "Evolution":http://projects.gnome.org/evolution/index.shtml - see EvolutionSteps for instructions
+ * "Mozilla Thunderbird":http://www.mozillamessaging.com/en-US/thunderbird/ and derivates (like "Trustedbird":http://www.trustedbird.org/tb/Main_Page) - see [[MozillaSteps|Installing-OpenSC-PKCS%2311-Module-in-Firefox,-Step-by-Step]] for instructions
+ * "Evolution":http://projects.gnome.org/evolution/index.shtml - see [[EvolutionSteps|Using-OpenSC-in-Evolution]] for instructions
 
 h3. Application specific document signing
 
