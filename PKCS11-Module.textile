@@ -9,7 +9,7 @@ This standard specifies an API, called Cryptoki, to devices which hold cryptogra
 OpenSC implements this standard in "opensc-pkcs11.so" module (on Windows: opensc-pkcs11.dll).
 Every Software that can use cryptographic tokens such as Mozilla, Firefox and Thunderbird can
 simply load this module and use all smart card supported by OpenSC for authentication, signing
-and decryption.
+and decryption. Note that Firefox on Windows can only use the 32-bit version of OpenSC as Firefox itself is a 32-bit application. Both OpenSC 32-bit and 64-bit can be installed without conflicting with each other.
 
 h2. Virtual slots
 
