@@ -7,7 +7,7 @@ h4. Quick Start
 
 h2. Download
 
-The latest stable version is "OpenSC 0.17.0":https://github.com/OpenSC/OpenSC/releases/tag/0.17.0 released on 18.07.2016. It is available as
+The latest stable version is "OpenSC 0.17.0":https://github.com/OpenSC/OpenSC/releases/tag/0.17.0 released on 18.07.2017. It is available as
  * "Source code distribution":https://github.com/OpenSC/OpenSC/releases/download/0.17.0/opensc-0.17.0.tar.gz
  * Windows Installer for "64 bit":https://github.com/OpenSC/OpenSC/releases/download/0.17.0/OpenSC-0.17.0-win64_vs12-Release.msi and "32 bit":https://github.com/OpenSC/OpenSC/releases/download/0.17.0/OpenSC-0.17.0-win32_vs12-Release.msi operating system
  * "macOS installer":https://github.com/OpenSC/OpenSC/releases/download/0.17.0/OpenSC-0.17.0.dmg
