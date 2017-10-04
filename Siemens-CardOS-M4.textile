@@ -1,4 +1,8 @@
-h1. Siemens CardOS M4
+h1. CardOS
+
+There are two versions of CardOS cards. The first old, version 4 works in OpenSC including card provisioning using @cardos-tool@. The other version 5 works for using in PKCS#11 interface, but the provisioning and management operations are not supported in @cardos-tool@, because of lack of publicly available documentation.
+
+h2. Siemens CardOS M4
 
 Siemens CardOS M4 smart card should work fine with OpenSC.
 
@@ -14,3 +18,8 @@ The versions of CardOS M4 are: M4.0, M4.01, M4.2, M4.3, M4.3b, M4.2b and M4.2c i
 
 Also note that M4.0 needs special "packages" (i.e. signed firmware addons by siemens) installed to work properly. Best not to use that ancient version if you can.
 
+h2. CardOS 5
+
+There is no publicly available specification for these cards so they are supported to the best effort, mostly for reading and basic cryptographic RSA operations. The cards are capable of EC operations, but the support for it is not implemented yet (2017).
+
+There are known version 5.0 and 5.3, which differ only slightly.
