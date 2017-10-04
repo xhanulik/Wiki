@@ -9,4 +9,4 @@ h1. Commercial offers
 
 h2. Where to buy smart cards
 
- * See [[[[FrequentlyAskedQuestions|Frequently-Asked-Questions]]|FrequentlyAskedQuestions#Q:WherecanIbuysmartcards]]
+ * See [[Frequently Asked Questions|Frequently-Asked-Questions#q-where-can-i-buy-smart-cards-]]
