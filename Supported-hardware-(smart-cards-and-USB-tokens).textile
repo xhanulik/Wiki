@@ -28,7 +28,7 @@ Personalizable cards:
  * [[<b>SetCOS</b>|Setcos-driver]]
  * [[<b>Oberthur</b>|Oberthur-AuthentIC-applet-v2.2]]
  * [[<b>Cyberflex</b>|Schlumberger-Axalto-Cyberflex]]
- * [[<b>CardOs</b>|CardOs]]
+ * [[<b>CardOS</b>|Siemens-CardOS-M4]]
  * [[<b>STARCOS</b>|STARCOS-cards]]
  * [[<b>ASEPCOS</b>|Athena-ASEPCOS-ASEKey]]
  * [[<b>SmartCardHsm</b>|SmartCardHSM]]
