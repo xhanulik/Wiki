@@ -14,11 +14,11 @@ The latest stable version is "OpenSC 0.17.0":https://github.com/OpenSC/OpenSC/re
 
 h4. Old Releases
 
- * "OpenSC 0.16.0":https://github.com/OpenSC/OpenSC/releases/tag/0.16.0 released on 04.06.2016
+ * "OpenSC 0.16.0":https://github.com/OpenSC/OpenSC/releases/tag/0.16.0 released on 04.06. 2016
  * "OpenSC 0.15.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.15.0/ released on 16.04.2015
  * "OpenSC 0.14.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.14.0/ released on 26.06.2014
  * "OpenSC 0.13.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/ released on 04.12.2012
- * "OpenSC 0.12.2":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/ released on 12.06.2013
+ * "OpenSC 0.12.2":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/ released on 14.07.2011
 
 h4. Nightly build
 
