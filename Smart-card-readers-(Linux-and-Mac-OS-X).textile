@@ -32,6 +32,7 @@ h2. PIN pad readers
 h2. Bluetooth readers
 
 If someone has experience with any of these, please comment.
+ * "https://ftsafe.com/products/reader/Bluetooth":https://ftsafe.com/products/reader/Bluetooth SDK available at Github("bR301(Bluetooth 3.0)":https://github.com/FeitianSmartcardReader/bR301_SDK_Latest/ and "bR301BLE(Bluetooth 4.2":https://github.com/FeitianSmartcardReader/BR500_AND_BR301BLE_SDK_Latest/) , including for Android, iOS and Windows, "Specification Detail":https://ftsafe.com/products/reader/bluetooth/specification)
  * "http://www.apriva.com/products/iss/authentication/reader":http://www.apriva.com/products/iss/authentication/reader (SDK available under NDA/license, including for Android)
  * "http://www.blackberry.com/solutions/pdfs/SmartCardReaderBrochure.pdf":http://www.blackberry.com/solutions/pdfs/SmartCardReaderBrochure.pdf
  * "http://www.biometricassociates.com/products-baimobile/bluetooth-smart-card-reader.html":http://www.biometricassociates.com/products-baimobile/bluetooth-smart-card-reader.html ?
