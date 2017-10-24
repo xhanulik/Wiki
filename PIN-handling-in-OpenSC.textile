@@ -1,3 +1,0 @@
-h1. PIN handling in OpenSC
-
-Description of PIN formats, PIN policies and associations on card, PIN handling (entry, caching, use of pinpads)
