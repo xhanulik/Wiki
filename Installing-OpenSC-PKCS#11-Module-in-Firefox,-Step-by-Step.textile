@@ -11,9 +11,13 @@ h1. Installing OpenSC PKCS#11 Module in Firefox, Step by Step
 !https://github.com/n8felton/OpenSC/wiki/attachments/wiki/MozillaSteps/FirefoxESR52_1.png!
 
 ----
-3.) Click *Advanced* and switch to the *Certificates* tab. Click *Security Devices*.
+3.) For Release 55 and below, click *Advanced* and switch to the *Certificates* tab. Click *Security Devices*.
 
 !https://github.com/n8felton/OpenSC/wiki/attachments/wiki/MozillaSteps/FirefoxESR52_2.png!
+
+For Release 56 and up, click *Privacy & Security*, scroll down and click *Security Devices*.
+
+!https://github.com/bob-fontana/OpenSC/blob/master/attachments/wiki/MozillaSteps/FirefoxESR56_3.png!
 
 ----
 4.) Click on *Load*.
