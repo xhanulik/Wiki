@@ -24,7 +24,7 @@ Upon successful installation the 32 bit (and 64 bit) minidriver have successfull
 
 The PKCS#11 modules have been installed as `C:\Windows\System32\opensc-pkcs11.dll` and `C:\Windows\System32\onepin-opensc-pkcs11.dll` (the 32 bit libraries on an 64 bit OS are available as `C:\Windows\SysWOW64\opensc-pkcs11.dll` and `C:\Windows\SysWOW64\onepin-opensc-pkcs11.dll`)
 
-You may test minidriver support of you card with
+You may test minidriver support of your card with
 ```
 C:\Windows\System32\certutil.exe -scinfo
 C:\Windows\SysWOW64\certutil.exe -scinfo
