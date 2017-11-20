@@ -40,7 +40,7 @@ If you don't have @pkg-config@ installed, and don't want to install it, you can 
 
 @./configure --help@ will list other useful environment variables.
 
-If some libraries are not installed in typical locations, you need to tell @pkg-config@ where to find the
-@*.pc@ files. You can do this with the @PKG_CONFIG_PATH@ environment
-variable, for example:
+If some libraries are not installed in typical locations, you need to tell @pkg-config@ where to find the @*.pc@ files. You can do this with the @PKG_CONFIG_PATH@ environment variable, for example:
 <pre><code>export PKG_CONFIG_PATH=/usr/lib/pkgconfig:/usr/local/lib/pkgconfig:/opt/mystuff/liv/pkgconfig</code></pre>
+
+By default, we are compiling OpenSC with @-Wall -Wextra -Wno-unused-parameter -Werror@, which causes all compiler warnings to be treated as errors. Use @./configure --disable-strict@ to disable this behavior.
