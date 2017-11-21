@@ -14,7 +14,7 @@ h4. Getting OpenPACE
 
 Download and unpack the source code of the "latest release of OpenPACE":https://github.com/frankmorgner/openpace/releases/latest. Open a Visual Studio _Developer Command Prompt_ and change to the OpenPACE's @src@ directory. Compile the library:
 <pre><code>set OPENSSL=C:\OpenSSL-Win64 &REM Change the directory to C:\OpenSSL-Win32 when compiling for 32 bit
-cl /I%OPENSSL%\include /I. /DX509DIR=\`"/\`" /DCVCDIR=\`"/\`" /W3 /D_CRT_SECURE_NO_DEPRECATE /DWIN32_LEAN_AND_MEAN /GS /MT /c ca_lib.c cv_cert.c cvc_lookup.c x509_lookup.c eac_asn1.c eac.c eac_ca.c eac_dh.c eac_ecdh.c eac_kdf.c eac_lib.c eac_print.c eac_util.c misc.c pace.c pace_lib.c pace_mappings.c ri.c ri_lib.c ta.c ta_lib.c objects.c
+cl /I%OPENSSL%\include /I. /DX509DIR=\"/\" /DCVCDIR=\"/\" /W3 /D_CRT_SECURE_NO_DEPRECATE /DWIN32_LEAN_AND_MEAN /GS /MT /c ca_lib.c cv_cert.c cvc_lookup.c x509_lookup.c eac_asn1.c eac.c eac_ca.c eac_dh.c eac_ecdh.c eac_kdf.c eac_lib.c eac_print.c eac_util.c misc.c pace.c pace_lib.c pace_mappings.c ri.c ri_lib.c ta.c ta_lib.c objects.c
 lib /out:libeac.lib ca_lib.obj cv_cert.obj cvc_lookup.obj x509_lookup.obj eac_asn1.obj eac.obj eac_ca.obj eac_dh.obj eac_ecdh.obj eac_kdf.obj eac_lib.obj eac_print.obj eac_util.obj misc.obj pace.obj pace_lib.obj pace_mappings.obj ri.obj ri_lib.obj ta.obj ta_lib.obj objects.obj</code></pre>
 
 h4. Getting zlib
