@@ -46,7 +46,7 @@ To apply this usage to Gnuk, the patch above is needed. Basically, usage between
 
 h3. 1. Display user info
 
-Use @openpgpg-tool@
+Use @openpgp-tool@
 
 h3. 2. Read and write data object (DO)
 
