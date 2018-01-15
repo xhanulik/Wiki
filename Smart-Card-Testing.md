@@ -175,6 +175,52 @@ User is logged in. The *Log Out* button becomes available.
 ###### Expected Result
 User is authenticated.
 
+### OpenSSH
+##### Preconditions
+* SSH server with allowed public key authentication (for example `localhost`)
+* Inserted card with either generally-visible RSA public keys or X.509 certificates (does not work with ECDSA)
+
+#### Without ssh-agent
+##### Test steps
+1. Get the public keys from the card in OpenSSH format (for path the PKCS#11 library in your system use above table)
+```
+ssh-keygen -D /usr/local/lib/opensc-pkcs11.so
+```
+2. Store the key(s) in `~/.ssh/authorized_keys` in server
+3. Try to connect with ssh to this server:
+```
+ssh -I /usr/local/lib/opensc-pkcs11.so example.com
+```
+##### Expected Result
+* You are prompted for a PIN
+* You are authenticated to the server (and usually given a remote shell)
+
+
+#### With ssh-agent
+##### Test steps
+1. Start `ssh-agent` in current terminal window (if is not already running):
+```
+eval $(ssh-agent)
+```
+2. Add the smartcard to the `ssh-agent` (for path the PKCS#11 library in your system use above table) and write your PIN:
+```
+ssh-add -s /usr/local/lib/opensc-pkcs11.so
+```
+3. Get the public keys from the card in OpenSSH format:
+```
+ssh-add -L
+```
+4. Store the key(s) in `~/.ssh/authorized_keys` in server
+5. Try to connect (repetitively) with ssh to this server:
+```
+ssh example.com
+```
+##### Expected Result
+* You are NOT prompted for a PIN during each connection
+* You are authenticated to the server (and usually given a remote shell)
+
+Note: This will not work for keys with `ALWAYS_AUTHENTICATE` attribute, because of [OpenSSH bug #2638](https://bugzilla.mindrot.org/show_bug.cgi?id=2638)
+
 ## Windows Minidriver
 
 ### `certutil -scinfo`
