@@ -166,7 +166,7 @@ User is logged in. The *Log Out* button becomes available.
 #### TLS Client Authentication
 
 ###### Preconditions
-* The web server is configured for client authentication with the token's certificate (for example [./gnutls-http-serv](https://gitlab.com/gnutls/gnutls/blob/master/doc/credentials/gnutls-http-serv) with CA as the certificate from the card).
+* The web server is configured for client authentication with the token's certificate (for example [./gnutls-http-serv](https://gitlab.com/gnutls/gnutls/blob/master/doc/credentials/gnutls-http-serv) with `--x509cafile` with issuers certificate or certificate from the card).
 ###### Test Steps
 1. Put the token on the reader.
 1. Browse to the web server.
