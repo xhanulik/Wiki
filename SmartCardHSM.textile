@@ -10,7 +10,7 @@ CardContact provides free development samples for open source developers. For co
 
 Unless stated otherwise, a SmartCard-HSM is usually shipped uninitialized, meaning that no SO-PIN is set. You will first need to perform an initialization to set the SO-PIN and initial user PIN. See section "Initialize the Device":#initialize-the-device below. 
 
-Please note, that the SmartCard-HSM is *not* compatible with the pkcs15-init command. In particular it does *not* support a key import from PKCS#12 files. Doing so will just create certificate objects and the private key metadata, but no key. Private keys can only be imported from key containers previously exported from the same or a different SmartCard-HSM with the same DKEK.
+Please note, that the SmartCard-HSM is *not* compatible with the pkcs15-init command. In particular it does *not* support pkcs15-init to import a key from PKCS#12 files. Doing so will just create certificate objects and the private key metadata, but no key. Please use the "Smart Card Shell":https://www.openscdp.org/scsh3 to import keys and certificates from PKCS#12 files.
 
 Further test scripts can be found in the "Smart Card Shell Script Collection":http://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html.
 
