@@ -4,7 +4,6 @@ h1. Commercial offers
  * "Aventra":http://www.aventra.fi/English/index_E.php (Finland). Smart cards, smart card readers, accessories. Card Management Systems and software, card printers, consulting and personalisation services.
  * "CardContact":http://www.cardcontact.de (Germany). System architects with a focus on smart card and PKI systems. Developer of the SmartCardHsm.
  * "Crypto Stick":http://www.crypto-stick.com/ is an USB key containing an OpenPGP Card which is compatible to both X.509 and OpenPGP. A "patch":https://github.com/hongquan/OpenSC-main for OpenSC is available which enables full support.
- * "GOOZE cryptographic web shop":http://www.gooze.eu (France). Dozens of tutorials covering OpenSC. Buy OpenSC compatible hardware: smartcards, USB tokens, smartcard reader. New or refurbished. Low shipping rates. Reseller of the Feitian PKI and the ePass PKI token.
  * "Küberpunk LLC":http://www.kyberpunk.net/about (Estonia) provides consulting services for open source cryptographic software that also cover OpenSC.
 
 h2. Where to buy smart cards
