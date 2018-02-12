@@ -42,7 +42,7 @@ OpenPGP card "v1.0":http://www.g10code.de/docs/openpgp-card-1.0.pdf /"1.1":http:
 
 h2. Usage
 
-To apply this usage to Gnuk, the patch above is needed. Basically, usage between general OpenPGP card (Nitrokey for example) and Gnuk are the same, except some differences will be noted below.
+Basically, usage between general OpenPGP card (Nitrokey for example) and Gnuk are the same, except some differences that will be noted below.
 
 h3. 1. Display user info
 
