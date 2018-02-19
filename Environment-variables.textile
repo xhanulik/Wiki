@@ -16,7 +16,7 @@ See "Using OpenSC":https://github.com/OpenSC/OpenSC/wiki/Using-OpenSC
 
 h2. OPENSC_DRIVER
 
-Specify an driver, that will be used (the same as `force_card_driver` configuration option in `opensc.conf`
+Specify an driver, that will be used (the same behavior as _force_card_driver_ configuration option in _opensc.conf_ ).
 
 h2. PIV_9A06_KEY
 
