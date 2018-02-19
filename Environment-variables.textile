@@ -12,7 +12,11 @@ Specify an alternative _opensc.conf_ file.
 
 h2. OPENSC_DEBUG
 
-See UsingOpensc
+See "Using OpenSC":https://github.com/OpenSC/OpenSC/wiki/Using-OpenSC
+
+h2. OPENSC_DRIVER
+
+Specify an driver, that will be used (the same as `force_card_driver` configuration option in `opensc.conf`
 
 h2. PIV_9A06_KEY
 
@@ -24,11 +28,11 @@ See PivTool Used with PIV cards during initialization.
 
 h2. PKCS11SPY
 
-See UsingOpensc
+See "Using OpenSC":https://github.com/OpenSC/OpenSC/wiki/Using-OpenSC
 
 h2. PKCS11SPY_OUTPUT
 
-See UsingOpensc
+See "Using OpenSC":https://github.com/OpenSC/OpenSC/wiki/Using-OpenSC
 
 h2. POSIXLY_CORRECT
 
