@@ -25,6 +25,6 @@ please add it.
 Other operating systems:
 
 | NetBSD | "not included":ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/README-all.html |
-| FreeBSD | "OpenSC 0.9.4 included":http://www.freebsd.org/cgi/cvsweb.cgi/ports/security/opensc/ |
+| FreeBSD | "OpenSC 0.17. included in the ports collection as of October 2017":http://www.freebsd.org/cgi/cvsweb.cgi/ports/security/opensc/ |
 | OpenBSD | not included |
 | fink / Mac OS X | "not included":http://fink.sourceforge.net/pdb/list.php |
