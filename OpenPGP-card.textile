@@ -121,7 +121,7 @@ If you want to delete key from Nitrokey, the only option is to erase card (all t
 
 h3. 5. Erase card (Nitrokey)
 
-Erasing card is supported by Nitrokey (or general OpenPGP card v2) only. Gnuk and Nitrokey Start do not support.
+Erasing card is supported by Nitrokey (or general OpenPGP card v2). Gnuk and Nitrokey Start support this function from version 1.2.6 on.
 
 bc. openpgp-tool --erase
 
