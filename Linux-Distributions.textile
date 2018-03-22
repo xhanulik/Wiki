@@ -4,9 +4,9 @@ For GNU/Linux users the best solution is, if the distribution already includes r
 of OpenSC. Here is a survey of recent distributions. If you have additional infomation,
 please add it.
 
-| Debian woody (old stable) | "does not contain OpenSC packages":http://packages.debian.org/opensc  |
-| Debian sarge (stable) | "OpenSC 0.9.6 included":http://packages.debian.org/stable/utils/opensc |
-| Debian sid (development) | "OpenSC 0.9.6 included":http://packages.debian.org/unstable/utils/opensc |
+| Debian jessie (old stable) | "OpenSC 0.14.0 included":http://packages.debian.org/oldstable/utils/opensc  |
+| Debian stretch (stable) | "OpenSC 0.16.0 included":http://packages.debian.org/stable/utils/opensc |
+| Debian sid (development) | "OpenSC 0.17.0 included":http://packages.debian.org/unstable/utils/opensc |
 | Fedora Core 3 | "OpenSC 0.9.4 included":http://download.fedora.redhat.com/pub/fedora/linux/extras/3/i386/ |
 | Fedora Core 4 | "OpenSC 0.9.6 included":http://download.fedora.redhat.com/pub/fedora/linux/extras/4/i386/ |
 | Gentoo Portage | "OpenSC 0.9.6 in dev-libs/opensc":http://www.gentoo.org/cgi-bin/viewcvs.cgi/dev-libs/opensc/?root=gentoo-x86 |
