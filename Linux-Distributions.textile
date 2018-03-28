@@ -8,8 +8,8 @@ please add it. A general and current overview is shown on "repology.org":https:/
 | Debian jessie (old stable) | "OpenSC 0.14.0 included":http://packages.debian.org/oldstable/utils/opensc  |
 | Debian stretch (stable) | "OpenSC 0.16.0 included":http://packages.debian.org/stable/utils/opensc |
 | Debian sid (development) | "OpenSC 0.17.0 included":http://packages.debian.org/unstable/utils/opensc |
-| Fedora Core 3 | "OpenSC 0.9.4 included":http://download.fedora.redhat.com/pub/fedora/linux/extras/3/i386/ |
-| Fedora Core 4 | "OpenSC 0.9.6 included":http://download.fedora.redhat.com/pub/fedora/linux/extras/4/i386/ |
+| Fedora 26+ | "OpenSC 0.17.0 included":https://apps.fedoraproject.org/packages/opensc |
+| RHEL/CentOS 7.4 | OpenSC 0.16.0 (git revision 777e2a3) included |
 | Gentoo Portage | "OpenSC 0.9.6 in dev-libs/opensc":http://www.gentoo.org/cgi-bin/viewcvs.cgi/dev-libs/opensc/?root=gentoo-x86 |
 | Mandrake | "OpenSC 0.8.1 in contrib":http://cvs.mandrakesoft.com/cgi-bin/cvsweb.cgi/contrib-SPECS/opensc/ |
 | Novell/SUSE LINUX Enterprise Server 9 for x86 | "OpenSC 0.8.0 included":http://www.novell.com/products/linuxpackages/enterpriseserver/i386/opensc.html |
