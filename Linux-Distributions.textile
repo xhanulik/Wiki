@@ -2,8 +2,9 @@ h1. Linux Distributions
 
 For GNU/Linux users the best solution is, if the distribution already includes recent packages
 of OpenSC. Here is a survey of recent distributions. If you have additional infomation,
-please add it.
+please add it. A general and current overview is shown on "repology.org":https://repology.org/metapackage/opensc/versions as well.
 
+| Arch Linux | "OpenSC 0.17.0 included":https://www.archlinux.org/packages/community/x86_64/opensc/ |
 | Debian jessie (old stable) | "OpenSC 0.14.0 included":http://packages.debian.org/oldstable/utils/opensc  |
 | Debian stretch (stable) | "OpenSC 0.16.0 included":http://packages.debian.org/stable/utils/opensc |
 | Debian sid (development) | "OpenSC 0.17.0 included":http://packages.debian.org/unstable/utils/opensc |
@@ -18,6 +19,9 @@ please add it.
 | Suse 9.3 | "OpenSC 0.9.4 included":ftp://ftp.suse.com/pub/suse/i386/9.3/suse/i586 |
 | Suse 9.2 | "OpenSC 0.8.1 included":ftp://ftp.suse.com/pub/suse/i386/9.2/suse/i586 |
 | Suse 9.1 | "OpenSC 0.8.0 included":ftp://ftp.suse.com/pub/suse/i386/9.1/suse/i586 |
+| Ubuntu 16.04 | "OpenSC 0.15.0 included":https://packages.ubuntu.com/xenial/opensc |
+| Ubuntu 18.04 | "OpenSC 0.17.0 included":https://packages.ubuntu.com/bionic/opensc |
+
 
 
 "ATrpms":http://atrpms.net/name/opensc/ lists some RPM based distributions.
