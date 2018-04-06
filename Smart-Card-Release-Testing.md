@@ -1,58 +1,62 @@
 # Test Results
 
-:white_check_mark: All test cases passed.  :accept: Some tests cases passed.  :white_circle: Untested.
+- :full_moon: All tests passed
+- :waning_gibbous_moon:
+- :last_quarter_moon: Some tests passed
+- :waning_crescent_moon:
+- :new_moon: Untested.
 
 ## OpenSC 0.17.0
 
 | Installer    | Windows            | macOS              |
 | ------------ | :----------------: | :----------------: |
-| Installation | :white_check_mark: | :white_check_mark: |
-| Removal      | :white_check_mark: | :white_check_mark: |
+| Installation | :full_moon: | :full_moon: |
+| Removal      | :full_moon: | :full_moon: |
 
 The table below shows a list of all supported card drivers (`opensc-tool --list-drivers`) that have been tested in this release:
 
 | Smart Card Driver    | PKCS#11            | Windows Minidriver | macOS Tokend       |
 | -------------------- | :----------------: | :----------------: | :----------------: |
-| cardos               | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| flex                 | :white_circle:     | :white_circle:     | :white_circle:     |
-| cyberflex            | :white_circle:     | :white_circle:     | :white_circle:     |
-| gpk                  | :white_circle:     | :white_circle:     | :white_circle:     |
-| gemsafeV1            | :white_circle:     | :white_circle:     | :white_circle:     |
-| miocos               | :white_circle:     | :white_circle:     | :white_circle:     |
-| asepcos              | :white_circle:     | :white_circle:     | :white_circle:     |
-| starcos              | :white_circle:     | :white_circle:     | :white_circle:     |
-| tcos                 | :white_circle:     | :white_circle:     | :white_circle:     |
-| jcop                 | :white_circle:     | :white_circle:     | :white_circle:     |
-| oberthur             | :white_circle:     | :white_circle:     | :white_circle:     |
-| authentic            | :white_circle:     | :white_circle:     | :white_circle:     |
-| iasecc               | :accept:           | :white_circle:     | :accept:           |
-| belpic               | :white_check_mark: | :white_circle:     | :white_circle:     |
-| incrypto34           | :white_circle:     | :white_circle:     | :white_circle:     |
-| acos5                | :white_circle:     | :white_circle:     | :white_circle:     |
-| akis                 | :white_circle:     | :white_circle:     | :white_circle:     |
-| entersafe            | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| epass2003            | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| rutoken              | :white_circle:     | :white_circle:     | :white_circle:     |
-| rutoken_ecp          | :white_circle:     | :white_circle:     | :white_circle:     |
-| westcos              | :white_circle:     | :white_circle:     | :white_circle:     |
-| myeid                | :accept:           | :white_circle:     | :white_circle:     |
-| sc-hsm               | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| dnie                 | :white_check_mark: | :white_circle:     | :white_circle:     |
-| MaskTech             | :white_circle:     | :white_circle:     | :white_circle:     |
-| mcrd                 | :white_circle:     | :white_circle:     | :white_circle:     |
-| setcos               | :white_circle:     | :white_circle:     | :white_circle:     |
-| muscle               | :white_circle:     | :white_circle:     | :white_circle:     |
-| atrust-acos          | :white_circle:     | :white_circle:     | :white_circle:     |
-| PIV-II               | :white_check_mark: | :white_circle:     | :white_circle:     |
-| cac                  | :white_check_mark: | :white_circle:     | :white_circle:     |
-| itacns               | :white_circle:     | :white_circle:     | :white_circle:     |
-| isoApplet (no ECDSA) | :accept:           | :white_circle:     | :white_circle:     |
-| gids                 | :white_circle:     | :white_circle:     | :white_circle:     |
-| openpgp              | :accept:           | :white_circle:     | :white_circle:     |
-| jpki                 | :white_check_mark: | :accept:           | :accept:           |
-| coolkey              | :white_check_mark: | :white_circle:     | :white_circle:     |
-| npa                  | :accept:           | :white_circle:     | :accept:           |
-| default              | :white_circle:     | :white_circle:     | :white_circle:     |
+| cardos               | :full_moon: | :full_moon: | :full_moon: |
+| flex                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| cyberflex            | :new_moon:     | :new_moon:     | :new_moon:     |
+| gpk                  | :new_moon:     | :new_moon:     | :new_moon:     |
+| gemsafeV1            | :new_moon:     | :new_moon:     | :new_moon:     |
+| miocos               | :new_moon:     | :new_moon:     | :new_moon:     |
+| asepcos              | :new_moon:     | :new_moon:     | :new_moon:     |
+| starcos              | :new_moon:     | :new_moon:     | :new_moon:     |
+| tcos                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| jcop                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| oberthur             | :new_moon:     | :new_moon:     | :new_moon:     |
+| authentic            | :new_moon:     | :new_moon:     | :new_moon:     |
+| iasecc               | :last_quarter_moon:           | :new_moon:     | :last_quarter_moon:           |
+| belpic               | :full_moon: | :new_moon:     | :new_moon:     |
+| incrypto34           | :new_moon:     | :new_moon:     | :new_moon:     |
+| acos5                | :new_moon:     | :new_moon:     | :new_moon:     |
+| akis                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| entersafe            | :full_moon: | :full_moon: | :full_moon: |
+| epass2003            | :full_moon: | :full_moon: | :full_moon: |
+| rutoken              | :new_moon:     | :new_moon:     | :new_moon:     |
+| rutoken_ecp          | :new_moon:     | :new_moon:     | :new_moon:     |
+| westcos              | :new_moon:     | :new_moon:     | :new_moon:     |
+| myeid                | :last_quarter_moon:           | :new_moon:     | :new_moon:     |
+| sc-hsm               | :full_moon: | :full_moon: | :full_moon: |
+| dnie                 | :full_moon: | :new_moon:     | :new_moon:     |
+| MaskTech             | :new_moon:     | :new_moon:     | :new_moon:     |
+| mcrd                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| setcos               | :new_moon:     | :new_moon:     | :new_moon:     |
+| muscle               | :new_moon:     | :new_moon:     | :new_moon:     |
+| atrust-acos          | :new_moon:     | :new_moon:     | :new_moon:     |
+| PIV-II               | :full_moon: | :new_moon:     | :new_moon:     |
+| cac                  | :full_moon: | :new_moon:     | :new_moon:     |
+| itacns               | :new_moon:     | :new_moon:     | :new_moon:     |
+| isoApplet (no ECDSA) | :last_quarter_moon:           | :new_moon:     | :new_moon:     |
+| gids                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| openpgp              | :last_quarter_moon:           | :new_moon:     | :new_moon:     |
+| jpki                 | :full_moon: | :last_quarter_moon:           | :last_quarter_moon:           |
+| coolkey              | :full_moon: | :new_moon:     | :new_moon:     |
+| npa                  | :last_quarter_moon:           | :new_moon:     | :last_quarter_moon:           |
+| default              | :new_moon:     | :new_moon:     | :new_moon:     |
 
 The table below shows a list of all tested smart cards that were used:
 
