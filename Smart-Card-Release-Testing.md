@@ -1,10 +1,68 @@
 # Test Results
 
 - :full_moon: All tests passed
-- :waning_gibbous_moon:
+- :waning_gibbous_moon: Many tests passed
 - :last_quarter_moon: Some tests passed
-- :waning_crescent_moon:
-- :new_moon: Untested.
+- :waning_crescent_moon: Few tests passed
+- :new_moon: Untested
+
+## OpenSC 0.18.0
+
+| Installer    | Windows    | macOS      |
+| ------------ | ---------- | ---------- |
+| Installation | :new_moon: | :new_moon: |
+| Removal      | :new_moon: | :new_moon: |
+
+The table below shows a list of all supported card drivers (`opensc-tool --list-drivers`) that have been tested in this release:
+
+| Smart Card Driver    | PKCS#11    | Windows Minidriver | macOS Tokend   |
+| -------------------- | -------------- | -------------- | -------------- |
+| cardos               | :new_moon:     | :new_moon:     | :new_moon:     |
+| flex                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| cyberflex            | :new_moon:     | :new_moon:     | :new_moon:     |
+| gpk                  | :new_moon:     | :new_moon:     | :new_moon:     |
+| gemsafeV1            | :new_moon:     | :new_moon:     | :new_moon:     |
+| miocos               | :new_moon:     | :new_moon:     | :new_moon:     |
+| asepcos              | :new_moon:     | :new_moon:     | :new_moon:     |
+| starcos              | :new_moon:     | :new_moon:     | :new_moon:     |
+| tcos                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| jcop                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| oberthur             | :new_moon:     | :new_moon:     | :new_moon:     |
+| authentic            | :new_moon:     | :new_moon:     | :new_moon:     |
+| iasecc               | :new_moon:     | :new_moon:     | :new_moon:     |
+| belpic               | :new_moon:     | :new_moon:     | :new_moon:     |
+| incrypto34           | :new_moon:     | :new_moon:     | :new_moon:     |
+| acos5                | :new_moon:     | :new_moon:     | :new_moon:     |
+| akis                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| entersafe            | :new_moon:     | :new_moon:     | :new_moon:     |
+| epass2003            | :new_moon:     | :new_moon:     | :new_moon:     |
+| rutoken              | :new_moon:     | :new_moon:     | :new_moon:     |
+| rutoken_ecp          | :new_moon:     | :new_moon:     | :new_moon:     |
+| westcos              | :new_moon:     | :new_moon:     | :new_moon:     |
+| myeid                | :new_moon:     | :new_moon:     | :new_moon:     |
+| sc-hsm               | :new_moon:     | :new_moon:     | :new_moon:     |
+| dnie                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| MaskTech             | :new_moon:     | :new_moon:     | :new_moon:     |
+| mcrd                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| setcos               | :new_moon:     | :new_moon:     | :new_moon:     |
+| muscle               | :new_moon:     | :new_moon:     | :new_moon:     |
+| atrust-acos          | :new_moon:     | :new_moon:     | :new_moon:     |
+| PIV-II               | :new_moon:     | :new_moon:     | :new_moon:     |
+| cac                  | :new_moon:     | :new_moon:     | :new_moon:     |
+| itacns               | :new_moon:     | :new_moon:     | :new_moon:     |
+| isoApplet            | :new_moon:     | :new_moon:     | :new_moon:     |
+| gids                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| openpgp              | :new_moon:     | :new_moon:     | :new_moon:     |
+| jpki                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| coolkey              | :new_moon:     | :new_moon:     | :new_moon:     |
+| npa                  | :new_moon:     | :new_moon:     | :new_moon:     |
+| default              | :new_moon:     | :new_moon:     | :new_moon:     |
+
+The table below shows a list of all tested smart cards that were used:
+
+| Smart Card Driver | Tested Smart Cards                                               |
+| ----------------- | ---------------------------------------------------------------- |
+|                   |                                                                  |
 
 ## OpenSC 0.17.0
 
