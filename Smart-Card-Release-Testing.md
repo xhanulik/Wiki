@@ -52,7 +52,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 
 | Smart Card Driver    | PKCS#11    | Windows Minidriver | macOS Tokend   |
 | -------------------- | -------------- | -------------- | -------------- |
-| cardos               | :new_moon:     | :new_moon:     | :new_moon:     |
+| cardos               | :waning_gibbous_moon: | :last_quarter_moon: | :new_moon:     |
 | flex                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | cyberflex            | :new_moon:     | :new_moon:     | :new_moon:     |
 | gpk                  | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -64,7 +64,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | jcop                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | oberthur             | :new_moon:     | :new_moon:     | :new_moon:     |
 | authentic            | :new_moon:     | :new_moon:     | :new_moon:     |
-| iasecc               | :new_moon:     | :new_moon:     | :new_moon:     |
+| iasecc               | :waning_crescent_moon: | :new_moon:     | :new_moon:     |
 | belpic               | :new_moon:     | :new_moon:     | :new_moon:     |
 | incrypto34           | :new_moon:     | :new_moon:     | :new_moon:     |
 | acos5                | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -75,7 +75,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | rutoken_ecp          | :new_moon:     | :new_moon:     | :new_moon:     |
 | westcos              | :new_moon:     | :new_moon:     | :new_moon:     |
 | myeid                | :new_moon:     | :new_moon:     | :new_moon:     |
-| sc-hsm               | :new_moon:     | :new_moon:     | :new_moon:     |
+| sc-hsm               | :waning_gibbous_moon: | :waning_gibbous_moon: | :new_moon:     |
 | dnie                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | MaskTech             | :new_moon:     | :new_moon:     | :new_moon:     |
 | mcrd                 | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -87,17 +87,20 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | itacns               | :new_moon:     | :new_moon:     | :new_moon:     |
 | isoApplet            | :new_moon:     | :new_moon:     | :new_moon:     |
 | gids                 | :new_moon:     | :new_moon:     | :new_moon:     |
-| openpgp              | :new_moon:     | :new_moon:     | :new_moon:     |
+| openpgp              | :waning_crescent_moon: | :new_moon:     | :new_moon:     |
 | jpki                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | coolkey              | :new_moon:     | :new_moon:     | :new_moon:     |
-| npa                  | :new_moon:     | :new_moon:     | :new_moon:     |
+| npa                  | :waning_crescent_moon:     | :new_moon:     | :new_moon:     |
 | default              | :new_moon:     | :new_moon:     | :new_moon:     |
 
 The table below shows a list of all tested smart cards that were used:
 
 | Smart Card Driver | Tested Smart Cards                                               |
 | ----------------- | ---------------------------------------------------------------- |
-|                   |                                                                  |
+| cardos            | CardOS 4.3B                                                      |
+| sc-hsm            | GoID 1.00                                                        |
+| openpgp           | OpenPGP Card 3.0                                                 |
+| iasecc            | Gemalto MultiApp IAS/ECC v1.0.1                                  |
 
 ## OpenSC 0.17.0
 
