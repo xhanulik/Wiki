@@ -59,7 +59,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | gemsafeV1            | :new_moon:     | :new_moon:     | :new_moon:     |
 | miocos               | :new_moon:     | :new_moon:     | :new_moon:     |
 | asepcos              | :new_moon:     | :new_moon:     | :new_moon:     |
-| starcos              | :new_moon:     | :new_moon:     | :new_moon:     |
+| starcos              | :waning_crescent_moon: | :waning_crescent_moon:     | :new_moon:     |
 | tcos                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | jcop                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | oberthur             | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -99,6 +99,7 @@ The table below shows a list of all tested smart cards that were used:
 | ----------------- | ---------------------------------------------------------------- |
 | cardos            | CardOS 4.3B                                                      |
 | sc-hsm            | GoID 1.00                                                        |
+| starcos           | Starcos 3.4                                                      |
 | openpgp           | OpenPGP Card 3.0                                                 |
 | iasecc            | Gemalto MultiApp IAS/ECC v1.0.1                                  |
 
