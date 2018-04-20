@@ -57,14 +57,14 @@ Save the following to a file sc-hsm.reg and double-click to import it into the r
 "ATRMask"=hex:ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff
 "Crypto Provider"="OpenSC CSP"
 "Smart Card Key Storage Provider"="Microsoft Smart Card Key Storage Provider"
-"80000001"="opensc-minidriver.dll"
+"80000001"="C:\Program Files\OpenSC Project\OpenSC\minidriver\opensc-minidriver.dll"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Calais\SmartCards\SmartCard-HSM-CL]
 "ATR"=hex:3B,8E,80,01,80,31,81,54,48,53,4D,31,73,80,21,40,81,07,18
 "ATRMask"=hex:ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff
 "Crypto Provider"="OpenSC CSP"
 "Smart Card Key Storage Provider"="Microsoft Smart Card Key Storage Provider"
-"80000001"="opensc-minidriver.dll"
+"80000001"="C:\Program Files\OpenSC Project\OpenSC\minidriver\opensc-minidriver.dll"
 </code></pre>
 
 If you plan to use 32-bit applications on Windows with 64-bit, then you need to install both versions

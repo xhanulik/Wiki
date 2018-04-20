@@ -31,7 +31,7 @@ In the following template smart card name ("Example Card") in the key name, ATR 
    * "ATRMask"=hex:ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff
    * "Crypto Provider"="Microsoft Base Smart Card Crypto Provider"
    * "Smart Card Key Storage Provider"="Microsoft Smart Card Key Storage Provider"
-   * "80000001"="opensc-minidriver.dll"
+   * "80000001"="C:\Program Files\OpenSC Project\OpenSC\minidriver\opensc-minidriver.dll"
 
 h2. Windows 7
 
