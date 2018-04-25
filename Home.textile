@@ -68,3 +68,4 @@ h2. Quick Links
  * "Download":https://sourceforge.net/projects/opensc/files/OpenSC/
  * [[Application Support|Using-smart-cards-with-applications]] - list of applications with smart card support
  * [[OpenSC Services|OpenSC-Services]]
+ * [[OpenSC Manuals|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/tools/tools.html]]
