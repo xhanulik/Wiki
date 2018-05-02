@@ -77,13 +77,12 @@ All cards include a Precise Biometric Match-On-Card applet and the correspondent
 Documentation or sample code contribution is appreciated.
 
 h2. Official Middleware
+ * Official releases are available at: "Autenticação.gov.pt":https://www.autenticacao.gov.pt/cc-software
+ * Source code is available at: "SVN.gov.pt":https://svn.gov.pt/projects/ccidadao
 
-The "software download page":https://www.cartaodecidadao.pt/index.php_option=com_content&task=view&id=102&Itemid=44&lang=pt.html lists software for Windows, Mac OS X and several Linux distributions. Parts of the software are based on OpenSC (custom libopensc provided with the software). Originally the Portuguese Government was violating the OpenSC GPL by refusing to provide the modified source files.
+h2. Old Proprietary Middleware
 
-
-h3. New, open source version
-
- * "http://svn.gov.pt/projects/ccidadao":http://svn.gov.pt/projects/ccidadao
+The "software download page":https://www.cartaodecidadao.pt/index.php_option=com_content&task=view&id=102&Itemid=44&lang=pt.html listed software installers for Windows, Mac OS X and several Linux distributions. Parts of the software are based on OpenSC (custom libopensc provided with the software). Originally the Portuguese Government was violating the OpenSC GPL by refusing to provide the modified source files.
 
 h2. OpenSC support
 
