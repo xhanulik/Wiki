@@ -82,9 +82,9 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | setcos               | :new_moon:     | :new_moon:     | :new_moon:     |
 | muscle               | :new_moon:     | :new_moon:     | :new_moon:     |
 | atrust-acos          | :new_moon:     | :new_moon:     | :new_moon:     |
-| PIV-II               | :new_moon:     | :new_moon:     | :new_moon:     |
+| PIV-II               | :waning_gibbous_moon:     | :new_moon:     | :new_moon:     |
 | cac                  | :new_moon:     | :new_moon:     | :new_moon:     |
-| itacns               | :new_moon:     | :new_moon:     | :new_moon:     |
+| itacns               | :new_moon:     | :new_moon:     | :new_moon:     |f
 | isoApplet            | :new_moon:     | :new_moon:     | :new_moon:     |
 | gids                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | openpgp              | :waning_crescent_moon: | :new_moon:     | :new_moon:     |
@@ -103,6 +103,7 @@ The table below shows a list of all tested smart cards that were used:
 | openpgp           | OpenPGP Card 3.0                                                 |
 | iasecc            | Gemalto MultiApp IAS/ECC v1.0.1                                  |
 | myeid             | MyEID cards with PKCS#15-applet                                  |
+| PIV-II            | NIST DEMO cards 1 and 7(with history object: 3 and 2)
 
 ## OpenSC 0.17.0
 
