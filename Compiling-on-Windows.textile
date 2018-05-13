@@ -58,8 +58,7 @@ cp win32/winconfig.h config.h</pre></code>
 
 h4. Manually Creating Built Source Files
 
-<pre><code>copy win32\winconfig.h.in win32\winconfig.h
-copy src\minidriver\versioninfo-minidriver.rc.in src\minidriver\versioninfo-minidriver.rc
+<pre><code>copy src\minidriver\versioninfo-minidriver.rc.in src\minidriver\versioninfo-minidriver.rc
 copy src\pkcs11\versioninfo-pkcs11.rc.in src\pkcs11\versioninfo-pkcs11.rc
 copy src\pkcs11\versioninfo-pkcs11-spy.rc.in src\pkcs11\versioninfo-pkcs11-spy.rc
 copy src\tools\versioninfo-tools.rc.in src\tools\versioninfo-tools.rc
