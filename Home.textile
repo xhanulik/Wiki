@@ -54,6 +54,7 @@ OpenSC effort consists of various sub-projects that can be used independently as
 h2. Developer Information
 
  * [[Overview]]
+ * [[Smart Card Simulation]]
  * [[Getting involved in OpenSC development]]
  * [[Compiling on Windows]]
  * [[Adding a new card driver]]
