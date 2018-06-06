@@ -86,7 +86,7 @@ javac -classpath jcardsim-3.0.4-SNAPSHOT.jar ykneo-openpgp\applet\src\openpgpcar
 ```
 com.licel.jcardsim.card.applet.0.AID=D2760001240102000000000000010000
 com.licel.jcardsim.card.applet.0.Class=openpgpcard.OpenPGPApplet
-com.licel.jcardsim.card.ATR=3BFC1300008131FE15597562696B65794E454F7233E1
+com.licel.jcardsim.card.ATR=3B80800101
 ```
 
 8. Run jCardSim with OpenPGP:
