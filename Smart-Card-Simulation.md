@@ -32,7 +32,7 @@ devcon.exe disable root\BixVirtualReader
 devcon.exe enable  root\BixVirtualReader
 ```
 
-4. Download and Install Java
+4. Download and Install Java (`java.exe` and `javac.exe` are required)
 5. Download [jCardSim](https://github.com/licel/jcardsim/raw/master/jcardsim-3.0.4-SNAPSHOT.jar)
 
 Now, [configure jCardSim](https://jcardsim.org/blogs/work-jcardsim-through-pcsc-virtual-reader) to load and run the applet to make it available via PC/SC (see sections below).
@@ -128,7 +128,7 @@ com.licel.jcardsim.card.ATR=3B80800101
 javac -classpath jcardsim-3.0.4-SNAPSHOT.jar;PivApplet\src com.licel.jcardsim.remote.BixVReaderCard jcardsim_pvi.cfg
 ```
 
-9. Create OpenPGP applet from the install package:
+9. Create PIV applet from the install package:
 
 ```
 opensc-tool --card-driver default --send-apdu 80B80000180BA0000003080000100001000BA00000030800001000010000
