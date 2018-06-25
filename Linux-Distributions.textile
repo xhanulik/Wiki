@@ -4,7 +4,7 @@ For GNU/Linux users the best solution is, if the distribution already includes r
 of OpenSC. Here is a survey of recent distributions. If you have additional infomation,
 please add it. A general and current overview is shown on "repology.org":https://repology.org/metapackage/opensc/versions as well.
 
-| Arch Linux | "OpenSC 0.17.0 included":https://www.archlinux.org/packages/community/x86_64/opensc/ |
+| Arch Linux | "OpenSC 0.18.0 included":https://www.archlinux.org/packages/community/x86_64/opensc/ |
 | Debian jessie (old stable) | "OpenSC 0.14.0 included":http://packages.debian.org/oldstable/utils/opensc  |
 | Debian stretch (stable) | "OpenSC 0.16.0 included":http://packages.debian.org/stable/utils/opensc |
 | Debian sid (development) | "OpenSC 0.17.0 included":http://packages.debian.org/unstable/utils/opensc |
