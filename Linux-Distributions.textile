@@ -21,7 +21,7 @@ please add it. A general and current overview is shown on "repology.org":https:/
 | Suse 9.1 | "OpenSC 0.8.0 included":ftp://ftp.suse.com/pub/suse/i386/9.1/suse/i586 |
 | Ubuntu 16.04 | "OpenSC 0.15.0 included":https://packages.ubuntu.com/xenial/opensc |
 | Ubuntu 18.04 | "OpenSC 0.17.0 included":https://packages.ubuntu.com/bionic/opensc |
-
+| Ubuntu 18.10 | "OpenSC 0.18.0 included":https://packages.ubuntu.com/cosmic/opensc |
 
 
 "ATrpms":http://atrpms.net/name/opensc/ lists some RPM based distributions.
