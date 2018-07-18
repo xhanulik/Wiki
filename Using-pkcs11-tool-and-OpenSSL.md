@@ -14,7 +14,7 @@ These commands expect they are run from the `src/tools` directory of the local b
 
  * Get the certificate from the card:
  
-       ./pkcs11-tool -r -p $PIN --id $SIGN_KEY --type cert --module ../pkcs11/.libs/opensc-pkcs11.so > $SIGN_KEY.cert
+       ./src//tools/pkcs11-tool -r -p $PIN --id $SIGN_KEY --type cert --module ./src/pkcs11/.libs/opensc-pkcs11.so > $SIGN_KEY.cert
 
  * Convert it to the public key (PEM format)
  
@@ -24,7 +24,7 @@ or
 
  * Get the public key from the card:
  
-        ./pkcs11-tool -r -p $PIN --id $SIGN_KEY --type pubkey --module ../pkcs11/.libs/opensc-pkcs11.so > $SIGN_KEY.der
+        ./src/tools/pkcs11-tool -r -p $PIN --id $SIGN_KEY --type pubkey --module ./src/pkcs11/.libs/opensc-pkcs11.so > $SIGN_KEY.der
  
  * Convert it to PEM format:
  
@@ -34,7 +34,7 @@ or
 
  * Sign the data on the smartcard using private key:
  
-       cat data | ./pkcs11-tool --id $SIGN_KEY -s -p $PIN -m RSA-PKCS --module ../pkcs11/.libs/opensc-pkcs11.so > data.sig
+       ./src/tools/pkcs11-tool --id $SIGN_KEY -s -p $PIN -m RSA-PKCS --module ./src/pkcs11/.libs/opensc-pkcs11.so --input-file data --output-file data.sig
 
  * Verify
  
@@ -44,7 +44,7 @@ or
 
  * Sign the data on the smartcard using private key:
  
-       cat data | ./pkcs11-tool --id $SIGN_KEY -s -p $PIN -m SHA1-RSA-PKCS --module ../pkcs11/.libs/opensc-pkcs11.so > data.sig
+       ./src/tools/pkcs11-tool --id $SIGN_KEY -s -p $PIN -m SHA1-RSA-PKCS --module ./src/pkcs11/.libs/opensc-pkcs11.so --input-file data --output-file data.sig
 
  * Verify and parse the returned ASN1 structure:
  
@@ -54,19 +54,33 @@ or
  
        sha1sum data
 
- Similarily can be tested the SHA256, SHA384 and SHA512, just by replacing SHA1 with these hashes in above commands.
+ Similarly can be tested the SHA256, SHA384 and SHA512, just by replacing SHA1 with these hashes in above commands.
 
 ## SHA1-RSA-PKCS-PSS
 
 * Sign the data on the smartcard using private key:
  
-       cat data | ./pkcs11-tool --id $SIGN_KEY -s -p $PIN -m SHA1-RSA-PKCS-PSS --module ../pkcs11/.libs/opensc-pkcs11.so > data.sig
+       ./src/tools/pkcs11-tool --id $SIGN_KEY -s -p $PIN -m SHA1-RSA-PKCS-PSS --module ./src/pkcs11/.libs/opensc-pkcs11.so --input-file data --output-file data.sig
 
  * Verify
  
        openssl dgst -keyform DER -verify $SIGN_KEY.pub -sha1 -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 -signature data.sig data
 
-For other parameters, replace the hash algorithsm, add a `--salt-len` parameter for the `pkcs11-tool` and adjust `rsa_pss_saltlen` argument of `openssl`.
+For other parameters, replace the hash algorithms, add a `--salt-len` parameter for the `pkcs11-tool` and adjust `rsa_pss_saltlen` argument of `openssl`.
+
+## RSA-PKCS-PSS
+
+* Prepare the data for signature -- need to be hashed outside of the module and the hash function needs to match the hash length provided:
+
+       openssl dgst -binary -sha256 data > data.sha256
+
+* Sign
+
+       ./src/tools/pkcs11-tool --id $SIGN_KEY -s -p $PIN -m RSA-PKCS-PSS --hash-algorithm SHA256 --mgf MGF1-SHA256 --module ./src/pkcs11/.libs/opensc-pkcs11.so --input-file data.sha256 --output-file data.sig
+
+* Verify
+
+       TODO
 
 ## RSA-X-509
 
@@ -76,7 +90,7 @@ For other parameters, replace the hash algorithsm, add a `--salt-len` parameter 
 
  * Sign the data on the smartcard using private key:
  
-       cat data_pad | ./pkcs11-tool --id $SIGN_KEY -s -p $PIN -m RSA-X-509 --module ../pkcs11/.libs/opensc-pkcs11.so > data_pad.sig
+       ./src/tools/pkcs11-tool --id $SIGN_KEY -s -p $PIN -m RSA-X-509 --module ./src/pkcs11/.libs/opensc-pkcs11.so --input-file data_pad --output-file data_pad.sig
 
  * Verify
  
@@ -87,11 +101,11 @@ For other parameters, replace the hash algorithsm, add a `--salt-len` parameter 
 
  * Create a data to encrypt
  
-       echo "data to encrpyt should be longer, better, faster and whatever we need to hide" > data
+       echo "data to encrypt should be longer, better, faster and whatever we need to hide" > data
 
  * Get the certificate from the card:
  
-       ./pkcs11-tool -r -p $PIN --id $ENC_KEY --type cert --module ../pkcs11/.libs/opensc-pkcs11.so > $ENC_KEY.cert
+       ./src/tools/pkcs11-tool -r -p $PIN --id $ENC_KEY --type cert --module ./src/pkcs11/.libs/opensc-pkcs11.so > $ENC_KEY.cert
 
  * Convert it to the public key (PEM format)
  
@@ -105,7 +119,7 @@ For other parameters, replace the hash algorithsm, add a `--salt-len` parameter 
 
  * Decrypt the data on the card
  
-       cat data.crypt | ./pkcs11-tool --id $ENC_KEY --decrypt -p $PIN -m RSA-PKCS --module ../pkcs11/.libs/opensc-pkcs11.so
+       ./src/tools/pkcs11-tool --id $ENC_KEY --decrypt -p $PIN -m RSA-PKCS --module ./src/pkcs11/.libs/opensc-pkcs11.so --input-file data.crypt
 
 ## RSA-X-509
 
@@ -119,7 +133,7 @@ For other parameters, replace the hash algorithsm, add a `--salt-len` parameter 
 
  * Decrypt the data on the card
  
-       cat data_pad.crypt | ./pkcs11-tool --id $ENC_KEY --decrypt -p $PIN -m RSA-X-509 --module ../pkcs11/.libs/opensc-pkcs11.so
+       ./src/tools/pkcs11-tool --id $ENC_KEY --decrypt -p $PIN -m RSA-X-509 --module ./src/pkcs11/.libs/opensc-pkcs11.so --input-file data_pad.crypt
 
 ## RSA-PKCS-OAEP
 
@@ -132,9 +146,8 @@ For other parameters, replace the hash algorithsm, add a `--salt-len` parameter 
 
  * Decrypt the data on the card
  
-       cat data.crypt | ./pkcs11-tool --id $ENC_KEY --decrypt -p $PIN -m RSA-PKCS-OAEP --module ../pkcs11/.libs/opensc-pkcs11.so
+       ./src/tools/pkcs11-tool --id $ENC_KEY --decrypt -p $PIN -m RSA-PKCS-OAEP --module ./src/pkcs11/.libs/opensc-pkcs11.so --input-file data.crypt
+
     or
 
-       cat data.sha256.crypt | ./pkcs11-tool --id $ENC_KEY --decrypt -p $PIN -m RSA-PKCS-OAEP --hash-algorithm=sha256  --module ../pkcs11/.libs/opensc-pkcs11.so
-      
-       
+       ./src/tools/pkcs11-tool --id $ENC_KEY --decrypt -p $PIN -m RSA-PKCS-OAEP --hash-algorithm=sha256  --module ./src/pkcs11/.libs/opensc-pkcs11.so --input-file data.sha256.crypt
