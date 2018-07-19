@@ -80,7 +80,9 @@ For other parameters, replace the hash algorithms, add a `--salt-len` parameter 
 
 * Verify
 
-       TODO
+       openssl dgst -keyform DER -verify $SIGN_KEY.pub -sha256 -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1  -sigopt rsa_mgf1_md:sha256 -signature data.sig data
+
+Note that here we use the original data file and we leave OpenSSL to hash it for us. OpenSSL does not support this form of PSS mechanism without hashing outside of the module.
 
 ## RSA-X-509
 
