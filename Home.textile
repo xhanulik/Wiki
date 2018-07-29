@@ -4,6 +4,8 @@ h4. Quick Start
  * [[Windows Quick Start]]
  * [[macOS Quick Start]]
  * [[Compiling and Installing on Unix flavors]]
+ * [OpenSC Tools](https://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/tools/tools.html)
+ * [OpenSC Configuration Files](https://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/files/files.html)
 
 h2. Download
 
