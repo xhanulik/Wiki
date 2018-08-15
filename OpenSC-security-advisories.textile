@@ -1,6 +1,8 @@
 h1. OpenSC security advisories
 
 Software often contains bugs, so does OpenSC. Be aware of the following security issues (in addition to overall SecurityConsiderations) and upgrade to latest released version if needed.
+ * "11-Aug-2018":https://www.x41-dsec.de/lab/advisories/x41-2018-002-OpenSC/ Multiple issues have been identified in OpenSC, ranging from stack based buffer overflows to out of bounds reads and writes on the heap. They can be triggered by malicious smartcards sending malformed responses to APDU commands. This issue is tracked as X41-2018-002. Due to the large amount of issues, no individual issues have been rated with CVSS / CVE ID yet.
+
  * "17-Dec-2010":http://www.opensc-project.org/pipermail/opensc-devel/2010-December/015467.html A rogue smart card, specially crafted for this purpose, can be used to potentially execute arbitrary code if inserted to a local machine. Source: "MWR InfoSecurity Advisory":http://labs.mwrinfosecurity.com/files/Advisories/mwri_opensc-get-serial-buffer-overflow_2010-12-13.pdf, fix: [4913]. Coded as "CVE-2010-4523":http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-4523
  * "07-May-2009 security advisory":http://www.opensc-project.org/pipermail/opensc-announce/2009-May/000025.html coded as "CVE-2009-1603":http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-1603
  * "26-Feb-2009 security advisory":http://www.opensc-project.org/pipermail/opensc-announce/2009-February/000023.html coded as "CVE-2009-0368":http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-0368
