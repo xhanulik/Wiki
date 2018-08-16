@@ -2,7 +2,7 @@ h1. Pinpad Readers
 
 OpenSC supports two types of pinpad readers: PC/SC and CT-API. 
 
-PC/SC functionality is based on "PC/SC v2 part 10 v2.02.05":http://www.pcscworkgroup.com/specifications/files/pcsc10_v2.02.05.pdf and is supported by drivers on Windows (check your hardware manufacturer for latest drivers), Linux and Mac OS X Leopard with the "open source CCID driver":http://pcsclite.alioth.debian.org/ccid.html ("CCID spec":http://www.usb.org/developers/devclass_docs/DWG_Smart-Card_CCID_Rev110.pdf). Make sure that you have the latest released versions (or SVN snapshots) of all relevant software: operating system, pcsc-lite, reader driver, reader firmware. 
+PC/SC functionality is based on "PC/SC v2 part 10 v2.02.05":http://www.pcscworkgroup.com/specifications/files/pcsc10_v2.02.05.pdf and is supported by drivers on Windows (check your hardware manufacturer for latest drivers), Linux and Mac OS X Leopard with the "open source CCID driver":https://github.com/LudovicRousseau/CCID ("CCID spec":http://www.usb.org/developers/docs/devclass_docs/DWG_Smart-Card_CCID_Rev110.pdf). Make sure that you have the latest released versions (or SVN snapshots) of all relevant software: operating system, pcsc-lite, reader driver, reader firmware. 
 
 CT-API drivers are most used and available on Windows.
 
@@ -17,15 +17,23 @@ Class 2 readers have a pinpad for secure pin entry. Sometimes they are plugged b
 Class 3 readers have pinpad and a display. 
 
 | <b>Reader</b> | <b>OS</b> | <b>Type</b> | <b>CT-API library</b> | <b>Comments </b> |
-| SCM STR 391 "CashMouse" | Win32 | Class 3 USB | CTRSRW32.dll | Works fine with Win32, no Unix support planned |
-| Cherry G83-6700 Smartboard | Win32 | Class 2 PS/2 | CTMGR.DLL | A keyboard integrated reader which uses the keyboard for pin entry. Buggy CT-API driver, I got it working but not without patching OpenCT. No known Unix support |
-| Reiner SCT cyberJack pinpad | Win32 | Class 2 USB | CTRSCT32.DLL | According to the manufacturer's website it should also run on Linux, but I haven't managed it. |
-| Reiner SCT cyberJack keyboard | Win32 | Class 2 PS/2 | CTRSCT32.DLL | A cheap class 2 solution. It uses the keyboard for pin entry. No known Unix support. |
-| SCM SPR 332, 532 "Chipdrive Pinpad" | Win32 & Linux | Class 2 USB | CTPCSC32.dll | A widely used CCID compliant reader. I also got it working on Linux following Martin's CardReaders/SPR532 suggestions |
-| Xiring XiPass | Win32 | Class 3 PS/2 | PC/SC only | Works well with Win32, pinpad entry works with EstEID CSP, no official Unix support, still there is an openct driver for it. |
-| Reiner SCT cyberjack pinpad| Mac OS X|Class 2 USB|with pcscd|If you start the pcscd per hand it works well with the Drivers provided by Reiner SCT. I haven't managed to entry the pin with the Reader's keyboard|
-| "Reiner SCT cyberJack pinpad":http://www.reiner-sct.com/content/view/4/16/| Linux|Class 2 USB| Reiner SCT CT-API driver|Class 2 Smartcard reader with "official LGPL drivers":http://www.reiner-sct.com/content/view/32/43/#linux (packages for most linux distributions). Pinpad fully supported (tested on SuSE 10.2). Good Linux support! |
-| Gemalto PC PinPad Reader | Win32 & Linux | Class 3 USB | PC/SC, ?? | CCID compliant. No special actions was needed to get it working on Linux and Win32. (Don't know if it's important -- on Windows 'Gemalto Access' middleware was installed. --VTA) |
+| <b>"Cherry":https://cherry.de/download/de/download.php</b> | | | | |
+| Smartboard G83-6700 | Win32 | Class2 PS/2 | CTMGR.DLL | A keyboard integrated reader which uses the keyboard for pin entry. Buggy CT-API driver, I got it working but not without patching OpenCT. No known Unix support |
+| <b>"Gemalto":https://www.gemalto.com/products/pc_link_readers/index.html</b> | | | | |
+|  IDBridge CT700/710 (PC Pinpad) | Win32 & Linux | Class3 USB | PC/SC, ?? | CCID compliant. No special actions was needed to get it working on Linux and Win32. (Don't know if it's important -- on Windows 'Gemalto Access' middleware was installed. --VTA) |
+| <b>"Reiner SCT":https://www.reiner-sct.com/support/support-anfrage/?productGroup=77304735#choice2</b> | | | | |
+| cyberJack keyboard | Win32 | Class2 PS/2 | CTRSCT32.DLL | A cheap class 2 solution. It uses the keyboard for pin entry. No known Unix support. |
+| cyberJack pinpad | Win32 | Class2 USB | CTRSCT32.DLL | cyberJack {basic, pinpad, e-com 2.0} are "discontinued":https://www.reiner-sct.com/lang/en/alte-Treiber.html |
+| cyberJack pinpad | Mac | Class2 USB | with pcscd|If you start the pcscd per hand it works well with the Drivers provided by Reiner SCT. I haven't managed to entry the pin with the Reader's keyboard |
+| cyberJack pinpad | Linux | Class2 USB | Reiner SCT CT-API driver | Class 2 Smartcard reader with official LGPL drivers (packages for most linux distributions). Pinpad fully supported (tested on SuSE 10.2). Good Linux support! |
+| cyberjack {secoder, one, go plus} | Win, Mac & Linux | Class3 USB | | "official LGPL drivers":https://www.reiner-sct.com/support/support-anfrage/?os=Linux&productGroup=77304735&product=77304820&q=driver#choice5  (packages for most linux distributions)|
+| cyberjack RFID {standard, komfort} | Win, Mac & Linux | Class3 USB | | "official LGPL drivers":https://www.reiner-sct.com/support/support-anfrage/?os=Linux&productGroup=77304735&product=77304820&q=driver#choice5 (packages for most linux distributions)|
+| cyberjack wave | Win, iOS & Android | Class3 USB BT | | "official LGPL drivers":https://www.reiner-sct.com/support/support-anfrage/?os=Linux&productGroup=77304735&product=77304820&q=driver#choice5 (packages for most linux distributions)|
+| <b>"SCM":https://www.scm-pc-card.de/</b> | | | | |
+| SPR "332":https://www.scm-pc-card.de/index.php?page=download&function=show_downloads&lang=de&product_id=670 , "532":https://www.scm-pc-card.de/index.php?page=download&function=show_downloads&lang=de&product_id=221 "Chipdrive Pinpad" | Win32 & Linux | Class2 USB | CTPCSC32.dll | A widely used CCID compliant reader. I also got it working on Linux following Martin's CardReaders/SPR532 suggestions. |
+| STR 391 "CashMouse" | Win32 | Class3 USB | CTRSRW32.dll | Works fine with Win32, no Unix support planned |
+| <b>Xiring</b> | | | | |
+| XiPass | Win32 | Class3 PS/2 | PC/SC only | Works well with Win32, pinpad entry works with EstEID CSP, no official Unix support, still there is an openct driver for it. |
 
 Kobil and OmniKey also offer pinpad readers, if someone could test one of those with OpenSC feedback would be appreceated. 
 
