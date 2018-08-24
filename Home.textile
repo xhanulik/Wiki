@@ -4,8 +4,8 @@ h4. Quick Start
  * [[Windows Quick Start]]
  * [[macOS Quick Start]]
  * [[Compiling and Installing on Unix flavors]]
- * "OpenSC Tools":https://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/tools/tools.html
- * "OpenSC Configuration Files":https://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/files/files.html
+ * [[Manuals for Configuration Files|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/files/files.html]]
+ * [[Manuals for OpenSC Tools|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/tools/tools.html]]
 
 h2. Download
 
@@ -65,11 +65,3 @@ h2. Developer Information
 h2. License
 
 OpenSC is written by an international team of volunteers and is licensed as "Open Source":http://www.opensource.org/ software under the  "LGPL license":http://www.opensource.org/licenses/lgpl-license.php version 2.1 of the License, or (at your option) any later version. For a list of all authors and contributors as well as detailed license information see [[OpenSC-Credits|OpenSC-Credits]].
-
-h2. Quick Links
-
- * "Mailing lists":https://github.com/OpenSC/OpenSC/wiki/OpenSC-Services#mailing-lists
- * "Download":https://sourceforge.net/projects/opensc/files/OpenSC/
- * [[Application Support|Using-smart-cards-with-applications]] - list of applications with smart card support
- * [[OpenSC Services|OpenSC-Services]]
- * [[OpenSC Manuals|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/tools/tools.html]]
