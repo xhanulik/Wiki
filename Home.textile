@@ -14,29 +14,21 @@ The latest stable version is "OpenSC 0.18.0":https://github.com/OpenSC/OpenSC/re
  * Windows Installer for "64 bit":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/OpenSC-0.18.0-win64_vs12-Release.msi and "32 bit":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/OpenSC-0.18.0-win32_vs12-Release.msi operating system
  * "macOS installer":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/OpenSC-0.18.0.dmg
 
-h4. Old Releases
-
- * "OpenSC 0.17.0":https://github.com/OpenSC/OpenSC/releases/tag/0.17.0 released on 18.07.2017
- * "OpenSC 0.16.0":https://github.com/OpenSC/OpenSC/releases/tag/0.16.0 released on 04.06.2016
- * "OpenSC 0.15.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.15.0/ released on 16.04.2015
- * "OpenSC 0.14.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.14.0/ released on 26.06.2014
- * "OpenSC 0.13.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/ released on 04.12.2012
- * "OpenSC 0.12.2":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/ released on 14.07.2011
-
 h4. Nightly build
 
-The latest source code is available through "GitHub":https://github.com/OpenSC/OpenSC/archive/master.zip. Nightly builds for Windows are available as build artifact on "AppVeyor":https://ci.appveyor.com/project/LudovicRousseau/opensc/branch/master. Pick one of the builds and select _Artifacts_ to download the MSI.
+The latest source code is available through "GitHub":https://github.com/OpenSC/OpenSC/archive/master.zip. Nightly builds are available by their git hash in branches of "OpenSC/Nightly":https://github.com/OpenSC/Nightly.
 
 h2. News
 
- * 16.05.2018: OpenSC 0.18.0 is available.
- * 18.07.2017: OpenSC 0.17.0 is available.
- * 03.06.2016: OpenSC 0.16.0 is available.
- * 16.05.2015: OpenSC 0.15.0 is available.
- * 30.06.2014: OpenSC 0.14.0 is available.
- * 04.12.2012: OpenSC 0.13.0 is available.
- * 14.07.2011: OpenSC 0.12.2 is available.
- * 09.06.2011: "a talk":http://www.slideshare.net/martinpaljak/opensc-eid-interoperability-through-open-source-software-8255721 covering OpenSC, open source and eID in Europe on EEMA "eID Management Conference":http://www.revolution1.plus.com/eema/index.htm
+ * 16.05.2018: "OpenSC 0.18.0":https://github.com/OpenSC/OpenSC/releases/tag/0.18.0 is available.
+ * 03.02.2018: "Smart Cards in Linux and why you should care":https://archive.fosdem.org/2018/schedule/event/smartcards_in_linux/attachments/slides/2265/export/events/attachments/smartcards_in_linux/slides/2265/smart_cards_slides.pdf: Talk at "FOSDEM 2018":https://archive.fosdem.org/2018/schedule/speaker/jakub_jelen/
+ * 18.07.2017: "OpenSC 0.17.0":https://github.com/OpenSC/OpenSC/releases/tag/0.17.0 is available.
+ * 03.06.2016: "OpenSC 0.16.0":https://github.com/OpenSC/OpenSC/releases/tag/0.16.0 is available.
+ * 16.05.2015: "OpenSC 0.15.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.15.0/ is available.
+ * 30.06.2014: "OpenSC 0.14.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.14.0/ is available.
+ * 04.12.2012: "OpenSC 0.13.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/ is available.
+ * 14.07.2011: "OpenSC 0.12.2":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.12.2/ is available.
+ * 09.06.2011: "eID interoperability through open source software":http://www.slideshare.net/martinpaljak/opensc-eid-interoperability-through-open-source-software-8255721: Talk at "eID Management Conference":http://www.revolution1.plus.com/eema/index.htm
  * 18.04.2011: OpenSC 0.12.1 is available.
  * 14.04.2011: Nightly builds are available for Windows and Mac OS X users.
  * 05.02.2011: OpenSC was at [[FOSDEM 2011|OpenSC-@-FOSDEM-2011]].
