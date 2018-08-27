@@ -1,14 +1,8 @@
 # OpenSC and Microsoft CNG
-It is possible to use the Smartcard via OpenSc with the [Microsoft CNG](https://msdn.microsoft.com/de-de/library/windows/desktop/aa376210(v=vs.85).aspx) library.
+It is possible to use the Smartcard via OpenSC with the [Microsoft CNG](https://msdn.microsoft.com/de-de/library/windows/desktop/aa376210(v=vs.85).aspx) library.  CNG can be used together with [CryptoAPI](https://msdn.microsoft.com/en-us/library/ms867086.aspx).
 
 ## Example: Read the x509 Certificate from connected Smartcard
 With the CNG its easy to use the smartcard like a normal pkcs12 container or something similar.
-
-### Important functions
-[NCryptOpenStorageProvider](https://msdn.microsoft.com/de-de/library/windows/desktop/aa376286(v=vs.85).aspx) //
-[NCryptEnumKeys](https://msdn.microsoft.com/en-us/library/windows/desktop/aa376259(v=vs.85).aspx) //
-[NCryptOpenKey](https://msdn.microsoft.com/de-de/library/windows/desktop/aa376284(v=vs.85).aspx) //
-[NCryptGetProperty](https://msdn.microsoft.com/de-de/library/windows/desktop/aa376273(v=vs.85).aspx)
 
 ```
 #include <Windows.h>
@@ -83,5 +77,8 @@ int main() {
 }
 ```
 
-## Other cool stuff with CNG and CryptoAPI
-The CNG and [CryptoAPI](https://msdn.microsoft.com/en-us/library/ms867086.aspx) are realy powerfull with these both libraries it is possible to build powerfull cryptographical libraries and applications.
+### Important functions
+* [NCryptOpenStorageProvider](https://msdn.microsoft.com/de-de/library/windows/desktop/aa376286(v=vs.85).aspx)
+* [NCryptEnumKeys](https://msdn.microsoft.com/en-us/library/windows/desktop/aa376259(v=vs.85).aspx)
+* [NCryptOpenKey](https://msdn.microsoft.com/de-de/library/windows/desktop/aa376284(v=vs.85).aspx)
+* [NCryptGetProperty](https://msdn.microsoft.com/de-de/library/windows/desktop/aa376273(v=vs.85).aspx)
