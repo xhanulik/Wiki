@@ -18,7 +18,7 @@ Most probably. The two standards do not conflict with each other. A PKCS#15 comp
 
 h3. I have a PKCS#11 compatible smart card. Can I use it with OpenSC?
 
-Not necessarily. PKCS#11 is a software interface, it means the vendor provides a PKCS#11 module with their hardware. You can use all <b>[[PKCS#11 compatible software|Using-smart-cards-with-applications]]</b> with the vendor PKCS#11 provider. If your card is also supported by OpenSC, you can use the OpenSC PKCS#!11 provider. But you may not be able to: 
+Not necessarily. PKCS#11 is a software interface, it means the vendor provides a PKCS#11 module with their hardware. You can use all [[PKCS#11 compatible software|Using-smart-cards-with-applications]] with the vendor PKCS#11 provider. If your card is also supported by OpenSC, you can use the OpenSC PKCS#!11 provider. But you may not be able to:
 * modify the card content 
 * use keys created by OpenSC with the vendor PKCS#11 provider and vice versa.
 
