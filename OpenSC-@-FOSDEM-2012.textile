@@ -1,14 +1,10 @@
 h1. OpenSC @ FOSDEM 2012
 
-A reminder to start planning early and to have a booth. [[FOSDEM 2011|OpenSC-@-FOSDEM-2011]] was a huge success.
-
  * <b>What, Where, When?</b>
-  * "FOSDEM 2012":http://www.fosdem.org/2012/, February 04-05 2012, Brussels, Belgium. The security/crypto devroom will be in room H.2214 on both days, for 8 hours. There will be room for up to 100 people.
-  * Topic: "(hardware) security / crypto"
+  ** "FOSDEM 2012":http://www.fosdem.org/2012/, February 04-05 2012, Brussels, Belgium. The security/crypto devroom will be in room H.2214 on both days, for 8 hours. There will be room for up to 100 people.
+  ** Topic: "(hardware) security / crypto"
  * <b>Why?</b>
-  * To raise the awareness of OpenSC and smart cards in general; to meet with other developers and promote integration; to meet with a wide audience and hear their thoughts and needs; to have fun and enjoy Belgian beer. ("thread on opensc-devel":http://www.opensc-project.org/pipermail/opensc-devel/2010-September/014847.html). 
- * <b>Subscribe to "security-devroom@lists.fosdem.org":http://lists.fosdem.org/mailman/listinfo/security-devroom mailing list! </b>
- * [[Call for presentations |FOSDEM2012/CFP]] in the security devroom (a slight modification of 2011 CFP for now, may be updated a bit, but the procedure will remain).
+  ** To raise the awareness of OpenSC and smart cards in general; to meet with other developers and promote integration; to meet with a wide audience and hear their thoughts and needs; to have fun and enjoy Belgian beer. ("thread on opensc-devel":http://www.opensc-project.org/pipermail/opensc-devel/2010-September/014847.html). 
 
 h2. Activities
 
@@ -16,18 +12,14 @@ h2. Activities
  * A dinner somewhere on Saturday evening
  * "Real" devroom with actual hacking, hardware, software etc on Sunday. If you know you will be bringing some hardware, please note it down.
 
-h2. Tasks
+h2. Schedule
 
- * Fix schedule.
-
-== Proposals / submissions for Day 1==
- * <b>Talks, presentations, demos etc. DEADLINE: 20.01.2012</b>
  * A (15m) Set up of tech, introduction of talkers and some words for participants.
- * B (30m, [[Tomas Gustavsson|User:shredder]]) "CESecore and common criteria certification of open source sw":http://cesecore.eu ("mailing list post":https://lists.fosdem.org/pipermail/security-devroom/2011-November/000082.html).
- * C (45m, [[Branko Majic|User:azaghal]]) "Deployment and Use of X.509 in Free Software Components":http://majic.rs/book/free-software-x509-cookbook (with devroom demo environment if I get some hands on hardware able to run lots of VM's) ("mailing list post":https://lists.fosdem.org/pipermail/security-devroom/2011-November/000083.html)
+ * B (30m, Tomas Gustavsson) "CESecore and common criteria certification of open source sw":http://cesecore.eu ("mailing list post":https://lists.fosdem.org/pipermail/security-devroom/2011-November/000082.html).
+ * C (45m, Branko Majic) "Deployment and Use of X.509 in Free Software Components":http://majic.rs/book/free-software-x509-cookbook (with devroom demo environment if I get some hands on hardware able to run lots of VM's) ("mailing list post":https://lists.fosdem.org/pipermail/security-devroom/2011-November/000083.html)
  * D (45m Kashyap Chamarthy Overview and a demo of "Dogtag Certificate system":http://pki.fedoraproject.org/ -- An open source and open standards based PKI project. I'll also show a quick demo where Certificate System and its subsystems(CA, OCSP, KRA[key-recovery-archival] ) would be configured on a virtual machine. ("mailing list post":https://lists.fosdem.org/pipermail/security-devroom/2011-November/000084.html)
  * E (45m) Benedikt Heintel, CACert .org "Trust - the root of evil?!"
-  * Abstract: "In a highly connected world like ours is trust one of the most important assets. But what if the root to trust is not trustworthy?
+  ** Abstract: "In a highly connected world like ours is trust one of the most important assets. But what if the root to trust is not trustworthy?
 
  2011 was the year where one Certificate Authority (CA) after the other
  came to fall. The cases of the Dutch DigiNotar and the Malaysian 
@@ -42,17 +34,13 @@ h2. Tasks
  to make it happen."
 
  * F (45m) Embedded/GPU crypto, yaSSL
-  * yaSSL made some great progress in the past year with the CyaSSL embedded SSL library.  As such, this talk will provide an overview of technical and community progress in the last year and news on the current state of yaSSL.  Details on what's new will include the addition of new cipher suites and cipher modes, better portability, new ports to software projects and operating systems, and community involvement.
+  ** yaSSL made some great progress in the past year with the CyaSSL embedded SSL library.  As such, this talk will provide an overview of technical and community progress in the last year and news on the current state of yaSSL.  Details on what's new will include the addition of new cipher suites and cipher modes, better portability, new ports to software projects and operating systems, and community involvement.
 
  * G (45m, Anders Rundgren, A technical description of "http://webpki.org/papers/keygen2/sks-keygen2-exec-level-presentation.pdf":http://webpki.org/papers/keygen2/sks-keygen2-exec-level-presentation.pdf - An Open Source / Open Hardware scheme for making security hardware as easy to deploy as passwords)
 
-h2. Proposals for Day 2
+h2. Video Recordings
 
-<b> Activities related to actual coding </b>
- * OpenSC codesprint
- * "Lets cross the bridge" codesprint - to make tokens work with more software. p11-kit integration?
- * If your project uses any kind of crypto, you might want to stop by and see how it would be best to extend that support to hardware keys.
- * System integration of various components to use X.509 certificates for authentication/authorisation
+Videos can be downloaded one by one "here":https://video.fosdem.org/2012/devrooms/security/.
 
 h2. Known participants
 
@@ -60,4 +48,3 @@ If you know that you will be coming to security devroom, please mark down your n
  * Martin Paljak / .ee / OpenSC
  * Branko Majic (azaghal) / .rs / Unaffiliated
  * Emanuele Pucciarelli / .it / OpenSC
-

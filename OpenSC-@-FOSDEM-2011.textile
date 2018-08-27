@@ -4,8 +4,6 @@ h1. OpenSC @ FOSDEM 2011
   ** "FOSDEM 2011":http://www.fosdem.org/2011/, February 05-06 2011, Brussels, Belgium. Security / hardware crypto devroom took place on Saturday, 05.02.2011 in room AW1.105, from 13.00 to 19.00.
  * <b>Why?</b>
   ** To raise the awareness of OpenSC and smart cards in general; to meet with other developers and promote integration; to meet with a wide audience and hear their thoughts and needs; to have fun and enjoy Belgian beer. ("thread on opensc-devel":http://www.opensc-project.org/pipermail/opensc-devel/2010-September/014847.html). 
- * "security-devroom@lists.fosdem.org":http://lists.fosdem.org/mailman/listinfo/security-devroom mailing list.
- * [[Call for participation (CLOSED)|FOSDEM2011/CFP]] in the security devroom.
 
 h2. Activities
 
@@ -28,15 +26,15 @@ h2. Schedule
 | 16.30-17.00 | G | How to store Trust: Trust assertions in PKCS#11 | [attachment:trust-assertion-notes.ps slides (ps)] | "video":http://video.fosdem.org/2011/devrooms/security/security_1630__trust__walter.webm |
 | 17.00-17.30 | K | BOFH meets SystemTap: rootkits made trivial | [attachment:systemtap-bofh-fosdem2011020501.pdf slides (pdf)] | "video":http://video.fosdem.org/2011/devrooms/security/security_1700__systemtap__kunysz.webm |
 | 17.30-18.00 | E | Dynalogin: two-factor authentication with HOTP. | [attachment:dynalogin.pdf slides (pdf) ] | "video":http://video.fosdem.org/2011/devrooms/security/security_1730__dynalogin__pocock.webm |
-| 18.00-18.15 | M  | OpenSC in 2015 - future vision | [attachment:FOSDEM_OPENSC.pdf slides (pdf)] | "video":http://video.fosdem.org/2011/devrooms/security/security_1800__opensc__paljak.webm|
-| 18.15-19.00 | | Open Discussion Panel  | N/A | N/A |
+| 18.00-18.15 | M | OpenSC in 2015 - future vision | [attachment:FOSDEM_OPENSC.pdf slides (pdf)] | "video":http://video.fosdem.org/2011/devrooms/security/security_1800__opensc__paljak.webm|
+| 18.15-19.00 |   | Open Discussion Panel  | N/A | N/A |
 
 Open discussion continued at a nearby bar and then in a nearby restaurant.
 
 h2. Video Recordings
 
 Kai Engert kindly recorded the presentations and made them available through BitTorrent at "http://kuix.de/misc/fosdem_2011_talks_webm.torrent":http://kuix.de/misc/fosdem_2011_talks_webm.torrent
-Please keep your BitTorrent client running after download as to help share the bandwidth cost. Alternatively the videos can be downloaded one by one, see below.
+Please keep your BitTorrent client running after download as to help share the bandwidth cost. Alternatively the videos can be downloaded one by one "here":https://video.fosdem.org/2011/devrooms/security/.
 
 h2. Proposals / submissions
 
