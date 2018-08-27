@@ -61,7 +61,7 @@ It is a very technical way of saying "Your card is unsupported".
 
 h3. How can I verify that my card is supported by OpenSC?
 
-Check the [[SupportedHardware|Supported-hardware-(smart-cards-and-USB-tokens)]] list. Verify it with _opensc-tool --name_ to see if some driver knows how to handle your card. The expected result of the command is a line with a card driver name.
+Check the [[list of supported hardware|Supported-hardware-(smart-cards-and-USB-tokens)]]. Verify it with <code>opensc-tool --name</code> to see if some driver knows how to handle your card. The expected result of the command is a line with a card driver name.
 
 h3. What does "read only support" mean?
 
@@ -69,7 +69,7 @@ Read-only mode means that OpenSC can be used to use the keys and certificates pr
 
 h3. What to do if my card is not supported by OpenSC?
 
-Somebody needs to write a driver for it. You can start by sending as much information as you can about the card to [[opensc-devel mailing list|Mailing-lists]]. Be sure to send the card ATR by sending the output of _opensc-tool --atr_
+Somebody needs to write a driver for it. You can start by sending as much information as you can about the card to [[opensc-devel mailing list|Mailing-lists]]. Be sure to send the card ATR by sending the output of <code>opensc-tool --atr</code>
 
 
 h2. Application support questions
