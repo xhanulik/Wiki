@@ -1,3 +1,0 @@
-h1. Random notes and planning for future work on OpenSC
-
- * Integrate with GnomeKeyring for secure prompts
