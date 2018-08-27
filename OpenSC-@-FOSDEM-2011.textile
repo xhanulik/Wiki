@@ -15,8 +15,8 @@ h2. Activities
 h2. Schedule
 
  * Official schedule of the devroom: "http://fosdem.org/2011/schedule/track/security_hardware_crypto_devroom":http://fosdem.org/2011/schedule/track/security_hardware_crypto_devroom
+
 | <b>Time</b> | <b>Code</b> | <b>Topic</b> | <b>Slides</b> | <b>Video</b> |
-|-------------|-------------|--------------|---------------|--------------|
 | 13.00-13.15 | A | Setup, short introduction of presenters  | [attachment:FOSDEM_INTRO.pdf slides (pdf)] | "video":http://video.fosdem.org/2011/devrooms/security/security_1300__intro__paljak.webm |
 | 13.15-13.45 | C | Smart card jungle | [attachment:01_jean-michel.pdf slides (pdf) ] | "video":http://video.fosdem.org/2011/devrooms/security/security_1315__smartcard__poure.webm |
 | 13.45-14.15 | D | SSH libraries: SSH vs TLS; libssh | [attachment:SSH_libraries.pdf slides (pdf)] | "video":http://video.fosdem.org/2011/devrooms/security/security_1345__ssh__adamantiadis.webm |
@@ -83,23 +83,23 @@ This was proposed to the FOSDEM people, fields in bold went into the "applicatio
   ** to map the open source software scene and promote interoperability.
   ** to promote and help developers integrate with crypto the "best possible way" and share best practices
  * <b>related projects</b> and participants:
-  * OpenSC
-   ** To have seamless support in applications for cards supported by OpenSC, either pre-personalized with created with pkcs15-init or some other mechanism.
-  * "NSS":http://www.mozilla.org/projects/security/pki/nss/ (confirmed, Kai Engert)
-   ** resonates with "NSS Shared DB":https://wiki.mozilla.org/NSS_Shared_DB and "Fedora crypto consolidation":http://fedoraproject.org/wiki/FedoraCryptoConsolidation efforts
-  * "EJBCA":http://ejbca.org (confirmed, [[Tomas Gustavsson|User:shredder]])
-   ** signing certificates via OpenSC PKCS#11, assuring that a relatively straightforward personalization/enrollment would be possible with OpenSC. Full cycle from generation to certification and destruction.
-  * "libssh":http://www.libssh.org (confirmed, Aris Adamantiadis, Andreas Schneider)
-  * "GnomeKeyring":http://live.gnome.org/GnomeKeyring/Seahorse (confirmed, [[Stef Walter|User:Stefw]])
-  * "GnuTLS":http://www.gnu.org/software/gnutls/ (confirmed, Nikos Mavrogiannopoulos and Simon Josefsson)
-  * "yaSSL":http://www.yassl.com/yaSSL/Home.html (confirmed, Larry Stefonic)
-  * "libssh2":http://www.libssh2.org/ (confirmed, Peter Stuge, Daniel Stenberg & Simon Josefsson)
-  * "libcurl":http://curl.haxx.se/ (confirmed, Daniel Stenberg)
-  * "GNU SASL":http://www.gnu.org/software/gsasl/, "GNU Shishi":http://www.gnu.org/software/shishi/, "GNU Generic Security Service":http://www.gnu.org/software/gss/ (confirmed, Simon Josefsson)
-  * "dynalogin":http://www.dynalogin.org modular and versatile two-factor authentication suite
-  * "OATH Toolkit":http://www.nongnu.org/oath-toolkit/ - OATH HOTP/TOTP/etc implementation
-  * "Fribid (Free BiD)":http://www.fribid.se/index.en.html
- * comments
+  ** OpenSC
+   *** To have seamless support in applications for cards supported by OpenSC, either pre-personalized with created with pkcs15-init or some other mechanism.
+  ** "NSS":http://www.mozilla.org/projects/security/pki/nss/ (confirmed, Kai Engert)
+   *** resonates with "NSS Shared DB":https://wiki.mozilla.org/NSS_Shared_DB and "Fedora crypto consolidation":http://fedoraproject.org/wiki/FedoraCryptoConsolidation efforts
+  ** "EJBCA":http://ejbca.org (confirmed, [[Tomas Gustavsson|User:shredder]])
+   *** signing certificates via OpenSC PKCS#11, assuring that a relatively straightforward personalization/enrollment would be possible with OpenSC. Full cycle from generation to certification and destruction.
+  ** "libssh":http://www.libssh.org (confirmed, Aris Adamantiadis, Andreas Schneider)
+  ** "GnomeKeyring":http://live.gnome.org/GnomeKeyring/Seahorse (confirmed, [[Stef Walter|User:Stefw]])
+  ** "GnuTLS":http://www.gnu.org/software/gnutls/ (confirmed, Nikos Mavrogiannopoulos and Simon Josefsson)
+  ** "yaSSL":http://www.yassl.com/yaSSL/Home.html (confirmed, Larry Stefonic)
+  ** "libssh2":http://www.libssh2.org/ (confirmed, Peter Stuge, Daniel Stenberg & Simon Josefsson)
+  ** "libcurl":http://curl.haxx.se/ (confirmed, Daniel Stenberg)
+  ** "GNU SASL":http://www.gnu.org/software/gsasl/, "GNU Shishi":http://www.gnu.org/software/shishi/, "GNU Generic Security Service":http://www.gnu.org/software/gss/ (confirmed, Simon Josefsson)
+  ** "dynalogin":http://www.dynalogin.org modular and versatile two-factor authentication suite
+  ** "OATH Toolkit":http://www.nongnu.org/oath-toolkit/ - OATH HOTP/TOTP/etc implementation
+  ** "Fribid (Free BiD)":http://www.fribid.se/index.en.html
+ * <b>comments</b>
   ** Martin: "mailing list post":http://www.opensc-project.org/pipermail/opensc-devel/2010-September/014947.html
 
 h2. Brainstorm
