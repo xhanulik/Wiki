@@ -19,23 +19,7 @@ h2. Schedule
  * C (45m, Branko Majic) "Deployment and Use of X.509 in Free Software Components":http://majic.rs/book/free-software-x509-cookbook (with devroom demo environment if I get some hands on hardware able to run lots of VM's) ("mailing list post":https://lists.fosdem.org/pipermail/security-devroom/2011-November/000083.html)
  * D (45m Kashyap Chamarthy Overview and a demo of "Dogtag Certificate system":http://pki.fedoraproject.org/ -- An open source and open standards based PKI project. I'll also show a quick demo where Certificate System and its subsystems(CA, OCSP, KRA[key-recovery-archival] ) would be configured on a virtual machine. ("mailing list post":https://lists.fosdem.org/pipermail/security-devroom/2011-November/000084.html)
  * E (45m) Benedikt Heintel, CACert .org "Trust - the root of evil?!"
-  ** Abstract: "In a highly connected world like ours is trust one of the most important assets. But what if the root to trust is not trustworthy?
-
- 2011 was the year where one Certificate Authority (CA) after the other
- came to fall. The cases of the Dutch DigiNotar and the Malaysian 
- DigiCert are the best know. The system of commercial CAs depends on a
- wrong understanding of liability and trust. CAcert's web of trust
- tries to overcomes the liability issues by trusting a group of trusted
- people wherein each individual is liable for its own action.
-
- This talk enlightens why most commercial CAs are not trustworthy by
- default, what we can learn from 2011's cases, what makes CAcert
- different, why CAcert is not in the browsers by default and what we do
- to make it happen."
-
  * F (45m) Embedded/GPU crypto, yaSSL
-  ** yaSSL made some great progress in the past year with the CyaSSL embedded SSL library.  As such, this talk will provide an overview of technical and community progress in the last year and news on the current state of yaSSL.  Details on what's new will include the addition of new cipher suites and cipher modes, better portability, new ports to software projects and operating systems, and community involvement.
-
  * G (45m, Anders Rundgren, A technical description of "http://webpki.org/papers/keygen2/sks-keygen2-exec-level-presentation.pdf":http://webpki.org/papers/keygen2/sks-keygen2-exec-level-presentation.pdf - An Open Source / Open Hardware scheme for making security hardware as easy to deploy as passwords)
 
 h2. Video Recordings
