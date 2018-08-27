@@ -6,6 +6,7 @@ h4. Quick Start
  * [[Compiling and Installing on Unix flavors]]
  * [[Manuals for OpenSC configuration|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/files/files.html]]
  * [[Manuals for OpenSC tools|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/tools/tools.html]]
+ * [[Frequently Asked Questions]]
 
 h2. Download
 
