@@ -4,15 +4,17 @@ h4. Quick Start
  * [[Windows Quick Start]]
  * [[macOS Quick Start]]
  * [[Compiling and Installing on Unix flavors]]
- * [[Manuals for Configuration Files|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/files/files.html]]
- * [[Manuals for OpenSC Tools|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/tools/tools.html]]
+ * [[Manuals for OpenSC configuration|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/files/files.html]]
+ * [[Manuals for OpenSC tools|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/tools/tools.html]]
 
 h2. Download
 
-The latest stable version is "OpenSC 0.18.0":https://github.com/OpenSC/OpenSC/releases/tag/0.18.0 released on 16.05.2018. It is available as
- * "Source code distribution":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/opensc-0.18.0.tar.gz
- * Windows Installer for "64 bit":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/OpenSC-0.18.0-win64_vs12-Release.msi and "32 bit":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/OpenSC-0.18.0-win32_vs12-Release.msi operating system
- * "macOS installer":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/OpenSC-0.18.0.dmg
+"OpenSC 0.18.0":https://github.com/OpenSC/OpenSC/releases/tag/0.18.0 is the latest stable version released on 16.05.2018. It is available as
+ * Windows installer
+  ** for 64 bit ("OpenSC-0.18.0-win64_vs12-Release.msi":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/OpenSC-0.18.0-win64_vs12-Release.msi) and
+  ** for 32 bit ("OpenSC-0.18.0-win32_vs12-Release.msi":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/OpenSC-0.18.0-win32_vs12-Release.msi) programs
+ * macOS installer ("OpenSC-0.18.0.dmg":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/OpenSC-0.18.0.dmg)
+ * Source code distribution ("opensc-0.18.0.tar.gz":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/opensc-0.18.0.tar.gz)
 
 h4. Nightly build
 
