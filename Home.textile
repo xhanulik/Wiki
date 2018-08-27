@@ -11,10 +11,10 @@ h2. Download
 
 "OpenSC 0.18.0":https://github.com/OpenSC/OpenSC/releases/tag/0.18.0 is the latest stable version released on 16.05.2018. It is available as
  * Windows installer
-  ** for "64 bit (OpenSC-0.18.0-win64_vs12-Release.msi)":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/OpenSC-0.18.0-win64_vs12-Release.msi and
-  ** for "32 bit (OpenSC-0.18.0-win32_vs12-Release.msi)":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/OpenSC-0.18.0-win32_vs12-Release.msi programs
- * "macOS installer (OpenSC-0.18.0.dmg)":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/OpenSC-0.18.0.dmg
- * "Source code distribution (opensc-0.18.0.tar.gz)":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/opensc-0.18.0.tar.gz
+  ** for "64 bit 'OpenSC-0.18.0-win64_vs12-Release.msi'":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/OpenSC-0.18.0-win64_vs12-Release.msi and
+  ** for "32 bit 'OpenSC-0.18.0-win32_vs12-Release.msi'":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/OpenSC-0.18.0-win32_vs12-Release.msi programs
+ * "macOS installer 'OpenSC-0.18.0.dmg'":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/OpenSC-0.18.0.dmg
+ * "Source code distribution 'opensc-0.18.0.tar.gz'":https://github.com/OpenSC/OpenSC/releases/download/0.18.0/opensc-0.18.0.tar.gz
 
 h4. Nightly build
 
