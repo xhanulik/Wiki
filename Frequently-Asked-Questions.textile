@@ -4,109 +4,101 @@ h1. Frequently Asked Questions
 h2. Generic concepts
 
 
-h3. Q: What is PKCS#11?
+h3. What is PKCS#11?
 
-A: PKCS#11 is a software API for accessing cryptographic hardware like smart cards or "HSM":http://en.wikipedia.org/wiki/Hardware_security_modules. PKCS#11 is NOT a hardware standard or hardware interface.
+PKCS#11 is a software API for accessing cryptographic hardware like smart cards or "HSM":http://en.wikipedia.org/wiki/Hardware_security_modules. PKCS#11 is *not* a hardware standard or hardware interface.
 
-h3. Q: What is PKCS#15
+h3. What is PKCS#15
 
-A: PKCS#15 is a format of on-card structures that defines a "filesystem layout" for smart cards. PKCS#15 does not define how those structures are generated or written to the card.
+PKCS#15 is a format of on-card structures that defines a "filesystem layout" for smart cards. PKCS#15 does not define how those structures are generated or written to the card.
 
-h3. Q: Can I use PKCS#15 and PKCS#11 simultaneously?
+h3. Can I use PKCS#15 and PKCS#11 simultaneously?
 
-A: Most probably. The two standards do not conflict with each other. A PKCS#15 compatible smart card may not have a PKCS#11 module for platform X or a smart card might come with a PKCS#11 provider for platform X but format data on the card differently than PKCS#15 defines.
+Most probably. The two standards do not conflict with each other. A PKCS#15 compatible smart card may not have a PKCS#11 module for platform X or a smart card might come with a PKCS#11 provider for platform X but format data on the card differently than PKCS#15 defines.
 
-h3. Q: I have a PKCS#11 compatible smart card. Can I use it with OpenSC?
+h3. I have a PKCS#11 compatible smart card. Can I use it with OpenSC?
 
-A: Not necessarily. PKCS#11 is a software interface, it means the vendor provides a PKCS#11 module with their hardware. You can use all <b>[[PKCS#11 compatible software|Using-smart-cards-with-applications]]</b> with the vendor PKCS#11 provider. If your card is also supported by OpenSC, you can use the OpenSC PKCS#!11 provider. But you may not be able to: 
+Not necessarily. PKCS#11 is a software interface, it means the vendor provides a PKCS#11 module with their hardware. You can use all <b>[[PKCS#11 compatible software|Using-smart-cards-with-applications]]</b> with the vendor PKCS#11 provider. If your card is also supported by OpenSC, you can use the OpenSC PKCS#!11 provider. But you may not be able to: 
 * modify the card content 
 * use keys created by OpenSC with the vendor PKCS#11 provider and vice versa.
 
-h3. Q: I have a blank smart card which claims PKCS#15 support. Can I initialize it with OpenSC?
+h3. I have a blank smart card which claims PKCS#15 support. Can I initialize it with OpenSC?
 
-A: Only if a pkcs15-init driver exists for the card. PKCS#15 defines how to look for objects, it does not define how the objects get written to the card.
+Only if a pkcs15-init driver exists for the card. PKCS#15 defines how to look for objects, it does not define how the objects get written to the card.
 
-h3. Q: My smart card comes with a PKCS#11 module. Do I need OpenSC?
+h3. My smart card comes with a PKCS#11 module. Do I need OpenSC?
 
-A: No, unless you want your software to be open source or if your vendor does not provide a binary PKCS#11 module for you operating system or platform (for example ARM Linux) 
+No, unless you want your software to be open source or if your vendor does not provide a binary PKCS#11 module for you operating system or platform (for example ARM Linux) 
 
 h2. Smart card reader issues
 
 
-h3. Q: Do I need OpenCT to use OpenSC?
+h3. Do I need OpenCT to use OpenSC?
 
-A: No, unless you are using Linux and an USB token or exotic reader which is not CCID compatible, comes without a driver for pcsc-lite and at the same time is supported by OpenCT. The recommended method for accessing smart card readers is PC/SC and thus pcsc-lite.
+No, unless you are using Linux and an USB token or exotic reader which is not CCID compatible, comes without a driver for pcsc-lite and at the same time is supported by OpenCT. The recommended method for accessing smart card readers is PC/SC and thus pcsc-lite.
 
-h3. Q: I have installed OpenSC, OpenCT, pcsc-lite and ccid and I'm having troubles connecting to my CCID compatible reader.
+h3. I have installed OpenSC, OpenCT, pcsc-lite and ccid and I'm having troubles connecting to my CCID compatible reader.
 
-A: The preferred access method for CCID readers is via pcsc-lite. You have installed two CCID drivers which may compete for resources. You should remove OpenCT.
+The preferred access method for CCID readers is via pcsc-lite. You have installed two CCID drivers which may compete for resources. You should remove OpenCT.
 
-h3. Q: I'm using Ubuntu/Debian and OpenSC does not find any PC/SC readers (but pcsc_scan does)
+h3. I'm using Ubuntu/Debian and OpenSC does not find any PC/SC readers (but pcsc_scan does)
 
-A: The location of libpcsclite.so.1 is wrong in OpenSC, which has been fixed in OpenSC SVN ("Ubuntu bug":https://bugs.launchpad.net/ubuntu/+source/opensc/+bug/380936, "Debian bug":http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=531592). The quick fix to edit opensc.conf:
+The location of libpcsclite.so.1 is wrong in OpenSC, which has been fixed in OpenSC SVN ("Ubuntu bug":https://bugs.launchpad.net/ubuntu/+source/opensc/+bug/380936, "Debian bug":http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=531592). The quick fix to edit opensc.conf:
  <pre><code>provider_library = libpcsclite.so.1
  </code></pre>
 
-h3. Q: I have a smart card reader installed but a Java application does not see it
+h3. I have a smart card reader installed but a Java application does not see it
 
-A: Java looks for smart card readers via _/usr/lib/libpcsclite.so_, which is not present on Debian/Ubuntu. You need to create a symlink, depending on your distribution:
+Java looks for smart card readers via _/usr/lib/libpcsclite.so_, which is not present on Debian/Ubuntu. You need to create a symlink, depending on your distribution:
 <pre><code>sudo ln -s /lib/libpcsclite.so.1 /usr/lib/libpcsclite.so      # For Ubuntu
 sudo ln -s /usr/lib/libpcsclite.so.1 /usr/lib/libpcsclite.so  # For Debian
 </code></pre>
 
+
 h2. Card support / card driver related
 
+h3. What does "Unsupported INS byte in APDU" mean?
 
-h3. Q: What does "Unsupported INS byte in APDU" mean?
+It is a very technical way of saying "Your card is unsupported".
 
-A: It is a very technical way of saying "Your card is unsupported".
+h3. How can I verify that my card is supported by OpenSC?
 
-h3. Q: How can I verify that my card is supported by OpenSC?
+Check the [[SupportedHardware|Supported-hardware-(smart-cards-and-USB-tokens)]] list. Verify it with _opensc-tool --name_ to see if some driver knows how to handle your card. The expected result of the command is a line with a card driver name.
 
-A: Check the [[SupportedHardware|Supported-hardware-(smart-cards-and-USB-tokens)]] list. Verify it with _opensc-tool --name_ to see if some driver knows how to handle your card. The expected result of the command is a line with a card driver name.
+h3. What does "read only support" mean?
 
-h3. Q: What does "read only support" mean?
+Read-only mode means that OpenSC can be used to use the keys and certificates present on the card but new keys or certificates can not be loaded by OpenSC. PIN codes can still be changed.
 
-A: Read-only mode means that OpenSC can be used to use the keys and certificates present on the card but new keys or certificates can not be loaded by OpenSC. PIN codes can still be changed.
+h3. What to do if my card is not supported by OpenSC?
 
-h3. Q: What to do if my card is not supported by OpenSC?
+Somebody needs to write a driver for it. You can start by sending as much information as you can about the card to [[opensc-devel mailing list|Mailing-lists]]. Be sure to send the card ATR by sending the output of _opensc-tool --atr_
 
-A: Somebody needs to write a driver for it. You can start by sending as much information as you can about the card to [[opensc-devel mailing list|Mailing-lists]]. Be sure to send the card ATR by sending the output of _opensc-tool --atr_
-
-h3. Q: Can I use Aladdin eToken with OpenSC?
-
-A: Yes (if your card is reported as [[Siemens-CardOS-M4|Siemens-CardOS-M4]] card). But you can not use an initialized token (where objects on the card have been created by the Aladdin middleware) with OpenSC but if there is free space on the token, a parallel structure can be created on the card with pkcs15-init. New keys must be generated and keys created by Aladdin middleware can not be used through OpenSC. Please note that Java versions (72K) are NOT supported by OpenSC. More information from dedicated AladdinEtokenPro wiki page.
 
 h2. Application support questions
 
+h3. Is it possible to make GDM automatically ask for the PIN when a card is inserted?
 
-h3. Q: Is it possible to make GDM automatically ask for the PIN when a card is inserted?
+Currently no. See "this post on the MUSCLE mailing list":http://lists.drizzle.com/pipermail/muscle/2010-March/008206.html for more information. 
 
-A: Currently no. See "this post on the MUSCLE mailing list":http://lists.drizzle.com/pipermail/muscle/2010-March/008206.html for more information. 
+h3. Can I store my GnuPG key on a smart card? Can I use gnupg with OpenSC?
 
-h3. Q: Can I store my GnuPG key on a smart card? Can I use gnupg with OpenSC?
+GnuPG supports OpenPGP card in a direct fashion. That support has nothing to do with OpenSC or PKCS#11. There also exists a PKCS#11 based solution for GnuPG, see "gnupg-pkcs11":http://sites.google.com/site/alonbarlev/gnupg-pkcs11 for more information.
 
-A: GnuPG supports OpenPGP card in a direct fashion. That support has nothing to do with OpenSC or PKCS#11. There also exists a PKCS#11 based solution for GnuPG, see "gnupg-pkcs11":http://sites.google.com/site/alonbarlev/gnupg-pkcs11 for more information.
+h3. Do I need to install both OpenCT and OpenSC ?
 
-h3. Q: Do I need to install both OpenCT and OpenSC ?
+OpenSC does not depend on OpenCT. Unless you have a USB token that does not support ICCD or CCID, you don't need OpenCT. <link to openct tokens>
 
-A: OpenSC does not depend on OpenCT. Unless you have a USB token that does not support ICCD or CCID, you don't need OpenCT. <link to openct tokens>
 
 h2. Mac OS X related questions
 
+h3. I want to use my smart card on OS X but the system asks me for some password instead of PIN?
 
-h3. Q: I want to use my smart card on OS X but the system asks me for some password instead of PIN?
-
-A: OS X apparently always uses "Enter password for Keychain <keychainname>". The "name" for you token can be seen with pkcs15-tool -D
-
-h3. Q: It seems to be impossible to unlock the smart card keychain in Keychain Access.app ?
-
-A: The padlock in the Keychain Access GUI is just a GUI feature, it does not relate to unlocking smart card items with a PIN code. The PIN for the related key will be asked if used (for example, with Google Chrome for SSL authentication)
+OS X apparently always uses "Enter password for Keychain <keychainname>". The "name" for you token can be seen with pkcs15-tool -D
 
 h2. Miscellaneous questions
 
 
-h3. Q: Where can I buy smart cards ?
+h3. Where can I buy smart cards ?
 
  * "https://www.javacardos.com":https://www.javacardos.com/store/ - dedicated to building a comprehensive Java Card platform.
  * "http://www.aventra.fi":http://www.aventra.fi - ships from Finland, [[Aventra-MyEID-PKI-card|Aventra-MyEID-PKI-card]] card
@@ -114,4 +106,3 @@ h3. Q: Where can I buy smart cards ?
  * "http://shop.kernelconcepts.de/":http://shop.kernelconcepts.de/ - ships from Germany, [[OpenPGP v2 card|OpenPGP-card]] and CryptoStick token
  * "http://www.logidata-int.fr":http://www.logidata-int.fr - ships from France
  * "http://www.smartcardfocus.com":http://www.smartcardfocus.com - ships from UK
- 
