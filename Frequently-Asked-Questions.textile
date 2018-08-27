@@ -18,7 +18,7 @@ Most probably. The two standards do not conflict with each other. A PKCS#15 comp
 
 h3. I have a PKCS#11 compatible smart card. Can I use it with OpenSC?
 
-Not necessarily. PKCS#11 is a software interface, it means the vendor provides a PKCS#11 module with their hardware. You can use all [[PKCS#11 compatible software|Using-smart-cards-with-applications]] with the vendor PKCS#11 provider. If your card is also supported by OpenSC, you can use the OpenSC PKCS#!11 provider. But you may not be able to:
+Not necessarily. PKCS#11 is a software interface, it means the vendor provides a PKCS#11 module with their hardware. You can use all [[PKCS#11 compatible software|Using-smart-cards-with-applications]] with the vendor PKCS#11 provider. If your card is also supported by OpenSC, you can use the OpenSC PKCS#11 provider, but you may not be able to:
 * modify the card content 
 * use keys created by OpenSC with the vendor PKCS#11 provider and vice versa.
 
@@ -44,15 +44,13 @@ The preferred access method for CCID readers is via pcsc-lite. You have installe
 h3. I'm using Ubuntu/Debian and OpenSC does not find any PC/SC readers (but pcsc_scan does)
 
 The location of libpcsclite.so.1 is wrong in OpenSC, which has been fixed in OpenSC SVN ("Ubuntu bug":https://bugs.launchpad.net/ubuntu/+source/opensc/+bug/380936, "Debian bug":http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=531592). The quick fix to edit opensc.conf:
- <pre><code>provider_library = libpcsclite.so.1
- </code></pre>
+ <pre><code>provider_library = libpcsclite.so.1</code></pre>
 
 h3. I have a smart card reader installed but a Java application does not see it
 
 Java looks for smart card readers via _/usr/lib/libpcsclite.so_, which is not present on Debian/Ubuntu. You need to create a symlink, depending on your distribution:
 <pre><code>sudo ln -s /lib/libpcsclite.so.1 /usr/lib/libpcsclite.so      # For Ubuntu
-sudo ln -s /usr/lib/libpcsclite.so.1 /usr/lib/libpcsclite.so  # For Debian
-</code></pre>
+sudo ln -s /usr/lib/libpcsclite.so.1 /usr/lib/libpcsclite.so  # For Debian</code></pre>
 
 
 h2. Card support / card driver related
