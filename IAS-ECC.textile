@@ -11,7 +11,7 @@ The base of the IAS-ECC technical specification contains multiple ISO-7816 serie
  IAS/ECC card manufacturer independence<br />
  compatibility with existing IAS/ECC card middleware<br />
  independence from personalization profile in card usage and easy configuration for the particular personalization profile in card administration <br />
- <i>Secure Messaging</i> for the administration of "protected" applications, "<i>Qualified Signature,</i>" and PIN operations<br />
+ "Secure Messaging":https://github.com/OpenSC/OpenSC/wiki/Secure-Messaging for the administration of "protected" applications, "<i>Qualified Signature,</i>" and PIN operations<br />
  PIN-pad support<br />
  support for <i>External Authentication</i><br />
 
