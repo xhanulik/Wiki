@@ -1,6 +1,6 @@
 h1. Secure Messaging
 
-Secure Messaging (SM) provides end-to-end security of the communication between ICC and off-card entity by adding configentiality, integrity and authentication to the APDU transactions.
+Secure Messaging (SM) provides end-to-end security of the communication between ICC and off-card entity by adding confidentiality, integrity and authentication to the APDU transactions.
 
 h2. Objectives
 
