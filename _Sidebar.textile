@@ -4,6 +4,15 @@
 * [[Compiling and Installing on Unix flavors]]
 
 <b>User Documentation</b>
-* [[Manuals for OpenSC configuration|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/files/files.html]]
-* [[Manuals for OpenSC tools|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/tools/tools.html]]
+* [[OpenSC Configuration|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/files/files.html]]
+* [[OpenSC Tools|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/tools/tools.html]]
 * [[Frequently Asked Questions]]
+
+<b>Developer Documentation</b>
+* [[Overview]]
+* [[Smart Card Simulation]]
+* [[Getting involved in OpenSC development]]
+* [[Adding a new card driver]]
+* [[Compiling on Windows]]
+* [[Environment variables]]
+* [[Creating applications with smart card support]]

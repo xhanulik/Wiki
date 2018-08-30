@@ -34,7 +34,7 @@ h2. News
  * 05.02.2011: OpenSC was at [[FOSDEM 2011|OpenSC-@-FOSDEM-2011]].
  * 17.12.2010: <b>SECURITY</b>: ("CVE-2010-4523":http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-4523) A rogue smart card, specially crafted for this purpose, can be used to potentially execute arbitrary code if inserted to a local machine. See [[SecurityAdvisories|OpenSC-security-advisories]].
 
-See [[History of the OpenSC Project]] for older information.
+See [[History of the OpenSC Project]] for older history.
 
 h2. Sub-projects
 
@@ -45,16 +45,6 @@ OpenSC effort consists of various sub-projects that can be used independently as
  * [[pam_p11|https://github.com/OpenSC/pam_p11]] is a simple plugable authentication module (PAM) for authentication via PKCS#11 modules
  * [[OpenCT|https://github.com/OpenSC/openct/wiki]] implements a reader driver interface for various non-standard readers on Linux
  * [[OpenSC-Java|https://github.com/CardContact/opensc-java]] is a Java PKCS#11 wrapper and JCE Provider
-
-h2. Developer Information
-
- * [[Overview]]
- * [[Smart Card Simulation]]
- * [[Getting involved in OpenSC development]]
- * [[Compiling on Windows]]
- * [[Adding a new card driver]]
- * [[Creating applications with smart card support]]
- * [[Environment variables]]
 
 h2. License
 
