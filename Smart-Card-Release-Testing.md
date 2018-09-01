@@ -75,7 +75,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | rutoken              | :new_moon:     | :new_moon:     | :new_moon:     |
 | rutoken_ecp          | :new_moon:     | :new_moon:     | :new_moon:     |
 | westcos              | :new_moon:     | :new_moon:     | :new_moon:     |
-| myeid                | :new_moon:     | :new_moon:     | :new_moon:     |
+| myeid                | :full_moon:    | :last_quarter_moon: | :new_moon:     |
 | sc-hsm               | :waning_gibbous_moon:     | :waning_gibbous_moon:     | :waning_gibbous_moon:     |
 | dnie                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | MaskTech             | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -101,6 +101,7 @@ The table below shows a list of all tested smart cards that were used:
 | cardos            | CardOS 4.3B                                                      |
 | sc-hsm            | GoID 1.00                                                        |
 | iasecc            | Gemalto MultiApp IAS/ECC v1.0.1                                  |
+| myeid             | MyEID cards with PKCS#15-applet                                  |
 
 ## OpenSC 0.18.0
 
