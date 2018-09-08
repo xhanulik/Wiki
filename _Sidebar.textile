@@ -13,6 +13,7 @@
 * [[Getting involved in OpenSC development]]
 * [[Adding a new card driver]]
 * [[Compiling on Windows]]
+* [[Compiling on Cygwin]]
 * [[Environment variables]]
 * [[Creating applications with smart card support]]
 * [[Smart Card Simulation]]
