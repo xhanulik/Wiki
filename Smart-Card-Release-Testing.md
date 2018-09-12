@@ -83,14 +83,14 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | setcos               | :new_moon:     | :new_moon:     | :new_moon:     |
 | muscle               | :new_moon:     | :new_moon:     | :new_moon:     |
 | atrust-acos          | :new_moon:     | :new_moon:     | :new_moon:     |
-| PIV-II               | :new_moon:     | :new_moon:     | :new_moon:     |
-| cac                  | :new_moon:     | :new_moon:     | :new_moon:     |
+| PIV-II               | :full_moon:    | :new_moon:     | :new_moon:     |
+| cac                  | :full_moon:    | :new_moon:     | :new_moon:     |
 | itacns               | :new_moon:     | :new_moon:     | :new_moon:     |
 | isoApplet            | :new_moon:     | :new_moon:     | :new_moon:     |
 | gids                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | openpgp              | :new_moon:     | :new_moon:     | :new_moon:     |
 | jpki                 | :new_moon:     | :new_moon:     | :new_moon:     |
-| coolkey              | :new_moon:     | :new_moon:     | :new_moon:     |
+| coolkey              | :full_moon:    | :new_moon:     | :new_moon:     |
 | npa                  | :new_moon:     | :new_moon:     | :new_moon:     |
 | default              | :new_moon:     | :new_moon:     | :new_moon:     |
 
@@ -99,9 +99,14 @@ The table below shows a list of all tested smart cards that were used:
 | Smart Card Driver | Tested Smart Cards                                               |
 | ----------------- | ---------------------------------------------------------------- |
 | cardos            | CardOS 4.3B                                                      |
+| cardos            | Atos CardOS 5.3 cards with RSA                                   |
 | sc-hsm            | GoID 1.00                                                        |
 | iasecc            | Gemalto MultiApp IAS/ECC v1.0.1                                  |
 | myeid             | MyEID cards with PKCS#15-applet                                  |
+| PIV-II            | NIST Test PIV Cards 8 and 4                                      |
+| cac               | CAC Test Cards (Oberthur ID One, Gemalto GCX4)                   |
+| coolkey           | 534e SafeNet Java Card with Coolkey Applet                       |
+
 
 ## OpenSC 0.18.0
 
