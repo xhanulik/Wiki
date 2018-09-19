@@ -24,9 +24,19 @@ h4. Installing Requirements on Debian/Ubuntu
 <pre><code>sudo apt-get install pcscd libccid libpcsclite-dev libssl-dev libreadline-dev autoconf automake build-essential docbook-xsl xsltproc libtool pkg-config
 </code></pre>
 
+If the certificates in the card are compressed, you also need zlib:
+
+<pre><code>sudo apt-get install zlib1g-dev
+</code></pre>
+
 h4. Installing Requirements on Fedora
 
-<pre><code>su -c 'yum install readline-devel openssl-devel libxslt docbook-style-xsl pcsc-lite-devel automake autoconf libtool gcc</code></pre>
+<pre><code>su -c 'yum install readline-devel openssl-devel libxslt docbook-style-xsl pcsc-lite-devel automake autoconf libtool gcc'</code></pre>
+
+If the certificates in the card are compressed, you also need zlib:
+
+<pre><code>su -c 'yum install zlib-devel'
+</code></pre>
 
 h2. Build Configuration
 
