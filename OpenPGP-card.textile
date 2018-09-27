@@ -165,6 +165,12 @@ h3. 7. Delete certificate
 
 bc. pkcs15-init --delete-objects cert --id 3
 
+h3. 8. Export public key
+
+bc. pkcs15-tool --read-public-key <id>
+
+whereas <code><id></code> is the key reference (01 is signature key, 02 is the encryption key and 03 is the authentication key).
+
 h2. OpenSC driver details
 
 OpenPGP cards only implement a small subset of the ISO/IEC 7816-4/-8 standard. Most importantly, they do not use a file system to store the application specific data. Instead the data stored for the application is accessible via Data Objects (DO) only.
