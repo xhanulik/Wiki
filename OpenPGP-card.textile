@@ -371,7 +371,3 @@ gpg: selecting openpgp failed: Card error
 gpg: OpenPGP card not available: Card error
 </code></pre>
 This is just for your information.
-
-h2. Links
-
- * "http://web.monkeysphere.info/":http://web.monkeysphere.info/
