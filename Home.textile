@@ -41,8 +41,8 @@ See [[History of the OpenSC Project]] for older history.
 h2. Sub-projects
 
 OpenSC effort consists of various sub-projects that can be used independently as well, without OpenSC:
- * [[libp11|https://github.com/OpenSC/libp11]] is a wrapper library for PKCS#11 modules which includes an OpenSSL engine for using PKCS#11 tokens
- * [[pkcs11-helper|https://github.com/OpenSC/pkcs11-helper]] Library that simplifies the interaction with PKCS#11 providers for end-user applications using a simple API and optional OpenSSL engine
+ * [[libp11|https://github.com/OpenSC/libp11]] is a wrapper library for PKCS#11 modules with OpenSSL interface
+ * [[pkcs11-helper|https://github.com/OpenSC/pkcs11-helper]] is a wrapper library for PKCS#11 modules with extended callback mechanisms for user and token interaction
  * [[PAM-PKCS#11|https://github.com/OpenSC/pam_pkcs11/wiki]] is a feature rich plugable authentication module (PAM) for authentication via PKCS#11 modules, which includes various tools to controls the login process
  * [[pam_p11|https://github.com/OpenSC/pam_p11]] is a simple plugable authentication module (PAM) for authentication via PKCS#11 modules
  * [[OpenCT|https://github.com/OpenSC/openct/wiki]] implements a reader driver interface for various non-standard readers on Linux
