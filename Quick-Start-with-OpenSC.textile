@@ -13,9 +13,9 @@ Some older card readers (or standalone USB tokens) use a nonstandard wire format
 
 h2. Install OpenSC
 
-For Mac OS X, download and install "SCA":http://www.opensc-project.org/sca/.
+For Mac OS X, download and install SCA.
 
-For Windows, visit the "build project":http://www.opensc-project.org/build.
+For Windows, visit the build project.
 
 For Linux, either use your distribution's package manager or [CompilingInstalling install from source].
 
@@ -106,10 +106,10 @@ Private RSA Key [Private Key]
 
 h2. Testing using OpenSSL
 
-If you followed thus far, your token is now fitted with a private RSA key that it generated itself and never divulged to anybody (not even the host computer).  Assuming "engine_pkcs11":http://www.opensc-project.org/engine_pkcs11/ is installed, we can use this key and openssl to create
+If you followed thus far, your token is now fitted with a private RSA key that it generated itself and never divulged to anybody (not even the host computer).  Assuming engine_pkcs11 is installed, we can use this key and openssl to create
 a self signed certificate, still without divulging the key; the necessary cryptographic computations will occur on-token.
 
-Let's start the OpenSSL interactive shell and load the "engine pkcs11":http://www.opensc-project.org/engine_pkcs11/ so that OpenSSL can ask the token to do the crypto (as opposed to doing it from your computer's CPU).
+Let's start the OpenSSL interactive shell and load the engine pkcs11 so that OpenSSL can ask the token to do the crypto (as opposed to doing it from your computer's CPU).
   * <b>Linux</b>: open a terminal and type this (skipping the prompts):
 <pre><code>$ openssl
 OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/engines/engine_pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre MODULE_PATH:opensc-pkcs11.so
@@ -193,8 +193,7 @@ h1. Now what?
 
 You probably want to make your token work with other applications than `pkcs15-init` and OpenSSL: see [[Application Support|Using-smart-cards-with-applications]].
 
-If you want to login to your computer with your smart card or crypto token, please note that OpenSC 0.10 does not include the pam module and the openssl engine any more. We suggest you install
-"libp11":http://www.opensc-project.org/libp11/, "engine_pkcs11":http://www.opensc-project.org/engine_pkcs11/ and one of "pam_p11":http://www.opensc-project.org/pam_p11/ (a simple authentication module) or pam_pkcs11":http://www.opensc-project.org/pam_pkcs11/ (a full featured authentication module).
+If you want to login to your computer with your smart card or crypto token, please note that OpenSC 0.10 does not include the pam module and the openssl engine any more. We suggest you install libp11, engine_pkcs11 and one of pam_p11 (a simple authentication module) or pam_pkcs11 (a full featured authentication module).
 
 h1. Links
 
