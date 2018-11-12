@@ -6,4 +6,5 @@ The documentation is available online [2].
 
 
 [1] https://github.com/dogtagpki/coolkey/
+
 [2] https://github.com/dogtagpki/coolkey/blob/master/applet/doc/CoolKeyApplet.odt
