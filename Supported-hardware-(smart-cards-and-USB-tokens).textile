@@ -16,6 +16,7 @@ Supported eID cards:
  * [[<b>ItalianEid</b>|Italian-Infocamere]]
  * [[<b>EstonianEid</b>|Estonian-eID-(EstEID)]]
  * [[<b>PortugueseEid</b>|Portuguese-eID]]
+ * [[<b>US CAC</b>|US-CAC]]
 
 
 h2. Generic smart cards
@@ -46,7 +47,7 @@ JavaCard applets:
  * [[<b>Oberthur</b>|Oberthur-AuthentIC-applet-v2.2]]
  * [[<b>MuscleApplet</b>|Muscle-applet]]
  * [[<b>SmartCardHsm</b>|SmartCardHSM]]
-
+ * [[<b>Coolkey (RHCS)</b>|Coolkey]]
 
 h2. USB Tokens
 
