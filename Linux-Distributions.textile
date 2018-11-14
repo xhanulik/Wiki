@@ -7,7 +7,7 @@ please add it. A general and current overview is shown on "repology.org":https:/
 | Arch Linux | "OpenSC 0.18.0 included":https://www.archlinux.org/packages/community/x86_64/opensc/ |
 | Debian jessie (old stable) | "OpenSC 0.14.0 included":http://packages.debian.org/oldstable/utils/opensc  |
 | Debian stretch (stable) | "OpenSC 0.16.0 included":http://packages.debian.org/stable/utils/opensc |
-| Debian sid (development) | "OpenSC 0.17.0 included":http://packages.debian.org/unstable/utils/opensc |
+| Debian sid (development) | "OpenSC 0.19.0 included":http://packages.debian.org/unstable/utils/opensc |
 | Fedora 26+ | "OpenSC 0.17.0 included":https://apps.fedoraproject.org/packages/opensc |
 | RHEL/CentOS 7.4 | OpenSC 0.16.0 (git revision 777e2a3) included |
 | Gentoo Portage | "OpenSC 0.9.6 in dev-libs/opensc":http://www.gentoo.org/cgi-bin/viewcvs.cgi/dev-libs/opensc/?root=gentoo-x86 |
