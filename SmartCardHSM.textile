@@ -318,6 +318,9 @@ Security Considerations: The SO-PIN allows to reset the retry counter for the PI
 To change the PIN you can use
 <pre><code>$ pkcs11-tool --login --pin 648219 --change-pin --new-pin 123456</code></pre>
 
+To unblock and change the PIN using the SO-PIN you can use
+<pre><code>$ pkcs11-tool --login --login-type so --so-pin=3537363231383830 --init-pin --new-pin=648219</code></pre>
+
 h3. Generate key pair
 
 Use the following command to generate a key pair:
