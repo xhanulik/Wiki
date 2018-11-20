@@ -48,11 +48,7 @@ or
 
  * Verify and parse the returned ASN1 structure:
  
-       openssl rsautl -verify -inkey $SIGN_KEY.pub -in data.sig -pubin | openssl asn1parse -inform DER
- 
- * Compare the result with the sha1 sum of the input file:
- 
-       sha1sum data
+       openssl dgst -keyform PEM -verify $SIGN_KEY.pub -sha1 -signature data.sig data
 
  Similarly can be tested the SHA256, SHA384 and SHA512, just by replacing SHA1 with these hashes in above commands.
 
