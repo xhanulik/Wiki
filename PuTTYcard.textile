@@ -22,7 +22,7 @@ some features (for example secure PIN entry).
 If you used PuTTYcard in the past or are willing to test
 my smart card enabled version of pageant.exe with a new
 card or a new card reader I will send you a free licence.
-Just let me know at [mailto:pk@opensc-project.org].
+Just let me know.
 
 h2. PuTTYcard
 
