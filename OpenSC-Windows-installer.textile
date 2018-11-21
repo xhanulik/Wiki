@@ -64,7 +64,7 @@ The following has been done on Ubuntu 16.04, x86_64
 $ wine is.exe
 </code></pre>
  * Check out OpenSC:
-<pre><code>$ git clone git://www.opensc-project.org/OpenSC.git
+<pre><code>$ git clone git@github.com:OpenSC/OpenSC.git
 $ cd OpenSC
 </code></pre>
  * Build the windows libraries:
