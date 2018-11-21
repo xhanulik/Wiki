@@ -1,6 +1,6 @@
-The OpenSC project migrated from the https://www.opensc-project.org/ server in November 2012.
+The OpenSC project migrated from the <code>www.opensc-project.org</code> server in November 2012.
 
-The web site https://www.opensc-project.org/ should **not** be used any more.
+The web site <code>www.opensc-project.org</code> should **not** be used any more.
 
 # Source code
 
