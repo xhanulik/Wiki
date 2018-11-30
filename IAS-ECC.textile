@@ -47,7 +47,7 @@ Tested compatibility with the PKCS#11 and CSP from the other middlewares :
 
 h2. To get the source code:
 
-<pre><code>git clone git@github.com:viktorTarasov/OpenSC-SM.git
+<pre><code>git clone https://github.com/viktorTarasov/OpenSC-SM.git
 # use 'secure-messaging' branch
 </code></pre>
 
