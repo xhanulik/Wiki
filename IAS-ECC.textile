@@ -7,21 +7,23 @@ IAS-ECC cards comply with the <i>Advanced Electronic Signature</i> EU Directive 
 The base of the IAS-ECC technical specification contains multiple ISO-7816 series, including ISO-7816-15. The specification anticipates the coexistence of multiple cryptographic card (PKCS#15) applications. (see Note 01).
 
 
-<b>Support of IAS-ECC cards in OpenSC includes</b>:
- IAS/ECC card manufacturer independence<br />
- compatibility with existing IAS/ECC card middleware<br />
- independence from personalization profile in card usage and easy configuration for the particular personalization profile in card administration <br />
- "Secure Messaging":https://github.com/OpenSC/OpenSC/wiki/Secure-Messaging for the administration of "protected" applications, "<i>Qualified Signature,</i>" and PIN operations<br />
- PIN-pad support<br />
- support for <i>External Authentication</i><br />
+h2. Support of IAS-ECC cards in OpenSC includes:
 
-<b>Currently, cards from the following manufacturers are supported</b>:
- Gemalto "MultiApp ID IAS ECC":http://www.gemalto.com/products/multiapp_id_ias_ecc/<br />
- Oberthur "ID-ONE IAS-ECC":http://www.oberthur.com/get_downloadsection_file.aspx?id=119<br />
- Sagem "ypsID S3 IAS/ECC - PKCS#15"<br />
- Oberthur "COSMO v7" with PKI applet "AuthentIC v3"<br />
- Amos "IOP-V6 IAS/ECC"<br />
- IAS/ECC cards with three ""Adele"":http://www.references.modernisation.gouv.fr/sites/default/files/MDWIAS_Profils%20de%20%20personnalisation%20des%20cartes%20IAS%20%20V2_7.pdf profiles (from Gemalto)
+*  IAS/ECC card manufacturer independence
+*  compatibility with existing IAS/ECC card middleware
+*  independence from personalization profile in card usage and easy configuration for the particular personalization profile in card administration
+*  "Secure Messaging":https://github.com/OpenSC/OpenSC/wiki/Secure-Messaging for the administration of "protected" applications, "<i>Qualified Signature,</i>" and PIN operations
+*  PIN-pad support
+*  support for <i>External Authentication</i>
+
+h2. Currently, cards from the following manufacturers are supported:
+
+*  Gemalto "MultiApp ID IAS ECC":http://www.gemalto.com/products/multiapp_id_ias_ecc/<br />
+*  Oberthur "ID-ONE IAS-ECC":http://www.oberthur.com/get_downloadsection_file.aspx?id=119<br />
+*  Sagem "ypsID S3 IAS/ECC - PKCS#15"<br />
+*  Oberthur "COSMO v7" with PKI applet "AuthentIC v3"<br />
+*  Amos "IOP-V6 IAS/ECC"<br />
+*  IAS/ECC cards with three ""Adele"":http://www.references.modernisation.gouv.fr/sites/default/files/MDWIAS_Profils%20de%20%20personnalisation%20des%20cartes%20IAS%20%20V2_7.pdf profiles (from Gemalto)
 
 The IAS/ECC card from Gemalto [[thoroughly implements|IASECC-card-from-Gemalto]] specification "IAS/ECC v1.0.1":http://www.gixel.fr/includes/cms/_contenus/bibliotheque/file/CAP%20/IAS%20ECC%20v1_0_1UK.pdf. The card is formatted with <i>generic PKI</i> application and SM protected application <i>eID</i>.<br />
 (Some [[notes|IASECC_Gemalto_eID_Notes]], that concerns the usage of this card.)
@@ -43,13 +45,15 @@ Tested compatibility with the PKCS#11 and CSP from the other middlewares :
  <i>Smart Security Interface 4.9.1</i> from Charismathics<br />
 
 
-<b>To get the source code:</b>
+h2. To get the source code:
+
 <pre><code>git clone git@github.com:viktorTarasov/OpenSC-SM.git
 # use 'secure-messaging' branch
 </code></pre>
 
 
-<b>The latest installation packages for Windows 32/64, MacOS 10.5/6</b><br />
+h2. The latest installation packages for Windows 32/64, MacOS 10.5/6
+
 can be found on the dedicated CI Jenkins server, "OpenSC-SM projects":https://opensc.fr/jenkins/view/OpenSC-SM/.<br />
 Coming soon the packages for different Linux distributions.<br />
 
