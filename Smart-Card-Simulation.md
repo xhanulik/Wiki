@@ -136,7 +136,7 @@ javac -classpath jcardsim-3.0.4-SNAPSHOT.jar;PivApplet\src com.licel.jcardsim.re
 9. Create PIV applet from the install package:
 
 ```
-opensc-tool --card-driver default --send-apdu 80B80000180BA0000003080000100001000BA00000030800001000010000
+opensc-tool --card-driver default --send-apdu 80b80000120ba000000308000010000100050000020F0F7f
 ```
 
 10. [Initialize the PivApplet as usual](https://github.com/arekinath/PivApplet#installing)
