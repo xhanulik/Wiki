@@ -225,7 +225,7 @@ mvn initialize && mvn clean install
 
 ### Simulate Java Card Applet
 
-For actually simulating the Applets, the steps are almost identical as described in the sections for Windows above ([IsoApplet](simulating-isoapplet), [OpenPGP](#simulating-openpgp), [PIV](simulating-piv), [GIDS](simulating-gids)) with the following modifications:
+For actually simulating the Applets, the steps are almost identical as described in the sections for Windows above ([IsoApplet](#simulating-isoapplet), [OpenPGP](#simulating-openpgp), [PIV](#simulating-piv), [GIDS](#simulating-gids)) with the following modifications:
 
 - Make sure to use to use `jcardsim-3.0.4-SNAPSHOT.jar` built for vpcd
 - Add the following lines to your jCardSim configuration file (`jcardsim_*.cfg`):
