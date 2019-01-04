@@ -5,6 +5,7 @@ This guide uses [jCardSim](https://jcardsim.org/) to simulate the following Open
 - [IsoApplet](https://github.com/philipWendland/IsoApplet)
 - [OpenPGP applet](https://github.com/Yubico/ykneo-openpgp)
 - [PivApplet](https://github.com/arekinath/PivApplet)
+- [GidsApplet](https://github.com/vletoux/GidsApplet)
 
 The description can easily be adapted for other applets as well. We focus on Windows since this is the only platform with a virtual smart card reader supported by jCardSim.
 
@@ -114,7 +115,7 @@ git clone https://github.com/arekinath/PivApplet
 javac -classpath jcardsim-3.0.4-SNAPSHOT.jar PivApplet\src\net\cooperi\pivapplet\*.java
 ```
 
-7. Create `jcardsim_pvi.cfg` for OpenPGP applet:
+7. Create `jcardsim_piv.cfg` for OpenPGP applet:
 
 ```
 com.licel.jcardsim.card.applet.0.AID=A000000308000010000100
@@ -125,7 +126,7 @@ com.licel.jcardsim.card.ATR=3B80800101
 8. Run jCardSim with PivApplet:
 
 ```
-javac -classpath jcardsim-3.0.4-SNAPSHOT.jar;PivApplet\src com.licel.jcardsim.remote.BixVReaderCard jcardsim_pvi.cfg
+javac -classpath jcardsim-3.0.4-SNAPSHOT.jar;PivApplet\src com.licel.jcardsim.remote.BixVReaderCard jcardsim_piv.cfg
 ```
 
 9. Create PIV applet from the install package:
@@ -135,3 +136,36 @@ opensc-tool --card-driver default --send-apdu 80B80000180BA000000308000010000100
 ```
 
 10. [Initialize the PivApplet as usual](https://github.com/arekinath/PivApplet#installing)
+
+
+
+## Simulating GIDS
+
+6. Download and build GidsApplet:
+
+```
+git clone https://github.com/vletoux/GidsApplet
+javac -classpath jcardsim-3.0.4-SNAPSHOT.jar GidsApplet\src\com\mysmartlogon\gidsApplet\*.java
+```
+
+7. Create `jcardsim_gids.cfg` for GIDS applet:
+
+```
+com.licel.jcardsim.card.applet.0.AID=A000000397425446590201
+com.licel.jcardsim.card.applet.0.Class=com.mysmartlogon.gidsApplet.GidsApplet
+com.licel.jcardsim.card.ATR=3B80800101
+```
+
+8. Run jCardSim with GidsApplet:
+
+```
+javac -classpath jcardsim-3.0.4-SNAPSHOT.jar;GidsApplet\src com.licel.jcardsim.remote.BixVReaderCard jcardsim_gids.cfg
+```
+
+9. Create GIDS applet from the install package:
+
+```
+opensc-tool --card-driver default --send-apdu 80b80000190bA0000003974254465902010bA00000039742544659020100
+```
+
+10. [Initialize the GidsApplet as usual](https://www.mysmartlogon.com/generic-identity-device-specification-gids-smart-card/)
