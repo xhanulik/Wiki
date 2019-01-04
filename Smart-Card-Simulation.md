@@ -7,9 +7,13 @@ This guide uses [jCardSim](https://jcardsim.org/) to simulate the following Open
 - [PivApplet](https://github.com/arekinath/PivApplet)
 - [GidsApplet](https://github.com/vletoux/GidsApplet)
 
-The description can easily be adapted for other applets as well. We focus on Windows since this is the only platform with a virtual smart card reader supported by jCardSim.
+The description can easily be adapted for other applets as well.
 
-## Prepare the Virtual Smart Card Reader
+## Simulation on Windows
+
+This section describes how to get the official version of [jCardSim to work through a PC/SC virtual reader](https://jcardsim.org/blogs/work-jcardsim-through-pcsc-virtual-reader) on Windows.
+
+### Prepare the Virtual Smart Card Reader
 
 1. Install virtual smart card reader: Either use the [original source code](http://www.codeproject.com/Articles/134010/An-UMDF-Driver-for-a-Virtual-Smart-Card-Reader) and follow its manual or use the pre-built installer, [BixVReaderInstaller.msi](https://github.com/frankmorgner/vsmartcard/releases/tag/virtualsmartcard-0.7), from the [Virtual Smart Card](https://frankmorgner.github.io/vsmartcard/virtualsmartcard/README.html) project.
 
@@ -40,7 +44,7 @@ Now, [configure jCardSim](https://jcardsim.org/blogs/work-jcardsim-through-pcsc-
 
 
 
-## Simulating IsoApplet
+### Simulating IsoApplet
 
 6. Download and build IsoApplet:
 
@@ -73,7 +77,7 @@ opensc-tool --card-driver default --send-apdu 80b800001a0cf276a288bcfba69d34f310
 
 
 
-## Simulating OpenPGP
+### Simulating OpenPGP
 
 6. Download and build OpenPGP applet:
 
@@ -106,7 +110,7 @@ opensc-tool --card-driver default --send-apdu 80b800002210D276000124010200000000
 
 
 
-## Simulating PIV
+### Simulating PIV
 
 6. Download and build PivApplet:
 
@@ -139,7 +143,7 @@ opensc-tool --card-driver default --send-apdu 80B80000180BA000000308000010000100
 
 
 
-## Simulating GIDS
+### Simulating GIDS
 
 6. Download and build GidsApplet:
 
@@ -169,3 +173,64 @@ opensc-tool --card-driver default --send-apdu 80b80000190bA000000397425446590201
 ```
 
 10. [Initialize the GidsApplet as usual](https://www.mysmartlogon.com/generic-identity-device-specification-gids-smart-card/)
+
+
+
+## Simulation on Linux
+
+On Linux, jCardSim needs to be compiled with support for a different [virtual reader backend (vpcd)](http://frankmorgner.github.io/vsmartcard/virtualsmartcard/README.html)
+
+### Prepare the Virtual Smart Card Reader
+
+1. Download and build the virtual smart card and its reader driver
+
+```
+git clone https://github.com/frankmorgner/vsmartcard.git
+cd vsmartcard/virtualsmartcard
+autoreconf -vis && ./configure && sudo make install
+```
+
+2. Restart `pcscd` to load the new reader driver. On Debian based systems, you could do the following:
+
+```
+sudo /etc/init.d/pcscd restart;
+```
+
+### Compile jCardSim with support for vpcd
+
+3. Download the adapted version of jCardSim
+
+```
+git clone https://github.com/arekinath/jcardsim.git
+```
+
+4. Fetch Java Card Classic Development Kit
+
+```
+git clone https://github.com/martinpaljak/oracle_javacard_sdks.git
+export JC_CLASSIC_HOME=$PWD/oracle_javacard_sdks/jc304_kit
+```
+
+5. Build `jcardsim-3.0.4-SNAPSHOT.jar` as described [here](https://jcardsim.org/docs/getting-source-compiling):
+
+```
+git clone https://github.com/martinpaljak/oracle_javacard_sdks.git
+export JC_CLASSIC_HOME=$PWD/oracle_javacard_sdks/jc304_kit
+git clone https://github.com/arekinath/jcardsim.git
+cd jcardsim
+mvn initialize && mvn clean install
+```
+
+
+
+### Simulate Java Card Applet
+
+For actually simulating the Applets, the steps are almost identical as described in the sections for Windows above ([IsoApplet](simulating-isoapplet), [OpenPGP](#simulating-openpgp), [PIV](simulating-piv), [GIDS](simulating-gids)) with the following modifications:
+
+- Make sure to use to use `jcardsim-3.0.4-SNAPSHOT.jar` built for vpcd
+- Add the following lines to your jCardSim configuration file (`jcardsim_*.cfg`):
+
+```
+com.licel.jcardsim.vsmartcard.host=localhost
+com.licel.jcardsim.vsmartcard.port=35963
+```
