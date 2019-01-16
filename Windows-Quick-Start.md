@@ -22,7 +22,7 @@ A 32 bit application running on 64 bit operating systems needs the 32 bit minidr
 
 Upon successful installation the 32 bit (and 64 bit) minidriver have successfully been registered with their registry keys in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Calais\SmartCards` (the 32 bit keys on an 64 bit OS are available in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Wow6432Node\Cryptography\Calais\SmartCards`).
 
-The PKCS#11 modules have been installed as `C:\Windows\System32\opensc-pkcs11.dll` and `C:\Windows\System32\onepin-opensc-pkcs11.dll` (the 32 bit libraries on an 64 bit OS are available as `C:\Windows\SysWOW64\opensc-pkcs11.dll` and `C:\Windows\SysWOW64\onepin-opensc-pkcs11.dll`)
+The PKCS#11 modules have been installed as `C:\Program Files\OpenSC Project\OpenSC\pkcs11\opensc-pkcs11.dll` and `C:\Program Files\OpenSC Project\OpenSC\pkcs11\onepin-opensc-pkcs11.dll` (the 32 bit libraries on an 64 bit OS are available as `C:\Program Files (x86)\OpenSC Project\OpenSC\pkcs11\opensc-pkcs11.dll` and `C:\Program Files (x86)\OpenSC Project\OpenSC\pkcs11\onepin-opensc-pkcs11.dll`)
 
 You may test minidriver support of your card with
 ```
