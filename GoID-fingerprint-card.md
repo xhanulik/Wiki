@@ -107,7 +107,6 @@ pkcs11-tool --write-object "$TYPE.cert.der" --type=cert --id=$ID --label="$LABEL
 The recommended settings for the GoID card looks like this:
 ```
 app default {
-	debug_file = opensc-debug.txt;
 	card_drivers = sc-hsm;
 	framework pkcs15 {
 		try_emulation_first = yes;
