@@ -1,15 +1,15 @@
+**Table of Contents**
+- [Changing the PIN](#changing-the-pin)
+- [Changing or Initializing the Fingerprints](#changing-or-initializing-the-fingerprints)
+- [Initializing SmartCardHSM](#initializing-smartcardhsm)
+- [Standard Use in PKCS#11, Minidriver and Tokend](#standard-use-in-pkcs11-minidriver-and-tokend)
+
 The [GoID fingerprint
 card](https://github.com/OpenSC/OpenSC/wiki/attachments/wiki/GoID_EN.PDF) is a
 contactless smart card with an integrated fingerprint sensor and PIN pad for
 user authentication. The GoID is capable of hosting multiple
 on-card-applications. It is compatible with every contactless smart card reader
 (or phone) and complies with the ISO/IEC defined IDT form factor.
-
-**Table of Contents**
-- [Changing the PIN](#changing-the-pin)
-- [Changing or Initializing the Fingerprints](#changing-or-initializing-the-fingerprints)
-- [Initializing SmartCardHSM](#initializing-smartcardhsm)
-- [Standard Use in PKCS#11, Minidriver and Tokend](#standard-use-in-pkcs11-minidriver-and-tokend)
 
 ![GoID fingerprint card](https://github.com/OpenSC/OpenSC/wiki/attachments/wiki/GoID.jpeg)
 
@@ -121,8 +121,8 @@ The configuration file can be found here:
 - *macOS* `/Library/OpenSC/etc/opensc.conf`
 
 The GoID's device issuer certificate needs to be trusted. You need to copy
-[DESCHSMDVCA00001](https://github.com/OpenSC/OpenSC/wiki/attachments/wiki/DESCHSMDVCA00001) and
-[DESRCACC100001](https://github.com/OpenSC/OpenSC/wiki/attachments/wiki/DESRCACC100001)
+[`DESCHSMDVCA00001`](https://github.com/OpenSC/OpenSC/wiki/attachments/wiki/DESCHSMDVCA00001) and
+[`DESRCACC100001`](https://github.com/OpenSC/OpenSC/wiki/attachments/wiki/DESRCACC100001)
 to the following locations:
 - *Windows* `C:\Program Files\OpenSC Project\OpenSC\cvc`
 - *Windows (for 32 bit programs)* `C:\Program Files (x86)\OpenSC Project\OpenSC\cvc`
