@@ -5,12 +5,13 @@ user authentication. The GoID is capable of hosting multiple
 on-card-applications. It is compatible with every contactless smart card reader
 (or phone) and complies with the ISO/IEC defined IDT form factor.
 
+**Table of Contents**
 - [Changing the PIN](#changing-the-pin)
 - [Changing or Initializing the Fingerprints](#changing-or-initializing-the-fingerprints)
 - [Initializing SmartCardHSM](#initializing-smartcardhsm)
 - [Standard Use in PKCS#11, Minidriver and Tokend](#standard-use-in-pkcs11-minidriver-and-tokend)
 
-[[https://github.com/OpenSC/OpenSC/wiki/attachments/wiki/GoID.jpeg|alt=GoID card]]
+![GoID fingerprint card](https://github.com/OpenSC/OpenSC/wiki/attachments/wiki/GoID.jpeg)
 
 In the default configuration, the GoID card ships with the following on-card-applications:
 - [SmartCard-HSM](https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM) as PKI
