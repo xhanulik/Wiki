@@ -27,6 +27,37 @@ The GoID has also been verified to be compatible with the following
   - [Mifare DESFire](https://www.mifare.net/en/products/chip-card-ics/mifare-desfire/)
   - [LEGIC advant](https://www.legic.com/technology-platform/smartcard-ics/)
 
+## OpenSC installation
+
+Binaries of OpenSC with the recommended configuration for GoID is available here:
+
+| Platform         | Package |
+| ---------------- | ------- |
+| Windows (64 bit) | [OpenSC-0.19.0_win64.msi](https://github.com/OpenSC/Nightly/blob/2019-01-21_2d684a18/OpenSC-0.19.0_win64.msi?raw=true) |
+| Windows (32 bit) | [OpenSC-0.19.0_win32.msi](https://github.com/OpenSC/Nightly/blob/2019-01-21_2d684a18/OpenSC-0.19.0_win32.msi?raw=true) |
+| macOS            | [OpenSC-0.19.0.dmg](https://github.com/OpenSC/Nightly/blob/2019-01-21_2d684a18/OpenSC-0.19.0.dmg?raw=true)             |
+| Source code      | [opensc-0.19.0.tar.gz](https://github.com/OpenSC/Nightly/blob/2019-01-21_2d684a18/opensc-0.19.0.tar.gz?raw=true)       |
+
+For other platforms, the source code [needs to be compiled along with its dependencies](https://github.com/OpenSC/OpenSC/wiki/Compiling-and-Installing-on-Unix-flavors), in particular [OpenSSL](https://www.openssl.org/), [OpenPACE](https://github.com/frankmorgner/openpace). On Ubuntu, for example, this looks as follows:
+```
+sudo apt-get install libpcsclite-dev libssl-dev libtool gcc pkg-config gengetopt help2man
+# install OpenPACE
+wget https://github.com/frankmorgner/openpace/releases/download/1.0.3/openpace-1.0.3.tar.gz
+tar xfvz openpace-*.tar.gz
+cd openpace-*
+./configure --disable-shared --prefix=/usr
+make
+sudo make install
+cd ..
+# install OpenSC
+wget https://github.com/OpenSC/Nightly/blob/2019-01-21_2d684a18/opensc-0.19.0.tar.gz?raw=true -O opensc-0.19.0.tar.gz
+tar xfvz opensc-*.tar.gz
+cd opensc-*
+./configure --prefix=/usr --sysconfdir=/etc/opensc
+make
+sudo make install
+```
+
 ## Changing the PIN
 
 Changing the PIN requires prior authentication of the (initial) PIN.  (With
@@ -101,28 +132,3 @@ certtool --generate-self-signed --outfile="$TYPE.cert" --provider="opensc-pkcs11
 openssl x509 -inform PEM -outform DER -in "$TYPE.cert" -out "$TYPE.cert.der"
 pkcs11-tool --write-object "$TYPE.cert.der" --type=cert --id=$ID --label="$LABEL"
 ```
-
-## Standard Use in PKCS#11, Minidriver and Tokend
-
-The recommended settings for the GoID card looks like this:
-```
-app default {
-	card_drivers = sc-hsm;
-	framework pkcs15 {
-		try_emulation_first = yes;
-		use_file_caching = true;
-	}
-}
-```
-The configuration file can be found here:
-- *Windows* `C:\Program Files\OpenSC Project\OpenSC\opensc.conf`
-- *Windows (for 32 bit programs)* `C:\Program Files (x86)\OpenSC Project\OpenSC\opensc.conf`
-- *macOS* `/Library/OpenSC/etc/opensc.conf`
-
-The GoID's device issuer certificate needs to be trusted. You need to copy
-[`DESCHSMDVCA00001`](https://github.com/OpenSC/OpenSC/wiki/attachments/wiki/DESCHSMDVCA00001) and
-[`DESRCACC100001`](https://github.com/OpenSC/OpenSC/wiki/attachments/wiki/DESRCACC100001)
-to the following locations:
-- *Windows* `C:\Program Files\OpenSC Project\OpenSC\cvc`
-- *Windows (for 32 bit programs)* `C:\Program Files (x86)\OpenSC Project\OpenSC\cvc`
-- *macOS* `/Library/OpenSC/etc/eac/cvc`
