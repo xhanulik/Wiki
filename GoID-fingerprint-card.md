@@ -1,4 +1,5 @@
 **Table of Contents**
+- [OpenSC installation](#opensc-installation)
 - [Changing the PIN](#changing-the-pin)
 - [Changing or Initializing the Fingerprints](#changing-or-initializing-the-fingerprints)
 - [Initializing SmartCardHSM](#initializing-smartcardhsm)
