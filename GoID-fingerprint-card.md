@@ -62,7 +62,7 @@ sudo make install
 ## Changing the PIN
 
 Changing the PIN requires prior authentication of the (initial) PIN.  (With
-`goid-tool --info` you can verify the exact configuration of the card).
+`goid-tool --info` you can verify the exact configuration of the card.) The new PIN must be verified twice.
 
 To change the PIN from its current (initial) value, use the following command:
 ```
@@ -83,13 +83,12 @@ while holding the card and the index finger for PKI use while the card is lying
 on a reader.
 
 Changing or initializing one or more fingerprint templates requires prior
-authentication of the PIN.  (With `goid-tool --info` you can verify the exact
-configuration of the card.)
+authentication of the PIN. (With `goid-tool --info` you can verify the exact
+configuration of the card.) Each new finger print template must be verified three times.
 
-For example, to initialize two fingers in three different positions, i.e. six
-finger print templates, use the following command:
+For example, to initialize two finger print templates use the following command:
 ```
-goid-tool --verify-pin --new-bio --new-bio --new-bio --new-bio --new-bio --new-bio
+goid-tool --verify-pin --new-bio --new-bio
 ```
 The program will...
 1. Ask for the current PIN on the builtin PIN-pad
@@ -102,7 +101,7 @@ The program will...
 Initializing - and thereby erasing all keys, certificates and data elements - requires the following command
 
 ```
-sc-hsm-tool --initialize --so-pin 3537363231383830 --user-pin=648219 --bio-server1 D276000172536F434D01
+sc-hsm-tool --initialize --so-pin 3537363231383830 --pin=648219 --bio-server1 80D276000172536F434D01 --bio-server2 40D276000172536F434D01
 ```
 
 Unless stated otherwise, the SmartCard-HSM on the GoID is usually shipped
