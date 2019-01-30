@@ -34,10 +34,10 @@ Binaries of OpenSC with the recommended configuration for GoID is available here
 
 | Platform         | Package |
 | ---------------- | ------- |
-| Windows (64 bit) | [OpenSC-0.19.0_win64.msi](https://github.com/OpenSC/Nightly/blob/2019-01-21_2d684a18/OpenSC-0.19.0_win64.msi?raw=true) |
-| Windows (32 bit) | [OpenSC-0.19.0_win32.msi](https://github.com/OpenSC/Nightly/blob/2019-01-21_2d684a18/OpenSC-0.19.0_win32.msi?raw=true) |
-| macOS            | [OpenSC-0.19.0.dmg](https://github.com/OpenSC/Nightly/blob/2019-01-21_2d684a18/OpenSC-0.19.0.dmg?raw=true)             |
-| Source code      | [opensc-0.19.0.tar.gz](https://github.com/OpenSC/Nightly/blob/2019-01-21_2d684a18/opensc-0.19.0.tar.gz?raw=true)       |
+| Windows (64 bit) | [OpenSC-0.19.0_win64.msi](https://github.com/OpenSC/Nightly/blob/2019-01-30_5b70b49c/OpenSC-0.19.0_win64.msi?raw=true) |
+| Windows (32 bit) | [OpenSC-0.19.0_win32.msi](https://github.com/OpenSC/Nightly/blob/2019-01-30_5b70b49c/OpenSC-0.19.0_win32.msi?raw=true) |
+| macOS            | [OpenSC-0.19.0.dmg](https://github.com/OpenSC/Nightly/blob/2019-01-30_5b70b49c/OpenSC-0.19.0.dmg?raw=true)             |
+| Source code      | [opensc-0.19.0.tar.gz](https://github.com/OpenSC/Nightly/blob/2019-01-30_5b70b49c/opensc-0.19.0.tar.gz?raw=true)       |
 
 For other platforms, the source code [needs to be compiled along with its dependencies](https://github.com/OpenSC/OpenSC/wiki/Compiling-and-Installing-on-Unix-flavors), in particular [OpenSSL](https://www.openssl.org/), [OpenPACE](https://github.com/frankmorgner/openpace). On Ubuntu, for example, this looks as follows:
 ```
@@ -66,7 +66,7 @@ Changing the PIN requires prior authentication of the (initial) PIN.  (With
 
 To change the PIN from its current (initial) value, use the following command:
 ```
-goid-tool --verify-pin --new-pin
+goid-tool --verbose --verify-pin --new-pin
 ```
 The program will...
 1. Ask for the current (initial) PIN on the builtin PIN-pad
@@ -88,13 +88,13 @@ configuration of the card.) Each new finger print template must be verified thre
 
 For example, to initialize two finger print templates use the following command:
 ```
-goid-tool --verify-pin --new-bio --new-bio
+goid-tool --verbose --verify-pin --new-bio --new-bio
 ```
 The program will...
 1. Ask for the current PIN on the builtin PIN-pad
-2. Ask six times for
+2. Ask twice for
    1. ... putting a finger on the builtin sensor
-   2. ... verifying the finger on the builtin sensor
+   2. ... verifying the finger in the same position two more times
 
 ## Initializing SmartCardHSM
 
