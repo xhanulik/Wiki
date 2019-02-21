@@ -31,7 +31,7 @@ For Firefox Release 56 and up, click *Privacy & Security*, scroll down and click
 
 ----
 6.) Select the installation directory.
-Windows: _C:\Windows\System32_
+Windows: _C:\Program Files\OpenSC Project\OpenSC\pkcs11_
 macOS: _/Library/OpenSC/lib/_
 Linux: _/usr/lib/_
 
