@@ -31,11 +31,28 @@ For Firefox Release 56 and up, click *Privacy & Security*, scroll down and click
 
 ----
 6.) Select the installation directory.
-Windows: _C:\Program Files\OpenSC Project\OpenSC\pkcs11_
-macOS: _/Library/OpenSC/lib/_
-Linux: _/usr/lib/_
+<table>
+<tr>
+<td> *Platform* </td> <td> *Directory Path* </td>
+</tr>
+<tr> <td> 
+Windows 32 Bit</td><td><code>C:\Program Files\OpenSC Project\OpenSC\pkcs11</code>
+</td> </tr>
+<tr> <td>
+Windows 64 Bit with Firefox 64 Bit</td><td><code>C:\Program Files\OpenSC Project\OpenSC\pkcs11</code>
+</td> </tr>
+<tr> <td>
+Windows 64 Bit with Firefox 32 Bit</td><td><code>C:\Program Files (x86)\OpenSC Project\OpenSC\pkcs11</code>
+</td> </tr>
+<tr> <td>
+macOS</td><td><code>/Library/OpenSC/lib/</code>
+</td> </tr>
+<tr> <td>
+Linux</td><td><code>/usr/lib/</code>
+</td> </tr>
+</table>
 
-Click on _opensc‑pkcs11.dll_ (Windows) or _opensc‑pkcs11.so_ (Linux, macOS). Click *Open*.
+Click on <code>opensc‑pkcs11-onepin.dll</code> (Windows) or <code>opensc‑pkcs11-onepin.so</code> (Linux, macOS). Click *Open*.
 
 !https://github.com/n8felton/OpenSC/wiki/attachments/wiki/MozillaSteps/FirefoxESR52_4.png!
 
