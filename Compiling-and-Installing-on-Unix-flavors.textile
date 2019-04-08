@@ -2,8 +2,7 @@ The preferred method for using OpenSC on Unix is to use the pre-packaged version
 
 h2. Typical Installation
 
-We suggest to install OpenSC into @/usr@ and to put the configuration file into @/etc/opensc@. The default
-however would be @/usr/local@ and @/usr/local/etc@, so you might want to change those. We suggest to configure and compile OpenSC like this:
+We suggest to install OpenSC into @/usr@ and to put the configuration file into @/etc/opensc@. The default however would be @/usr/local@ and @/usr/local/etc@, so you might want to change those. We suggest to configure and compile OpenSC like this:
 
 <pre><code>tar xfvz opensc-*.tar.gz
 cd opensc-*
@@ -14,7 +13,7 @@ sudo make install</code></pre>
 
 h2. Build Requirements
 
- * "PCSC-Lite":https://pcsclite.alioth.debian.org/ (runtime and development)
+ * "PCSC-Lite":https://pcsclite.apdu.fr/ (runtime and development)
  * "OpenSSL":https://www.openssl.org/ (optional, runtime and development)
  * "OpenPACE":https://frankmorgner.github.io/openpace/ (optional, runtime and development)
  * "GNU Readline":https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html (optional, runtime and development)
