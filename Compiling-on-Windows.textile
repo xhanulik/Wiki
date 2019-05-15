@@ -52,7 +52,7 @@ Use "Cygwin":https://cygwin.com/install.html or "MSYS2":http://www.msys2.org/ to
 Open a Cygwin/MSYS2 terminal or console and change to the OpenSC directory (the previously installed tools need to be found in the @%PATH%@). Create the built source files:
 
 <pre><code>autoreconf -i
-.\configure --disable-openssl --disable-readline --disable-zlib
+./configure --disable-openssl --disable-readline --disable-zlib
 make -C etc opensc.conf
 cp win32/winconfig.h config.h</pre></code>
 
