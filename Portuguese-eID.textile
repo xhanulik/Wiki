@@ -38,6 +38,7 @@ h2. Card History
 * 2007-02-14 First card version with a IAS 0.7 V1, EMV-CAP and Precise Bio MOC applets and 1024b keys.
 * 2015-06-05 Owner keys size increased to 2048b.
 * 2016-01-16 EMV-CAP applet is no longer present.
+* 2019-01-05 Owner keys size increased to 3072b.
 
 h3. Applets used
 
@@ -58,6 +59,7 @@ h4. Document version no longer in circulation:
 h4. Document version confirmed:
 
 * 3B 7D 95 00 00 80 31 80 65 B0 83 11 00 C8 83 00 90 00 (Version 004.004.21)
+* 3B FF 96 00 00 81 31 FE 43 80 31 80 65 B0 85 04 01 20 12 0F FF 82 90 00 D0 (Version 006.008.24)
 
 h4. Document version unconfirmed:
 
@@ -69,6 +71,7 @@ h4. Document version unconfirmed:
 * 3B 7D 95 00 00 80 31 80 65 B0 83 11 00 C8 83 00
 * 3B 7D 95 00 00 80 31 80 65 B0 83 11 C0 A9 83 00
 * 3B 7D 95 00 00 80 31 80 65 B0 83 11 C0 A9 83 00 90 00
+* 3B FF 96 00 00 81 31 80 43 80 31 80 65 B0 85 03 00 EF 12 0F FF 82 90 00 67
 
 h2. Biometrics
 
