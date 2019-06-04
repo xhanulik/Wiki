@@ -34,10 +34,10 @@ Binaries of OpenSC with the recommended configuration for GoID is available here
 
 | Platform         | Package |
 | ---------------- | ------- |
-| Windows (64 bit) | [OpenSC-0.19.0_win64.msi](https://github.com/OpenSC/Nightly/blob/2019-01-30_5b70b49c/OpenSC-0.19.0_win64.msi?raw=true) |
-| Windows (32 bit) | [OpenSC-0.19.0_win32.msi](https://github.com/OpenSC/Nightly/blob/2019-01-30_5b70b49c/OpenSC-0.19.0_win32.msi?raw=true) |
-| macOS            | [OpenSC-0.19.0.dmg](https://github.com/OpenSC/Nightly/blob/2019-01-30_5b70b49c/OpenSC-0.19.0.dmg?raw=true)             |
-| Source code      | [opensc-0.19.0.tar.gz](https://github.com/OpenSC/Nightly/blob/2019-01-30_5b70b49c/opensc-0.19.0.tar.gz?raw=true)       |
+| Windows (64 bit) | [OpenSC-0.19.0_win64.msi](https://github.com/OpenSC/Nightly/blob/2019-06-03_3a192e2c/OpenSC-0.19.0_win64.msi?raw=true) |
+| Windows (32 bit) | [OpenSC-0.19.0_win32.msi](https://github.com/OpenSC/Nightly/blob/2019-06-03_3a192e2c/OpenSC-0.19.0_win32.msi?raw=true) |
+| macOS            | [OpenSC-0.19.0.dmg](https://github.com/OpenSC/Nightly/blob/2019-06-03_3a192e2c/OpenSC-0.19.0.dmg?raw=true)             |
+| Source code      | [opensc-0.19.0.tar.gz](https://github.com/OpenSC/Nightly/blob/2019-06-03_3a192e2c/opensc-0.19.0.tar.gz?raw=true)       |
 
 For other platforms, the source code [needs to be compiled along with its dependencies](https://github.com/OpenSC/OpenSC/wiki/Compiling-and-Installing-on-Unix-flavors), in particular [OpenSSL](https://www.openssl.org/), [OpenPACE](https://github.com/frankmorgner/openpace). On Ubuntu, for example, this looks as follows:
 ```
@@ -46,12 +46,12 @@ sudo apt-get install libpcsclite-dev libssl-dev libtool gcc pkg-config gengetopt
 wget https://github.com/frankmorgner/openpace/releases/download/1.0.3/openpace-1.0.3.tar.gz
 tar xfvz openpace-*.tar.gz
 cd openpace-*
-./configure --disable-shared --prefix=/usr
+./configure --prefix=/usr
 make
 sudo make install
 cd ..
 # install OpenSC
-wget https://github.com/OpenSC/Nightly/blob/2019-01-21_2d684a18/opensc-0.19.0.tar.gz?raw=true -O opensc-0.19.0.tar.gz
+wget https://github.com/OpenSC/Nightly/blob/2019-06-03_3a192e2c/opensc-0.19.0.tar.gz?raw=true -O opensc-0.19.0.tar.gz
 tar xfvz opensc-*.tar.gz
 cd opensc-*
 ./configure --prefix=/usr --sysconfdir=/etc/opensc
