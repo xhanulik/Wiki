@@ -40,7 +40,7 @@ key words and concepts.
 
   For crypto cards, PKCS#15 adresses this need by defining some files that contain info on where to find keys, certificates, PINs, and other data. For example, there is a PrKDF (Private Key Directory File) that contains the EFs or ID of the private keys, what those keys can be used for, by which PINs they are protected and so on.
 
-  So a "PCKS#15 card" is nothing but any other card on which the right set of files has been added. In short: PKCS#15 allows you to describe where to find PINs, keys, certificates and data on a card, plus all the info that is needed to use them.
+  So a "PKCS#15 card" is nothing but any other card on which the right set of files has been added. In short: PKCS#15 allows you to describe where to find PINs, keys, certificates and data on a card, plus all the info that is needed to use them.
 
 ## A little PKCS#15 example
 
