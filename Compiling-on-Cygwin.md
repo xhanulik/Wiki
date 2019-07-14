@@ -30,7 +30,7 @@ but before exiting setup, also select the following extra packages:
 8. Category/Devel/libtool: Generic lib support script.
 9. Category/Devel/make: The GNU version of the 'make' utility.
 10. Category/Devel/pkg-config: Package compiling configuration utility.
-11. Category/Libs/libreadline7: GNU readline and history libraries.
+11. Category/Libs/libreadline-devel: GNU readline and history libraries.
 12. Category/Libs/zlib-devel: gzip de/compression library.
 13. Category/Net/openssl-devel: A general purpose cryptography toolkit...
 14. Category/System/procps-ng: System and process monitoring utils - such as pkill. [Optional]
