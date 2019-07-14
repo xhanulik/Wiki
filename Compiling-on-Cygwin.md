@@ -8,6 +8,8 @@ your current Cygwin installation, which can complicate the package dependencies.
 So these instructions are based on starting from a fresh Cygwin installation. Thus:
 1. Remove all versions of bash, gcc, peagent, git, etc.
 2. Clear PATH var of any ref to other make or gcc utils etc.
+3. Temporarily unset CYGWIN environment variable while building and installing. 
+   Currently having CYGWIN set causes make install to fail in the install-exec-hook stage.
 
 ### Install Cygwin base 
 1. Go to https://cygwin.com/install.html.
