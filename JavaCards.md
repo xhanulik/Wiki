@@ -1,10 +1,14 @@
-# JavaCards
-
 OpenSC (including initialization) works with JavaCards if you have a supported applet on the card.
 
-JavaCards can come in different flavors: empty (preferred), pre-loaded with an applet in EEPROM, with an applet in ROM, with a pre-loaded applet in a finalized state (applets can't be deleted or added). Some cards, for example older IBM JCOP  or older Cyberflex, come pre-loaded with a filesystem (PKCS#15) applet, which are of no interest in the broader context of JavaCards.
+JavaCards can come in different flavors: 
+ * Empty (preferred)
+ * Pre-loaded with an applet in EEPROM
+ * With an applet in ROM
+ * With a pre-loaded applet in a finalized state (applets can't be deleted or added). 
 
-The <i>core</i> of OpenSC is a bunch of card drivers, both read-only drivers as well as PKCS#15 initialization drivers. It is important to realize, that all of the initialization drivers target a single card  (usually proprietary)  which is closely tied to the card vendor. Open source is all about providing options and being tied to a card vendor (even if the card comes with good documentation) has the same advantages and disadvantages as some popular binary-only display drivers provided by the vendor: it is not possible to change the way the card behaves. Therefore it is admirable to have open source code both inside the card and on the host computer and use JavaCards.
+Some cards, for example older IBM JCOP  or older Cyberflex, come pre-loaded with a filesystem (PKCS#15) applet, which are of no interest in the broader context of JavaCards.
+
+The <i>core</i> of OpenSC is a bunch of card drivers, both read-only drivers as well as PKCS#15 initialization drivers. It is important to realize, that all of the initialization drivers target a single card (usually proprietary) which is closely tied to the card vendor.  Open source is all about providing options and being tied to a card vendor (even if the card comes with good documentation) has the same advantages and disadvantages as some popular binary-only display drivers provided by the vendor: it is not possible to change the way the card behaves. Therefore it is desirable to have open source code both inside the card and on the host computer and use JavaCards.
 
 The main difference between "native" cards and JavaCards is the requirement to install the proper application to the card before continuing with OpenSC, which has historically been a somewhat complicated procedure and what this page tried to demystify.
 
@@ -18,7 +22,7 @@ Things to consider when buying JavaCards, please have a look at [JavaCard Buyer'
 
 ## Loading the applet
 
-After you have fetched a suitable applet for your card (pay attention to JavaCard version and card peculiarities like Cyberflex cards), you need to load the software to the card. Here's how to do it.
+After you have fetched a suitable applet for your card (pay attention to JavaCard version and card peculiarities like Cyberflex cards), you'll need to load the software to the card.  Here's how to do it.
 
 ## Required software
 
@@ -29,6 +33,7 @@ A GlobalPlatform compliant software is needed for loading the applet to the card
 ## Interesting JavaCard applets
 
 Open source applets possibly usable (with some work) with OpenSC:
+ * [An excellent curated list of applets](https://github.com/EnigmaBridge/javacard-curated-list) 
  * CoolKey Applet (MuscleApplet fork): "http://directory.fedoraproject.org/wiki/CoolKey#CoolKey_Java_Applet":http://directory.fedoraproject.org/wiki/CoolKey#CoolKey_Java_Applet
  * JavaCardSign PKCS#15 applet: "http://sourceforge.net/projects/javacardsign/":http://sourceforge.net/projects/javacardsign/
  * [[OpenPGP|OpenPGP-card]] applet: "http://sourceforge.net/projects/jopenpgpcard/":http://sourceforge.net/projects/jopenpgpcard/ (and a somewhat matching javax.smartcardio GUI "http://sourceforge.net/projects/javaopenpgpcard/)":http://sourceforge.net/projects/javaopenpgpcard/)
@@ -40,11 +45,10 @@ Other interesting applets:
  * "Wiki in JavaCard":http://github.com/joelhockey/javacard
  * ".be eID emulation":http://code.google.com/p/eid-quick-key-toolset/source/browse/trunk/eid-quick-key-toolset/eid-applet/src/main/java/be/cosic/eidapplet/
  * "Web server in Java Card":http://www.citi.umich.edu/techreports/reports/citi-tr-99-3.pdf
+-- Note to author: Perhaps we should just remove the list here and point to the currated list?
 
 ## Resources
 
  * "State of JavaCards in 2006":http://www.cs.ru.nl/~erikpoll/papers/evaluationBasis.pdf
  * "JavaCard programming tutorial":https://www.msec.be/jan/JavaCardTutorial.pdf
  * https://github.com/EnigmaBridge/javacard-curated-list
-
-
