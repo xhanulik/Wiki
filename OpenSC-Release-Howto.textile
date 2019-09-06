@@ -4,49 +4,47 @@ Releasing OpenSC should be simple and streamlined, yet a predictable and easily 
 
 h2. Generic Principles
 
-Releases of OpenSC are done by a release manager (defined by having write access to Git blessed master and release manager account on opensc-project.org). Releases are regular and constructed by merging proposed and code-reviewed branches from developers into the staging branch. Additional review of the merged changes by release manager is highly encouraged. Testing of those branches should be done earlier by the means of [[NightlyBuilds|Automated-OpenSC-builds]]. At least one (or more, if needed) PreReleases (release candidates) MUST be done before the actual release. A RC is thus the merging of proposed branches + necessary build environment (NightlyBuilds) changes + NEWS file construction. After a RC has been published, no more merges to the staging branch SHOULD NOT happen, only release-critical single commits can be cherry-picked and a new RC created.
+At least one (or more, if needed) pre-releases must be done before the actual release. After a release candidate has been published, no more merges to the master branch should happen, only release-critical single commits can be cherry-picked and a new release candidate created. Normal development should continue when the final release is done.
 
 h2. Preparing Security Relevant Changes
 
  * "Request a CVE":https://cveform.mitre.org/ in case of security relevant fixes or changes.
  * Update the "security advisories":https://github.com/OpenSC/OpenSC/wiki/OpenSC-security-advisories
- * Mention CVE ID in the NEWS file
+ * Mention CVE ID in the _NEWS_ file
 
 h2. Release Preparations in Version Control
 
 Release (or RC) version must be changed in the following files:
- * configure.ac
- * NEWS (Markdown)
-Remove any -pre/-rc tags from version and commit the files to staging branch, from where the official binaries are built.
+ * _configure.ac_
+ * _NEWS_ (Markdown)
+Remove any _-pre_/_-rc_ tags from version and commit the files to staging branch, from where the official binaries are built.
 
-Optionally, discuss changes to NEWS by opening a "new issue":https://github.com/OpenSC/OpenSC/issues/new with your suggestions.
+Optionally, discuss changes to _NEWS_ by opening a "new issue":https://github.com/OpenSC/OpenSC/issues/new with your suggestions.
 
 h2. Build and Test Binaries
 
- * Wait around 10 minutes to allow build artifacts be placed into the "nightly builds:https://github.com/OpenSC/Nightly . All builds must succeed and must not generate more warnings than the previous build.
+ * Wait around 10 minutes to allow build artifacts be placed into the "nightly builds":https://github.com/OpenSC/Nightly. All builds must succeed and must not generate more warnings than the previous build.
  * Copy build artifacts selecting the correct branch using the hash of the release commit, e.g.:
  <pre><code>  git clone https://github.com/OpenSC/OpenSC --single-branch
   cd OpenSC
   BRANCH=`git log --max-count=1 --date=short --abbrev=8 --pretty=format:"%cd_%h"`
   wget https://github.com/OpenSC/Nightly/archive/${BRANCH}.zip
-  unzip ${BRANCH}.zip
- </code></pre>
+  unzip ${BRANCH}.zip </code></pre>
  * Do a separate smoke test for all installers and the tarball, "document your results in the Wiki":https://github.com/OpenSC/OpenSC/wiki/Smart-Card-Release-Testing.
  * If creating a final release, create an annotated tag instead of a lightweight tag:
  <pre><code>  git tag -a 0.20.0
-  git push
- </code></pre>
- * Create a "(draft) release":https://github.com/OpenSC/OpenSC/releases
- * For final releases, select the existing tag, e.g. <pre><code>0.20.0</pre></code>; for release candidates choose a new tag, e.g. 0.20.0-rc1, which Github will automatically create as lightweight tag.
+  git push </code></pre>
+ * Create a "new (draft) release":https://github.com/OpenSC/OpenSC/releases
+ * For final releases, select the existing tag, e.g. _0.20.0_; for release candidates choose a new tag, e.g. _0.20.0-rc1_, which Github will automatically create as lightweight tag.
  * Describe the release including all changes to NEWS (Markdown)
  * Upload the build artifacts to the new release
- * Check "This is a pre-release" if only creating a release candidate
+ * Check _This is a pre-release_ if only creating a release candidate
 
 h2. Announcement
 
- * Write announcement. Write short human readable version (600 bytes)
+ * Write announcement. Write short human readable version
   * Short overview of OpenSC
-  * Important and visible (breaking) changes in this release (not a copy of NEWS file)
+  * Important and visible (breaking) changes in this release (not a copy of _NEWS_ file)
   * URL-s for downloads
   * Pointers to full verbose information (list of commits, full changelog, closed bugs)
   * Plans for next release
