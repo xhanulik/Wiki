@@ -17,7 +17,7 @@ h2. Release Preparations in Version Control
 Release (or RC) version must be changed in the following files:
  * _configure.ac_
  * _NEWS_ (Markdown)
-Remove any _-pre_/_-rc_ tags from version and commit the files to staging branch, from where the official binaries are built.
+Remove any _-pre_ / _-rc_ tags from version and commit the files to staging branch, from where the official binaries are built.
 
 Optionally, discuss changes to _NEWS_ by opening a "new issue":https://github.com/OpenSC/OpenSC/issues/new with your suggestions.
 
