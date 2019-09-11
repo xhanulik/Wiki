@@ -43,7 +43,9 @@
 - :waning_crescent_moon: Few tests passed
 - :new_moon: Untested
 
-## OpenSC 0.19.0
+
+
+## OpenSC 0.20.0
 
 | Installer    | Windows    | macOS      |
 | ------------ | ---------- | ---------- |
@@ -106,6 +108,74 @@ The table below shows a list of all tested smart cards that were used:
 | iasecc            | Gemalto MultiApp IAS/ECC v1.0.1                                  |
 | myeid             | OsEID                                                            |
 | openpgp           | OpenPGP Applet  (JCardSim)                                       |
+
+
+
+## OpenSC 0.19.0
+
+| Installer    | Windows    | macOS      |
+| ------------ | ---------- | ---------- |
+| Installation | :full_moon: | :full_moon: |
+| Removal      | :full_moon: | :full_moon: |
+
+The table below shows a list of all supported card drivers (`opensc-tool --list-drivers`) that have been tested in this release:
+
+| Smart Card Driver    | PKCS#11        | Windows Minidriver | macOS Tokend   |
+| -------------------- | -------------- | -------------- | -------------- |
+| cardos               | :last_quarter_moon:     | :last_quarter_moon:     | :new_moon:     |
+| flex                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| cyberflex            | :new_moon:     | :new_moon:     | :new_moon:     |
+| gpk                  | :new_moon:     | :new_moon:     | :new_moon:     |
+| gemsafeV1            | :new_moon:     | :new_moon:     | :new_moon:     |
+| miocos               | :new_moon:     | :new_moon:     | :new_moon:     |
+| asepcos              | :new_moon:     | :new_moon:     | :new_moon:     |
+| starcos              | :new_moon:     | :new_moon:     | :new_moon:     |
+| tcos                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| jcop                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| oberthur             | :new_moon:     | :new_moon:     | :new_moon:     |
+| authentic            | :new_moon:     | :new_moon:     | :new_moon:     |
+| iasecc               | :last_quarter_moon:     | :new_moon:     | :new_moon:     |
+| belpic               | :new_moon:     | :new_moon:     | :new_moon:     |
+| incrypto34           | :new_moon:     | :new_moon:     | :new_moon:     |
+| acos5                | :new_moon:     | :new_moon:     | :new_moon:     |
+| akis                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| entersafe            | :new_moon:     | :new_moon:     | :new_moon:     |
+| epass2003            | :new_moon:     | :new_moon:     | :new_moon:     |
+| rutoken              | :new_moon:     | :new_moon:     | :new_moon:     |
+| rutoken_ecp          | :new_moon:     | :new_moon:     | :new_moon:     |
+| westcos              | :new_moon:     | :new_moon:     | :new_moon:     |
+| myeid                | :full_moon:    | :last_quarter_moon: | :new_moon:     |
+| sc-hsm               | :waning_gibbous_moon:     | :waning_gibbous_moon:     | :waning_gibbous_moon:     |
+| dnie                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| MaskTech             | :new_moon:     | :new_moon:     | :new_moon:     |
+| mcrd                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| setcos               | :new_moon:     | :new_moon:     | :new_moon:     |
+| muscle               | :new_moon:     | :new_moon:     | :new_moon:     |
+| atrust-acos          | :new_moon:     | :new_moon:     | :new_moon:     |
+| PIV-II               | :full_moon:    | :new_moon:     | :new_moon:     |
+| cac                  | :full_moon:    | :new_moon:     | :new_moon:     |
+| itacns               | :new_moon:     | :new_moon:     | :new_moon:     |
+| isoApplet            | :new_moon:     | :new_moon:     | :new_moon:     |
+| gids                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| openpgp              | :new_moon:     | :new_moon:     | :new_moon:     |
+| jpki                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| coolkey              | :full_moon:    | :new_moon:     | :new_moon:     |
+| npa                  | :new_moon:     | :new_moon:     | :new_moon:     |
+| default              | :new_moon:     | :new_moon:     | :new_moon:     |
+
+The table below shows a list of all tested smart cards that were used:
+
+| Smart Card Driver | Tested Smart Cards                                               |
+| ----------------- | ---------------------------------------------------------------- |
+| cardos            | CardOS 4.3B                                                      |
+| cardos            | Atos CardOS 5.3 cards with RSA                                   |
+| sc-hsm            | GoID 1.00                                                        |
+| iasecc            | Gemalto MultiApp IAS/ECC v1.0.1                                  |
+| myeid             | MyEID cards with PKCS#15-applet                                  |
+| PIV-II            | NIST Test PIV Cards 8 and 4                                      |
+| cac               | CAC Test Cards (Oberthur ID One, Gemalto GCX4)                   |
+| coolkey           | 534e SafeNet Java Card with Coolkey Applet                       |
+
 
 
 ## OpenSC 0.18.0
