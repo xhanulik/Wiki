@@ -1,7 +1,6 @@
 h1. Quick Start with OpenSC
 
-If you haven't already, please first take a look at our [[Overview|Overview]] page, the [[Operating Systems|Recent-test-results-for-various-smart-cards]] page and the [[Compiling and Installing on Unix flavors|Compiling-and-Installing-OpenSC-on-Unix-flavors]] page. 
-
+If you haven't already, please first take a look at our [[Overview|Overview]] page, the [[Operating Systems|Recent-test-results-for-various-smart-cards]] page and the [[Compiling and Installing on Unix flavors]] page. 
 
 h2. Before we start...
 
@@ -9,7 +8,7 @@ A word of warning: these experiments can destroy your card (e.g. if we have a bu
 
 h2. Install the required middleware
 
-Some older card readers (or standalone USB tokens) use a nonstandard wire format for communicating between the computer and the device. You will need to get the corresponding (often proprietary) software up and running first.  For USB tokens see the respective page on this Wiki (eg for [AladdinEtokenPro Aladdin EToken], [RainbowIkeyThree Rainbow IKey 3000]).  For card readers, you should get to the point where the LED turns on when you plug it into the USB socket.
+Some older card readers (or standalone USB tokens) use a nonstandard wire format for communicating between the computer and the device. You will need to get the corresponding (often proprietary) software up and running first.  For USB tokens see the respective page on this Wiki (e.g., [[Aladdin eToken PRO]], [[Rainbow IKey 3000]]).  For card readers, you should get to the point where the LED turns on when you plug it into the USB socket.
 
 h2. Install OpenSC
 
@@ -17,7 +16,7 @@ For Mac OS X, download and install SCA.
 
 For Windows, visit the build project.
 
-For Linux, either use your distribution's package manager or [CompilingInstalling install from source].
+For Linux, either use your distribution's package manager or see [[Compiling and Installing on Unix flavors]].
 
 h2. Test OpenSC
 
@@ -29,24 +28,20 @@ Nr.    Driver     Name
 1      openct     Aladdin eToken PRO
 2      openct     OpenCT reader (detached)
 3      openct     OpenCT reader (detached)
-4      openct     OpenCT reader (detached)
-</code></pre>
+4      openct     OpenCT reader (detached)</code></pre>
 
 You can see, openct claims five slots, but only two are used. This is done to support hotplugging, those slots can be filled later by additional readers you plugin via usb.
 
 Next test is to see if your card is found. Every card has a so called ATR ("Answer to reset"), a hex string used for identifying the card type.
 <pre><code>$ opensc-tool --reader 0 --atr
-3b:e2:00:ff:c1:10:31:fe:55:c8:02:9c
-</code></pre>
+3b:e2:00:ff:c1:10:31:fe:55:c8:02:9c</code></pre>
 
 Lets see if that card is supported by OpenSC. If so, we should know the name of the card:
 <pre><code>$ opensc-tool --reader 0 --name
-Cryptoflex 32K e-gate
-</code></pre>
+Cryptoflex 32K e-gate</code></pre>
 
 OpenSC has a small low level tool for exploring your smart card. This is useful if you have a new card and want to look at it, or check some details.
-<pre><code>$ opensc-explorer
-</code></pre>
+<pre><code>$ opensc-explorer</code></pre>
 
 However opensc-explorer only works with known cards and even then: some cards don't have then required functionality, for example no "ls" command.
 
@@ -65,8 +60,7 @@ Please enter Security Officer PIN:
 Please type again to verify: 
 Unblock Code for New User PIN (Optional - press return for no PIN).
 Please enter User unblocking PIN (PUK): 
-Please type again to verify: 
-</code></pre>
+Please type again to verify: </code></pre>
 
 Next step is to create a user and a pin. That pin is needed for using the keys we will create later.
 <pre><code>$ pkcs15-init --store-pin --auth-id 01 --label "Andreas Jellinghaus"
@@ -77,8 +71,7 @@ Unblock Code for New User PIN (Optional - press return for no PIN).
 Please enter User unblocking PIN (PUK): 
 Please type again to verify: 
 Security officer PIN required.
-Please enter Security officer PIN: 
-</code></pre>
+Please enter Security officer PIN: </code></pre>
 
 Now create a key. Both pins are needed for this.
 <pre><code>$ pkcs15-init --generate-key rsa/1024 --auth-id 01
@@ -87,8 +80,7 @@ Please enter Security officer PIN:
 User PIN required.
 Please enter User PIN: 
 Security officer PIN required.
-Please enter Security officer PIN: 
-</code></pre>
+Please enter Security officer PIN: </code></pre>
 
 You can list the keys on the token with
 <pre><code>$ pkcs15-tool --list-keys
@@ -101,24 +93,20 @@ Private RSA Key [Private Key]
         Native      : yes
         Path        : 3F005015
         Auth ID     : 01
-        ID          : 45
-</code></pre>
+        ID          : 45</code></pre>
 
 h2. Testing using OpenSSL
 
-If you followed thus far, your token is now fitted with a private RSA key that it generated itself and never divulged to anybody (not even the host computer).  Assuming "engine_pkcs11":https://github.com/OpenSC/libp11 is installed, we can use this key and openssl to create
-a self signed certificate, still without divulging the key; the necessary cryptographic computations will occur on-token.
+If you followed thus far, your token is now fitted with a private RSA key that it generated itself and never divulged to anybody (not even the host computer).  Assuming "engine_pkcs11":https://github.com/OpenSC/libp11 is installed, we can use this key and openssl to create a self signed certificate, still without divulging the key; the necessary cryptographic computations will occur on-token.
 
 Let's start the OpenSSL interactive shell and load the "engine_pkcs11":https://github.com/OpenSC/libp11 so that OpenSSL can ask the token to do the crypto (as opposed to doing it from your computer's CPU).
   * <b>Linux</b>: open a terminal and type this (skipping the prompts):
 <pre><code>$ openssl
-OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/engines/engine_pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre MODULE_PATH:opensc-pkcs11.so
-</code></pre>
+OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/engines/engine_pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre MODULE_PATH:opensc-pkcs11.so</code></pre>
 
   * <b>Mac OS X</b>: open a terminal and type this (skipping the prompts):
 <pre><code>$ /Library/OpenSC/bin/openssl
-OpenSSL> engine dynamic -pre SO_PATH:/Library/OpenSC/lib/engines/engine_pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre MODULE_PATH:/usr/lib/opensc-pkcs11.so
-</code></pre>
+OpenSSL> engine dynamic -pre SO_PATH:/Library/OpenSC/lib/engines/engine_pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre MODULE_PATH:/usr/lib/opensc-pkcs11.so</code></pre>
 
 In both cases, OpenSSL should respond with something like
 <pre><code>(dynamic) Dynamic engine loading support
@@ -127,8 +115,7 @@ In both cases, OpenSSL should respond with something like
 [Success]: LIST_ADD:1
 [Success]: LOAD
 Loaded: (pkcs11) pkcs11 engine
-OpenSSL>
-</code></pre>
+OpenSSL> </code></pre>
 
 It is important to enter the whole long command in one single command
 line. I usually copy&paste the command, to make sure I don't mistype
@@ -157,13 +144,11 @@ Please enter the following 'extra' attributes
 to be sent with your certificate request
 A challenge password []:
 An optional company name []:
-OpenSSL> 
-</code></pre>
+OpenSSL> </code></pre>
 
 This creates a signed certificate as file `cert.pem` (again, without divulging the private key).  You can verify that it is indeed self-signed (the private key is not required for this): exit OpenSSL and type
 <pre><code>$ openssl verify -CAfile cert.pem cert.pem
-cert.pem: OK
-</code></pre>
+cert.pem: OK</code></pre>
 
 If instead you remove the "-x509" flag in the `req` OpenSSL command, you get a certificate signing request. Send it to the CA, wait till you get it back, signed, and proceed.
 
@@ -178,14 +163,12 @@ Private RSA Key [Private Key]
         Native      : yes
         Path        : 3F005015
         Auth ID     : 01
-        ID          : 45
-</code></pre>
+        ID          : 45</code></pre>
 
 So lets store the certificate that we created:
 <pre><code>$ pkcs15-init --store-certificate cert.pem --auth-id 01 --id 45 --format pem 
 Security officer PIN required.
-Please enter Security officer PIN: 
-</code></pre>
+Please enter Security officer PIN: </code></pre>
 
 Now we are ready to go. If you want to add more certificates (e.g. the root certificate of the CA that signed your key, or some intermediate certificates in the chain to the root CA) simply put those into pem files, and add them to id 46, 47 and so on.  You don't need the private key for these obviously.
 
