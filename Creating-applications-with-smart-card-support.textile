@@ -7,7 +7,9 @@ h2. Platform crypto interfaces
 
 h3. PKCS#11
 
-PKCS#11 is the only universal, cross-platform cryptography interface, defined by RSA Laboratories. OpenSC and almost all hardware cryptography device vendors (smart cards, HSM-s) provide one with their hardware. PKCS#11 is the most universal and flexible API, but it also has a major drawback: applications need to be manually configured to use a specific PKCS#11 module. Choose PKCS#11 as your primary interface if you are writing a specialized crypto application or universality and portability are very important to you. PKCS#11 only provides cryptographic primitives, it does not provide X509 and trust management features. OpenSC provides a PKCS#11 module which should be usable by any software claiming PKCS#11 support.
+PKCS#11 is a cross-platform cryptographic interface defined by RSA Laboratories. In practice PKCS#11 is the most universal and flexible API. OpenSC and almost all hardware cryptography device vendors (smart cards, HSM-s) provide a PKCS#11 interface with their hardware. Choose PKCS#11 as your primary interface if you are writing a specialized crypto application or universality and portability are important to you. OpenSC provides a PKCS#11 module which should be usable by any software offering PKCS#11 support.
+
+PKCS#11 also has a drawbacks. First, applications need to be manually configured to use a specific PKCS#11 module. Second, PKCS#11 only provides cryptographic primitives, it does not provide X509 and trust management features.
 
 h4. Tools and libraries
 
