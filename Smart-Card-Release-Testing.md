@@ -79,14 +79,14 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | rutoken_ecp          | :new_moon:     | :new_moon:     | :new_moon:     |
 | westcos              | :new_moon:     | :new_moon:     | :new_moon:     |
 | myeid                | :waning_crescent_moon:     | :new_moon:     | :new_moon:     |
-| sc-hsm               | :new_moon:     | :new_moon:     | :new_moon:     |
+| sc-hsm               | :last_quarter_moon:     | :last_quarter_moon:     | :new_moon:     |
 | dnie                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | MaskTech             | :new_moon:     | :new_moon:     | :new_moon:     |
 | mcrd                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | setcos               | :new_moon:     | :new_moon:     | :new_moon:     |
 | muscle               | :new_moon:     | :new_moon:     | :new_moon:     |
 | atrust-acos          | :new_moon:     | :new_moon:     | :new_moon:     |
-| PIV-II               | :waning_crescent_moon:     | :new_moon:     | :new_moon:     |
+| PIV-II               | :last_quarter_moon:     | :last_quarter_moon:     | :new_moon:     |
 | cac                  | :waning_crescent_moon:     | :new_moon:     | :new_moon:     |
 | itacns               | :new_moon:     | :new_moon:     | :new_moon:     |
 | isoApplet            | :waning_crescent_moon:     | :new_moon:     | :new_moon:     |
@@ -101,13 +101,14 @@ The table below shows a list of all tested smart cards that were used:
 
 | Smart Card Driver | Tested Smart Cards                                               |
 | ----------------- | ---------------------------------------------------------------- |
-| PIV-II            | PivApplet (JCardSim)                                             |
+| PIV-II            | PivApplet (JCardSim), YubiKey 5 Nano                             |
 | cac               | CAC Test Cards (Oberthur ID One, Gemalto GCX4), virt_CACard      |
 | coolkey           | 534e SafeNet Java Card with Coolkey Applet                       |
 | gids              | GIDS Applet  (JCardSim)                                          |
 | iasecc            | Gemalto MultiApp IAS/ECC v1.0.1                                  |
 | myeid             | OsEID                                                            |
 | openpgp           | OpenPGP Applet  (JCardSim)                                       |
+| sc-hsm            | GoID 1.01                                                        |
 
 
 
