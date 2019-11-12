@@ -64,7 +64,7 @@ com.licel.jcardsim.card.ATR=3B80800101
 8. Run jCardSim with IsoApplet package:
 
 ```
-javac -classpath jcardsim-3.0.4-SNAPSHOT.jar;IsoApplet\src com.licel.jcardsim.remote.BixVReaderCard jcardsim_isoapplet.cfg
+java -classpath jcardsim-3.0.4-SNAPSHOT.jar;IsoApplet\src com.licel.jcardsim.remote.BixVReaderCard jcardsim_isoapplet.cfg
 ```
 
 9. Create IsoApplet from the install package:
