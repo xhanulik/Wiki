@@ -7,7 +7,7 @@ NIST Special Publication 800-73-3 (See below) and related documents define PIV. 
 The non-administrative commands are standardized, and so any vendor's card with the PIV application
 should inter operate with any vendor's client software. The "pkcs11-tool":https://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/tools/tools.html#pkcs11-tool can be used to read the objects on the card and to change the user PIN.
 
-The [[piv-tool|PivTool]] is provided to allow for some card administration in testing, such as generating a key pair, and loading a certificate or other object on the card. You may need more information from your card vendor.       
+The "piv-tool":https://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/tools/tools.html#piv-tool is provided to allow for some card administration in testing, such as generating a key pair, and loading a certificate or other object on the card. You may need more information from your card vendor.       
 
 The PIV is not a PKCS#15 type card, but rather an object based application. OpenSC provides a PKCS#15 emulator to access the certificates and keys, along with the data objects. Thus for example the "X.509 Certificate for PIV Authentication" can be used with PKCS#11 for login or web access.
 
