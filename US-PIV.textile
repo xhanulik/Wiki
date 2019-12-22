@@ -5,14 +5,14 @@ The "National Institute of Standards and Technology":http://www.nist.gov/, U.S. 
 NIST Special Publication 800-73-3 (See below) and related documents define PIV. Part 2 of 800-73-3 defines the ADPU commands accepted by the PIV application on the card. The standard does not define all the commands needed to administer a card, leaving this up to the card vendors and card administration software vendors.
 
 The non-administrative commands are standardized, and so any vendor's card with the PIV application
-should inter operate with any vendor's client software. The "pkcs11-tool":http://www.opensc-project.org/doc/opensc/html/tools.html#pkcs11-tool can be used to read the objects on the card and to change the user PIN.
+should inter operate with any vendor's client software. The "pkcs11-tool":https://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/tools/tools.html#pkcs11-tool can be used to read the objects on the card and to change the user PIN.
 
 The [[piv-tool|PivTool]] is provided to allow for some card administration in testing, such as generating a key pair, and loading a certificate or other object on the card. You may need more information from your card vendor.       
 
 The PIV is not a PKCS#15 type card, but rather an object based application. OpenSC provides a PKCS#15 emulator to access the certificates and keys, along with the data objects. Thus for example the "X.509 Certificate for PIV Authentication" can be used with PKCS#11 for login or web access.
 
 
-OpenSC 0.11.1 did not search arbitrary cards for the PIV application, and set the max_send_size and max_recv_size to low for PIV cards. With 0.11.1 you needed to add the ATR of specific vendor's cards to the opensc.conf. The ATR of your card can be read using the "opensc-tool":http://www.opensc-project.org/doc/opensc/html/tools.html#opensc-tool.
+OpenSC 0.11.1 did not search arbitrary cards for the PIV application, and set the max_send_size and max_recv_size to low for PIV cards. With 0.11.1 you needed to add the ATR of specific vendor's cards to the opensc.conf. The ATR of your card can be read using the "opensc-tool":https://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/tools/tools.html#opensc-tool
 
 OpenSC 0.11.2 added support for certificates that are gzip'ed. But only 1024 bit RSA keys are supported.
 
