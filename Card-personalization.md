@@ -227,7 +227,7 @@ pkcs15-init -S <keyfile> {-f <keyformat>} -a <AuthID> --insecure
  * Specify the label (name) of the  with ``-l``, or accept the default label if you don't do so.
  * Depending on your card and profile option, you will be prompted to provide your SO PIN and/or PIN; if you don't want to be prompted, add them to the command line with ``--so-pin <SOPIN>`` and/or ``--pin <PIN>``.
 
-h3. Add a private key + certificate(s) (in a pkcs12 file)
+### Add a private key + certificate(s) (in a pkcs12 file)
 ```
 pkcs15-init -S <pkcs12file> -f PKCS12 -a <AuthID> {--insecure} {-i <ID>}
    {-u <keyusage>} {--passphrase <password>}
