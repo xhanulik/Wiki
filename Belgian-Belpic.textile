@@ -1,11 +1,9 @@
 h1. Belgian Belpic
 
 Belgium has released an "official software":http://www.belgium.be/zip/eid_datacapture_fr.html for their eID card.
-That software is a modified version of OpenSC. The source code for this software has been
-"published":http://www.belgium.be/zip/middleware_source_code_fr.html as well.
+That software is a modified version of OpenSC. The source code for this software has been "published":http://www.belgium.be/zip/middleware_source_code_fr.html as well.
 
-OpenSC 0.10.* will include support for the Belgian eID card, except for legally binding signatures (with the
-so-called Signature key) as this requires a GUI, which is not yet available/implemented.
+OpenSC 0.10.* will include support for the Belgian eID card, except for legally binding signatures (with the so-called Signature key) as this requires a GUI, which is not yet available/implemented.
 Till that new release please use the "belpic" software available from the belgian state.
 
 For more info:
@@ -15,4 +13,4 @@ For more info:
   * "Belgium Identity Card Developer's Kit":http://www.uvcw.be/articles/3,90,39,39,1398.htm
 
 Thanks to Belgium for choosing OpenSC as basis for their software and donating the full source code back to use under LGPL license.
-Thanks to Zetes for their support of OpenSC.
+Thanks to Zetes for their support of OpenSC
