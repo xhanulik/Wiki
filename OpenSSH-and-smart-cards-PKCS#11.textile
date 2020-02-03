@@ -3,7 +3,7 @@ h1. OpenSSH and smart cards / PKCS#11
 "OpenSSH":http://www.openssh.org/ can be used with client keys on a smart card. There are three different methods.
 
 
-h2. Best solution since v54p1
+h2. Best solution since v5.4p1
 
 Portable OpenSSH v5.4p1 added direct support for [[PKCS#11|PKCS11-Module]] modules.
 
