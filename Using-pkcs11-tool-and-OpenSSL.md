@@ -14,7 +14,7 @@ These commands expect they are run from the `src/tools` directory of the local b
 
  * Get the certificate from the card:
  
-       ./src//tools/pkcs11-tool -r -p $PIN --id $SIGN_KEY --type cert --module ./src/pkcs11/.libs/opensc-pkcs11.so > $SIGN_KEY.cert
+       ./src/tools/pkcs11-tool -r -p $PIN --id $SIGN_KEY --type cert --module ./src/pkcs11/.libs/opensc-pkcs11.so > $SIGN_KEY.cert
 
  * Convert it to the public key (PEM format)
  
@@ -93,6 +93,18 @@ Note that here we use the original data file and we leave OpenSSL to hash it for
  * Verify
  
        openssl rsautl -verify -inkey $SIGN_KEY.pub -in data_pad.sig -pubin -raw
+
+## EdDSA (WIP)
+
+The EdDSA keys were introduced in PKCS #11 3.0 in ~2020 and are not widely supported yet. The only card out there is GNUK (OpenPGP card) and I will demonstrate tests on it:
+
+ * Sign data using a key on card:
+
+      ./src/tools/pkcs11-tool --sign -m EDDSA --id $SIGN_KEY --slot 1 --pin $PIN --input-file data --output-file data.sig  --module ./src/pkcs11/.libs/opensc-pkcs11.so
+
+ * Verify data using OpenSC (the -rawin option is still only in openssl master :( ):
+
+      openssl pkeyutl -verify -inkey eddsa.pem -in data -sigfile data.sig -pubin -rawin
 
 
 # Encrypt/Decrypt using private key/certificate
