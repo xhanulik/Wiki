@@ -70,7 +70,7 @@ If you can supplement your bug report with an image or debug log that helps othe
 
 #### Submit
 
-Check the "Preview" of your bug report if it shows the expected formatting. You may paste a short (!) log into a pre-formatted block by both, prepending and appending, a single line with three subsequent backticks (`````````) to your output. Click "Submit new issue" to submit your bug report to the issue tracker.
+Check the "Preview" of your bug report if it shows the expected formatting. You may paste a short (!) log into a pre-formatted block by both, prepending and appending, three subsequent backticks (`` ``` ``) to your output. Click "Submit new issue" to submit your bug report to the issue tracker.
 
 ## Following up
 
