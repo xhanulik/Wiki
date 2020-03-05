@@ -2,6 +2,8 @@
 
 The first step in in writing a bug report is to identify exactly what the problem is. Saying "something is wrong" is not helpful; saying exactly what is wrong, and how to reproduce it, is. If you can tell exactly what is wrong, and reliably reproduce an example of the problem, you've isolated a bug.
 
+On the command line, you may test the basic functionality of the PKCS#11 module by running `pkcs11-tool --test --login`. The Minidriver used on Windows can be tested with `certutil -scinfo`
+
 ## Check if you are using the latest version
 
 Bug reports should be based on [the latest development build](https://github.com/OpenSC/Nightly). If you are using a released version or an out-of-date build, please update to the latest revision and check to see whether or not the bug still exists.
@@ -36,7 +38,7 @@ After submitting the issue, it is possible to improve the title.
 
 #### Component
 
-The first question is which component your bug applies to. Is it one of the command line tools, is it the PKCS#11 module, is it the Minidriver used on Windows or the CryptoTokenKit driver on macOS?
+The first question is which component your bug applies to. Is it one of the command line tools, is it the PKCS#11 module, is it the Minidriver used on Windows or the CryptoTokenKit driver on macOS? Which smart card was used (run `opensc-tool --name` on the command line)?
 
 #### Steps to reproduce bug
 
@@ -64,11 +66,11 @@ Name the operating system and version you are using, such as "Windows 8.1", or "
 
 #### File attachments
 
-If you can supplement your bug report with an image, debug log, or crash dump that helps others reproduce the issue, attach these files.
+If you can supplement your bug report with an image or debug log that helps others reproduce the issue, attach these files.
 
 #### Submit
 
-Check the "Preview" of your bug report if it shows the expected formatting. Click "Submit new issue" to submit your bug report to the issue tracker.
+Check the "Preview" of your bug report if it shows the expected formatting. You may paste a short (!) log into a pre-formatted block by both, prepending and appending, a single line with three subsequent backticks (`````````) to your output. Click "Submit new issue" to submit your bug report to the issue tracker.
 
 ## Following up
 
