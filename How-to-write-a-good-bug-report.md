@@ -16,7 +16,7 @@ If you have multiple issues, it is better to file them separately so they can be
 
 ## Create a new issue
 
-Sign into github.com and go to the [issue tracker](https://github.com/OpenSC/OpenSC/issues). Click on "Create a new issue".
+[Sign into github.com](https://github.com/login) and go to the [issue tracker](https://github.com/OpenSC/OpenSC/issues). Click on *[Create a new issue](https://github.com/OpenSC/OpenSC/issues/new)*.
 
 There are a number of initial questions that are used for filing a bug report - answers to these allow progress.
 
