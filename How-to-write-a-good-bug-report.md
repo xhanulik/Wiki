@@ -66,11 +66,16 @@ Name the operating system and version you are using, such as "Windows 8.1", or "
 
 #### File attachments
 
-If you can supplement your bug report with an image or debug log that helps others reproduce the issue, attach these files.
+If you can supplement your bug report with an image or debug log that helps others reproduce the issue, attach these files. You may paste a short (!) log into a pre-formatted block by both, prepending and appending, three backticks to your output:
+````
+```
+Example of Markdown syntax for debug output with triple back ticks
+```
+````
 
 #### Submit
 
-Check the "Preview" of your bug report if it shows the expected formatting. You may paste a short (!) log into a pre-formatted block by both, prepending and appending, three subsequent backticks (`` ``` ``) to your output. Click "Submit new issue" to submit your bug report to the issue tracker.
+Check the "Preview" of your bug report if it shows the expected formatting. Click "Submit new issue" to submit your bug report to the issue tracker.
 
 ## Following up
 
