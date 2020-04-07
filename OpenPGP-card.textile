@@ -181,6 +181,23 @@ bc. pkcs15-tool --read-public-key <id>
 
 whereas <code><id></code> is the key reference (01 is signature key, 02 is the encryption key and 03 is the authentication key).
 
+h3. 9. Store data objects
+
+OpenPGP Cards can store abitrary data in up to four DOs for private use. The space is varying by cards and it is meant for special key material or other small data objects only. One example how to use this is
+
+<pre><code>$ pkcs15-init --store-data keyfile
+Using reader with a card: Nitrokey Nitrokey Storage (0000000000000) 00 00
+User PIN [User PIN] required.
+Please enter User PIN [User PIN]:
+$ pkcs11-tool -l --pin 123456 --list-objects
+Using slot 0 with a present token (0x0)
+Data object 2415456896
+  label:          'PrivDO1'
+  application:    'PrivDO1'
+  app_id:         <empty>
+  flags:           modifiable private
+</code></pre>
+
 h2. OpenSC driver details
 
 OpenPGP cards only implement a small subset of the ISO/IEC 7816-4/-8 standard. Most importantly, they do not use a file system to store the application specific data. Instead the data stored for the application is accessible via Data Objects (DO) only.
