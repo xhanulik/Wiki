@@ -52,7 +52,7 @@ Linux</td><td><code>/usr/lib/</code>
 </td> </tr>
 </table>
 
-Click on <code>opensc‑pkcs11-onepin.dll</code> (Windows) or <code>opensc‑pkcs11-onepin.so</code> (Linux, macOS). Click *Open*.
+Click on <code>opensc‑pkcs11-onepin.dll</code> (Windows) or <code>onepin-opensc‑pkcs11.so</code> (Linux, macOS). Click *Open*.
 
 !https://github.com/n8felton/OpenSC/wiki/attachments/wiki/MozillaSteps/FirefoxESR52_4.png!
 
