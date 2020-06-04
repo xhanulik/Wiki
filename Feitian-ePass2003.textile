@@ -24,8 +24,9 @@ Buy samples: "http://ftsafe.com/onlinestore/index":http://ftsafe.com/onlinestore
 h1. FAQ
 
 For users which get the error "Failed to erase card: Security status not satisfied" while erasing card, please download fix tool from below. After running fix-tool as root, please do remove and re-plug the token/card.
-The tool which addresses the issue "is available here":http://download.ftsafe.com/files/ePass/Fix_Tool.tar.gz .
-
+The tool which addresses the issue below:
+With x86 and x64: "Download fix_tool":http://download.ftsafe.com/files/ePass/Fix_Tool.tar.gz
+With armhf arch:  "Download fix_tool":http://download.ftsafe.com/files/reader/SDK/Fix_Tool_20200604.zip
 
 Thanks
 
