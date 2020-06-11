@@ -4,10 +4,10 @@ Contributions to OpenSC are welcome! This page explains how to contribute to Ope
 
 h2. Development process
 
- * OpenSC development is coordinated via the list opensc-devel@lists.sourceforge.net. See "mailing list":Mailing-lists. Start helping the community and reviewing [report:10 support tickets]. Patches fixing [/newticket new] or [report:1 existing bugs] may be attached to the ticket or sent to the "opensc-devel mailing list":Mailing-lists.
+ * OpenSC development is coordinated via the list opensc-devel@lists.sourceforge.net. See [[Mailing lists|Mailing-lists]]. Start helping the community by reviewing "Github issues":https://github.com/OpenSC/OpenSC/issues . Patches fixing new or existing issues may be submitted as "Github Pull Requests":https://github.com/OpenSC/OpenSC/pulls or sent to the [[opensc-devel mailing list|Mailing-lists]].
  * Contribution should comply with coding guidelines. A minimal <b>[[Development Policy|Development-Policy]]</b> exists.
- * To develop OpenSC, you may use github.
  * [[DRAFT Howto add/support a new card|Adding-a-new-card-driver]]
+ * New features needs to be tested. At worst transcript of `pkcs11-tool --test` with your card should be attached to Pull Requests. Even better would be implementation of unit tests systematically testing interoduced code.
 
 h2. Test Tools
  * "Minidriver":https://github.com/OpenSC/OpenSC/issues/426#issuecomment-100978020 
@@ -31,60 +31,37 @@ cd OpenSC
 
 h2. Pull Requests
 
-The github pull requests (PR) to "OpenSC/OpenSC":https://github.com/OpenSC/OpenSC/pulls are/can-be checked automatically for building on Ubuntu and Vista. At the moment this feature is installed to help the contributors to reveal the compilation errors on the platforms that they do not used to manage (mostly Windows).
+The github pull requests (PR) to "OpenSC/OpenSC":https://github.com/OpenSC/OpenSC/pulls are/can-be checked automatically for building on Ubuntu Windows and OSX. At the moment this feature is installed to help the contributors to reveal the compilation errors on the platforms that they do not used to manage (mostly Windows).
 
-Some restrictions in permissions to run the build on the PR's merged repository are due to the implementation of jenkins plugin "Github pull request builder":https://wiki.jenkins-ci.org/display/JENKINS/Github+pull+request+builder+plugin:
-* PRs from the github OpenSC organization members are built automatically, these members are 'admins';
-* PRs from the users present in the CI internal 'whitelist' are built automatically;
-* for the PRs from the other contributors jenkins CI adds the PR comment "Can one of the admins verify this patch?" to attract the attention of 'admins';
-* using the codified comments to PR, 'admins' can add user to the 'whitelist' or (re)run the test;
+The Travis CI runs basic tests on few emulated cards (PIV, IsoApplet, OpenPGP, GIDS, OsEID) to make sure your changes did not break basic functionality of them. Adding more tests is always welcomed.
 
-Codified messages:
-* "*ok to test*" -- authorization to run the test on merged repository;
-* "*add to whitelist*" -- add user to whitelist;
-
-h3. Examples
-
-"PR-#97":https://github.com/OpenSC/OpenSC/pull/97:
-* pull request fails the build of merged repository on windows-32;
-* user 'mtausig' is added by 'admin' to internal CI 'whitelist', so that, the next PRs or updates of existing PRs from 'mtausig' will be built automatically.
-
-"PR-#102":https://github.com/OpenSC/OpenSC/pull/102:
-* successful built of the merged repository.
-
-h2. Helper tools
-
- * To test/debug special hardware (smartcard/token), please open an account on OpenSC development server (information coming soon). The development server offers nearly all supported hardware, so you don't have to buy it. "Donation of free hardware":Donation-of-free-Hardware is also possible.
- * The OpenSC staging branch is also available to beta testers as binary packages (information coming soon). Releasing beta software to a large audience is part of the quality process.
- * The OpenSC staging branch is installed daily on test servers and go through a series of automatic regressions tests (information coming soon). Some vendors also offer free hardware for testin purpose.
 
 h2. The Team
 
-Current developers/maintainers with activity in Github, in alphabetical order:
- * Emanuele Pucciarelli ("Github":https://github.com/puccia/OpenSC)
+Current developers/maintainers with recent activity in Github, in alphabetical order:
+ * Alexander Paetzelt ("Github":https://github.com/alex-nitrokey)
+ * Alexandre Gonzalo ("Github":https://github.com/AlexandreGonzalo)
+ * Doug Engert ("Github":https://github.com/dengert)
  * Feitian team ("Github":https://github.com/entersafe)
- * Jean-Pierre Szikora ("Github":https://github.com/szikora/OpenSC)
- * Juan Antonio Martinez ("Github":https://github.com/jonsito/OpenSC)
- * Ludovic Rousseau ("Github":https://github.com/LudovicRousseau/OpenSC)
- * Martin Paljak ("Github":https://github.com/martinpaljak/OpenSC)
- * Pace Willisson ("Github":https://github.com/pacew/OpenSC)
- * Peter Marschall ("Github":https://github.com/marschap/OpenSC)
- * Viktor Tarasov ("Github":https://github.com/viktorTarasov/OpenSC)
+ * Frank Morgner ("Github":https://github.com/frankmorgner)
+ * Hannu Honkanen ("Github":https://github.com/hhonkanen)
+ * Jakub Jelen ("Github":https://github.com/Jakuje)
+ * Jean-Pierre Szikora ("Github":https://github.com/szikora)
+ * Juan Antonio Martinez ("Github":https://github.com/jonsito)
+ * Ludovic Rousseau ("Github":https://github.com/LudovicRousseau)
+ * Martin Paljak ("Github":https://github.com/martinpaljak)
+ * Nuno Goncalves ("Github":https://github.com/nunojpg)
+ * Pace Willisson ("Github":https://github.com/pacew)
+ * Peter Marschall ("Github":https://github.com/marschap)
+ * Raul Metsma ("Github":https://github.com/metsma)
+ * Viktor Tarasov ("Github":https://github.com/viktorTarasov)
+ * Vincent LE TOUX ("Github":https://github.com/vletoux)
+ * and more
 
-Developers/maintainers with established SVN write access are, in alphabetical order:
- * Aleksey Samsonov (svn: s)
- * Alon Bar-Lev (svn: alonbl)
- * Andre Zepezauer (svn: andre)
- * Andreas Jellinghaus (svn: aj)
- * Douglas E. Engert (svn: dengert)
- * François Leblanc (svn: flc)
- * João Poupino (svn: joao)
- * Peter Koch (svn: pk)
- * Wolfgang Glas (svn: wolfgang.glas)
- 
 
-The Emeritus of the OpenSC developer team as well as project chronology is listed on "History-of-the-OpenSC-Project":History-of-the-OpenSC-Project.<br />
-List of all people who have sent patches to OpenSC is available under <b>"AuthorsAndCredits":OpenSC-Credits</b>.
+Developers/maintainers with established GIT write access can be found in [[OpenSC organization page|https://github.com/orgs/OpenSC/people]].
+
+The Emeritus of the OpenSC developer team as well as project chronology is listed on [[History-of-the-OpenSC-Project"|History-of-the-OpenSC-Project]]. List of all people who have sent patches to OpenSC is available on [[Github|https://github.com/OpenSC/OpenSC/graphs/contributors]].
 
 h2. All links
 
