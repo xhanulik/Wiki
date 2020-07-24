@@ -21,7 +21,3 @@ h2. References
  * General "guidelines":http://www.agid.gov.it/sites/default/files/documentazione_trasparenza/lineeguidacnsv3.0.pdf (in Italian)
 
 "CIE specs":http://www.servizidemografici.interno.it/sitoCNSD/documentazioneRicerca.do?metodo=homePage&servizio=documentazione&codiceFunzione=DO: (leave the search box empty and hit "Inizia la ricerca" to get a full listing of the documents)]:
- * "Physical features":http://www.servizidemografici.interno.it/sitoCNSD/ricercaAllegatiFunzione.do?servizio=allegati&metodo=contenutoAllegato&ALLEGATO_ID_ALLEGATO=345&ALL_NO_FI_AL=CIE_inglese.pdf (in English)
- * "Filesystem layout":http://www.servizidemografici.interno.it/sitoCNSD/documentazioneRicerca.do?metodo=contenutoDocumento&servizio=documentazione&ID_DOCUMENTO=1043 (uncensored, in English)
-
-
