@@ -13,5 +13,5 @@ The filesystem layout is flexible. A lot of different administrations issue CNS 
 All CNS/CIE cards carry one X.509 certificate with its public and private keys, mostly used for on-line authentication via SSL. Encryption, decryption, signature with this certificate is the basic functionality currently supported by the `itacns` driver.
 
 h2. References
-
+"CNS specs":https://www.agid.gov.it/sites/default/files/repository_files/documentazione_trasparenza/cns_functional_specification_1.1.6_02042011.pdf
 "CIE specs":https://developers.italia.it/en/cie/
