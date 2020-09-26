@@ -208,14 +208,12 @@ git clone https://github.com/arekinath/jcardsim.git
 
 ```
 git clone https://github.com/martinpaljak/oracle_javacard_sdks.git
-export JC_CLASSIC_HOME=$PWD/oracle_javacard_sdks/jc304_kit
+export JC_CLASSIC_HOME=$PWD/oracle_javacard_sdks/jc305u3_kit
 ```
 
-5. Build `jcardsim-3.0.4-SNAPSHOT.jar` as described [here](https://jcardsim.org/docs/getting-source-compiling):
+5. Build `jcardsim-3.0.5-SNAPSHOT.jar` as described [here](https://jcardsim.org/docs/getting-source-compiling):
 
 ```
-git clone https://github.com/martinpaljak/oracle_javacard_sdks.git
-export JC_CLASSIC_HOME=$PWD/oracle_javacard_sdks/jc304_kit
 git clone https://github.com/arekinath/jcardsim.git
 cd jcardsim
 mvn initialize && mvn clean install
@@ -227,10 +225,17 @@ mvn initialize && mvn clean install
 
 For actually simulating the Applets, the steps are almost identical as described in the sections for Windows above ([IsoApplet](#simulating-isoapplet), [OpenPGP](#simulating-openpgp), [PIV](#simulating-piv), [GIDS](#simulating-gids)) with the following modifications:
 
-- Make sure to use to use `jcardsim-3.0.4-SNAPSHOT.jar` built for vpcd
+- Make sure to use to use `jcardsim-3.0.5-SNAPSHOT.jar` built for vpcd
 - Add the following lines to your jCardSim configuration file (`jcardsim_*.cfg`):
 
 ```
 com.licel.jcardsim.vsmartcard.host=localhost
 com.licel.jcardsim.vsmartcard.port=35963
 ```
+
+- When running jcardsim, use `VSmartCard`, e.g.
+
+```
+java -classpath 'jcardsim-3.0.5-SNAPSHOT.jar:IsoApplet/src' com.licel.jcardsim.remote.VSmartCard jcardsim_isoapplet.cfg
+```
+
