@@ -33,7 +33,7 @@ h2. Build and Test Binaries
  * Do a separate smoke test for all installers and the tarball, "document your results in the Wiki":https://github.com/OpenSC/OpenSC/wiki/Smart-Card-Release-Testing.
  * If creating a final release, create an annotated tag instead of a lightweight tag:
  <pre><code>  git tag -a 0.20.0
-  git push </code></pre>
+  git push origin 0.20.0</code></pre>
  * Create a "new (draft) release":https://github.com/OpenSC/OpenSC/releases
  * For final releases, select the existing tag, e.g. _0.20.0_; for release candidates choose a new tag, e.g. _0.20.0-rc1_, which Github will automatically create as lightweight tag.
  * Describe the release including all changes to NEWS (Markdown)
