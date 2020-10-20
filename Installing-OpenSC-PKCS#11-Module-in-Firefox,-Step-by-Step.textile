@@ -48,6 +48,9 @@ Windows 64 Bit with Firefox 32 Bit</td><td><code>C:\Program Files (x86)\OpenSC P
 macOS</td><td><code>/Library/OpenSC/lib/</code>
 </td> </tr>
 <tr> <td>
+macOS (installation with brew)</td><td><code>/usr/local/Cellar/opensc/[VERSION]/lib/pkcs11/</code>
+</td> </tr>
+<tr> <td>
 Linux</td><td><code>/usr/lib/</code>
 </td> </tr>
 </table>
