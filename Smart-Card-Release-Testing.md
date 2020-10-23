@@ -57,7 +57,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 
 | Smart Card Driver    | PKCS#11        | Windows Minidriver | macOS Tokend   |
 | -------------------- | -------------- | -------------- | -------------- |
-| cardos               | :new_moon:     | :new_moon:     | :new_moon:     |
+| cardos               | :waning_gibbous_moon:     | :new_moon:     | :new_moon:     |
 | flex                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | cyberflex            | :new_moon:     | :new_moon:     | :new_moon:     |
 | gpk                  | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -81,7 +81,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | atrust-acos          | :new_moon:     | :new_moon:     | :new_moon:     |
 | westcos              | :new_moon:     | :new_moon:     | :new_moon:     |
 | esteid2018           | :new_moon:     | :new_moon:     | :new_moon:     |
-| idprime              | :new_moon:     | :new_moon:     | :new_moon:     |
+| idprime              | :waning_gibbous_moon:     | :new_moon:     | :new_moon:     |
 | edo                  | :new_moon:     | :new_moon:     | :new_moon:     |
 | coolkey              | :waning_crescent_moon:     | :new_moon:     | :new_moon:     |
 | muscle               | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -96,20 +96,22 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | openpgp              | :waning_crescent_moon:     | :new_moon:     | :new_moon:     |
 | jpki                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | npa                  | :new_moon:     | :new_moon:     | :new_moon:     |
-| cac1                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| cac1                 | :waning_gibbous_moon:     | :new_moon:     | :new_moon:     |
 | default              | :new_moon:     | :new_moon:     | :new_moon:     |
 
 The table below shows a list of all tested smart cards that were used:
 
 | Smart Card Driver | Tested Smart Cards                                               |
 | ----------------- | ---------------------------------------------------------------- |
-| PIV-II            | PivApplet (JCardSim), YubiKey 5 Nano                             |
+| PIV-II            | PivApplet (JCardSim), YubiKey 5 Nano, NIST Test cards            |
 | cac               | CAC Test Cards (Oberthur ID One, Gemalto GCX4), virt_CACard      |
 | coolkey           | 534e SafeNet Java Card with Coolkey Applet                       |
 | gids              | GIDS Applet  (JCardSim)                                          |
-| iasecc            | Cosmo v8
+| iasecc            | Cosmo v8                                                         |
 | myeid             | OsEID                                                            |
 | openpgp           | OpenPGP Applet  (JCardSim)                                       |
+| cardos            | CardOS 5.3 card                                                  |
+| idprime           | idprime with os version 1                                        |
 
 
 
