@@ -6,6 +6,10 @@ These commands expect they are run from the `src/tools` directory of the local b
     export SIGN_KEY=11
     export ENC_KEY=55
 
+You can find the IDs of the objects on card with the `-O` option:
+
+    pkcs11-tool -O
+
 # Sign/Verify using private key/certificate
 
  * Create a data to sign
