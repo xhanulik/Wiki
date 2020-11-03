@@ -10,6 +10,10 @@ You can find the IDs of the objects on card with the `-O` option:
 
     pkcs11-tool -O
 
+and the mechanisms that the card supports with the `-M` option:
+
+    pkcs11-tool -M
+
 # Sign/Verify using private key/certificate
 
  * Create a data to sign
