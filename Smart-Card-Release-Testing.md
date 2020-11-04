@@ -48,10 +48,10 @@
 
 ## OpenSC 0.21.0
 
-| Installer    | Windows    | macOS      |
-| ------------ | ---------- | ---------- |
-| Installation | :new_moon: | :new_moon: |
-| Removal      | :new_moon: | :new_moon: |
+| Installer    | Windows    | macOS       |
+| ------------ | ---------- | ----------- |
+| Installation | :new_moon: | :full_moon: |
+| Removal      | :new_moon: | :full_moon: |
 
 The table below shows a list of all supported card drivers (`opensc-tool --list-drivers`) that have been tested in this release:
 
