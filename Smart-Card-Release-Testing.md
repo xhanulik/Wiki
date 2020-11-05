@@ -88,7 +88,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | sc-hsm               | :new_moon:     | :new_moon:     | :new_moon:     |
 | mcrd                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | setcos               | :new_moon:     | :new_moon:     | :new_moon:     |
-| PIV-II               | :full_moon:     | :last_quarter_moon:     | :new_moon:     |
+| PIV-II               | :full_moon:     | :last_quarter_moon:     | :full_moon:     |
 | cac                  | :waning_crescent_moon:     | :new_moon:     | :new_moon:     |
 | itacns               | :new_moon:     | :new_moon:     | :new_moon:     |
 | isoApplet            | :waning_crescent_moon:     | :new_moon:     | :new_moon:     |
