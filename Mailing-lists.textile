@@ -11,7 +11,7 @@ To subscribe, unsubscribe or browse the archives, please visit our "mailing list
 Please:
  * Do not send carbon copies to the developers. We read all postings on the mailing list.
  * Do not mail developers directly, we read all the mailing lists and the bugs address.
- * Read about <b>"ReportingBugs":How-to-report-bugs-so-that-they-can-be-fixed</b> before sending your e-mail.
+ * Read about <b>[[ReportingBugs|How-to-write-a-good-bug-report]]</b> before sending your e-mail.
 
 Read why "privately asking developers":http://www.eyrie.org/~eagle/faqs/questions.html is no good.
 
@@ -21,7 +21,7 @@ reviewed it. This is an emergency procedure only, subscription is assumed.
 
 h2. Bug reports
 
-Please file bug reports using the "Issues":https://github.com/OpenSC/OpenSC/issues link (after reading about "ReportingBugs":How-to-report-bugs-so-that-they-can-be-fixed)
+Please file bug reports using the "Issues":https://github.com/OpenSC/OpenSC/issues link (after reading about [[ReportingBugs|How-to-write-a-good-bug-report]])
 
 h2. Old lists
 
