@@ -75,6 +75,7 @@ h2. PKI/CA
  * "EJBCA":http://ejbca.org is a complete open source J2EE implementation of CA and RA software. It supports PKCS#11 for CA key storage. Compatibility with issuing OpenSC created smart cards for end users has been tested. Using OpenSC cards to store CA keys are yet to be tested.  
  * "OpenCA":http://www.openca.org/openca/ is an open source CA offering PKI services. It includes code to use the command line tools of OpenSC in a scripted way, no PKCS#11 support.
  * "XCA":http://xca.hohnstaedt.de/ is an open source CA GUI using OpenSSL and QT4. It supports PKCS#11 to manage and use keys and certificates on smart cards.
+ * "step-ca":https://smallstep.com/docs/step-ca is an open-source, online CA written in Go. It supports PKCS#11 for certificate signing operations on HSMs.
 
 h2. Work in progress
 
