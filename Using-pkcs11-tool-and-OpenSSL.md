@@ -108,11 +108,11 @@ The EdDSA keys were introduced in PKCS #11 3.0 in ~2020 and are not widely suppo
 
  * Sign data using a key on card:
 
-      ./src/tools/pkcs11-tool --sign -m EDDSA --id $SIGN_KEY --slot 1 --pin $PIN --input-file data --output-file data.sig  --module ./src/pkcs11/.libs/opensc-pkcs11.so
+       ./src/tools/pkcs11-tool --sign -m EDDSA --id $SIGN_KEY --slot 1 --pin $PIN --input-file data --output-file data.sig  --module ./src/pkcs11/.libs/opensc-pkcs11.so
 
  * Verify data using OpenSC (the -rawin option is still only in openssl master :( ):
 
-      openssl pkeyutl -verify -inkey eddsa.pem -in data -sigfile data.sig -pubin -rawin
+       openssl pkeyutl -verify -inkey eddsa.pem -in data -sigfile data.sig -pubin -rawin
 
 
 # Encrypt/Decrypt using private key/certificate
