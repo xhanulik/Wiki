@@ -66,7 +66,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | tcos                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | oberthur             | :new_moon:     | :new_moon:     | :new_moon:     |
 | authentic            | :new_moon:     | :new_moon:     | :new_moon:     |
-| iasecc               | :new_moon:     | :new_moon:     | :new_moon:     |
+| iasecc               | :full_moon:    |:warning_giboous_moon:|:new_moon:|
 | belpic               | :new_moon:     | :new_moon:     | :new_moon:     |
 | incrypto34           | :new_moon:     | :new_moon:     | :new_moon:     |
 | akis                 | :new_moon:     | :new_moon:     | :new_moon:     |
