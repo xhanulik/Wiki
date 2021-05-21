@@ -56,7 +56,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 
 | Smart Card Driver    | PKCS#11        | Windows Minidriver | macOS Tokend   |
 | -------------------- | -------------- | -------------- | -------------- |
-| cardos               | :new_moon:     | :new_moon:     | :new_moon:     |
+| cardos               | :full_moon:     | :new_moon:     | :new_moon:     |
 | flex                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | cyberflex            | :new_moon:     | :new_moon:     | :new_moon:     |
 | gpk                  | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -80,19 +80,19 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | atrust-acos          | :new_moon:     | :new_moon:     | :new_moon:     |
 | westcos              | :new_moon:     | :new_moon:     | :new_moon:     |
 | esteid2018           | :new_moon:     | :new_moon:     | :new_moon:     |
-| idprime              | :new_moon:     | :new_moon:     | :new_moon:     |
+| idprime              | :full_moon:     | :new_moon:     | :new_moon:     |
 | edo                  | :new_moon:     | :new_moon:     | :new_moon:     |
 | coolkey              | :new_moon:     | :new_moon:     | :new_moon:     |
 | muscle               | :new_moon:     | :new_moon:     | :new_moon:     |
 | sc-hsm               | :new_moon:     | :new_moon:     | :new_moon:     |
 | mcrd                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | setcos               | :new_moon:     | :new_moon:     | :new_moon:     |
-| PIV-II               | :new_moon:     | :new_moon:     | :new_moon:     |
-| cac                  | :new_moon:     | :new_moon:     | :new_moon:     |
+| PIV-II               | :full_moon:     | :new_moon:     | :new_moon:     |
+| cac                  | :full_moon:     | :new_moon:     | :new_moon:     |
 | itacns               | :new_moon:     | :new_moon:     | :new_moon:     |
 | isoApplet            | :new_moon:     | :new_moon:     | :new_moon:     |
 | gids                 | :new_moon:     | :new_moon:     | :new_moon:     |
-| openpgp              | :new_moon:     | :new_moon:     | :new_moon:     |
+| openpgp              | :full_moon:     | :new_moon:     | :new_moon:     |
 | jpki                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | npa                  | :new_moon:     | :new_moon:     | :new_moon:     |
 | cac1                 | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -102,11 +102,13 @@ The table below shows a list of all tested smart cards that were used:
 
 | Smart Card Driver | Tested Smart Cards                                               |
 | ----------------- | ---------------------------------------------------------------- |
-| PIV-II            | PivApplet (JCardSim)                                             |
-| cac               | virt_CACard (CI)                                                 |
+| PIV-II            | PivApplet (JCardSim), Yubikey 4, NIST Test PIV cards (3-10, 12-14, 16)|
+| cac               | virt_CACard (CI), HID CAC Alt token, old CAC cards               |
 | coolkey           | 534e SafeNet Java Card with Coolkey Applet (CI)                  |
 | gids              | GIDS Applet  (JCardSim)                                          |
-| openpgp           | OpenPGP Applet  (JCardSim)                                       |
+| openpgp           | OpenPGP Applet  (JCardSim), Nitrokey Start                       |
+| cardos            | CardOS 5.3                                                       |
+| idprime           | IDPrime (OS v1)                                                  |
 
 
 
