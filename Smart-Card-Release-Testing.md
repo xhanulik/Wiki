@@ -74,7 +74,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | epass2003            | :new_moon:     | :new_moon:     | :new_moon:     |
 | rutoken              | :new_moon:     | :new_moon:     | :new_moon:     |
 | rutoken_ecp          | :new_moon:     | :new_moon:     | :new_moon:     |
-| myeid                | :new_moon:     | :new_moon:     | :new_moon:     |
+| myeid                | :full_moon:    | :last_quarter_moon:     | :new_moon:     |
 | dnie                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | MaskTech             | :new_moon:     | :new_moon:     | :new_moon:     |
 | atrust-acos          | :new_moon:     | :new_moon:     | :new_moon:     |
