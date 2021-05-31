@@ -84,14 +84,14 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | edo                  | :new_moon:     | :new_moon:     | :new_moon:     |
 | coolkey              | :new_moon:     | :new_moon:     | :new_moon:     |
 | muscle               | :new_moon:     | :new_moon:     | :new_moon:     |
-| sc-hsm               | :new_moon:     | :new_moon:     | :new_moon:     |
+| sc-hsm               | :last_quarter_moon:     | :new_moon:     | :new_moon:     |
 | mcrd                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | setcos               | :new_moon:     | :new_moon:     | :new_moon:     |
-| PIV-II               | :full_moon:     | :new_moon:     | :new_moon:     |
+| PIV-II               | :full_moon:     | :new_moon:     | :waning_crescent_moon:     |
 | cac                  | :full_moon:     | :new_moon:     | :new_moon:     |
 | itacns               | :new_moon:     | :new_moon:     | :new_moon:     |
-| isoApplet            | :new_moon:     | :new_moon:     | :new_moon:     |
-| gids                 | :new_moon:     | :new_moon:     | :new_moon:     |
+| isoApplet            | :waning_crescent_moon:     | :new_moon:     | :new_moon:     |
+| gids                 | :waning_crescent_moon:     | :new_moon:     | :new_moon:     |
 | openpgp              | :full_moon:     | :new_moon:     | :new_moon:     |
 | jpki                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | npa                  | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -105,10 +105,12 @@ The table below shows a list of all tested smart cards that were used:
 | PIV-II            | PivApplet (JCardSim), Yubikey 4, NIST Test PIV cards (3-10, 12-14, 16)|
 | cac               | virt_CACard (CI), HID CAC Alt token, old CAC cards               |
 | coolkey           | 534e SafeNet Java Card with Coolkey Applet (CI)                  |
-| gids              | GIDS Applet  (JCardSim)                                          |
+| gids              | GIDS Applet  1.3 (JCardSim)                                      |
 | openpgp           | OpenPGP Applet  (JCardSim), Nitrokey Start                       |
 | cardos            | CardOS 5.3                                                       |
 | idprime           | IDPrime (OS v1)                                                  |
+| sc-hsm            | GoID 1.01                                                        |
+| isoApplet         | IsoApplet v0.6.1 (JCardSim)                                      |
 
 
 
