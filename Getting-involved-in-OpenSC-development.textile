@@ -7,7 +7,7 @@ h2. Development process
  * OpenSC development is coordinated via the list opensc-devel@lists.sourceforge.net. See [[Mailing lists|Mailing-lists]]. Start helping the community by reviewing "Github issues":https://github.com/OpenSC/OpenSC/issues . Patches fixing new or existing issues may be submitted as "Github Pull Requests":https://github.com/OpenSC/OpenSC/pulls or sent to the [[opensc-devel mailing list|Mailing-lists]].
  * Contribution should comply with coding guidelines. A minimal <b>[[Development Policy|Development-Policy]]</b> exists.
  * [[DRAFT Howto add/support a new card|Adding-a-new-card-driver]]
- * New features needs to be tested. At worst transcript of `pkcs11-tool --test` with your card should be attached to Pull Requests. Even better would be implementation of unit tests systematically testing interoduced code.
+ * New features need to be tested. At worst transcript of `pkcs11-tool --test` with your card should be attached to Pull Requests. Even better would be implementation of unit tests systematically testing introduced code.
 
 h2. Test Tools
  * "Minidriver":https://github.com/OpenSC/OpenSC/issues/426#issuecomment-100978020 
