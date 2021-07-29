@@ -10,6 +10,7 @@ We got eHBA and eGK test cards in 2008 and they were [[STARCOS 3.0|STARCOS-cards
 
 Information about the german eHBA / eGK:
 
+ * "Specifications and other related documents for the eHBA":https://fachportal.gematik.de/karten-und-identitaeten/elektronischer-heilberufsausweis
  * "Informations about the "elektronische Gesundheitskarte Schleswig-Holstein"":http://www.gesundheitskarte-sh.de
  * "HPC-Specification V2.3.2 Part1: Commands, Algorithms and Functions of the COS Platform":http://www.baek.de/downloads/HPC-Spezifikation_2.3.2_-_COS_Teil_1_.pdf
  * "HPC-Specification V2.3.2 Part2: HPC Applications and Functions":http://www.baek.de/downloads/HPC-Spezifikation_2.3.2_-_HPC_Teil_2_.pdf
