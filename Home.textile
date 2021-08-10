@@ -2,12 +2,12 @@ OpenSC provides a set of libraries and utilities to work with smart cards. Its m
 
 h2. Download
 
-"OpenSC 0.21.0":https://github.com/OpenSC/OpenSC/releases/tag/0.21.0 is the latest stable version released on 24.11.2020. It is available as
+"OpenSC 0.22.0":https://github.com/OpenSC/OpenSC/releases/tag/0.22.0 is the latest stable version released on 10.08.2021. It is available as
  * Windows installer
-  ** "OpenSC-0.21.0_win64.msi":https://github.com/OpenSC/OpenSC/releases/download/0.21.0/OpenSC-0.21.0_win64.msi for 64 bit programs
-  ** "OpenSC-0.21.0_win32.msi":https://github.com/OpenSC/OpenSC/releases/download/0.21.0/OpenSC-0.21.0_win32.msi for 32 bit programs
- * "OpenSC-0.21.0.dmg":https://github.com/OpenSC/OpenSC/releases/download/0.21.0/OpenSC-0.21.0.dmg: macOS installer
- * "opensc-0.21.0.tar.gz":https://github.com/OpenSC/OpenSC/releases/download/0.21.0/opensc-0.21.0.tar.gz: Source code distribution
+  ** "OpenSC-0.22.0_win64.msi":https://github.com/OpenSC/OpenSC/releases/download/0.22.0/OpenSC-0.22.0_win64.msi for 64 bit programs
+  ** "OpenSC-0.22.0_win32.msi":https://github.com/OpenSC/OpenSC/releases/download/0.22.0/OpenSC-0.22.0_win32.msi for 32 bit programs
+ * "OpenSC-0.22.0.dmg":https://github.com/OpenSC/OpenSC/releases/download/0.22.0/OpenSC-0.22.0.dmg: macOS installer (not signed yet)
+ * "opensc-0.22.0.tar.gz":https://github.com/OpenSC/OpenSC/releases/download/0.22.0/opensc-0.22.0.tar.gz: Source code distribution
 
 h4. Nightly build
 
@@ -15,6 +15,7 @@ The latest source code is available through "GitHub":https://github.com/OpenSC/O
 
 h2. News
 
+ * 10.08.2021: "OpenSC 0.22.0":https://github.com/OpenSC/OpenSC/releases/tag/0.22.0 is available.
  * 24.11.2020: <b>SECURITY</b>: Data handling issues prior to 0.21.0 (CVE-2020-26570, CVE-2020-26571, CVE-2020-26572), see [[security advisories|OpenSC-security-advisories]].
  * 24.11.2020: "OpenSC 0.21.0":https://github.com/OpenSC/OpenSC/releases/tag/0.21.0 is available.
  * 29.12.2019: <b>SECURITY</b>: Data handling issues prior to 0.20.0 (CVE-2019-6502, CVE-2019-15946, CVE-2019-15945, CVE-2019-19480, CVE-2019-19481, CVE-2019-19479), see [[security advisories|OpenSC-security-advisories]].
