@@ -26,11 +26,11 @@ h2. News
  * 03.02.2018: "Smart Cards in Linux and why you should care":https://archive.fosdem.org/2018/schedule/event/smartcards_in_linux/attachments/slides/2265/export/events/attachments/smartcards_in_linux/slides/2265/smart_cards_slides.pdf: Talk at "FOSDEM 2018":https://archive.fosdem.org/2018/schedule/speaker/jakub_jelen/
  * 18.07.2017: "OpenSC 0.17.0":https://github.com/OpenSC/OpenSC/releases/tag/0.17.0 is available.
  * 03.06.2016: "OpenSC 0.16.0":https://github.com/OpenSC/OpenSC/releases/tag/0.16.0 is available.
- * 03.09.2015: "Continious integration for Windows":https://ci.appveyor.com/project/LudovicRousseau/OpenSC/branch/master with AppVeyor
+ * 03.09.2015: "Continuous integration for Windows":https://ci.appveyor.com/project/LudovicRousseau/OpenSC/branch/master with AppVeyor
  * 16.05.2015: "OpenSC 0.15.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.15.0/ is available.
- * 01.04.2015: "Continious integration for macOS":https://travis-ci.org/OpenSC/OpenSC/branches with Travis CI
+ * 01.04.2015: "Continuous integration for macOS":https://travis-ci.org/OpenSC/OpenSC/branches with Travis CI
  * 24.01.2015: "Static code analysis":https://scan.coverity.com/projects/opensc-opensc with Coverity Scan
- * 21.01.2015: "Continious integration for Linux":https://travis-ci.org/OpenSC/OpenSC/branches with Travis CI
+ * 21.01.2015: "Continuous integration for Linux":https://travis-ci.org/OpenSC/OpenSC/branches with Travis CI
  * 30.06.2014: "OpenSC 0.14.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.14.0/ is available.
  * 04.12.2012: "OpenSC 0.13.0":https://sourceforge.net/projects/opensc/files/OpenSC/opensc-0.13.0/ is available.
  * 05.02.2011: OpenSC was at [[FOSDEM 2012|OpenSC-@-FOSDEM-2012]].
