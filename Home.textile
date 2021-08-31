@@ -6,7 +6,7 @@ h2. Download
  * Windows installer
   ** "OpenSC-0.22.0_win64.msi":https://github.com/OpenSC/OpenSC/releases/download/0.22.0/OpenSC-0.22.0_win64.msi for 64 bit programs
   ** "OpenSC-0.22.0_win32.msi":https://github.com/OpenSC/OpenSC/releases/download/0.22.0/OpenSC-0.22.0_win32.msi for 32 bit programs
- * --"OpenSC-0.22.0.dmg":https://github.com/OpenSC/OpenSC/releases/download/0.22.0/OpenSC-0.22.0.dmg: macOS installer-- (not signed yet)
+ * "OpenSC-0.22.0.dmg":https://github.com/OpenSC/OpenSC/releases/download/0.22.0/OpenSC-0.22.0.dmg: macOS installer
  * "opensc-0.22.0.tar.gz":https://github.com/OpenSC/OpenSC/releases/download/0.22.0/opensc-0.22.0.tar.gz: Source code distribution
 
 h4. Nightly build
