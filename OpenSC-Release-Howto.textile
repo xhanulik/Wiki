@@ -12,13 +12,20 @@ h2. Preparing Security Relevant Changes
  * Update the "security advisories":https://github.com/OpenSC/OpenSC/wiki/OpenSC-security-advisories
  * Mention CVE ID in the _NEWS_ file
 
-h2. Release Preparations in Version Control
+h2. Release Preparations
+
+On Github:
+
+ * Add a upcoming release to wiki page "Smart Card Release Testing":https://github.com/OpenSC/OpenSC/wiki/Smart-Card-Release-Testing
+ * Create a tracking issue with proposed changelog for _NEWS_, for example "Towards new release 0.22.0":https://github.com/OpenSC/OpenSC/issues/2247
+
+In Version Control
 
 Release (or RC) version must be changed in the following files:
  * _NEWS_ (Markdown)
- * _configure.ac_: change package version major/minor/fix as needed, RCs get the package suffix `_rc`, which is removed for the final release
- * _configure.ac_: Udate the "LT version number":https://www.gnu.org/software/libtool/manual/html_node/Updating-version-info.html
- * appveyor.yml
+ * _configure.ac_ : change package version major/minor/fix as needed, RCs get the package suffix `_rc`, which is removed for the final release
+ * _configure.ac_ : Update the "LT version number":https://www.gnu.org/software/libtool/manual/html_node/Updating-version-info.html
+ * _appveyor.yml_
 
 Optionally, discuss changes to _NEWS_ by opening a "new issue":https://github.com/OpenSC/OpenSC/issues/new with your suggestions.
 
@@ -52,4 +59,4 @@ h2. Announcement
  * Find someone to proofread the announcement.
  * Via mail publish the announcment on "opensc-announce@lists.sourceforge.net":https://sourceforge.net/p/opensc/mailman/opensc-announce/ and "opensc-devel@lists.sourceforge.net":https://sourceforge.net/p/opensc/mailman/opensc-devel/ lists.
  * In case of security relevant changes, forward the announcement to "oss-security@lists.openwall.com":https://www.openwall.com/lists/oss-security/
- * Update the "Main Wiki page":https://github.com/OpenSC/OpenSC/wiki
+ * Update the "Main Wiki page":https://github.com/OpenSC/OpenSC/wiki with links to new release
