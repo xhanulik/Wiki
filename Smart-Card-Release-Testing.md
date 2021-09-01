@@ -559,7 +559,7 @@ User is authenticated.
 ### OpenSSH
 **Preconditions**
 * SSH server with allowed public key authentication (for example `localhost`)
-* Inserted card with either generally-visible RSA public keys or X.509 certificates
+* Inserted card with either generally-visible RSA or ECDSA public keys or X.509 certificates
 
 #### Without ssh-agent
 **Test steps**
