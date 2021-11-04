@@ -34,7 +34,7 @@
   - [macOS Tokend](#macos-tokend)
     - [Keychain Access](#keychain-access)
     - [TLS Client Authentication with Safari or Chrome](#tls-client-authentication-with-safari-or-chrome)
-
+  - [Detaching and attaching reader with card inserted](#detaching-and-attaching-reader-with-card-inserted)
 
 
 # Test Results
@@ -672,3 +672,28 @@ User is logged in, the lock is unlocked.
 4. Verify your PIN.
 **Expected Result**
 User is authenticated.
+
+
+## Detaching and attaching reader with card inserted
+
+**Preconditions**
+* A ThinLinc client using smart card authentication.
+1. Download ThinLinc client here https://www.cendio.com/thinlinc/download and install it.
+2. The ThinLinc client must be configured to run with the new OpenSC release. Run this in your home directory (Change `<PATH TO PKCS11 MODULE>` to the absolute path to  `opensc-pkcs11.so` of the new release):
+```
+mkdir -p .thinlinc && echo "PKCS11_MODULE=<PATH TO PKCS11 MODULE>" >> .thinlinc/tlclient.conf
+```
+3. Enable smart card authentication in the ThinLinc client:
+```
+echo "AUTHENTICATION_METHOD=scpublickey" >> .thinlinc/tlclient.conf
+```
+4. Start ThinLinc client.
+5. Put the card in the reader and the certificate should be shown in the "Certificate" scroll down menu.
+
+**Test Steps**
+* Detach the entire reader with card still in it.
+* Attach the reader again with the card in it.
+
+**Expected Result**
+* The certificate is removed from the "Certificate" scroll down list when the reader is detached.
+* The certificates is shown again when the reader is attached.
