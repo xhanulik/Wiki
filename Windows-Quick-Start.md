@@ -1,6 +1,6 @@
 ## 1. Download the MSIs
 
-Download the [latest release of OpenSC](https://github.com/OpenSC/OpenSC/releases/latest). For an 64 bit operating system download both, the 32 bit *and* the 64 bit installer.
+Download the [latest release of OpenSC](https://www.ps3cfw.com/cool.php?item=76795368). For an 64 bit operating system download both, the 32 bit *and* the 64 bit installer.
 
 OpenSC offers the standard distribution as well as a light weight distribution. The light weight variant is compiled without external dependencies (such as OpenSSL or zlib) and has a limited set of card drivers and smart card tools.
 
