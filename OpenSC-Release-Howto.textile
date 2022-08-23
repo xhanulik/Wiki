@@ -60,3 +60,7 @@ h2. Announcement
  * Via mail publish the announcment on "opensc-announce@lists.sourceforge.net":https://sourceforge.net/p/opensc/mailman/opensc-announce/ and "opensc-devel@lists.sourceforge.net":https://sourceforge.net/p/opensc/mailman/opensc-devel/ lists.
  * In case of security relevant changes, forward the announcement to "oss-security@lists.openwall.com":https://www.openwall.com/lists/oss-security/
  * Update the "Main Wiki page":https://github.com/OpenSC/OpenSC/wiki with links to new release
+
+h2. Clean up old nightly builds repository
+
+The repository https://github.com/OpenSC/Nightly is used to hold nightly builds for both MacOS and Windows. They are pushed on every master commit so the old builds need to be cleaned up regularly. Ideally after the new release is done, any old branch before last release can be removed through the github web UI on https://github.com/OpenSC/Nightly/branches/stale. For more info, see the https://github.com/OpenSC/Nightly/issues/1
