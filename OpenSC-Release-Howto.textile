@@ -38,6 +38,7 @@ h2. Build and Test Binaries
   BRANCH=`git log --max-count=1 --date=short --abbrev=8 --pretty=format:"%cd_%h"`
   wget https://github.com/OpenSC/Nightly/archive/${BRANCH}.zip
   unzip ${BRANCH}.zip </code></pre>
+ * Download the MacOS installer from the Github Actions OSX CI for a tag and attach it to the release on github
  * Do a separate smoke test for all installers and the tarball, "document your results in the Wiki":https://github.com/OpenSC/OpenSC/wiki/Smart-Card-Release-Testing.
  * If creating a final release, create an annotated tag instead of a lightweight tag:
  <pre><code>  git tag -a 0.20.0
