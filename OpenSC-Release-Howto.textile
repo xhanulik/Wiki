@@ -25,7 +25,7 @@ Release (or RC) version must be changed in the following files:
  * _NEWS_ (Markdown)
  * _configure.ac_ : change package version major/minor/fix as needed, RCs get the package suffix `-rc`, which is removed for the final release
  * _configure.ac_ : Update the "LT version number":https://www.gnu.org/software/libtool/manual/html_node/Updating-version-info.html
- * _appveyor.yml_
+ * _.appveyor.yml_: Update the version on first line
 
 Optionally, discuss changes to _NEWS_ by opening a "new issue":https://github.com/OpenSC/OpenSC/issues/new with your suggestions.
 
