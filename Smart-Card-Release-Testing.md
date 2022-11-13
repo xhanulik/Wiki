@@ -50,14 +50,14 @@
 
 | Installer    | Windows    | macOS       |
 | ------------ | ---------- | ----------- |
-| Installation | :new_moon: | :new_moon:  |
-| Removal      | :new_moon: | :new_moon:  |
+| Installation | :full_moon: | :new_moon:  |
+| Removal      | :full_moon: | :new_moon:  |
 
 The table below shows a list of all supported card drivers (`opensc-tool --list-drivers`) that have been tested in this release:
 
 | Smart Card Driver    | PKCS#11        | Windows Minidriver | macOS Tokend   |
 | -------------------- | -------------- | -------------- | -------------- |
-| cardos               | :full_moon:    | :new_moon:     | :new_moon:     |
+| cardos               | :full_moon:    | :full_moon:    | :new_moon:     |
 | cyberflex            | :new_moon:     | :new_moon:     | :new_moon:     |
 | gemsafeV1            | :new_moon:     | :new_moon:     | :new_moon:     |
 | starcos              | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -77,10 +77,10 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | idprime              | :full_moon:    | :new_moon:     | :new_moon:     |
 | coolkey              | :new_moon:     | :new_moon:     | :new_moon:     |
 | muscle               | :new_moon:     | :new_moon:     | :new_moon:     |
-| sc-hsm               | :new_moon:     | :new_moon:     | :new_moon:     |
+| sc-hsm               | :new_moon:     | :full_moon:    | :new_moon:     |
 | mcrd                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | setcos               | :new_moon:     | :new_moon:     | :new_moon:     |
-| PIV-II               | :full_moon:    | :new_moon:     | :new_moon:     |
+| PIV-II               | :full_moon:    | :full_moon:    | :new_moon:     |
 | cac                  | :full_moon:    | :new_moon:     | :new_moon:     |
 | itacns               | :new_moon:     | :new_moon:     | :new_moon:     |
 | isoApplet            | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -96,7 +96,8 @@ The table below shows a list of all tested smart cards that were used:
 
 | Smart Card Driver | Tested Smart Cards                                               |
 | ----------------- | ---------------------------------------------------------------- |
-| cardos            | CardOS 5.3, 2014                                                 |
+| cardos            | CardOS 5.3, 2014                                                 |   
+|                   | CardOS 4.2+                                                      |
 | cac               | 2 old CAC test cards                                             |
 |                   | CAC HID Alt token                                                |
 | cac1              | old CAC test card                                                |
