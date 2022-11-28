@@ -77,7 +77,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | idprime              | :full_moon:    | :new_moon:     | :new_moon:     |
 | coolkey              | :new_moon:     | :new_moon:     | :new_moon:     |
 | muscle               | :new_moon:     | :new_moon:     | :new_moon:     |
-| sc-hsm               | :new_moon:     | :full_moon:    | :new_moon:     |
+| sc-hsm               | :full_moon:    | :full_moon:    | :new_moon:     |
 | mcrd                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | setcos               | :new_moon:     | :new_moon:     | :new_moon:     |
 | PIV-II               | :full_moon:    | :full_moon:    | :new_moon:     |
@@ -87,7 +87,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | gids                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | openpgp              | :new_moon:     | :new_moon:     | :new_moon:     |
 | jpki                 | :new_moon:     | :new_moon:     | :new_moon:     |
-| npa                  | :new_moon:     | :new_moon:     | :new_moon:     |
+| npa                  | :waning_crescent_moon:     | :new_moon:     | :new_moon:     |
 | cac1                 | :full_moon:    | :new_moon:     | :new_moon:     |
 | nqapplet             | :new_moon:     | :new_moon:     | :new_moon:     |
 | default              | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -104,7 +104,8 @@ The table below shows a list of all tested smart cards that were used:
 | idprime           | IDPrime 3810                                                     |
 | PIV-II            | IDEMIA Test card #1 ID-One PIV 2.4 on Cosmo v8.1                 |
 |                   | NIST Test PIV card 6, v1                                         |
-|                   |                                                                  |
+|                   | Yubikey 4 OTP+U2F+CCID                                           |
+| sc-hsm            | GoID 1.01                                                        |
 |                   |                                                                  |
 |                   |                                                                  |
 |                   |                                                                  |
@@ -120,7 +121,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 
 | Smart Card Driver    | PKCS#11        | Windows Minidriver | macOS Tokend   |
 | -------------------- | -------------- | -------------- | -------------- |
-| cardos               | :full_moon:     | :new_moon:     | :new_moon:     |
+| cardos               | :full_moon:    | :new_moon:     | :new_moon:     |
 | flex                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | cyberflex            | :new_moon:     | :new_moon:     | :new_moon:     |
 | gpk                  | :new_moon:     | :new_moon:     | :new_moon:     |
