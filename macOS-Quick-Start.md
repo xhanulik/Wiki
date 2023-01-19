@@ -4,9 +4,10 @@ Download the [latest release of OpenSC](https://github.com/OpenSC/OpenSC/release
 
 ## 2. Install the PKG
 
-Opening the DMG-file loads the OpenSC bundle into Finder. Open the contextual menu of the installation package (e.g. use a two-finger tap on trackpad) and choose *Open*. Skip the warning about the package's origin and follow the installation guide.
+Opening the DMG-file loads the OpenSC bundle into Finder. Double click installation package and follow the installation guide. You may want to "edit installation" to select specific features that you want to install.
 
-Since we aren't currently signing the installation package, double clicking cannot be used to install OpenSC.
+Program upgrades can be performed by using the installer without uninstalling the previous version.
+
 
 ## 3. Test your installation
 
