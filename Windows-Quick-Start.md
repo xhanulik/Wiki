@@ -6,7 +6,7 @@ OpenSC offers the standard distribution as well as a light weight distribution. 
 
 ## 2. Install the MSIs
 
-Run the installers as administrator.
+Run the installers as administrator. Program upgrades can be performed by using the installer without uninstalling the previous version.
 
 The *Typical* and *Complete* installation type install all available components. A *Custom Setup* allows disabling some of the following features:
 
