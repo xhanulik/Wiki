@@ -8,6 +8,13 @@ Opening the DMG-file loads the OpenSC bundle into Finder. Open the contextual me
 
 Since we aren't currently signing the installation package, double clicking cannot be used to install OpenSC, see https://support.apple.com/en-en/guide/mac-help/mh40616/mac.
 
+A Custom Setup allows disabling some of the following features:
+
+- *PKCS#11 module and smart card tools*: PKCS#11 module used by most open source and cross-platform software (like Firefox, SSH, TrueCrypt, OpenVPN etc) as well as tools for debugging and personalization.
+- *Automatic startup items*: Registers PKCS#11 module and notification capabilities on startup
+- *CryptoTokenKit-based smart card driver*: OpenSC CTK plugin for using smart cards with native macOS applications (like Safari, iMail, Chrome, `sc_auth` etc)
+
+
 ## 3. Test your installation
 
 Upon successful installation, OpenSC is installed in `/Library/OpenSC`, the tokend module was registered and links to the OpenSC tools have been created in `/usr/local/bin`.
