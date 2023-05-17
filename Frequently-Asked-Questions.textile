@@ -95,6 +95,9 @@ OS X apparently always uses "Enter password for Keychain <keychainname>". The "n
 
 h2. Miscellaneous questions
 
+h3. Do you have a privacy policy?
+
+OpenSC will not transfer any information to other networked systems unless specifically requested by the user or the person installing or operating it. Debug information enabled via opensc.conf may contain personal identifying data, such as X.509 certificate data, which you may want to remove before submitting a bug report. 
 
 h3. Where can I buy smart cards ?
 
