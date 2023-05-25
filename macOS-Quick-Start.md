@@ -38,3 +38,7 @@ From the OpenSC bundle double click the *OpenSC Uninstaller*. Alternatively, run
 ```
 sudo opensc-uninstall
 ```
+
+## 6. Code Signing
+
+Code signing is fully integrated with the automatic build process for OpenSC releases and nightly builds. We are greatefull to Tim Wilbrink, who as member of Apple's developer program is signing the OpenSC binaries.
