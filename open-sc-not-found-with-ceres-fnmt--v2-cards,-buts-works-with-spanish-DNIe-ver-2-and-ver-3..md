@@ -1,6 +1,0 @@
-I Am using a mac, with Catalina 10.15.4,and I have seen this interesting project, the latest version 0.20 did not give me a good result, the previous version 0.19 has worked perfectly for me, allowing me to use certified cards in any browser, accessing the Mac system keychain.
-it works perfectly with the Spanish DNIe version 2, and version 3..... But it does not work with public official ceres card who use fnmt-v2 certificate for officers and police forces. When I use terminal commands it tells me that the card is not supported or recognized.
-Anyone know if you can do something about it to make it work. If they are cards that do not work with OpenSC and their use has been contemplated with this distribution.
-In the official page of Spanish https://www.sede.fnmt.gob.es/stceres in the download section , MAC OS 10.13 (High Sierra) - MAC OS 10.14 (Mojave) - MAC OS 10.15 (Catalina) (PKG - 2.1 MB), compile with MacOSX.
-The only way to use these certificates with the card is to install a library in the exclusive Firefox browser, loading the library /library/lib/libpkcs11-fnmtdnie.so, creating a support only by spanish dnie firefox browser and fnmt-v2 ceres cards
-I would appreciate any help. Thank you
