@@ -9,6 +9,8 @@ At least one (or more, if needed) pre-releases must be done before the actual re
 h2. Preparing Security Relevant Changes
 
  * "Request a CVE":https://cveform.mitre.org/ in case of security relevant fixes or changes.
+   * Filter OSS-Fuzz for "security relevant issues":https://oss-fuzz.com/testcases?open=no&security=yes that were fixed for this release
+   * Filter Coverity scan for *High* impact issues that were fixed for this release
  * Update the "security advisories":https://github.com/OpenSC/OpenSC/wiki/OpenSC-security-advisories
  * Mention CVE ID in the _NEWS_ file
 
