@@ -95,11 +95,11 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 
 The table below shows a list of all tested smart cards that were used:
 
-| Smart Card Driver | Tested Smart Cards                                               |
-| ----------------- | ---------------------------------------------------------------- |
-|                   |                                                                  |
-|                   |                                                                  |
-|                   |                                                                  |
+| Smart Card Driver | Tested Smart Cards                                                |
+| ----------------- | ----------------------------------------------------------------- |
+|  PIV-II           | Idemia ID-One PIV 2.4.1 with/without piv-sm and contact/NFC       |    
+|  PIV-II           | Yubico NFC 5            with/without piv-sm and contact/NFC       |
+|                   |                                                                   |
 
 ## OpenSC 0.23.0
 
