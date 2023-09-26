@@ -646,9 +646,9 @@ Test random number generation, digest calculation, signature, verification and d
 
 |          | Location of PKCS#11 module                          |
 | -------- | --------------------------------------------------- |
-| Windows  | `C:\Windows\System32\onepin-onepsc-pkcs11.dll`      |
-| macOS    | `/Library/OpenSC/lib/onepin-opensc-pkcs11.so`       |
-| Other OS | `/usr/local/lib/onepin-opensc-pkcs11.so` by default |
+| Windows  | `C:\Windows\System32\onepsc-pkcs11.dll`      |
+| macOS    | `/Library/OpenSC/lib/opensc-pkcs11.so`       |
+| Other OS | `/usr/local/lib/opensc-pkcs11.so` by default |
 **Expected Result**
 Certificates and private keys are verified (see command line output). The token's certificates are shown in a dialog.
 
