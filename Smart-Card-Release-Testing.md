@@ -71,22 +71,22 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | epass2003            | :new_moon:     | :new_moon:     | :new_moon:     |
 | rutoken              | :new_moon:     | :new_moon:     | :new_moon:     |
 | rutoken_ecp          | :new_moon:     | :new_moon:     | :new_moon:     |
-| myeid                | :new_moon:     | :new_moon:     | :new_moon:     |
+| myeid                | :waning_gibbous_moon:     | :new_moon:     | :new_moon:     |
 | dnie                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | MaskTech             | :new_moon:     | :new_moon:     | :new_moon:     |
 | esteid2018           | :new_moon:     | :new_moon:     | :new_moon:     |
 | idprime              | :new_moon:     | :new_moon:     | :new_moon:     |
-| coolkey              | :new_moon:     | :new_moon:     | :new_moon:     |
+| coolkey              | :full_moon:     | :new_moon:     | :new_moon:     |
 | muscle               | :new_moon:     | :new_moon:     | :new_moon:     |
-| sc-hsm               | :last_quarter_moon:     | :waning_gibbous_moon:    | :new_moon:     |
+| sc-hsm               | :waning_gibbous_moon:     | :waning_gibbous_moon:    | :new_moon:     |
 | mcrd                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | setcos               | :new_moon:     | :new_moon:     | :new_moon:     |
 | PIV-II               | :last_quarter_moon:     | :waning_gibbous_moon:     | :new_moon:     |
-| cac                  | :new_moon:     | :new_moon:     | :new_moon:     |
+| cac                  | :full_moon:     | :new_moon:     | :new_moon:     |
 | itacns               | :new_moon:     | :new_moon:     | :new_moon:     |
 | isoApplet            | :new_moon:     | :new_moon:     | :new_moon:     |
-| gids                 | :new_moon:     | :new_moon:     | :new_moon:     |
-| openpgp              | :new_moon:     | :new_moon:     | :new_moon:     |
+| gids                 | :waning_gibbous_moon:     | :new_moon:     | :new_moon:     |
+| openpgp              | :waning_gibbous_moon:     | :new_moon:     | :new_moon:     |
 | jpki                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | npa                  | :new_moon:     | :new_moon:     | :new_moon:     |
 | cac1                 | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -95,11 +95,16 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 
 The table below shows a list of all tested smart cards that were used:
 
-| Smart Card Driver | Tested Smart Cards                                                |
-| ----------------- | ----------------------------------------------------------------- |
-| PIV-II            | Idemia ID-One PIV 2.4.1 with/without piv-sm and contact/NFC       |    
-| PIV-II            | Yubico NFC 5            with/without piv-sm and contact/NFC       |
-| sc-hsm            | GoID 1.01                                                         |
+| Smart Card Driver | Tested Smart Cards                                               |
+| ----------------- | ---------------------------------------------------------------- |
+| PIV-II            | Idemia ID-One PIV 2.4.1 and Yubico NFC 5 with/without piv-sm and contact/NFC |
+| PIV-II            | PivApplet (JCardSim)                                             |
+| sc-hsm            | GoID 1.01                                                        |
+| cac               | CAC Test Cards (Oberthur ID One, Gemalto GCX4), virt_CACard      |
+| coolkey           | 534e SafeNet Java Card with Coolkey Applet                       |
+| gids              | GIDS Applet  (JCardSim)                                          |
+| myeid             | OsEID                                                            |
+| openpgp           | OpenPGP Applet  (JCardSim)                                       |
 
 ## OpenSC 0.23.0
 
@@ -138,9 +143,9 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | PIV-II               | :full_moon:    | :full_moon:    | :new_moon:     |
 | cac                  | :full_moon:    | :new_moon:     | :new_moon:     |
 | itacns               | :new_moon:     | :new_moon:     | :new_moon:     |
-| isoApplet            | :new_moon:     | :new_moon:     | :new_moon:     |
+| isoApplet            | :waning_crescent_moon:     | :new_moon:     | :new_moon:     |
 | gids                 | :new_moon:     | :new_moon:     | :new_moon:     |
-| openpgp              | :new_moon:     | :new_moon:     | :new_moon:     |
+| openpgp              | :waning_crescent_moon:     | :new_moon:     | :new_moon:     |
 | jpki                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | npa                  | :waning_crescent_moon:     | :new_moon:     | :new_moon:     |
 | cac1                 | :full_moon:    | :new_moon:     | :new_moon:     |
