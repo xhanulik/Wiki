@@ -51,12 +51,12 @@
 
 | Installer    | Windows    | macOS       |
 | ------------ | ---------- | ----------- |
-| Installation | :new_moon: | :new_moon:  |
-| Removal      | :new_moon: | :new_moon:  |
+| Installation | :full_moon: | :new_moon:  |
+| Removal      | :full_moon: | :new_moon:  |
 
 The table below shows a list of all supported card drivers (`opensc-tool --list-drivers`) that have been tested in this release:
 
-| Smart Card Driver    | PKCS#11        | Windows Minidriver | macOS Tokend   |
+| Smart Card Driver    | PKCS#11        | Windows Minidriver | macOS CTK  |
 | -------------------- | -------------- | -------------- | -------------- |
 | cardos               | :new_moon:     | :new_moon:     | :new_moon:     |
 | cyberflex            | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -78,10 +78,10 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | idprime              | :new_moon:     | :new_moon:     | :new_moon:     |
 | coolkey              | :new_moon:     | :new_moon:     | :new_moon:     |
 | muscle               | :new_moon:     | :new_moon:     | :new_moon:     |
-| sc-hsm               | :new_moon:     | :new_moon:     | :new_moon:     |
+| sc-hsm               | :last_quarter_moon:     | :waning_gibbous_moon:    | :new_moon:     |
 | mcrd                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | setcos               | :new_moon:     | :new_moon:     | :new_moon:     |
-| PIV-II               | :new_moon:     | :new_moon:     | :new_moon:     |
+| PIV-II               | :last_quarter_moon:     | :waning_gibbous_moon:     | :new_moon:     |
 | cac                  | :new_moon:     | :new_moon:     | :new_moon:     |
 | itacns               | :new_moon:     | :new_moon:     | :new_moon:     |
 | isoApplet            | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -97,9 +97,9 @@ The table below shows a list of all tested smart cards that were used:
 
 | Smart Card Driver | Tested Smart Cards                                                |
 | ----------------- | ----------------------------------------------------------------- |
-|  PIV-II           | Idemia ID-One PIV 2.4.1 with/without piv-sm and contact/NFC       |    
-|  PIV-II           | Yubico NFC 5            with/without piv-sm and contact/NFC       |
-|                   |                                                                   |
+| PIV-II            | Idemia ID-One PIV 2.4.1 with/without piv-sm and contact/NFC       |    
+| PIV-II            | Yubico NFC 5            with/without piv-sm and contact/NFC       |
+| sc-hsm            | GoID 1.01                                                         |
 
 ## OpenSC 0.23.0
 
