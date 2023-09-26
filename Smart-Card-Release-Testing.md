@@ -68,7 +68,7 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | iasecc               | :new_moon:     | :new_moon:     | :new_moon:     |
 | belpic               | :new_moon:     | :new_moon:     | :new_moon:     |
 | entersafe            | :new_moon:     | :new_moon:     | :new_moon:     |
-| epass2003            | :new_moon:     | :new_moon:     | :new_moon:     |
+| epass2003            | :waning_gibbous_moon:     | :new_moon:     | :new_moon:     |
 | rutoken              | :new_moon:     | :new_moon:     | :new_moon:     |
 | rutoken_ecp          | :new_moon:     | :new_moon:     | :new_moon:     |
 | myeid                | :waning_gibbous_moon:     | :new_moon:     | :new_moon:     |
@@ -78,10 +78,10 @@ The table below shows a list of all supported card drivers (`opensc-tool --list-
 | idprime              | :new_moon:     | :new_moon:     | :new_moon:     |
 | coolkey              | :full_moon:     | :new_moon:     | :new_moon:     |
 | muscle               | :new_moon:     | :new_moon:     | :new_moon:     |
-| sc-hsm               | :waning_gibbous_moon:     | :waning_gibbous_moon:    | :new_moon:     |
+| sc-hsm               | :waning_gibbous_moon:     | :last_quarter_moon:    | :new_moon:     |
 | mcrd                 | :new_moon:     | :new_moon:     | :new_moon:     |
 | setcos               | :new_moon:     | :new_moon:     | :new_moon:     |
-| PIV-II               | :last_quarter_moon:     | :waning_gibbous_moon:     | :new_moon:     |
+| PIV-II               | :last_quarter_moon:     | :last_quarter_moon:     | :new_moon:     |
 | cac                  | :full_moon:     | :new_moon:     | :new_moon:     |
 | itacns               | :new_moon:     | :new_moon:     | :new_moon:     |
 | isoApplet            | :new_moon:     | :new_moon:     | :new_moon:     |
@@ -97,8 +97,7 @@ The table below shows a list of all tested smart cards that were used:
 
 | Smart Card Driver | Tested Smart Cards                                               |
 | ----------------- | ---------------------------------------------------------------- |
-| PIV-II            | Idemia ID-One PIV 2.4.1 and Yubico NFC 5 with/without piv-sm and contact/NFC |
-| PIV-II            | PivApplet (JCardSim)                                             |
+| PIV-II            | USB-C YubiKey 5C Nano, PivApplet (JCardSim)                      |
 | sc-hsm            | GoID 1.01                                                        |
 | cac               | CAC Test Cards (Oberthur ID One, Gemalto GCX4), virt_CACard      |
 | coolkey           | 534e SafeNet Java Card with Coolkey Applet                       |
