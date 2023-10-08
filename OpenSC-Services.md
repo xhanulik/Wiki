@@ -28,17 +28,10 @@ __You have to subscribe to the new lists yourself.__
 ## tarballs
   http://sourceforge.net/projects/opensc/files/OpenSC/nightly/tarball
 ## MSIs
-### Win32 
+### Win32
   http://sourceforge.net/projects/opensc/files/OpenSC/nightly/win32
 ### Win64
   http://sourceforge.net/projects/opensc/files/OpenSC/nightly/win64
-## Linux repository
-### GPG key
-  http://opensc.fr/viktor.tarasov@gmail.com.gpg.key
-### Debian
-  http://opensc.fr/debian
-### Ubuntu
-  http://opensc.fr/ubuntu
 
 # Tarball releases
 
@@ -47,4 +40,4 @@ __You have to subscribe to the new lists yourself.__
 
 # Continuous integration
 
-https://opensc.fr/jenkins/
+Available using Github Actions.
