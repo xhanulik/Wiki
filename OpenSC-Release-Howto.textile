@@ -8,7 +8,8 @@ At least one (or more, if needed) pre-releases must be done before the actual re
 
 h2. Preparing Security Relevant Changes
 
- * "Request a CVE":https://cveform.mitre.org/ in case of security relevant fixes or changes.
+ * Request a CVE in case of security relevant fixes or changes.
+   * Use Red Hat product security at secalert@redhat.com describing the CVE and ask for CVE allocation. Do NOT use mitre directly as their response times are terrible.
    * Filter OSS-Fuzz for "security relevant issues":https://oss-fuzz.com/testcases?open=no&security=yes that were fixed for this release
    * Filter Coverity scan for *High* impact issues that were fixed for this release
  * Update the "security advisories":https://github.com/OpenSC/OpenSC/wiki/OpenSC-security-advisories
@@ -21,7 +22,7 @@ On Github:
  * Add a upcoming release to wiki page "Smart Card Release Testing":https://github.com/OpenSC/OpenSC/wiki/Smart-Card-Release-Testing
  * Create a tracking issue with proposed changelog for _NEWS_, for example "Towards new release 0.22.0":https://github.com/OpenSC/OpenSC/issues/2247
 
-In Version Control
+In Version Control (git)
 
 Release (or RC) version must be changed in the following files:
  * _NEWS_ (Markdown): Make sure to fix the release date for final release!
