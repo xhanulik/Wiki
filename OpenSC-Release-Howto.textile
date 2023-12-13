@@ -24,10 +24,11 @@ On Github:
 In Version Control
 
 Release (or RC) version must be changed in the following files:
- * _NEWS_ (Markdown)
+ * _NEWS_ (Markdown): Make sure to fix the release date for final release!
  * _configure.ac_ : change package version major/minor/fix as needed, RCs get the package suffix `-rc`, which is removed for the final release
  * _configure.ac_ : Update the "LT version number":https://www.gnu.org/software/libtool/manual/html_node/Updating-version-info.html
  * _.appveyor.yml_: Update the version on first line
+ * _README.md_: Update the links to the new release and binaries
 
 Optionally, discuss changes to _NEWS_ by opening a "new issue":https://github.com/OpenSC/OpenSC/issues/new with your suggestions.
 
@@ -40,7 +41,6 @@ h2. Build and Test Binaries
   BRANCH=`git log --max-count=1 --date=short --abbrev=8 --pretty=format:"%cd_%h"`
   wget https://github.com/OpenSC/Nightly/archive/${BRANCH}.zip
   unzip ${BRANCH}.zip </code></pre>
- * Download the MacOS installer from the Github Actions OSX CI for a tag and attach it to the release on github
  * Do a separate smoke test for all installers and the tarball, "document your results in the Wiki":https://github.com/OpenSC/OpenSC/wiki/Smart-Card-Release-Testing.
  * If creating a final release, create an annotated tag instead of a lightweight tag:
  <pre><code>  git tag -a 0.20.0
@@ -48,7 +48,7 @@ h2. Build and Test Binaries
  * Create a "new (draft) release":https://github.com/OpenSC/OpenSC/releases
  * For final releases, select the existing tag, e.g. _0.20.0_; for release candidates choose a new tag, e.g. _0.20.0-rc1_, which Github will automatically create as lightweight tag.
  * Describe the release including all changes to NEWS (Markdown)
- * Upload the build artifacts to the new release
+ * Upload the build artifacts to the new release (release tarball, OSX installer, 2 variants (default, light) of Windows intaller for both 64b and 32b + separate debug archives)
  * Check _This is a pre-release_ if only creating a release candidate
 
 h2. Announcement
@@ -66,4 +66,7 @@ h2. Announcement
 
 h2. Clean up old nightly builds repository
 
-The repository https://github.com/OpenSC/Nightly is used to hold nightly builds for both MacOS and Windows. They are pushed on every master commit so the old builds need to be cleaned up regularly. Ideally after the new release is done, any old branch before last release can be removed through the github web UI on https://github.com/OpenSC/Nightly/branches/stale. For more info, see the https://github.com/OpenSC/Nightly/issues/1
+The repository https://github.com/OpenSC/Nightly is used to hold nightly builds for both MacOS and Windows.
+They are pushed on every master commit so the old builds need to be cleaned up regularly.
+Ideally after the new release is done, any old branch before last release can be removed through the github web UI on https://github.com/OpenSC/Nightly/branches/stale.
+For more info, see the https://github.com/OpenSC/Nightly/issues/1
