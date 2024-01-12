@@ -1,0 +1,1 @@
+Some tokens have support for encryption and authentication via both PGP and X.509 certificates.
