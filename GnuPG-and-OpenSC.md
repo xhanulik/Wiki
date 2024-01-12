@@ -45,6 +45,7 @@ Reload the gpg-agent by running the following in a terminal:
 ```
 gpg-agent --server gpg-connect-agent << EOF
 RELOADAGENT
+SCD LEARN
 EOF
 ```
 
