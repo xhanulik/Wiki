@@ -44,6 +44,12 @@ A GlobalPlatform compliant software is needed for loading the applet to the card
 
 ## Interesting JavaCard applets
 
+The following Open Source applets are fully supported for use and initialization with OpenSC:
+ * https://github.com/vletoux/GidsApplet
+ * https://github.com/philipWendland/IsoApplet
+ * https://github.com/Yubico/ykneo-openpgp
+ * https://github.com/arekinath/PivApplet
+
 Open source applets possibly usable (with some work) with OpenSC:
  * CoolKey Applet (MuscleApplet fork): "http://directory.fedoraproject.org/wiki/CoolKey#CoolKey_Java_Applet":http://directory.fedoraproject.org/wiki/CoolKey#CoolKey_Java_Applet
  * JavaCardSign PKCS#15 applet: "http://sourceforge.net/projects/javacardsign/":http://sourceforge.net/projects/javacardsign/
