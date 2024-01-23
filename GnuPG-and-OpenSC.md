@@ -23,7 +23,7 @@ disable-ccid
 pcsc-shared
 ```
 
-More troubleshooting with GnuPG is available on [Yubico's Website](https://support.yubico.com/hc/en-us/articles/360013714479-Troubleshooting-Issues-with-GPG)
+More troubleshooting with GnuPG is available on [Yubico's Website](https://support.yubico.com/hc/en-us/articles/360013714479-Troubleshooting-Issues-with-GPG).
 
 Alternatively, it is possible to avoid scdaemon and access the token exclusively via OpenSC (see next section).
 
@@ -50,3 +50,5 @@ EOF
 ```
 
 Now, `gpg --card-status` should show your token being accessed by OpenSC. The card application is not necessarily OpenPGP, but rather the type of application that is configured in OpenSC.
+
+As last step, import the existing key(s) into your GnuPG keyring by running `gpg --expert --full-generate-key`. Additionally, you may do the same for the CMS encryption and signing tool (`gpgsm --learn-card`).
