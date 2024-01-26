@@ -27,7 +27,7 @@ In Version Control (git)
 Release (or RC) version must be changed in the following files:
  * _NEWS_ (Markdown): Make sure to fix the release date for final release!
  * _configure.ac_ : change package version major/minor/fix as needed, RCs get the package suffix `-rc`, which is removed for the final release
- * _configure.ac_ : Update the "LT version number":https://www.gnu.org/software/libtool/manual/html_node/Updating-version-info.html
+ * _configure.ac_ : Update the "LT version number":https://www.gnu.org/software/libtool/manual/html_node/Updating-version-info.html, which is required with changes to, for example, <pre><code>opensc.h</code></pre> and <pre><code>libopensc.exports</code></pre>.
  * _.appveyor.yml_: Update the version on first line
  * _README.md_: Update the links to the new release and binaries
 
