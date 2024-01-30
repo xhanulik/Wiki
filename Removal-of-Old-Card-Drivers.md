@@ -4,7 +4,7 @@ Many of the internal card drivers have not been modified or used in years (`card
 
 | Driver               | Support Added                                                                            | To be Deactivated | Removed | User Activity                                                    | Developer Activity |
 | -------------------- | ---------------------------------------------------------------------------------------- | ----------------- | ------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `card-akis.c`        | [2007](https://github.com/OpenSC/OpenSC/commit/60e3e1e6832fc04e67276a513e0cb591b0dc2583) | yes               | no            |                                                            | [2007](https://github.com/OpenSC/OpenSC/commit/f9476144182dcc1568518f436ec8e5368841902a) |
+| `card-akis.c`        | [2007](https://github.com/OpenSC/OpenSC/commit/60e3e1e6832fc04e67276a513e0cb591b0dc2583) |                   | yes           |                                                            | [2007](https://github.com/OpenSC/OpenSC/commit/f9476144182dcc1568518f436ec8e5368841902a) |
 | `card-asepcos.c`     | [2007](https://github.com/OpenSC/OpenSC/commit/87708593154ad96ac9e8d8dec5d066e0387db0b2) | yes               | no            | [2023](https://github.com/OpenSC/OpenSC/issues/2832) | [2014](https://github.com/OpenSC/OpenSC/commit/b1b5a39ffad95814901d1955360555d9b3608c5e) |
 | `card-authentic.c`   | [2010](https://github.com/OpenSC/OpenSC/commit/1a58c429cbed13bed30e561896e747e3051a6d15) | no                | no            | [2023](https://github.com/OpenSC/OpenSC/issues/2693) | [2018](https://github.com/OpenSC/OpenSC/commit/098eed146f50f0375bd41d70116f9dd9ebc4dde4) |
 | `card-atrust-acos.c` | [2005](https://github.com/OpenSC/OpenSC/commit/cbb32e02e13f77d65790279794a17895336cbcae) | yes               | no            |                                                            | [2020](https://github.com/OpenSC/OpenSC/commit/723129bc123699ef72332ed106628236b96bd20d) |
@@ -22,10 +22,10 @@ Many of the internal card drivers have not been modified or used in years (`card
 | `card-flex.c`        | [2002](https://github.com/OpenSC/OpenSC/commit/9dc705491907727b554cf11eb4124b55ecdb9ea4) | yes               | no            |                                                      | [2010](https://github.com/OpenSC/OpenSC/commit/7d935df1bc65022ef80a40f8721f0fa8e3709289) |
 | `card-gemsafeV1.c`   | [2007](https://github.com/OpenSC/OpenSC/commit/07e6b23a266f051666aa375b5cb6d43ad2d9cb3a) |no                | no             | [2019](https://github.com/OpenSC/OpenSC/issues/1871) | [2019](https://github.com/OpenSC/OpenSC/pull/1872/commits/ba3108d1bd6368e410243a34ed6cfa94ad78f32a) |
 | `card-gids.c`        | [2016](https://github.com/OpenSC/OpenSC/commit/6a243449a0169ac7722408c23f1fd04f44b03877) | no                | no            | [2020](https://github.com/OpenSC/OpenSC/issues/2084) | [2019](https://github.com/OpenSC/OpenSC/commit/b59456b6e4fdcdbc1be31b70ad94ac61f5f5b8f8) |
-| `card-gpk.c`         | [2002](https://github.com/OpenSC/OpenSC/commit/b4063302bf694f579aec1e83f6bcb7d13189e842) | yes               | no            |                                                            | [2007](https://github.com/OpenSC/OpenSC/commit/a8908b8548e02d320376844b3d9668f0f89b3c29) |
+| `card-gpk.c`         | [2002](https://github.com/OpenSC/OpenSC/commit/b4063302bf694f579aec1e83f6bcb7d13189e842) |                   | yes           |                                                            | [2007](https://github.com/OpenSC/OpenSC/commit/a8908b8548e02d320376844b3d9668f0f89b3c29) |
 | `card-iasecc.c`      | [2011](https://github.com/OpenSC/OpenSC/commit/57b7a81c3a3233e93e9b60927103b26f9a20463e) | no                | no            | [2021](https://github.com/OpenSC/OpenSC/issues/2303) | [2021](https://github.com/OpenSC/OpenSC/pull/2279/commits/59cd37f38737e31583694da23cbc12a7fd25421d) |
-| `card-idprime.c`     | [2020](https://github.com/OpenSC/OpenSC/commit/f61d9b3b53aa97c3dad6f8d065c989786662878a) | no                | no            | [2022](https://github.com/OpenSC/OpenSC/issues/2589) | [2023](https://github.com/OpenSC/OpenSC/commit/232265dadfad61501478b2dda58cf72ca4379259) |
-| `card-incrypto34.c`  | [2005](https://github.com/OpenSC/OpenSC/commit/90d1b0cc9c2ad226e07ce4d811d29f5f6409ee63) | yes               | no            |                                                      | [2007](https://github.com/OpenSC/OpenSC/commit/a2f622a21521cb350541894d80e3266b5f2f5612) |
+| `card-idprime.c`     | [2020](https://github.com/OpenSC/OpenSC/commit/f61d9b3b53aa97c3dad6f8d065c989786662878a) | no                | no            | [2022](https://github.com/OpenSC/OpenSC/issues/2589) | [2023](https://github.com/OpenSC/OpenSC/commit/c20e070ba299ec0302169aa22443daf67a5fe56e) |
+| `card-incrypto34.c`  | [2005](https://github.com/OpenSC/OpenSC/commit/90d1b0cc9c2ad226e07ce4d811d29f5f6409ee63) |                   | yes           |                                                      | [2007](https://github.com/OpenSC/OpenSC/commit/a2f622a21521cb350541894d80e3266b5f2f5612) |
 | `card-isoApplet.c`   | [2015](https://github.com/OpenSC/OpenSC/commit/48bd6b09645014365a2be8361d113757a1736814) | no                | no            | [2023](https://github.com/OpenSC/OpenSC/issues/2704) | [2023](https://github.com/OpenSC/OpenSC/commit/84320d2f6d2b05e54286ca565617d010d73a2adb) |
 | `card-itacns.c`      | [2010](https://github.com/OpenSC/OpenSC/commit/71cdef0ed255b63f34246960d3c9c36c2d2f8989) | no                | no            | [2023](https://github.com/OpenSC/OpenSC/issues/2763) | [2022](https://github.com/OpenSC/OpenSC/commit/1708c065f1ff2f754e9756de69ab3a3139a255bb) |
 | `card-jcop.c`        | [2003](https://github.com/OpenSC/OpenSC/commit/8a4a5f033107ce0e3e8224a62a7e86dd3191f2c3) |                   | yes           |                                                            | [2003](https://github.com/OpenSC/OpenSC/commit/f761d1504fa0d173c79df30d9ef64aacf2909a2b) |
@@ -47,17 +47,15 @@ Many of the internal card drivers have not been modified or used in years (`card
 | `card-skeid.c`       | [2023](https://github.com/OpenSC/OpenSC/commit/d952a9fa3d0e2becc684c3a2529173d3d151f817) | no                | no            | | |
 | `card-starcos.c`     | [2003](https://github.com/OpenSC/OpenSC/commit/ac1c926cc828f577950d46b872763f6a4b45b3fc) | no                | no            | [2021](https://github.com/OpenSC/OpenSC/issues/2460) | [2022](https://github.com/OpenSC/OpenSC/commit/9ac0583e91b1b59bd9dc55b2376ff0be944afe55) |
 | `card-tcos.c`        | [2002](https://github.com/OpenSC/OpenSC/commit/709727d469954f09f96492a219ecb60b334a62a2) | no                | no            | [2019](https://github.com/OpenSC/OpenSC/issues/1869) | [2019](https://github.com/OpenSC/OpenSC/commit/187d908feb5867a7d44604e02c02c2131285f74b) |
-| `card-westcos.c`     | [2009](https://github.com/OpenSC/OpenSC/commit/d3201511c7efc5d30c9105a1c92dac63f4af4808) | yes                | no            |                                                                  | [2010](https://github.com/OpenSC/OpenSC/commit/c3de15d2d08061cd6b2a0fabbdaaa7b8a6ede1fa) |
+| `card-westcos.c`     | [2009](https://github.com/OpenSC/OpenSC/commit/d3201511c7efc5d30c9105a1c92dac63f4af4808) |                    | yes           |                                                                  | [2010](https://github.com/OpenSC/OpenSC/commit/c3de15d2d08061cd6b2a0fabbdaaa7b8a6ede1fa) |
 
-**To be Deactivated**: The card driver will be removed from the default OpenSC configuration. It will be neccessary to enable the card driver in `opensc.conf`
+**Deactivated**: The card driver is removed from the default OpenSC configuration. For usage, it is neccessary to enable the card driver in `opensc.conf`
 
-**Removed**: The card driver will be removed from the default OpenSC binaries. If the card driver is still present, it will be neccessary to enable it via `./configure --enable-old-drivers`
+**Removed**: The card driver is removed from the default OpenSC binaries. For further use, the drivers need to be pulled from git history.
 
 **User Activity**: Indicates if someone is actively using the card. This may be a bug report, feature request, a question on the mailing list.
 
 **Developer Activity**: Indicates if someone is actively developing and maintaining a card driver. This doesn't include generic fixes, which are untested with the card in question, e.g. fixes for issues that are reported by coverity scan.
-
-
 
 ## Rationale for Removing a card driver
 
