@@ -98,11 +98,8 @@ However, creating and deleting files, PINs and keys is very card specific and ha
 * [IAS-ECC](https://github.com/OpenSC/OpenSC/wiki/IAS-ECC)
 * Oberthur 64k
 * [Aktiv Co. Rutoken S](https://github.com/OpenSC/OpenSC/wiki/Aktiv-Co.-Rutoken-S)
-* [WestCOS](https://github.com/OpenSC/OpenSC/wiki/WestCOS)
 * [Oberthur AuthentIC](https://github.com/OpenSC/OpenSC/wiki/Oberthur-AuthentIC-applet-v2.2)
 * [Feitian ePass2003](https://github.com/OpenSC/OpenSC/wiki/Feitian-ePass2003)
-* Incrypto34
-* MioCOS
 * [SmartCardHSM](https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM)
 * [Siemens CardOS M4](https://github.com/OpenSC/OpenSC/wiki/Siemens-CardOS-M4)
 * [GIDS Applet](https://www.mysmartlogon.com/generic-identity-device-specification-gids-smart-card/)
@@ -112,8 +109,6 @@ However, creating and deleting files, PINs and keys is very card specific and ha
 * [Setcos](https://github.com/OpenSC/OpenSC/wiki/Setcos-driver)
 * [Schlumberger Axalto Cryptoflex](https://github.com/OpenSC/OpenSC/wiki/Schlumberger-Axalto-Cryptoflex)
 * [Schlumberger Axalto Cyberflex](https://github.com/OpenSC/OpenSC/wiki/Schlumberger-Axalto-Cyberflex)
-* [Gemplus GPK 16k](https://github.com/OpenSC/OpenSC/wiki/Gemplus-GPK-16k)
-* [IBM JCOP with BlueZ applet](https://github.com/OpenSC/OpenSC/wiki/IBM-JCOP-with-BlueZ-applet)
 * [Aventra MyEID PKI card](https://github.com/OpenSC/OpenSC/wiki/Aventra-MyEID-PKI-card)
 * [StarCos 2.2](https://github.com/OpenSC/OpenSC/wiki/STARCOS-cards)
 

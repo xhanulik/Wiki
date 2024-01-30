@@ -1,5 +1,7 @@
 h1. WestCOS
 
+_The driver for WestCOS cards was removed due to no user or developer activity. For further use, the driver needs to be pulled from git history._
+
 WestCOS card Multi-Application, contact, contact less dual product from "ALIOS":http://www.alios-card.com/index.php?option=com_content&task=view&id=7&Itemid=8&lang=en.
 
 This card is mainly promoted by CEV (CEV and ALIOS are in the same group).

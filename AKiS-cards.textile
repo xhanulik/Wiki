@@ -1,5 +1,7 @@
 h1. AKiS cards
 
+_The driver for AKiS cards was removed due to no user or developer activity. For further use, the driver needs to be pulled from git history._
+
 AKiS is a smart card operating system which can be used in personal identification, digital sign, health care system, smart logon, secure email, etc. It is developed within The National Research Institute Of Electronics And Cryptology ("UEKAE":http://www.uekae.tubitak.gov.tr/en/), a subsidiary of The Scientific & Technological Research Council of Turkey ("TUBITAK":http://www.tubitak.gov.tr/).
 
 Card is sold to the public by "http://www.plastkart.com":http://www.plastkart.com
