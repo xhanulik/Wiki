@@ -1,4 +1,6 @@
-h1. IBM JCOP with BlueZ applet 
+h1. IBM JCOP with BlueZ applet
+
+_The driver for JCOP cards was removed due to no user or developer activity. For further use, the driver needs to be pulled from git history._
 
 Supported cards: jcop31bio cards that include the "bluez" applet in their rom mask.
 
