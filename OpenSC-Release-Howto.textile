@@ -50,6 +50,13 @@ h2. Build and Test Binaries
  * For final releases, select the existing tag, e.g. _0.20.0_; for release candidates choose a new tag, e.g. _0.20.0-rc1_, which Github will automatically create as lightweight tag.
  * Describe the release including all changes to NEWS (Markdown)
  * Upload the build artifacts to the new release (release tarball, OSX installer, 2 variants (default, light) of Windows intaller for both 64b and 32b + separate debug archives)
+ * For final releases, download signed Windows installers from Signpath.io instead of unsigned installers from AppVeyor (i.e. Nightly builds) 
+ ## Navigate to "Signpath's outstanding Signing Requests":https://app.signpath.io/Web/8d2463fe-39bd-4a41-bb72-f008b4b1fe17/SigningRequests 
+ ## Select the ones that were issued with the creation of the release branch
+ ## Check the signing request's Build data URL to match the related AppVeyor build that was triggered with creation of the release branch
+ ## Approve signing and wait for completion of the signing process
+ ## Download signed artifact from Signpath.io
+ ## Upload signed artifact to Github Release
  * Check _This is a pre-release_ if only creating a release candidate
 
 h2. Announcement
