@@ -1,6 +1,9 @@
 h1. OpenSC security advisories
 
 Software often contains bugs, so does OpenSC. Be aware of the following security issues (in addition to overall [[security considerations|Security-Considerations]]) and upgrade to latest released version if needed.
+ * 13.02.2024 Heap use after free issue and vulnerability to Marvin attack have been identified in OpenSC
+ ** Side-channel leaks while stripping encryption PKCS#1.5 padding [[CVE-2023-5992|CVE-2023-5992]]
+ ** Memory use after free in AuthentIC driver when updating token info [[CVE-2024-1454|CVE-2024-1454]]
  * 25.09.2023 Multiple issues have been identified in OpenSC, mostly buffer overflows, but also potential PIN bypass.
  ** The memory issues can be triggered by malicious smartcards sending malformed responses to APDU commands. Coded as ([[CVE-2023-40661|CVE-2023-40661]] and [[CVE-2023-4535|CVE-2023-4535]]).
  ** The potential PIN bypass can happen when card tracks its own login state, demonstrated with Yubikey's PIV applet [[CVE-2023-40660|CVE-2023-40660]]
