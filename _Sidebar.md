@@ -1,14 +1,17 @@
-<b>Quick Start</b>
+### Quick Start
+
 * [[Windows Quick Start]]
 * [[macOS Quick Start]]
 * [[Compiling and Installing on Unix flavors]]
 
-<b>User Documentation</b>
+### User Documentation
+
 * [[OpenSC Configuration|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/files/files.html]]
 * [[OpenSC Tools|http://htmlpreview.github.io/?https://github.com/OpenSC/OpenSC/blob/master/doc/tools/tools.html]]
 * [[Frequently Asked Questions]]
 
-<b>Developer Documentation</b>
+### Developer Documentation
+
 * [[Overview]]
 * [[Getting involved in OpenSC development]]
 * [[Adding a new card driver]]
