@@ -1,42 +1,47 @@
-h1. Aktiv Co. Rutoken ECP
+# Aktiv Co. Rutoken ECP
 
-"Aktiv Co.":http://www.aktiv-company.ru/ offers the "Rutoken ECP":http://rutoken.ru/products/rutokends/, an USB crypto token with 64K memory and support for RSA keys up to 2048bit key length.
+[Aktiv Co.](http://www.aktiv-company.ru/) offers the [Rutoken ECP](https://www.rutoken.ru/products/all/rutoken-ecp/), an USB crypto token with 64K memory and support for RSA keys up to 2048bit key length.
 
-h2. Rutoken ECP
+## Rutoken ECP
 
- * <b>USB IDs:</b> 0a89:0030
- * <b>Memory:</b> 64K
- * ATR: "3B 8B 01 52 75 74 6F 6B 65 6E 20 44 53 20 C1":http://smartcard-atr.appspot.com/parse?ATR=3B8B015275746F6B656E20445320C1 (Rutoken ECP (DS))
- * ATR: "3B 8B 01 52 75 74 6F 6B 65 6E 20 45 43 50 A0":http://smartcard-atr.appspot.com/parse?ATR=3B8B015275746F6B656E20454350A0 (Rutoken ECP)
+* **USB IDs:** 0a89:0030
+* **Memory:** 64K
+* **ATRs:**
+  * [Aktiv Rutoken ECP](https://smartcard-atr.apdu.fr/parse?ATR=3B8B015275746F6B656E20445320C1): `3B 8B 01 52 75 74 6F 6B 65 6E 20 44 53 20 C1`
+  * [Rutoken ECP](https://smartcard-atr.apdu.fr/parse?ATR=3B8B015275746F6B656E20454350A0): `3B 8B 01 52 75 74 6F 6B 65 6E 20 45 43 50 A0`
 
-h2. On-board cryptographic functions
+## On-board cryptographic functions
 
- * RSA (with RSA keys up to 2048 bits)
- * GOST R 34.10-2001 ("RFC 5832":http://tools.ietf.org/html/rfc5832)
- * "GOST 34.11-94":http://en.wikipedia.org/wiki/GOST_(hash_function) ("RFC 5831":http://tools.ietf.org/html/rfc5831)
- * "GOST 28147-89":http://en.wikipedia.org/wiki/GOST_(block_cipher) ("RFC 5830":http://tools.ietf.org/search/rfc5830)
- * Key generation: ElGamal and Diffie-Hellman schemes
+* RSA (with RSA keys up to 2048 bits)
+* GOST R 34.10-2001 ([RFC 5832](http://tools.ietf.org/html/rfc5832))
+* [GOST 34.11-94](http://en.wikipedia.org/wiki/GOST_(hash_function)) ([RFC 5831](http://tools.ietf.org/html/rfc5831))
+* [GOST 28147-89](http://en.wikipedia.org/wiki/GOST_(block_cipher)) ([RFC 5830](http://tools.ietf.org/search/rfc5830))
+* Key generation: ElGamal and Diffie-Hellman schemes
 
-h2. Authentication
+## Authentication
 
- * 3 categories of owners: Administrator, User, Guest
- * 2 Global PIN-codes: Administrator and User
- * Local PIN-codes
- * Combined authentication
- * The possibility of simultaneous control of the access rights by the 7 Local PIN-codes
+* 3 categories of owners: Administrator, User, Guest
+* 2 Global PIN-codes: Administrator and User
+* Local PIN-codes
+* Combined authentication
+* The possibility of simultaneous control of the access rights by the 7 Local PIN-codes
 
-h2. File system features
+## File system features
 
- * File structure of ISO/IEC 7816-4
- * The level of subdirectory - limited by space available for file system
- * Number of file objects inside directory - up to 255, inclusive
- * Using files Rutoken Special File (RSF-files) to store keys and PIN-codes
- * Storage of private and symmetric keys, without the possibility of exports from device
- * Predefined directory for storing different kinds of key information (RSF-files) and automatic selection of the predefined directories
- * The total amount of memory for file structure - 64 kB
+* File structure of ISO/IEC 7816-4
+* The level of subdirectory - limited by space available for file system
+* Number of file objects inside directory - up to 255, inclusive
+* Using files Rutoken Special File (RSF-files) to store keys and PIN-codes
+* Storage of private and symmetric keys, without the possibility of exports from device
+* Predefined directory for storing different kinds of key information (RSF-files) and automatic selection of the predefined directories
+* The total amount of memory for file structure - 64 kB
 
-h2. Initialize
-<pre><code>$ pkcs15-init --erase-card -p rutoken_ecp
+## Examples of usage
+
+### Initialize
+
+```bash
+$ pkcs15-init --erase-card -p rutoken_ecp
 $ pkcs15-init --create-pkcs15 --so-pin "87654321" --so-puk ""
 $ pkcs15-init --store-pin --label "User PIN" --auth-id 02 --pin "12345678" --puk "" --so-pin "87654321" --finalize
 $ pkcs15-tool -D
@@ -65,10 +70,12 @@ PIN [User PIN]
 	Pad char       : 0x00
 	Reference      : 2
 	Type           : ascii-numeric
-</code></pre>
+```
 
-h2. Generate private key
-<pre><code>$ pkcs15-init -G rsa/1024 --auth-id 02 --label "My Private Key" --public-key-label "My Public Key"
+### Generate private key
+
+```bash
+$ pkcs15-init -G rsa/1024 --auth-id 02 --label "My Private Key" --public-key-label "My Public Key"
 Using reader with a card: Aktiv Rutoken ECP 00 00
 User PIN [User PIN] required.
 Please enter User PIN [User PIN]: 
@@ -85,10 +92,12 @@ Private RSA Key [My Private Key]
 	Auth ID        : 02
 	ID             : 04830838b7c9752bd0e90c96a88b989a80f45181
 	GUID           : {04830838-b7c9-752b-d0e9-0c96a88b989a}
-</code></pre>
+```
 
-h2. Generate openssl certificate request
-<pre><code>$ pkcs15-tool --list-keys
+### Generate openssl certificate request
+
+```bash
+$ pkcs15-tool --list-keys
 Using reader with a card: Aktiv Rutoken ECP 00 00
 Private RSA Key [My Private Key]
 	Object Flags   : [0x3], private, modifiable
@@ -128,13 +137,15 @@ T3KHARExb0aFBEl9x6+oPPQSJfE/qh5S0vc7d68JEnjSwkx4Zdy9CQW+ympHpRde
 t5Dn68Xs3OjXUOJ6rEsAQcgya3PVcgjljY46555bFBz5V9LIOh+qTREGKpvOMTdO
 XUFiwTApskr8pn8Gc2mFV1cA+dEf3S9XNluNVKA=
 -----END CERTIFICATE REQUEST-----
-</code></pre>
+```
+
 If you have errors when loading engine - check the location of directory of engine_pkcs11.so
-(for example: /usr/lib/engines/engine_pkcs11.so ) and use it further when loading engine.
+(for example: `/usr/lib/engines/engine_pkcs11.so`) and use it further when loading engine.
 
+### Generate self-signed certificate
 
-h2. Generate selfsigned certificate
-<pre><code>$ pkcs15-tool --list-keys
+```bash
+$ pkcs15-tool --list-keys
 Using reader with a card: Aktiv Rutoken ECP 00 00
 Private RSA Key [My Private Key]
 	Object Flags   : [0x3], private, modifiable
@@ -177,10 +188,12 @@ AeeNkdUjCiP3nk8PJ5lW8d+ohl55W6gsi4pRvLwXH/CsKzU3scNbPKnEQz1FGpfZ
 xHp+LB1jZSUci1r6saQKkDFLXLQqIedRhR2Bevx5msw+ydM3GwwRW9K0IumwrYwp
 9IGRsBOT1s7eTZfYNURmqdhP5hIdgo3dJ4utr1c=
 -----END CERTIFICATE-----
-</code></pre>
+```
 
-h2. Sign certificate
-<pre><code>$ pkcs15-tool --list-keys
+### Sign certificate
+
+```bash
+$ pkcs15-tool --list-keys
 Using reader with a card: Aktiv Rutoken ECP 00 00
 Private RSA Key [My Private Key]
 	Object Flags   : [0x3], private, modifiable
@@ -305,10 +318,12 @@ gQAUSzkygTeqlY/b+EJkITJvEa2Owe+/IJPib2aA/PavrVyAb5gfKOoUh/lsXVks
 CkL9oe009UvFfF4vFkgnocW4DfNk0H/2Vfw2PDC/f+liI+ZPRXZDn66ntFrK55jz
 bgmRWPNLbzbjiPxIVJWnvli4l4ZcV37LxAry1qzDkBErAA==
 -----END CERTIFICATE-----
-</code></pre>
+```
 
-h2. Store certificate
-<pre><code>$ pkcs15-tool --list-keys
+### Store certificate
+
+```bash
+$ pkcs15-tool --list-keys
 Using reader with a card: Aktiv Rutoken ECP 00 00
 Private RSA Key [My Private Key]
 	Object Flags   : [0x3], private, modifiable
@@ -345,17 +360,9 @@ gQAUSzkygTeqlY/b+EJkITJvEa2Owe+/IJPib2aA/PavrVyAb5gfKOoUh/lsXVks
 CkL9oe009UvFfF4vFkgnocW4DfNk0H/2Vfw2PDC/f+liI+ZPRXZDn66ntFrK55jz
 bgmRWPNLbzbjiPxIVJWnvli4l4ZcV37LxAry1qzDkBErAA==
 -----END CERTIFICATE-----
-</code></pre>
+```
 
-h2. Speed
+## Notes
 
-(With OpenSC 0.14.0 pkcs15-init tool on Ubuntu 15.04)
- * Erasing: ~0m15s
- * GOST key generation: 0m3.883s
- * RSA 1024 key generation: ~0m30s
- * RSA 2048 key generation: ~6m00s
-
-h2. Notes
-
- * When initialising with pkcs15-init, a PUK code must not be present (press enter when asked or use --puk "")
- * Card can be erased with pkcs15-init --erase-card (including all keys) without any authentication.
+* When initializing with `pkcs15-init` tool, a PUK code must not be present (press enter when asked or use `--puk ""`).
+* Card can be erased with `pkcs15-init --erase-card` (including all keys) without any authentication.
