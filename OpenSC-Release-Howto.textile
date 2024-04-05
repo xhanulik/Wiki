@@ -37,13 +37,15 @@ Optionally, discuss changes to _NEWS_ by opening a "new issue":https://github.co
 
 h2. Build and Test Binaries
 # Create release tag
-** _Annotated_ tag for final release, _lightweight_ tag for release candidate
+** _Lightweight_ tag for release candidate
+*** Via GitHub when creating release - GitHub will automatically create _*-rcX_ as lightweight tag
+*** Locally with git
+<pre><code>  git tag 0.20.0
+  git push origin 0.20.0</code></pre>
+** _Annotated_ tag for final release
 *** Locally with git
 <pre><code>  git tag -a 0.20.0
   git push origin 0.20.0</code></pre>
-*** Via GitHub when creating release
-**** Github will automatically create _*-rcX_ as lightweight tag
-** For final releases, select the existing tag, e.g. _0.20.0_; for release candidates choose a new tag, e.g. _0.20.0-rc1_
 # Prepare build artifacts
 ** Wait around 50 minutes (after pushing the tag) to allow build artifacts be placed into the "nightly builds":https://github.com/OpenSC/Nightly
 ** All builds must succeed and must not generate more warnings than the previous build.
@@ -56,7 +58,8 @@ h2. Build and Test Binaries
 ** Do a separate smoke test for all installers and the tarball, "document your results in the Wiki":https://github.com/OpenSC/OpenSC/wiki/Smart-Card-Release-Testing.
 # Create a "new (draft) release":https://github.com/OpenSC/OpenSC/releases
 ** Describe the release including all changes to NEWS (Markdown)
-** Select appropriate tag (when pushed before) or create new one
+** Select appropriate tag (when pushed before) or create new one in GitHub (for lightweight tags only)
+*** For final releases, select the existing tag, e.g. _0.20.0_; for release candidates choose a new tag, e.g. _0.20.0-rc1_
 ** Upload the build artifacts to the new release
 *** release tarball, OSX installer, 2 variants (default, light) of Windows intaller for both 64b and 32b + separate debug archives
 *** For final releases, download signed Windows installers from Signpath.io instead of unsigned installers from AppVeyor (i.e. Nightly builds) 
@@ -86,7 +89,7 @@ h2. Announcement
 
 h2. Clean up old nightly builds repository
 
-* The repository https://github.com/OpenSC/Nightly is used to hold nightly builds for both MacOS and Windows.
+* The repository [[https://github.com/OpenSC/Nightly]] is used to hold nightly builds for both MacOS and Windows.
 * They are pushed on every master commit so the old builds need to be cleaned up regularly.
-* Ideally after the new release is done, any old branch before last release can be removed through the github web UI on https://github.com/OpenSC/Nightly/branches/stale.
-* For more info, see the https://github.com/OpenSC/Nightly/issues/1
+* Ideally after the new release is done, any old branch before last release can be removed through the github web UI on [[https://github.com/OpenSC/Nightly/branches/stale]].
+* For more info, see the [[https://github.com/OpenSC/Nightly/issues/1]]
