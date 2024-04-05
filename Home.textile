@@ -6,6 +6,7 @@ You can find the updated download links in the README or on the main github page
 
 h2. News
 
+ * 05.04.2024: "OpenSC 0.25.1":https://github.com/OpenSC/OpenSC/releases/tag/0.25.1 is available.
  * 06.03.2024: "OpenSC 0.25.0":https://github.com/OpenSC/OpenSC/releases/tag/0.25.0 is available.
  * 13.12.2023: "OpenSC 0.24.0":https://github.com/OpenSC/OpenSC/releases/tag/0.24.0 is available.
  * 29.11.2022: "OpenSC 0.23.0":https://github.com/OpenSC/OpenSC/releases/tag/0.23.0 is available.
