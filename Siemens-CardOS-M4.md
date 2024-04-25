@@ -6,7 +6,7 @@ There are two versions of CardOS cards. The first old, version 4 works in OpenSC
 
 Siemens CardOS M4 smart card should work fine with OpenSC.
 
-Supported smart cards are the [Aladdin eToken PRO](Aladdin-eToken-PRO). Unsupported are the [CryptoIdentityItsec Eutron ITSEC-I](Eutron-CryptoIdentity-ITSEC-I-ITSEC-P) USB tokens.
+Supported smart cards are the [Aladdin eToken PRO](Aladdin-eToken-PRO) and the [CryptoIdentityItsec Eutron ITSEC-I](Eutron-CryptoIdentity-ITSEC-I-ITSEC-P) USB tokens.
 
 Currently only the [Aladdin eToken PRO](Aladdin-eToken-PRO) is tested often (a usb crypto dongle that contains a card with this operating system). It works fine, so all other smart cards with the same card operating system should work fine, too.
 
