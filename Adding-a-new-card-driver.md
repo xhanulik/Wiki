@@ -34,4 +34,4 @@ When a given ATR string A is compared to the ATR supplied in `pbAtr`, it matches
 
 ## Examples
 
-* [[New card driver: EnterSafe card example]]
+* [New card driver: EnterSafe card example](New-card-driver-EnterSafe-card-example)
