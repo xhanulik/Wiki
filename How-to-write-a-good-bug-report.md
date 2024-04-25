@@ -1,3 +1,5 @@
+# How to write a good bug report
+
 ## Isolate bug
 
 The first step in in writing a bug report is to identify exactly what the problem is. Saying "something is wrong" is not helpful; saying exactly what is wrong, and how to reproduce it, is. If you can tell exactly what is wrong, and reliably reproduce an example of the problem, you've isolated a bug.
@@ -67,7 +69,8 @@ Name the operating system and version you are using, such as "Windows 8.1", or "
 #### File attachments
 
 If you can supplement your bug report with an image or debug log that helps others reproduce the issue, attach these files. You may paste a short (!) log into a pre-formatted block by both, prepending and appending, three backticks to your output:
-````
+
+````text
 ```
 Example of Markdown syntax for debug output with triple back ticks
 ```
