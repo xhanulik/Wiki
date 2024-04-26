@@ -17,7 +17,5 @@ jobs:
       - uses: actions/checkout@v4
       - uses: codespell-project/actions-codespell@master
         with:
-          skip: ./attachments
-          skip: ./ws
-          skip: ./opensc-projects.org
+          skip: ./attachments,./ws,./opensc-projects.org
           ignore_words_file: .github/codespell_ignore_words.txt
