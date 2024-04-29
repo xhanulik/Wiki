@@ -1,3 +1,0 @@
-h1. GlobalPlatform specification
-
-See JavaCard for generic information about [[JavaCards|JavaCards]]s
