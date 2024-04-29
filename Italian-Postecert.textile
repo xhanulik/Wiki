@@ -1,5 +1,0 @@
-h1. Italian Postecert
-
-OpenSC's "pkcs15-postecert.c":https://github.com/OpenSC/OpenSC/blob/master/src/libopensc/pkcs15-postecert.c includes code for Italian Postecert cards.
-
-There is no recent information about the functioning of the code with actual cards.
