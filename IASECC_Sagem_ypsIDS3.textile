@@ -1,5 +1,0 @@
-h2. Sagem IAS/ECC card  "<i>ypsID S3</i>"
-
-This card comes with one application named <i>Adele Generic</i> but it's not exactly generic application defined in "'Adele personalisation profiles'":http://www.references.modernisation.gouv.fr/sites/default/files/MDWIAS_Profils%20de%20%20personnalisation%20des%20cartes%20IAS%20%20V2_7.pdf
-
-<to be continued>
