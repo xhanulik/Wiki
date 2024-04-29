@@ -1,9 +1,0 @@
-h1. iKey 4000
-
-The new SafeSign iKey 4000 is not supported by opensc.
-To add support someone would need the APDU level documentation
-and the time and energy to write a new driver.
-
-APDU level documentation is available if you sign an NDA,
-please contact Andreas Kroehnert <andreas.kroehnert _at_ de.safenet-inc.com>
-
