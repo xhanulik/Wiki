@@ -1,43 +1,46 @@
-The OpenSC project migrated from the <code>www.opensc-project.org</code> server in November 2012.
+# OpenSC Services
 
-The web site <code>www.opensc-project.org</code> should **not** be used any more.
+The OpenSC project migrated from the `www.opensc-project.org` server in November 2012.
 
-# Source code
+**The web site `www.opensc-project.org` should not be used any more.**
 
-The source code repository of the OpenSC project and sub-projects is now at github: https://github.com/OpenSC
+## Source code
 
-# Bug tracker
+The source code repository of the OpenSC project and sub-projects is now at GitHub: <https://github.com/OpenSC>
 
-Use github bug/issue tracker: https://github.com/OpenSC/OpenSC/issues
+## Bug tracker
 
-# Wiki
+Use github bug/issue tracker: <https://github.com/OpenSC/OpenSC/issues>
 
-The wiki pages are also hosted at github: https://github.com/OpenSC/OpenSC/wiki
+## Wiki
 
-# Mailing lists
+The wiki pages are also hosted at GitHub: <https://github.com/OpenSC/OpenSC/wiki>
 
-The mailing lists are hosted at the OpenSC project at SourceForge: [http://sourceforge.net/projects/opensc/](http://sourceforge.net/projects/opensc/), and are [searchable via gmane](http://dir.gmane.org/gmane.comp.encryption.opensc.devel).
+Wiki is also open to contributions via pull request into <https://github.com/OpenSC/Wiki>
 
-* opensc-announce: announcements of new releases, bugfixes and security warnings. Low volume. https://lists.sourceforge.net/lists/listinfo/opensc-announce
-* opensc-commits: commit notifications https://lists.sourceforge.net/lists/listinfo/opensc-commits
-* opensc-devel: discussion of developement of OpenSC and related projects [https://lists.sourceforge.net/lists/listinfo/opensc-devel](https://lists.sourceforge.net/lists/listinfo/opensc-devel)
+## Mailing lists
 
-__You have to subscribe to the new lists yourself.__
+The mailing lists are hosted at the OpenSC project at SourceForge: [http://sourceforge.net/projects/opensc/](http://sourceforge.net/projects/opensc/).
 
-# Nightly builds
-## tarballs
-  http://sourceforge.net/projects/opensc/files/OpenSC/nightly/tarball
-## MSIs
-### Win32
-  http://sourceforge.net/projects/opensc/files/OpenSC/nightly/win32
-### Win64
-  http://sourceforge.net/projects/opensc/files/OpenSC/nightly/win64
+* [opensc-announce](https://lists.sourceforge.net/lists/listinfo/opensc-announce): announcements of new releases, bugfixes and security warnings. Low volume.
+* [opensc-commits](https://lists.sourceforge.net/lists/listinfo/opensc-commits): commit notifications
+* [opensc-devel](https://lists.sourceforge.net/lists/listinfo/opensc-devel): discussion of developement of OpenSC and related projects
 
-# Tarball releases
+**You have to subscribe to the new lists yourself.**
 
-* http://sourceforge.net/projects/opensc/files/OpenSC/
-* https://github.com/OpenSC/OpenSC/tags
+## Nightly builds
 
-# Continuous integration
+### MSIs and MacOS Apple Disk Image files
 
-Available using Github Actions.
+<https://github.com/OpenSC/Nightly>
+* 
+**Old builds are removed time to time.**
+
+## Tarball releases
+
+* <http://sourceforge.net/projects/opensc/files/OpenSC/>
+* <https://github.com/OpenSC/OpenSC/tags>
+
+## Continuous integration
+
+Available using GitHub Actions.
