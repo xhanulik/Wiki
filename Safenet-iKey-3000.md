@@ -1,6 +1,8 @@
-# iKey 3000
+# Safenet iKey 3000
 
-"SafeNet":http://www.safenet.com offers the iKey 3000 (known as Rainbow iKey before), an USB crypto token with 32k memory and support for RSA keys up to 1024bit key length.
+> Support and token sales have been discontinued.
+
+SafeNet offered the iKey 3000 (known as Rainbow iKey before), an USB crypto token with 32k memory and support for RSA keys up to 1024bit key length.
 
 The iKey 3000 is fully supported by OpenSC and is well tested. You need to obtain a USB driver for the token, you can use OpenCT on Linux.
 
