@@ -10,7 +10,7 @@ Pinpads tend to be buggy and not all combinations of cards and readers and PIN f
 
 ## Known and tested pinpad readers with  [CT-API](Using-pinpad-readers-with-CT-API) drivers on Windows
 
-Please feel free to add your hardware and experiences here.
+> Please feel free to add your hardware and experiences here.
 
 Class 2 readers have a pinpad for secure pin entry. Sometimes they are plugged between computer and keyboard so they use the keyboard for pin entry but capture the keystrokes before they reach the computer.
 
