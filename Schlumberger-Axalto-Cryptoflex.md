@@ -1,6 +1,8 @@
 # Schlumberger / Axalto Cryptoflex
 
-All Cryptoflex cards are supported by OpenSC, tested very often and work fine.
+> Cryptoflex card are **deactivated**. For further usage, it is necessary to enable the card driver in `opensc.conf`.
+
+All Cryptoflex cards are supported by OpenSC.
 
 If you initialize Cryptoflex cards with OpenSC, you need to know the so called transport key for this, and for creating PIN objects as well. The card can later be erased by anyone knowing the transport key only (knowing the SO-PIN or PIN is not required).
 
