@@ -1,12 +1,13 @@
-**Table of Contents**
-- [OpenSC installation](#opensc-installation)
-- [Changing the PIN](#changing-the-pin)
-- [Changing or Initializing the Fingerprints](#changing-or-initializing-the-fingerprints)
-- [Initializing SmartCardHSM](#initializing-smartcardhsm)
-- [Standard Use in PKCS#11, Minidriver and Tokend](#standard-use-in-pkcs11-minidriver-and-tokend)
+# GoID fingerprint card
 
-The [GoID fingerprint
-card](https://github.com/OpenSC/OpenSC/wiki/attachments/wiki/GoID_EN.PDF) is a
+## Table of Contents
+
+* [OpenSC installation](#opensc-installation)
+* [Changing the PIN](#changing-the-pin)
+* [Changing or Initializing the Fingerprints](#changing-or-initializing-the-fingerprints)
+* [Initializing SmartCardHSM](#initializing-smartcardhsm)
+
+The [GoID fingerprint card](https://github.com/OpenSC/OpenSC/wiki/attachments/wiki/GoID_EN.PDF) is a
 contactless smart card with an integrated fingerprint sensor and PIN pad for
 user authentication. The GoID is capable of hosting multiple
 on-card-applications. It is compatible with every contactless smart card reader
@@ -15,60 +16,40 @@ on-card-applications. It is compatible with every contactless smart card reader
 ![GoID fingerprint card](https://github.com/OpenSC/OpenSC/wiki/attachments/wiki/GoID.jpeg)
 
 In the default configuration, the GoID card ships with the following on-card-applications:
-- [SmartCard-HSM](https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM) as PKI
+
+* [SmartCard-HSM](https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM) as PKI
   application (available via PKCS#11, Minidriver, Tokend, CKT)
-- [PAccess](https://www.cryptoplexity.informatik.tu-darmstadt.de/media/crypt/publications_1/access_control.pdf)
+* [PAccess](https://www.cryptoplexity.informatik.tu-darmstadt.de/media/crypt/publications_1/access_control.pdf)
   for physical access control
 
 The GoID has also been verified to be compatible with the following
-- PKI applications:
-  - [Cryptovision ePasslet Suite](https://www.cryptovision.com/en/products/epasslet/)
-  - [IsoApplet](https://github.com/philipWendland/IsoApplet)
-- Classical Physical Access Control Systems:
-  - [Mifare DESFire](https://www.mifare.net/en/products/chip-card-ics/mifare-desfire/)
-  - [LEGIC advant](https://www.legic.com/technology-platform/smartcard-ics/)
+
+* PKI applications:
+  * [Cryptovision ePasslet Suite](https://www.cryptovision.com/en/products/epasslet/)
+  * [IsoApplet](https://github.com/philipWendland/IsoApplet)
+* Classical Physical Access Control Systems:
+  * [Mifare DESFire](https://www.mifare.net/en/products/chip-card-ics/mifare-desfire/)
+  * [LEGIC advant](https://www.legic.com/products/smartcards/legic-smartcard-ics)
 
 ## OpenSC installation
 
-Binaries of OpenSC with the recommended configuration for GoID is available here:
+Binaries of OpenSC with the recommended configuration for GoID is available at [release page](https://github.com/OpenSC/OpenSC/releases).
 
-| Platform         | Package |
-| ---------------- | ------- |
-| Windows (64 bit) | [OpenSC-0.19.0_win64.msi](https://github.com/OpenSC/Nightly/blob/2019-06-03_3a192e2c/OpenSC-0.19.0_win64.msi?raw=true) |
-| Windows (32 bit) | [OpenSC-0.19.0_win32.msi](https://github.com/OpenSC/Nightly/blob/2019-06-03_3a192e2c/OpenSC-0.19.0_win32.msi?raw=true) |
-| macOS            | [OpenSC-0.19.0.dmg](https://github.com/OpenSC/Nightly/blob/2019-06-03_3a192e2c/OpenSC-0.19.0.dmg?raw=true)             |
-| Source code      | [opensc-0.19.0.tar.gz](https://github.com/OpenSC/Nightly/blob/2019-06-03_3a192e2c/opensc-0.19.0.tar.gz?raw=true)       |
-
-For other platforms, the source code [needs to be compiled along with its dependencies](https://github.com/OpenSC/OpenSC/wiki/Compiling-and-Installing-on-Unix-flavors), in particular [OpenSSL](https://www.openssl.org/), [OpenPACE](https://github.com/frankmorgner/openpace). On Ubuntu, for example, this looks as follows:
-```
-sudo apt-get install libpcsclite-dev libssl-dev libtool gcc pkg-config gengetopt help2man
-# install OpenPACE
-wget https://github.com/frankmorgner/openpace/releases/download/1.0.3/openpace-1.0.3.tar.gz
-tar xfvz openpace-*.tar.gz
-cd openpace-*
-./configure --prefix=/usr
-make
-sudo make install
-cd ..
-# install OpenSC
-wget https://github.com/OpenSC/Nightly/blob/2019-06-03_3a192e2c/opensc-0.19.0.tar.gz?raw=true -O opensc-0.19.0.tar.gz
-tar xfvz opensc-*.tar.gz
-cd opensc-*
-./configure --prefix=/usr --sysconfdir=/etc/opensc
-make
-sudo make install
-```
+For other platforms, the source code [needs to be compiled along with its dependencies](Compiling-and-Installing-on-Unix-flavors), in particular [OpenSSL](https://www.openssl.org/), [OpenPACE](https://github.com/frankmorgner/openpace). Refer to [wiki page about compilation on Unix flavors](Compiling-and-Installing-on-Unix-flavors).
 
 ## Changing the PIN
 
-Changing the PIN requires prior authentication of the (initial) PIN.  (With
-`goid-tool --info` you can verify the exact configuration of the card.) The new PIN must be verified twice.
+Changing the PIN requires prior authentication of the (initial) PIN. With
+`goid-tool --info` you can verify the exact configuration of the card. The new PIN must be verified twice.
 
 To change the PIN from its current (initial) value, use the following command:
-```
+
+```sh
 goid-tool --verbose --verify-pin --new-pin
 ```
+
 The program will...
+
 1. Ask for the current (initial) PIN on the builtin PIN-pad
 2. Ask for the new PIN on the builtin PIN-pad
 3. Ask for verifying new PIN on the builtin PIN-pad
@@ -87,10 +68,13 @@ authentication of the PIN. (With `goid-tool --info` you can verify the exact
 configuration of the card.) Each new finger print template must be verified three times.
 
 For example, to initialize two finger print templates use the following command:
-```
+
+```sh
 goid-tool --verbose --verify-pin --new-bio --new-bio
 ```
+
 The program will...
+
 1. Ask for the current PIN on the builtin PIN-pad
 2. Ask twice for
    1. ... putting a finger on the builtin sensor
@@ -100,7 +84,7 @@ The program will...
 
 Initializing - and thereby erasing all keys, certificates and data elements - requires the following command
 
-```
+```sh
 sc-hsm-tool --initialize --so-pin 3537363231383830 --pin=648219 --bio-server1 80D276000172536F434D01 --bio-server2 40D276000172536F434D01
 ```
 
@@ -114,15 +98,15 @@ internally converted into an 8 byte key value. The SO-PIN has a retry counter
 of 15 and can not be unblocked. Blocking the SO-PIN will prevent any further
 token initialization.
 
-Further personalization of the applet is described on the [SmartCardHSM
-page](https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM). It's features include:
-- Support for [RSA and ECC](https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#generate-key-pair)
-- Support for [key backup and
-  restore](https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#using-key-backup-and-restore)
-  optionally using a [n-of-m threshold
-  scheme](https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#using-a-n-of-m-threshold-scheme)
+Further personalization of the applet is described on the [SmartCardHSM page](SmartCardHSM).
+It's features include:
+
+* Support for [RSA and ECC](SmartCardHSM#generate-key-pair)
+* Support for [key backup and restore](SmartCardHSM#using-key-backup-and-restore)
+  optionally using a [n-of-m threshold scheme](SmartCardHSM#using-a-n-of-m-threshold-scheme)
 
 For example, generating a RSA key with a self signed certificate could be done as follows:
+
 ```sh
 export TYPE=rsa:2048
 export LABEL=$TYPE
