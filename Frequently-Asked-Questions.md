@@ -8,7 +8,7 @@ PKCS#11 is a software API for accessing cryptographic hardware like smart cards 
 
 Links:
 
-* [PKCS#11 on Wikipedia](https://en.wikipedia.org/wiki/PKCS_11)
+* [PKCS #11 on Wikipedia](https://en.wikipedia.org/wiki/PKCS_11)
 * [PKCS #11 Cryptographic Token Interface Base Specification Version 3.0](https://docs.oasis-open.org/pkcs11/pkcs11-base/v3.0/pkcs11-base-v3.0.html)
 
 ### What is PKCS#15
@@ -44,7 +44,7 @@ No, unless you want your software to be open source or if your vendor does not p
 
 No, unless you are using Linux and an USB token or exotic reader which is not CCID compatible, comes without a driver for pcsc-lite and at the same time is supported by OpenCT. The recommended method for accessing smart card readers is PC/SC and thus pcsc-lite.
 
-### I have installed OpenSC, OpenCT, pcsc-lite and ccid and I'm having troubles connecting to my CCID compatible reader.
+### I have installed OpenSC, OpenCT, pcsc-lite and ccid and I'm having troubles connecting to my CCID compatible reader
 
 The preferred access method for CCID readers is via pcsc-lite. You have installed two CCID drivers which may compete for resources. You should remove OpenCT.
 
