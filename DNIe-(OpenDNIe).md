@@ -225,5 +225,5 @@ Current implementation of DNIe OpenSC driver consists in:
 * `pkcs15-dnie.c` emulator layer,
 * `cwa14890.c` card-independent implementation for CWA14890 standard for Secure Messaging,
 * `cwa-dnie.c` DNIe Data provider for cwa14890.c, that provides (local) keys and certificates required to complain with cwa14890 SM protocol,
-* a wrap funcion for sc_transmit_apdu() method, that catches al apdu requests, and translates into SM format when required,
+* a wrap function for sc_transmit_apdu() method, that catches al apdu requests, and translates into SM format when required,
 * several glue patches.

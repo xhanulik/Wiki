@@ -22,4 +22,4 @@ reviewed it. This is an emergency procedure only, subscription is assumed.
 
 ## Bug reports
 
-Please file bug reports using the [Issues](https://github.com/OpenSC/OpenSC/issues) link (after reading about [ReportingBugs](How-to-write-a-good-bug-report). [Security releated issues](https://github.com/OpenSC/OpenSC/security/advisories/new) can be filed without public visibility.
+Please file bug reports using the [Issues](https://github.com/OpenSC/OpenSC/issues) link (after reading about [ReportingBugs](How-to-write-a-good-bug-report). [Security related issues](https://github.com/OpenSC/OpenSC/security/advisories/new) can be filed without public visibility.
