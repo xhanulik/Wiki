@@ -1,4 +1,4 @@
-h1. Schlumberger / Axalto Cryptoflex
+# Schlumberger / Axalto Cryptoflex
 
 All Cryptoflex cards are supported by OpenSC, tested very often and work fine.
 
@@ -6,7 +6,4 @@ If you initialize Cryptoflex cards with OpenSC, you need to know the so called t
 
 Cryptoflex 8k cards however are too small, so the default profile does not fit on the card. Not even the small option is small enough to make it fit on the card. However you could edit the profile file to make it even smaller, then it should work again.
 
-Documentation is available on the internet, for example "http://www.polman-software.com.pl/pdf/CryptoflexPG.pdf":http://www.polman-software.com.pl/pdf/CryptoflexPG.pdf.
-
 Cryptoflex cards are also available as SchlumbergerEgate - a version of Cryptoflex cards that natively support Full speed USB on their chip and only require a small adapter/connector to interface to the USB bus of the PC, either in token (sim) format of full ISO format.
-
