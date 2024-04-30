@@ -24,7 +24,7 @@ The mailing lists are hosted at the OpenSC project at SourceForge: [http://sourc
 
 * [opensc-announce](https://lists.sourceforge.net/lists/listinfo/opensc-announce): announcements of new releases, bugfixes and security warnings. Low volume.
 * [opensc-commits](https://lists.sourceforge.net/lists/listinfo/opensc-commits): commit notifications
-* [opensc-devel](https://lists.sourceforge.net/lists/listinfo/opensc-devel): discussion of developement of OpenSC and related projects
+* [opensc-devel](https://lists.sourceforge.net/lists/listinfo/opensc-devel): discussion of development of OpenSC and related projects
 
 **You have to subscribe to the new lists yourself.**
 

@@ -79,7 +79,7 @@ Optionally, discuss changes to _NEWS_ by opening a [new issue](https://github.co
     * Select appropriate tag (when pushed before) or create new one in GitHub (for lightweight tags only)
       * For final releases, select the existing tag, e.g. _0.20.0_; for release candidates choose a new tag, e.g. _0.20.0-rc1_
     * Upload the build artifacts to the new release
-      * release tarball, OSX installer, 2 variants (default, light) of Windows intaller for both 64b and 32b + separate debug archives
+      * release tarball, OSX installer, 2 variants (default, light) of Windows installer for both 64b and 32b + separate debug archives
       * For final releases, download signed Windows installers from Signpath.io instead of unsigned installers from AppVeyor (i.e. Nightly builds):
 
         1. Navigate to [Signpath's outstanding Signing Requests](https://app.signpath.io/Web/8d2463fe-39bd-4a41-bb72-f008b4b1fe17/SigningRequests)

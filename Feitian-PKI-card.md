@@ -2,7 +2,7 @@
 
 [Feitian](http://www.ftsafe.com/) offers the "ePass PKI token", also called Feitian FTCOS/PK-01C token.
 
-The Feitian PKI card is a cryptographic smartcard, which complies wih PKCS#15 and ISO 7816 standards and can be used used for:
+The Feitian PKI card is a cryptographic smartcard, which complies which PKCS#15 and ISO 7816 standards and can be used used for:
 authentication, electronic signature, email encryption, single logon, VPN, SSL and disc encryption.
 
 The cards comes blank in PVC, so that it can be printed using retransfer printers or offset.

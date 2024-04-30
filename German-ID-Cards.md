@@ -24,7 +24,7 @@ As of May 2011 you may get signature cards from the following Trust centers in G
 
 ## TeleSec, NetKey cards
 
-TeleSec GmbH is the manufacturer of cards and they offer [TCOS](TCOS-based-preformatted-cards) based signature cards, i.e. NetKey E4 cards. Until the end of 2007 theses card were TCOS2 based with a maximal key length of 1024 bit. Since October 2007 TeleSec offers 2048 bit signature cards which are TCOS3 based.
+TeleSec GmbH is the manufacturer of cards and they offer [TCOS](TCOS-based-preformatted-cards) based signature cards, i.e. NetKey E4 cards. Until the end of 2007 these card were TCOS2 based with a maximal key length of 1024 bit. Since October 2007 TeleSec offers 2048 bit signature cards which are TCOS3 based.
 
 TCOS2 cards work well with OpenSC 0.10.0 or later. There was a problem in 0.12.0 and 0.12.1 which as fixed in 0.12.2 (ticket #256). TCOS3 support was added in December 2007 and is included in OpenSC 0.11.5. Unfortunately the 2048 bit NetKey card contains one key (the one that conforms to the German signature law) that can be used only over a secure channel. So if you want to use this particular key with OpenSC you must wait until OpenSC supports Secure Messaging.
 

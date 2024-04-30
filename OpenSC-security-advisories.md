@@ -17,4 +17,4 @@ Software often contains bugs, so does OpenSC. Be aware of the following security
 * 27.08.2008 security advisory coded as [CVE-2008-3972](http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-3972)
 * 31.07.2008 security advisory coded as [CVE-2008-2235](http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-2235)
 
-If you have other [security releated issues](https://github.com/OpenSC/OpenSC/security/advisories/new) to report, they can be filed without public visibility.
+If you have other [security related issues](https://github.com/OpenSC/OpenSC/security/advisories/new) to report, they can be filed without public visibility.

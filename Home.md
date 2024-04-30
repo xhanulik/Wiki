@@ -48,8 +48,8 @@ OpenSC effort consists of various sub-projects that can be used independently as
 
 * [libp11](https://github.com/OpenSC/libp11) is a wrapper library for PKCS#11 modules with OpenSSL interface,
 * [pkcs11-helper](https://github.com/OpenSC/pkcs11-helper) is a wrapper library for PKCS#11 modules with extended callback mechanisms for user and token interaction,
-* [PAM-PKCS#11](https://github.com/OpenSC/pam_pkcs11/wiki) is a feature rich plugable authentication module (PAM) for authentication via PKCS#11 modules, which includes various tools to controls the login process,
-* [pam_p11](https://github.com/OpenSC/pam_p11) is a simple plugable authentication module (PAM) for authentication via PKCS#11 modules,
+* [PAM-PKCS#11](https://github.com/OpenSC/pam_pkcs11/wiki) is a feature rich pluggable authentication module (PAM) for authentication via PKCS#11 modules, which includes various tools to controls the login process,
+* [pam_p11](https://github.com/OpenSC/pam_p11) is a simple pluggable authentication module (PAM) for authentication via PKCS#11 modules,
 * [OpenCT](https://github.com/OpenSC/openct/wiki) implements a reader driver interface for various non-standard readers on Linux,
 * [OpenSC-Java](https://github.com/CardContact/opensc-java) is a Java PKCS#11 wrapper and JCE Provider,
 * [OpenSC.tokend](https://github.com/OpenSC/OpenSC.tokend) is the open source tokend implementation from OpenSC.
