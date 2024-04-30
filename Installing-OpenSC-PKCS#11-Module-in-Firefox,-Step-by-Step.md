@@ -39,7 +39,7 @@ This step by step description is can also be found in "Mozilla's knowledge base"
     | macOS (installation with brew) | `/usr/local/Cellar/opensc/[VERSION]/lib/pkcs11/` |
     | Linux | `/usr/lib/` |
 
-    Click on `opensc‑pkcs11-onepin.dll` (Windows) or `onepin-opensc‑pkcs11.so` (Linux, macOS). Click `Open`.
+    Click on `opensc‑pkcs11.dll` (Windows) or `opensc‑pkcs11.so` (Linux, macOS). Click `Open`.
 
     ![Open library](https://github.com/n8felton/OpenSC/wiki/attachments/wiki/MozillaSteps/FirefoxESR52_4.png "Open library")
 
