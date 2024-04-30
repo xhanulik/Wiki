@@ -11,9 +11,9 @@ The situation is comparable to OpenSC itself, where the OpenSC framework takes c
 The smart card minidriver offers a shortcut compared to building a traditional cryptographic service provider (CSP). It does this by handling most of the complicated cryptographic tasks behind the scenes, saving the developer time and effort.
 Available specifications can be found [here](https://learn.microsoft.com/en-us/previous-versions/windows/hardware/design/dn631754(v=vs.85)). The versions are:
 
-* version 5 of the minidriver specification applies to Windows XP (and Windows Vista)
-* version 6 applies to Windows Vista
-* version 7 applies to Windows 7.
+* version 5 of the minidriver specification applies to Windows XP (and Windows Vista),
+* version 6 applies to Windows Vista,
+* version 7 applies to Windows 7 and later.
 
 ### Resources
 
