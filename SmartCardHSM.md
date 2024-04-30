@@ -1,56 +1,58 @@
-The "SmartCard-HSM":http://www.smartcard-hsm.com is a lightweight hardware security module in a smart card form factor. The "Nitrokey HSM":https://www.nitrokey.com/ is a lightweight hardware security module in a USB key form factor containing the SmartCard-HSM. Both are 100% compatible and provide a remote-manageable secure key store for RSA and ECC keys.
+# SmartCardHSM
 
-The SmartCard-HSM is available as USB key, ID-1 card with contact/contactless interface, as ID-000 plug-in and MicroSD card. It can be purchased at "authorized resellers":http://www.smartcard-hsm.com/buy.html. The Nitrokey HSM can be purchased in "Nitrokey's online shop":https://shop.nitrokey.com/shop.
+The SmartCard-HSM is a lightweight hardware security module in a smart card form factor. The [Nitrokey HSM](https://www.nitrokey.com/) is a lightweight hardware security module in a USB key form factor containing the SmartCard-HSM. Both are 100% compatible and provide a remote-manageable secure key store for RSA and ECC keys.
 
-Starting with version 0.13, the OpenSC driver has read/write support for RSA and ECC keys, certificates, public and private data objects. New features are made available in our repository at "github":https://github.com/CardContact/OpenSC.
+The SmartCard-HSM is available as USB key, ID-1 card with contact/contactless interface, as ID-000 plug-in and MicroSD card. It can be purchased at [authorized resellers](http://www.smartcard-hsm.com/buy.html). The Nitrokey HSM can be purchased in [Nitrokey's online shop](https://shop.nitrokey.com/shop).
 
-An alternative and light-weight PKCS#11 module for read-only access is available with the "SmartCard-HSM for Embedded Devices":https://github.com/CardContact/sc-hsm-embedded/wiki/PKCS11 project.
+An alternative and light-weight PKCS#11 module for read-only access is available with the SmartCard-HSM for [Embedded Devices](https://github.com/CardContact/sc-hsm-embedded/wiki/PKCS11) project.
 
 CardContact provides free development samples for open source developers. For commercial use we offer a SmartCard-HSM SDK with certified drivers and extended support for Java.
 
-Unless stated otherwise, a SmartCard-HSM is usually shipped uninitialized, meaning that no SO-PIN is set. You will first need to perform an initialization to set the SO-PIN and initial user PIN. See section "Initialize the Device":#initialize-the-device below. 
+Unless stated otherwise, a SmartCard-HSM is usually shipped uninitialized, meaning that no SO-PIN is set. You will first need to perform an initialization to set the SO-PIN and initial user PIN. See section [Initialize the Device](#initialize-the-device).
 
-Please note, that the SmartCard-HSM is *not* compatible with the pkcs15-init command. In particular it does *not* support pkcs15-init to import a key from PKCS#12 files. Doing so will just create certificate objects and the private key metadata, but no key. Please use the "Smart Card Shell":https://www.openscdp.org/scsh3 to import keys and certificates from PKCS#12 files.
+Please note, that the SmartCard-HSM is *not* compatible with the `pkcs15-init` command. In particular it does *not* support `pkcs15-init` to import a key from PKCS#12 files. Doing so will just create certificate objects and the private key metadata, but no key. Please use the [Smart Card Shell](https://www.openscdp.org/scsh3/) to import keys and certificates from PKCS#12 files.
 
-Further test scripts can be found in the "Smart Card Shell Script Collection":http://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html.
+Further test scripts can be found in the [Smart Card Shell Script Collection](https://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html).
 
-h2. Reader support
+## Reader support
 
-For RSA 2048 operations and write support, the SmartCard-HSM requires a card reader supporting extended length APDUs. In our tests, card reader from "Identive (formerly SCM)":http://www.identive-infrastructure.com performed best.
+For RSA 2048 operations and write support, the SmartCard-HSM requires a card reader supporting extended length APDUs. In our tests, card reader from Identive (formerly SCM) performed best.
 
 Omnikey readers require a registry setting to enable TPDU mode and support for extended length APDU. If you encounter problems with Omnikey readers, try setting the following registry key:
 
-<pre><code>Windows Registry Editor Version 5.00
+```powershell
+Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CardMan]
 "TPDU_T1Mode"=dword:00000001
-</code></pre>
+```
 
-or on Linux set in /etc/omnikey.ini
+or on Linux set in `/etc/omnikey.ini`
 
-<pre><code>
+```powershell
 [Reader]
 TPDU_T1Mode=1
-</code></pre>
+```
 
 However, setting T1Mode breaks PIN verification using the PIN pad on the Omnikey 3821 reader.
 
-h2. Using the PKCS#11 module in Firefox and Thunderbird
+## Using the PKCS#11 module in Firefox and Thunderbird
 
 After installation of OpenSC you must register the PKCS11 module in Firefox:
 
 1. Open the Firefox preferences dialog. Choose "Advanced" > "Encryption" > "Security Devices"
 2. Choose "Load"
 3. Enter a name for the security module, such as "OpenSC"
-4. Choose "Browse..." to find the location of the PKCS11 module on your local computer (Usually c:\WINDOWS\System32\opensc-pkcs11.dll or /usr/local/lib/opensc-pkcs11.so)
+4. Choose "Browse..." to find the location of the PKCS11 module on your local computer (Usually `c:\WINDOWS\System32\opensc-pkcs11.dll` or `/usr/local/lib/opensc-pkcs11.so`)
 
-h2. Using the SmartCard-HSM with the CSP Minidriver
+## Using the SmartCard-HSM with the CSP Minidriver
 
 After installing OpenSC on Windows, you can register the SmartCard-HSM for use with Microsoft applications like Internet Explorer or Outlook.
 
-Save the following to a file sc-hsm.reg and double-click to import it into the registy. Please make sure you replace the quotes by straight quotes.
+Save the following to a file sc-hsm.reg and double-click to import it into the registry. Please make sure you replace the quotes by straight quotes.
 
-<pre><code>Windows Registry Editor Version 5.00
+```powershell
+Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Calais\SmartCards\SmartCard-HSM]
 "ATR"=hex:3b,fe,18,00,00,81,31,fe,45,80,31,81,54,48,53,4d,31,73,80,21,40,81,07,fa
@@ -65,17 +67,18 @@ Save the following to a file sc-hsm.reg and double-click to import it into the r
 "Crypto Provider"="OpenSC CSP"
 "Smart Card Key Storage Provider"="Microsoft Smart Card Key Storage Provider"
 "80000001"="C:\Program Files\OpenSC Project\OpenSC\minidriver\opensc-minidriver.dll"
-</code></pre>
+```
 
 If you plan to use 32-bit applications on Windows with 64-bit, then you need to install both versions
 of OpenSC, the 64-bit and the 32-bit version. The same registry setting as above must be applied to
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Wow6432Node\Cryptography\Calais\SmartCards.
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Wow6432Node\Cryptography\Calais\SmartCards`.
 
-h2. Using opensc-explorer
+## Using opensc-explorer
 
 The SmartCard-HSM is an applet installed on a JavaCard. With opensc-explorer you will first need to select the applet before you can issue further commands.
 
-<pre><code>OpenSC Explorer version 0.13.0-pre1
+```powershell
+OpenSC Explorer version 0.13.0-pre1
 Using reader with a card: SCM SCR 3310 00 00
 OpenSC [3F00]> cd aid:E82B0601040181C31F0201
 OpenSC [E82B/0601/0401/81C3/1F02/01]> ls
@@ -98,33 +101,41 @@ FileID  Type  Size
  CC04 unable to select file, File not found
  CC05 unable to select file, File not found
 OpenSC [E82B/0601/0401/81C3/1F02/01]>
-</code></pre>
+```
+
 Don't be worry about the CCxx files not being found. These file identifiers are reserved as references for key objects and can not be found by the opensc-explorer.
 
-The card PIN is referenced using the PIN id 0x81. In opensc-explorer you will need to enter
+The card PIN is referenced using the PIN id 0x81. In `opensc-explorer` you will need to enter
 
-<pre><code>OpenSC [E82B/0601/0401/81C3/1F02/01]> verify chv129
+```sh
+OpenSC [E82B/0601/0401/81C3/1F02/01]> verify chv129
 Please enter PIN:
 Code correct.
-OpenSC [E82B/0601/0401/81C3/1F02/01]>                
-</code></pre>
+OpenSC [E82B/0601/0401/81C3/1F02/01]>
+```
 
 For changing the PIN you need to enter the old and new PIN as ASCII string:
-<pre><code>OpenSC [E82B/0601/0401/81C3/1F02/01]> change chv129 "648219" "123456"
+
+```sh
+OpenSC [E82B/0601/0401/81C3/1F02/01]> change chv129 "648219" "123456"
 PIN changed.
 OpenSC [E82B/0601/0401/81C3/1F02/01]> 
-</code></pre>
+```
 
 For changing the SO-PIN you need to enter the old and new PIN as ASCII string:
-<pre><code>OpenSC [E82B/0601/0401/81C3/1F02/01]> change chv136 "3537363231383830" "3537363231383830"
+
+```sh
+OpenSC [E82B/0601/0401/81C3/1F02/01]> change chv136 "3537363231383830" "3537363231383830"
 PIN changed.
 OpenSC [E82B/0601/0401/81C3/1F02/01]> 
-</code></pre>
+```
 
-h2. Using pkcs15-tool
+## Using pkcs15-tool
 
-A SmartCard-HSM equipped with test certificates from the "support package":http://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html contains one RSA and four ECC keys:
-<pre><code>$ pkcs15-tool -D
+A SmartCard-HSM equipped with test certificates from the [support package](https://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html) contains one RSA and four ECC keys:
+
+```sh
+$ pkcs15-tool -D
 Using reader with a card: SCM SCR 3310 [CCID Interface] (21120843305113) 00 00
 PKCS#15 Card [SmartCard-HSM]:
         Version        : 0
@@ -285,46 +296,60 @@ X.509 Certificate [Joe Doe (RSA1024)]
         ID             : 07
         GUID           : {f40c87ed-3026-a3a3-2f16-4e339fce6ff9}
         Encoded serial : 02 08 02C05C90657208BC
-</code></pre>
+```
 
-h2. Using pkcs11-tool
+## Using `pkcs11-tool`
 
-h3(#init). Initialize the device
+### Initialize the device
 
 Initializing - and thereby erasing all keys, certificates and data elements - requires the following command
 
-<pre><code>$ sc-hsm-tool --initialize --so-pin 3537363231383830 --pin 648219
-</code></pre>
+```sh
+$ sc-hsm-tool --initialize --so-pin 3537363231383830 --pin 648219
+```
+
 or
-<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --init-token --init-pin --so-pin=3537363231383830 --new-pin=648219 --label="test" --pin=648219
-</code></pre>
+
+```sh
+$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --init-token --init-pin --so-pin=3537363231383830 --new-pin=648219 --label="test" --pin=648219
+```
 
 If the SmartCard-HSM was never initialized before, the presented SO-PIN is stored as future SO-PIN for this device. Any later initialization requires the presentation of the same SO-PIN. Please make sure to select your own values for SO-PIN and user PIN if used in a production environment.
 
 The SO-PIN must be composed of 16 hexadecimal characters. The value is internally converted into an 8 byte key value. The SO-PIN has a retry counter of 15 and can not be unblocked. Blocking the SO-PIN will prevent any further token initialization or PIN unblock.
 
-Please note that while changing the PIN later is possible, changing its _size_ (length) is not. Current card version 1.2 does not allow this without reinitializing the card.
+Please note that while changing the PIN later is possible, changing its *size* (length) is not. Current card version 1.2 does not allow this without reinitializing the card.
 
-The parameter --label is required by PKCS#11, but has not effect on version 0.13. OpenSC versions from the current master support storing the label.
+The parameter `--label` is required by PKCS#11, but has not effect on version 0.13. OpenSC versions from the current master support storing the label.
 
-For SmartCard-HSMs in a version before 1.0, the --init-pin option can only be used immediately after the --init-token command. To reset a lost PIN you will need to reinitialize the device. For SmartCard-HSMs with version 1.0 or above the --init-pin command can be used at any time, allowing to unblock and reset the PIN using the SO-PIN.
+For SmartCard-HSMs in a version before 1.0, the `--init-pin` option can only be used immediately after the `--init-token` command. To reset a lost PIN you will need to reinitialize the device. For SmartCard-HSMs with version 1.0 or above the `--init-pin` command can be used at any time, allowing to unblock and reset the PIN using the SO-PIN.
 
 To change the SO-PIN (Version 1.0 or higher) you can use
-<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --login --login-type so --so-pin 3537363231383830 --change-pin --new-pin 0123456789012345
-</code></pre>
+
+```sh
+$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --login --login-type so --so-pin 3537363231383830 --change-pin --new-pin 0123456789012345
+```
 
 Security Considerations: The SO-PIN allows to reset the retry counter for the PIN and also allows to set the PIN to a new value. Please make sure, that the SO-PIN is kept secure at any time. If you don't ever want to reset the card, we suggest to set the SO-PIN to an 8 byte random value.
 
 To change the PIN you can use
-<pre><code>$ pkcs11-tool --login --pin 648219 --change-pin --new-pin 123456</code></pre>
+
+```sh
+$ pkcs11-tool --login --pin 648219 --change-pin --new-pin 123456
+```
 
 To unblock and change the PIN using the SO-PIN you can use
-<pre><code>$ pkcs11-tool --login --login-type so --so-pin=3537363231383830 --init-pin --new-pin=648219</code></pre>
 
-h3. Generate key pair
+```sh
+$ pkcs11-tool --login --login-type so --so-pin=3537363231383830 --init-pin --new-pin=648219
+```
+
+### Generate key pair
 
 Use the following command to generate a key pair:
-<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --keypairgen --key-type rsa:1024 --id 10
+
+```sh
+$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --keypairgen --key-type rsa:1024 --id 10
 Using slot 1 with a present token (0x1)
 Key pair generated:
 Private Key Object; RSA
@@ -335,58 +360,81 @@ Public Key Object; RSA 1024 bits
   label:      Private Key
   ID:         10
   Usage:      encrypt, verify, wrap
+```
 
 or for ECC keys:
+
+```sh
 $ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so --login --pin 648219 --keypairgen --key-type EC:prime256v1 --label mykey
-</code></pre>
+```
+
 The SmartCard-HSM driver extracts required PKCS#11 public key object from certificates stored on the device. For newly generated key pairs without a certificate the certificate signing request is stored instead.
 
 To save the generated public key in Subject Public Key Information format as per RFC3280 use the following command
-<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --id 10 --read-object --type pubkey --output-file pubkey.spki
-</code></pre>
 
-h3. Store certificates and data
+```sh
+$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --id 10 --read-object --type pubkey --output-file pubkey.spki
+```
+
+### Store certificates and data
 
 Use the following commands to store certificates and data:
-<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --write-object testcert.der --type cert --id 10
-</code></pre>
-and
-<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --write-object testcert.der --type data --label testdata
-</code></pre>
 
-h3. Delete objects
+```sh
+$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --write-object testcert.der --type cert --id 10
+```
+
+and
+
+```sh
+$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --write-object testcert.der --type data --label testdata
+```
+
+### Delete objects
 
 For deleting objects use one of the following commands
-<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --delete-object --type cert --id 10
+
+```sh
+$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --delete-object --type cert --id 10
 $ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --delete-object --type privkey --id 10
 $ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --delete-object --type data --label testdata
-</code></pre>
+```
 
-h2. Using OpenSSL with engine-pkcs11
+## Using OpenSSL with `engine-pkcs11`
 
-h3. Generate a key pair and a self-signed certificate
+> Usage of engines is deprecated from OpenSSL 3.0
+
+### Generate a key pair and a self-signed certificate
 
 Use the following command to generate a key pair:
-<pre><code>$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --keypairgen --key-type rsa:2048 --id 10
-</code></pre>
-Start openssl to get the openssl prompt and enter
-<pre><code>OpenSSL> engine -t dynamic -pre SO_PATH:/usr/local/lib/engines/engine_pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre MODULE_PATH:/usr/local/lib/pkcs11/opensc-pkcs11.so
-OpenSSL> req -engine pkcs11 -new -key 0:10 -keyform engine -out cert.pem -text -x509 -days 3640
-</code></pre>
-This results in a file cert.pem that contains the self-signed certificate.
-If your SmartCard-HSM is not inserted into the first card reader, then please change "0:10" to slotid:keyid accordingly.
-Use the following line to convert to DER format and load the certificate into the SmartCard-HSM:
-<pre><code>$ openssl x509 -in cert.pem -out cert.der -outform der
-$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --write-object cert.der --type cert --id 10
-</code></pre>
 
-h2. Using key backup and restore
+```sh
+$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --keypairgen --key-type rsa:2048 --id 10
+```
+
+Start openssl to get the openssl prompt and enter
+
+```sh
+OpenSSL> engine -t dynamic -pre SO_PATH:/usr/local/lib/engines/engine_pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre MODULE_PATH:/usr/local/lib/pkcs11/opensc-pkcs11.so
+OpenSSL> req -engine pkcs11 -new -key 0:10 -keyform engine -out cert.pem -text -x509 -days 3640
+```
+
+This results in a file `cert.pem` that contains the self-signed certificate.
+If your SmartCard-HSM is not inserted into the first card reader, then please change `0:10` to `slotid:keyid` accordingly.
+Use the following line to convert to DER format and load the certificate into the SmartCard-HSM:
+
+```sh
+$ openssl x509 -in cert.pem -out cert.der -outform der
+$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --write-object cert.der --type cert --id 10
+```
+
+## Using key backup and restore
 
 The SmartCard-HSM provides for a secure key backup and restore functionality. This mechanism allows to encrypt and export a key generated on a SmartCard-HSM and to later import that key into the same or a different SmartCard-HSM. The scheme can be used to
 
 * Backup a key for disaster recovery (e.g. in a Root-CA)
 * Extend the number of keys by offloading unused keys to an external database
-* Operate multiple SmartCard-HSMs in a cluster to improve performance and allow fail-over 
+* Operate multiple SmartCard-HSMs in a cluster to improve performance and allow fail-over
 * Implement a key escrow scheme
 
 In order to export or import keys, the SmartCard-HSM must be initialized with a Device Key Encryption Key (DKEK). The DKEK is a 256-Bit AES key.
@@ -395,9 +443,9 @@ The DKEK must be set during initialization and before any other keys are generat
 
 A DKEK is imported into a SmartCard-HSM using a preselected number of key shares. Each key share is given to a key custodian and only all key shares together assemble the DKEK. Key shares are individually imported and are assembled within the SmartCard-HSM. Key shares can be imported independently of time and location, allowing to pass a half-initialized device between key custodians until all shares have been imported.
 
-The key management procedure starts with the creation of a key share. This can be achieved using the sc-hsm-tool:
+The key management procedure starts with the creation of a key share. This can be achieved using the `sc-hsm-tool`:
 
-<pre><code>
+```sh
 asc@calzone:~/tmp$ sc-hsm-tool --create-dkek-share dkek-share-1.pbe
 Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
 
@@ -415,13 +463,13 @@ Please retype password to confirm :
 
 Enciphering DKEK share, please wait...
 DKEK share created and saved to dkek-share-1.pbe
-</code></pre>
+```
 
 The DKEK will be generated using the random number generator in the SmartCard-HSM and is then encrypted using Password-based-Encryption with the password supplied by the key custodian. The procedure is repeated for each key custodian. The resulting key share file and the password must be kept secure by the respective key custodian.
 
 When all key custodians have generated their key share, a SmartCard-HSM can be initialized and the DKEK can be created from these key shares (two in this example):
 
-<pre><code>
+```sh
 sc@calzone:~/tmp$ sc-hsm-tool --initialize --so-pin 3537363231383830 --pin 648219 --dkek-shares 2
 Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
 asc@calzone:~/tmp$ sc-hsm-tool
@@ -430,13 +478,13 @@ Version              : 1.2
 User PIN tries left  : 3
 DKEK shares          : 2
 DKEK import pending, 2 share(s) still missing
-</code></pre>
+```
 
-The sc-hsm-tool called without arguments reports that the import of DKEK shares is not yet completed as 2 shares are still missing.
+The `sc-hsm-tool` called without arguments reports that the import of DKEK shares is not yet completed as 2 shares are still missing.
 
 The first key custodian imports his key share using:
 
-<pre><code>
+```sh
 asc@calzone:~/tmp$ sc-hsm-tool --import-dkek-share dkek-share-1.pbe
 Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
 Enter password to decrypt DKEK share : 
@@ -445,11 +493,11 @@ Deciphering DKEK share, please wait...
 DKEK share imported
 DKEK shares          : 2
 DKEK import pending, 1 share(s) still missing
-</code></pre>
+```
 
 The second key custodian imports his key share the same way:
 
-<pre><code>
+```sh
 asc@calzone:~/tmp$ sc-hsm-tool --import-dkek-share dkek-share-2.pbe
 Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
 Enter password to decrypt DKEK share : 
@@ -458,13 +506,13 @@ Deciphering DKEK share, please wait...
 DKEK share imported
 DKEK shares          : 2
 DKEK key check value : 7A5D817FE55E8F74
-</code></pre>
+```
 
-As all key shares have been imported, the resulting DKEK is assembled internally and a key check value is calculated. The key check value represents the DKEK without disclosing it's value. Two SmartCard-HSMs with the same DKEK key check value contain the same DKEK. The DKEK key check value can be obtained at any time using the sc-hsm-tool command without arguments.
+As all key shares have been imported, the resulting DKEK is assembled internally and a key check value is calculated. The key check value represents the DKEK without disclosing it's value. Two SmartCard-HSMs with the same DKEK key check value contain the same DKEK. The DKEK key check value can be obtained at any time using the `sc-hsm-tool` command without arguments.
 
 With the initialized SmartCard-HSM new keys can be generated using the commands shown above.
 
-<pre><code>
+```sh
 asc@calzone:~/tmp$ pkcs11-tool --module /usr/local/lib/opensc-pkcs11.so -l --pin 648219 --keypairgen --key-type rsa:2048 --id 10
 Using slot 0 with a present token (0x0)
 Key pair generated:
@@ -476,11 +524,11 @@ Public Key Object; RSA 2048 bits
   label:      Private Key
   ID:         10
   Usage:      encrypt, verify, wrap
-</code></pre>
+```
 
-The resulting key can now be exported from the SmartCard-HSM. In order to do so, you will need the internal key id of the key, which can be obtained using pkcs15-tool:
+The resulting key can now be exported from the SmartCard-HSM. In order to do so, you will need the internal key id of the key, which can be obtained using `pkcs15-tool`:
 
-<pre><code>
+```sh
 asc@calzone:~/tmp$ pkcs15-tool -D
 Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
 PKCS#15 Card [SmartCard-HSM]:
@@ -503,11 +551,11 @@ Private RSA Key [Private Key]
         ID             : 10
         GUID           : {ed416326-6607-d52c-d194-72f7f51915a9}
 ---8<------8<------8<------8<------8<---
-</code></pre>
+```
 
-The important information is in the "Key ref" field. This identifier must be provided in the --key-reference argument of the --wrap-key command:
+The important information is in the "Key ref" field. This identifier must be provided in the `--key-reference` argument of the `--wrap-key` command:
 
-<pre><code>
+```sh
 asc@calzone:~/tmp$ sc-hsm-tool --wrap-key wrap-key.bin --key-reference 1 --pin 648219
 Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
 asc@calzone:~/tmp$ ls -la wrap-key.bin 
@@ -558,21 +606,21 @@ Private RSA Key [Private Key]
         ID             : 10
         GUID           : {ed416326-6607-d52c-d194-72f7f51915a9}
 ---8<------8<------8<------8<------8<---
-</code></pre>
+```
 
 The SmartCard-HSM now contains two identical keys, one with key ref 1 (the original key) and one with key ref 10 (the copy created during import).
 
 The DKEK (and all stored keys) are erased in a subsequent initialization.
 
-h3. Using a n-of-m threshold scheme
+### Using a n-of-m threshold scheme
 
 Control over a DKEK share can be split even further using a n-of-m threshold scheme for the DKEK share's password. In such a scheme m key custodians are given a share of the password and n key custodians must come together to decrypt the DKEK share for import.
 
 The threshold scheme can be used to prevent a single point of failure. A lost DKEK share password will render key backups useless as the DKEK can't be re-established. If the DKEK share password is split amongst more key custodians than are necessary to reconstruct the share, then some parts may be lost or unavailable without consequences.
 
-Generating a DKEK share using the threshold scheme requires the arguments --pwd-shares-threshold and --pwd-shares-total. The later defines the number of password shares while the former defines the number of shares required to calculate the password.
+Generating a DKEK share using the threshold scheme requires the arguments `--pwd-shares-threshold` and `--pwd-shares-total`. The later defines the number of password shares while the former defines the number of shares required to calculate the password.
 
-<pre><code>
+```sh
 asc@calzone:~/tmp$ sc-hsm-tool --create-dkek-share dkek-share-1.pbe --pwd-shares-threshold 3 --pwd-shares-total 5
 Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
 
@@ -585,11 +633,11 @@ of the file can be generated using "openssl base64 -in <filename>".
 
 
 Press <enter> to continue
-</code></pre>
+```
 
 At this stage, the first key custodian is requested to note the password share:
 
-<pre><code>
+```sh
 Share 1 of 5
 
 
@@ -599,7 +647,7 @@ Share value : 8e:67:74:ba:38:05:d3:bc
 
 
 Please note ALL values above and press <enter> when finished
-</code></pre>
+```
 
 The code should be written onto a prepared form which the key custodian keeps securely in his custody.
 
@@ -607,7 +655,7 @@ After all key custodians received their share (5 in this case), the encrypted DK
 
 When importing a DKEK share that has a threshold password, the following command must be used:
 
-<pre><code>
+```sh
 asc@calzone:~/tmp$ sc-hsm-tool --import-dkek-share dkek-share-1.pbe --pwd-shares-total 3
 Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
 
@@ -616,16 +664,16 @@ to present their share. Only the first key custodian needs to enter the public p
 Please remember to present the share id as well as the share value.
 
 Please enter prime: f3:4a:18:9d:e5:19:7c:fb
-</code></pre>
+```
 
-Only the first key custodian must enter the prime number and then the number of key custodians defined by --pwd-shares-threshold are requested to enter their share value:
+Only the first key custodian must enter the prime number and then the number of key custodians defined by `--pwd-shares-threshold` are requested to enter their share value:
 
-<pre><code>
+```sh
 Share 1 of 3
 
 Please enter share ID: 1
 Please enter share value: 8e:67:74:ba:38:05:d3:bc
-</code></pre>
+```
 
 This is repeated until all key custodians entered their password share. The DKEK share password is then calculated from the provided shares, the DKEK share is decrypted and imported into the SmartCard-HSM.
 
