@@ -1,3 +1,5 @@
+# Removal of Old Card drivers
+
 Many of the internal card drivers have not been modified or used in years (`card-*.c` and their `pkcs15-*.c` counterpart). Although they may have gotten touched due to general security fixes, these changes are mostly untested with these card drivers. Most likely these cards are not in use anymore. To reduce the overall attack surface, we are planning to remove the old card drivers.
 
 ## Card Driver Overview
@@ -49,16 +51,16 @@ Many of the internal card drivers have not been modified or used in years (`card
 | `card-tcos.c`        | [2002](https://github.com/OpenSC/OpenSC/commit/709727d469954f09f96492a219ecb60b334a62a2) | no                | no            | [2019](https://github.com/OpenSC/OpenSC/issues/1869) | [2019](https://github.com/OpenSC/OpenSC/commit/187d908feb5867a7d44604e02c02c2131285f74b) |
 | `card-westcos.c`     | [2009](https://github.com/OpenSC/OpenSC/commit/d3201511c7efc5d30c9105a1c92dac63f4af4808) |                    | yes           |                                                                  | [2010](https://github.com/OpenSC/OpenSC/commit/c3de15d2d08061cd6b2a0fabbdaaa7b8a6ede1fa) |
 
-**Deactivated**: The card driver is removed from the default OpenSC configuration. For usage, it is neccessary to enable the card driver in `opensc.conf`
+**Deactivated**: The card driver is removed from the default OpenSC configuration. For usage, it is necessary to enable the card driver in `opensc.conf`
 
 **Removed**: The card driver is removed from the default OpenSC binaries. For further use, the drivers need to be pulled from git history.
 
 **User Activity**: Indicates if someone is actively using the card. This may be a bug report, feature request, a question on the mailing list.
 
-**Developer Activity**: Indicates if someone is actively developing and maintaining a card driver. This doesn't include generic fixes, which are untested with the card in question, e.g. fixes for issues that are reported by coverity scan.
+**Developer Activity**: Indicates if someone is actively developing and maintaining a card driver. This doesn't include generic fixes, which are untested with the card in question, e.g. fixes for issues that are reported by Coverity scan.
 
 ## Rationale for Removing a card driver
 
-- A card driver will be deactivated if there was no activity for 7 years or more
-- A card driver will be removed if there was no activity for 10 years or more
-- Removing a card driver will take at least two release cycles (i.e. one release that deactivates the card driver and a second to remove it)
+* A card driver will be deactivated if there was no activity for 7 years or more
+* A card driver will be removed if there was no activity for 10 years or more
+* Removing a card driver will take at least two release cycles (i.e. one release that deactivates the card driver and a second to remove it)
