@@ -1,44 +1,50 @@
-h1. Wireless authentication
+# Wireless authentication
+
+> Processes on this pages were not tested in recent years.
 
 Wireless network used to be protected by the WEP standard, but WEP turned out to be insecure and thus useless.
-These days wireless networks are usualy protected using WPA - Wi-Fi Protected Access.
-
-Unfortunatly WPA is available in several flavors and versions, see
-the "Wi-Fi Alliance website":http://www.wi-fi.org/OpenSection/protected_access.asp for details.
+These days wireless networks are usually protected using WPA - Wi-Fi Protected Access.
+Unfortunately WPA is available in several flavors and versions.
 
 If your wireless network is set up to ask for authentication using client certificates,
 then you can use it with those certificates and keys on your smart card.
 
-For windows the windows build in WPA client should work well, if you have a CSP installed that works with OpenSC.
+For Windows, the Windows build in WPA client should work well, if you have a CSP installed that works with OpenSC.
 This is untested, please report your results.
 
-For linux you can use the "WPA Supplicant":http://hostap.epitest.fi/wpa_supplicant/ or "Xsupplicant":http://www.open1x.org/ with OpenSC.
-The support for smart cards is implemented in both via the "PKCS#11 Engine for OpenSSL":http://www.opensc-project.org/engine_pkcs11/.
+For linux you can use the [WPA Supplicant](http://hostap.epitest.fi/wpa_supplicant/) or [Xsupplicant](http://www.open1x.org/) with OpenSC.
+The support for smart cards is implemented in both via the [PKCS#11 Engine for OpenSSL](https://github.com/OpenSC/libp11).
 
-h2. WPA Supplicant
+## WPA Supplicant
 
 To use WPA Suppplicant with smart card authentication you need to compile it with smart card support. Your config file should include this line:
-<pre><code># Smartcard support (i.e., private key on a smartcard), e.g., with openssl
+
+```text
+# Smartcard support (i.e., private key on a smartcard), e.g., with openssl
 # engine.
 CONFIG_SMARTCARD=y
-</code></pre>
+```
 
 Also you need to edit wpa_supplicant.conf like this:
-<pre><code># OpenSSL Engine support
+
+```text
+# OpenSSL Engine support
 # These options can be used to load OpenSSL engines.
 # make the pkcs11 engine available
 pkcs11_engine_path=/usr/lib/engine/engine_pkcs11.so
 # configure the path to the pkcs11 module required by the pkcs11 engine
 pkcs11_module_path=/usr/lib/engine/opensc-pkcs11.so
-</code></pre>
+```
 
-h2. X Supplicant
+## X Supplicant
 
 It looks like xsupplicant is always compiled with smart card support.
 
 To enable it, edit the xsupplicant.conf config file and look for lines
 like these:
-<pre><code>     # this section configures the smartcard used with eap-tls
+
+```text
+     # this section configures the smartcard used with eap-tls
      # for now the smartcard PIN is handled the same way as the 
      # password for a private key
      smartcard {
@@ -50,7 +56,4 @@ like these:
         # set the key id on the smartcard
         key_id = 45
      }
-</code></pre>
-
-FIXME: someone should test this and check if it works as advertised.
-
+```
