@@ -10,6 +10,8 @@ export SIGN_KEY=11
 export ENC_KEY=55
 ```
 
+## Functionality of card
+
 You can find the IDs of the objects on card with the `-O` option:
 
 ```sh
@@ -20,6 +22,62 @@ and the mechanisms that the card supports with the `-M` option:
 
 ```sh
 pkcs11-tool -M
+```
+
+Perform a basic functionality test of the card:
+
+```sh
+pkcs11-tool --test --login
+```
+
+## Reading objects from card
+
+List all certificates on the smart card:
+
+```sh
+pkcs11-tool --list-objects --type cert
+```
+
+Read the certificate with ID `CERT_ID` in DER format from smart card and convert it to PEM via OpenSSL:
+
+```sh
+pkcs11-tool --read-object --id $CERT_ID --type cert --output-file cert.der
+openssl x509 -inform DER -in cert.der -outform PEM > cert.pem
+```
+
+List private keys:
+
+```sh
+pkcs11-tool --login --list-objects --type privkey
+```
+
+Write a certificate to token:
+
+```sh
+pkcs11-tool --login --write-object certificate.der --type cert
+```
+
+## Generate keys
+
+Generate new RSA Key pair:
+
+```sh
+pkcs11-tool --login --keypairgen --key-type RSA:2048
+```
+
+Generate new extractable RSA Key pair:
+
+```sh
+pkcs11-tool --login --keypairgen --key-type RSA:2048 --extractable
+```
+
+Generate an elliptic curve key pair with OpenSSL and import it to the card as `$ID`:
+
+```sh
+openssl genpkey -out EC_private.der -outform DER -algorithm EC -pkeyopt ec_paramgen_curve:P-521
+pkcs11-tool --write-object EC_private.der --id "$ID" --type privkey --label "EC private key" -p "$PIN"
+openssl pkey -in EC_private.der -out EC_public.der -pubout -inform DER -outform DER
+pkcs11-tool --write-object EC_public.der --id "$ID" --type pubkey  --label "EC public key" -p $PIN
 ```
 
 ## Sign/Verify using private key/certificate
