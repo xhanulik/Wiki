@@ -103,7 +103,7 @@ X.509 Certificate [Allkirjastamine]
 
 ## Supported algorithms
 
-* Version 3.0 suports PKCS1 padding and SHA1, SHA-224 (not used as PKCS#11 does not support SHA-224 in v2.20) and SHA-256 hashes with 2048bit RSA keys
+* Version 3.0 supports PKCS1 padding and SHA1, SHA-224 (not used as PKCS#11 does not support SHA-224 in v2.20) and SHA-256 hashes with 2048bit RSA keys
 
 ## Known issues and incompatibilities
 

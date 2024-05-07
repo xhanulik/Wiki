@@ -9,7 +9,7 @@ a "normal" Pageant.
 
 This only needed about 20 lines of codes within the source
 of pageant.exe and I was hoping that the PuTTY team would
-include this into future PuTTY-packages. They did not :-(
+include this into future PuTTY-packages. They did not.
 
 Therefore I merged the source code of PuTTYcard.dll with
 the source code of  pageant.exe and released a smart card
@@ -22,8 +22,6 @@ If you used PuTTYcard in the past or are willing to test
 my smart card enabled version of pageant.exe with a new
 card or a new card reader I will send you a free license.
 Just let me know.
-
-## PuTTYcard
 
 PuTTYcard is an extension to PuTTY, the free SSH-client
 from Simon Tatham. With this extension PuTTY can use
@@ -64,7 +62,7 @@ your ppk-file should look like
 PuTTYcard,PuTTYiso7816.dll,<path>,AA,BB,CCCC
 ```
 
-<path> is the DF on your smart card that contains the RSA-key.
+The `<path>` is the DF on your smart card that contains the RSA-key.
 This must be specified as a 4,8,12 or 16digit hexadecimal
 number. Do NOT prefix the path with 3F00.
 AA is the key-reference of the private key, BB is the
@@ -74,7 +72,7 @@ public key. This file must either contain the public key
 as two ASN1-encoded records or it must be a certificate file
 from which the public key will be extracted.
 
-h3. How do I find the above mentions numbers?
+## How do I find the above mentions numbers?
 
 One of the first actions of PuTTYcard
 is to change its working DF to the DF given by the
@@ -253,7 +251,7 @@ certificates namely DF01:C100 and DF01:4371 so two other
 possible CCCC-values are C100 and 4371
 
 On a Netkey card a private key may be protected by more than
-one PIN. So instead of PIN-reference 81 (which references 
+one PIN. So instead of PIN-reference 81 (which references
 local PIN1) I may alternatively use PIN-reference 00 (which
 references global PIN0)
 

@@ -46,7 +46,7 @@ MuscleApplet could be layered as follows:
 * APDU specification and implementation
 * Internal object layer and related machinery (ACL-s, Key objects, data objects) (also in CardEdge.java)
 * Object manager with helpers for dealing with objects, on same terms as they are exposed to the outside world
-* Memory manager that deals with allocating and re-allocating the memory, which is grabbed as a huge block when the applet is initialized. This is to overcome the absence of garbage collection in older JavaCard-s 
+* Memory manager that deals with allocating and re-allocating the memory, which is grabbed as a huge block when the applet is initialized. This is to overcome the absence of garbage collection in older JavaCard-s.
 
 #### Memory manager
 
@@ -68,7 +68,7 @@ In addition to data objects, MuscleApplet manages the following internal objects
 
 * PIN-s
   * And accompanying PUK-s
-    * MuscleApplet uses PIN0 as the "super PIN". The PIN is set to an initial value in source code, "Muscle00". 
+    * MuscleApplet uses PIN0 as the "super PIN". The PIN is set to an initial value in source code, "Muscle00".
 * Key pairs
   * Can be generated on the card or imported. Plaintext exporting is also possible.
 * Keys

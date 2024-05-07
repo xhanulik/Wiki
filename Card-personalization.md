@@ -327,18 +327,24 @@ These libraries can be loaded in OpenSSL so you can do a certificate request wit
 
 * Run `openssl` command
 * On the `openssl` command prompt, type
-   ```bash
-   engine dynamic -pre SO_PATH:engine_pkcs11 -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD
-   ```
+
+  ```bash
+  engine dynamic -pre SO_PATH:engine_pkcs11 -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD
+  ```
+
    to use the PKCS #11 engine
+
 * Then type (on the openssl command prompt)
-   ```bash
-   req -engine pkcs11 -new -key <ID> -keyform engine -out <cert_req>
-   ```
-   in which ID is the slot+ID in the following format:
-   ```bash
-   [slot_<slotID>][-][id_<ID>], e.g. id_45 or slot_0-id_45
-   ```
+
+    ```bash
+    req -engine pkcs11 -new -key <ID> -keyform engine -out <cert_req>
+    ```
+
+    in which ID is the slot+ID in the following format:
+
+    ```bash
+    [slot_<slotID>][-][id_<ID>], e.g. id_45 or slot_0-id_45
+    ```
 
 ### `pkcs11-tool` and Mozilla/Netscape
 

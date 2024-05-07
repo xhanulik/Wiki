@@ -4,7 +4,7 @@
 
 The driver of ePass3000 in OpenSC is called "entersafe".
 
-Feitian has their own software for Windows, GNU/linux and MAC OSX. This software does not implement PKCS15 and thus is not compatible with OpenSC. Because Feitian's software reserves all storage, its data cannot be co-existed with OpenSC's in the USB token. In addition, there may be unexpected errors if both softwares exists in the operating system concurrently, since Feitian's software assumes there is one and only one software manipulates the token.
+Feitian has their own software for Windows, GNU/linux and MAC OSX. This software does not implement PKCS15 and thus is not compatible with OpenSC. Because Feitian's software reserves all storage, its data cannot be co-existed with OpenSC's in the USB token. In addition, there may be unexpected errors if both software exists in the operating system concurrently, since Feitian's software assumes there is one and only one software manipulates the token.
 
 Token initialized with Feitian's private format can not be directly used by OpenSC. Unless it is totally erased by command:
 

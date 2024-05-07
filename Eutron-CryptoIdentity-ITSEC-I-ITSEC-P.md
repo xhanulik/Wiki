@@ -15,7 +15,7 @@ interface differs, the rest seems to be the same.
 One minor feature of the Siemens CardOS M4 is, that a RSA key cannot be used for both signing
 and decryption. OpenSC has implemented a workaround: software key generation and storing that
 key twice, once marked as decryption key and once marked as signing key. To enable this workaround
-specifiy `--split-key` on the command line, when creating the key.
+specify `--split-key` on the command line, when creating the key.
 
 Eutron has their own software for Windows. This software does not implement PKCS#15 and thus is not
 compatible with OpenSC. As long as the card has memory, you can initialize the card with both software

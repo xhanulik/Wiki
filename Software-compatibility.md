@@ -28,7 +28,7 @@ But at least some software is compatible:
 
 Giesecke & Devrient ship the Starcos
 smart card and USB tokens based on that card. The software bundled with both is called StarSign. That software implements
-the PKCS#15 standard, too, so it should be fully compatible with OpenSC and vise versa. If there is any issue, please
+the PKCS#15 standard, too, so it should be fully compatible with OpenSC and vice versa. If there is any issue, please
 let us know (the last test was quite a while in the past).
 
 If you know other software implementing PKCS#15, please add a paragraph.

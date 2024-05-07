@@ -108,7 +108,7 @@ If you are only interested in the middleware (and not the proprietary key manage
 3. double-click on the following packages in this order so as to install them:
 
 * `etokenframework.pkg`: those are the shared libraries (that will go into `/Library/Frameworks/eToken.framework`) needed by all the other packages;
-* `etokendriversleopard.pkg` (for Mac OS 10.5.x) or `etokendriverstiger.pkg` (for Mac OS 10.4.x): this is the middleware, that goes under `/usr/libexec/SmartCardServices/drivers/eTokenIfdh.bundle/` .  It consists of an auxillary daemon that will be run by `pcscd` in order to perform the necessary USB I/O.
+* `etokendriversleopard.pkg` (for Mac OS 10.5.x) or `etokendriverstiger.pkg` (for Mac OS 10.4.x): this is the middleware, that goes under `/usr/libexec/SmartCardServices/drivers/eTokenIfdh.bundle/` .  It consists of an auxiliary daemon that will be run by `pcscd` in order to perform the necessary USB I/O.
 
 To test this setup, plug your token in, then open a terminal and type the following commands:
 

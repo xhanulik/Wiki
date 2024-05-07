@@ -37,7 +37,7 @@ to help the transition back from hal to `udev`. Engine_PKCS#11
 
 ### OpenSC 0.11.12
 
-On 2009-12-18 OpenSC 0.11.12 was released with a fix for a 
+On 2009-12-18 OpenSC 0.11.12 was released with a fix for a
 regression in OpenSC 0.11.5 and later, that made some cards
 initialized with older versions of OpenSC no longer work
 with newer versions.

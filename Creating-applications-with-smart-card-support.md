@@ -21,7 +21,7 @@ These tools and libraries help in talking to PKCS#11 modules or integrate PKCS#1
 * [gp11](http://live.gnome.org/GnomeKeyring/Architecture) is a GObject based wrapper for PKCS#11, distributed with gnome-keyring.
 * [PaKChoiS](http://www.manyfish.co.uk/pakchois/) aims to provide a thin wrapper over the PKCS#11 interface.
 * [p11-kit](http://p11-glue.freedesktop.org/p11-kit.html) eases working with multiple PKCS#11 modules and includes support for [PKCS#11 URI scheme](http://tools.ietf.org/html/draft-pechanec-pkcs11uri-13).
-* [pkcs11-provider] (https://github.com/latchset/pkcs11-provider) is an Openssl 3.x provider to access Hardware or Software Tokens using the PKCS#11 Cryptographic Token Interface.
+* [pkcs11-provider](https://github.com/latchset/pkcs11-provider) is an Openssl 3.x provider to access Hardware or Software Tokens using the PKCS#11 Cryptographic Token Interface.
 
 ##### Python
 
@@ -59,7 +59,7 @@ Mac OS X implements CDSA as the cryptography API for the Mac platform (in theory
 [OpenSSL](http://www.openssl.org/) has an easy way to integrate smart card support.
 
 The [libp11](https://github.com/OpenSC/libp11/wiki) has code to make using OpenSC PKCS#11 module with OpenSSL quite easy and includes example code for using SSL with client certificate authentication using a smart card too.
-The use of engines in OpenSSL are deprecated fom the version 3.
+The use of engines in OpenSSL are deprecated from the version 3.
 
 The engine_pkcs11 project has an OpenSSL engine implementation so you can change any code using OpenSSL to move the crypto operation from your CPU to your smart card with only a few small changes.
 It was merged into libp11 project.
@@ -72,16 +72,16 @@ The [pkcs11-provider](https://github.com/latchset/pkcs11-provider) is an Openssl
 
 ### QCA
 
-[QCA](http://api.kde.org/kdesupport-api/kdesupport-apidocs/qca/html/) (Qt Cryptographic Architecture) adds cryptography support into Qt applications. QCA has PKCS#11 support since v2.0. See "http://sites.google.com/site/alonbarlev/qca-pkcs11":http://sites.google.com/site/alonbarlev/qca-pkcs11 for more information.
+[QCA](http://api.kde.org/kdesupport-api/kdesupport-apidocs/qca/html/) (Qt Cryptographic Architecture) adds cryptography support into Qt applications. QCA has PKCS#11 support since v2.0.
 
 ### GnuTLS
 
-"GnuTLS":http://www.gnutls.org includes native PKCS#11 smart card support using the PKCS#11 URI scheme..
-See "http://www.gnutls.org/manual":http://www.gnutls.org/manual for more information.
+[GnuTLS](http://www.gnutls.org) includes native PKCS#11 smart card support using the PKCS#11 URI scheme..
+See <http://www.gnutls.org/manual> for more information.
 
 ### cryptlib
 
-"cryptlib":http://www.cs.auckland.ac.nz/~pgut001/cryptlib/ is a library by Peter Gutmann and claims support for SSL and PKCS#11 modules. 
+[cryptlib](https://www.cs.auckland.ac.nz/~pgut001/cryptlib/) is a library by Peter Gutmann and claims support for SSL and PKCS#11 modules.
 
 ## Low level smart card access
 
@@ -89,19 +89,19 @@ OpenSC is for cryptographic smart cards and the preferred method for accessing s
 
 ### PC/SC
 
-PC/SC is a standard from "PC/SC Workgroup":http://www.pcscworkgroup.com/ but the "reference implementation" is still "Windows winscard.dll":http://msdn.microsoft.com/en-us/library/aa374731(VS.85).aspx#smart_card_functions. Linux uses the open source "pcsc-lite":http://pcsclite.alioth.debian.org/ package. And Mac OS X uses a fork of pcsc-lite included in the "SmartCardServices":http://smartcardservices.macosforge.org/ project.
+PC/SC is a standard from [PC/SC Workgroup](https://pcscworkgroup.com/) but the "reference implementation" is still [Windows winscard.dll](http://msdn.microsoft.com/en-us/library/aa374731(VS.85).aspx#smart_card_functions). Linux uses the open source [pcsc-lite](https://pcsclite.apdu.fr/) package. And Mac OS X uses a fork of pcsc-lite included in the [SmartCardServices](http://smartcardservices.macosforge.org/) project.
 
 #### Tools and libraries
 
 * Python
-  * "pyscard":http://pyscard.sourceforge.net/
+  * [pyscard](https://pyscard.sourceforge.io/)
 * Java
-  * See [[dedicated Java page|Using-smart-cards-with-Java-SE]] about javax.smartcardio in Java 1.6+
+  * See [[dedicated Java page|Using-smart-cards-with-Java-SE]] about `javax.smartcardio` in Java 1.6+
 
 ### CT-API
 
-"CT-API":https://www.tuvit.de/de/aktuelles/downloads/card-terminal-application-programing-interface-fuer-chipkartenanwendungen/ is an API for accessing smart card readers that is mostly used in Germany. It is not suited for modern multi-user environments, is not portable and not always available. New projects should avoid using CT-API and use PC/SC instead.
+CT-API is an API for accessing smart card readers that is mostly used in Germany. It is not suited for modern multi-user environments, is not portable and not always available. New projects should avoid using CT-API and use PC/SC instead.
 
 ### OpenCT
 
-"OpenCT":https://github.com/OpenSC/openct, like CT-API, is a Linux only API for accessing USB tokens (and smart card readers). Very few applications beside OpenSC can make use of OpenCT readers. New projects should try to avoid building against OpenCT and use PC/SC instead.
+[OpenCT](https://github.com/OpenSC/openct), like CT-API, is a Linux only API for accessing USB tokens (and smart card readers). Very few applications beside OpenSC can make use of OpenCT readers. New projects should try to avoid building against OpenCT and use PC/SC instead.
