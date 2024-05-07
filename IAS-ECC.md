@@ -47,7 +47,7 @@ Tested compatibility with the PKCS#11 and CSP from the other middlewares:
 
 ## To get the source code for SM
 
-**Not active project, changes already integrated in standard OpenSC distribution**
+**Not active project, changes already integrated in standard OpenSC distribution.**
 
 ```bash
 git clone https://github.com/viktorTarasov/OpenSC-SM.git

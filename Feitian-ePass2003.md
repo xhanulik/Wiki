@@ -60,8 +60,8 @@ Refer to issue [#1803](https://github.com/OpenSC/OpenSC/issues/1803);
 
 Links to the `Fix_Tool.tar.gz` archives:
 
-* With x86 and x64: "Download fix_tool":http://download.ftsafe.com/files/ePass/Fix_Tool.tar.gz
-* With armhf arch:  "Download fix_tool":http://download.ftsafe.com/files/reader/SDK/Fix_Tool_20200604.zip
+* With x86 and x64: [Download fix_tool](http://download.ftsafe.com/files/ePass/Fix_Tool.tar.gz)
+* With armhf arch: [Download fix_tool](http://download.ftsafe.com/files/reader/SDK/Fix_Tool_20200604.zip)
 
 ## Thanks
 

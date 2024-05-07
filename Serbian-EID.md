@@ -5,7 +5,7 @@ The Serbian EID is currently not supported by OpenSC.
 
 ## "Old" card
 
-The EID is based on ApolloOS 2.43. Old patches for driver for thi card are in [vigsterkr/OpenSC](https://github.com/vigsterkr/OpenSC).
+The EID is based on ApolloOS 2.43. Old patches for driver for this card are in [vigsterkr/OpenSC](https://github.com/vigsterkr/OpenSC).
 It supports reading EF from the card, reading the card's serial number and extract ID information (e.g. name, address, issue date etc.) from the card with `eidenvtool`.
 
 ## "New" card

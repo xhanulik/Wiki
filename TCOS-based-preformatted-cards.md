@@ -6,7 +6,7 @@ TeleSec (now part of Deutsche Telekom AG), Deutsche Post and DATEV are german co
 
 Since late 2006 TCOS 3.0 cards are available from TeleSec and a test card plus excellent doku reached the OpenSC team in december 2006. Besides 2048 bit keys TCOS 3.0 has some other new features. In december 2007 the TCOS 2.0 driver was extended such that it supports TCOS 3.0 cards as well. OpenSC 0.11.5 was the first version that had TCOS3 support.
 
-The 2048 bit NetKey card was named NetKey E4 V3. The signature key of this card can be used only with secure messaging. Since OpenSC does not have support for secure messaging the signature key will not be supported soon. 
+The 2048 bit NetKey card was named NetKey E4 V3. The signature key of this card can be used only with secure messaging. Since OpenSC does not have support for secure messaging the signature key will not be supported soon.
 
 If OpenSC would fully support TCOS, one could erase the preformatted card and initialize the card with a fresh PKCS#15 filesystem. This is not possible right now as OpenSC lacks support for initializing a PKCS#15 layout on an empty card with TCOS operation system.
 

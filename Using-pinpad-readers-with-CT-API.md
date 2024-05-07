@@ -5,7 +5,7 @@ On Win32 a pinpad reader usually supplies a PC/SC driver and a CT-API driver. Yo
 ## Configuring CT-API in `opensc.conf`
 
 To activate the CT-API driver you have to add the token `ctapi` to the `reader_drivers` attribute of the app default section (or whatever app you are using).
-Then the reader's parameters, that is the library and port number, have to be configured in the `reader_driver ctapi` secion.
+Then the reader's parameters, that is the library and port number, have to be configured in the `reader_driver ctapi` section.
 
 Use this as an example:
 

@@ -1,7 +1,5 @@
 # Installing OpenSC PKCS#11 Module in Firefox, Step by Step
 
-This step by step description is can also be found in "Mozilla's knowledge base":https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Installation.
-
 1. Start Mozilla Firefox.
 
     ![Start Firefox](https://github.com/n8felton/OpenSC/wiki/attachments/wiki/MozillaSteps/firefox_64.png "Start Firefox")

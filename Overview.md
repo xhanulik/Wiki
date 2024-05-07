@@ -88,7 +88,7 @@ For blank cards OpenSC has code to initialize the card in PKCS#15 format.
 You can't change initialized cards at all, or only with the software that
 was used to initialize it. But you can use the card with OpenSC if OpenSC
 knows the format. So the format has either to be PKCS#15 (very few
-softwares implement that standard, however), or maybe the format was published
+software implement that standard, however), or maybe the format was published
 and OpenSC contains an emulation for that format.
 
 Check the list on [wiki page](Supported-hardware-(smart-cards-and-USB-tokens)) to see

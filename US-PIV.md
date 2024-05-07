@@ -32,7 +32,7 @@ There is also [arekinath/PivApplet](https://github.com/arekinath/PivApplet) - PI
 * OpenSC 0.12.1 bug fixes:
   * Fixed: Support to request the PIN before each Digital Signature Key operation.
   * Fixed: Key usage when using ECDSA with Thunderbird.
-  * (Although not PIV specific) a bug was introduced during the release cycle for 0.12.1 where the `pam_krb5` login or Kerberos `kinit` may fail. The circumvention is to set in the `opensc.conf` file `plug_and_play = false;` `C_GetSlotList` with `tokenpresent=1` would return the hotplug slot even if emply as the first slot.
+  * (Although not PIV specific) a bug was introduced during the release cycle for 0.12.1 where the `pam_krb5` login or Kerberos `kinit` may fail. The circumvention is to set in the `opensc.conf` file `plug_and_play = false;` `C_GetSlotList` with `tokenpresent=1` would return the hotplug slot even if empty as the first slot.
 * OpenSC 0.13.0:
   * ECDH with key derivation is now supported via PKCS#11 `C_Derive` using `CKM_ECDH1_COFACTOR_DERIVE` or `CKM_ECDH1_DERIVE`. The KDF must be `CKD_NULL`. See the `pkcs11-tool.c` for an example.
   * `CK_ALWAYS_AUTHENTICATE` is supported for the signing key. This requires the PIN to be entered before cypto opertation when using the signing certificate.

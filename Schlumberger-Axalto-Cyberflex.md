@@ -2,7 +2,7 @@
 
 > Cryptoflex card are **deactivated**. For further usage, it is necessary to enable the card driver in `opensc.conf`.
 
-Earlier versions of Cyberflex cards have the same or a very similiar filesystem interface like the Cryptoflex cards.
+Earlier versions of Cyberflex cards have the same or a very similar filesystem interface like the Cryptoflex cards.
 Those cards work well with OpenSC.
 
 Newer versions however are pure JavaCards and will not work without a JavaApplet.

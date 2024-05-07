@@ -33,7 +33,7 @@ The mailing lists are hosted at the OpenSC project at SourceForge: [http://sourc
 ### MSIs and MacOS Apple Disk Image files
 
 <https://github.com/OpenSC/Nightly>
-* 
+
 **Old builds are removed time to time.**
 
 ## Tarball releases

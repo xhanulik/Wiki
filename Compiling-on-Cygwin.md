@@ -4,6 +4,7 @@ If you want to use OpenSC with Cygwin OpenSSH utilities, such as `ssh-agent` or 
 then OpenSC has to be compiled for Cygwin. To do this follow these steps:
 
 ## Prepare for a fresh Cygwin install
+
 When building OpenSC we're going to be running the reconfiguration step of the OpenSC build process.
 One side effect is that this step may try to incorporate additional features that are detected in
 your current Cygwin installation, which can complicate the package dependencies.
@@ -14,9 +15,9 @@ So these instructions are based on starting from a fresh Cygwin installation. Th
 3. Temporarily unset `CYGWIN` environment variable while building and installing.
    Currently having `CYGWIN` set causes make install to fail in the `install-exec-hook` stage.
 
-## Install Cygwin base 
+## Install Cygwin base
 
-1. Go to https://cygwin.com/install.html.
+1. Go to <https://cygwin.com/install.html>.
 2. Run `setup-x86_64.exe` & save it for running later.
 3. Install to `C:\cygwin64`.
 4. Select `All Users`.

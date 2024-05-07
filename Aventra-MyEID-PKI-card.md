@@ -12,7 +12,7 @@ The cards can be personalized both visually and electrically by Aventra accordin
 
 MyEID is certified by Microsoft and supports Smart Card Plug and Play.
 
->  MyEID version 4 has been released, adding support for Elliptic Curve Cryptography and many other new features.
+> MyEID version 4 has been released, adding support for Elliptic Curve Cryptography and many other new features.
 
 ## Aventra MyEID PKI applet
 

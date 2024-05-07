@@ -131,7 +131,7 @@ This means that your keys and sensitive data are safe against others (who know t
 
 However, depending on the smartcard os and the card profile anyone who knows the transport key and has access to your card can erase the card.
 
-On itself, that may be a good thing if you lost your card, but there's another problem: If your card contains trusted certificates, and an adversary steals your card, puts another pkcs15 dir with other certs on the card and puts it back without you knowing, you may not find out until you put trust in those untrusted certs. 
+On itself, that may be a good thing if you lost your card, but there's another problem: If your card contains trusted certificates, and an adversary steals your card, puts another pkcs15 dir with other certs on the card and puts it back without you knowing, you may not find out until you put trust in those untrusted certs.
 
 Be very careful when using the card as a tamper-resistant storage - make them PIN-protected for example.
 (Note: this if often not the case: the trusted certificates are usually stored in the applications using them.)

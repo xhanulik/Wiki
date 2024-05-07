@@ -1,6 +1,6 @@
 # Quick Start with OpenSC
 
-If you haven't already, please first take a look at our [[Overview|Overview]] page, the [[Operating Systems|Recent-test-results-for-various-smart-cards]] page and the [[Compiling and Installing on Unix flavors]] page. 
+If you haven't already, please first take a look at our [[Overview|Overview]] page, the [[Operating Systems|Recent-test-results-for-various-smart-cards]] page and the [[Compiling and Installing on Unix flavors]] page.
 
 ## Before we start
 

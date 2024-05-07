@@ -17,7 +17,7 @@ From the public administration point of view the card has been procured by the M
 
 Resources:
 
-* The [official home page](http://www.dnielectronico.es) for the Spanish DNIe 
+* The [official home page](http://www.dnielectronico.es) for the Spanish DNIe
 
 ## Card capabilities
 
