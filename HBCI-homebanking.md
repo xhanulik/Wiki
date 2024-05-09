@@ -1,4 +1,4 @@
-h1. HBCI homebanking
+# HBCI homebanking
 
 HBCI is a standard that is used by many banks in Germany.
 Those banks offer either banking with PIN and TAN lists, or
