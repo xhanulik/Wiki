@@ -560,13 +560,13 @@ asc@calzone:~/tmp$ sc-hsm-tool --wrap-key wrap-key.bin --key-reference 1 --pin 6
 Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
 asc@calzone:~/tmp$ ls -la wrap-key.bin 
 -rw-rw-r-- 1 asc asc 1696 Jul 17 19:15 wrap-key.bin
-</code></pre>
+```
 
 The resulting file contains a key description, the optional certificate and the key value encrypted under the DKEK. The key value and it's meta data is protected by a cryptographic checksum against modifications.
 
 Importing the key into the same or a different SmartCard-HSM with the same DKEK can be done using:
 
-<pre><code>
+```sh
 asc@calzone:~/tmp$ sc-hsm-tool --unwrap-key wrap-key.bin --key-reference 10 --pin 648219
 Using reader with a card: SCM SCR 355 [CCID Interface] 00 00
 Wrapped key contains:

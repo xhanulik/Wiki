@@ -73,7 +73,7 @@ There is one problem with many PKCS#11 or PKCS#15 smartcard-applications. They a
 
 If you have stored a certificate on your NetKey card, you most likely want to use this certificate (and not the readonly-one). Therefore the emulation will add the user-certificates first into its internal list.
 
-h3. Some remarks about the PINs of NetKey cards
+### Some remarks about the PINs of NetKey cards
 
 There are two global PINs on TCOS2 based NetKey-cards and some of the directories contain further PINs. TCOS3-based cards are slightly different but since `netkey-tool` does not support TCOS3-cards yet I will not explain the differences.
 
