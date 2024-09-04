@@ -2,6 +2,13 @@
 
 Software often contains bugs, so does OpenSC. Be aware of the following security issues (in addition to overall [security considerations](Security-Considerations)) and upgrade to latest released version if needed.
 
+* 04.09.2024 Uninitialized memory issues have been identified in OpenSC
+  * [CVE-2024-45615](CVE-2024-45615): Usage of uninitialized values in libopensc and pkcs15init
+  * [CVE-2024-45616](CVE-2024-45616): Uninitialized values after incorrect check or usage of APDU response values in libopensc
+  * [CVE-2024-45617](CVE-2024-45617): Uninitialized values after incorrect or missing checking return values of functions in libopensc
+  * [CVE-2024-45618](CVE-2024-45618): Uninitialized values after incorrect or missing checking return values of functions in pkcs15init
+  * [CVE-2024-45619](CVE-2024-45619): Incorrect handling length of buffers or files in libopensc
+  * [CVE-2024-45620](CVE-2024-45620): Incorrect handling of the length of buffers or files in pkcs15init*
 * 13.02.2024 Heap use after free issue and vulnerability to Marvin attack have been identified in OpenSC
   * Side-channel leaks while stripping encryption PKCS#1.5 padding [CVE-2023-5992|](CVE-2023-5992)
   * Memory use after free in AuthentIC driver when updating token info [CVE-2024-1454](CVE-2024-1454)
