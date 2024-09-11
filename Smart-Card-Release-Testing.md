@@ -3,6 +3,7 @@
 ## Table of Contents
 
 * [Test Results](#test-results)
+  * [OpenSC 0.26.0](#opensc-0260)
   * [OpenSC 0.25.0](#opensc-0250)
   * [OpenSC 0.24.0](#opensc-0240)
   * [OpenSC 0.23.0](#opensc-0230)
