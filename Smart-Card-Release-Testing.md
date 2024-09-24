@@ -755,6 +755,20 @@ OpenSC is removed.
 
 Test random number generation, digest calculation, signature, verification and decryption with the token using the PKCS#11 API.
 
+```bash
+pkcs11-tool --test -p "$PIN" --module "/path/to/opensc-pkcs11.so"
+```
+
+#### `pkcs11`
+
+Test signature, verification, decryption, key wrapping and derivation in various modes with the token using the PKCS#11 API.
+
+```bash
+p11test -p "$PIN" -m "/path/to/opensc-pkcs11.so"
+```
+
+If not sure, whether the output signifies correct results, compare results with older OpenSC version.
+
 ##### Windows
 
 **Test Steps:**
@@ -795,7 +809,7 @@ Test random number generation, digest calculation, signature, verification and d
 **Expected Result:**
 Certificates and private keys are verified (see command line output). The token's certificates are shown in a dialog.
 
-###### PIN Verification
+##### PIN Verification
 
 **Preconditions:**
 
@@ -811,7 +825,7 @@ Certificates and private keys are verified (see command line output). The token'
 **Expected Result:**
 User is logged in. The *Log Out* button becomes available.
 
-##### TLS Client Authentication
+#### TLS Client Authentication
 
 **Preconditions:**
 
